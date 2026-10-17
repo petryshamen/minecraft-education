@@ -1,0 +1,33 @@
+{
+  "pack": {
+    "pack_format": 81,
+    "description": "Human Journey v0.3.8 — stable Era 0 release"
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "^minecraft$",
+        "path": "^advancement/(story|adventure|husbandry|nether|end)/.*$"
+      },
+      {
+        "namespace": "^minecraft$",
+        "path": "^advancement/recipes/.*/(activator_rail|anvil|beacon|blast_furnace|bread|brewing_stand|brush|bucket|cauldron|chain|clock|comparator|compass|composter|copper_block|copper_ingot_from_blasting_copper_ore|copper_ingot_from_blasting_deepslate_copper_ore|copper_ingot_from_blasting_raw_copper|copper_ingot_from_smelting_copper_ore|copper_ingot_from_smelting_deepslate_copper_ore|copper_ingot_from_smelting_raw_copper|crossbow|daylight_detector|detector_rail|diamond_axe|diamond_block|diamond_boots|diamond_chestplate|diamond_helmet|diamond_hoe|diamond_leggings|diamond_pickaxe|diamond_shovel|diamond_sword|dispenser|dropper|enchanting_table|ender_chest|ender_eye|flint_and_steel|gold_block|gold_ingot_from_blasting_deepslate_gold_ore|gold_ingot_from_blasting_gold_ore|gold_ingot_from_blasting_nether_gold_ore|gold_ingot_from_blasting_raw_gold|gold_ingot_from_gold_block|gold_ingot_from_nuggets|gold_ingot_from_smelting_deepslate_gold_ore|gold_ingot_from_smelting_gold_ore|gold_ingot_from_smelting_nether_gold_ore|gold_ingot_from_smelting_raw_gold|gold_nugget|golden_apple|golden_axe|golden_boots|golden_carrot|golden_chestplate|golden_helmet|golden_hoe|golden_leggings|golden_pickaxe|golden_shovel|golden_sword|hay_block|heavy_weighted_pressure_plate|hopper|iron_axe|iron_bars|iron_block|iron_boots|iron_chestplate|iron_door|iron_helmet|iron_hoe|iron_ingot_from_blasting_deepslate_iron_ore|iron_ingot_from_blasting_iron_ore|iron_ingot_from_blasting_raw_iron|iron_ingot_from_iron_block|iron_ingot_from_nuggets|iron_ingot_from_smelting_deepslate_iron_ore|iron_ingot_from_smelting_iron_ore|iron_ingot_from_smelting_raw_iron|iron_leggings|iron_nugget|iron_pickaxe|iron_shovel|iron_sword|iron_trapdoor|jukebox|lantern|light_weighted_pressure_plate|lightning_rod|minecart|note_block|observer|piston|powered_rail|redstone_torch|repeater|shears|shield|smithing_table|spyglass|sticky_piston|stone_hoe|stonecutter|target|tnt|wheat|wooden_hoe)\\.json$"
+      },
+      {
+        "namespace": "^onlyhammersandexcavators$",
+        "path": "^advancement/recipes/.*$"
+      },
+      {
+        "namespace": "^packedup$",
+        "path": "^advancement/recipes/.*$"
+      },
+      {
+        "namespace": "^toughasnails$",
+        "path": "^advancement/recipes/(decorations/(water_purifier|thermoregulator)|redstone/temperature_gauge|tools/(thermometer|empty_(iron|gold|diamond|copper|netherite)_canteen|.*netherite.*))\\.json$"
+      }
+    ]
+  },
+  "human_journey": {
+    "version": "0.3.8"
+  }
+}

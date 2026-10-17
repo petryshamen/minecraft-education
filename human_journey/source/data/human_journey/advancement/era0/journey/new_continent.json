@@ -1,0 +1,23 @@
+{
+  "parent": "human_journey:era0/journey/land_beyond",
+  "display": {
+    "icon": {
+      "id": "minecraft:map"
+    },
+    "title": {
+      "text": "A New Continent"
+    },
+    "description": {
+      "text": "Reach Europe after learning about it from Jengo."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

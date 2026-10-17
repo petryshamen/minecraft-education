@@ -1,0 +1,29 @@
+HUMAN JOURNEY v0.3.5 — SAFE CLASS RESET
+
+New command:
+  /function human_journey:admin/reset_class_progress
+
+Use this on the live class server after testing, instead of:
+  /function human_journey:debug/reset_test_world
+
+The safe reset:
+- resets only Human Journey shared milestones
+- resets Human Journey technology unlocks
+- revokes only Human Journey visible advancements
+- revokes Human Journey hidden trigger advancements so they can trigger again
+- resets Jengo's quest stage
+- reapplies Era 0 technology locks
+- preserves vanilla and other mod advancements
+
+It does NOT:
+- delete NPCs
+- change builds
+- clear inventories
+- remove player roles
+- revoke unrelated vanilla/mod advancements
+
+Important:
+The command affects online Human Journey participants. If a player who previously
+participated in your testing is offline, run the reset once while that player is
+online or revoke their Human Journey internal advancements separately. For your
+current situation, where you did the testing yourself, being online as teacher is enough.

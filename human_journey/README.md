@@ -1,23 +1,14 @@
 # Human Journey
 
-Educational Minecraft Java project. Source of truth and history: petryshamen/minecraft-education.
+Current source: imported Human_Journey_v0_3_8.zip, version 0.3.8. Target: Minecraft Java 1.21.8 / Forge, datapack format 81.
 
-Target test environment: Minecraft Java 1.21.8 with Forge; datapack format 81.
+- source/: current editable datapack; gameplay files are unchanged from v0.3.8. pack.mcmeta adds human_journey.version for the development tools.
+- releases/original/: all nine user-supplied ZIPs, preserved byte for byte; SHA256SUMS.txt records their checksums. Historical versions are archival and are not installed.
+- docs/imported/v0.3.8/: original bundled notes, moved outside the runtime pack. Several note headings describe older releases; treat them as historical context and verify against current source.
+- builds/test/: verified local builds. Only version 0.3.8 is deployed to the configured Human Journey Test world.
 
-## Import required
+Minecraft requires no GitHub connection during play. No live-class deployment or progress reset is performed. Preserve advancement IDs, hj_civ names, technology scores, NPC stage objectives and NPC function IDs.
 
-No current Human Journey datapack was present in this repository when this structure was created. This is a project scaffold, not a playable release. Import the existing datapack into source/ before building. Do not invent a new starting version or replace existing progress identifiers.
+Testing: reload/reopen the test world, inspect the log and /datapack list. Compare Teacher and Student roles; check Student metallurgy locks, charcoal/furnace water purification, Jengo stages 1–4, Trader stage and Era 0 capstone. Static validation does not prove mod or command compatibility.
 
-After import, source/ must contain pack.mcmeta and data/ at its root. Record the real datapack version in version.json and source/pack.mcmeta human_journey.version, then create the matching changelog entry. Do not include this source placeholder README in a build.
-
-## Layout
-
-- source/: actual datapack root, with data/human_journey/ and data/minecraft/.
-- builds/test/: locally generated verified test ZIPs.
-- docs/eras/: progression design and stable advancement IDs.
-- docs/npc/: data schemas, stable NPC and quest IDs, dialogs and trades.
-- docs/technical/: migration notes, scoreboard inventory and validation rules.
-
-GitHub is not required during Minecraft gameplay. Build and deploy only to an explicitly configured LOCAL TEST WORLD. The live class server is always a manual deployment step.
-
-Teacher bypasses for lesson preparation and Student progression restrictions must remain distinct. Preserve advancement IDs, hj_civ fake-player names, technology and quest scores, and functions referenced by NPCs.
+Format reference: https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-7 (81); 1.21.8 hotfix: https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-8.

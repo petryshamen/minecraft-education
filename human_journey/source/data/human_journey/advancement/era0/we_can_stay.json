@@ -1,0 +1,23 @@
+{
+  "parent": "human_journey:era0/journey/new_continent",
+  "display": {
+    "icon": {
+      "id": "minecraft:campfire"
+    },
+    "title": {
+      "text": "WE CAN STAY"
+    },
+    "description": {
+      "text": "Complete Survival, Tools & Clothing, and Journey."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

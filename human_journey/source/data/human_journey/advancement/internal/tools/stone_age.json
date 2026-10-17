@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobblestone",
+              "minecraft:cobbled_deepslate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "human_journey:trigger/tools/stone_age"
+  }
+}

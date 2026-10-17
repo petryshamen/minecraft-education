@@ -1,0 +1,100 @@
+HUMAN JOURNEY v0.3.6 — LIVE FIX
+
+WHY THE METAL BUG WAS NOT CAUSED BY FINISHING ERA 0
+Completing WE CAN STAY unlocks AGRICULTURE only.
+It does NOT unlock Iron, Copper, Gold, Diamond, Redstone, Mass Mining, Backpacks,
+or Late Game. Metal crafting after the class reset was therefore a technical bug,
+not intended progression.
+
+METALLURGY FIX
+The old ingot enforcement watched inventory.* only. In survival, newly collected
+or smelted items commonly remain in the hotbar/main hand.
+
+v0.3.6 explicitly watches:
+- weapon.mainhand
+- weapon.offhand
+- hotbar.*
+- inventory.*
+
+If Iron/Copper/Gold Working is locked, worked ingots are immediately returned to:
+- Iron Ingot -> Raw Iron
+- Copper Ingot -> Raw Copper
+- Gold Ingot -> Raw Gold
+
+This is the hard gate. Recipe take/doLimitedCrafting remains a UI/crafting layer.
+
+WATER FIX
+Removed:
+- automatic Water Bottle -> Dirty Water conversion
+- campfire Dirty Water recipe
+
+Kept:
+- Tough As Nails' own purifier behavior
+- Dirty Water + Charcoal -> Purified Water
+- Dirty Water in furnace -> Purified Water
+
+This preserves Tough As Nails' own two-step dirty-water logic when using the purifier.
+
+JENGO FIX
+hj_jengo now has:
+0 = not ready
+1 = first meeting
+2 = Jengo tells about the northern/European land
+3 = Europe quest active, Europe NOT reached
+4 = Europe reached, final dialog
+
+Recommended Easy NPC conditions:
+First meeting:      hj_jengo = 1
+Story dialog:       hj_jengo = 2
+Quest reminder:     hj_jengo = 3
+Final dialog:       hj_jengo = 4
+
+This fixes the old issue where the final Jengo dialog appeared immediately after
+The Land Beyond, before A New Continent.
+
+TRADER
+New scoreboard:
+  hj_trader
+
+0 = A Reliable Source not completed
+1 = completed
+
+You can use this to switch to a post-trade dialog after the achievement is awarded.
+
+IMPORTANT LIMITATION OF YOUR EASY NPC VERSION
+Your dialog/button editor does not provide an ITEM condition for hiding the
+"We made the exchange" button before the trade. Its presence before trading was
+not caused by the reset or cached achievements.
+
+For the first release, the reliable solution is:
+- show the Trade button
+- show the confirmation button
+- confirmation COMMAND checks for the traded item
+- if item exists -> run human_journey:event/first_trade
+- if not -> display a failure message
+
+After A Reliable Source, hj_trader becomes 1, so a separate final dialog can replace
+the initial trader dialog.
+
+SAFE UPDATE
+v0.3.6 preserves existing Human Journey advancement IDs and hj_civ score names.
+Replacing v0.3.5 with v0.3.6 does not require replaying completed progress.
+
+After updating:
+  /reload
+Then verify:
+  /scoreboard players get #tech_iron hj_civ
+Expected in Era 0: 0
+
+For a pupil:
+  /tag <name> list
+Must include:
+  hj_student
+
+Useful checks:
+  /gamerule doLimitedCrafting
+Expected:
+  true
+
+  /function human_journey:debug/jengo_stage
+  /function human_journey:debug/trader_stage

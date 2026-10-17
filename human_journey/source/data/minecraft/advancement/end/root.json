@@ -1,0 +1,7 @@
+{
+  "criteria": {
+    "silent_root": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

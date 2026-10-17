@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "toughasnails:dirty_water_bottle",
+    "minecraft:charcoal"
+  ],
+  "result": {
+    "count": 1,
+    "id": "toughasnails:purified_water_bottle"
+  }
+}

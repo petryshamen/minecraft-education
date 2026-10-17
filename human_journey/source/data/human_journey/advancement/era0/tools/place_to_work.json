@@ -1,0 +1,23 @@
+{
+  "parent": "human_journey:era0/tools/first_wood",
+  "display": {
+    "icon": {
+      "id": "minecraft:crafting_table"
+    },
+    "title": {
+      "text": "A Place to Work"
+    },
+    "description": {
+      "text": "Craft a crafting table."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

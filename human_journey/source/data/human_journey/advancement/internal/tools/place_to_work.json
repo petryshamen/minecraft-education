@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "minecraft:crafting_table"
+      }
+    }
+  },
+  "rewards": {
+    "function": "human_journey:trigger/tools/place_to_work"
+  }
+}

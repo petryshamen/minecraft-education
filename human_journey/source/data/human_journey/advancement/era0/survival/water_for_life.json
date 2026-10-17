@@ -1,0 +1,23 @@
+{
+  "parent": "human_journey:era0/survival/ready_to_eat",
+  "display": {
+    "icon": {
+      "id": "toughasnails:purified_water_bottle"
+    },
+    "title": {
+      "text": "Water for Life"
+    },
+    "description": {
+      "text": "Obtain purified drinking water."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

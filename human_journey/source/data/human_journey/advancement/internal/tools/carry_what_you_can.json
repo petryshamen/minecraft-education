@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "minecraft:bundle"
+      }
+    }
+  },
+  "rewards": {
+    "function": "human_journey:trigger/tools/carry_what_you_can"
+  }
+}

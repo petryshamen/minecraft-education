@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#human_journey:prepared_food"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "human_journey:trigger/survival/ready_to_eat"
+  }
+}

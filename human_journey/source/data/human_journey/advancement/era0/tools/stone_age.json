@@ -1,0 +1,23 @@
+{
+  "parent": "human_journey:era0/tools/first_tool",
+  "display": {
+    "icon": {
+      "id": "minecraft:cobblestone"
+    },
+    "title": {
+      "text": "Stone Age"
+    },
+    "description": {
+      "text": "Obtain cobblestone."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

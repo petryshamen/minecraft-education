@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "minecraft:stone_axe"
+      }
+    }
+  },
+  "rewards": {
+    "function": "human_journey:trigger/tools/better_edge"
+  }
+}

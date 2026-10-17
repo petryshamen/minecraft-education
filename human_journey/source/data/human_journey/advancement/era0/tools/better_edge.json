@@ -1,0 +1,23 @@
+{
+  "parent": "human_journey:era0/tools/stone_age",
+  "display": {
+    "icon": {
+      "id": "minecraft:stone_axe"
+    },
+    "title": {
+      "text": "A Better Edge"
+    },
+    "description": {
+      "text": "Craft a stone axe."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

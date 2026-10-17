@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:slept_in_bed"
+    }
+  },
+  "rewards": {
+    "function": "human_journey:trigger/survival/rest_at_last"
+  }
+}

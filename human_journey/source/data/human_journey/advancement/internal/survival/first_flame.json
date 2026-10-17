@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "minecraft:campfire"
+      }
+    }
+  },
+  "rewards": {
+    "function": "human_journey:trigger/survival/first_flame"
+  }
+}

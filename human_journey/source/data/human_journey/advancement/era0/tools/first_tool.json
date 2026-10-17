@@ -1,0 +1,23 @@
+{
+  "parent": "human_journey:era0/tools/place_to_work",
+  "display": {
+    "icon": {
+      "id": "minecraft:wooden_pickaxe"
+    },
+    "title": {
+      "text": "First Tool"
+    },
+    "description": {
+      "text": "Craft a wooden pickaxe."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+HUMAN JOURNEY v0.3.8 — STABLE ERA 0 RELEASE
+
+BASE
+v0.3.8 is based directly on v0.3.6.
+
+Technology restrictions, Teacher/Student behavior, Jengo logic, Trader logic,
+safe class reset, and all existing Era 0 advancements are unchanged from v0.3.6.
+
+THE ONLY GAMEPLAY ADDITION
+Normal Water Bottle -> Furnace -> Purified Water Bottle
+
+Existing purification methods remain:
+- Dirty Water Bottle -> Furnace -> Purified Water Bottle
+- Dirty Water Bottle + Charcoal -> Purified Water Bottle
+- Tough As Nails Water Purifier works with its own built-in logic
+
+Removed behavior stays removed:
+- no campfire purification
+- no automatic conversion of normal Water Bottle into Dirty Water
+
+IMPORTANT
+Teacher mode is intentionally unrestricted.
+Technology/crafting restrictions are meant for players with the hj_student role.
+
+INSTALL
+1. Back up the world.
+2. Replace the previous Human Journey zip in <world>/datapacks/.
+3. Run:
+   /reload
+4. Check:
+   /datapack list enabled
+
+This release preserves existing advancement IDs and shared hj_civ progress.
+No class-progress reset is required just for updating from v0.3.6.

@@ -1,0 +1,72 @@
+HUMAN JOURNEY v0.3.4 — JENGO QUEST SYNC
+Minecraft Java 1.21.8 / Forge
+
+This version is v0.3.3 plus one small integration layer for Easy NPC.
+
+NEW SCOREBOARD
+  hj_jengo
+
+It is synchronized automatically for every Human Journey participant:
+
+  0 = Beyond the Camp not completed yet
+  1 = Beyond the Camp completed
+      -> first Jengo meeting dialog
+  2 = A Stranger from Afar completed
+      -> Jengo's "land to the north / Europe" dialog
+  3 = The Land Beyond completed
+      -> final/fallback Jengo dialog
+
+Teacher and students receive the SAME hj_jengo stage so the teacher can see/test
+the same dialog state. Teacher actions still cannot advance Human Journey because
+the Human Journey event functions themselves only accept STUDENT progression.
+
+EASY NPC — JENGO DIALOGS
+
+FIRST MEETING DIALOG
+Condition Type: SCOREBOARD
+Scoreboard Name: hj_jengo
+Operation: EQUALS
+Value: 1
+
+Button example:
+  Who are you?
+
+Action Type: COMMAND
+Execute as player: OFF
+Command:
+  execute as @initiator run function human_journey:event/meet_jengo
+
+SECOND DIALOG
+Condition:
+  hj_jengo EQUALS 2
+
+Button example:
+  Tell us about the land to the north.
+
+Action Type: COMMAND
+Execute as player: OFF
+Command:
+  execute as @initiator run function human_journey:event/land_beyond
+
+FINAL / FALLBACK DIALOG
+Condition:
+  hj_jengo EQUALS 3
+
+Use this for normal post-quest conversation/trading.
+
+DEBUG
+To see your current Jengo stage:
+  /function human_journey:debug/jengo_stage
+
+INSTALL ON SERVER
+1. Make a world backup.
+2. Remove the older Human Journey ZIP from <world>/datapacks/
+3. Put Human_Journey_v0_3_4.zip there.
+4. Run:
+   /reload
+   /datapack list
+5. Existing Human Journey progress remains because the same advancement IDs and
+   hj_civ scoreboard names are preserved.
+
+IMPORTANT
+Do not reset the live world. Do NOT run debug/reset_test_world on the class server.

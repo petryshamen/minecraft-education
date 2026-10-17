@@ -1,0 +1,23 @@
+{
+  "parent": "human_journey:era0/we_can_stay",
+  "display": {
+    "icon": {
+      "id": "minecraft:wheat"
+    },
+    "title": {
+      "text": "ERA 1 — The First Fields"
+    },
+    "description": {
+      "text": "A new way of life begins."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
