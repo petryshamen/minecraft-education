@@ -30,5 +30,5 @@ execute unless score #tech_mass_mining hj_civ matches 0.. run scoreboard players
 execute unless score #tech_backpacks hj_civ matches 0.. run scoreboard players set #tech_backpacks hj_civ 0
 execute unless score #tech_late_game hj_civ matches 0.. run scoreboard players set #tech_late_game hj_civ 0
 schedule function human_journey:tech/enforce 1s replace
-tellraw @a[tag=hj_participant] {"text":"[Human Journey] v0.3.8 loaded.","color":"dark_green"}
+tellraw @a[tag=hj_participant] {"text":"[Human Journey] v0.3.9 loaded.","color":"dark_green"}
 function human_journey:sync

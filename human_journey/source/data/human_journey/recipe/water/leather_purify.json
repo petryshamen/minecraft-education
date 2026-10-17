@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_transmute",
+  "category": "misc",
+  "input": "toughasnails:leather_water_canteen",
+  "material": "minecraft:charcoal",
+  "result": "toughasnails:leather_purified_water_canteen"
+}

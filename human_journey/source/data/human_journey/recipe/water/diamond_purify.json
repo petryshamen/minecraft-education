@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_transmute",
+  "category": "misc",
+  "input": "toughasnails:diamond_water_canteen",
+  "material": "minecraft:charcoal",
+  "result": "toughasnails:diamond_purified_water_canteen"
+}

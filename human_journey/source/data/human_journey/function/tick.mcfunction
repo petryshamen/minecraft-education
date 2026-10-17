@@ -4,9 +4,9 @@ function human_journey:sync
 # WATER:
 # Water chemistry is left to Tough As Nails.
 # Normal Water Bottle remains normal. Dirty Water remains dirty.
-# Human Journey only adds two primitive purification alternatives:
-#  - Dirty Water + Charcoal
-#  - Dirty Water in a furnace
+# Charcoal: dirty -> normal -> purified, using two stages.
+# Normal bottled water can also be boiled; dirty water cannot.
+# Canteen charcoal recipes preserve components; no canteen smelting is provided.
 
 # PLAYER-LEVEL METAL LOCK:
 # Recipe-book locking is only the UI layer. This is the hard metallurgy gate.

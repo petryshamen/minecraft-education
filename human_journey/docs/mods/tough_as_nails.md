@@ -91,3 +91,42 @@ Relevant tag members:
 - Before a future integration release, test fresh and progressed Students and Teacher behavior, blocked/unlocked recipes, inventory persistence after save/reload, and conflicts with existing recipes.
 - For stateful items, test empty/partial/full contents, names, damage, enchantments, upgrades and stored inventories; confirm no state is silently destroyed.
 - No JAR was changed, installed, renamed or executed. No trusted CFR decompiler is configured; optional decompilation has not been exercised against this mod.
+
+## v0.3.9 water integration inspection
+
+Identity rechecked against the installed JAR: filename, metadata version 21.8.0.2 and SHA-256 match the identity above. Mods remain read-only; the path guard is an application-level check, not an OS sandbox. No mod JAR/class or decompiled source is committed or executed.
+
+### Confirmed references and state
+
+The installed recipe resources data/toughasnails/recipe/<material>_water_canteen.json use dirty-water -> normal-water item stacks; <material>_purified_water_canteen.json use normal -> purified. The installed tags/item/enchantable/canteen.json enumerates all 24 references. Materials: leather, copper, iron, gold, diamond, netherite.
+
+For each material M the exact IDs are:
+- toughasnails:empty_M_canteen
+- toughasnails:M_dirty_water_canteen
+- toughasnails:M_water_canteen
+- toughasnails:M_purified_water_canteen
+
+Here M is substituted with each material name, e.g. toughasnails:leather_water_canteen and toughasnails:iron_dirty_water_canteen. Water quality is selected by item ID, not a water-type NBT field. Installed ModItems.class constants and bundled recipe inputs/results corroborate these names. FilledCanteenItem.class references getDamageValue/setDamageValue, hurtAndBreak and enchantment copying: strings alone are not control-flow proof.
+
+No trusted CFR is configured; the guarded decompile request returned unavailable. To resolve the state mechanism without running the JAR, inspected the author's 1.21.8 source pinned at f63d0095d2a89237c701ee8795c96819a2cc8127 (supplemental source evidence, not a claim of byte-identical reproduction). ModItems registers separate water variants with equal capacity within each material; FilledCanteenItem.finishUsingItem consumes damage until it returns an empty canteen. Remaining sips are represented by minecraft:damage against minecraft:max_damage, alongside ordinary stack components such as custom_name and enchantments. No custom fluid inventory component is used by these inspected classes. Source capacities: leather 5, copper 6, iron 7, gold 10, diamond 15, netherite 25.
+
+Author source references:
+- https://github.com/Glitchfiend/ToughAsNails/blob/f63d0095d2a89237c701ee8795c96819a2cc8127/common/src/main/java/toughasnails/init/ModItems.java
+- https://github.com/Glitchfiend/ToughAsNails/blob/f63d0095d2a89237c701ee8795c96819a2cc8127/common/src/main/java/toughasnails/item/FilledCanteenItem.java
+- https://github.com/Glitchfiend/ToughAsNails/blob/f63d0095d2a89237c701ee8795c96819a2cc8127/common/src/main/java/toughasnails/item/EmptyCanteenItem.java
+
+### Datapack implementation and limits
+
+Minecraft crafting_transmute changes the item type while retaining the input component patch; no result component overrides are added to the canteen recipes. Damage/remaining drinks, name, enchantments and custom components therefore carry across the charcoal step. Each canteen material has dirty + one charcoal -> normal, then normal + another charcoal -> purified. Empty and already purified canteens have no charcoal recipe. Diamond is supported as an additional installed tier even though it is not a metal.
+
+A vanilla furnace result is a static new stack, which cannot copy input damage/name/enchantments. No canteen furnace recipe is introduced for any material. This avoids refilling partially used canteens and erasing custom data. Leather is never boilable. Metal boiling needs a custom state-preserving recipe implementation; this release does not install or modify any mod.
+
+The mod's existing enchanted-canteen auto-purification is not changed. Upstream FilledCanteenItem.inventoryTick creates a purified stack, carrying damage/enchantments; unrelated custom names/data can be lost during that mod-driven transformation. Test charcoal preservation with ordinary named, partially consumed canteens; if testing enchantments, distinguish the mod tick from the crafting result. Emptying/refilling is also the mod's own behavior and may reset data independently of our recipes.
+
+Minecraft primary references: https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-2 (transmute preserves components); https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-5 (result component patches).
+
+Bottle ingredients limitation: normal water and effect potions share minecraft:potion. The existing v0.3.8 furnace ingredient matches that item ID, including effect potions. Minecraft 1.21.8 vanilla ingredients cannot constrain potion_contents; Forge 1.21.8's StrictNBTIngredient and PartialNBTIngredient inspect CUSTOM_DATA, not POTION_CONTENTS. Do not falsely label those as a water-component filter. Retain the inherited furnace matching; normal-water charcoal matching has the same limitation in this test release. The user explicitly approved broad bottle matching for this test. Do not use valuable effect potions in these recipes. A strict water-only recipe needs additional recipe-code support, not an invented JSON component ingredient.
+
+### Existing behavior preserved
+
+No technology lock/give/revert, advancement, NPC event, role-setup or era-completion file is changed. sync only grants the new water recipes to existing hj_participant recipients and stops granting the removed furnace_dirty_water recipe. load only updates the visible version text. The existing Water for Life trigger remains bottle-based and Student-only after Ready to Eat; canteen purification does not add a new progression trigger. Existing TAN purifier recipes and bottle filling behavior are unchanged.

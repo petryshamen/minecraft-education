@@ -6,7 +6,12 @@
     "minecraft:charcoal"
   ],
   "result": {
+    "id": "minecraft:potion",
     "count": 1,
-    "id": "toughasnails:purified_water_bottle"
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "minecraft:water"
+      }
+    }
   }
 }
