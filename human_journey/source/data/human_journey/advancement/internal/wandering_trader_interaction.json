@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "interact": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wandering_trader"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "human_journey:trader/wandering/interaction_guard"
+  }
+}

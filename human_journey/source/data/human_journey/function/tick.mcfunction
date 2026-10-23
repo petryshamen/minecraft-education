@@ -1,3 +1,6 @@
+# Initialize naturally spawned Wandering Traders; existing processed stock is untouched.
+function human_journey:trader/wandering/tick
+
 # Keep visible shared progress synchronized.
 function human_journey:sync
 

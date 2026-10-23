@@ -30,5 +30,10 @@ execute unless score #tech_mass_mining hj_civ matches 0.. run scoreboard players
 execute unless score #tech_backpacks hj_civ matches 0.. run scoreboard players set #tech_backpacks hj_civ 0
 execute unless score #tech_late_game hj_civ matches 0.. run scoreboard players set #tech_late_game hj_civ 0
 schedule function human_journey:tech/enforce 1s replace
-tellraw @a[tag=hj_participant] {"text":"[Human Journey] v0.3.9 loaded.","color":"dark_green"}
+
+# Human Journey controls offers, not the vanilla spawning schedule or llamas.
+gamerule doTraderSpawning true
+function human_journey:trader/wandering/pools/era0
+function human_journey:trader/wandering/tick
+tellraw @a[tag=hj_participant] {"text":"[Human Journey] v0.3.10 loaded.","color":"dark_green"}
 function human_journey:sync
