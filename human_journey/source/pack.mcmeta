@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.3.10 — Era 0 Wandering Trader test"
+    "description": "Human Journey v0.3.11 — Student recipe initialization"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.3.10"
+    "version": "0.3.11"
   }
 }

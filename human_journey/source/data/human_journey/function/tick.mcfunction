@@ -1,3 +1,6 @@
+# One-time repair for existing/offline Students when they next appear; no repeated grant-all.
+execute as @a[tag=hj_student,tag=!hj_recipes_initialized] run function human_journey:setup/student_recipes
+
 # Initialize naturally spawned Wandering Traders; existing processed stock is untouched.
 function human_journey:trader/wandering/tick
 

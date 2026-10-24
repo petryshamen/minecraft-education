@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.3.11
+
+- Student setup now grants the full recipe set and immediately reapplies the existing civilization technology restrictions; existing Students receive a one-time repair on their next tick, including after an offline login. Teacher behavior and all progression IDs remain unchanged.
+- Human Journey Core 0.1.0 development is separate from this datapack; no mod binaries or Easy NPC stock workaround are included.
+
 ## 0.3.10
 
 - Added six editable Era 0 Wandering Trader barter offers, once-only initialization and a synchronous first-interaction guard; natural spawning remains enabled. Existing #era1 progression controls availability; new traders outside Era 0 have exhausted offers. Easy NPC/Jengo and existing progression are unchanged.

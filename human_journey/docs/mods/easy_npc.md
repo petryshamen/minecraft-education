@@ -65,3 +65,18 @@ Relevant tag members:
 - Before a future integration release, test fresh and progressed Students and Teacher behavior, blocked/unlocked recipes, inventory persistence after save/reload, and conflicts with existing recipes.
 - For stateful items, test empty/partial/full contents, names, damage, enchantments, upgrades and stored inventories; confirm no state is silently destroyed.
 - No JAR was changed, installed, renamed or executed. No trusted CFR decompiler is configured; optional decompilation has not been exercised against this mod.
+
+## Trade stock (6.5.2 / Minecraft 1.21.8)
+
+The installed core/config UI/bundle are 6.5.2. Installed class-pool inspection was read-only; no decompiler is configured and no live trade reproduction was performed. The corresponding official source revision [f929f51](https://github.com/MarkusBordihn/BOs-Easy-NPC/tree/f929f51540778bb8bcbb43989e6ff4a4c816ce85) declares version 6.5.2 and Minecraft 1.21.8. Source-correlated findings:
+
+- Max Uses counts completed trade transactions, shared by all players using that NPC, not a per-player quota. A stack output still counts as one transaction. Only one trading customer is supported at a time.
+- Basic Trading uses a global maximum for its offers. Its `updateBasicTradingOffers` returns immediately when the type IS BASIC; changing the global value can therefore leave existing offers at their previous maximum. Rebuilding Basic offers from item slots starts their uses at zero.
+- Advanced Trading stores a maximum per offer. Editing that maximum reconstructs the offer with zero uses; its item editor otherwise preserves existing per-offer usage. Both modes use the same merchant stock mechanism, so Advanced is not a persistence fix.
+- Runtime merchant offers are a COPY of the synchronized/stored offers. `notifyTrade` increments the runtime offer; saving serializes the stored offers. Recreating the merchant list, chunk/entity unload/reload, or world/server restart can consequently restore stale usage counts. Merely closing/reopening should retain the current runtime list unless a reset/rebuild occurs. A datapack `/reload` alone does not intentionally reload NPC entities.
+- Reset Uses resets all offer counts and records a last-reset timestamp. Min for Reset is real elapsed minutes, evaluated when a player opens trading. Zero disables timed resets; leaving the screen open is not a continuous restock timer. LastReset is serialized. Downtime can count toward elapsed time.
+- Upstream [issue #729](https://github.com/MarkusBordihn/BOs-Easy-NPC/issues/729) reports trades resetting after entity unload/reload; [#689](https://github.com/MarkusBordihn/BOs-Easy-NPC/issues/689) concerns maximum-use behavior. Later fixes on other Minecraft branches do not establish a fixed compatible 1.21.8 release.
+
+Recommended next step: use a disposable Advanced trader with one offer, Max Uses 1 and reset minutes 0; test two players, close/reopen, chunk reload and restart separately. Then test a one-minute reset by waiting and reopening. Seek a verified 1.21.8-compatible upstream stock-persistence fix/backport before relying on scarcity. A Core adapter could synchronize runtime stock to persistent state; datapack NBT edits risk conflicting with the runtime cache and open screens. Neither workaround is implemented.
+
+Source entry points at the pinned revision: `TradingDataCapable`, `TradingOfferHandler`, `TradingDataSet`, config UI `TradingContainerHandler` and `ChangeBasicTradingMessage`.
