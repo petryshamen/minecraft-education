@@ -2,7 +2,7 @@
 
 Окремий Forge-мод для Minecraft **1.21.8**, Forge **58.1.18**, Tough As Nails **21.8.0.2** і GlitchCore **21.8.0.0**. Баланс контролює сервер; учням не потрібно замінювати JAR після зміни чисел у серверному конфігу.
 
-**Статус цієї поставки: вихідний проєкт, ще не скомпільований і не перевірений у грі. Готового JAR в архіві немає.** У поточному середовищі захищений build launcher завершився до запуску Gradle: `MXC launcher: cannot locate required Windows platform directory: HRESULT 0x80070003`. JDK 21 у налаштованому Core toolchain також відсутній. Wrapper тепер включений у цей окремий проєкт. Збірку слід виконати на справному локальному комп'ютері або через доданий ручний GitHub Actions workflow.
+**Статус: Forge JAR успішно зібрано в GitHub Actions; 6 тестів пройдено, 0 помилок. Ігрові перевірки ще потрібні.** [Успішна збірка](https://github.com/petryshamen/minecraft-education/actions/runs/40066494993), commit `06e795f597619f0056bc375cc239de4563e980b0`. Runtime JAR: `human_journey_core-0.1.0.jar`, SHA-256 `531c7b52eac25796e717f772731623320fa73373a2cba8f042818404a703fd74`. Копія точного артефакту збережена в `releases/original/`. Нічого автоматично не встановлювалося у Minecraft.
 
 ## Поведінка
 
@@ -35,9 +35,9 @@ build/libs/human_journey_core-0.1.0-sources.jar  ← лише вихідні ф�
 build/reports/tests/test/index.html             ← звіт JUnit
 ```
 
-Ці файли не були отримані в поточній сесії. На Linux/macOS із JDK 21: `chmod +x gradlew`, потім `./gradlew --no-daemon test build`.
+Ці файли отримані з успішної GitHub Actions збірки. На Linux/macOS із JDK 21: `chmod +x gradlew`, потім `./gradlew --no-daemon test build`.
 
-За бажанням завантаж проєкт у власний GitHub-репозиторій і запусти **Actions → Build Human Journey Core → Run workflow**. Workflow виконується вручну, віддає JAR і звіт як artifact та нічого не публікує й не встановлює. Його виконання тут не перевірялося.
+Проєкт уже розміщено в `petryshamen/minecraft-education/human_journey_core`. Workflow лежить у корені репозиторію: `.github/workflows/human-journey-core.yml`. Він стартує при push змін Core або вручну через **Actions → Build Human Journey Core → Run workflow**, віддає JAR і звіт як artifact та нічого не встановлює. Для локальної збірки спочатку перейди в `human_journey_core`.
 
 ## Ручне встановлення після успішної збірки
 
@@ -69,7 +69,7 @@ Exhaustion — **не кількість thirst points**: його обробл�
 
 ## Перевірка у тестовому світі
 
-JUnit перевіряє чисті правила, але не замінює Forge startup та ігровий тест. **JUnit у цій сесії не запускався.**
+JUnit перевіряє чисті правила, але не замінює Forge startup та ігровий тест. **GitHub Actions: 6 тестів пройдено, 0 помилок, 0 пропущених.**
 
 1. **Завантаження:** запусти dedicated test server і підключи клієнт із тими самими модами. Перевір відсутність missing classes/config/eventbus errors.
 2. **WARM/HOT:** у Survival з однаковими hydration, спорядженням, активністю й часом порівняй WARM та HOT в Overworld, потім у Nether. HOT має давати більші додаткові витрати. Для контрольної спроби вистав обидва exhaustion у 0 й перезапусти сервер. Через запас hydration ефект не обов'язково відразу видно як втрачені іконки спраги.
@@ -84,4 +84,4 @@ JUnit перевіряє чисті правила, але не замінює F
 
 `config/` — Forge SERVER config; `engine/temperature/HeatPolicy` — чисті правила; `integration/toughasnails/` — TAN API adapter. Перед player tick зменшується exposure, після завершення всіх server ticks застосовується остаточне охолодження й exhaustion. Це не залежить від порядку Forge Player Post і TAN tick hook. Власних збережуваних даних або world migration немає.
 
-Повної компіляції, server startup, client sync і геймплею ще не перевірено. Перевірені версії, походження wrapper, SHA-256 TAN і посилання на API описані в `docs/API-EVIDENCE.md`. Сторонні TAN/GlitchCore/Minecraft JAR у source ZIP не включені; вони не вбудовуються у runtime JAR Core.
+Компіляція та JUnit пройдені. Server startup, client sync і геймплей ще не перевірені. Перевірені версії, походження wrapper, SHA-256 TAN і посилання на API описані в `docs/API-EVIDENCE.md`. Сторонні TAN/GlitchCore/Minecraft JAR не вбудовуються у runtime JAR Core.

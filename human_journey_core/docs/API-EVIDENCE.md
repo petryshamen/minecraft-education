@@ -27,9 +27,9 @@ Official [Forge 1.21.8 downloads](https://files.minecraftforge.net/net/minecraft
 - Wrapper JAR, `gradlew`, and `gradlew.bat` were copied from that official MDK, not recreated. Third-party notices are included.
 - Distribution SHA-256 from [Gradle checksum](https://services.gradle.org/distributions/gradle-9.3.1-bin.zip.sha256): `b266d5ff6b90eada6dc3b20cb090e3731302e553a27c5d3e4df1f0d76beaff06`.
 - Forge sources for exactly 58.1.18 confirm `TickEvent.PlayerTickEvent.Pre.BUS`, `TickEvent.ServerTickEvent.Post.BUS`, `getServer()`, and predicate-based cancellation in `LivingAttackEvent.BUS`.
-- No client classes are referenced by Core. Dependency resolution, Java compilation and dedicated-server loading are still unverified.
+- No client classes are referenced by Core. Dependency resolution and Java compilation passed in GitHub Actions; dedicated-server loading still needs an in-game test.
 
-## Build outcome
+## Earlier local build attempt
 
 Native confined verification attempted using Human Journey Developer: run ID `1792818501189645800`, exit 1, `sandbox_verified=false`.
 
@@ -37,4 +37,14 @@ Native confined verification attempted using Human Journey Developer: run ID `17
 MXC launcher: cannot locate required Windows platform directory: HRESULT 0x80070003
 ```
 
-Gradle did not run. JUnit did not run. No runtime JAR was produced or installed. No unrestricted-build fallback was used.
+Gradle did not run locally. No unrestricted local build fallback was used.
+
+## Successful GitHub Actions build
+
+- [Run 40066494993](https://github.com/petryshamen/minecraft-education/actions/runs/40066494993), source commit `06e795f597619f0056bc375cc239de4563e980b0`.
+- Java 21, Gradle 9.3.1, ForgeGradle 7.0.3, Minecraft 1.21.8 / Forge 58.1.18.
+- `compileJava`, `compileTestJava`, `test`, `jar`, `sourcesJar`, `build` passed; 6 tests, 0 failures, 0 skipped.
+- Runtime JAR: `human_journey_core-0.1.0.jar`, 11348 bytes, SHA-256 `531c7b52eac25796e717f772731623320fa73373a2cba8f042818404a703fd74`.
+- Artifact ZIP ID `12548609621`, SHA-256 `08df3af1eddb517fdb44cbe197d30f51a09dcf1811d6ea4f520e5ad774fedde4`. Downloaded archive matched this digest.
+- JAR inspection confirmed expanded mod version 0.1.0, six Java 21 class files under `org/humanjourney/core/`, and no bundled third-party mod classes.
+- Exact runtime JAR archived under `releases/original/`. Installation remains manual. Forge runtime startup and gameplay have not yet been tested.
