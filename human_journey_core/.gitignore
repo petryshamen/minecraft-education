@@ -1,0 +1,11 @@
+.gradle/
+.gradle-user-home/
+.gradle-project-cache/
+.tmp/
+.java-user-home/
+build/
+run/
+toolchains/
+*.log
+.idea/
+*.iml

@@ -1,0 +1,9 @@
+# Copy into <world>/serverconfig/ AFTER stopping the server.
+# Exhaustion is additional TAN exhaustion per second at 20 TPS, not thirst points.
+[temperature]
+warm_thirst_exhaustion = 0.10
+hot_thirst_exhaustion = 0.50
+overworld_hyperthermia_damage = false
+nether_hyperthermia_damage = true
+water_heat_relief = 20
+water_cooling_interval_ticks = 10

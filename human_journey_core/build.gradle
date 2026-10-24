@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle' version '7.0.3'
+}
+
+group = 'org.humanjourney'
+version = mod_version
+base.archivesName = 'human_journey_core'
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+}
+
+minecraft {
+    mappings channel: 'official', version: minecraft_version
+}
+
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    mavenCentral()
+    maven {
+        name = 'CurseMaven'
+        url = 'https://cursemaven.com'
+        content { includeGroup 'curse.maven' }
+    }
+}
+
+dependencies {
+    implementation minecraft.dependency("net.minecraftforge:forge:${minecraft_version}-${forge_version}")
+    // Public distribution; never use the user's installed mods/ as a classpath.
+    // Exact bytes match installed TAN 21.8.0.2 (see docs/API-EVIDENCE.md).
+    compileOnly 'curse.maven:tough-as-nails-246391:7063978'
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+    systemProperty 'java.io.tmpdir', file('.tmp').absolutePath
+    systemProperty 'user.home', file('.java-user-home').absolutePath
+    workingDir = layout.buildDirectory.dir('test-work').get().asFile
+    doFirst { workingDir.mkdirs() }
+}
+tasks.withType(Jar).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+    manifest.attributes('Implementation-Version': project.version)
+}
+tasks.named('processResources') {
+    inputs.property 'mod_version', mod_version
+    filesMatching('META-INF/mods.toml') { expand mod_version: mod_version }
+}

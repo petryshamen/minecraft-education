@@ -1,0 +1,39 @@
+modLoader="javafml"
+loaderVersion="[58,59)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="human_journey_core"
+version="${mod_version}"
+displayName="Human Journey Core"
+authors="Human Journey"
+description='''Server-controlled heat/thirst integration for Tough As Nails 21.8.0.2.'''
+accessTransformers=[]
+
+[[dependencies.human_journey_core]]
+modId="forge"
+mandatory=true
+versionRange="[58.1.18,59)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.human_journey_core]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.8]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.human_journey_core]]
+modId="toughasnails"
+mandatory=true
+versionRange="[21.8.0.2]"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.human_journey_core]]
+modId="glitchcore"
+mandatory=true
+versionRange="[21.8.0.0,21.9)"
+ordering="AFTER"
+side="BOTH"
