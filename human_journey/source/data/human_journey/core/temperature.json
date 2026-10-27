@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "thirst": {
+    "warm_exhaustion_per_second": 0.5,
+    "hot_exhaustion_per_second": 2,
+    "nether_hot_exhaustion_per_second": 3
+  },
+  "overworld": {
+    "hyperthermia_damage": true,
+    "heat_damage_interval_ticks": 160,
+    "heat_damage_amount": 1
+  },
+  "nether": {
+    "hyperthermia_damage": true,
+    "heat_damage_interval_ticks": 40,
+    "heat_damage_amount": 1,
+    "remove_climate_clemency": true
+  },
+  "water": {
+    "heat_relief_ticks_per_tick": 20,
+    "cooling_interval_ticks": 10
+  }
+}

@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.3.12
+
+- Added Core 0.2.0 datapack temperature policy: extra exhaustion/sec WARM 0.5, Overworld HOT 2.0, Nether HOT 3.0; preserved established water relief 20 / cooling interval 10.
+- Enabled Overworld heat damage at 1 HP every 160 ticks after TAN buildup; retained Nether 1 HP / 40 ticks and enabled Nether-only Climate Clemency removal. Cold, progression, roles, recipes and NPC logic are unchanged; Core JAR/configs are untouched.
+
 ## 0.3.11
 
 - Student setup now grants the full recipe set and immediately reapplies the existing civilization technology restrictions; existing Students receive a one-time repair on their next tick, including after an offline login. Teacher behavior and all progression IDs remain unchanged.

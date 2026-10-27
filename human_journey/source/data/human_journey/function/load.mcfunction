@@ -35,5 +35,5 @@ schedule function human_journey:tech/enforce 1s replace
 gamerule doTraderSpawning true
 function human_journey:trader/wandering/pools/era0
 function human_journey:trader/wandering/tick
-tellraw @a[tag=hj_participant] {"text":"[Human Journey] v0.3.11 loaded.","color":"dark_green"}
+tellraw @a[tag=hj_participant] {"text":"[Human Journey] v0.3.12 loaded.","color":"dark_green"}
 function human_journey:sync
