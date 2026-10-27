@@ -1,6 +1,6 @@
 # Human Journey Core 0.2.0
 
-Stable engine for Minecraft **1.21.8**, Forge **58.1.18**, Tough As Nails **21.8.0.2**, GlitchCore **21.8.0.0**. This release adds reloadable datapack balance and an admin status command. Compilation/testing results are recorded after the GitHub build. Minecraft startup, multiplayer command output and actual reload/gameplay still need manual verification.
+Stable engine for Minecraft **1.21.8**, Forge **58.1.18**, Tough As Nails **21.8.0.2**, GlitchCore **21.8.0.0**. This release adds reloadable datapack balance and an admin status command. [GitHub Actions build](https://github.com/petryshamen/minecraft-education/actions/runs/40440241042) passed with **17 tests, 0 failures**, plus packaged resource metadata verification. Source commit: `448713fa984379c3f36fb52d6ce388eda56cb939`. Runtime JAR SHA-256: `d2fd9fc11f36564cedaf0233afe77c49bf896b8dda6b29654e7d17dc2fbf2cfc`. The post-tick water block and compiled water/cold policy helpers were compared with 0.1.1 and remain unchanged apart from reading settings through the new policy interface. Minecraft startup, multiplayer command output and actual reload/gameplay still need manual verification.
 
 ## Install manually
 

@@ -1,4 +1,16 @@
-# Dependency and API evidence — 2026-10-23
+# Dependency and API evidence
+
+## Core 0.2.0 datapack interface
+
+- [Successful build](https://github.com/petryshamen/minecraft-education/actions/runs/40440241042), source commit `448713fa984379c3f36fb52d6ce388eda56cb939`; 17 tests, 0 failures, packaged resource metadata check passed.
+- Runtime JAR SHA-256: `d2fd9fc11f36564cedaf0233afe77c49bf896b8dda6b29654e7d17dc2fbf2cfc`, 33006 bytes. Artifact ZIP digest: `3c084cb1305c79cb65613d17354ed9b249ade83ea20d778a48bcaaa2c68dae33`.
+- Forge 58.1.18 sources confirm `AddReloadListenerEvent.BUS`, `RegisterCommandsEvent.BUS` and `ServerStoppedEvent.BUS`. Compilation verifies the four-argument `PreparableReloadListener.reload` interface, resource lookup/source-pack access, command registration and public registry-backed `DamageSource` construction.
+- Additional public TAN API used: thirst/hydration/exhaustion getters, full-hyperthermia check/threshold and `TANEffects.CLIMATE_CLEMENCY`. The installed TAN JAR remains read-only and is not used as an executable/classpath.
+- Existing `HeatPolicy` class/enum bytes match 0.1.1. The post-tick water cooling source block matches after substituting config accessors. New tests cover parser bounds/types, independent rates/intervals, fallback, reload replacement/removal and invalid-policy retention.
+- External sample datapack uses data pack format 81; root JAR resource metadata remains format 64. No balance JSON is embedded in the runtime JAR, so the absent-file fallback can work.
+- No dedicated Minecraft server/client was launched by this build. Actual command/reload lifecycle and gameplay acceptance checks remain manual; no mod or datapack was installed automatically.
+
+## Earlier evidence — 0.1.x
 
 ## Exact installed target (read-only inspection)
 
