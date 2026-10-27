@@ -2,7 +2,7 @@
 
 Окремий Forge-мод для Minecraft **1.21.8**, Forge **58.1.18**, Tough As Nails **21.8.0.2** і GlitchCore **21.8.0.0**. Баланс контролює сервер; учням не потрібно замінювати JAR після зміни чисел у серверному конфігу.
 
-**Версія 0.1.1:** виправлено відсутній root `pack.mcmeta` (resource pack format 64). Температурну поведінку не змінено. `check`/`build` тепер перевіряє metadata безпосередньо у фінальному JAR. Результат збірки та SHA-256 будуть записані після перевірки нового артефакту.
+**Версія 0.1.1 успішно зібрана:** [GitHub Actions](https://github.com/petryshamen/minecraft-education/actions/runs/40433577996), 6 тестів і перевірка root `pack.mcmeta` пройдені. Resource pack format — 64. Усі 6 class-файлів ідентичні v0.1.0; температурну поведінку не змінено. Runtime JAR: `releases/original/human_journey_core-0.1.1.jar`, SHA-256 `7b2b34d899f63c3dfc1864d944e45de08c3df5621a948e51d8cfb62573ebca32`. Встановлення та повторна перевірка запуску Minecraft залишаються ручними.
 
 ## Поведінка
 
