@@ -37,5 +37,11 @@ public final class TemperatureConfig {
         b.pop();
         SPEC = b.build();
     }
+    public static TemperatureRules snapshot() {
+        return new TemperatureRules(WARM_THIRST_EXHAUSTION.get(), HOT_THIRST_EXHAUSTION.get(), HOT_THIRST_EXHAUSTION.get(),
+            new TemperatureRules.Damage(OVERWORLD_HYPERTHERMIA_DAMAGE.get(), 40, 1),
+            new TemperatureRules.Damage(NETHER_HYPERTHERMIA_DAMAGE.get(), 40, 1), false,
+            WATER_HEAT_RELIEF.get(), WATER_COOLING_INTERVAL_TICKS.get());
+    }
     private TemperatureConfig() {}
 }
