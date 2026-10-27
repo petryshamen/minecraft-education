@@ -2,6 +2,8 @@ package org.humanjourney.core.integration.toughasnails;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.TickEvent;
@@ -108,7 +110,8 @@ public final class TemperatureIntegration {
         CORE_HEAT_DAMAGE.add(player);
         try {
             // Same TAN damage type and normal Minecraft protection/invulnerability handling.
-            player.hurtServer((ServerLevel) player.level(), player.damageSources().source(TANDamageTypes.HYPERTHERMIA), (float) damage.amount());
+            var damageType = player.level().registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(TANDamageTypes.HYPERTHERMIA);
+            player.hurtServer((ServerLevel) player.level(), new DamageSource(damageType), (float) damage.amount());
         } finally {
             CORE_HEAT_DAMAGE.remove(player);
         }

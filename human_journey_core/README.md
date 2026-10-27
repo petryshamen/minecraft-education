@@ -1,87 +1,108 @@
-# Human Journey Core v0.1 (0.1.1)
+# Human Journey Core 0.2.0
 
-Окремий Forge-мод для Minecraft **1.21.8**, Forge **58.1.18**, Tough As Nails **21.8.0.2** і GlitchCore **21.8.0.0**. Баланс контролює сервер; учням не потрібно замінювати JAR після зміни чисел у серверному конфігу.
+Stable engine for Minecraft **1.21.8**, Forge **58.1.18**, Tough As Nails **21.8.0.2**, GlitchCore **21.8.0.0**. This release adds reloadable datapack balance and an admin status command. Compilation/testing results are recorded after the GitHub build. Minecraft startup, multiplayer command output and actual reload/gameplay still need manual verification.
 
-**Версія 0.1.1 успішно зібрана:** [GitHub Actions](https://github.com/petryshamen/minecraft-education/actions/runs/40433577996), 6 тестів і перевірка root `pack.mcmeta` пройдені. Resource pack format — 64. Усі 6 class-файлів ідентичні v0.1.0; температурну поведінку не змінено. Runtime JAR: `releases/original/human_journey_core-0.1.1.jar`, SHA-256 `7b2b34d899f63c3dfc1864d944e45de08c3df5621a948e51d8cfb62573ebca32`. Встановлення та повторна перевірка запуску Minecraft залишаються ручними.
+## Install manually
 
-## Поведінка
+Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.2.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
 
-- WARM/HOT додають **додатковий** thirst exhaustion через `ThirstHelper.getThirst(player).addExhaustion(...)` у Survival/Adventure в Overworld та Nether. Базовий TAN exhaustion залишається. NEUTRAL/COLD/ICY не додають Core exhaustion.
-- Лише damage type `toughasnails:hyperthermia` блокується в Overworld за замовчуванням. Nether зберігає цей damage. Інші виміри використовують звичайну поведінку TAN.
-- Контакт із водою в Overworld швидко прибирає hyperthermia exposure та переводить HOT → WARM → NEUTRAL. За замовчуванням крок кожні 10 ігрових ticks, тобто до 1 секунди для двох кроків при 20 TPS. Дощ не активує додаткове охолодження Core.
-- Core ніколи не переводить температуру нижче NEUTRAL, не підвищує COLD/ICY та не змінює холодні цілі TAN. Звичайне подальше охолодження від води у TAN залишається можливим.
-- Dehydration, напої, hydration, thirst level, cold effects, fire/lava damage, прогрес, NPC та датапак не переписуються. Менше пиття не обіцяється: спека саме збільшує витрати спраги.
-- Creative/Spectator не отримують додаткових витрат чи охолодження Core. Немає client-only класів, mixin або власних пакетів. Зміни температури передає штатна синхронізація TAN на наступному player tick (можлива затримка індикатора приблизно 1 tick).
-
-## Збірка на Windows
-
-1. Розпакуй весь проєкт у звичайну робочу папку. ZIP не встановлюється як мод або датапак.
-2. Підготуй **JDK 21** (наприклад Temurin 21). `JavaHome` має містити `bin/java.exe` і `bin/javac.exe`.
-3. Відкрий PowerShell у папці проєкту й виконай, підставивши справжній шлях JDK:
-
-```powershell
-.\build.ps1 -JavaHome 'C:\path\to\jdk-21'
-```
-
-Скрипт перевіряє Java 21, запускає включений Gradle 9.3.1 wrapper, JUnit та build. Перший запуск потребує інтернету для Gradle, Forge, Minecraft, TAN і Maven-залежностей. ForgeGradle зафіксований на 7.0.3 за офіційним MDK. Gradle distribution перевіряється SHA-256.
-
-Кеші, тимчасові дані та виходи скрипт спрямовує в папку проєкту; глобальні змінні середовища відновлює. Це звичайний локальний build script, **не ізольована пісочниця**. Скрипт не встановлює модів, не шукає live-папки гри й не копіює нічого в `mods`.
-
-Після успішної збірки очікується:
+## Debug command
 
 ```text
-build/libs/human_journey_core-0.1.1.jar          ← мод для ручного встановлення
-build/libs/human_journey_core-0.1.1-sources.jar  ← лише вихідні файли
-build/reports/tests/test/index.html             ← звіт JUnit
+/hjcore status
+/hjcore status <player>
 ```
 
-Ці файли отримані з успішної GitHub Actions збірки. На Linux/macOS із JDK 21: `chmod +x gradlew`, потім `./gradlew --no-daemon test build`.
+Permission level **2** required. The first form reports the executing player; server console should use the second form. Output includes Core version, dimension, actual TAN temperature and target, thirst, hydration, exhaustion, hyperthermia exposure/threshold, Climate Clemency, active policy source/revision/reload result and all effective balance values. It only reads state. Teacher/Student tags do not bypass the admin permission check.
 
-Проєкт уже розміщено в `petryshamen/minecraft-education/human_journey_core`. Workflow лежить у корені репозиторію: `.github/workflows/human-journey-core.yml`. Він стартує при push змін Core або вручну через **Actions → Build Human Journey Core → Run workflow**, віддає JAR і звіт як artifact та нічого не встановлює. Для локальної збірки спочатку перейди в `human_journey_core`.
+## Datapack balance
 
-## Ручне встановлення після успішної збірки
+Place the JSON at exactly:
 
-1. Зупини тестовий сервер/гру та зроби резервну копію світу.
-2. Використай Forge 58.1.18, TAN Forge 21.8.0.2 і GlitchCore 21.8.0.0. Fabric/NeoForge JAR не підходять.
-3. Вручну поклади тільки `human_journey_core-0.1.1.jar` у `mods` тестового сервера та Forge-профілів учителя й учнів, поряд із TAN/GlitchCore. При оновленні залишай лише одну версію Core.
-4. Запусти сервер і перевір лог без помилок завантаження. Не переходь на класний live-сервер, доки не пройдено ігрові перевірки нижче.
+```text
+<datapack>/data/human_journey/core/temperature.json
+```
 
-Жодних автоматичних змін у live `mods`, світі, датапаку чи конфігах TAN ця поставка не виконує.
+The external `example-datapack/` directory is a minimal optional datapack for this API. Its `pack.mcmeta` uses **data pack format 81** for 1.21.8. The Core JAR's root `pack.mcmeta` remains **resource pack format 64**. The example JSON is deliberately NOT embedded under the JAR's data directory, so missing external data really uses the compatibility fallback.
 
-## Налаштування на сервері
+Either copy only `data/human_journey/core/temperature.json` into the Human Journey datapack, or install the standalone example pack in a TEST world's datapacks directory manually. The example reproduces the existing default balance. If your server TOML has custom values, copy those into the JSON before enabling the example pack. Existing world progress, advancement/function IDs and NPC data are not changed.
 
-Після першого запуску Forge створить `<world>/serverconfig/human_journey_core-server.toml`. У singleplayer це `saves/<world>/serverconfig/...`. Назва серверного світу береться з `level-name`, тому папка не обов'язково називається `world`.
+```json
+{
+  "schema_version": 1,
+  "thirst": {
+    "warm_exhaustion_per_second": 0.10,
+    "hot_exhaustion_per_second": 0.50,
+    "nether_hot_exhaustion_per_second": 0.50
+  },
+  "overworld": {
+    "hyperthermia_damage": false,
+    "heat_damage_interval_ticks": 40,
+    "heat_damage_amount": 1.0
+  },
+  "nether": {
+    "hyperthermia_damage": true,
+    "heat_damage_interval_ticks": 40,
+    "heat_damage_amount": 1.0,
+    "remove_climate_clemency": false
+  },
+  "water": {
+    "heat_relief_ticks_per_tick": 20,
+    "cooling_interval_ticks": 10
+  }
+}
+```
 
-Зупини сервер, відредагуй конфіг і запусти знову. Перезбирання або перевстановлення JAR учням не потрібне. `/reload` не використовується як гарантія перезавантаження Forge config. Для нових світів можна вручну покласти шаблон у `defaultconfigs`; для наявного світу редагуй його власний `serverconfig`.
+Change JSON and run **`/reload`**. Use `/hjcore status` afterward to confirm the source, revision, effective numbers and `last reload=OK`. Players do not need another JAR or reconnect for a successful balance reload. Changes to these numbers/policies normally require only a datapack update; new engine capabilities/schema extensions can still require a Core update.
 
-| Ключ у `[temperature]` | Типове значення | Значення |
-| --- | ---: | --- |
-| `warm_thirst_exhaustion` | 0.10 | Додатковий exhaustion за секунду у WARM; 0–20 |
-| `hot_thirst_exhaustion` | 0.50 | Додатковий exhaustion за секунду у HOT; 0–20 |
-| `overworld_hyperthermia_damage` | false | Дозволити direct heat damage в Overworld |
-| `nether_hyperthermia_damage` | true | Дозволити direct heat damage у Nether |
-| `water_heat_relief` | 20 | Мінімальне чисте зменшення exposure за tick у воді; 0–140 |
-| `water_cooling_interval_ticks` | 10 | Кількість ticks між кроками HOT → WARM → NEUTRAL; 1–200 |
+### Field rules and units
 
-Exhaustion — **не кількість thirst points**: його обробляє TAN з урахуванням hydration та власних правил. При низькому TPS реальна швидкість змін нижча. `water_heat_relief=0` вимикає всі додаткові водні зміни Core, включно з водним захистом від heat damage; штатна вода TAN продовжує діяти. При додатному значенні вода захищає від hyperthermia damage в Overworld навіть якщо `overworld_hyperthermia_damage=true`.
+| Field | Meaning / accepted range |
+| --- | --- |
+| `schema_version` | 1; may be omitted |
+| `thirst.warm_exhaustion_per_second` | Extra TAN exhaustion/sec at WARM in Overworld and Nether; 0–20 |
+| `thirst.hot_exhaustion_per_second` | Extra exhaustion/sec at HOT; 0–20 |
+| `thirst.nether_hot_exhaustion_per_second` | Independent HOT rate for Nether; 0–20; inherits supplied HOT if omitted |
+| `overworld.hyperthermia_damage` | Enable Overworld heat health damage; boolean |
+| `nether.hyperthermia_damage` | Enable Nether heat health damage; boolean |
+| `overworld/nether.heat_damage_interval_ticks` | Independent interval for each dimension; integer 20–72000 |
+| `overworld/nether.heat_damage_amount` | Damage health points per scheduled hit; 0–20 (2 points = 1 heart) |
+| `nether.remove_climate_clemency` | Remove TAN Climate Clemency in Nether from active Survival/Adventure players; boolean |
+| `water.heat_relief_ticks_per_tick` | Net heat exposure relief in Overworld water; integer 0–140 |
+| `water.cooling_interval_ticks` | Body-temperature step interval; integer 1–200 |
 
-Приклад конфігу включено в `example-config/`. Не вимикай thirst/temperature у TAN, якщо хочеш тестувати ці функції Core: при вимкненій температурі додаткові витрати теж не застосовуються.
+Rates assume 20 game ticks/sec. Extra exhaustion is not a direct decrement of thirst icons: TAN still processes hydration/exhaustion normally. Zero rates disable only Core's extra costs. Heat damage retains normal Minecraft protection and invulnerability; the minimum 20-tick interval avoids promising damage through hurt immunity. Core uses TAN's full-hyperthermia condition, suppresses native TAN hyperthermia pulses in Overworld/Nether and schedules only one matching TAN damage-type pulse per configured interval. Default Nether timing remains 40 ticks, 1 health point. Intervals follow `player.tickCount`, with no persistent damage counters.
 
-## Перевірка у тестовому світі
+Climate Clemency removal defaults to **false**. Enabling it removes the actual effect; switching it off does not recreate an already removed potion effect. No temperature is artificially forced to HOT. The command reports the real TAN level/effect.
 
-JUnit перевіряє чисті правила, але не замінює Forge startup та ігровий тест. **GitHub Actions: 6 тестів пройдено, 0 помилок, 0 пропущених.**
+### Water behavior preserved
 
-1. **Завантаження:** запусти dedicated test server і підключи клієнт із тими самими модами. Перевір відсутність missing classes/config/eventbus errors.
-2. **WARM/HOT:** у Survival з однаковими hydration, спорядженням, активністю й часом порівняй WARM та HOT в Overworld, потім у Nether. HOT має давати більші додаткові витрати. Для контрольної спроби вистав обидва exhaustion у 0 й перезапусти сервер. Через запас hydration ефект не обов'язково відразу видно як втрачені іконки спраги.
-3. **Damage type:** в Overworld команда `/damage @s 1 toughasnails:hyperthermia` не повинна забирати здоров'я; у Nether повинна. Виконуй від імені гравця з правами оператора, почекай між ударами. Також дочекайся природної повної hyperthermia в обох вимірах: Overworld захищений, Nether небезпечний. При нормальному рівні спраги ізолюй direct heat damage від dehydration.
-4. **Вода:** у HOT із накопиченим exposure зайди у воду Overworld. Exposure має швидко падати; HOT → WARM → NEUTRAL займає до 20 ticks за типовими числами. Перевір також повторний вхід, вихід, смерть/respawn і перехід у Nether. Встанови relief=0 і переконайся, що залишається лише штатна швидкість TAN.
-5. **Холод:** порівняй COLD/ICY та їхні ефекти з Core і без нього, у тому числі у холодній воді. Core не повинен гріти холодного гравця чи перешкоджати природному охолодженню нижче NEUTRAL.
-6. **Dehydration:** на Normal/Hard залиш гравця без спраги й перевір звичайний thirst damage; можна окремо перевірити `/damage @s 1 toughasnails:thirst`. Вогонь, лава та інші damage types теж мають працювати.
-7. **Конфіг:** зміни exhaustion, cooling interval і дозволи damage, перезапусти тільки сервер з тим самим Core JAR. Повтори відповідні перевірки. Після перезапуску клієнти мають користуватися серверними значеннями.
-8. **Ролі:** повтори Survival-перевірки з Teacher та Student. Core не робить винятків за тегами; Creative/Spectator обох ролей не отримують додаткових витрат. Сторонні імунітети можуть впливати на результати.
+The existing pre-player-tick exposure reduction and post-server-tick net relief/temperature stepping are preserved. Default relief is **20**, step interval **10**. HOT → WARM → NEUTRAL remains the cooling path. Core never warms COLD/ICY, never pushes below NEUTRAL, and does not change cold targets, wetness, dehydration, drinks, fire/lava damage or other dimensions. Ordinary TAN cooling into cold remains possible. Overworld water still protects from direct heat damage while Core water relief is enabled. Relief **0** disables every additional Core water adjustment/protection; TAN's own water behavior continues.
 
-## Структура та обмеження
+### Precedence, fallback and errors
 
-`config/` — Forge SERVER config; `engine/temperature/HeatPolicy` — чисті правила; `integration/toughasnails/` — TAN API adapter. Перед player tick зменшується exposure, після завершення всіх server ticks застосовується остаточне охолодження й exhaustion. Це не залежить від порядку Forge Player Post і TAN tick hook. Власних збережуваних даних або world migration немає.
+- The highest-priority enabled datapack supplying the exact JSON path wins as one file; fields are not merged between multiple packs.
+- Present JSON fields override the old `<world>/serverconfig/human_journey_core-server.toml` settings. Missing fields inherit those settings; fields without a legacy equivalent use compatibility defaults (40-tick damage, amount 1, no Nether Clemency removal).
+- Missing/disabled/deleted JSON resets to the existing server config/defaults on the next reload. It does not leave stale overrides behind. Without a pack, the old water settings remain effective.
+- Wrong types, unknown fields, unsupported schema and out-of-range numbers reject the entire new policy. The last valid policy remains active. On first load, fallback remains active. `/hjcore status` shows `REJECTED` and the server log explains the error. Vanilla `/reload` may report success even when this custom policy was rejected; inspect status.
+- Publication is one immutable policy snapshot. Server shutdown clears policy state so another singleplayer world cannot inherit the previous world's overrides.
+- Keep using the existing TOML only as a compatibility fallback. JSON is the intended normal balance interface. Editing fallback TOML still follows Forge's restart requirements.
 
-Компіляція та JUnit пройдені. Server startup, client sync і геймплей ще не перевірені. Перевірені версії, походження wrapper, SHA-256 TAN і посилання на API описані в `docs/API-EVIDENCE.md`. Сторонні TAN/GlitchCore/Minecraft JAR не вбудовуються у runtime JAR Core.
+## Build and validation
+
+Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.2.0.jar` (the `-sources.jar` is not an installable mod).
+
+Repository workflow: `.github/workflows/human-journey-core.yml` runs from the `human_journey_core` folder on Core pushes or manual dispatch. `check/build` verifies root resource-pack metadata in the actual JAR. Unit tests cover strict policy validation, sparse fallback, independent Nether rate, damage intervals, disabled damage, reload replacement/removal, invalid reload retention and the existing water/cold policy invariants.
+
+## Manual acceptance checks
+
+1. Start a dedicated TEST server and matching client. Check `/hjcore status` on yourself and another player (console included), permission rejection for non-admin students and correct live TAN values.
+2. With no policy JSON, compare water cooling to 0.1.1, including any custom TOML values. Test entering/exiting water, HOT→WARM→NEUTRAL, COLD/ICY, death/respawn and dimension changes.
+3. Enable the example policy, `/reload`, confirm source/revision. Change only thirst rates (including independent Nether HOT), reload and check effective values and timed exhaustion.
+4. Change water numbers in JSON, reload and verify; restore **20/10** for the established default behavior. Relief=0 should leave only TAN's native water behavior.
+5. Test fully hyperthermic Overworld/Nether players at 20/40/100-tick intervals with normal thirst to isolate heat damage. Confirm no double hits; disabled dimension damage must protect only against heat. Recheck dehydration and fire/cold behavior.
+6. Set `remove_climate_clemency` true/false, reload and test the effect in Nether versus Overworld. Creative/Spectator stay exempt from active Core mechanics.
+7. Try malformed JSON, wrong types and invalid bounds; confirm `REJECTED`, previous values retained, and useful log output. Correct it and reload; then delete/disable the JSON and confirm fallback is restored.
+8. If multiple packs define the path, change their order and confirm the winning pack name. Restart/switch worlds to check no stale overrides. Repeat Survival checks for Teacher and Student; progression tags do not alter these mechanics.
+
+Source/API evidence and previous build history remain in `docs/API-EVIDENCE.md`. Old release JARs are preserved under `releases/original/`. No Minecraft files are modified automatically.
