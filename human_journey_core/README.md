@@ -1,8 +1,8 @@
-# Human Journey Core v0.1 (0.1.0)
+# Human Journey Core v0.1 (0.1.1)
 
 Окремий Forge-мод для Minecraft **1.21.8**, Forge **58.1.18**, Tough As Nails **21.8.0.2** і GlitchCore **21.8.0.0**. Баланс контролює сервер; учням не потрібно замінювати JAR після зміни чисел у серверному конфігу.
 
-**Статус: Forge JAR успішно зібрано в GitHub Actions; 6 тестів пройдено, 0 помилок. Ігрові перевірки ще потрібні.** [Успішна збірка](https://github.com/petryshamen/minecraft-education/actions/runs/40066494993), commit `06e795f597619f0056bc375cc239de4563e980b0`. Runtime JAR: `human_journey_core-0.1.0.jar`, SHA-256 `531c7b52eac25796e717f772731623320fa73373a2cba8f042818404a703fd74`. Копія точного артефакту збережена в `releases/original/`. Нічого автоматично не встановлювалося у Minecraft.
+**Версія 0.1.1:** виправлено відсутній root `pack.mcmeta` (resource pack format 64). Температурну поведінку не змінено. `check`/`build` тепер перевіряє metadata безпосередньо у фінальному JAR. Результат збірки та SHA-256 будуть записані після перевірки нового артефакту.
 
 ## Поведінка
 
@@ -30,8 +30,8 @@
 Після успішної збірки очікується:
 
 ```text
-build/libs/human_journey_core-0.1.0.jar          ← мод для ручного встановлення
-build/libs/human_journey_core-0.1.0-sources.jar  ← лише вихідні файли
+build/libs/human_journey_core-0.1.1.jar          ← мод для ручного встановлення
+build/libs/human_journey_core-0.1.1-sources.jar  ← лише вихідні файли
 build/reports/tests/test/index.html             ← звіт JUnit
 ```
 
@@ -43,7 +43,7 @@ build/reports/tests/test/index.html             ← звіт JUnit
 
 1. Зупини тестовий сервер/гру та зроби резервну копію світу.
 2. Використай Forge 58.1.18, TAN Forge 21.8.0.2 і GlitchCore 21.8.0.0. Fabric/NeoForge JAR не підходять.
-3. Вручну поклади тільки `human_journey_core-0.1.0.jar` у `mods` тестового сервера та Forge-профілів учителя й учнів, поряд із TAN/GlitchCore. При оновленні залишай лише одну версію Core.
+3. Вручну поклади тільки `human_journey_core-0.1.1.jar` у `mods` тестового сервера та Forge-профілів учителя й учнів, поряд із TAN/GlitchCore. При оновленні залишай лише одну версію Core.
 4. Запусти сервер і перевір лог без помилок завантаження. Не переходь на класний live-сервер, доки не пройдено ігрові перевірки нижче.
 
 Жодних автоматичних змін у live `mods`, світі, датапаку чи конфігах TAN ця поставка не виконує.

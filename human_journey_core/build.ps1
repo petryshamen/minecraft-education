@@ -25,7 +25,7 @@ try {
     try {
         & (Join-Path $projectRoot 'gradlew.bat') --no-daemon --project-cache-dir .gradle-project-cache test build
         if ($LASTEXITCODE -ne 0) { throw "Gradle failed with exit code $LASTEXITCODE" }
-        $jarPath = Join-Path $projectRoot 'build/libs/human_journey_core-0.1.0.jar'
+        $jarPath = Join-Path $projectRoot ('build/libs/human_journey_core-' + ((Get-Content -LiteralPath (Join-Path $projectRoot 'gradle.properties') | Where-Object { $_ -match '^mod_version=' }) -replace '^mod_version=', '') + '.jar')
         if (!(Test-Path -LiteralPath $jarPath)) { throw 'Runtime JAR is missing after build.' }
         Get-FileHash -LiteralPath $jarPath -Algorithm SHA256
     } finally { Pop-Location }

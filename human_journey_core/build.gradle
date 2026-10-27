@@ -57,3 +57,27 @@ tasks.named('processResources') {
     inputs.property 'mod_version', mod_version
     filesMatching('META-INF/mods.toml') { expand mod_version: mod_version }
 }
+
+// Check the packaged runtime JAR, not only the source resource directory.
+def runtimeJar = tasks.named('jar', Jar)
+tasks.register('verifyJarMetadata') {
+    group = 'verification'
+    description = 'Validate Minecraft 1.21.8 pack metadata at the runtime JAR root.'
+    dependsOn runtimeJar
+    inputs.file(runtimeJar.flatMap { it.archiveFile })
+    doLast {
+        new java.util.zip.ZipFile(runtimeJar.get().archiveFile.get().asFile).withCloseable { zip ->
+            def entry = zip.getEntry('pack.mcmeta')
+            if (entry == null || entry.directory) {
+                throw new GradleException('Runtime JAR is missing root pack.mcmeta')
+            }
+            def metadata = new groovy.json.JsonSlurper().parseText(
+                zip.getInputStream(entry).getText('UTF-8'))
+            if (metadata.pack?.pack_format != 64 ||
+                    metadata.pack?.description != 'Human Journey Core') {
+                throw new GradleException('Invalid Minecraft 1.21.8 resource-pack metadata')
+            }
+        }
+    }
+}
+tasks.named('check') { dependsOn tasks.named('verifyJarMetadata') }
