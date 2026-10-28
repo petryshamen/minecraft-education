@@ -8,6 +8,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.*;
 import net.minecraft.data.*;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtOps;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.*;
 import net.minecraft.world.item.*;
@@ -38,7 +39,7 @@ public final class WaterSmoke {
         fixtureEnchantments.register(Enchantments.UNBREAKING,lookup.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING).value(),RegistrationInfo.BUILT_IN);
         fixtureEnchantments.freeze();
         lookup=HolderLookup.Provider.create(java.util.stream.Stream.concat(lookup.listRegistries().filter(registry->!registry.key().equals(Registries.ENCHANTMENT)),java.util.stream.Stream.of(fixtureEnchantments)));
-        var ops=RegistryOps.create(JsonOps.INSTANCE,lookup);
+        var ops=RegistryOps.create(NbtOps.INSTANCE,lookup); // World saves use NBT; JSON narrows custom numeric NBT tag types.
         var enchant=lookup.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING);
         String[] tiers={"leather","copper","iron","gold","diamond","netherite"};int[] capacities={5,6,7,10,15,25};int checked=0;
         for(int t=0;t<tiers.length;t++)for(int used:new int[]{0,capacities[t]/2,capacities[t]-1})for(boolean dirty:new boolean[]{true,false}){
@@ -52,7 +53,7 @@ public final class WaterSmoke {
             check(result.getComponentsPatch().equals(input.getComponentsPatch()),"all component overrides preserved");
             check(result.getDamageValue()==used&&result.getMaxDamage()==capacities[t],"remaining drinks/material preserved");
             var json=ItemStack.CODEC.encodeStart(ops,result).getOrThrow();var restored=ItemStack.CODEC.parse(ops,json).getOrThrow();
-            check(ItemStack.isSameItemSameComponents(result,restored),"actual TAN stack registry/codec round trip");
+            check(ItemStack.isSameItemSameComponents(result,restored),"actual TAN stack registry/codec round trip: "+result.getComponentsPatch()+" vs "+restored.getComponentsPatch());
             if(dirty)check(WaterContainers.boiled(input).isEmpty(),"dirty cannot boil");
             else{
                 var slots=NonNullList.withSize(3,ItemStack.EMPTY);slots.set(0,input.copy());
