@@ -34,8 +34,8 @@ public final class WaterDrinking {
             float hydration=0;
             for(int percent=10;percent<=100;percent+=10) if(drink.is(ModTags.Items.create(ResourceLocation.fromNamespaceAndPath("toughasnails","hydration/"+percent+"_hydration_drinks")))) hydration=percent/100F;
             ThirstHelper.getThirst(player).drink(ModTags.Items.getThirstRestored(drink),hydration);
-            penalties(player,kind.quality());
         }
+        if(ThirstHelper.isThirstEnabled())penalties(player,kind.quality());
         return true;
     }
     /** Replaces the actual TAN hand-drinking packet handler, not a second unrelated right-click action. */

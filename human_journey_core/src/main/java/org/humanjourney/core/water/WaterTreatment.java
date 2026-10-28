@@ -26,6 +26,7 @@ public final class WaterTreatment {
         items.get(0).shrink(1);return true;
     }
     public static boolean filter(Player player,InteractionHand hand){
+        if(player.level().isClientSide())return false; // No client policy prediction; server owns reloadable rules.
         if(hand!=InteractionHand.MAIN_HAND || !player.isShiftKeyDown())return false;
         var p=WaterBalance.current();var input=player.getMainHandItem();var material=player.getOffhandItem();var k=WaterContainers.kind(input);
         if(!p.filtering() || k==null || !WaterPolicy.canFilter(k.quality()) || !p.filters().contains(BuiltInRegistries.ITEM.getKey(material.getItem()).toString()) || material.getCount()<p.filterCount())return false;
@@ -44,6 +45,7 @@ public final class WaterTreatment {
     }
     public static boolean rightClickBlock(PlayerInteractEvent.RightClickBlock event){
         var player=event.getEntity();var level=player.level();var pos=event.getPos();
+        if(level.isClientSide())return false;
         if(!level.mayInteract(player,pos))return false;
         if(filter(player,event.getHand())){event.setCancellationResult(InteractionResult.SUCCESS);return true;}
         if(!(level.getBlockEntity(pos) instanceof CampfireBlockEntity camp))return false;

@@ -46,6 +46,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 tasks.withType(Test).configureEach {
     useJUnitPlatform()
+    testLogging { exceptionFormat = 'full' }
     systemProperty 'java.io.tmpdir', file('.tmp').absolutePath
     systemProperty 'user.home', file('.java-user-home').absolutePath
     workingDir = layout.buildDirectory.dir('test-work').get().asFile
