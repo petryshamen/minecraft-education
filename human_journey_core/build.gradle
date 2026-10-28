@@ -17,7 +17,7 @@ minecraft {
         register('data') {
             workingDir = layout.buildDirectory.dir('datagen-smoke')
             systemProperty 'humanjourney.waterSmoke', 'true'
-            args '--mod', 'human_journey_core', '--all', '--output', layout.buildDirectory.dir('datagen-smoke-output').get().asFile.absolutePath
+            args '--mixin', 'human_journey_core.water.mixins.json', '--mod', 'human_journey_core', '--all', '--output', layout.buildDirectory.dir('datagen-smoke-output').get().asFile.absolutePath
         }
     }
 }

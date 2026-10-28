@@ -25,6 +25,7 @@ jobs:
           chmod +x gradlew
           ./gradlew --no-daemon test build runData
           grep -R 'WATER_MIXIN_SMOKE_OK' build/datagen-smoke/logs/latest.log
+          grep -R 'WATER_STATE_SMOKE_OK' build/datagen-smoke/logs/latest.log
       - uses: actions/upload-artifact@v4
         with:
           name: HumanJourneyCore-0.3.0

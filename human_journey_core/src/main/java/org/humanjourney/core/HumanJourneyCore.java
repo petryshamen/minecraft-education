@@ -28,6 +28,9 @@ public final class HumanJourneyCore {
                 try { Class.forName(target, false, HumanJourneyCore.class.getClassLoader()); }
                 catch (ClassNotFoundException error) { throw new IllegalStateException("Water hook smoke target missing: " + target, error); }
             }
+            if (!CampfireAccess.class.isAssignableFrom(net.minecraft.world.level.block.entity.CampfireBlockEntity.class))
+                throw new IllegalStateException("Water mixins were not applied in smoke run");
+            WaterSmoke.register(context.getModBusGroup());
             com.mojang.logging.LogUtils.getLogger().info("[HJ Core] WATER_MIXIN_SMOKE_OK: all six water targets loaded under ModLauncher");
         }
         context.registerConfig(ModConfig.Type.SERVER, TemperatureConfig.SPEC,
