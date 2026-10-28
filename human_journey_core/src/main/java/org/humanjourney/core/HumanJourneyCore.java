@@ -14,6 +14,8 @@ import org.humanjourney.core.command.CoreCommands;
 import org.humanjourney.core.data.TemperatureBalance;
 import org.humanjourney.core.data.TemperatureReloadListener;
 import java.util.function.Predicate;
+import org.humanjourney.core.water.*;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
 @Mod(HumanJourneyCore.MOD_ID)
 public final class HumanJourneyCore {
@@ -25,10 +27,15 @@ public final class HumanJourneyCore {
         TickEvent.PlayerTickEvent.Pre.BUS.addListener(TemperatureIntegration::beforePlayerTick);
         TickEvent.ServerTickEvent.Post.BUS.addListener(TemperatureIntegration::afterServerTick);
         AddReloadListenerEvent.BUS.addListener(event -> event.addListener(new TemperatureReloadListener()));
+        AddReloadListenerEvent.BUS.addListener(event -> event.addListener(new WaterReloadListener()));
+        PlayerInteractEvent.RightClickItem.BUS.addListener((Predicate<PlayerInteractEvent.RightClickItem>)WaterTreatment::rightClickItem);
+        PlayerInteractEvent.RightClickBlock.BUS.addListener((Predicate<PlayerInteractEvent.RightClickBlock>)WaterTreatment::rightClickBlock);
         RegisterCommandsEvent.BUS.addListener(CoreCommands::register);
         ServerStoppedEvent.BUS.addListener(event -> {
             TemperatureBalance.STORE.reset();
             TemperatureIntegration.reset();
+            WaterBalance.reset();
+            WaterDrinking.reset();
         });
         // Forge 58 uses predicate cancellation, not legacy event.setCanceled().
         LivingAttackEvent.BUS.addListener(

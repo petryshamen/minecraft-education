@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "normal": { "unsafe_chance": 0.60, "thirst_duration_ticks": 600 },
+  "dirty": {
+    "unsafe_chance": 1.0,
+    "thirst_duration_ticks": 600,
+    "illness": { "enabled": true, "effect": "minecraft:poison", "duration_ticks": 160, "amplifier": 0 }
+  },
+  "filtration": {
+    "enabled": true,
+    "materials": ["minecraft:sand", "minecraft:charcoal"],
+    "material_count": 1,
+    "from": "dirty",
+    "to": "normal"
+  },
+  "boiling": {
+    "furnace_enabled": true,
+    "campfire_enabled": true,
+    "furnace_ticks": 500,
+    "campfire_ticks": 500,
+    "from": "normal",
+    "to": "purified"
+  },
+  "hand_drinking": { "cooldown_ticks": 60 }
+}

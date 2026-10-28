@@ -26,7 +26,7 @@ jobs:
           ./gradlew --no-daemon test build
       - uses: actions/upload-artifact@v4
         with:
-          name: HumanJourneyCore-0.2.0
+          name: HumanJourneyCore-0.3.0
           if-no-files-found: error
           path: |
             human_journey_core/build/libs/*.jar

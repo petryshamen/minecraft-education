@@ -32,6 +32,9 @@ dependencies {
     // Public distribution; never use the user's installed mods/ as a classpath.
     // Exact bytes match installed TAN 21.8.0.2 (see docs/API-EVIDENCE.md).
     compileOnly 'curse.maven:tough-as-nails-246391:7063978'
+    compileOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
+    testRuntimeOnly 'curse.maven:tough-as-nails-246391:7063978'
+    testRuntimeOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
@@ -53,6 +56,7 @@ tasks.withType(Jar).configureEach {
     reproducibleFileOrder = true
     manifest.attributes('Implementation-Version': project.version)
 }
+tasks.named('jar') { manifest.attributes('MixinConfigs': 'human_journey_core.water.mixins.json') }
 tasks.named('processResources') {
     inputs.property 'mod_version', mod_version
     filesMatching('META-INF/mods.toml') { expand mod_version: mod_version }
