@@ -1,5 +1,15 @@
 # Dependency and API evidence
 
+## Core 0.3.0 water integration
+
+- Installed TAN identity rechecked read-only: `ToughAsNails-forge-1.21.8-21.8.0.2.jar`, SHA-256 `b7a0d16be6f713a84e3e45c688fc71fcf77621f1a8d40b0d3246a7a9bfc15611`. The independently downloaded public CurseMaven artifact used for builds has identical bytes. Installed mod JARs were never used as executables/classpaths or modified.
+- Existing integration notes under `human_journey/docs/mods/tough_as_nails.md` and pinned author source confirm separate item IDs for quality, six material tiers and damage-based fill. The new real-Forge datagen smoke checks the registered items directly and confirms capacities 5/6/7/10/15/25.
+- [Successful run 40630024751](https://github.com/petryshamen/minecraft-education/actions/runs/40630024751), source `14d6ca0b78697f73ce488332af73a960a549c621`: 28 passing unit tests and successful actual ModLauncher/Mixin + registered TAN item integration smoke. State checks use a canonical frozen enchantment fixture registry and NBT (the actual world-save format), not lossy JSON conversion of custom numeric NBT tags.
+- All six required water mixin targets were loaded and validated under Forge 58.1.18. Core's item/direct-drink path replaces only TAN water penalties while retaining thirst/hydration; furnace callbacks retain vanilla fuel/container logic. Campfire handling retains real slot/timer persistence and skips only managed water in native cooking. Legacy crafting quality changes are guarded before taking the result.
+- Runtime JAR: 77736 bytes, SHA-256 `6cbe9b1c95ea3a9eab476c574d4474cc41e58eebbf49ca8ea707b9b61169b34b`. Downloaded artifact ZIP matched GitHub digest `06b0e9480e3754fb531e0c4d88e892b389824e06f4c47a3376a3c4b7f93f47ff`.
+- Root pack format 64 and MixinConfigs verified in final JAR; no bundled third-party classes or internal balance JSON. All 15 temperature classes match 0.2.0. TAN purifier/rain-collector classes and recipes are not patched.
+- Manual gameplay/packet/heat-timing tests remain necessary. No client/server world or live mod/datapack installation was performed. See `WATER.md` for controls, policy schema, compatibility migration and acceptance checks.
+
 ## Core 0.2.0 datapack interface
 
 - [Successful build](https://github.com/petryshamen/minecraft-education/actions/runs/40440241042), source commit `448713fa984379c3f36fb52d6ce388eda56cb939`; 17 tests, 0 failures, packaged resource metadata check passed.

@@ -1,5 +1,7 @@
 # Water treatment — Core 0.3.0
 
+**Build verified:** [GitHub Actions run 40630024751](https://github.com/petryshamen/minecraft-education/actions/runs/40630024751), source commit `14d6ca0b78697f73ce488332af73a960a549c621`. All 28 unit tests passed. Real Forge/ModLauncher applied all six water mixins; the datagen smoke passed 36 registered TAN canteen conversions with names, enchantments, custom data, NBT codec round trips, furnace outputs, campfire save/load and the bottle chain. All 15 compiled temperature classes match 0.2.0 byte-for-byte. Runtime JAR SHA-256: `6cbe9b1c95ea3a9eab476c574d4474cc41e58eebbf49ca8ea707b9b61169b34b`. Real player interactions, packets and in-world processing still require the acceptance tests below.
+
 Exact target: Minecraft 1.21.8, Forge 58.1.18, TAN 21.8.0.2, GlitchCore 21.8.0.0. The existing Core temperature policy/adapter is unchanged. No salt water, custom container items, purifier redesign or rain-collector changes are included.
 
 ## Manual setup and gameplay
