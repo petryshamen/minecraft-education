@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.3.13
+
+- Migrated water treatment to installed Core 0.3.0 policy: normal 60% Thirst / 30 s; dirty 100% Thirst / 30 s plus Poison I / 8 s; consume one sand/charcoal for DIRTY→NORMAL, then furnace/campfire NORMAL→PURIFIED in 500 ticks. Removed 15 legacy recipes/grants and disabled blanket potion conversion while preserving its function ID.
+- Water for Life now accepts purified bottles and all purified canteens, preserving milestone IDs/prerequisites. Temperature policy, Student/Teacher recipe setup, technology gates, Rain Collector and Water Purifier mechanics remain unchanged; no mod JAR changes.
+
 ## 0.3.12
 
 - Added Core 0.2.0 datapack temperature policy: extra exhaustion/sec WARM 0.5, Overworld HOT 2.0, Nether HOT 3.0; preserved established water relief 20 / cooling interval 10.

@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:crafting_transmute",
-  "category": "misc",
-  "input": "toughasnails:iron_dirty_water_canteen",
-  "material": "minecraft:charcoal",
-  "result": "toughasnails:iron_water_canteen"
-}

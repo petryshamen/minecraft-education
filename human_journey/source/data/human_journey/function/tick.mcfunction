@@ -8,11 +8,8 @@ function human_journey:trader/wandering/tick
 function human_journey:sync
 
 # WATER:
-# Water chemistry is left to Tough As Nails.
-# Normal Water Bottle remains normal. Dirty Water remains dirty.
-# Charcoal: dirty -> normal -> purified, using two stages.
-# Normal bottled water can also be boiled; dirty water cannot.
-# Canteen charcoal recipes preserve components; no canteen smelting is provided.
+# Core owns DIRTY -> filter -> NORMAL -> boil -> PURIFIED.
+# Balance lives in data/human_journey/core/water.json; no inventory conversion runs here.
 
 # PLAYER-LEVEL METAL LOCK:
 # Recipe-book locking is only the UI layer. This is the hard metallurgy gate.

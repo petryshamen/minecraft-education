@@ -11,4 +11,4 @@ Workflow: edit source, validate, increment version metadata, build one final ZIP
 
 Preserve progression IDs and distinct Teacher/Student behavior. Mods are inspected read-only. Keep live-server deployment manual; Minecraft does not need GitHub during play.
 
-Water integration limits and state evidence are in docs/mods/tough_as_nails.md. Canteens use component-preserving charcoal recipes; no canteen furnace route is installed. Broad drinkable-potion bottle matching was explicitly approved for v0.3.9.
+Core 0.3.0 owns water treatment; the datapack policy is data/human_journey/core/water.json. Filter DIRTY water with sand/charcoal, then boil NORMAL water in a furnace or lit campfire. See docs/mods/human_journey_core.md for controls, state preservation and reload checks.
