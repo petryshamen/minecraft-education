@@ -13,6 +13,13 @@ java {
 
 minecraft {
     mappings channel: 'official', version: minecraft_version
+    runs {
+        register('data') {
+            workingDir = layout.buildDirectory.dir('datagen-smoke')
+            systemProperty 'humanjourney.waterSmoke', 'true'
+            args '--mod', 'human_journey_core', '--all', '--output', layout.buildDirectory.dir('datagen-smoke-output').get().asFile.absolutePath
+        }
+    }
 }
 
 repositories {
@@ -33,6 +40,8 @@ dependencies {
     // Exact bytes match installed TAN 21.8.0.2 (see docs/API-EVIDENCE.md).
     compileOnly 'curse.maven:tough-as-nails-246391:7063978'
     compileOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
+    runtimeOnly 'curse.maven:tough-as-nails-246391:7063978'
+    runtimeOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
     testRuntimeOnly 'curse.maven:tough-as-nails-246391:7063978'
     testRuntimeOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
     testImplementation platform('org.junit:junit-bom:5.11.4')
@@ -51,7 +60,7 @@ tasks.withType(Test).configureEach {
     systemProperty 'java.io.tmpdir', file('.tmp').absolutePath
     systemProperty 'user.home', file('.java-user-home').absolutePath
     workingDir = layout.buildDirectory.dir('test-work').get().asFile
-    doFirst { workingDir.mkdirs() }
+    doFirst { workingDir.mkdirs(); file('.tmp').mkdirs(); file('.java-user-home').mkdirs() }
 }
 tasks.withType(Jar).configureEach {
     preserveFileTimestamps = false

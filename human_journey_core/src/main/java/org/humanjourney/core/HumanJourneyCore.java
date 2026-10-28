@@ -22,6 +22,14 @@ public final class HumanJourneyCore {
     public static final String MOD_ID = "human_journey_core";
 
     public HumanJourneyCore(FMLJavaModLoadingContext context) {
+        if (Boolean.getBoolean("humanjourney.waterSmoke")) {
+            // Datagen smoke run: force actual ModLauncher/Mixin validation without starting a server/world.
+            for (String target : new String[]{"net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity", "net.minecraft.world.level.block.entity.CampfireBlockEntity", "net.minecraft.world.inventory.CraftingMenu", "toughasnails.thirst.ThirstHandler", "toughasnails.network.DrinkInWorldPacket", "toughasnails.item.FilledCanteenItem"}) {
+                try { Class.forName(target, false, HumanJourneyCore.class.getClassLoader()); }
+                catch (ClassNotFoundException error) { throw new IllegalStateException("Water hook smoke target missing: " + target, error); }
+            }
+            com.mojang.logging.LogUtils.getLogger().info("[HJ Core] WATER_MIXIN_SMOKE_OK: all six water targets loaded under ModLauncher");
+        }
         context.registerConfig(ModConfig.Type.SERVER, TemperatureConfig.SPEC,
                 "human_journey_core-server.toml");
         TickEvent.PlayerTickEvent.Pre.BUS.addListener(TemperatureIntegration::beforePlayerTick);

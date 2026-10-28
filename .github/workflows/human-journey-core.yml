@@ -23,7 +23,8 @@ jobs:
       - name: Test and build
         run: |
           chmod +x gradlew
-          ./gradlew --no-daemon test build
+          ./gradlew --no-daemon test build runData
+          grep -R 'WATER_MIXIN_SMOKE_OK' build/datagen-smoke/logs/latest.log
       - uses: actions/upload-artifact@v4
         with:
           name: HumanJourneyCore-0.3.0
@@ -31,3 +32,4 @@ jobs:
           path: |
             human_journey_core/build/libs/*.jar
             human_journey_core/build/reports/tests/test/**
+            human_journey_core/build/datagen-smoke/logs/latest.log
