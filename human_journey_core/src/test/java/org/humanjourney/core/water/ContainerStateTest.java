@@ -14,8 +14,17 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import com.mojang.serialization.JsonOps;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
+import net.minecraftforge.fml.ModLoader;
+import org.mockito.MockedStatic;
+import static org.mockito.Mockito.*;
 class ContainerStateTest {
-    @BeforeAll static void init(){SharedConstants.tryDetectVersion();Bootstrap.bootStrap();}
+    private static MockedStatic<ModLoader> loader;
+    @BeforeAll static void init(){
+        // Only the absent launcher is stubbed; ItemStack, component maps, codecs and registries are real.
+        loader=mockStatic(ModLoader.class);var emptyLoader=mock(ModLoader.class);loader.when(ModLoader::get).thenReturn(emptyLoader);
+        SharedConstants.tryDetectVersion();Bootstrap.bootStrap();
+    }
+    @AfterAll static void close(){if(loader!=null)loader.close();}
     @Test void realComponentsSurviveEveryCapacityAndPartialFillAndSerialization(){
         var lookup=VanillaRegistries.createLookup();var ops=RegistryOps.create(JsonOps.INSTANCE,lookup);
         var enchant=lookup.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING);
