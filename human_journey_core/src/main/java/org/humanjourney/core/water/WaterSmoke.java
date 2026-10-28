@@ -2,6 +2,7 @@ package org.humanjourney.core.water;
 
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.JsonOps;
+import com.mojang.serialization.Lifecycle;
 import net.minecraft.core.*;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.*;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.alchemy.*;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.*;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -30,6 +32,12 @@ public final class WaterSmoke {
     private static void check(boolean condition,String message){if(!condition)throw new IllegalStateException("Water smoke: "+message);}
     private static ItemStack item(String id){var key=ResourceLocation.parse(id);check(BuiltInRegistries.ITEM.containsKey(key),"missing "+id);return new ItemStack(BuiltInRegistries.ITEM.getValue(key));}
     private static void verify(HolderLookup.Provider lookup){
+        // Datagen lookups use unowned bootstrap holders. Use a real frozen registry for persistence fixtures,
+        // as a loaded world does, instead of trying to serialize those unowned data-generation references.
+        var fixtureEnchantments=new MappedRegistry<Enchantment>(Registries.ENCHANTMENT,Lifecycle.stable());
+        fixtureEnchantments.register(Enchantments.UNBREAKING,lookup.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING).value(),RegistrationInfo.BUILT_IN);
+        fixtureEnchantments.freeze();
+        lookup=HolderLookup.Provider.create(java.util.stream.Stream.concat(lookup.listRegistries().filter(registry->!registry.key().equals(Registries.ENCHANTMENT)),java.util.stream.Stream.of(fixtureEnchantments)));
         var ops=RegistryOps.create(JsonOps.INSTANCE,lookup);
         var enchant=lookup.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING);
         String[] tiers={"leather","copper","iron","gold","diamond","netherite"};int[] capacities={5,6,7,10,15,25};int checked=0;

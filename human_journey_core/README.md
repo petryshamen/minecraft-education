@@ -1,10 +1,12 @@
-# Human Journey Core 0.2.0
+# Human Journey Core 0.3.0
 
-Stable engine for Minecraft **1.21.8**, Forge **58.1.18**, Tough As Nails **21.8.0.2**, GlitchCore **21.8.0.0**. This release adds reloadable datapack balance and an admin status command. [GitHub Actions build](https://github.com/petryshamen/minecraft-education/actions/runs/40440241042) passed with **17 tests, 0 failures**, plus packaged resource metadata verification. Source commit: `448713fa984379c3f36fb52d6ce388eda56cb939`. Runtime JAR SHA-256: `d2fd9fc11f36564cedaf0233afe77c49bf896b8dda6b29654e7d17dc2fbf2cfc`. The post-tick water block and compiled water/cold policy helpers were compared with 0.1.1 and remain unchanged apart from reading settings through the new policy interface. Minecraft startup, multiplayer command output and actual reload/gameplay still need manual verification.
+Adds data-driven water treatment, consistent drinking hazards and state-preserving canteen processing for Minecraft 1.21.8 / Forge 58.1.18 / TAN 21.8.0.2. The temperature integration below is unchanged.
+
+**Water setup, JSON schema, controls, compatibility migration and tests: [WATER.md](WATER.md).** Install the companion water datapack above the old Human Journey pack to neutralize its obsolete blanket potion-to-dirty conversion. Keep existing temperature balance settings.
 
 ## Install manually
 
-Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.2.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
+Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.3.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
 
 ## Debug command
 
@@ -90,7 +92,7 @@ The existing pre-player-tick exposure reduction and post-server-tick net relief/
 
 ## Build and validation
 
-Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.2.0.jar` (the `-sources.jar` is not an installable mod).
+Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.3.0.jar` (the `-sources.jar` is not an installable mod).
 
 Repository workflow: `.github/workflows/human-journey-core.yml` runs from the `human_journey_core` folder on Core pushes or manual dispatch. `check/build` verifies root resource-pack metadata in the actual JAR. Unit tests cover strict policy validation, sparse fallback, independent Nether rate, damage intervals, disabled damage, reload replacement/removal, invalid reload retention and the existing water/cold policy invariants.
 

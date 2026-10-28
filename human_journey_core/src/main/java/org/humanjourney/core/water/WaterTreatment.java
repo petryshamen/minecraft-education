@@ -73,14 +73,19 @@ public final class WaterTreatment {
     /** Validate/replace legacy crafting results before they become takeable in either crafting menu. */
     public static void guardCraft(AbstractContainerMenu menu,Player player,CraftingContainer input,ResultContainer result){
         var outputKind=WaterContainers.kind(result.getItem(0));if(outputKind==null)return;
-        ItemStack source=ItemStack.EMPTY;int filters=0;boolean valid=true;var policy=WaterBalance.current();
+        ItemStack source=ItemStack.EMPTY;int filters=0;boolean valid=true;boolean unsupportedPotion=false;var policy=WaterBalance.current();
         for(int i=0;i<input.getContainerSize();i++){
             var stack=input.getItem(i);if(stack.isEmpty())continue;
             if(WaterContainers.kind(stack)!=null){if(!source.isEmpty())valid=false;else source=stack;}
             else if(policy.filters().contains(BuiltInRegistries.ITEM.getKey(stack.getItem()).toString()))filters++;
-            else valid=false;
+            else {valid=false;if(stack.is(Items.POTION))unsupportedPotion=true;}
         }
-        if(source.isEmpty())return;
+        if(source.isEmpty() && !unsupportedPotion)return;
+        if(source.isEmpty()){
+            result.setItem(0,ItemStack.EMPTY);
+            if(player instanceof ServerPlayer server){menu.setRemoteSlot(0,ItemStack.EMPTY);server.connection.send(new ClientboundContainerSetSlotPacket(menu.containerId,menu.incrementStateId(),0,ItemStack.EMPTY));}
+            return;
+        }
         var sourceKind=WaterContainers.kind(source);
         // Only quality-changing recipes are managed; original empty-canteen crafting and tier upgrades remain TAN's domain.
         if(sourceKind.quality()==outputKind.quality())return;

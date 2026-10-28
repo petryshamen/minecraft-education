@@ -1,3 +1,8 @@
+# 0.3.0
+
+- Added reloadable water policy, unified item/direct-drinking hazards, dynamic state-preserving filtration and furnace/lit-campfire boiling, with legacy recipe guards and optional migration datapack.
+- Added water status/held-container diagnostics; preserved temperature integration, TAN purifier and rain collector.
+
 # 0.2.0
 
 - Added admin `/hjcore status [player]` and reloadable datapack temperature policies, with strict validation, last-valid-policy retention on errors and legacy server config fallback.
