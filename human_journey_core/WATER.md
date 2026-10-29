@@ -1,5 +1,7 @@
 # Water systems — Human Journey Core 0.4.1
 
+**Verified release:** [GitHub Actions run 40819079966](https://github.com/petryshamen/minecraft-education/actions/runs/40819079966), source `32885fe806108d87c18f4050ab1517d57f586354`. 51 tests passed, all ten water mixins loaded, and the no-world Forge state checks passed (36 existing canteen conversions plus six-tier salt/purifier checks). Final JAR SHA-256: `bfeacb3ddc1042441b34598e3c48537d1911b1b38a10c19d90b65dcd82c3158d`. All 15 temperature classes and 47 total unrelated engine classes are byte-identical to 0.4.0; root resource-pack format is 64. No gameplay testing or automatic installation was performed.
+
 ## Compatibility patch 0.4.1
 
 - Added `classification.ocean_connection_radius` (integer 0–16, default/example 16; 0 disables the connected-water extension). Existing water packs remain valid; all earlier balance values and the Caspian polygon remain unchanged.
@@ -28,7 +30,8 @@ Every natural-water fill, hand drink and purifier intake uses the water block's 
 2. `#toughasnails:purified_water_biomes`.
 3. `#toughasnails:dirty_water_biomes` (the inspected release includes swamp, mangrove_swamp and mushroom_fields).
 4. Any configured salt biome tag; default `#minecraft:is_ocean`, including deep oceans through vanilla tag nesting.
-5. NORMAL.
+5. Connected-ocean search for otherwise NORMAL water, within `classification.ocean_connection_radius` water steps.
+6. NORMAL when no bounded water connection reaches a direct salt-tagged ocean block.
 
 Classification only applies where the water fluid is actually present; land in polygons is irrelevant. Region coordinates are X/Z and compare against block centers. Boundaries are included. Dimensions must match exactly. Simple concave polygons are supported; self-intersections, duplicate vertices and zero-area polygons are rejected. At most 128 regions, 3–256 vertices each, coordinates within ±30,000,000. List order defines overlap priority.
 

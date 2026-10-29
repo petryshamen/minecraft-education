@@ -1,5 +1,15 @@
 # Dependency and API evidence
 
+## Core 0.4.1 compatibility checks
+
+- Connected-water search is a pure six-neighbor BFS bounded by 0–16 path steps, with at most 6,017 distinct positions at the maximum radius. Loaded-water predicates do not load chunks. Per-level origin results use a 256-entry LRU and less-than-20-tick lifetime, invalidated by water reload snapshots/shutdown. Geographic/TAN/direct-ocean precedence remains lazy and unchanged.
+- Exact compiled Minecraft 1.21.8 Player.playSound bytecode forwards ALOAD 0 (the player) as the Level sound broadcast's excluded listener. Core 0.4 used this method server-side. The corrected isolated compatibility helper supplies ACONST_NULL as the excluded listener instead. ASM source-value analysis verifies both arguments directly. Cadence tests reject client, Consumable, silent and final-tick paths; only TAN DrinkItem.onUseTick is targeted. No canteen/vanilla sound hook was added.
+- The complete final source project's main Java files were compared to the successful build's sources JAR. Final runtime JAR inspection verifies all untouched engine class bytes, including temperature, canteen marker/consumption, water drinking, purifier transactions, filter capacity, furnace and campfire hooks. The example policy differs only by its added ocean_connection_radius=16 and pack version; prior balance values and Caspian coordinates are identical.
+- [GitHub Actions run 40819079966](https://github.com/petryshamen/minecraft-education/actions/runs/40819079966), source `32885fe806108d87c18f4050ab1517d57f586354`. 51 tests passed, all ten water mixins loaded, and the no-world Forge state checks passed (36 existing canteen conversions plus six-tier salt/purifier checks). Final JAR SHA-256: `bfeacb3ddc1042441b34598e3c48537d1911b1b38a10c19d90b65dcd82c3158d`. All 15 temperature classes and 47 total unrelated engine classes are byte-identical to 0.4.0; root resource-pack format is 64. No gameplay testing or automatic installation was performed.
+
+- Downloaded Actions ZIP SHA-256 matched `48db730e617409349241b6ad2232df4bb02177df35d3f276877f4cd09889df2f`. All dependencies remain exact Minecraft 1.21.8 / Forge 58.1.18 / TAN 21.8.0.2. Installed mod hashes rechecked read-only; no installed JAR was used for execution/build.
+
+
 ## Core 0.4.0 salt/purifier/audio integration
 
 - Exact installed TAN identity/hash rechecked read-only and still matches the independently downloaded public build dependency. No installed JAR was executed, modified or used as a build classpath.

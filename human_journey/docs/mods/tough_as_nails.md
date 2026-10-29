@@ -145,3 +145,8 @@ No technology lock/give/revert, advancement, NPC event, role-setup or era-comple
 - Salt bottles/canteens reuse normal item IDs and preserve a namespaced `human_journey:water_type="salt"` CUSTOM_DATA marker. Biome changes do not change collected quality. Tooltip warns Salt Water. Treatment cannot remove this marker; an actual empty/refill changes contents deliberately.
 - TAN purifier stores `FilterTimeRemaining`/`FilterDuration` and exposes `getFilterDuration(ItemStack)`. Core 0.4 reuses these saved units/GUI for instant empty-container fills, requiring an adjacent source freshwater block. Old filled-water recipe processing is disabled; salt is never an intake or treatment input. Rain Collector/crafting recipe remain native.
 - Exact TAN `DrinkItem` (bottles/juices) has no `onUseTick` sound handler/Consumable component; canteens have their own sound handler. An isolated compatibility mixin supplies bottle/juice sound ticks only. Manual audible/multiplayer checks remain necessary.
+
+
+### Core 0.4.1 compatibility corrections
+
+Connected-ocean classification now follows loaded, face-connected WATER fluid up to a reloadable 0–16 water steps (default 16), preserving geographic/TAN precedence. Purifier/filling/hand-drinking share it; bounded origin caching expires within 20 ticks. Core 0.4's server-side Player.playSound excluded the drinker; the isolated TAN bottle/juice helper now uses a Level broadcast with null excluded listener. Exact-version ASM checks verify the listener arguments; canteen and vanilla sound hooks remain unchanged.
