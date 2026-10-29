@@ -1,18 +1,19 @@
-# Human Journey Core 0.3.0
+# Human Journey Core 0.4.0
 
-Adds data-driven water treatment, consistent drinking hazards and state-preserving canteen processing for Minecraft 1.21.8 / Forge 58.1.18 / TAN 21.8.0.2. The temperature integration below is unchanged.
+Adds persistent Salt Water, geographic classification, instant filter-capacity Water Purifier filling and TAN bottle/juice sound compatibility, retaining data-driven treatment and state-preserving canteens for Minecraft 1.21.8 / Forge 58.1.18 / TAN 21.8.0.2. The temperature integration below is unchanged.
 
 **Water setup, JSON schema, controls, compatibility migration and tests: [WATER.md](WATER.md).** Install the companion water datapack above the old Human Journey pack to neutralize its obsolete blanket potion-to-dirty conversion. Keep existing temperature balance settings.
 
 ## Install manually
 
-Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.3.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
+Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.4.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
 
 ## Debug command
 
 ```text
 /hjcore status
 /hjcore status <player>
+/hjcore water
 ```
 
 Permission level **2** required. The first form reports the executing player; server console should use the second form. Output includes Core version, dimension, actual TAN temperature and target, thirst, hydration, exhaustion, hyperthermia exposure/threshold, Climate Clemency, active policy source/revision/reload result and all effective balance values. It only reads state. Teacher/Student tags do not bypass the admin permission check.
@@ -62,16 +63,16 @@ Change JSON and run **`/reload`**. Use `/hjcore status` afterward to confirm the
 | Field | Meaning / accepted range |
 | --- | --- |
 | `schema_version` | 1; may be omitted |
-| `thirst.warm_exhaustion_per_second` | Extra TAN exhaustion/sec at WARM in Overworld and Nether; 0–20 |
-| `thirst.hot_exhaustion_per_second` | Extra exhaustion/sec at HOT; 0–20 |
-| `thirst.nether_hot_exhaustion_per_second` | Independent HOT rate for Nether; 0–20; inherits supplied HOT if omitted |
+| `thirst.warm_exhaustion_per_second` | Extra TAN exhaustion/sec at WARM in Overworld and Nether; 0â€“20 |
+| `thirst.hot_exhaustion_per_second` | Extra exhaustion/sec at HOT; 0â€“20 |
+| `thirst.nether_hot_exhaustion_per_second` | Independent HOT rate for Nether; 0â€“20; inherits supplied HOT if omitted |
 | `overworld.hyperthermia_damage` | Enable Overworld heat health damage; boolean |
 | `nether.hyperthermia_damage` | Enable Nether heat health damage; boolean |
-| `overworld/nether.heat_damage_interval_ticks` | Independent interval for each dimension; integer 20–72000 |
-| `overworld/nether.heat_damage_amount` | Damage health points per scheduled hit; 0–20 (2 points = 1 heart) |
+| `overworld/nether.heat_damage_interval_ticks` | Independent interval for each dimension; integer 20â€“72000 |
+| `overworld/nether.heat_damage_amount` | Damage health points per scheduled hit; 0â€“20 (2 points = 1 heart) |
 | `nether.remove_climate_clemency` | Remove TAN Climate Clemency in Nether from active Survival/Adventure players; boolean |
-| `water.heat_relief_ticks_per_tick` | Net heat exposure relief in Overworld water; integer 0–140 |
-| `water.cooling_interval_ticks` | Body-temperature step interval; integer 1–200 |
+| `water.heat_relief_ticks_per_tick` | Net heat exposure relief in Overworld water; integer 0â€“140 |
+| `water.cooling_interval_ticks` | Body-temperature step interval; integer 1â€“200 |
 
 Rates assume 20 game ticks/sec. Extra exhaustion is not a direct decrement of thirst icons: TAN still processes hydration/exhaustion normally. Zero rates disable only Core's extra costs. Heat damage retains normal Minecraft protection and invulnerability; the minimum 20-tick interval avoids promising damage through hurt immunity. Core uses TAN's full-hyperthermia condition, suppresses native TAN hyperthermia pulses in Overworld/Nether and schedules only one matching TAN damage-type pulse per configured interval. Default Nether timing remains 40 ticks, 1 health point. Intervals follow `player.tickCount`, with no persistent damage counters.
 
@@ -79,7 +80,7 @@ Climate Clemency removal defaults to **false**. Enabling it removes the actual e
 
 ### Water behavior preserved
 
-The existing pre-player-tick exposure reduction and post-server-tick net relief/temperature stepping are preserved. Default relief is **20**, step interval **10**. HOT → WARM → NEUTRAL remains the cooling path. Core never warms COLD/ICY, never pushes below NEUTRAL, and does not change cold targets, wetness, dehydration, drinks, fire/lava damage or other dimensions. Ordinary TAN cooling into cold remains possible. Overworld water still protects from direct heat damage while Core water relief is enabled. Relief **0** disables every additional Core water adjustment/protection; TAN's own water behavior continues.
+The existing pre-player-tick exposure reduction and post-server-tick net relief/temperature stepping are preserved. Default relief is **20**, step interval **10**. HOT â†’ WARM â†’ NEUTRAL remains the cooling path. Core never warms COLD/ICY, never pushes below NEUTRAL, and does not change cold targets, wetness, dehydration, drinks, fire/lava damage or other dimensions. Ordinary TAN cooling into cold remains possible. Overworld water still protects from direct heat damage while Core water relief is enabled. Relief **0** disables every additional Core water adjustment/protection; TAN's own water behavior continues.
 
 ### Precedence, fallback and errors
 
@@ -92,14 +93,14 @@ The existing pre-player-tick exposure reduction and post-server-tick net relief/
 
 ## Build and validation
 
-Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.3.0.jar` (the `-sources.jar` is not an installable mod).
+Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.4.0.jar` (the `-sources.jar` is not an installable mod).
 
 Repository workflow: `.github/workflows/human-journey-core.yml` runs from the `human_journey_core` folder on Core pushes or manual dispatch. `check/build` verifies root resource-pack metadata in the actual JAR. Unit tests cover strict policy validation, sparse fallback, independent Nether rate, damage intervals, disabled damage, reload replacement/removal, invalid reload retention and the existing water/cold policy invariants.
 
 ## Manual acceptance checks
 
 1. Start a dedicated TEST server and matching client. Check `/hjcore status` on yourself and another player (console included), permission rejection for non-admin students and correct live TAN values.
-2. With no policy JSON, compare water cooling to 0.1.1, including any custom TOML values. Test entering/exiting water, HOT→WARM→NEUTRAL, COLD/ICY, death/respawn and dimension changes.
+2. With no policy JSON, compare water cooling to 0.1.1, including any custom TOML values. Test entering/exiting water, HOTâ†’WARMâ†’NEUTRAL, COLD/ICY, death/respawn and dimension changes.
 3. Enable the example policy, `/reload`, confirm source/revision. Change only thirst rates (including independent Nether HOT), reload and check effective values and timed exhaustion.
 4. Change water numbers in JSON, reload and verify; restore **20/10** for the established default behavior. Relief=0 should leave only TAN's native water behavior.
 5. Test fully hyperthermic Overworld/Nether players at 20/40/100-tick intervals with normal thirst to isolate heat damage. Confirm no double hits; disabled dimension damage must protect only against heat. Recheck dehydration and fire/cold behavior.

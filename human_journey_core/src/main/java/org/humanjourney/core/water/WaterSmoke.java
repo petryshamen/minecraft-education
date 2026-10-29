@@ -33,6 +33,10 @@ public final class WaterSmoke {
     private static void check(boolean condition,String message){if(!condition)throw new IllegalStateException("Water smoke: "+message);}
     private static ItemStack item(String id){var key=ResourceLocation.parse(id);check(BuiltInRegistries.ITEM.containsKey(key),"missing "+id);return new ItemStack(BuiltInRegistries.ITEM.getValue(key));}
     private static void verify(HolderLookup.Provider lookup){
+        // Datagen does not run a world's tag reload. Bind only this isolated process's real sand fixture,
+        // so TAN's unmodified filter-duration lookup can enumerate its required vanilla tag.
+        BuiltInRegistries.ITEM.prepareTagReload(new net.minecraft.tags.TagLoader.LoadResult<Item>(Registries.ITEM,
+            java.util.Map.of(net.minecraft.tags.ItemTags.SAND,java.util.List.of(Items.SAND.builtInRegistryHolder(),Items.RED_SAND.builtInRegistryHolder())))).apply();
         // Datagen lookups use unowned bootstrap holders. Use a real frozen registry for persistence fixtures,
         // as a loaded world does, instead of trying to serialize those unowned data-generation references.
         var fixtureEnchantments=new MappedRegistry<Enchantment>(Registries.ENCHANTMENT,Lifecycle.stable());

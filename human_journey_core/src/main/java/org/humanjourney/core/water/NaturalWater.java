@@ -14,5 +14,6 @@ public final class NaturalWater {
     }
     /** Free-standing source water only: collectors, cauldrons and waterlogged blocks are not intakes. */
     public static boolean source(Level level,BlockPos pos){return level.hasChunkAt(pos)&&level.getBlockState(pos).is(Blocks.WATER)&&level.getFluidState(pos).isSource();}
+    public static boolean collectable(Level level,BlockPos pos){return level.hasChunkAt(pos)&&level.getFluidState(pos).is(FluidTags.WATER)&&level.getFluidState(pos).isSource();}
     private NaturalWater(){}
 }

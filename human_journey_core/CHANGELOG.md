@@ -1,3 +1,9 @@
+# 0.4.0
+
+- Added persistent Salt Water containers, ocean-tag/ordered-polygon classification, shared salt drinking consequences and reloadable datapack policies; example Caspian region included.
+- Reworked TAN Water Purifier around adjacent freshwater sources, empty-container instant fills and saved consumable filter capacity; salt cannot use existing treatment paths. Rain Collector and temperature integration unchanged.
+- Added isolated TAN bottle/juice drink sound compatibility, richer water diagnostics and automated geometry/state/capacity/contract regression checks. Manual gameplay testing remains pending.
+
 # 0.3.0
 
 - Added reloadable water policy, unified item/direct-drinking hazards, dynamic state-preserving filtration and furnace/lit-campfire boiling, with legacy recipe guards and optional migration datapack.
