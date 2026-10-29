@@ -27,7 +27,15 @@ public final class CoreCommands {
                     .executes(context -> show(context.getSource(), EntityArgument.getPlayer(context, "player")))))
             .then(Commands.literal("water").executes(context->{
                 var player=context.getSource().getPlayerOrException();
-                context.getSource().sendSuccess(()->Component.literal(WaterContainers.describe(player.getMainHandItem())+" | name="+player.getMainHandItem().getHoverName().getString()),false);
+                
+                var target=WaterFilling.target(player);var type=target==null?null:NaturalWater.at(player.level(),target);
+                var state=WaterBalance.state();var ext=state.policy().extensions();
+                var block=target==null?null:player.level().getBlockEntity(target);
+                String capacity=block instanceof PurifierAccess access?" | stored filter="+access.hjRemaining():"";
+                String message=WaterContainers.describe(player.getMainHandItem())+" | target="+(type==null?"no natural water":type+" @ "+target.toShortString())
+                    +"\nsalt="+ext.salt()+" | regions="+ext.classification().regions().size()+" | tags="+ext.classification().saltTags()
+                    +"\npurifier="+ext.purifier()+capacity+" | water policy="+state.source()+" #"+state.revision()+" | last success="+state.lastSuccess()+" | reload="+state.lastReload();
+                context.getSource().sendSuccess(()->Component.literal(message),false);
                 return 1;
             })));
     }
@@ -51,7 +59,7 @@ public final class CoreCommands {
         var water=WaterBalance.state();var w=water.policy();
         text += "\nwater policy="+water.source()+" | last successful revision="+water.revision()+" | reload="+water.lastReload()
             +"\nwater: normal="+w.normal().chance()+" dirty="+w.dirty().chance()+" | illness="+(w.dirty().illness()?w.dirty().effect()+" "+w.dirty().illnessTicks()+"t amp="+w.dirty().amplifier():"off")
-            +" | filter="+w.filtering()+" furnace="+w.furnace()+" campfire="+w.campfire();
+            +" | regions="+w.extensions().classification().regions().size()+" purifier="+w.extensions().purifier().enabled()+" | filter="+w.filtering()+" furnace="+w.furnace()+" campfire="+w.campfire();
         String message=text;
         source.sendSuccess(() -> Component.literal(message), false);
         return 1;

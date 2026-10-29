@@ -44,6 +44,7 @@ public final class WaterTreatment {
         if(filter(event.getEntity(),event.getHand())){event.setCancellationResult(InteractionResult.SUCCESS);return true;}return false;
     }
     public static boolean rightClickBlock(PlayerInteractEvent.RightClickBlock event){
+        if(WaterPurifier.interact(event))return true;
         var player=event.getEntity();var level=player.level();var pos=event.getPos();
         if(level.isClientSide())return false;
         if(!level.mayInteract(player,pos))return false;

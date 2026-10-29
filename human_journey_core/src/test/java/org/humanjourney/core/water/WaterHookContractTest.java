@@ -5,6 +5,17 @@ import org.objectweb.asm.tree.*;
 import static org.junit.jupiter.api.Assertions.*;
 /** Check exact compiled 1.21.8/Forge/TAN targets without launching/executing a mod. */
 class WaterHookContractTest {
+    @Test void purifierFillingAndSoundTargetsMatchExactTan()throws Exception{
+        String p="toughasnails/block/entity/WaterPurifierBlockEntity";
+        method(p,"serverTick","(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Ltoughasnails/block/entity/WaterPurifierBlockEntity;)V");
+        method(p,"getTotalPurifyTime","()I");method(p,"getFilterDuration","(Lnet/minecraft/world/item/ItemStack;)I");
+        for(String field:new String[]{"filterTimeRemaining","filterDuration","purifyProgress","purifyTotalTime"})assertTrue(read(p).fields.stream().anyMatch(f->f.name.equals(field)&&f.desc.equals("I")));
+        method("toughasnails/item/EmptyCanteenItem","fillCanteen","(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/InteractionResult;");
+        method("toughasnails/container/WaterPurifierMenu","canPurify","(Lnet/minecraft/world/item/ItemStack;)Z");
+        method("toughasnails/thirst/ThirstHandler","onPlayerUseItem","(Lglitchcore/event/player/PlayerInteractEvent$UseItem;)V");
+        assertTrue(read("toughasnails/item/DrinkItem").methods.stream().noneMatch(m->m.name.equals("onUseTick")),"exact TAN bottle hierarchy omits sound tick");
+        method("toughasnails/item/FilledCanteenItem","onUseTick","(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;I)V");
+    }
     ClassNode read(String name)throws Exception{try(var in=getClass().getClassLoader().getResourceAsStream(name+".class")){assertNotNull(in,name);var c=new ClassNode();new ClassReader(in).accept(c,0);return c;}}
     MethodNode method(String type,String name,String descriptor)throws Exception{return read(type).methods.stream().filter(m->m.name.equals(name)&&m.desc.equals(descriptor)).findFirst().orElseThrow(()->new AssertionError(type+"."+name+descriptor));}
     @Test void furnaceTargetsMatchForgePatchedClasses()throws Exception{

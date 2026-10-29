@@ -3,6 +3,19 @@
   "minVersion": "0.8.7",
   "package": "org.humanjourney.core.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": ["FurnaceMixin", "CampfireMixin", "CraftingMixin", "ThirstHandlerMixin", "DrinkPacketMixin", "CanteenMixin"],
-  "injectors": {"defaultRequire": 1}
+  "mixins": [
+    "FurnaceMixin",
+    "CampfireMixin",
+    "CraftingMixin",
+    "ThirstHandlerMixin",
+    "DrinkPacketMixin",
+    "CanteenMixin",
+    "CanteenFillMixin",
+    "PurifierMixin",
+    "PurifierMenuMixin",
+    "DrinkSoundMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }
