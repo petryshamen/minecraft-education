@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.3.13 — Core water treatment"
+    "description": "Human Journey v0.3.14 — Salt water and purifier policy"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.3.13"
+    "version": "0.3.14"
   }
 }

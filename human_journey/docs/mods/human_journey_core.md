@@ -1,7 +1,7 @@
-<!-- hj-mod-inspection {"filename":"human_journey_core-0.3.0.jar","sha256":"6cbe9b1c95ea3a9eab476c574d4474cc41e58eebbf49ca8ea707b9b61169b34b","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.3.0","declared_version":"0.3.0"}]} -->
+<!-- hj-mod-inspection {"filename":"human_journey_core-0.4.0.jar","sha256":"6677192fa31e4fce85d95386225cfb7d49a7e6d5096c8a7d903676f89cbe9719","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.4.0","declared_version":"0.4.0"}]} -->
 # Human Journey Core
 
-Inspected installed `human_journey_core-0.3.0.jar`, Core **0.3.0**, SHA-256 `6cbe9b1c95ea3a9eab476c574d4474cc41e58eebbf49ca8ea707b9b61169b34b`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Installed hash matches the published 0.3.0 checksum. Read-only metadata/class evidence was correlated with [the matching release source and schema](https://github.com/petryshamen/minecraft-education/tree/95d43bc76c3e29ea6378aec81259aa85c8aabb22/human_journey_core). No JAR was changed or rebuilt.
+Inspected installed `human_journey_core-0.4.0.jar`, Core **0.4.0**, SHA-256 `6677192fa31e4fce85d95386225cfb7d49a7e6d5096c8a7d903676f89cbe9719`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Installed hash matches the published 0.4.0 checksum. Read-only metadata/class evidence was correlated with [the matching README, water schema and source](https://github.com/petryshamen/minecraft-education/tree/80c3d4a7ae3c1053773aeb4e8e643f53101f24a3/human_journey_core). No JAR was changed or rebuilt.
 
 Core is the engine/API; this datapack owns gameplay balance. The Core loader reads exactly `data/human_journey/core/temperature.json` (source: `source/data/human_journey/core/temperature.json`). Use `schema_version: 1`; unknown fields, wrong types, non-finite/out-of-range numbers reject the entire update.
 
@@ -29,24 +29,35 @@ Run `/reload`, then admin `/hjcore status` or `/hjcore status <player>` (permiss
 
 The highest-priority pack providing this exact path wins as one file. Missing fields inherit `<world>/serverconfig/human_journey_core-server.toml` or Core compatibility defaults. Removing/disabling the file restores fallback on reload. Invalid data retains the last valid policy (fallback on first load), with rejection visible in status/logs. No duplicate scoreboard, mod update or manual student TAN-config edit is needed.
 
-## Water treatment API (schema 1)
+## Water API (extended schema 1)
 
-Exact policy: `data/human_journey/core/water.json` (source: `source/data/human_journey/core/water.json`). Temperature remains at `data/human_journey/core/temperature.json`, unchanged by this migration. [Core water reference](https://github.com/petryshamen/minecraft-education/blob/95d43bc76c3e29ea6378aec81259aa85c8aabb22/human_journey_core/WATER.md).
+Policy: `data/human_journey/core/water.json`. Temperature remains at `data/human_journey/core/temperature.json`, byte-for-byte unchanged by this migration. [Exact Core water reference](https://github.com/petryshamen/minecraft-education/blob/80c3d4a7ae3c1053773aeb4e8e643f53101f24a3/human_journey_core/WATER.md).
 
-Core owns container recognition, drinking hazards (bottles/canteens/TAN hand drinking), filter interaction/material consumption, ordinary-furnace/lit-campfire processing, stack-state preservation and bypass guards. The datapack owns probabilities, effects, durations, filter IDs/count and enabled methods/timings.
+Core owns natural filling/hand drinking, persistent container quality, drinking consequences, state-preserving treatment, purifier intake/filling/filter-capacity transactions and bypass guards. The datapack owns risks, effects, timings, filters, geographic regions and purifier cost/allowed sources.
 
-| Water JSON section | Human Journey settings |
+| Water JSON section | Human Journey policy |
 | --- | --- |
-| `normal` | `unsafe_chance: 0.60`, `thirst_duration_ticks: 600` (30 s TAN Thirst) |
-| `dirty` | `unsafe_chance: 1.0`, `thirst_duration_ticks: 600`; `illness: {enabled: true, effect: "minecraft:poison", duration_ticks: 160, amplifier: 0}` (Poison I, 8 s) |
-| `filtration` | `enabled: true`, `materials: ["minecraft:sand","minecraft:charcoal"]`, `material_count: 1`, `from: "dirty"`, `to: "normal"` |
+| `normal` | `unsafe_chance: 0.75`, `thirst_duration_ticks: 600` (30 s TAN Thirst); no Poison/Nausea |
+| `dirty` | `unsafe_chance: 1.0`, `thirst_duration_ticks: 600`; `illness: {enabled: true, effect: "minecraft:poison", duration_ticks: 160, amplifier: 0}` |
+| `salt` | `thirst_restored: 0`, `hydration_restored: 0`, `additional_exhaustion: 12`; `nausea: {enabled: true, duration_ticks: 160, amplifier: 0}`; no Poison/unsafe-water roll |
+| `filtration` | Enabled; `materials: ["minecraft:sand","minecraft:charcoal"]`, `material_count: 1`, `from: "dirty"`, `to: "normal"` |
 | `boiling` | `furnace_enabled: true`, `campfire_enabled: true`, `furnace_ticks: 500`, `campfire_ticks: 500`, `from: "normal"`, `to: "purified"` |
-| `hand_drinking` | `cooldown_ticks: 60` (Core default) |
+| `hand_drinking` | `cooldown_ticks: 60` |
+| `classification` | `salt_biome_tags: ["minecraft:is_ocean"]`; ordered `regions` list |
+| `purifier` | `enabled: true`, `filter_cost_per_fill: 100`, `allowed_source_types: ["normal","dirty"]` |
 
-PURIFIED adds no unsafe effect and does not cure pre-existing effects. Quality routes are fixed by schema: DIRTY → NORMAL filtration, NORMAL → PURIFIED boiling; no dirty boiling or manual charcoal purification. Effect chances are 0–1; durations 0–72000 ticks; amplifier 0–4; filters 1–64 distinct registered item IDs/count 1–64; process durations 1–72000 ticks; hand cooldown 1–1200 ticks.
+PURIFIED adds no Thirst/Poison/Nausea and retains TAN restoration; it does not cure pre-existing effects. NORMAL, DIRTY and SALT rules apply consistently to bottles, canteens and direct drinking. Salt restoration values are actual bar/hydration units; exhaustion is added per drink, not per second.
 
-Filter by holding one DIRTY container in main hand, filter in offhand, then sneak-right-click; one material is consumed in Survival/Adventure. Boil NORMAL water by placing it manually in an ordinary furnace with fuel or right-clicking a lit campfire; both take 500 ticks / 25 s. Sneak-right-click campfire with empty main hand retrieves water early. Core supports leather and all installed canteen tiers, retaining remaining drinks, name, enchantments and component patch; no static result recipes or recipe-book unlocks are needed. Empty/invalid canteens and effect potions are not treatment inputs.
+Classification applies only where water fluid exists, using the water block's dimension and X/Z center. Priority is first matching region → TAN purified tag → TAN dirty tag → configured ocean tag → NORMAL. TAN swamp, mangrove_swamp and mushroom_fields remain DIRTY outside explicit overrides; vanilla ocean tag nesting covers deep oceans. No TAN/Minecraft biome tags are replaced.
 
-Legacy Human Journey water recipes/grants are removed. `human_journey:water/convert_one` remains a no-op compatibility ID; no blanket potion clearing occurs. Student grant-all-then-enforce initialization and technology locks remain; leather canteen/Rain Collector are Era 0, copper canteen/Water Purifier require Copper, other tiers keep existing gates. Rain Collector and Water Purifier mechanics/recipes are untouched. Water for Life retains its IDs, Student/prerequisite checks and shared progress, recognizing purified bottles or any purified canteen.
+Region `caspian_sea` uses `dimension: "minecraft:overworld"`, `water_type: "salt"`, and polygon vertices in perimeter order: Baku [3404,-2758] → Fort-Shevchenko [3433,-3041] → Ural mouth [3537,-3208] → Mahmudabad [3564,-2497]. This is the supplied coarse test boundary, not a surveyed shoreline. Polygon boundaries count as inside; append more ordered region objects later. Core accepts simple concave polygons, rejects self-intersections/duplicate vertices/zero area, and permits at most 128 regions with 3–256 vertices and coordinates within ±30,000,000.
 
-After `/reload`, admin `/hjcore status [player]` must show water policy source/revision and successful reload independently of temperature. `/hjcore water` reports held quality/tier/remaining drinks/name. Highest-priority exact water resource wins; removal restores Core safety defaults. Invalid fields/types, unknown item/effect IDs or out-of-range data retain the last valid water policy and report rejection. No separate companion water datapack is needed alongside this integrated release; another pack at this path could override it.
+SALT reuses the normal bottle/TAN canteen item with `minecraft:custom_data` key `human_journey:water_type = "salt"`; Core preserves the marker across moves/saves and displays a warning. Do not infer quality solely from the base item ID. Emptying/refilling replaces contents normally; treatment never refills a partly used canteen.
+
+Filter: DIRTY container in main hand, sand/charcoal in offhand, sneak-right-click; consumes one material in Survival/Adventure. Boil NORMAL in an ordinary fueled furnace or lit campfire for 500 ticks / 25 s. Core preserves remaining drinks, names, enchantments and component patches. No recipe-book unlock is required. SALT cannot filter, boil or enter any purifier route; DIRTY cannot boil directly. No charcoal crafting shortcut is supplied. Legacy recipes/grants remain absent; `human_journey:water/convert_one` stays a no-op compatibility ID.
+
+Purifier: empty glass bottle/empty same-tier TAN canteen fills immediately to PURIFIED by interaction; GUI/hopper processing fills up to one container per server tick. Intake needs a free-standing source-water block on any of six adjacent faces, classified NORMAL or DIRTY. Flowing/waterlogged water, cauldrons and Rain Collectors are not intakes. Any adjacent salt source blocks processing even if fresh water is also adjacent. Filled containers are not inputs. TAN's native replaceable-filter capacity supplies cost 100 per container: e.g. charcoal 1600 units gives 16 fills. The machine does not break; idle/failed transactions consume no capacity. No desalination is added.
+
+Rain Collector remains native TAN and PURIFIED. Copper still gates Water Purifier/copper canteen; leather canteen/Rain Collector/manual treatment are Era 0; later tiers retain existing locks. Student grant-all-then-enforce and Teacher recipes are unchanged. Water for Life keeps its IDs/prerequisites and accepts purified bottles/canteens; Core salt fills use normal base items and cannot satisfy that predicate.
+
+Admin `/hjcore water` reports held quality/fill, targeted natural-water classification, region/tag settings, purifier cost/capacity and water policy source/revision/reload result. `/hjcore status [player]` retains temperature/thirst diagnostics. Both are read-only. After `/reload`, verify water acceptance independently of temperature. Highest-priority exact water file wins; invalid fields/types/ranges/IDs/geometry retain the last valid snapshot; missing file restores Core defaults. Defaults have no geographic regions. This integrated release needs no separate companion water pack.

@@ -11,4 +11,4 @@ Workflow: edit source, validate, increment version metadata, build one final ZIP
 
 Preserve progression IDs and distinct Teacher/Student behavior. Mods are inspected read-only. Keep live-server deployment manual; Minecraft does not need GitHub during play.
 
-Core 0.3.0 owns water treatment; the datapack policy is data/human_journey/core/water.json. Filter DIRTY water with sand/charcoal, then boil NORMAL water in a furnace or lit campfire. See docs/mods/human_journey_core.md for controls, state preservation and reload checks.
+Core 0.4.0 owns water treatment and salt-aware purifier filling; the datapack policy is data/human_journey/core/water.json. Filter DIRTY water with sand/charcoal, then boil NORMAL water in a furnace or lit campfire. See docs/mods/human_journey_core.md for controls, state preservation and reload checks.

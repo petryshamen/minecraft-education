@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.3.14
+
+- Adopted installed Core 0.4.0 water schema: NORMAL 75% Thirst / 30 s; retained DIRTY 100% Thirst / 30 s and Poison I / 8 s. SALT restores no thirst/hydration, adds 12 exhaustion and Nausea I / 8 s, with no Poison or manual treatment route.
+- Added ocean-tag classification and the supplied Caspian polygon; enabled instant purifier filling from adjacent NORMAL/DIRTY source water for 100 native filter units. Temperature, manual treatment timing, Rain Collector, progression/technology gates, Water for Life and role recipe initialization are unchanged. No Core changes or gameplay testing.
+
 ## 0.3.13
 
 - Migrated water treatment to installed Core 0.3.0 policy: normal 60% Thirst / 30 s; dirty 100% Thirst / 30 s plus Poison I / 8 s; consume one sand/charcoal for DIRTY→NORMAL, then furnace/campfire NORMAL→PURIFIED in 500 ticks. Removed 15 legacy recipes/grants and disabled blanket potion conversion while preserving its function ID.

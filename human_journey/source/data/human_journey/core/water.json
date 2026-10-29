@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "normal": {
-    "unsafe_chance": 0.6,
+    "unsafe_chance": 0.75,
     "thirst_duration_ticks": 600
   },
   "dirty": {
@@ -34,5 +34,53 @@
   },
   "hand_drinking": {
     "cooldown_ticks": 60
+  },
+  "salt": {
+    "thirst_restored": 0,
+    "hydration_restored": 0,
+    "additional_exhaustion": 12,
+    "nausea": {
+      "enabled": true,
+      "duration_ticks": 160,
+      "amplifier": 0
+    }
+  },
+  "classification": {
+    "salt_biome_tags": [
+      "minecraft:is_ocean"
+    ],
+    "regions": [
+      {
+        "id": "caspian_sea",
+        "dimension": "minecraft:overworld",
+        "water_type": "salt",
+        "polygon": [
+          [
+            3404,
+            -2758
+          ],
+          [
+            3433,
+            -3041
+          ],
+          [
+            3537,
+            -3208
+          ],
+          [
+            3564,
+            -2497
+          ]
+        ]
+      }
+    ]
+  },
+  "purifier": {
+    "enabled": true,
+    "filter_cost_per_fill": 100,
+    "allowed_source_types": [
+      "normal",
+      "dirty"
+    ]
   }
 }
