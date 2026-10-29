@@ -1,5 +1,19 @@
 # Dependency and API evidence
 
+## Core 0.4.0 salt/purifier/audio integration
+
+- Exact installed TAN identity/hash rechecked read-only and still matches the independently downloaded public build dependency. No installed JAR was executed, modified or used as a build classpath.
+- Pinned upstream author source plus compiled-descriptor/ASM checks identify `EmptyCanteenItem.fillCanteen`, `ThirstHandler.onPlayerUseItem`, `WaterPurifierBlockEntity.serverTick/getTotalPurifyTime/getFilterDuration`, saved integer capacity fields and `WaterPurifierMenu.canPurify`. Core adapts those paths without copying upstream classes into its JAR.
+- Exact dependency resources confirm vanilla `minecraft:is_ocean` (including the deep-ocean tag), TAN dirty tag swamp/mangrove_swamp/mushroom_fields, and the TAN purified-water tag (empty by default). Runtime holder/tag checks use those exact IDs and water-block coordinates.
+- Salt uses an additive namespaced CUSTOM_DATA marker; no new item registrations or duplicated tier classes. Real registered TAN canteen/bottle NBT codec round trips preserve it independently of biome policy. Existing conversion checks retain all 36 tier/fill/quality cases, dynamic furnace outputs and real campfire saved slots/timers.
+- Native purifier filter durations come from TAN, with stored units charged atomically per completed empty-container fill. The actual block entity's capacity, input/output items and NBT round trips were tested without a Level/world. Invalid source and blocked-output transactions spend nothing. Filled/salt inputs cannot use legacy purifier recipes.
+- Upstream `DrinkItem` has no sound-tick override and no Consumable component on its bottles/juices; `FilledCanteenItem` has a separate working sound-tick override. The isolated compatibility mixin adds server-only bottle/juice cadence and skips Consumable-bearing stacks, with no vanilla/canteen target. Structural checks establish method absence in the unmodified dependency; actual Forge bootstrap confirms the new override is applied. Listening/packet timing is a manual test.
+- Datagen's isolated item registry is frozen and supplied a real sand-tag fixture before querying the unmodified TAN filter lookup. This fixture exists only in the opt-in no-world verification provider; runtime policies/tag registries are not changed by it.
+- [GitHub Actions run 40812517738](https://github.com/petryshamen/minecraft-education/actions/runs/40812517738), source commit `acdcc5c96c07dd74d34f6783ceb194b0d9a683d6`. 39 unit/structural tests passed; all ten required water mixin targets loaded. The no-world Forge datagen smoke passed 36 v0.3 canteen conversions and salt/purifier persistence/transactions across all six tiers. Final JAR: 116,569 bytes, SHA-256 `6677192fa31e4fce85d95386225cfb7d49a7e6d5096c8a7d903676f89cbe9719`. Root pack format 64 verified; all 15 compiled temperature classes are byte-for-byte identical to Core 0.3.0. No Minecraft gameplay testing was performed.
+
+- Artifact ZIP digest `764ebd81f0727d284af6b048a0a39c1cee1b38c1cdf4cc3e939b35b696a760df` matched the downloaded bytes. No third-party classes, internal balance policy or Rain Collector hooks are bundled. Purifier crafting recipe is unchanged.
+
+
 ## Core 0.3.0 water integration
 
 - Installed TAN identity rechecked read-only: `ToughAsNails-forge-1.21.8-21.8.0.2.jar`, SHA-256 `b7a0d16be6f713a84e3e45c688fc71fcf77621f1a8d40b0d3246a7a9bfc15611`. The independently downloaded public CurseMaven artifact used for builds has identical bytes. Installed mod JARs were never used as executables/classpaths or modified.

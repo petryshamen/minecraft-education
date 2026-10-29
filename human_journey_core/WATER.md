@@ -1,5 +1,7 @@
 # Water systems — Human Journey Core 0.4.0
 
+**Verified release:** [GitHub Actions run 40812517738](https://github.com/petryshamen/minecraft-education/actions/runs/40812517738), source commit `acdcc5c96c07dd74d34f6783ceb194b0d9a683d6`. 39 unit/structural tests passed; all ten required water mixin targets loaded. The no-world Forge datagen smoke passed 36 v0.3 canteen conversions and salt/purifier persistence/transactions across all six tiers. Final JAR: 116,569 bytes, SHA-256 `6677192fa31e4fce85d95386225cfb7d49a7e6d5096c8a7d903676f89cbe9719`. Root pack format 64 verified; all 15 compiled temperature classes are byte-for-byte identical to Core 0.3.0. No Minecraft gameplay testing was performed.
+
 Target: Minecraft Java 1.21.8, Forge 58.1.18, Tough As Nails 21.8.0.2 and GlitchCore 21.8.0.0. Core implements mechanics; external datapacks own balance and geographic definitions. Existing temperature sources and settings are unchanged. No Minecraft gameplay testing was performed; automated results are recorded with the archived release.
 
 ## Install manually

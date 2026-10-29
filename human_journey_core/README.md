@@ -1,5 +1,7 @@
 # Human Journey Core 0.4.0
 
+**Verified release:** [GitHub Actions run 40812517738](https://github.com/petryshamen/minecraft-education/actions/runs/40812517738), source commit `acdcc5c96c07dd74d34f6783ceb194b0d9a683d6`. 39 unit/structural tests passed; all ten required water mixin targets loaded. The no-world Forge datagen smoke passed 36 v0.3 canteen conversions and salt/purifier persistence/transactions across all six tiers. Final JAR: 116,569 bytes, SHA-256 `6677192fa31e4fce85d95386225cfb7d49a7e6d5096c8a7d903676f89cbe9719`. Root pack format 64 verified; all 15 compiled temperature classes are byte-for-byte identical to Core 0.3.0. No Minecraft gameplay testing was performed.
+
 Adds persistent Salt Water, geographic classification, instant filter-capacity Water Purifier filling and TAN bottle/juice sound compatibility, retaining data-driven treatment and state-preserving canteens for Minecraft 1.21.8 / Forge 58.1.18 / TAN 21.8.0.2. The temperature integration below is unchanged.
 
 **Water setup, JSON schema, controls, compatibility migration and tests: [WATER.md](WATER.md).** Install the companion water datapack above the old Human Journey pack to neutralize its obsolete blanket potion-to-dirty conversion. Keep existing temperature balance settings.
