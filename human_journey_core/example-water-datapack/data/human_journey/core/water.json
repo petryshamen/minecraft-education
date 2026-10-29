@@ -73,7 +73,8 @@
           ]
         ]
       }
-    ]
+    ],
+    "ocean_connection_radius": 16
   },
   "purifier": {
     "enabled": true,

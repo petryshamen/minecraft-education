@@ -1,6 +1,16 @@
-# Human Journey Core 0.4.0
+# Human Journey Core 0.4.1
 
-**Verified release:** [GitHub Actions run 40812517738](https://github.com/petryshamen/minecraft-education/actions/runs/40812517738), source commit `acdcc5c96c07dd74d34f6783ceb194b0d9a683d6`. 39 unit/structural tests passed; all ten required water mixin targets loaded. The no-world Forge datagen smoke passed 36 v0.3 canteen conversions and salt/purifier persistence/transactions across all six tiers. Final JAR: 116,569 bytes, SHA-256 `6677192fa31e4fce85d95386225cfb7d49a7e6d5096c8a7d903676f89cbe9719`. Root pack format 64 verified; all 15 compiled temperature classes are byte-for-byte identical to Core 0.3.0. No Minecraft gameplay testing was performed.
+## Compatibility patch 0.4.1
+
+- Added `classification.ocean_connection_radius` (integer 0–16, default/example 16; 0 disables the connected-water extension). Existing water packs remain valid; all earlier balance values and the Caspian polygon remain unchanged.
+- The fallback classifies otherwise NORMAL water as SALT when face-connected WATER fluid reaches a direct configured ocean/salt biome tag within that many water steps. It searches in all six directions, including flowing/waterlogged water; diagonal contact and proximity across dry land are insufficient. Explicit geographic NORMAL/DIRTY/PURIFIED/SALT overrides, TAN DIRTY/PURIFIED and direct salt-tag classifications win before any search. Geographic salt polygons do not become new ocean seeds or expand into neighbors.
+- Search only examines loaded chunks and never generates/loads chunks. Radius is path length, not straight-line proximity. At radius 16 a fully wet search checks at most 6,017 positions. A per-level LRU holds at most 256 origin results for fewer than 20 ticks; water/biome/chunk changes may take up to one second to refresh. Any water-policy reload outcome invalidates this cache immediately; server shutdown clears it. There is no persistent quality cache on items, so collected salt still uses its saved marker.
+- Purifier intakes, container filling, hand drinking and `/hjcore water` share this classifier. No purifier/treatment/temperature algorithms were changed.
+- Fixed the bottle audio delivery: Core 0.4 called `Player.playSound` server-side, which excludes that player. The isolated TAN DrinkItem hook now sends a direct Level broadcast with no excluded listener, so the drinker and nearby players receive one sound per use tick cadence. It stays server-only, skips Consumable-bearing/silent items, has no final-tick sound and does not target vanilla items or TAN canteens. Structural bytecode checks verify the old excluded-player argument and the new null argument. Audibility remains a manual gameplay check.
+
+**Manual patch checklist:** (1) Beach-biome water connected to ocean within 16 steps should show SALT with `/hjcore water` and reject purifier filling. (2) A coastal lake separated by land stays NORMAL; opening a water connection makes it SALT after the cache refresh, closing it restores NORMAL after refresh. (3) Reload radius 0/4/16 and verify the boundary; invalid 17/negative/fractional values retain the last valid policy. (4) Listen as drinker and nearby observer to TAN bottles/juices; compare vanilla Water Bottle/canteen, including interrupted drinks and finish, for duplicates. (5) Recheck Caspian, swamp/mangrove, stored salt canteens, partial-canteen filtering/boiling, purifier capacity, Rain Collector and temperature cooling.
+
+
 
 Adds persistent Salt Water, geographic classification, instant filter-capacity Water Purifier filling and TAN bottle/juice sound compatibility, retaining data-driven treatment and state-preserving canteens for Minecraft 1.21.8 / Forge 58.1.18 / TAN 21.8.0.2. The temperature integration below is unchanged.
 
@@ -8,7 +18,7 @@ Adds persistent Salt Water, geographic classification, instant filter-capacity W
 
 ## Install manually
 
-Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.4.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
+Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.4.1.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
 
 ## Debug command
 
@@ -95,7 +105,7 @@ The existing pre-player-tick exposure reduction and post-server-tick net relief/
 
 ## Build and validation
 
-Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.4.0.jar` (the `-sources.jar` is not an installable mod).
+Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.4.1.jar` (the `-sources.jar` is not an installable mod).
 
 Repository workflow: `.github/workflows/human-journey-core.yml` runs from the `human_journey_core` folder on Core pushes or manual dispatch. `check/build` verifies root resource-pack metadata in the actual JAR. Unit tests cover strict policy validation, sparse fallback, independent Nether rate, damage intervals, disabled damage, reload replacement/removal, invalid reload retention and the existing water/cold policy invariants.
 

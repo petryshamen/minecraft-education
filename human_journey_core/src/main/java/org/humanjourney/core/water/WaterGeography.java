@@ -30,11 +30,14 @@ public final class WaterGeography {
     private static boolean onSegment(Point a,Point b,Point p){return Math.abs(cross(a,b,p))<1e-7&&p.x>=Math.min(a.x,b.x)&&p.x<=Math.max(a.x,b.x)&&p.z>=Math.min(a.z,b.z)&&p.z<=Math.max(a.z,b.z);}
     private static boolean intersects(Point a,Point b,Point c,Point d){return onSegment(a,b,c)||onSegment(a,b,d)||onSegment(c,d,a)||onSegment(c,d,b)||(cross(a,b,c)*cross(a,b,d)<0&&cross(c,d,a)*cross(c,d,b)<0);}
     public static Quality classify(boolean water,String dimension,double x,double z,boolean purified,boolean dirty,Predicate<String> biomeTag,WaterExtensions.Classification policy){
+        return classify(water,dimension,x,z,purified,dirty,biomeTag,policy,()->false);
+    }
+    public static Quality classify(boolean water,String dimension,double x,double z,boolean purified,boolean dirty,Predicate<String> biomeTag,WaterExtensions.Classification policy,java.util.function.BooleanSupplier connectedOcean){
         if(!water)return null;
         for(Region r:policy.regions())if(r.dimension().equals(dimension)&&r.contains(x,z))return r.quality();
         if(purified)return Quality.PURIFIED;
         if(dirty)return Quality.DIRTY;
-        return policy.saltTags().stream().anyMatch(biomeTag)?Quality.SALT:Quality.NORMAL;
+        return policy.saltTags().stream().anyMatch(biomeTag)||connectedOcean.getAsBoolean()?Quality.SALT:Quality.NORMAL;
     }
     private WaterGeography(){}
 }

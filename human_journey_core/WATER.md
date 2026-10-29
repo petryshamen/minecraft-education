@@ -1,12 +1,22 @@
-# Water systems — Human Journey Core 0.4.0
+# Water systems — Human Journey Core 0.4.1
 
-**Verified release:** [GitHub Actions run 40812517738](https://github.com/petryshamen/minecraft-education/actions/runs/40812517738), source commit `acdcc5c96c07dd74d34f6783ceb194b0d9a683d6`. 39 unit/structural tests passed; all ten required water mixin targets loaded. The no-world Forge datagen smoke passed 36 v0.3 canteen conversions and salt/purifier persistence/transactions across all six tiers. Final JAR: 116,569 bytes, SHA-256 `6677192fa31e4fce85d95386225cfb7d49a7e6d5096c8a7d903676f89cbe9719`. Root pack format 64 verified; all 15 compiled temperature classes are byte-for-byte identical to Core 0.3.0. No Minecraft gameplay testing was performed.
+## Compatibility patch 0.4.1
+
+- Added `classification.ocean_connection_radius` (integer 0–16, default/example 16; 0 disables the connected-water extension). Existing water packs remain valid; all earlier balance values and the Caspian polygon remain unchanged.
+- The fallback classifies otherwise NORMAL water as SALT when face-connected WATER fluid reaches a direct configured ocean/salt biome tag within that many water steps. It searches in all six directions, including flowing/waterlogged water; diagonal contact and proximity across dry land are insufficient. Explicit geographic NORMAL/DIRTY/PURIFIED/SALT overrides, TAN DIRTY/PURIFIED and direct salt-tag classifications win before any search. Geographic salt polygons do not become new ocean seeds or expand into neighbors.
+- Search only examines loaded chunks and never generates/loads chunks. Radius is path length, not straight-line proximity. At radius 16 a fully wet search checks at most 6,017 positions. A per-level LRU holds at most 256 origin results for fewer than 20 ticks; water/biome/chunk changes may take up to one second to refresh. Any water-policy reload outcome invalidates this cache immediately; server shutdown clears it. There is no persistent quality cache on items, so collected salt still uses its saved marker.
+- Purifier intakes, container filling, hand drinking and `/hjcore water` share this classifier. No purifier/treatment/temperature algorithms were changed.
+- Fixed the bottle audio delivery: Core 0.4 called `Player.playSound` server-side, which excludes that player. The isolated TAN DrinkItem hook now sends a direct Level broadcast with no excluded listener, so the drinker and nearby players receive one sound per use tick cadence. It stays server-only, skips Consumable-bearing/silent items, has no final-tick sound and does not target vanilla items or TAN canteens. Structural bytecode checks verify the old excluded-player argument and the new null argument. Audibility remains a manual gameplay check.
+
+**Manual patch checklist:** (1) Beach-biome water connected to ocean within 16 steps should show SALT with `/hjcore water` and reject purifier filling. (2) A coastal lake separated by land stays NORMAL; opening a water connection makes it SALT after the cache refresh, closing it restores NORMAL after refresh. (3) Reload radius 0/4/16 and verify the boundary; invalid 17/negative/fractional values retain the last valid policy. (4) Listen as drinker and nearby observer to TAN bottles/juices; compare vanilla Water Bottle/canteen, including interrupted drinks and finish, for duplicates. (5) Recheck Caspian, swamp/mangrove, stored salt canteens, partial-canteen filtering/boiling, purifier capacity, Rain Collector and temperature cooling.
+
+
 
 Target: Minecraft Java 1.21.8, Forge 58.1.18, Tough As Nails 21.8.0.2 and GlitchCore 21.8.0.0. Core implements mechanics; external datapacks own balance and geographic definitions. Existing temperature sources and settings are unchanged. No Minecraft gameplay testing was performed; automated results are recorded with the archived release.
 
 ## Install manually
 
-Stop your TEST server/client, back up the world and replace the old Core with `human_journey_core-0.4.0.jar`; keep exactly one Core version. Use matching Core/TAN versions on server and clients. Put `HumanJourney-Water-0.4.0.zip` in the TEST world's datapacks folder and enable it above Human Journey and any older water companion. Run `/reload`, then `/hjcore water`. Keep your existing temperature pack and settings; this companion contains no temperature.json. Nothing is installed or deployed automatically.
+Stop your TEST server/client, back up the world and replace the old Core with `human_journey_core-0.4.1.jar`; keep exactly one Core version. Use matching Core/TAN versions on server and clients. Put `HumanJourney-Water-0.4.1.zip` in the TEST world's datapacks folder and enable it above Human Journey and any older water companion. Run `/reload`, then `/hjcore water`. Keep your existing temperature pack and settings; this companion contains no temperature.json. Nothing is installed or deployed automatically.
 
 You can instead merge the example water.json into your Human Journey datapack. A higher-priority file replaces the entire lower-priority file, rather than merging fields. Preserve your own customized Normal/Dirty/boiling values when merging. The companion retains the old `human_journey:water/convert_one` ID as a comments-only migration override: obsolete packs must not turn every vanilla potion back into dirty water. Human Journey 0.3.13 already migrated to Core treatment. No progression, advancement, quest or NPC resources are changed here.
 
@@ -140,7 +150,8 @@ Resource: `data/human_journey/core/water.json`. Schema 1 is extended additively,
           ]
         ]
       }
-    ]
+    ],
+    "ocean_connection_radius": 16
   },
   "purifier": {
     "enabled": true,
@@ -179,7 +190,7 @@ All settings reload with `/reload`. A missing file uses safety defaults; all def
 
 The exact TAN 21.8.0.2 `DrinkItem` superclass for water bottles and juices implements use animation/duration/finish but has no `onUseTick` sound handler and no Consumable component. Its `FilledCanteenItem` separately implements sound ticks. This is an upstream omission, not Core's Finish interception: the latter only replaces post-consumption thirst logic and cannot suppress earlier sound ticks.
 
-An isolated `DrinkSoundMixin` adds the canteen-style normal GENERIC_DRINK cadence to TAN DrinkItem only. It emits once on the server for all listeners, including the drinker's client, and skips items if another mod supplies a Consumable component. It does not target vanilla items or TAN canteens. Automated checks verify exact upstream method absence and the applied override; audible multiplayer timing remains a manual check.
+An isolated `DrinkSoundMixin` delegates to `compat/TanDrinkSounds` for the canteen-style normal GENERIC_DRINK cadence to TAN DrinkItem only. It emits once on the server for all listeners, including the drinker's client, and skips items if another mod supplies a Consumable component. It does not target vanilla items or TAN canteens. Automated checks verify exact upstream method absence and the applied override; audible multiplayer timing remains a manual check.
 
 ## Debugging and concise manual checklist
 

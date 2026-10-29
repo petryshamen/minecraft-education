@@ -33,7 +33,7 @@ public final class CoreCommands {
                 var block=target==null?null:player.level().getBlockEntity(target);
                 String capacity=block instanceof PurifierAccess access?" | stored filter="+access.hjRemaining():"";
                 String message=WaterContainers.describe(player.getMainHandItem())+" | target="+(type==null?"no natural water":type+" @ "+target.toShortString())
-                    +"\nsalt="+ext.salt()+" | regions="+ext.classification().regions().size()+" | tags="+ext.classification().saltTags()
+                    +"\nsalt="+ext.salt()+" | regions="+ext.classification().regions().size()+" | tags="+ext.classification().saltTags()+" | ocean radius="+ext.classification().oceanConnectionRadius()
                     +"\npurifier="+ext.purifier()+capacity+" | water policy="+state.source()+" #"+state.revision()+" | last success="+state.lastSuccess()+" | reload="+state.lastReload();
                 context.getSource().sendSuccess(()->Component.literal(message),false);
                 return 1;

@@ -11,9 +11,6 @@ import toughasnails.item.DrinkItem;
 public abstract class DrinkSoundMixin extends Item {
     protected DrinkSoundMixin(Properties properties){super(properties);}
     @Override public void onUseTick(Level level,LivingEntity entity,ItemStack stack,int remaining){
-        // No client prediction: the server broadcasts once, including the drinker's client.
-        // Consumable already supplies sounds if another mod adds that component.
-        if(!level.isClientSide()&&!stack.has(net.minecraft.core.component.DataComponents.CONSUMABLE)&&32-remaining>7&&remaining%4==0)
-            entity.playSound(SoundEvents.GENERIC_DRINK.value(),.5F,Mth.randomBetween(level.getRandom(),.9F,1F));
+        org.humanjourney.core.compat.TanDrinkSounds.tick(level,entity,stack,remaining);
     }
 }

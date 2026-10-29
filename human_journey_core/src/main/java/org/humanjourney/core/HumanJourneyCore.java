@@ -53,6 +53,7 @@ public final class HumanJourneyCore {
             TemperatureIntegration.reset();
             WaterBalance.reset();
             WaterDrinking.reset();
+            NaturalWater.reset();
         });
         // Forge 58 uses predicate cancellation, not legacy event.setCanceled().
         LivingAttackEvent.BUS.addListener(

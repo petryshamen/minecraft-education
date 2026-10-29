@@ -8,8 +8,9 @@ public record WaterExtensions(Salt salt,Classification classification,Purifier p
     public record Salt(int thirst,float hydration,float exhaustion,boolean nausea,int nauseaTicks,int amplifier){
         public Salt { if(thirst< -20||thirst>20||!Float.isFinite(hydration)||Math.abs(hydration)>20||!Float.isFinite(exhaustion)||exhaustion<0||exhaustion>1000||nauseaTicks<0||nauseaTicks>72000||amplifier<0||amplifier>4)throw new IllegalArgumentException("invalid salt drinking settings"); }
     }
-    public record Classification(Set<String> saltTags,List<WaterGeography.Region> regions){
-        public Classification {saltTags=Set.copyOf(saltTags);regions=List.copyOf(regions);if(saltTags.size()>64||regions.size()>128)throw new IllegalArgumentException("too many salt tags/regions");}
+    public record Classification(Set<String> saltTags,List<WaterGeography.Region> regions,int oceanConnectionRadius){
+        public Classification(Set<String> saltTags,List<WaterGeography.Region> regions){this(saltTags,regions,16);}
+        public Classification {saltTags=Set.copyOf(saltTags);regions=List.copyOf(regions);if(saltTags.size()>64||regions.size()>128)throw new IllegalArgumentException("too many salt tags/regions");if(oceanConnectionRadius<0||oceanConnectionRadius>OceanConnection.MAX_RADIUS)throw new IllegalArgumentException("ocean_connection_radius must be 0..16");}
     }
     public record Purifier(boolean enabled,int cost,Set<Quality> sources){
         public Purifier {sources=Set.copyOf(sources);if(cost<1||cost>1000000||sources.isEmpty()||sources.contains(Quality.SALT))throw new IllegalArgumentException("invalid purifier cost/sources; salt cannot be desalinated");}
@@ -18,7 +19,7 @@ public record WaterExtensions(Salt salt,Classification classification,Purifier p
     public static WaterExtensions defaults(){return new WaterExtensions(new Salt(0,0,12,true,160,0),new Classification(Set.of("minecraft:is_ocean"),List.of()),new Purifier(true,100,Set.of(Quality.NORMAL,Quality.DIRTY)));}
     public static WaterExtensions parse(JsonObject root){
         var d=defaults();JsonObject s=section(root,"salt"),n=section(s,"nausea"),c=section(root,"classification"),p=section(root,"purifier");
-        keys(s,"thirst_restored","hydration_restored","additional_exhaustion","nausea");keys(n,"enabled","duration_ticks","amplifier");keys(c,"salt_biome_tags","regions");keys(p,"enabled","filter_cost_per_fill","allowed_source_types");
+        keys(s,"thirst_restored","hydration_restored","additional_exhaustion","nausea");keys(n,"enabled","duration_ticks","amplifier");keys(c,"salt_biome_tags","regions","ocean_connection_radius");keys(p,"enabled","filter_cost_per_fill","allowed_source_types");
         Set<String> tags=c.has("salt_biome_tags")?strings(c.get("salt_biome_tags")):d.classification.saltTags;
         for(String tag:tags)id(tag);
         List<WaterGeography.Region> regions=new ArrayList<>();Set<String> ids=new HashSet<>();
@@ -31,7 +32,7 @@ public record WaterExtensions(Salt salt,Classification classification,Purifier p
             regions.add(new WaterGeography.Region(name,dimension,quality(string(r,"water_type","")),points));
         }
         Set<Quality> sources=d.purifier.sources;if(p.has("allowed_source_types")){sources=new HashSet<>();for(String q:strings(p.get("allowed_source_types")))sources.add(quality(q));}
-        return new WaterExtensions(new Salt(integer(s,"thirst_restored",0),(float)number(s,"hydration_restored",0),(float)number(s,"additional_exhaustion",12),bool(n,"enabled",true),integer(n,"duration_ticks",160),integer(n,"amplifier",0)),new Classification(tags,regions),new Purifier(bool(p,"enabled",true),integer(p,"filter_cost_per_fill",100),sources));
+        return new WaterExtensions(new Salt(integer(s,"thirst_restored",0),(float)number(s,"hydration_restored",0),(float)number(s,"additional_exhaustion",12),bool(n,"enabled",true),integer(n,"duration_ticks",160),integer(n,"amplifier",0)),new Classification(tags,regions,integer(c,"ocean_connection_radius",16)),new Purifier(bool(p,"enabled",true),integer(p,"filter_cost_per_fill",100),sources));
     }
     private static void id(String s){if(!s.matches("[a-z0-9_.-]+:[a-z0-9_./-]+"))throw new IllegalArgumentException("invalid resource ID: "+s);}
     private static Quality quality(String s){try{return Quality.valueOf(s.toUpperCase(Locale.ROOT));}catch(Exception e){throw new IllegalArgumentException("unknown water type: "+s);}}

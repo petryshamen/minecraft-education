@@ -1,3 +1,8 @@
+# 0.4.1
+
+- Added reloadable, bounded connected-ocean detection for shoreline water; preserved explicit/TAN classifications, salt persistence, treatment, purifier capacity, Rain Collector and temperature behavior.
+- Fixed TAN bottle/juice sound delivery to include the drinker, using one isolated server broadcast with no added final sound. Added path-connectivity, precedence, radius and audio-routing regression checks.
+
 # 0.4.0
 
 - Added persistent Salt Water containers, ocean-tag/ordered-polygon classification, shared salt drinking consequences and reloadable datapack policies; example Caspian region included.
