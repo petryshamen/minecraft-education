@@ -35,6 +35,7 @@ public final class WaterSmoke {
     private static void verify(HolderLookup.Provider lookup){
         // Datagen does not run a world's tag reload. Bind only this isolated process's real sand fixture,
         // so TAN's unmodified filter-duration lookup can enumerate its required vanilla tag.
+        BuiltInRegistries.ITEM.freeze(); // Forge leaves datagen registries unfrozen; PendingTags requires a frozen owner.
         BuiltInRegistries.ITEM.prepareTagReload(new net.minecraft.tags.TagLoader.LoadResult<Item>(Registries.ITEM,
             java.util.Map.of(net.minecraft.tags.ItemTags.SAND,java.util.List.of(Items.SAND.builtInRegistryHolder(),Items.RED_SAND.builtInRegistryHolder())))).apply();
         // Datagen lookups use unowned bootstrap holders. Use a real frozen registry for persistence fixtures,
@@ -91,6 +92,8 @@ public final class WaterSmoke {
             check(moved.getDamageValue()==capacities[t]-1&&moved.getEnchantments().equals(empty.getEnchantments())&&moved.get(DataComponents.CUSTOM_NAME).equals(empty.get(DataComponents.CUSTOM_NAME)),"salt preserves fill/name/enchantments");
             check(moved.get(DataComponents.CUSTOM_DATA).copyTag().getString("owner").orElse("").equals("student"),"salt preserves unrelated data");
             check(WaterContainers.boiled(moved).isEmpty()&&WaterContainers.convert(moved,WaterPolicy.Quality.NORMAL).isEmpty()&&WaterPurifier.purifiedFill(moved).isEmpty(),"salt cannot boil/filter/purify");
+            var saltSlots=NonNullList.withSize(3,ItemStack.EMPTY);saltSlots.set(0,moved.copy());
+            check(!WaterTreatment.burn(saltSlots,64)&&ItemStack.isSameItemSameComponents(saltSlots.get(0),moved)&&saltSlots.get(2).isEmpty(),"furnace cannot consume or purify salt");
             var emptied=WaterContainers.emptied(moved);check(!SaltWater.marked(emptied)&&WaterContainers.empty(emptied),"salt last drink leaves correct empty container");
             check(emptied.get(DataComponents.CUSTOM_NAME).equals(empty.get(DataComponents.CUSTOM_NAME))&&emptied.getEnchantments().equals(empty.getEnchantments()),"empty keeps identity");
             var pure=WaterPurifier.purifiedFill(emptied);check(WaterContainers.kind(pure).quality()==WaterPolicy.Quality.PURIFIED&&WaterContainers.kind(pure).tier().equals(tiers[t])&&pure.getDamageValue()==0,"purifier empty canteen -> correct tier full purified");

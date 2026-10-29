@@ -5,6 +5,11 @@ import org.objectweb.asm.tree.*;
 import static org.junit.jupiter.api.Assertions.*;
 /** Check exact compiled 1.21.8/Forge/TAN targets without launching/executing a mod. */
 class WaterHookContractTest {
+    @Test void exactVersionBiomeTagResourcesExist()throws Exception{
+        for(String[] check:new String[][]{{"data/minecraft/tags/worldgen/biome/is_ocean.json","ocean","is_deep_ocean"},{"data/toughasnails/tags/worldgen/biome/dirty_water_biomes.json","minecraft:swamp","minecraft:mangrove_swamp"}}){
+            try(var in=getClass().getClassLoader().getResourceAsStream(check[0])){assertNotNull(in,check[0]);String text=new String(in.readAllBytes(),java.nio.charset.StandardCharsets.UTF_8);assertTrue(text.contains(check[1]));assertTrue(text.contains(check[2]));}
+        }
+    }
     @Test void purifierFillingAndSoundTargetsMatchExactTan()throws Exception{
         String p="toughasnails/block/entity/WaterPurifierBlockEntity";
         method(p,"serverTick","(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Ltoughasnails/block/entity/WaterPurifierBlockEntity;)V");

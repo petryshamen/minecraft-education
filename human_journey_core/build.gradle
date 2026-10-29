@@ -59,6 +59,7 @@ tasks.withType(Test).configureEach {
     testLogging { exceptionFormat = 'full' }
     systemProperty 'java.io.tmpdir', file('.tmp').absolutePath
     systemProperty 'user.home', file('.java-user-home').absolutePath
+    systemProperty 'humanjourney.projectDir', projectDir.absolutePath
     workingDir = layout.buildDirectory.dir('test-work').get().asFile
     doFirst { workingDir.mkdirs(); file('.tmp').mkdirs(); file('.java-user-home').mkdirs() }
 }

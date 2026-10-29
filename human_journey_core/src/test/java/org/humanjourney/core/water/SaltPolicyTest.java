@@ -5,6 +5,10 @@ import java.util.*;
 import org.humanjourney.core.water.WaterPolicy.Quality;
 import static org.junit.jupiter.api.Assertions.*;
 class SaltPolicyTest {
+    @Test void shippedExampleParsesAndContainsCaspian()throws Exception{
+        var text=java.nio.file.Files.readString(java.nio.file.Path.of(System.getProperty("humanjourney.projectDir"),"example-water-datapack/data/human_journey/core/water.json"));
+        var p=parse(text);assertEquals(1,p.extensions().classification().regions().size());assertTrue(p.extensions().classification().regions().getFirst().contains(3490,-2900));assertEquals(100,p.extensions().purifier().cost());
+    }
     WaterPolicy parse(String s){return WaterPolicy.parse(JsonParser.parseString(s));}
     WaterGeography.Region region(){return new WaterGeography.Region("caspian_sea","minecraft:overworld",Quality.SALT,List.of(new WaterGeography.Point(3404,-2758),new WaterGeography.Point(3433,-3041),new WaterGeography.Point(3537,-3208),new WaterGeography.Point(3564,-2497)));}
     Quality classify(boolean water,String dim,int x,int z,boolean purified,boolean dirty,Set<String> tags,List<WaterGeography.Region> regions){return WaterGeography.classify(water,dim,x,z,purified,dirty,tags::contains,new WaterExtensions.Classification(Set.of("minecraft:is_ocean"),regions));}
