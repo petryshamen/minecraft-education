@@ -1,5 +1,16 @@
 # Dependency and API evidence
 
+## Core 0.5.0 Easy NPC adapter MVP
+
+- Installed target inspected read-only: `easy_npc-forge-1.21.8-6.5.2.jar`, SHA-256 `147c1c8836cc62d552ba6ef58cbf84882565d8e370d1eca1a1ab604965a11859`. Public build dependency `curse.maven:easy-npc-core-1308987:7402995` SHA-256 is `89c9bd175243e0b894d56e3dc4e5d7544f279005ace703510d34454cded6e317`. The archives differ, but every class entry in the public JAR was byte-compared with the installed target: zero class differences. The installed JAR was never executed, used as a classpath, modified or uploaded.
+- Source reference: [upstream revision f929f515](https://github.com/MarkusBordihn/BOs-Easy-NPC/tree/f929f51540778bb8bcbb43989e6ff4a4c816ce85). Exact binary contracts were checked for `SkinDataEntry.createRemoteSkin`, dialogue/condition/action records, `setTradingOffers`, `setPresetUUID` and `easy_npc:humanoid`. No native GUI/export/import automation or copied preset NBT is used.
+- Fresh entity UUID and separate preset UUID, scoped 32-character runtime page/button labels, own-NPC target UUID in action records, independent mutable native data sets and explicit main-page priority are applied once at spawn. Dialog/button identity survives native NBT data round trips. Native action hash limitations are documented; no execution-limit condition system or stock-persistence workaround is added.
+- Trades are Advanced native MerchantOffers with explicit uses/maxUses, optional second costs, reset interval and current last-reset timestamp. `setTradingOffers` initializes the stored/synchronized collection and its runtime copy. Native runtime usage can diverge from the saved collection; this release does not claim to fix that 6.5.2 bug.
+- [GitHub Actions run 41145562029](https://github.com/petryshamen/minecraft-education/actions/runs/41145562029), source `2f5677aaf4272967e55800644fbcc81e7ea0e42b`. 63 unit/structural tests passed; the no-world Forge data checks loaded exact Easy NPC 6.5.2 and verified two templates, native data codecs and instance isolation. All 64 pre-existing engine classes, including all 15 temperature classes and the complete water/shoreline/sound integration, are byte-identical to Core 0.4.1. Runtime JAR SHA-256: `ddf6f064a90d45dc03e83c8034e111bad3650de156347bd551cb29f101ba0a33`. No NPC entity/world was created, no appearance/UI/gameplay/persistence test was performed and nothing was installed automatically.
+
+- Downloaded artifact ZIP matched SHA-256 `e6b877ae24e8a0d2007a2317dd3167da419c94b006a556301d41cc4abdd01299`. Actual JAR root resource pack metadata format 64, expanded mod version 0.5.0, Java 21 classes, optional Easy NPC dependency, no bundled third-party classes and no embedded NPC content were verified. Main Java source files match the successful sources JAR. The new formal authoring schema is additive documentation; runtime Java validation/cross-reference checks remain authoritative.
+
+
 ## Core 0.4.1 compatibility checks
 
 - Connected-water search is a pure six-neighbor BFS bounded by 0–16 path steps, with at most 6,017 distinct positions at the maximum radius. Loaded-water predicates do not load chunks. Per-level origin results use a 256-entry LRU and less-than-20-tick lifetime, invalidated by water reload snapshots/shutdown. Geographic/TAN/direct-ocean precedence remains lazy and unchanged.

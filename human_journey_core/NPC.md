@@ -1,5 +1,7 @@
 # NPC Template MVP — Core 0.5.0
 
+**Build verified:** [GitHub Actions run 41145562029](https://github.com/petryshamen/minecraft-education/actions/runs/41145562029), source `2f5677aaf4272967e55800644fbcc81e7ea0e42b`. 63 unit/structural tests passed; the no-world Forge data checks loaded exact Easy NPC 6.5.2 and verified two templates, native data codecs and instance isolation. All 64 pre-existing engine classes, including all 15 temperature classes and the complete water/shoreline/sound integration, are byte-identical to Core 0.4.1. Runtime JAR SHA-256: `ddf6f064a90d45dc03e83c8034e111bad3650de156347bd551cb29f101ba0a33`. No NPC entity/world was created, no appearance/UI/gameplay/persistence test was performed and nothing was installed automatically.
+
 Minecraft Java 1.21.8 / Forge 58.1.18 / Easy NPC Core 6.5.2. Existing Core 0.4.1 temperature, water, salt, shoreline, sound and purifier classes are retained. No Minecraft gameplay testing or automatic installation is performed. Easy NPC handles entity rendering, remote textures, dialogues, conditions, actions, merchant UI and normal entity persistence. Core supplies a reusable content loader and isolated 6.5.2 adapter.
 
 ## Manual installation and first spawn

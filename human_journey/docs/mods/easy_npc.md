@@ -80,3 +80,10 @@ The installed core/config UI/bundle are 6.5.2. Installed class-pool inspection w
 Recommended next step: use a disposable Advanced trader with one offer, Max Uses 1 and reset minutes 0; test two players, close/reopen, chunk reload and restart separately. Then test a one-minute reset by waiting and reopening. Seek a verified 1.21.8-compatible upstream stock-persistence fix/backport before relying on scarcity. A Core adapter could synchronize runtime stock to persistent state; datapack NBT edits risk conflicting with the runtime cache and open screens. Neither workaround is implemented.
 
 Source entry points at the pinned revision: `TradingDataCapable`, `TradingOfferHandler`, `TradingDataSet`, config UI `TradingContainerHandler` and `ChangeBasicTradingMessage`.
+
+
+## Core 0.5.0 template adapter entry points
+
+The isolated Core adapter targets `easy_npc:humanoid` via the native EntityType factory. It uses `EasyNPCBase` setters for owner/home/preset identity, `SkinDataEntry.createRemoteSkin`, `DialogDataSet`/`DialogDataEntry`/`DialogButtonEntry`, `ActionDataEntry`/`ConditionDataEntry`, and Advanced `TradingDataSet`/`MerchantOffers`. Core reads reloadable `data/<namespace>/npc/*.json`; no GUI or native preset import is used. Local content page/button IDs become 32-character per-entity runtime labels before Easy NPC derives UUIDs; actions target their own fresh entity UUID. Native hash-based action IDs are not a new durable execution-limit engine. Only SCOREBOARD conditions and the limited command/scoreboard/trading/named-dialog actions are exposed.
+
+The public Forge build dependency `curse.maven:easy-npc-core-1308987:7402995` has SHA-256 `89c9bd175243e0b894d56e3dc4e5d7544f279005ace703510d34454cded6e317`, differing from the installed archive hash above, but every public class entry is byte-identical to the installed 6.5.2 target. Installed JARs remain read-only and are never used for execution/classpaths. The adapter initializes stored/runtime trade offers through `setTradingOffers`; the stock-persistence limitation documented above remains. No stock sync workaround or gameplay persistence test was introduced.

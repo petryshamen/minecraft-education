@@ -1,5 +1,7 @@
 # Human Journey Core 0.5.0
 
+**Build verified:** [GitHub Actions run 41145562029](https://github.com/petryshamen/minecraft-education/actions/runs/41145562029), source `2f5677aaf4272967e55800644fbcc81e7ea0e42b`. 63 unit/structural tests passed; the no-world Forge data checks loaded exact Easy NPC 6.5.2 and verified two templates, native data codecs and instance isolation. All 64 pre-existing engine classes, including all 15 temperature classes and the complete water/shoreline/sound integration, are byte-identical to Core 0.4.1. Runtime JAR SHA-256: `ddf6f064a90d45dc03e83c8034e111bad3650de156347bd551cb29f101ba0a33`. No NPC entity/world was created, no appearance/UI/gameplay/persistence test was performed and nothing was installed automatically.
+
 NPC Template MVP: `/hj npc spawn hunter` creates a configured Easy NPC 6.5.2 entity from reloadable datapack JSON. Teacher/admin permission level 2 required. Optional custom name and dynamic template Tab completion are supported. **[NPC setup, JSON reference, stock limitation and manual checklist](NPC.md)**; formal schema: [docs/npc-template.schema.json](docs/npc-template.schema.json). Install `human_journey_core-0.5.0.jar` and the separate NPC example pack manually. Keep all existing water/temperature packs. No automatic deployment or Minecraft gameplay testing.
 
 

@@ -1,0 +1,384 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:human-journey:npc-template:1",
+  "title": "Human Journey NPC Template v1 (Core 0.5.0)",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "role": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "skin_url": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "behavior": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "stationary": {
+          "type": "boolean",
+          "default": true
+        },
+        "invulnerable": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "required": []
+    },
+    "dialogue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "main": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]{1,32}$",
+          "default": "main"
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/page"
+          },
+          "minItems": 1,
+          "maxItems": 16
+        }
+      },
+      "required": [
+        "pages"
+      ]
+    },
+    "trading": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reset_minutes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 525600,
+          "default": 0
+        },
+        "offers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trade"
+          },
+          "minItems": 0,
+          "maxItems": 64
+        }
+      },
+      "required": []
+    }
+  },
+  "required": [
+    "name",
+    "skin_url",
+    "dialogue"
+  ],
+  "$defs": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "item": {
+          "type": "string",
+          "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64,
+          "default": 1
+        }
+      },
+      "required": [
+        "item"
+      ]
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "SCOREBOARD"
+        },
+        "objective": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]{1,16}$"
+        },
+        "operator": {
+          "enum": [
+            "EQUALS",
+            "NOT_EQUALS",
+            "GREATER_THAN",
+            "GREATER_THAN_OR_EQUALS",
+            "LESS_THAN",
+            "LESS_THAN_OR_EQUALS"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000,
+          "default": 0
+        }
+      },
+      "required": [
+        "type",
+        "objective",
+        "operator"
+      ]
+    },
+    "action": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "OPEN_TRADING_SCREEN"
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              },
+              "minItems": 0,
+              "maxItems": 16
+            }
+          },
+          "required": [
+            "type"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "OPEN_NAMED_DIALOG"
+            },
+            "dialogue": {
+              "type": "string",
+              "pattern": "^[a-z0-9_]{1,32}$"
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              },
+              "minItems": 0,
+              "maxItems": 16
+            }
+          },
+          "required": [
+            "type",
+            "dialogue"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "COMMAND"
+            },
+            "command": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048,
+              "pattern": "^[^\\r\\n]+$"
+            },
+            "permission_level": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2,
+              "default": 2
+            },
+            "execute_as_player": {
+              "type": "boolean",
+              "default": true
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              },
+              "minItems": 0,
+              "maxItems": 16
+            }
+          },
+          "required": [
+            "type",
+            "command"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "SCOREBOARD"
+            },
+            "objective": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_.-]{1,16}$"
+            },
+            "operation": {
+              "enum": [
+                "SET",
+                "INCREASE",
+                "DECREASE"
+              ]
+            },
+            "value": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000,
+              "default": 1
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              },
+              "minItems": 0,
+              "maxItems": 16
+            }
+          },
+          "required": [
+            "type",
+            "objective",
+            "operation"
+          ]
+        }
+      ]
+    },
+    "trade": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "input": {
+          "$ref": "#/$defs/item"
+        },
+        "second_input": {
+          "$ref": "#/$defs/item"
+        },
+        "output": {
+          "$ref": "#/$defs/item"
+        },
+        "uses": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0
+        },
+        "maxUses": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        }
+      },
+      "required": [
+        "input",
+        "output",
+        "maxUses"
+      ],
+      "description": "Runtime also enforces uses <= maxUses, registered non-air item IDs, and item-specific stack limits."
+    },
+    "button": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]{1,32}$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          },
+          "minItems": 0,
+          "maxItems": 16
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/action"
+          },
+          "minItems": 1,
+          "maxItems": 16
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "actions"
+      ]
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]{1,32}$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8192
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          },
+          "minItems": 0,
+          "maxItems": 16
+        },
+        "buttons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/button"
+          },
+          "minItems": 0,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ]
+    }
+  },
+  "description": "IDs and dialogue references must be unique and resolvable. Runtime registry and cross-field validation are authoritative; no era, region or profession binding."
+}
