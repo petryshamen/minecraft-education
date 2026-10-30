@@ -33,6 +33,7 @@ public final class HumanJourneyCore {
             WaterSmoke.register(context.getModBusGroup());
             com.mojang.logging.LogUtils.getLogger().info("[HJ Core] WATER_MIXIN_SMOKE_OK: all ten water targets loaded under ModLauncher");
         }
+        org.humanjourney.core.npc.NpcBootstrap.register(context);
         context.registerConfig(ModConfig.Type.SERVER, TemperatureConfig.SPEC,
                 "human_journey_core-server.toml");
         TickEvent.PlayerTickEvent.Pre.BUS.addListener(TemperatureIntegration::beforePlayerTick);

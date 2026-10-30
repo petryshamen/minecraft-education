@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "name": "Story Test",
+  "role": "test",
+  "title": "MVP",
+  "skin_url": "https://raw.githubusercontent.com/MarkusBordihn/BOs-Easy-NPC/f929f51540778bb8bcbb43989e6ff4a4c816ce85/core/Common/src/main/resources/assets/easy_npc/textures/entity/humanoid/humanoid_template.png",
+  "behavior": {
+    "stationary": true,
+    "invulnerable": true
+  },
+  "dialogue": {
+    "main": "main",
+    "pages": [
+      {
+        "id": "main",
+        "text": "Hello @initiator. Score: @score(hj_npc_test).",
+        "buttons": [
+          {
+            "id": "test",
+            "text": "Test action",
+            "conditions": [
+              {
+                "type": "SCOREBOARD",
+                "objective": "hj_npc_test",
+                "operator": "LESS_THAN",
+                "value": 3
+              }
+            ],
+            "actions": [
+              {
+                "type": "SCOREBOARD",
+                "objective": "hj_npc_test",
+                "operation": "INCREASE",
+                "value": 1
+              },
+              {
+                "type": "COMMAND",
+                "command": "function human_journey:npc/example",
+                "execute_as_player": true,
+                "permission_level": 2
+              },
+              {
+                "type": "OPEN_NAMED_DIALOG",
+                "dialogue": "done"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "done",
+        "text": "The action ran. Score: @score(hj_npc_test).",
+        "buttons": [
+          {
+            "id": "back",
+            "text": "Back",
+            "actions": [
+              {
+                "type": "OPEN_NAMED_DIALOG",
+                "dialogue": "main"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "trading": {
+    "reset_minutes": 0,
+    "offers": []
+  }
+}

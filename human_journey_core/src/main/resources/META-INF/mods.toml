@@ -37,3 +37,10 @@ mandatory=true
 versionRange="[21.8.0.0,21.9)"
 ordering="AFTER"
 side="BOTH"
+
+[[dependencies.human_journey_core]]
+modId="easy_npc"
+mandatory=false
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"

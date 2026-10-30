@@ -44,6 +44,9 @@ dependencies {
     runtimeOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
     testRuntimeOnly 'curse.maven:tough-as-nails-246391:7063978'
     testRuntimeOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
+    compileOnly 'curse.maven:easy-npc-core-1308987:7402995'
+    runtimeOnly 'curse.maven:easy-npc-core-1308987:7402995'
+    testRuntimeOnly 'curse.maven:easy-npc-core-1308987:7402995'
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'org.mockito:mockito-core:5.18.0'

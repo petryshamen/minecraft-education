@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "name": "Kito",
+  "role": "hunter",
+  "title": "Hunter",
+  "skin_url": "https://raw.githubusercontent.com/MarkusBordihn/BOs-Easy-NPC/f929f51540778bb8bcbb43989e6ff4a4c816ce85/core/Common/src/main/resources/assets/easy_npc/textures/entity/humanoid/humanoid_template.png",
+  "behavior": {
+    "stationary": true,
+    "invulnerable": true
+  },
+  "dialogue": {
+    "main": "main",
+    "pages": [
+      {
+        "id": "main",
+        "text": "I hunt animals and trade what I bring back, @initiator.",
+        "buttons": [
+          {
+            "id": "trade",
+            "text": "Show your goods",
+            "actions": [
+              {
+                "type": "OPEN_TRADING_SCREEN"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "trading": {
+    "reset_minutes": 0,
+    "offers": [
+      {
+        "input": {
+          "item": "minecraft:flint",
+          "count": 3
+        },
+        "output": {
+          "item": "minecraft:leather",
+          "count": 2
+        },
+        "uses": 0,
+        "maxUses": 4
+      },
+      {
+        "input": {
+          "item": "minecraft:stick",
+          "count": 8
+        },
+        "second_input": {
+          "item": "minecraft:flint",
+          "count": 1
+        },
+        "output": {
+          "item": "minecraft:beef",
+          "count": 2
+        },
+        "uses": 0,
+        "maxUses": 3
+      }
+    ]
+  }
+}
