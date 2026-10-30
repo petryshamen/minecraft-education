@@ -20,7 +20,7 @@ import java.util.*;
 /** The only layer importing Easy NPC APIs. No preset import, custom renderer, ticking adapter or stock workaround. */
 public final class EasyNpc652Adapter {
     public static String spawn(ServerPlayer player,NpcTemplate template,String name){
-        NpcDependency.require();var level=player.serverLevel();var key=ResourceLocation.parse("easy_npc:humanoid");
+        NpcDependency.require();var level=player.level();var key=ResourceLocation.parse("easy_npc:humanoid");
         if(!BuiltInRegistries.ENTITY_TYPE.containsKey(key))throw new IllegalArgumentException("Easy NPC humanoid entity type is unavailable");
         var entity=BuiltInRegistries.ENTITY_TYPE.getValue(key).create(level,EntitySpawnReason.COMMAND);
         if(!(entity instanceof Mob mob)||!(entity instanceof EasyNPCBase<?> npc))throw new IllegalArgumentException("Easy NPC humanoid API is incompatible");
@@ -73,7 +73,7 @@ public final class EasyNpc652Adapter {
     private static Item item(String id){var key=ResourceLocation.parse(id);if(!BuiltInRegistries.ITEM.containsKey(key))throw new IllegalArgumentException("invalid item ID: "+id);return BuiltInRegistries.ITEM.getValue(key);}
     private static ItemCost cost(NpcTemplate.Item stack){return new ItemCost(item(stack.id()),stack.count());}
     private static BlockPos findSafe(ServerPlayer player,Mob mob){
-        var level=player.serverLevel();var origin=player.blockPosition();
+        var level=player.level();var origin=player.blockPosition();
         for(int radius=2;radius<=4;radius++)for(int dx=-radius;dx<=radius;dx++)for(int dz=-radius;dz<=radius;dz++){
             if(Math.max(Math.abs(dx),Math.abs(dz))!=radius)continue;
             for(int dy:new int[]{0,1,-1,2,-2}){

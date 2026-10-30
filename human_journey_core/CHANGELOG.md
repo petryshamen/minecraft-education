@@ -1,3 +1,9 @@
+# 0.5.0
+
+- Added reloadable NPC JSON templates and `/hj npc spawn <template> [name]` with admin permission, dynamic suggestions, clear validation/status feedback and last-valid-set retention.
+- Added an isolated Easy NPC 6.5.2 fresh-entity adapter for remote skins, dialogue/buttons, scoreboard conditions/actions, commands, Advanced trades and per-instance identities; separate Hunter/Story Test example datapack included.
+- Preserved all existing temperature/water integration. Documented native stored/runtime trade-stock limitation; no persistence workaround or gameplay test claimed.
+
 # 0.4.1
 
 - Added reloadable, bounded connected-ocean detection for shoreline water; preserved explicit/TAN classifications, salt persistence, treatment, purifier capacity, Rain Collector and temperature behavior.

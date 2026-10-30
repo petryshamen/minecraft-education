@@ -1,10 +1,12 @@
-# Human Journey Core 0.4.1
+# Human Journey Core 0.5.0
 
-**Verified release:** [GitHub Actions run 40819079966](https://github.com/petryshamen/minecraft-education/actions/runs/40819079966), source `32885fe806108d87c18f4050ab1517d57f586354`. 51 tests passed, all ten water mixins loaded, and the no-world Forge state checks passed (36 existing canteen conversions plus six-tier salt/purifier checks). Final JAR SHA-256: `bfeacb3ddc1042441b34598e3c48537d1911b1b38a10c19d90b65dcd82c3158d`. All 15 temperature classes and 47 total unrelated engine classes are byte-identical to 0.4.0; root resource-pack format is 64. No gameplay testing or automatic installation was performed.
+NPC Template MVP: `/hj npc spawn hunter` creates a configured Easy NPC 6.5.2 entity from reloadable datapack JSON. Teacher/admin permission level 2 required. Optional custom name and dynamic template Tab completion are supported. **[NPC setup, JSON reference, stock limitation and manual checklist](NPC.md)**; formal schema: [docs/npc-template.schema.json](docs/npc-template.schema.json). Install `human_journey_core-0.5.0.jar` and the separate NPC example pack manually. Keep all existing water/temperature packs. No automatic deployment or Minecraft gameplay testing.
+
+
 
 ## Compatibility patch 0.4.1
 
-- Added `classification.ocean_connection_radius` (integer 0–16, default/example 16; 0 disables the connected-water extension). Existing water packs remain valid; all earlier balance values and the Caspian polygon remain unchanged.
+- Added `classification.ocean_connection_radius` (integer 0â€“16, default/example 16; 0 disables the connected-water extension). Existing water packs remain valid; all earlier balance values and the Caspian polygon remain unchanged.
 - The fallback classifies otherwise NORMAL water as SALT when face-connected WATER fluid reaches a direct configured ocean/salt biome tag within that many water steps. It searches in all six directions, including flowing/waterlogged water; diagonal contact and proximity across dry land are insufficient. Explicit geographic NORMAL/DIRTY/PURIFIED/SALT overrides, TAN DIRTY/PURIFIED and direct salt-tag classifications win before any search. Geographic salt polygons do not become new ocean seeds or expand into neighbors.
 - Search only examines loaded chunks and never generates/loads chunks. Radius is path length, not straight-line proximity. At radius 16 a fully wet search checks at most 6,017 positions. A per-level LRU holds at most 256 origin results for fewer than 20 ticks; water/biome/chunk changes may take up to one second to refresh. Any water-policy reload outcome invalidates this cache immediately; server shutdown clears it. There is no persistent quality cache on items, so collected salt still uses its saved marker.
 - Purifier intakes, container filling, hand drinking and `/hjcore water` share this classifier. No purifier/treatment/temperature algorithms were changed.
@@ -20,7 +22,7 @@ Adds persistent Salt Water, geographic classification, instant filter-capacity W
 
 ## Install manually
 
-Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.4.1.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
+Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.5.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
 
 ## Debug command
 
@@ -77,16 +79,16 @@ Change JSON and run **`/reload`**. Use `/hjcore status` afterward to confirm the
 | Field | Meaning / accepted range |
 | --- | --- |
 | `schema_version` | 1; may be omitted |
-| `thirst.warm_exhaustion_per_second` | Extra TAN exhaustion/sec at WARM in Overworld and Nether; 0â€“20 |
-| `thirst.hot_exhaustion_per_second` | Extra exhaustion/sec at HOT; 0â€“20 |
-| `thirst.nether_hot_exhaustion_per_second` | Independent HOT rate for Nether; 0â€“20; inherits supplied HOT if omitted |
+| `thirst.warm_exhaustion_per_second` | Extra TAN exhaustion/sec at WARM in Overworld and Nether; 0Ã¢â‚¬â€œ20 |
+| `thirst.hot_exhaustion_per_second` | Extra exhaustion/sec at HOT; 0Ã¢â‚¬â€œ20 |
+| `thirst.nether_hot_exhaustion_per_second` | Independent HOT rate for Nether; 0Ã¢â‚¬â€œ20; inherits supplied HOT if omitted |
 | `overworld.hyperthermia_damage` | Enable Overworld heat health damage; boolean |
 | `nether.hyperthermia_damage` | Enable Nether heat health damage; boolean |
-| `overworld/nether.heat_damage_interval_ticks` | Independent interval for each dimension; integer 20â€“72000 |
-| `overworld/nether.heat_damage_amount` | Damage health points per scheduled hit; 0â€“20 (2 points = 1 heart) |
+| `overworld/nether.heat_damage_interval_ticks` | Independent interval for each dimension; integer 20Ã¢â‚¬â€œ72000 |
+| `overworld/nether.heat_damage_amount` | Damage health points per scheduled hit; 0Ã¢â‚¬â€œ20 (2 points = 1 heart) |
 | `nether.remove_climate_clemency` | Remove TAN Climate Clemency in Nether from active Survival/Adventure players; boolean |
-| `water.heat_relief_ticks_per_tick` | Net heat exposure relief in Overworld water; integer 0â€“140 |
-| `water.cooling_interval_ticks` | Body-temperature step interval; integer 1â€“200 |
+| `water.heat_relief_ticks_per_tick` | Net heat exposure relief in Overworld water; integer 0Ã¢â‚¬â€œ140 |
+| `water.cooling_interval_ticks` | Body-temperature step interval; integer 1Ã¢â‚¬â€œ200 |
 
 Rates assume 20 game ticks/sec. Extra exhaustion is not a direct decrement of thirst icons: TAN still processes hydration/exhaustion normally. Zero rates disable only Core's extra costs. Heat damage retains normal Minecraft protection and invulnerability; the minimum 20-tick interval avoids promising damage through hurt immunity. Core uses TAN's full-hyperthermia condition, suppresses native TAN hyperthermia pulses in Overworld/Nether and schedules only one matching TAN damage-type pulse per configured interval. Default Nether timing remains 40 ticks, 1 health point. Intervals follow `player.tickCount`, with no persistent damage counters.
 
@@ -94,7 +96,7 @@ Climate Clemency removal defaults to **false**. Enabling it removes the actual e
 
 ### Water behavior preserved
 
-The existing pre-player-tick exposure reduction and post-server-tick net relief/temperature stepping are preserved. Default relief is **20**, step interval **10**. HOT â†’ WARM â†’ NEUTRAL remains the cooling path. Core never warms COLD/ICY, never pushes below NEUTRAL, and does not change cold targets, wetness, dehydration, drinks, fire/lava damage or other dimensions. Ordinary TAN cooling into cold remains possible. Overworld water still protects from direct heat damage while Core water relief is enabled. Relief **0** disables every additional Core water adjustment/protection; TAN's own water behavior continues.
+The existing pre-player-tick exposure reduction and post-server-tick net relief/temperature stepping are preserved. Default relief is **20**, step interval **10**. HOT Ã¢â€ â€™ WARM Ã¢â€ â€™ NEUTRAL remains the cooling path. Core never warms COLD/ICY, never pushes below NEUTRAL, and does not change cold targets, wetness, dehydration, drinks, fire/lava damage or other dimensions. Ordinary TAN cooling into cold remains possible. Overworld water still protects from direct heat damage while Core water relief is enabled. Relief **0** disables every additional Core water adjustment/protection; TAN's own water behavior continues.
 
 ### Precedence, fallback and errors
 
@@ -107,14 +109,14 @@ The existing pre-player-tick exposure reduction and post-server-tick net relief/
 
 ## Build and validation
 
-Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.4.1.jar` (the `-sources.jar` is not an installable mod).
+Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.5.0.jar` (the `-sources.jar` is not an installable mod).
 
 Repository workflow: `.github/workflows/human-journey-core.yml` runs from the `human_journey_core` folder on Core pushes or manual dispatch. `check/build` verifies root resource-pack metadata in the actual JAR. Unit tests cover strict policy validation, sparse fallback, independent Nether rate, damage intervals, disabled damage, reload replacement/removal, invalid reload retention and the existing water/cold policy invariants.
 
 ## Manual acceptance checks
 
 1. Start a dedicated TEST server and matching client. Check `/hjcore status` on yourself and another player (console included), permission rejection for non-admin students and correct live TAN values.
-2. With no policy JSON, compare water cooling to 0.1.1, including any custom TOML values. Test entering/exiting water, HOTâ†’WARMâ†’NEUTRAL, COLD/ICY, death/respawn and dimension changes.
+2. With no policy JSON, compare water cooling to 0.1.1, including any custom TOML values. Test entering/exiting water, HOTÃ¢â€ â€™WARMÃ¢â€ â€™NEUTRAL, COLD/ICY, death/respawn and dimension changes.
 3. Enable the example policy, `/reload`, confirm source/revision. Change only thirst rates (including independent Nether HOT), reload and check effective values and timed exhaustion.
 4. Change water numbers in JSON, reload and verify; restore **20/10** for the established default behavior. Relief=0 should leave only TAN's native water behavior.
 5. Test fully hyperthermic Overworld/Nether players at 20/40/100-tick intervals with normal thirst to isolate heat damage. Confirm no double hits; disabled dimension damage must protect only against heat. Recheck dehydration and fire/cold behavior.
