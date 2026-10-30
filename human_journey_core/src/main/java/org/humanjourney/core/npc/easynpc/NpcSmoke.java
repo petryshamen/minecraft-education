@@ -46,7 +46,7 @@ public final class NpcSmoke {
                 LogUtils.getLogger().info("[HJ Core] NPC_TEMPLATE_SMOKE_OK: exact Easy NPC 6.5.2 loaded; two templates, item IDs, dialogues/actions/skin/trades codecs and instance isolation; no entity/world created");
             }catch(Exception e){throw new IllegalStateException("NPC structural smoke failed",e);}
         });}
-    })));}
+    }));}
     private static void check(boolean value,String message){if(!value)throw new IllegalStateException(message);}
     private NpcSmoke(){}
 }
