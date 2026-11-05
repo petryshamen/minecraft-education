@@ -44,3 +44,10 @@ mandatory=false
 versionRange="[0,)"
 ordering="AFTER"
 side="BOTH"
+
+[[dependencies.human_journey_core]]
+modId="sereneseasons"
+mandatory=false
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"
