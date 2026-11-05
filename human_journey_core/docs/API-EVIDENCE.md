@@ -2,6 +2,11 @@
 
 ## Core 0.6.1 fishing integration
 
+**Build verified:** [GitHub Actions run 42119156083](https://github.com/petryshamen/minecraft-education/actions/runs/42119156083), source `5405a9d7b5c73c852977192b9483715ccbbafb1f`. All 93 unit/structural tests passed and all six no-world Forge data/Mixin checks passed. 107 pre-existing classes are byte-identical to Core 0.6.0, including all NPC/context/adapter, all 15 temperature classes and all water/audio integration. Only main bootstrap and Core status changed among existing classes. Final JAR metadata uses Core 0.6.1, Java 21 and root resource-pack format 64. Runtime JAR SHA-256: `c73b9b8e7944cbfe3d32768a8a1a5abf81c8dc358976f4f94965e8bc3c73db62`. No Minecraft world/bobber was created, no gameplay or real timing test was performed, and nothing was installed automatically.
+
+Downloaded build ZIP matched GitHub artifact SHA-256 `701ea747bcde59d4bbcea9e228968f2442ede9035d5aabcdf59a0de50eed3e02`. Main Java sources match the successful sources JAR. Final runtime JAR contains both separate Mixin configurations and no bundled third-party classes, Minecraft loot/enchantment resources or embedded fishing balance policy. The example pack contains only pack metadata and the policy JSON.
+
+
 - Inspected the actual installed Forge 1.21.8-58.1.18 client archive read-only, SHA-256 `b24b4bf17178f1b36b272d550cb1fb65e887f760fa74e72aa59d45eda9261db7`. Parsed class bytes without executing the installed JAR: exact `FishingHook.catchingFish(BlockPos)`, final `lureSpeed` tick field, three Mth.nextInt calls, last 100–600 draw and immediately subsequent native subtraction; also `FishingRodItem.use` native enchantment conversion and vanilla Lure JSON. Public build classpath is checked against the same contracts in tests.
 - Inspected the public Forge 58.1.18 sources FishingHook patch: no bite-time event, only rod action/impact/retrieval hooks. The new separate required Mixin redirects one initial wait draw; no native loot/treasure/durability code or resource is edited. No installed mod is executed, used as a build classpath, uploaded or modified.
 - [Fishing reference](../FISHING.md) documents inclusive tick ranges, native-effect scaling, lower-bound protection, vanilla weather/approach effects, reload boundaries and manual acceptance.

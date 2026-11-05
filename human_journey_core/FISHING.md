@@ -1,5 +1,7 @@
 # Fishing timing — Human Journey Core 0.6.1
 
+**Build verified:** [GitHub Actions run 42119156083](https://github.com/petryshamen/minecraft-education/actions/runs/42119156083), source `5405a9d7b5c73c852977192b9483715ccbbafb1f`. All 93 unit/structural tests passed and all six no-world Forge data/Mixin checks passed. 107 pre-existing classes are byte-identical to Core 0.6.0, including all NPC/context/adapter, all 15 temperature classes and all water/audio integration. Only main bootstrap and Core status changed among existing classes. Final JAR metadata uses Core 0.6.1, Java 21 and root resource-pack format 64. Runtime JAR SHA-256: `c73b9b8e7944cbfe3d32768a8a1a5abf81c8dc358976f4f94965e8bc3c73db62`. No Minecraft world/bobber was created, no gameplay or real timing test was performed, and nothing was installed automatically.
+
 Minecraft Java 1.21.8 / Forge 58.1.18. This optional, server-controlled policy changes only initialization of the normal pre-approach fishing wait. It is global while enabled; it does not infer or restrict an era. Core supplies the mechanism; the separate datapack supplies the Human Journey balance. Without the policy file, the hook delegates to the original vanilla random draw and native Lure subtraction unchanged.
 
 ## Manual installation
