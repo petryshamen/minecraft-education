@@ -17,7 +17,7 @@ minecraft {
         register('data') {
             workingDir = layout.buildDirectory.dir('datagen-smoke')
             systemProperty 'humanjourney.waterSmoke', 'true'
-            args '--mixin', 'human_journey_core.water.mixins.json', '--mod', 'human_journey_core', '--all', '--output', layout.buildDirectory.dir('datagen-smoke-output').get().asFile.absolutePath
+            args '--mixin', 'human_journey_core.water.mixins.json', '--mixin', 'human_journey_core.fishing.mixins.json', '--mod', 'human_journey_core', '--all', '--output', layout.buildDirectory.dir('datagen-smoke-output').get().asFile.absolutePath
         }
     }
 }
@@ -74,7 +74,7 @@ tasks.withType(Jar).configureEach {
     reproducibleFileOrder = true
     manifest.attributes('Implementation-Version': project.version)
 }
-tasks.named('jar') { manifest.attributes('MixinConfigs': 'human_journey_core.water.mixins.json') }
+tasks.named('jar') { manifest.attributes('MixinConfigs': 'human_journey_core.water.mixins.json,human_journey_core.fishing.mixins.json') }
 tasks.named('processResources') {
     inputs.property 'mod_version', mod_version
     filesMatching('META-INF/mods.toml') { expand mod_version: mod_version }

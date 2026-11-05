@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8.7",
+  "package": "org.humanjourney.core.fishing",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "FishingHookMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

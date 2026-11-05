@@ -60,6 +60,7 @@ public final class CoreCommands {
         text += "\nwater policy="+water.source()+" | last successful revision="+water.revision()+" | reload="+water.lastReload()
             +"\nwater: normal="+w.normal().chance()+" dirty="+w.dirty().chance()+" | illness="+(w.dirty().illness()?w.dirty().effect()+" "+w.dirty().illnessTicks()+"t amp="+w.dirty().amplifier():"off")
             +" | regions="+w.extensions().classification().regions().size()+" purifier="+w.extensions().purifier().enabled()+" | filter="+w.filtering()+" furnace="+w.furnace()+" campfire="+w.campfire();
+        text += "\n"+org.humanjourney.core.fishing.FishingBalance.describe();
         String message=text;
         source.sendSuccess(() -> Component.literal(message), false);
         return 1;
