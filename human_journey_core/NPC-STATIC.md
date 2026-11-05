@@ -1,3 +1,5 @@
+> Historical Core 0.5 static-template reference. For Core 0.6 installation, economic archetypes and context use [NPC.md](NPC.md). Static/template semantics below remain supported.
+
 # NPC Template MVP — Core 0.5.0
 
 **Build verified:** [GitHub Actions run 41145562029](https://github.com/petryshamen/minecraft-education/actions/runs/41145562029), source `2f5677aaf4272967e55800644fbcc81e7ea0e42b`. 63 unit/structural tests passed; the no-world Forge data checks loaded exact Easy NPC 6.5.2 and verified two templates, native data codecs and instance isolation. All 64 pre-existing engine classes, including all 15 temperature classes and the complete water/shoreline/sound integration, are byte-identical to Core 0.4.1. Runtime JAR SHA-256: `ddf6f064a90d45dc03e83c8034e111bad3650de156347bd551cb29f101ba0a33`. No NPC entity/world was created, no appearance/UI/gameplay/persistence test was performed and nothing was installed automatically.

@@ -1,5 +1,7 @@
 # Human Journey Core 0.6.0 NPC context
 
+**Build verified:** [GitHub Actions run 41960596385](https://github.com/petryshamen/minecraft-education/actions/runs/41960596385), source `c65ebfb3cad48c4116bd6e5e2fc8bbb2d5be0763`. All 81 unit/structural tests passed and all five no-world Forge data markers passed. The final runtime JAR has root resource-pack format 64, Core version 0.6.0 and Java 21 classes; its SHA-256 is `94b09d161ce5f8cb66d7bc490c66f0e8ba91114b11b7d9c7a9d305d962c9327a`. 83 pre-existing classes are byte-identical to Core 0.5.0, including all 15 temperature classes, all water/audio integration and the complete native Easy NPC adapter/parser/identity/static loader. Only NpcCommands and NpcBootstrap changed among existing classes. No NPC/world was created or gameplay/persistence/appearance/UI testing performed. Nothing was installed or deployed.
+
 Core resolves mechanics/context; datapacks own roles, availability, labels, skins, dialogue and trade balance. Context is captured **once at spawn**. Existing NPCs are never refreshed on era/season changes or `/reload`.
 
 ## Manual installation and first use
