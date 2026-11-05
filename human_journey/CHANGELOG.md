@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.3.16
+
+- Integrated Core 0.6.1 read-only era context and Era 0 Hunter/Fisher/Forager archetypes with fixed placeholder skins, shared scarce stock and no timed resets; geography/season overrides stay empty.
+- New Wandering Traders select six distinct offers from 27 candidates: 3 common + 2 rare + a common bonus (95%) or exceptional gold/specific potion bonus (5%). Existing processed traders are unchanged; technology gates remain authoritative.
+- Added Core fishing timing policy (20–60 s, Lure 5 s/level) and vanilla 1.21.8 root fishing weights Fish 255 / Junk 30 / Treasure 5, preserving predicates, quality and child tables. Progression/rollback, roles, water and temperature are unchanged; no Core changes or gameplay testing.
+
 ## 0.3.15
 
 - WE CAN STAY remains a late Era 0 milestone and no longer starts Era 1 or unlocks Agriculture; unfinished Era 1 root is displayless and impossible.

@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "role_label": "Forager",
+  "base": {
+    "skin_url": "https://raw.githubusercontent.com/MarkusBordihn/BOs-Easy-NPC/f929f51540778bb8bcbb43989e6ff4a4c816ce85/core/Common/src/main/resources/assets/easy_npc/textures/entity/humanoid/humanoid_template.png",
+    "behavior": {
+      "stationary": true,
+      "invulnerable": true
+    },
+    "dialogue": {
+      "main": "main",
+      "pages": [
+        {
+          "id": "main",
+          "text": "I gather useful plants and food from the land. Bring me meat, fish, tools, or materials and we can trade.",
+          "buttons": [
+            {
+              "id": "trade",
+              "text": "Show your goods",
+              "actions": [
+                {
+                  "type": "OPEN_TRADING_SCREEN"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "trading": {
+      "reset_minutes": 0,
+      "offers": [
+        {
+          "input": {
+            "item": "minecraft:cooked_cod",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:carrot",
+            "count": 3
+          },
+          "uses": 0,
+          "maxUses": 3
+        },
+        {
+          "input": {
+            "item": "minecraft:cooked_salmon",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:potato",
+            "count": 4
+          },
+          "uses": 0,
+          "maxUses": 3
+        },
+        {
+          "input": {
+            "item": "minecraft:cooked_chicken",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:beetroot",
+            "count": 6
+          },
+          "uses": 0,
+          "maxUses": 3
+        },
+        {
+          "input": {
+            "item": "minecraft:cooked_beef",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:wheat",
+            "count": 4
+          },
+          "uses": 0,
+          "maxUses": 3
+        },
+        {
+          "input": {
+            "item": "minecraft:cooked_porkchop",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:apple",
+            "count": 3
+          },
+          "uses": 0,
+          "maxUses": 2
+        },
+        {
+          "input": {
+            "item": "minecraft:cooked_mutton",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:pumpkin",
+            "count": 5
+          },
+          "uses": 0,
+          "maxUses": 2
+        },
+        {
+          "input": {
+            "item": "minecraft:cooked_rabbit",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:glow_berries",
+            "count": 10
+          },
+          "uses": 0,
+          "maxUses": 1
+        },
+        {
+          "input": {
+            "item": "minecraft:cooked_cod",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:sweet_berries",
+            "count": 10
+          },
+          "uses": 0,
+          "maxUses": 3
+        },
+        {
+          "input": {
+            "item": "minecraft:cooked_chicken",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:melon_slice",
+            "count": 6
+          },
+          "uses": 0,
+          "maxUses": 2
+        },
+        {
+          "input": {
+            "item": "minecraft:leather",
+            "count": 1
+          },
+          "output": {
+            "item": "minecraft:honey_bottle",
+            "count": 3
+          },
+          "uses": 0,
+          "maxUses": 2
+        },
+        {
+          "input": {
+            "item": "minecraft:flint",
+            "count": 5
+          },
+          "output": {
+            "item": "minecraft:oak_leaves",
+            "count": 16
+          },
+          "uses": 0,
+          "maxUses": 3
+        },
+        {
+          "input": {
+            "item": "minecraft:bone",
+            "count": 2
+          },
+          "output": {
+            "item": "minecraft:brown_mushroom",
+            "count": 4
+          },
+          "uses": 0,
+          "maxUses": 2
+        },
+        {
+          "input": {
+            "item": "minecraft:bone",
+            "count": 2
+          },
+          "output": {
+            "item": "minecraft:red_mushroom",
+            "count": 4
+          },
+          "uses": 0,
+          "maxUses": 2
+        }
+      ]
+    }
+  },
+  "eras": {
+    "era_0": {
+      "content": {},
+      "macro_regions": {},
+      "local_areas": {},
+      "seasons": {}
+    }
+  }
+}

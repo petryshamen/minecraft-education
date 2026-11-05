@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.3.15 — Era 0 progression correction"
+    "description": "Human Journey v0.3.16 — Era 0 economy"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.3.15"
+    "version": "0.3.16"
   }
 }

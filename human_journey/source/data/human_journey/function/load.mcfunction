@@ -1,6 +1,8 @@
 scoreboard objectives add hj_civ dummy
 scoreboard objectives add hj_jengo dummy
 scoreboard objectives add hj_trader dummy
+# Scratch scores for Traveller sampling only; never progression state.
+scoreboard objectives add hj_wt dummy
 gamerule doLimitedCrafting true
 execute unless score #first_flame hj_civ matches 0.. run scoreboard players set #first_flame hj_civ 0
 execute unless score #ready_to_eat hj_civ matches 0.. run scoreboard players set #ready_to_eat hj_civ 0
@@ -35,5 +37,5 @@ schedule function human_journey:tech/enforce 1s replace
 gamerule doTraderSpawning true
 function human_journey:trader/wandering/pools/era0
 function human_journey:trader/wandering/tick
-tellraw @a[tag=hj_participant] {"text":"[Human Journey] v0.3.15 loaded.","color":"dark_green"}
+tellraw @a[tag=hj_participant] {"text":"[Human Journey] v0.3.16 loaded.","color":"dark_green"}
 function human_journey:sync

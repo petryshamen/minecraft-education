@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "eras": [
+    {
+      "id": "era_0",
+      "conditions": [
+        {
+          "objective": "hj_civ",
+          "holder": "#era1",
+          "operator": "EQUALS",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "era_1",
+      "conditions": [
+        {
+          "objective": "hj_civ",
+          "holder": "#era1",
+          "operator": "EQUALS",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "bite_time": {
+    "minimum_seconds": 20,
+    "maximum_seconds": 60,
+    "lure_reduction_seconds_per_level": 5
+  }
+}
