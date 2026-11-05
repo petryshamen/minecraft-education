@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.3.15
+
+- WE CAN STAY remains a late Era 0 milestone and no longer starts Era 1 or unlocks Agriculture; unfinished Era 1 root is displayless and impossible.
+- Manual migration: `/function human_journey:admin/return_to_era0` resets only #era1/#tech_agriculture, revokes the Era 1 root and reapplies existing Student locks; all Era 0/story/role/NPC state is preserved. Offline root completion clears on next join. No Core changes or gameplay testing.
+
 ## 0.3.14
 
 - Adopted installed Core 0.4.0 water schema: NORMAL 75% Thirst / 30 s; retained DIRTY 100% Thirst / 30 s and Poison I / 8 s. SALT restores no thirst/hydration, adds 12 exhaustion and Nausea I / 8 s, with no Poison or manual treatment route.

@@ -17,6 +17,8 @@ execute if score #land_beyond hj_civ matches 1 run advancement grant @a[tag=hj_p
 execute if score #new_continent hj_civ matches 1 run advancement grant @a[tag=hj_participant] only human_journey:era0/journey/new_continent
 execute if score #we_can_stay hj_civ matches 1 run advancement grant @a[tag=hj_participant] only human_journey:era0/we_can_stay
 execute if score #era1 hj_civ matches 1 run advancement grant @a[tag=hj_participant] only human_journey:era1/root
+# Clear stale online/offline-player completion upon joining Era 0; never reset shared state here.
+execute unless score #era1 hj_civ matches 1 run advancement revoke @a only human_journey:era1/root
 
 # JENGO QUEST STAGE
 # Easy NPC reads this per-player scoreboard in real time.
