@@ -1,0 +1,159 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1
+    },
+    "macro_regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+            "not": {
+              "enum": [
+                "none",
+                "unknown"
+              ]
+            }
+          },
+          "dimension": {
+            "type": "string",
+            "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$",
+            "maxLength": 256,
+            "default": "minecraft:overworld"
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000,
+            "default": 0
+          },
+          "polygon": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": -30000000,
+                "maximum": 30000000
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "minItems": 3,
+            "maxItems": 256
+          }
+        },
+        "required": [
+          "id",
+          "polygon"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 64
+    },
+    "local_areas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+            "not": {
+              "enum": [
+                "none",
+                "unknown"
+              ]
+            }
+          },
+          "dimension": {
+            "type": "string",
+            "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$",
+            "maxLength": 256,
+            "default": "minecraft:overworld"
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000,
+            "default": 0
+          },
+          "polygon": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": -30000000,
+                "maximum": 30000000
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "minItems": 3,
+            "maxItems": 256
+          },
+          "macro_region": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+                "not": {
+                  "enum": [
+                    "none",
+                    "unknown"
+                  ]
+                }
+              },
+              {
+                "const": "none"
+              }
+            ],
+            "default": "none"
+          },
+          "display_label": {
+            "type": "string",
+            "maxLength": 48,
+            "default": ""
+          },
+          "era_labels": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string",
+              "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+              "not": {
+                "enum": [
+                  "none",
+                  "unknown"
+                ]
+              }
+            },
+            "additionalProperties": {
+              "type": "string",
+              "maxLength": 48
+            }
+          }
+        },
+        "required": [
+          "id",
+          "polygon"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 64
+    }
+  },
+  "required": [],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:human-journey:npc-geography:1",
+  "title": "Optional NPC geography (Core 0.6.0)",
+  "description": "Authoring schema. Runtime registry, cross-reference, geometry and fully composed template validation remain authoritative; see NPC.md."
+}

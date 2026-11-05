@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1
+    },
+    "eras": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+            "not": {
+              "enum": [
+                "none",
+                "unknown"
+              ]
+            }
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000,
+            "default": 0
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "objective": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_.-]{1,16}$"
+                },
+                "holder": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40,
+                  "pattern": "^\\S+$"
+                },
+                "operator": {
+                  "enum": [
+                    "EQUALS",
+                    "NOT_EQUALS",
+                    "GREATER_THAN",
+                    "GREATER_THAN_OR_EQUALS",
+                    "LESS_THAN",
+                    "LESS_THAN_OR_EQUALS"
+                  ]
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": -2147483648,
+                  "maximum": 2147483647
+                }
+              },
+              "required": [
+                "objective",
+                "holder",
+                "operator",
+                "value"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 16
+          }
+        },
+        "required": [
+          "id",
+          "conditions"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 32
+    }
+  },
+  "required": [
+    "eras"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:human-journey:npc-context:1",
+  "title": "NPC era resolver (Core 0.6.0)",
+  "description": "Authoring schema. Runtime registry, cross-reference, geometry and fully composed template validation remain authoritative; see NPC.md."
+}

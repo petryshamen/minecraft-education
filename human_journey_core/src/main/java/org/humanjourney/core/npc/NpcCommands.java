@@ -10,7 +10,7 @@ public final class NpcCommands {
     public static void register(RegisterCommandsEvent event){
         event.getDispatcher().register(Commands.literal("hj").then(Commands.literal("npc").requires(s->s.hasPermission(2))
             .then(Commands.literal("context").executes(c->context(c.getSource())))
-            .then(Commands.literal("status").executes(c->{var s=NpcTemplates.state();String dependency=NpcDependency.problem();c.getSource().sendSuccess(()->Component.literal("NPC templates="+s.templates().size()+" revision="+s.revision()+" | Easy NPC="+(dependency.isEmpty()?"6.5.2 ready":dependency)+" | last success="+s.lastSuccess()+(s.error().isEmpty()?"":" | REJECTED: "+s.error())),false);return 1;}))
+            .then(Commands.literal("status").executes(c->{var s=NpcTemplates.state();var context=NpcContextStore.state();String dependency=NpcDependency.problem();c.getSource().sendSuccess(()->Component.literal("NPC templates="+s.templates().size()+" revision="+s.revision()+" | Easy NPC="+(dependency.isEmpty()?"6.5.2 ready":dependency)+" | last success="+s.lastSuccess()+(s.error().isEmpty()?"":" | REJECTED: "+s.error())+"\nArchetypes="+context.data().archetypes().size()+" context revision="+context.revision()+" | last success="+context.lastSuccess()+(context.error().isEmpty()?"":" | REJECTED: "+context.error())),false);return 1;}))
             .then(Commands.literal("spawn").then(Commands.argument("template",ResourceLocationArgument.id())
                 .suggests((c,b)->SharedSuggestionProvider.suggest(NpcContextRuntime.suggestions(c.getSource()),b))
                 .executes(c->spawn(c.getSource(),ResourceLocationArgument.getId(c,"template").toString(),null))

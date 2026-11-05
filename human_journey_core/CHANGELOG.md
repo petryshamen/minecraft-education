@@ -1,3 +1,10 @@
+# 0.6.0
+
+- Added datapack era predicates, era-specific economic archetypes and current-era Tab completion; Hunter/Fisher require no manual context arguments.
+- Added optional dimension-aware polygon macro/local geography, era-sensitive local labels, generic role naming and isolated optional Serene Seasons 21.8.0.0 context.
+- Added deterministic base/era/macro/local/season composition, atomic last-valid reload, `/hj npc context`, and context reload status. Context is a spawn-time snapshot.
+- Added a separate no-geography integration datapack, JSON schemas and automated/no-world structural checks. Preserved 0.5 static/story format, Easy NPC adapter/identity/native persistence and all temperature/water/audio integration. Accepted native stock reload behavior remains unchanged.
+
 # 0.5.0
 
 - Added reloadable NPC JSON templates and `/hj npc spawn <template> [name]` with admin permission, dynamic suggestions, clear validation/status feedback and last-valid-set retention.

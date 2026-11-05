@@ -1,179 +1,105 @@
-# NPC Template MVP — Core 0.5.0
+# Human Journey Core 0.6.0 NPC context
 
-**Build verified:** [GitHub Actions run 41145562029](https://github.com/petryshamen/minecraft-education/actions/runs/41145562029), source `2f5677aaf4272967e55800644fbcc81e7ea0e42b`. 63 unit/structural tests passed; the no-world Forge data checks loaded exact Easy NPC 6.5.2 and verified two templates, native data codecs and instance isolation. All 64 pre-existing engine classes, including all 15 temperature classes and the complete water/shoreline/sound integration, are byte-identical to Core 0.4.1. Runtime JAR SHA-256: `ddf6f064a90d45dc03e83c8034e111bad3650de156347bd551cb29f101ba0a33`. No NPC entity/world was created, no appearance/UI/gameplay/persistence test was performed and nothing was installed automatically.
+Core resolves mechanics/context; datapacks own roles, availability, labels, skins, dialogue and trade balance. Context is captured **once at spawn**. Existing NPCs are never refreshed on era/season changes or `/reload`.
 
-Minecraft Java 1.21.8 / Forge 58.1.18 / Easy NPC Core 6.5.2. Existing Core 0.4.1 temperature, water, salt, shoreline, sound and purifier classes are retained. No Minecraft gameplay testing or automatic installation is performed. Easy NPC handles entity rendering, remote textures, dialogues, conditions, actions, merchant UI and normal entity persistence. Core supplies a reusable content loader and isolated 6.5.2 adapter.
+## Manual installation and first use
 
-## Manual installation and first spawn
+Use Minecraft Java 1.21.8, Forge 58.1.18, TAN 21.8.0.2 and Easy NPC 6.5.2. Replace Core 0.5.0 with exactly one `human_journey_core-0.6.0.jar`, manually, in the test client/server. Optional Serene Seasons support is verified against **21.8.0.0**. Missing, unsupported or unavailable season API resolves to `none` with a diagnostic, not a Core crash.
 
-1. Stop and back up your TEST world/server. Replace the existing Core JAR with `human_journey_core-0.5.0.jar`, keeping exactly one Core version. Use matching Core/Easy NPC 6.5.2 and existing TAN/GlitchCore versions on server and clients. Easy NPC Config UI/Bundle need no changes; this adapter uses the Core dependency directly.
-2. Place `HumanJourney-NPC-Examples-0.5.0.zip` in the TEST world's datapacks directory, enable it, then `/reload`. It contains no water/temperature policy and does not replace the main Human Journey datapack. Keep all your existing balance packs/settings.
-3. As an operator with permission level 2 or higher, stand on open solid ground and run `/hj npc status`, then `/hj npc spawn hunter`. Tab completes both `hunter` and `human_journey:hunter`. `/hj npc spawn hunter Ada` overrides only the new NPC's given name. Console can inspect status, but spawning requires a player location.
-4. Right-click the NPC normally with an empty main hand, not the editor wand. Expected content is Kito — Hunter, one dialogue page and a Show your goods button leading to two Advanced merchant offers. Appearance/UI/trading are manual acceptance tests, not established by compilation.
+Enable `HumanJourney-NPC-Integration-0.6.0.zip` in a test world's datapacks and run `/reload`. Leave the real Human Journey 0.3.15 progression and existing temperature/water packs unchanged. Disable the old 0.5 NPC **example** pack to avoid confusing two sources for Hunter. This new integration pack writes no progression scores and requires no geography database. It includes Era 0 Hunter/Fisher and the unchanged static Story Test. It deliberately has no Era 1 economic roles.
 
-Teachers require operator permission level 2; Teacher datapack tags alone do not grant spawn permission. Ordinary students can interact/trade but cannot use `/hj npc spawn`. Core never grants operator permissions or progression bypasses. Example trades are demonstration balance only.
+As an operator with permission level 2:
 
-The Easy NPC dependency is optional for Core's existing mechanics. `/hj npc status` and spawn errors identify an absent or unsupported version; only exact 6.5.2 is accepted by this adapter. Nothing opens/automates Easy NPC's editor or native import/export GUI.
+```text
+/hj npc context
+/hj npc spawn hunter
+/hj npc spawn fisher
+/hj npc spawn story_test
+/hj npc status
+```
 
-## Resources and reload
+In an initialized Era 0 world the first command should report `Era: era_0`, season or `none`, and geography/label `none`. The next commands should create `Hunter` and `Fisher`. Tab shows available current-era roles plus static templates. If the scoreboard is missing, Core reports an unknown era and **does not create or initialize scores**. In a fresh disposable world, initialize progression through the normal Human Journey setup before testing. Teachers specify only the role; economic archetypes reject custom-name arguments. Static/story templates retain `/hj npc spawn <template> [name]` and work independently of era resolution.
 
-Template resource: `data/<namespace>/npc/<path>.json`, yielding `<namespace>:<path>`. The example is `data/human_journey/npc/hunter.json` → `human_journey:hunter`. Resource paths define IDs; an optional JSON `id` must match exactly. Within the same resource ID, ordinary datapack priority selects the highest-priority file. The effective set cannot contain duplicate IDs. Give other systems their own resource paths; this loader owns the `npc/` template resource directory.
+## Resource paths and reload
 
-`/reload` parses and validates the entire effective set before publishing it. Invalid JSON, unknown fields, bad item IDs/counts, unsupported action/condition types, duplicate page/button/template IDs, unresolved dialogue references and invalid skin URL syntax reject the candidate set. The last valid set and success timestamp remain active; on initial failure the set remains empty. Logs and `/hj npc status` report the offending template/source and reason. Removing all templates validly loads an empty set. At most 256 templates, each at most 256 KiB characters, are accepted. No URL/image is downloaded by the loader; Easy NPC resolves remote images on clients, subject to its URL/cache rules.
+| Resource | Meaning |
+|---|---|
+| `data/human_journey/core/npc_context.json` | Authoritative era resolver |
+| `data/<namespace>/npc_archetype/<role>.json` | Economic archetype; ID is `<namespace>:<role>` |
+| `data/<namespace>/npc_geography/<file>.json` | Optional macro/local definitions |
+| `data/<namespace>/npc/<template>.json` | Unchanged 0.5 static/story format |
 
-Changes affect **future spawns only**. Existing spawned entities keep their configured native Easy NPC data. Reload does not find/rewrite/recreate them. No refresh command, pools, layers, settlement/era/region detection or NPC evolution is implemented. `role` is free Human Journey metadata, never an Easy NPC profession enum or a restriction to Era 0.
+Vanilla resource-pack priority selects each resource path. Context, all geography and archetypes validate as **one atomic set**, including all supported era/location/season compositions and registered trade items. Invalid data logs its resource/pack and preserves the last successful context set/revision. `/hj npc status` and `/hj npc context` show rejected reloads. A valid reload that removes resources removes them from the new set. Static templates retain their independent 0.5 atomic loader. An archetype takes precedence over a static template with the same ID, including wrong-era rejection; there is no Era 0 fallback.
 
-## Full Hunter example
+Limits: 32 eras, 16 AND conditions per era, 64 archetypes, 64 geography resources, 64 macro regions and 64 local areas, 256 vertices per polygon, 256 KiB characters per resource, and 16,384 validated composition variants in total. This is intentionally a bounded first release. Missing optional geography is valid. Missing context configuration is valid only when there are no archetypes/geography; static/story spawning still works.
+
+## Era resolver
+
+```json
+{"schema_version":1,"eras":[
+  {"id":"era_0","conditions":[{"objective":"hj_civ","holder":"#era1","operator":"EQUALS","value":0}]},
+  {"id":"era_1","conditions":[{"objective":"hj_civ","holder":"#era1","operator":"EQUALS","value":1}]}
+]}
+```
+
+`#era1` is a binary flag in the current example, **not a general era counter**. Future rules may use other objectives/holders and multiple conditions. Operators: `EQUALS`, `NOT_EQUALS`, `GREATER_THAN`, `GREATER_THAN_OR_EQUALS`, `LESS_THAN`, `LESS_THAN_OR_EQUALS`. Conditions in each rule are ANDed. Missing scores never match, even NOT_EQUALS. Highest `priority` wins (default 0); a top-priority tie or no match is an explicit error. Logical IDs are lowercase letters/digits/underscore followed by lowercase letters/digits/underscore/dot/hyphen, up to 64 characters; `none`/`unknown` are reserved.
+
+## Archetype and composition
 
 ```json
 {
-  "schema_version": 1,
-  "name": "Kito",
-  "role": "hunter",
-  "title": "Hunter",
-  "skin_url": "https://raw.githubusercontent.com/MarkusBordihn/BOs-Easy-NPC/f929f51540778bb8bcbb43989e6ff4a4c816ce85/core/Common/src/main/resources/assets/easy_npc/textures/entity/humanoid/humanoid_template.png",
-  "behavior": {
-    "stationary": true,
-    "invulnerable": true
+  "schema_version":1,
+  "role_label":"Fisher",
+  "base":{
+    "skin_url":"https://example.org/fisher.png",
+    "behavior":{"stationary":true,"invulnerable":true},
+    "dialogue":{"main":"main","pages":[{"id":"main","text":"I trade fish."}]},
+    "trading":{"reset_minutes":0,"offers":[]}
   },
-  "dialogue": {
-    "main": "main",
-    "pages": [
-      {
-        "id": "main",
-        "text": "I hunt animals and trade what I bring back, @initiator.",
-        "buttons": [
-          {
-            "id": "trade",
-            "text": "Show your goods",
-            "actions": [
-              {
-                "type": "OPEN_TRADING_SCREEN"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "trading": {
-    "reset_minutes": 0,
-    "offers": [
-      {
-        "input": {
-          "item": "minecraft:flint",
-          "count": 3
-        },
-        "output": {
-          "item": "minecraft:leather",
-          "count": 2
-        },
-        "uses": 0,
-        "maxUses": 4
-      },
-      {
-        "input": {
-          "item": "minecraft:stick",
-          "count": 8
-        },
-        "second_input": {
-          "item": "minecraft:flint",
-          "count": 1
-        },
-        "output": {
-          "item": "minecraft:beef",
-          "count": 2
-        },
-        "uses": 0,
-        "maxUses": 3
-      }
-    ]
+  "eras":{
+    "era_0":{
+      "content":{},
+      "macro_regions":{},
+      "local_areas":{},
+      "seasons":{"winter":{"dialogue":{"pages":[{"id":"main","text":"Winter fishing is hard."}]}}}
+    }
   }
 }
 ```
 
-The public, pinned upstream humanoid template texture is an editable example URL, not a project secret or a skin pool. Replace `skin_url` with your own direct remote PNG URL, then reload and spawn a new NPC. It is not a claim that this texture was visually tested in-game.
+The example URL above is illustrative; the provided integration pack uses a public pinned example skin. No secret or name/skin pool is needed. Add an era entry explicitly to enable a role there; absence means unavailable. Roles are never listed in Java. Full trade/page/action details use the unchanged [static format](NPC-STATIC.md) and [template schema](docs/npc-template.schema.json).
 
-## Field reference
+Exact order: root `role_label` → **base → current era.content → that era.macro_regions[current macro] → that era.local_areas[current local] → that era.seasons[current season]**. Missing layers do nothing. Scalars replace, objects recursively merge, arrays replace completely; input data is copied. No deletion/null operators or scripting exist. Override maps live inside each era and may reference only configured geography IDs or seasons `spring/summer/autumn/winter/none`.
 
-Formal authoring schema: [`docs/npc-template.schema.json`](docs/npc-template.schema.json). Runtime parsing and registered-item validation remain authoritative.
+Supported content fields are `role_label`, `skin_url`, `behavior`, `dialogue`, `trading`. Patches cannot override generated name/title/role/identity. Arrays must contain complete valid entries. The fully composed result is validated by the unchanged 0.5 parser, including dialogue references, URL constraints and item registry/stack limits. Role label is 1–48 characters; final name is at most 64. Normal name = optional local label + space + role label, otherwise role label alone. Macro names are never prefixed. Story templates bypass this naming/composition path entirely.
 
-| Field | MVP meaning |
-| --- | --- |
-| `schema_version` | 1; optional, other versions rejected |
-| `id` | Optional, must equal namespace/path-derived ID |
-| `name` | Required 1–64 visible characters; optional command name replaces it for that spawn |
-| `role` | Optional string up to 64 characters; saved Human Journey metadata only |
-| `title` | Optional string up to 64 characters, appended as `name — title` |
-| `skin_url` | Required absolute http(s) URL with host, no credentials/fragment, maximum 2048 characters; direct skin image expected |
-| `behavior.stationary` | Default true; native Mob NoAI flag, no custom pathfinding/schedule |
-| `behavior.invulnerable` | Default true; native invulnerable flag |
-| `dialogue.main` | Local main page ID, default `main`; must exist |
-| `dialogue.pages` | 1–16 pages; local IDs use 1–32 lowercase letters/digits/underscores |
-| Page `text` | Required, up to 8192 characters; native `@npc`, `@initiator`, `@score(objective)` passed through unchanged |
-| Page/button/action `conditions` | Up to 16 SCOREBOARD conditions; all native condition evaluation |
-| Page `buttons` | Up to 12; unique local IDs, visible text up to 128 characters, 1–16 actions |
-| `trading.offers` | Up to 64; `input`, optional `second_input`, `output` each contain registered non-air `item` ID and `count` (1–64, not above item's actual stack limit) |
-| Offer `uses` | Default 0; integer 0–maxUses. Production examples start at 0; explicit nonzero useful for diagnostics |
-| Offer `maxUses` | Required integer 1–1,000,000, per-offer Advanced stock limit |
-| `trading.reset_minutes` | Default 0 disables timed restock; integer 0–525600, delegated to native Easy NPC reopen-time policy |
-
-Item components/NBT/custom equipment, independent era/region/story layers, multiple model types, variable expansion and execution-limit condition configuration are outside this MVP. Ordinary plain items suffice for the Hunter proof. Native substitution syntax is not evaluated by Core, and text not displayed by Easy NPC until gameplay cannot be validated here.
-
-### SCOREBOARD condition
+## Optional geography
 
 ```json
-{"type":"SCOREBOARD","objective":"hj_npc_test","operator":"LESS_THAN","value":3}
+{
+  "schema_version":1,
+  "macro_regions":[{"id":"example_region","dimension":"minecraft:overworld","priority":0,"polygon":[[0,0],[100,0],[100,100],[0,100]]}],
+  "local_areas":[{"id":"example_river","dimension":"minecraft:overworld","macro_region":"example_region","display_label":"River","era_labels":{"era_0":"River","era_1":"River Valley"},"polygon":[[10,10],[50,10],[50,50],[10,50]]}]
+}
 ```
 
-Operators: EQUALS, NOT_EQUALS, GREATER_THAN, GREATER_THAN_OR_EQUALS, LESS_THAN, LESS_THAN_OR_EQUALS. Objective names use 1–16 letters/digits/underscore/dot/hyphen. Conditions can be attached to pages, buttons or actions; missing objectives follow Easy NPC's native behavior. Pages other than main are manual-only and reached by named-dialogue actions. The main page has explicit positive priority so instance labels do not depend on Easy NPC's special words such as `default`.
+These are illustrative coordinates, **not Earth-map claims**, and are not enabled by the integration pack. Polygons use X/Z positions including boundaries, are checked for finite valid non-self-intersecting geometry, and apply in their dimension (default Overworld). Coordinates outside all definitions resolve to `none`. IDs must be unique within each geographic level across resources. Parent macros must exist in the same dimension; local areas may omit the parent. A matched local area supplies its declared parent macro when no macro polygon matches. If another macro matches instead, resolution fails clearly. Highest priority wins independently per level; equal top-priority overlaps are rejected at the queried position (not an expensive whole-map overlap scan). Author non-ambiguous polygons or assign priorities. Optional `era_labels` selects an era-specific local label, falling back to `display_label`; blank means no visible geographic prefix.
 
-### Supported actions
+## Seasons, persistence and compatibility
 
-```json
-{"type":"OPEN_TRADING_SCREEN"}
-{"type":"OPEN_NAMED_DIALOG","dialogue":"done"}
-{"type":"SCOREBOARD","objective":"hj_npc_test","operation":"INCREASE","value":1}
-{"type":"COMMAND","command":"function human_journey:npc/example","execute_as_player":true,"permission_level":2}
-```
+Only the isolated Serene Seasons adapter references its API: `SeasonHelper.getSeasonState(Level)` → `ISeasonState.getSeason()` → SPRING/SUMMER/AUTUMN/WINTER. This reports the world's four-season cycle, not tropical wet/dry sub-seasons. No balance decision is inferred from the season. Missing provider/state, unsupported version or API error becomes `none`; a `none` content override can be authored explicitly. Season is queried at the command player's dimension/position context and captured at spawn.
 
-SCOREBOARD operations: SET, INCREASE, DECREASE. Values/condition thresholds are integers −1,000,000..1,000,000. COMMAND is one line up to 2048 characters, default executes as the initiating player, permission level 0–2; false uses native NPC execution context. Templates are trusted admin-authored content and their commands use those permissions. Conditions may also be attached to any action. Named-dialogue references are local to the same template/NPC and validated before publication. Native action execution remains Easy NPC's responsibility; Core does not execute dialogue actions itself.
+The 0.5 Easy NPC 6.5.2 adapter is unchanged: fresh entity UUID, fresh preset UUID, per-instance dialogue/button identifiers, native dialogues/actions/conditions/trades/remote skin and native entity persistence. Resource/template IDs stay stable; runtime identities are fresh per NPC. See [identity and native trade details](NPC-STATIC.md). `reset_minutes=0` disables timed resets only. The accepted Easy NPC behavior restoring exhausted stock across observed reloads remains; no custom persistence replacement is added. Spawning does not rewrite existing NPCs.
 
-## Identity and persistence
+## Manual checklist — user gameplay testing only
 
-- **Template-stable:** resource ID, Human Journey role, local page/button IDs and local dialogue references. Names are content, not identity.
-- **Instance-specific:** fresh entity UUID and a separate fresh preset UUID; no source NPC/preset identity is copied. Runtime dialogue/button labels are 32-character deterministic hashes of the full new entity UUID plus local kind/path, fitting Easy NPC's persistence limit. Native dialogue/button UUIDs derive from these scoped labels. Their labels/IDs survive native data save/load and differ across instances.
-- **Actions:** each native ActionDataEntry includes the instance entity UUID as its target. This prevents identical template actions across NPCs from sharing the same content-derived native action ID. For named dialogue it deliberately targets that same NPC. Identical actions within one NPC remain identical native actions. Native action IDs use the library's record hash and are not a new Core-managed durable execution-limit system; only SCOREBOARD conditions are exposed here. A future execution-limit extension must account for native hash/cross-JVM behavior rather than assume a stronger guarantee.
-- Each spawn creates fresh mutable dialogues, buttons, actions, merchant offers and config objects. Data is applied once. The entity is marked persistent, assigned its native home position and owner, and saved through Easy NPC/Minecraft as an ordinary entity. Core's persistent metadata stores its template ID and role. No custom renderer, recreation loop or every-tick adapter is installed.
+1. Install one Core 0.6 JAR and the separate integration pack in a disposable test world with normal Era 0 progression initialized. `/reload`; inspect `/hj npc status` for no rejected data.
+2. `/hj npc context`: confirm `era_0`, actual season or explanatory `none`, and all geography `none`. Tab after `/hj npc spawn ` should include hunter/fisher/story_test.
+3. Spawn Hunter/Fisher twice. Check visible generic names, skin, stationary/invulnerable behavior, main dialogue, trade buttons/offers/Max Uses and independent identities. No editor should be needed.
+4. Move the disposable world to Era 1 using its normal progression: hunter/fisher disappear from Tab and explicit requests fail clearly; Story Test still spawns with fixed content/name. Restore Era 0 for further tests.
+5. Change an example dialogue/trade/season layer and `/reload`: new NPCs should use new content; existing NPCs should retain their snapshot. Try an invalid item/URL/override: last valid data should stay active and commands/log explain the rejection.
+6. Optionally add the illustrated test geography at suitable test coordinates: inside a local polygon check label prefix and parent macro; outside check fallback. Test dimensions, era labels and priority/tie diagnostics.
+7. With installed Serene Seasons 21.8.0.0 compare `/hj npc context` with the world's season. In a separate dependency test without it expect `none` and working unrelated systems.
+8. Check native chunk unload/world/server restart persistence and accepted stock behavior. Recheck temperature cooling, salt/shoreline classification, stored salt containers, filtering/boiling, purifier, Rain Collector and TAN bottle sounds.
 
-Spawn search checks loaded positions on a radius 2–4 ring and up to two blocks above/below the player; it requires full solid non-dangerous support, air space, a liquid-free/entity-free bounding box and world-border compliance. It does not force-load chunks. If no candidate is safe, it reports failure without adding an NPC. Configure/add failures discard the unadded candidate. It does not import native presets or clone NBT.
-
-## Trades: exactly what is initialized and what is not fixed
-
-Core constructs each native MerchantOffer with explicit first/optional second cost, output count, supplied uses/maxUses, zero merchant XP and zero price multiplier. It sets TradingType.ADVANCED and reset minutes/last-reset time, then calls `setTradingOffers`. That setter writes synchronized/stored offers and creates the native runtime merchant COPY. Both initially have the intended uses and maxUses. Each spawned NPC receives independent offers. MaxUses is an NPC-wide transaction quota shared by players, not per-player; stack output is one transaction.
-
-**Known Easy NPC 6.5.2 limitation:** trading increments runtime offers, while save reads stored offers. Uses can therefore roll back after the native runtime list is rebuilt, chunk/entity unload or world/server restart. Advanced mode is not a persistence fix. This MVP deliberately adds no sync mixin, stock workaround or custom trading engine. Existing exhausted stock is not guaranteed durable. `reset_minutes=0` disables intentional timed restock but does not fix that stored/runtime bug. Positive minutes use real elapsed time when trading opens, potentially including downtime. Do not rely on scarcity until your tests establish the required behavior or a separate persistence fix is designed.
-
-## Optional Story Test
-
-The same small example pack also contains `human_journey:story_test`, a second page and native scoreboard/command/named-dialog actions. Before testing, as admin:
-
-```text
-/scoreboard objectives add hj_npc_test dummy
-/scoreboard players set @s hj_npc_test 0
-/hj npc spawn story_test
-```
-
-The Test action button is conditioned on score <3, increments it, calls the included `human_journey:npc/example` function as the player, and opens the Done page. Its function only prints a confirmation. This is a disposable adapter check, not a new quest/progression or Jengo system. Existing Human Journey quest objectives/functions are untouched.
-
-## Concise manual gameplay checklist
-
-1. Verify admin `/hj npc status`, dynamic Tab suggestions and `/hj npc spawn hunter`; confirm a normal student cannot spawn. Check a blocked/liquid location reports no safe spawn.
-2. Confirm Kito — Hunter, configured remote skin, stationary/invulnerable behavior and normal right-click dialogue without the editor. Check native substitutions.
-3. Open both trades; confirm inputs/counts, fresh uses=0 and explicit MaxUses 4/3. Exhaust one offer, try a second player, close/reopen, chunk unload/reload, save/reload and server restart separately. Record the known stock issue rather than treating automated codec checks as gameplay proof.
-4. Spawn two Hunters; inspect distinct UUID/preset/dialogue identities; trades/actions should not be shared mutable objects. Test optional name override.
-5. Edit name/skin/dialogue/trade/maxUses, `/reload`, spawn again: new content applies only to the new NPC. Invalid item/skin/reference/JSON must retain the previous set and appear in status/logs.
-6. Test Story Test setup/button/condition/function/Done/Back pages. Test enabled reset minutes by waiting and reopening a disposable trader.
-7. Recheck temperature, cooling, salt containers, shoreline detection, purifier, boiling/filtering and TAN bottle sounds with existing datapacks. No old engine behavior was intentionally changed.
-
-Automated tests establish parsing, contracts, data transformations/codecs and registration checks. They do not establish actual NPC appearance, UI, interaction, stock persistence or safe spawning in a real world. You perform those tests manually.
+Automated and no-world structural tests do not prove appearance, UI interaction, actual-world season behavior or persistence. No Minecraft gameplay testing, installation, live-server change or main datapack modification is performed by this release.
