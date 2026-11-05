@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:human-journey:fishing:1",
+  "title": "Human Journey Core fishing policy v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "bite_time"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "bite_time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minimum_seconds",
+        "maximum_seconds",
+        "lure_reduction_seconds_per_level"
+      ],
+      "properties": {
+        "minimum_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3600
+        },
+        "maximum_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3600
+        },
+        "lure_reduction_seconds_per_level": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3600
+        }
+      }
+    }
+  },
+  "description": "Runtime additionally enforces minimum <= maximum. Missing file means vanilla fallback; invalid file retains last valid state."
+}

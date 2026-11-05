@@ -1,4 +1,5 @@
-package org.humanjourney.core.fishing;
+package org.humanjourney.core.fishing.mixin;
+import org.humanjourney.core.fishing.FishingTiming;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.projectile.FishingHook;
 import org.spongepowered.asm.mixin.*;

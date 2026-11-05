@@ -1,5 +1,12 @@
 # Dependency and API evidence
 
+## Core 0.6.1 fishing integration
+
+- Inspected the actual installed Forge 1.21.8-58.1.18 client archive read-only, SHA-256 `b24b4bf17178f1b36b272d550cb1fb65e887f760fa74e72aa59d45eda9261db7`. Parsed class bytes without executing the installed JAR: exact `FishingHook.catchingFish(BlockPos)`, final `lureSpeed` tick field, three Mth.nextInt calls, last 100–600 draw and immediately subsequent native subtraction; also `FishingRodItem.use` native enchantment conversion and vanilla Lure JSON. Public build classpath is checked against the same contracts in tests.
+- Inspected the public Forge 58.1.18 sources FishingHook patch: no bite-time event, only rod action/impact/retrieval hooks. The new separate required Mixin redirects one initial wait draw; no native loot/treasure/durability code or resource is edited. No installed mod is executed, used as a build classpath, uploaded or modified.
+- [Fishing reference](../FISHING.md) documents inclusive tick ranges, native-effect scaling, lower-bound protection, vanilla weather/approach effects, reload boundaries and manual acceptance.
+
+
 ## Core 0.6.0 context integration
 
 - Progression reference was inspected read-only at Human Journey 0.3.15: `hj_civ/#era1` is initialized as a binary flag, not an era counter. Java contains no fixed role list or scoreboard-era mapping; the integration JSON provides the two current predicates. No main progression source or real datapack was modified.

@@ -1,3 +1,8 @@
+# 0.6.1
+
+- Added an isolated reloadable fishing wait policy, vanilla fallback when missing, strict validation/last-valid retention and one read-only status line. Example policy sets 20–60s with native Lure effects scaled to 5s per level.
+- Intercepted only normal wait initialization; preserved weather/approach/bite phases, all loot and rod/enchantment mechanics, NPC context and existing temperature/water/audio systems. Added policy, timing, reload and exact-bytecode regression checks; gameplay testing remains manual.
+
 # 0.6.0
 
 - Added datapack era predicates, era-specific economic archetypes and current-era Tab completion; Hunter/Fisher require no manual context arguments.
