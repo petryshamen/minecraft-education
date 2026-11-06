@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "eastern_carpathians",
+      "dimension": "minecraft:overworld",
+      "priority": 76,
+      "macro_region": "eastern_europe",
+      "display_label": "Carpathians",
+      "polygon": [
+        [
+          1708,
+          -3004.25
+        ],
+        [
+          1843,
+          -3038
+        ],
+        [
+          1877,
+          -3209
+        ],
+        [
+          1775,
+          -3345
+        ],
+        [
+          1708,
+          -3345
+        ]
+      ]
+    },
+    {
+      "id": "dniester_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 75,
+      "macro_region": "eastern_europe",
+      "display_label": "Dniester",
+      "polygon": [
+        [
+          1708,
+          -3139.833333
+        ],
+        [
+          1911,
+          -3106
+        ],
+        [
+          2116,
+          -3140
+        ],
+        [
+          2048,
+          -3379
+        ],
+        [
+          1843,
+          -3413
+        ],
+        [
+          1708,
+          -3345.5
+        ]
+      ]
+    },
+    {
+      "id": "dnieper_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 74,
+      "macro_region": "eastern_europe",
+      "display_label": "Dnieper",
+      "polygon": [
+        [
+          1911,
+          -3140
+        ],
+        [
+          2185,
+          -3106
+        ],
+        [
+          2458,
+          -3209
+        ],
+        [
+          2458,
+          -3482
+        ],
+        [
+          2321,
+          -3686
+        ],
+        [
+          2048,
+          -3686
+        ],
+        [
+          1843,
+          -3550
+        ]
+      ]
+    },
+    {
+      "id": "pripyat_marshes",
+      "dimension": "minecraft:overworld",
+      "priority": 73,
+      "macro_region": "eastern_europe",
+      "display_label": "Pripyat Marshes",
+      "polygon": [
+        [
+          1708,
+          -3413
+        ],
+        [
+          1980,
+          -3413
+        ],
+        [
+          2185,
+          -3482
+        ],
+        [
+          2116,
+          -3618
+        ],
+        [
+          1843,
+          -3618
+        ],
+        [
+          1708,
+          -3550.5
+        ]
+      ]
+    },
+    {
+      "id": "azov_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 72,
+      "macro_region": "eastern_europe",
+      "display_label": "Azov Coast",
+      "polygon": [
+        [
+          2389,
+          -3113
+        ],
+        [
+          2697,
+          -3113
+        ],
+        [
+          2765,
+          -3195
+        ],
+        [
+          2662,
+          -3277
+        ],
+        [
+          2458,
+          -3263
+        ],
+        [
+          2389,
+          -3195
+        ]
+      ]
+    },
+    {
+      "id": "don_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 71,
+      "macro_region": "eastern_europe",
+      "display_label": "Don",
+      "polygon": [
+        [
+          2458,
+          -3209
+        ],
+        [
+          2867,
+          -3140
+        ],
+        [
+          3038,
+          -3277
+        ],
+        [
+          3004,
+          -3550
+        ],
+        [
+          2731,
+          -3686
+        ],
+        [
+          2458,
+          -3550
+        ]
+      ]
+    },
+    {
+      "id": "pontic_steppe",
+      "dimension": "minecraft:overworld",
+      "priority": 70,
+      "macro_region": "eastern_europe",
+      "display_label": "Pontic Steppe",
+      "polygon": [
+        [
+          1708,
+          -3139.841642
+        ],
+        [
+          2048,
+          -3086
+        ],
+        [
+          2458,
+          -3086
+        ],
+        [
+          2731,
+          -3140
+        ],
+        [
+          2731,
+          -3345
+        ],
+        [
+          2321,
+          -3345
+        ],
+        [
+          1911,
+          -3277
+        ],
+        [
+          1708,
+          -3140.671569
+        ]
+      ]
+    },
+    {
+      "id": "central_russian_upland",
+      "dimension": "minecraft:overworld",
+      "priority": 69,
+      "macro_region": "eastern_europe",
+      "display_label": "Central Russian Upland",
+      "polygon": [
+        [
+          2321,
+          -3413
+        ],
+        [
+          2594,
+          -3345
+        ],
+        [
+          2867,
+          -3482
+        ],
+        [
+          2867,
+          -3741
+        ],
+        [
+          2731,
+          -3741
+        ],
+        [
+          2458,
+          -3686
+        ]
+      ]
+    },
+    {
+      "id": "volga_upland",
+      "dimension": "minecraft:overworld",
+      "priority": 68,
+      "macro_region": "eastern_europe",
+      "display_label": "Volga Upland",
+      "polygon": [
+        [
+          2867,
+          -3761
+        ],
+        [
+          3072,
+          -3761
+        ],
+        [
+          3345,
+          -3768
+        ],
+        [
+          3413,
+          -4028
+        ],
+        [
+          3072,
+          -4096
+        ],
+        [
+          2867,
+          -3959
+        ]
+      ]
+    }
+  ]
+}

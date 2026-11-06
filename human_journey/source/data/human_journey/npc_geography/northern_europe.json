@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "norwegian_fjord_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 120,
+      "macro_region": "northern_europe",
+      "display_label": "Norwegian Fjord Coast",
+      "polygon": [
+        [
+          287,
+          -3959
+        ],
+        [
+          273,
+          -4096
+        ],
+        [
+          328,
+          -4233
+        ],
+        [
+          410,
+          -4369
+        ],
+        [
+          649,
+          -4540
+        ],
+        [
+          887,
+          -4594
+        ],
+        [
+          956,
+          -4506
+        ],
+        [
+          717,
+          -4335
+        ],
+        [
+          580,
+          -4198
+        ],
+        [
+          560,
+          -4028
+        ],
+        [
+          478,
+          -3946
+        ]
+      ]
+    },
+    {
+      "id": "faroe_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 118,
+      "macro_region": "northern_europe",
+      "display_label": "Faroe Islands",
+      "polygon": [
+        [
+          -532,
+          -4185
+        ],
+        [
+          -410,
+          -4185
+        ],
+        [
+          -410,
+          -4267
+        ],
+        [
+          -532,
+          -4267
+        ]
+      ]
+    },
+    {
+      "id": "icelandic_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 116,
+      "macro_region": "northern_europe",
+      "display_label": "Icelandic Highlands",
+      "polygon": [
+        [
+          -1454,
+          -4369
+        ],
+        [
+          -1331,
+          -4349
+        ],
+        [
+          -1126,
+          -4369
+        ],
+        [
+          -1044,
+          -4437
+        ],
+        [
+          -1126,
+          -4492
+        ],
+        [
+          -1331,
+          -4506
+        ],
+        [
+          -1468,
+          -4451
+        ]
+      ]
+    },
+    {
+      "id": "baltic_archipelagos",
+      "dimension": "minecraft:overworld",
+      "priority": 114,
+      "macro_region": "northern_europe",
+      "display_label": "Baltic Archipelagos",
+      "polygon": [
+        [
+          1147,
+          -4007
+        ],
+        [
+          1229,
+          -3987
+        ],
+        [
+          1556,
+          -4028
+        ],
+        [
+          1625,
+          -4096
+        ],
+        [
+          1556,
+          -4157
+        ],
+        [
+          1297,
+          -4151
+        ],
+        [
+          1161,
+          -4096
+        ]
+      ]
+    },
+    {
+      "id": "karelian_isthmus",
+      "dimension": "minecraft:overworld",
+      "priority": 112,
+      "macro_region": "northern_europe",
+      "display_label": "Karelian Isthmus",
+      "polygon": [
+        [
+          1877,
+          -4082
+        ],
+        [
+          2150,
+          -4082
+        ],
+        [
+          2185,
+          -4198
+        ],
+        [
+          2082,
+          -4233
+        ],
+        [
+          1925,
+          -4198
+        ]
+      ]
+    },
+    {
+      "id": "bothnian_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 110,
+      "macro_region": "northern_europe",
+      "display_label": "Bothnian Coast",
+      "polygon": [
+        [
+          1161,
+          -4069
+        ],
+        [
+          1263,
+          -4198
+        ],
+        [
+          1365,
+          -4335
+        ],
+        [
+          1468,
+          -4471
+        ],
+        [
+          1604,
+          -4553
+        ],
+        [
+          1809,
+          -4471
+        ],
+        [
+          1707,
+          -4301
+        ],
+        [
+          1604,
+          -4164
+        ],
+        [
+          1550,
+          -4076
+        ],
+        [
+          1365,
+          -4055
+        ]
+      ]
+    },
+    {
+      "id": "scandinavian_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 108,
+      "macro_region": "northern_europe",
+      "display_label": "Scandinavian Mountains",
+      "polygon": [
+        [
+          410,
+          -3959
+        ],
+        [
+          478,
+          -4096
+        ],
+        [
+          580,
+          -4233
+        ],
+        [
+          717,
+          -4369
+        ],
+        [
+          922,
+          -4506
+        ],
+        [
+          1126,
+          -4642
+        ],
+        [
+          1297,
+          -4745
+        ],
+        [
+          1570,
+          -4847
+        ],
+        [
+          1911,
+          -4813
+        ],
+        [
+          1502,
+          -4697
+        ],
+        [
+          1263,
+          -4574
+        ],
+        [
+          1058,
+          -4437
+        ],
+        [
+          887,
+          -4301
+        ],
+        [
+          751,
+          -4164
+        ],
+        [
+          683,
+          -4028
+        ],
+        [
+          546,
+          -3959
+        ]
+      ]
+    },
+    {
+      "id": "kola_peninsula",
+      "dimension": "minecraft:overworld",
+      "priority": 106,
+      "macro_region": "northern_europe",
+      "display_label": "Kola Peninsula",
+      "polygon": [
+        [
+          2014,
+          -4506
+        ],
+        [
+          2253,
+          -4506
+        ],
+        [
+          2731,
+          -4540
+        ],
+        [
+          2731,
+          -4745
+        ],
+        [
+          2458,
+          -4813
+        ],
+        [
+          2116,
+          -4745
+        ]
+      ]
+    },
+    {
+      "id": "finnish_lakeland",
+      "dimension": "minecraft:overworld",
+      "priority": 104,
+      "macro_region": "northern_europe",
+      "display_label": "Finnish Lakeland",
+      "polygon": [
+        [
+          1536,
+          -4130
+        ],
+        [
+          1707,
+          -4110
+        ],
+        [
+          2014,
+          -4151
+        ],
+        [
+          2185,
+          -4233
+        ],
+        [
+          2150,
+          -4403
+        ],
+        [
+          1911,
+          -4437
+        ],
+        [
+          1638,
+          -4369
+        ],
+        [
+          1502,
+          -4233
+        ]
+      ]
+    },
+    {
+      "id": "scottish_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 102,
+      "macro_region": "northern_europe",
+      "display_label": "Scottish Highlands",
+      "polygon": [
+        [
+          -457,
+          -3843
+        ],
+        [
+          -355,
+          -3809
+        ],
+        [
+          -232,
+          -3823
+        ],
+        [
+          -143,
+          -3884
+        ],
+        [
+          -177,
+          -4007
+        ],
+        [
+          -375,
+          -4014
+        ],
+        [
+          -464,
+          -3932
+        ]
+      ]
+    },
+    {
+      "id": "central_swedish_lakes",
+      "dimension": "minecraft:overworld",
+      "priority": 100,
+      "macro_region": "northern_europe",
+      "display_label": "Central Swedish Lakes",
+      "polygon": [
+        [
+          717,
+          -3857
+        ],
+        [
+          956,
+          -3857
+        ],
+        [
+          1277,
+          -3959
+        ],
+        [
+          1331,
+          -4096
+        ],
+        [
+          1195,
+          -4164
+        ],
+        [
+          819,
+          -4130
+        ],
+        [
+          683,
+          -3994
+        ]
+      ]
+    },
+    {
+      "id": "karelian_lake_country",
+      "dimension": "minecraft:overworld",
+      "priority": 98,
+      "macro_region": "northern_europe",
+      "display_label": "Karelian Lake Country",
+      "polygon": [
+        [
+          1911,
+          -4198
+        ],
+        [
+          2116,
+          -4164
+        ],
+        [
+          2458,
+          -4233
+        ],
+        [
+          2492,
+          -4471
+        ],
+        [
+          2253,
+          -4540
+        ],
+        [
+          1980,
+          -4471
+        ]
+      ]
+    },
+    {
+      "id": "eastern_baltic_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 96,
+      "macro_region": "northern_europe",
+      "display_label": "Eastern Baltic Coast",
+      "polygon": [
+        [
+          1570,
+          -3755
+        ],
+        [
+          1707,
+          -3823
+        ],
+        [
+          1707,
+          -3994
+        ],
+        [
+          1638,
+          -4076
+        ],
+        [
+          1468,
+          -4062
+        ],
+        [
+          1365,
+          -3925
+        ],
+        [
+          1333.586957,
+          -3755
+        ]
+      ]
+    },
+    {
+      "id": "danish_lowlands",
+      "dimension": "minecraft:overworld",
+      "priority": 94,
+      "macro_region": "northern_europe",
+      "display_label": "Danish Lowlands",
+      "polygon": [
+        [
+          901,
+          -3755
+        ],
+        [
+          901,
+          -3953
+        ],
+        [
+          717,
+          -3973
+        ],
+        [
+          546,
+          -3946
+        ],
+        [
+          513.20202,
+          -3755
+        ]
+      ]
+    },
+    {
+      "id": "northern_fennoscandia",
+      "dimension": "minecraft:overworld",
+      "priority": 92,
+      "macro_region": "northern_europe",
+      "display_label": "Northern Fennoscandia",
+      "polygon": [
+        [
+          956,
+          -4424
+        ],
+        [
+          1502,
+          -4403
+        ],
+        [
+          2116,
+          -4437
+        ],
+        [
+          2116,
+          -4745
+        ],
+        [
+          1775,
+          -4833
+        ],
+        [
+          1229,
+          -4813
+        ],
+        [
+          956,
+          -4642
+        ]
+      ]
+    },
+    {
+      "id": "iceland",
+      "dimension": "minecraft:overworld",
+      "priority": 90,
+      "macro_region": "northern_europe",
+      "display_label": "Iceland",
+      "polygon": [
+        [
+          -1693,
+          -4437
+        ],
+        [
+          -1604,
+          -4533
+        ],
+        [
+          -1399,
+          -4553
+        ],
+        [
+          -1092,
+          -4526
+        ],
+        [
+          -901,
+          -4451
+        ],
+        [
+          -976,
+          -4328
+        ],
+        [
+          -1263,
+          -4314
+        ],
+        [
+          -1536,
+          -4335
+        ]
+      ]
+    }
+  ]
+}

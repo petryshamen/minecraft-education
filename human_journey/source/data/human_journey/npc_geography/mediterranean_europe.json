@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "crete",
+      "dimension": "minecraft:overworld",
+      "priority": 67,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Crete",
+      "polygon": [
+        [
+          1570,
+          -2389
+        ],
+        [
+          1809,
+          -2389
+        ],
+        [
+          1809,
+          -2444
+        ],
+        [
+          1570,
+          -2444
+        ]
+      ]
+    },
+    {
+      "id": "sicily",
+      "dimension": "minecraft:overworld",
+      "priority": 66,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Sicily",
+      "polygon": [
+        [
+          819,
+          -2492
+        ],
+        [
+          1079,
+          -2492
+        ],
+        [
+          1079,
+          -2628
+        ],
+        [
+          819,
+          -2628
+        ]
+      ]
+    },
+    {
+      "id": "corsica",
+      "dimension": "minecraft:overworld",
+      "priority": 65,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Corsica",
+      "polygon": [
+        [
+          580,
+          -2813
+        ],
+        [
+          662,
+          -2813
+        ],
+        [
+          662,
+          -2935
+        ],
+        [
+          580,
+          -2935
+        ]
+      ]
+    },
+    {
+      "id": "sardinia",
+      "dimension": "minecraft:overworld",
+      "priority": 64,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Sardinia",
+      "polygon": [
+        [
+          546,
+          -2649
+        ],
+        [
+          669,
+          -2649
+        ],
+        [
+          669,
+          -2819
+        ],
+        [
+          546,
+          -2819
+        ]
+      ]
+    },
+    {
+      "id": "aegean_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 63,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Aegean Islands",
+      "polygon": [
+        [
+          1570,
+          -2423
+        ],
+        [
+          1911,
+          -2423
+        ],
+        [
+          1911,
+          -2765
+        ],
+        [
+          1707,
+          -2765
+        ],
+        [
+          1570,
+          -2662
+        ]
+      ]
+    },
+    {
+      "id": "dalmatian_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 62,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Dalmatian Coast",
+      "polygon": [
+        [
+          956,
+          -2922
+        ],
+        [
+          1092,
+          -2922
+        ],
+        [
+          1297,
+          -2799
+        ],
+        [
+          1365,
+          -2731
+        ],
+        [
+          1297,
+          -2697
+        ],
+        [
+          1161,
+          -2799
+        ],
+        [
+          1024,
+          -2867
+        ]
+      ]
+    },
+    {
+      "id": "peloponnese",
+      "dimension": "minecraft:overworld",
+      "priority": 61,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Peloponnese",
+      "polygon": [
+        [
+          1434,
+          -2458
+        ],
+        [
+          1604,
+          -2458
+        ],
+        [
+          1604,
+          -2628
+        ],
+        [
+          1434,
+          -2628
+        ]
+      ]
+    },
+    {
+      "id": "pyrenees",
+      "dimension": "minecraft:overworld",
+      "priority": 60,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Pyrenees",
+      "polygon": [
+        [
+          -171,
+          -2888
+        ],
+        [
+          0,
+          -2874
+        ],
+        [
+          218,
+          -2888
+        ],
+        [
+          212,
+          -2935
+        ],
+        [
+          -123,
+          -2935
+        ]
+      ]
+    },
+    {
+      "id": "cantabrian_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 59,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Cantabrian Mountains",
+      "polygon": [
+        [
+          -546,
+          -2867
+        ],
+        [
+          -137,
+          -2867
+        ],
+        [
+          -137,
+          -2935
+        ],
+        [
+          -546,
+          -2935
+        ]
+      ]
+    },
+    {
+      "id": "baetic_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 58,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Baetic Mountains",
+      "polygon": [
+        [
+          -375,
+          -2458
+        ],
+        [
+          -68,
+          -2458
+        ],
+        [
+          0,
+          -2594
+        ],
+        [
+          -205,
+          -2628
+        ],
+        [
+          -375,
+          -2560
+        ]
+      ]
+    },
+    {
+      "id": "dinaric_alps_south",
+      "dimension": "minecraft:overworld",
+      "priority": 57,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Dinaric Alps",
+      "polygon": [
+        [
+          1092,
+          -2922
+        ],
+        [
+          1229,
+          -2922
+        ],
+        [
+          1365,
+          -2833
+        ],
+        [
+          1434,
+          -2765
+        ],
+        [
+          1365,
+          -2697
+        ],
+        [
+          1229,
+          -2799
+        ],
+        [
+          1092,
+          -2867
+        ]
+      ]
+    },
+    {
+      "id": "pindus_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 56,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Pindus Mountains",
+      "polygon": [
+        [
+          1365,
+          -2867
+        ],
+        [
+          1502,
+          -2867
+        ],
+        [
+          1570,
+          -2628
+        ],
+        [
+          1434,
+          -2594
+        ],
+        [
+          1365,
+          -2731
+        ]
+      ]
+    },
+    {
+      "id": "apennines",
+      "dimension": "minecraft:overworld",
+      "priority": 55,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Apennines",
+      "polygon": [
+        [
+          751,
+          -2922
+        ],
+        [
+          887,
+          -2922
+        ],
+        [
+          1024,
+          -2799
+        ],
+        [
+          1126,
+          -2662
+        ],
+        [
+          1092,
+          -2594
+        ],
+        [
+          956,
+          -2662
+        ],
+        [
+          853,
+          -2799
+        ]
+      ]
+    },
+    {
+      "id": "ebro_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 54,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Ebro",
+      "polygon": [
+        [
+          -137,
+          -2765
+        ],
+        [
+          102,
+          -2765
+        ],
+        [
+          171,
+          -2901
+        ],
+        [
+          -68,
+          -2922
+        ],
+        [
+          -171,
+          -2833
+        ]
+      ]
+    },
+    {
+      "id": "guadalquivir_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 53,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Guadalquivir",
+      "polygon": [
+        [
+          -478,
+          -2492
+        ],
+        [
+          -205,
+          -2492
+        ],
+        [
+          -171,
+          -2594
+        ],
+        [
+          -375,
+          -2628
+        ],
+        [
+          -478,
+          -2560
+        ]
+      ]
+    },
+    {
+      "id": "tagus_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 52,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Tagus",
+      "polygon": [
+        [
+          -614,
+          -2594
+        ],
+        [
+          -205,
+          -2594
+        ],
+        [
+          -137,
+          -2765
+        ],
+        [
+          -478,
+          -2799
+        ],
+        [
+          -649,
+          -2731
+        ]
+      ]
+    },
+    {
+      "id": "iberian_meseta",
+      "dimension": "minecraft:overworld",
+      "priority": 51,
+      "macro_region": "mediterranean_europe",
+      "display_label": "Iberian Meseta",
+      "polygon": [
+        [
+          -478,
+          -2594
+        ],
+        [
+          -68,
+          -2594
+        ],
+        [
+          -68,
+          -2867
+        ],
+        [
+          -478,
+          -2867
+        ]
+      ]
+    }
+  ]
+}

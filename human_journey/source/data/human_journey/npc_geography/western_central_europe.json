@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "alps",
+      "dimension": "minecraft:overworld",
+      "priority": 89,
+      "macro_region": "western_central_europe",
+      "display_label": "Alps",
+      "polygon": [
+        [
+          341,
+          -3004
+        ],
+        [
+          478,
+          -3038
+        ],
+        [
+          683,
+          -3106
+        ],
+        [
+          887,
+          -3106
+        ],
+        [
+          1092,
+          -3140
+        ],
+        [
+          1161,
+          -3209
+        ],
+        [
+          956,
+          -3277
+        ],
+        [
+          683,
+          -3277
+        ],
+        [
+          478,
+          -3209
+        ],
+        [
+          341,
+          -3140
+        ]
+      ]
+    },
+    {
+      "id": "rhine_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 88,
+      "macro_region": "western_central_europe",
+      "display_label": "Rhine",
+      "polygon": [
+        [
+          375,
+          -3140
+        ],
+        [
+          614,
+          -3140
+        ],
+        [
+          614,
+          -3516
+        ],
+        [
+          478,
+          -3516
+        ],
+        [
+          410,
+          -3345
+        ]
+      ]
+    },
+    {
+      "id": "danube_corridor",
+      "dimension": "minecraft:overworld",
+      "priority": 87,
+      "macro_region": "western_central_europe",
+      "display_label": "Danube",
+      "polygon": [
+        [
+          546,
+          -3209
+        ],
+        [
+          683,
+          -3243
+        ],
+        [
+          887,
+          -3277
+        ],
+        [
+          1092,
+          -3277
+        ],
+        [
+          1297,
+          -3243
+        ],
+        [
+          1502,
+          -3174
+        ],
+        [
+          1707,
+          -3106
+        ],
+        [
+          1707,
+          -3209
+        ],
+        [
+          1502,
+          -3311
+        ],
+        [
+          1229,
+          -3345
+        ],
+        [
+          956,
+          -3345
+        ],
+        [
+          683,
+          -3311
+        ]
+      ]
+    },
+    {
+      "id": "thames_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 86,
+      "macro_region": "western_central_europe",
+      "display_label": "Thames",
+      "polygon": [
+        [
+          -171,
+          -3468
+        ],
+        [
+          55,
+          -3468
+        ],
+        [
+          102,
+          -3516
+        ],
+        [
+          34,
+          -3570
+        ],
+        [
+          -102,
+          -3577
+        ],
+        [
+          -171,
+          -3529
+        ]
+      ]
+    },
+    {
+      "id": "seine_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 85,
+      "macro_region": "western_central_europe",
+      "display_label": "Seine",
+      "polygon": [
+        [
+          -102,
+          -3263
+        ],
+        [
+          239,
+          -3263
+        ],
+        [
+          341,
+          -3345
+        ],
+        [
+          273,
+          -3447
+        ],
+        [
+          0,
+          -3468
+        ],
+        [
+          -137,
+          -3379
+        ]
+      ]
+    },
+    {
+      "id": "garonne_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 84,
+      "macro_region": "western_central_europe",
+      "display_label": "Garonne",
+      "polygon": [
+        [
+          -137,
+          -2949
+        ],
+        [
+          137,
+          -2949
+        ],
+        [
+          171,
+          -3127
+        ],
+        [
+          -68,
+          -3174
+        ],
+        [
+          -171,
+          -3072
+        ]
+      ]
+    },
+    {
+      "id": "rhone_saone_corridor",
+      "dimension": "minecraft:overworld",
+      "priority": 83,
+      "macro_region": "western_central_europe",
+      "display_label": "Rhône",
+      "polygon": [
+        [
+          287,
+          -2949
+        ],
+        [
+          410,
+          -2949
+        ],
+        [
+          375,
+          -3140
+        ],
+        [
+          396,
+          -3243
+        ],
+        [
+          307,
+          -3243
+        ],
+        [
+          273,
+          -3106
+        ]
+      ]
+    },
+    {
+      "id": "massif_central",
+      "dimension": "minecraft:overworld",
+      "priority": 82,
+      "macro_region": "western_central_europe",
+      "display_label": "Massif Central",
+      "polygon": [
+        [
+          102,
+          -2949
+        ],
+        [
+          307,
+          -2949
+        ],
+        [
+          341,
+          -3106
+        ],
+        [
+          239,
+          -3195
+        ],
+        [
+          102,
+          -3174
+        ],
+        [
+          34,
+          -3072
+        ]
+      ]
+    },
+    {
+      "id": "bohemian_massif",
+      "dimension": "minecraft:overworld",
+      "priority": 81,
+      "macro_region": "western_central_europe",
+      "display_label": "Bohemian Massif",
+      "polygon": [
+        [
+          751,
+          -3277
+        ],
+        [
+          1024,
+          -3243
+        ],
+        [
+          1229,
+          -3311
+        ],
+        [
+          1229,
+          -3516
+        ],
+        [
+          956,
+          -3516
+        ],
+        [
+          751,
+          -3413
+        ]
+      ]
+    },
+    {
+      "id": "central_uplands",
+      "dimension": "minecraft:overworld",
+      "priority": 80,
+      "macro_region": "western_central_europe",
+      "display_label": "Central Uplands",
+      "polygon": [
+        [
+          205,
+          -3345
+        ],
+        [
+          410,
+          -3277
+        ],
+        [
+          614,
+          -3277
+        ],
+        [
+          819,
+          -3345
+        ],
+        [
+          819,
+          -3550
+        ],
+        [
+          546,
+          -3550
+        ],
+        [
+          273,
+          -3482
+        ]
+      ]
+    },
+    {
+      "id": "pannonian_plain_west",
+      "dimension": "minecraft:overworld",
+      "priority": 79,
+      "macro_region": "western_central_europe",
+      "display_label": "Pannonian Plain",
+      "polygon": [
+        [
+          1024,
+          -3072
+        ],
+        [
+          1707,
+          -3072
+        ],
+        [
+          1707,
+          -3311
+        ],
+        [
+          1229,
+          -3311
+        ],
+        [
+          1024,
+          -3209
+        ]
+      ]
+    },
+    {
+      "id": "central_irish_lowlands",
+      "dimension": "minecraft:overworld",
+      "priority": 78,
+      "macro_region": "western_central_europe",
+      "display_label": "Irish Lowlands",
+      "polygon": [
+        [
+          -649,
+          -3584
+        ],
+        [
+          -410,
+          -3584
+        ],
+        [
+          -396,
+          -3721
+        ],
+        [
+          -580,
+          -3741
+        ],
+        [
+          -683,
+          -3686
+        ]
+      ]
+    },
+    {
+      "id": "north_european_plain_west",
+      "dimension": "minecraft:overworld",
+      "priority": 77,
+      "macro_region": "western_central_europe",
+      "display_label": "North European Plain",
+      "polygon": [
+        [
+          0,
+          -3413
+        ],
+        [
+          410,
+          -3413
+        ],
+        [
+          819,
+          -3482
+        ],
+        [
+          1229,
+          -3550
+        ],
+        [
+          1707,
+          -3618
+        ],
+        [
+          1707,
+          -3748
+        ],
+        [
+          0,
+          -3748
+        ]
+      ]
+    }
+  ]
+}

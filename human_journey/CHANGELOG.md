@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.3.18
+
+- Added Europe Local Areas v1: 55 uniquely prioritized areas in four resources (Northern 16, Western/Central 13, Eastern 9, Mediterranean 17). Local display labels prefix new NPC names automatically; no archetype trade/skin overrides or era labels.
+- All supplied shapes pass the geometry validator. Corrected parent-boundary conflicts only: clipped eastern_baltic_coast and danish_lowlands to Z <= -3755; clipped eastern_carpathians, dniester_basin, pripyat_marshes and pontic_steppe to X >= 1708, a one-block inset from the Western/Central-owned edge. Macro polygons/priorities remain byte-identical.
+- Structurally validated geography, names and 1,125 context compositions within Core 0.6.1 limits. Economy/Max Uses, Traveller, fishing, progression/rollback, roles, locks, water and temperature are unchanged; Core is untouched and no gameplay testing was performed.
+
 ## 0.3.17
 
 - Added the supplied 19 broad Overworld NPC macro-region polygons and technical priorities; no local areas, regional names, skins or trade overrides. Documented the calibrated Earth conversion X = round(longitude × 1024/15), Z = round(-latitude × 1024/15).

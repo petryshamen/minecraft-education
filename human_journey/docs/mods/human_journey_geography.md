@@ -16,7 +16,7 @@ The supplied decimal approximation is **68.2666667 blocks per degree**; prefer t
 | 180°W / 0° / 180°E longitude | X -12288 / 0 / 12288 |
 | 90°N / Equator / 90°S latitude | Z -6144 / 0 / 6144 |
 
-The supplied integer polygons below are authoritative for this release; do not recalculate or nudge them from their approximate real-world descriptions. This is a broad context layer, not a political-border or coastline database. It intentionally leaves uncovered positions (including some Pacific islands/polar areas) resolving to `none`; there is no automatic nearest-region fallback or longitude wrap.
+The supplied global macro polygons remain authoritative and unchanged; do not recalculate them from approximate real-world descriptions. Europe local polygons follow the supplied coordinates except the minimal parent-boundary corrections documented below. This is a broad context layer, not a political-border or coastline database. It intentionally leaves uncovered positions (including some Pacific islands/polar areas) resolving to `none`; there is no automatic nearest-region fallback or longitude wrap.
 
 ## Core geography resource
 
@@ -50,15 +50,67 @@ The JSON is the single editable source of polygon vertices. Validation covers al
 
 ## Names, content and context
 
-No local areas, era-dependent geographic labels, regional skins, macro trade sets or seasonal changes are introduced. `/hj npc context` reports a macro ID inside its polygon, while `Local area` and `Location label` remain `none`. Hunter/Fisher/Forager keep their generic visible names and identical base content in every macro. Macro regions never automatically prefix NPC names.
+Europe Local Areas v1 adds local display labels only. `/hj npc context` reports the highest-priority matching local ID and label, or `none` in intentional gaps. Core prefixes new NPC names using only that local label (e.g. **Dnieper Fisher**, **Alps Hunter**, **Finnish Lakeland Forager**). Without a local label the names remain **Hunter**, **Fisher**, **Forager**. Macro names never become prefixes. Trades, skins and all other archetype content are identical in every location; no era labels, regional content overrides or seasonal changes are added.
 
 Context is captured once at spawn by Core; existing NPCs are not refreshed by a datapack reload. Era stays read-only: `hj_civ / #era1 = 0` → `era_0`, `1` → `era_1`; economic roles remain Era 0 only. This geography neither writes progression nor affects Core's separate water/salt geography.
 
-## Next geography stage (not implemented)
+## Europe Local Areas v1
 
-Add `local_areas[]` polygons inside these macros, referencing the parent `macro_region` and supplying `display_label` (optionally `era_labels`). Planned examples:
+Five geography resources are now loaded together: the unchanged `global_macros.json` and four files containing only `schema_version: 1` / `local_areas[]`:
 
-- Eastern Europe: Dnieper Basin, Carpathians, Danube Basin, Black Sea Coast, Pontic Steppe.
-- East Africa & Horn: Somali Coast, Ethiopian Highlands, Rift Valley.
+| Resource under `data/human_journey/npc_geography/` | Parent macro | Areas |
+| --- | --- | ---: |
+| `northern_europe.json` | `northern_europe` | 16 |
+| `western_central_europe.json` | `western_central_europe` | 13 |
+| `eastern_europe.json` | `eastern_europe` | 9 |
+| `mediterranean_europe.json` | `mediterranean_europe` | 17 |
 
-Local areas will supply educational visible labels such as **Dnieper Fisher**. Macros remain primarily internal context for broad skins, trade availability and cultural/environmental content. Future local boundaries should agree with the highest-priority resolved macro; Core rejects a conflicting declared parent.
+All 55 local IDs and priorities are unique. Priority is technical precedence only; the highest-priority matching local wins, independently of macro priority. Each local declares Overworld dimension, parent macro, `display_label` and polygon. No `era_labels` are supplied. The set uses 55/64 local slots, 19/64 macros, 5/64 geography resources, and 1,125/16,384 composed NPC variants (3 archetypes × 75 context locations × 5 season states). Era 1 remains recognized but has no economic roles.
+
+### Minimal boundary corrections
+
+Every original supplied polygon is simple/non-degenerate. However Core checks the winning local's parent against the independently resolved macro; valid polygon geometry alone does not prevent runtime context conflicts:
+
+- `eastern_baltic_coast` reached Z -3741 and `danish_lowlands` reached Z -3748, south of Northern Europe's -3755 edge, where Western/Central Europe wins. Clip only those southern slivers to **Z <= -3755**.
+- `eastern_carpathians`, `dniester_basin`, `pripyat_marshes` and `pontic_steppe` touched **X = 1707**, owned by the higher-priority Western/Central macro on the inclusive boundary. Clip them to **X >= 1708**, the minimum whole-block inset. Some conflicts were masked by higher-priority neighboring locals; parent containment is corrected consistently for all four.
+
+Half-plane clipping preserves unaffected vertices/edges and stores new intersection coordinates to six decimal places where necessary. IDs, labels, priorities and macros are unchanged. The source JSON contains the exact corrected vertices. All other 49 local polygons remain exactly as supplied.
+
+### Representative structural checks
+
+These X/Z points are useful for manual context checks; choose a safe elevation rather than teleporting to an assumed Y.
+
+| Point | X, Z | Expected local |
+| --- | --- | --- |
+| Western Norway / Bergen | 363, -4123 | `norwegian_fjord_coast` |
+| Inland Norway/Sweden border | 819, -4369 | `scandinavian_mountains` |
+| Central Finland | 1758, -4249 | `finnish_lakeland` |
+| Northern Bothnia / Oulu | 1739, -4438 | `bothnian_coast` |
+| Iceland interior | -1263, -4431 | `icelandic_highlands` |
+| Reykjavik | -1498, -4379 | `iceland` |
+| London | 0, -3515 | `thames_basin` |
+| Paris | 160, -3336 | `seine_basin` |
+| Swiss/Austrian alpine zone | 583, -3235 | `alps` |
+| Rhine corridor | 485, -3461 | `rhine_valley` |
+| Central Hungary | 1344, -3202 | `pannonian_plain_west` |
+| Kyiv | 2088, -3437 | `dnieper_basin` |
+| Western Polesia wetland | 1755, -3505 | `pripyat_marshes` |
+| Southern Pontic steppe strip | 2200, -3095 | `pontic_steppe` |
+| Pyrenean border | 20, -2912 | `pyrenees` |
+| Central Apennines | 922, -2854 | `apennines` |
+| Sicily | 912, -2602 | `sicily` |
+| Sardinia | 621, -2737 | `sardinia` |
+| Western Greek mountains | 1423, -2708 | `pindus_mountains` |
+| Northern Europe gap | 0, -4500 | `none` |
+| Western Europe gap | 100, -3200 | `none` |
+| Eastern Europe gap | 2800, -3850 | `none` |
+| Mediterranean Europe gap | -700, -2700 | `none` |
+| Northern Italy / Bologna | 774, -3038 | `none` |
+
+Overlaps intentionally resolve by the supplied priorities: many river/mountain zones take precedence over broader plains/steppe. The supplied Apennines polygon describes the central peninsula; northern Italy/Bologna remains an intentional gap under the unchanged macro boundaries, rather than expanding Mediterranean Europe. These are structural results, not gameplay claims.
+
+## Future geography (not implemented)
+
+Additional local areas outside Europe require capacity planning: only nine global slots remain in Core 0.6.1. A separate Core scaling update is planned before broader expansion. Later candidates include Somali Coast, Ethiopian Highlands and Rift Valley in East Africa & Horn. Do not add them to this release.
+
+Future eras may supply `era_labels` for educational name changes. Regional skins/trade availability will later primarily use macros, with selected local refinements. The current archetypes require no explicit 55-area override maps: Core supplies their name prefix automatically. Parent macros must agree with independently resolved macro context. Missing local areas remain valid.
