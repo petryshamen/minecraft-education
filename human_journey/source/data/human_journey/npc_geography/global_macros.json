@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "macro_regions": [
+    {
+      "id": "northern_europe",
+      "dimension": "minecraft:overworld",
+      "priority": 60,
+      "polygon": [
+        [
+          -1707,
+          -3755
+        ],
+        [
+          2731,
+          -3755
+        ],
+        [
+          2731,
+          -4915
+        ],
+        [
+          -1707,
+          -4915
+        ]
+      ]
+    },
+    {
+      "id": "western_central_europe",
+      "dimension": "minecraft:overworld",
+      "priority": 52,
+      "polygon": [
+        [
+          -819,
+          -2935
+        ],
+        [
+          1707,
+          -2935
+        ],
+        [
+          1707,
+          -3755
+        ],
+        [
+          -819,
+          -3755
+        ]
+      ]
+    },
+    {
+      "id": "eastern_europe",
+      "dimension": "minecraft:overworld",
+      "priority": 50,
+      "polygon": [
+        [
+          1707,
+          -2935
+        ],
+        [
+          4096,
+          -2935
+        ],
+        [
+          4096,
+          -4096
+        ],
+        [
+          1707,
+          -4096
+        ]
+      ]
+    },
+    {
+      "id": "mediterranean_europe",
+      "dimension": "minecraft:overworld",
+      "priority": 60,
+      "polygon": [
+        [
+          -819,
+          -2389
+        ],
+        [
+          2048,
+          -2389
+        ],
+        [
+          2048,
+          -2935
+        ],
+        [
+          -819,
+          -2935
+        ]
+      ]
+    },
+    {
+      "id": "north_africa",
+      "dimension": "minecraft:overworld",
+      "priority": 50,
+      "polygon": [
+        [
+          -1365,
+          -1024
+        ],
+        [
+          2389,
+          -1024
+        ],
+        [
+          2389,
+          -2389
+        ],
+        [
+          -1365,
+          -2389
+        ]
+      ]
+    },
+    {
+      "id": "west_central_africa",
+      "dimension": "minecraft:overworld",
+      "priority": 40,
+      "polygon": [
+        [
+          -1365,
+          683
+        ],
+        [
+          2048,
+          683
+        ],
+        [
+          2048,
+          -1024
+        ],
+        [
+          -1365,
+          -1024
+        ]
+      ]
+    },
+    {
+      "id": "east_africa_horn",
+      "dimension": "minecraft:overworld",
+      "priority": 60,
+      "polygon": [
+        [
+          2048,
+          819
+        ],
+        [
+          3550,
+          819
+        ],
+        [
+          3550,
+          -1229
+        ],
+        [
+          2389,
+          -1229
+        ],
+        [
+          2048,
+          -683
+        ]
+      ]
+    },
+    {
+      "id": "southern_africa",
+      "dimension": "minecraft:overworld",
+      "priority": 50,
+      "polygon": [
+        [
+          683,
+          2389
+        ],
+        [
+          3550,
+          2389
+        ],
+        [
+          3550,
+          683
+        ],
+        [
+          683,
+          683
+        ]
+      ]
+    },
+    {
+      "id": "near_east_caucasus",
+      "dimension": "minecraft:overworld",
+      "priority": 70,
+      "polygon": [
+        [
+          2048,
+          -2389
+        ],
+        [
+          2389,
+          -2048
+        ],
+        [
+          3072,
+          -1707
+        ],
+        [
+          4437,
+          -1707
+        ],
+        [
+          4437,
+          -3072
+        ],
+        [
+          2048,
+          -3072
+        ]
+      ]
+    },
+    {
+      "id": "arabian_peninsula",
+      "dimension": "minecraft:overworld",
+      "priority": 80,
+      "polygon": [
+        [
+          2389,
+          -819
+        ],
+        [
+          4096,
+          -819
+        ],
+        [
+          4096,
+          -1707
+        ],
+        [
+          3072,
+          -1707
+        ],
+        [
+          2389,
+          -2048
+        ]
+      ]
+    },
+    {
+      "id": "central_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 60,
+      "polygon": [
+        [
+          3072,
+          -3072
+        ],
+        [
+          3755,
+          -2389
+        ],
+        [
+          6485,
+          -2389
+        ],
+        [
+          6485,
+          -3755
+        ],
+        [
+          3072,
+          -3755
+        ]
+      ]
+    },
+    {
+      "id": "northern_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 40,
+      "polygon": [
+        [
+          4096,
+          -3755
+        ],
+        [
+          12288,
+          -3755
+        ],
+        [
+          12288,
+          -5461
+        ],
+        [
+          4096,
+          -5461
+        ]
+      ]
+    },
+    {
+      "id": "south_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 75,
+      "polygon": [
+        [
+          4096,
+          -341
+        ],
+        [
+          6485,
+          -341
+        ],
+        [
+          6485,
+          -2389
+        ],
+        [
+          4437,
+          -2389
+        ],
+        [
+          4096,
+          -1707
+        ]
+      ]
+    },
+    {
+      "id": "east_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 65,
+      "polygon": [
+        [
+          6485,
+          -1365
+        ],
+        [
+          10240,
+          -1365
+        ],
+        [
+          10240,
+          -3755
+        ],
+        [
+          6485,
+          -3755
+        ]
+      ]
+    },
+    {
+      "id": "southeast_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 80,
+      "polygon": [
+        [
+          6144,
+          819
+        ],
+        [
+          10240,
+          819
+        ],
+        [
+          10240,
+          -1365
+        ],
+        [
+          6144,
+          -1365
+        ]
+      ]
+    },
+    {
+      "id": "oceania",
+      "dimension": "minecraft:overworld",
+      "priority": 50,
+      "polygon": [
+        [
+          7509,
+          3413
+        ],
+        [
+          12288,
+          3413
+        ],
+        [
+          12288,
+          683
+        ],
+        [
+          7509,
+          683
+        ]
+      ]
+    },
+    {
+      "id": "north_america",
+      "dimension": "minecraft:overworld",
+      "priority": 30,
+      "polygon": [
+        [
+          -12288,
+          -1024
+        ],
+        [
+          -3413,
+          -1024
+        ],
+        [
+          -3413,
+          -4096
+        ],
+        [
+          -683,
+          -4096
+        ],
+        [
+          -683,
+          -5803
+        ],
+        [
+          -5120,
+          -5803
+        ],
+        [
+          -5120,
+          -5120
+        ],
+        [
+          -12288,
+          -5120
+        ]
+      ]
+    },
+    {
+      "id": "mesoamerica_caribbean",
+      "dimension": "minecraft:overworld",
+      "priority": 70,
+      "polygon": [
+        [
+          -8192,
+          -2048
+        ],
+        [
+          -4096,
+          -2048
+        ],
+        [
+          -4096,
+          -478
+        ],
+        [
+          -5257,
+          -478
+        ],
+        [
+          -5598,
+          -683
+        ],
+        [
+          -6144,
+          -1024
+        ],
+        [
+          -7168,
+          -1365
+        ]
+      ]
+    },
+    {
+      "id": "south_america",
+      "dimension": "minecraft:overworld",
+      "priority": 80,
+      "polygon": [
+        [
+          -5598,
+          -887
+        ],
+        [
+          -2389,
+          -887
+        ],
+        [
+          -2389,
+          3823
+        ],
+        [
+          -5598,
+          3823
+        ]
+      ]
+    }
+  ],
+  "local_areas": []
+}

@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.3.17
+
+- Added the supplied 19 broad Overworld NPC macro-region polygons and technical priorities; no local areas, regional names, skins or trade overrides. Documented the calibrated Earth conversion X = round(longitude × 1024/15), Z = round(-latitude × 1024/15).
+- Structurally checked the 15 supplied calibration points, polygon geometry and boundary precedence. Existing archetypes/economy, progression/rollback, roles, water, temperature and fishing are unchanged; Core is untouched and gameplay testing remains manual.
+
 ## 0.3.16
 
 - Integrated Core 0.6.1 read-only era context and Era 0 Hunter/Fisher/Forager archetypes with fixed placeholder skins, shared scarce stock and no timed resets; geography/season overrides stay empty.
