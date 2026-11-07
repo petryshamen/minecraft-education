@@ -4,7 +4,7 @@ Core supplies schemas, matching, solver, native offer integration and bounded be
 
 ## Install and integration boundary
 
-Use Minecraft Java 1.21.8, Forge 58.1.18, exact Easy NPC 6.5.2 and the existing mod stack. Replace the Core JAR manually with `human_journey_core-0.7.0.jar`; keep one Core version and matching server/client Core. Core is required on clients too because native merchant cost matching is extended there as well as server-side. Existing static templates and old archetypes remain valid and keep their existing trade/movement semantics. Nothing automatically installs, deploys or edits the main datapack.
+Use Minecraft Java 1.21.8, Forge 58.1.18, exact Easy NPC 6.5.2 and the existing mod stack. Replace the Core JAR manually with `human_journey_core-0.7.0.jar`; keep one Core version and matching server/client Core. Core is required on clients too because native merchant cost matching is extended there as well as server-side. The native sanitizer hook and movement registration are gated to the exact optional Easy NPC version; absent/unsupported dependencies still produce the existing spawn diagnostic while unrelated Core systems remain available. This gate is structurally tested; a dependency-absent game launch is not claimed. Existing static templates and old archetypes remain valid and keep their existing trade/movement semantics. Nothing automatically installs, deploys or edits the main datapack.
 
 New data paths (all JSON, schema version 1):
 

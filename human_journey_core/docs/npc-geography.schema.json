@@ -115,11 +115,7 @@
               "water",
               "relief",
               "special"
-            ],
-            "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "$id": "urn:human-journey:npc-profile:1",
-            "title": "npc-profile \u2014 Core 0.7.0",
-            "description": "Runtime validates vocabulary additions, references, component codecs, geometry and composed data; see ECONOMY.md."
+            ]
           }
         },
         "required": [
@@ -279,11 +275,7 @@
               "water",
               "relief",
               "special"
-            ],
-            "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "$id": "urn:human-journey:npc-profile:1",
-            "title": "npc-profile \u2014 Core 0.7.0",
-            "description": "Runtime validates vocabulary additions, references, component codecs, geometry and composed data; see ECONOMY.md."
+            ]
           }
         },
         "required": [
