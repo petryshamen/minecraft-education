@@ -1,5 +1,7 @@
 # Human Journey Core 0.7.0
 
+**Build verified:** [GitHub Actions run 42418468802](https://github.com/petryshamen/minecraft-education/actions/runs/42418468802), source `a100a47d6bee20a8e9ba51120bde03515172c23f`. All 123 unit/structural tests passed (30 new economy tests plus all 93 previous tests). All seven no-world Forge data/Mixin checks passed, including native family matching, Easy NPC sanitizer/trade-data save/load, NBT and network codecs, XP/stock configuration and actual non-stackable items. Scale checks cover 600 local areas/patches and 521 geography resources. 105 old classes are byte-identical to Core 0.6.1; all 74 existing non-NPC classes, including all 15 temperature classes and complete fishing/water/audio integration, are unchanged. Runtime JAR SHA-256: `2c39ce6e711f48809395280462420a7039e34f2b04102f85c01c3fc45998880d`. No Minecraft entity/world was created, gameplay-tested, installed or deployed.
+
 Data-driven NPC economy engine: commodity/family/profile schemas, deterministic value barter, native stack limits, frozen family payments, spawn-time persisted offers, native XP and bounded generic movement. **[Economy integration, schema reference, limitations and checklist](ECONOMY.md)**. Core supplies no production prices/catalogs or real regional mappings. The separate economy pack is synthetic test-only. Existing progression, story/WE CAN STAY, NPC context, fishing, temperature and water systems remain intact.
 
 
