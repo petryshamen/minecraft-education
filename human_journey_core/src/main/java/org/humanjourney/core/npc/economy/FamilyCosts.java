@@ -16,7 +16,7 @@ public final class FamilyCosts {
   return new ItemCost(BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(members.getFirst())).builtInRegistryHolder(),count,DataComponentExactPredicate.expect(DataComponents.CUSTOM_DATA,CustomData.of(data)));
  }
  public static boolean marked(ItemStack display){var data=display.get(DataComponents.CUSTOM_DATA);return data!=null&&data.copyTag().contains(MARKER);}
- public static boolean accepts(ItemCost cost,ItemStack offered){if(offered.isEmpty()||offered.getMaxStackSize()<cost.count())return false;var data=cost.itemStack().get(DataComponents.CUSTOM_DATA).copyTag();var members=data.getListOrEmpty(MARKER);if(count<1||members.isEmpty()||members.size()>256)return false;String id=BuiltInRegistries.ITEM.getKey(offered.getItem()).toString();for(var member:members)if(member.asString().orElse("").equals(id))return true;return false;}
+ public static boolean accepts(ItemCost cost,ItemStack offered){if(offered.isEmpty()||cost.count()<1||offered.getMaxStackSize()<cost.count())return false;var data=cost.itemStack().get(DataComponents.CUSTOM_DATA).copyTag();var members=data.getListOrEmpty(MARKER);if(members.isEmpty()||members.size()>256)return false;String id=BuiltInRegistries.ITEM.getKey(offered.getItem()).toString();for(var member:members)if(member.asString().orElse("").equals(id))return true;return false;}
  public static ItemCost preserve(ItemStack display){return marked(display)?new ItemCost(display.getItem().builtInRegistryHolder(),display.getCount(),DataComponentExactPredicate.expect(DataComponents.CUSTOM_DATA,display.get(DataComponents.CUSTOM_DATA))):new ItemCost(display.getItem(),Math.max(1,display.getCount()));}
  private FamilyCosts(){}
 }
