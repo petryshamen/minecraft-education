@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 4,
+  "rarity": "Limited",
+  "maxUses": 2,
+  "sellers": [
+    "human_journey:forager"
+  ],
+  "buyers": [],
+  "item": "minecraft:beetroot",
+  "sellAvailability": {
+    "temperature": [
+      "cold",
+      "cool",
+      "temperate",
+      "warm",
+      "hot"
+    ],
+    "moisture": [
+      "dry",
+      "moderate",
+      "humid",
+      "wet"
+    ],
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

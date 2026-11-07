@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 8,
+  "rarity": "Common",
+  "maxUses": 3,
+  "sellers": [
+    "human_journey:fisher"
+  ],
+  "buyers": [],
+  "item": "minecraft:cod",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": [
+      "river",
+      "lake",
+      "coast",
+      "fjord",
+      "ocean"
+    ],
+    "relief": "any",
+    "special": "any"
+  }
+}

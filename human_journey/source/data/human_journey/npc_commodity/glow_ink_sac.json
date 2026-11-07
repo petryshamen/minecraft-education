@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 14,
+  "rarity": "Rare",
+  "maxUses": 1,
+  "sellers": [
+    "human_journey:fisher"
+  ],
+  "buyers": [],
+  "item": "minecraft:glow_ink_sac",
+  "sellAvailability": {
+    "temperature": [
+      "cold",
+      "cool"
+    ],
+    "moisture": "any",
+    "vegetation": "any",
+    "water": [
+      "river",
+      "lake",
+      "coast",
+      "fjord",
+      "ocean"
+    ],
+    "relief": "any",
+    "special": [
+      "cave_access",
+      "deep_water_access"
+    ]
+  }
+}

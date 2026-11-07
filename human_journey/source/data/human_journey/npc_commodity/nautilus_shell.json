@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 32,
+  "rarity": "Rare",
+  "maxUses": 1,
+  "sellers": [
+    "human_journey:fisher"
+  ],
+  "buyers": [],
+  "item": "minecraft:nautilus_shell",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": [
+      "coast",
+      "ocean"
+    ],
+    "relief": "any",
+    "special": "any"
+  }
+}

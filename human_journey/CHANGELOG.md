@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.4.0
+
+- Integrated the approved 49 Era 0 commodities, five native payment families and complete profiles on all 19 macros/55 European local areas using Core 0.7.0. Profiles filter selling only; approved values/stock remain unchanged.
+- Hunter/Fisher/Forager now use Core-generated offers, native XP, look controls and bounded 10-block wandering; removed their obsolete static offer arrays. Regional leaves use family context rules derived from the approved profiles; no custom pricing/restock logic.
+- Traveller bindings are omitted because Core requires archetype-backed roles; mandatory input-only maxUses is inert 1. Family resource IDs use lowercase. Static/story content, polygons/priorities, progression, locks, Traveller, fishing, water and temperature are unchanged. No Core changes or gameplay testing.
+
 ## 0.3.18
 
 - Added Europe Local Areas v1: 55 uniquely prioritized areas in four resources (Northern 16, Western/Central 13, Eastern 9, Mediterranean 17). Local display labels prefix new NPC names automatically; no archetype trade/skin overrides or era labels.

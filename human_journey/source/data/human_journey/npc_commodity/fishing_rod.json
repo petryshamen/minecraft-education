@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 18,
+  "rarity": "Limited",
+  "maxUses": 1,
+  "sellers": [],
+  "buyers": [
+    "human_journey:fisher"
+  ],
+  "item": "minecraft:fishing_rod",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

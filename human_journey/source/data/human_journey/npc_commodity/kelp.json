@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 2,
+  "rarity": "Common",
+  "maxUses": 3,
+  "sellers": [
+    "human_journey:fisher"
+  ],
+  "buyers": [
+    "human_journey:forager"
+  ],
+  "item": "minecraft:kelp",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": [
+      "coast",
+      "fjord",
+      "ocean"
+    ],
+    "relief": "any",
+    "special": "any"
+  }
+}

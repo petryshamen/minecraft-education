@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.3.18 — Europe Local Areas v1"
+    "description": "Human Journey v0.4.0 — Era 0 Dynamic Economy"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.3.18"
+    "version": "0.4.0"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 8,
+  "rarity": "Limited",
+  "maxUses": 2,
+  "sellers": [
+    "human_journey:fisher"
+  ],
+  "buyers": [],
+  "item": "minecraft:ink_sac",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": [
+      "river",
+      "lake",
+      "coast",
+      "fjord",
+      "ocean"
+    ],
+    "relief": "any",
+    "special": "any"
+  }
+}

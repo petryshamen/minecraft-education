@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 1,
+  "rarity": "Common",
+  "maxUses": 1,
+  "sellers": [],
+  "buyers": [
+    "human_journey:hunter",
+    "human_journey:fisher"
+  ],
+  "item": "minecraft:stick",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

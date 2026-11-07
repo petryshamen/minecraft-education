@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 8,
+  "rarity": "Limited",
+  "maxUses": 2,
+  "sellers": [
+    "human_journey:forager"
+  ],
+  "buyers": [
+    "human_journey:hunter"
+  ],
+  "item": "minecraft:apple",
+  "sellAvailability": {
+    "temperature": [
+      "cold",
+      "cool",
+      "temperate",
+      "warm",
+      "hot"
+    ],
+    "moisture": [
+      "dry",
+      "moderate",
+      "humid",
+      "wet"
+    ],
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

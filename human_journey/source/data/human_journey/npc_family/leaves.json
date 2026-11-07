@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "members": [
+    "minecraft:oak_leaves",
+    "minecraft:spruce_leaves",
+    "minecraft:birch_leaves",
+    "minecraft:jungle_leaves",
+    "minecraft:acacia_leaves",
+    "minecraft:dark_oak_leaves",
+    "minecraft:mangrove_leaves",
+    "minecraft:cherry_leaves",
+    "minecraft:pale_oak_leaves"
+  ],
+  "default_member": "minecraft:oak_leaves",
+  "output_overrides": [
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "central_asia"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "east_africa_horn"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "east_asia"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "eastern_europe"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "mediterranean_europe"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "mesoamerica_caribbean"
+      },
+      "item": "minecraft:mangrove_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "near_east_caucasus"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "north_america"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "northern_asia"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "northern_europe"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "oceania"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "south_america"
+      },
+      "item": "minecraft:jungle_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "south_asia"
+      },
+      "item": "minecraft:jungle_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "southeast_asia"
+      },
+      "item": "minecraft:jungle_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "southern_africa"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "west_central_africa"
+      },
+      "item": "minecraft:jungle_leaves"
+    },
+    {
+      "priority": 100,
+      "when": {
+        "era": "era_0",
+        "macro_region": "western_central_europe"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "aegean_islands"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "alps"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "apennines"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "azov_coast"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "baetic_mountains"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "baltic_archipelagos"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "bohemian_massif"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "bothnian_coast"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "cantabrian_mountains"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "central_irish_lowlands"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "central_russian_upland"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "central_swedish_lakes"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "central_uplands"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "corsica"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "crete"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "dalmatian_coast"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "danish_lowlands"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "danube_corridor"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "dinaric_alps_south"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "dnieper_basin"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "dniester_basin"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "don_basin"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "eastern_baltic_coast"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "eastern_carpathians"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "ebro_basin"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "faroe_islands"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "finnish_lakeland"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "garonne_basin"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "guadalquivir_valley"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "iberian_meseta"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "iceland"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "karelian_isthmus"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "karelian_lake_country"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "massif_central"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "north_european_plain_west"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "norwegian_fjord_coast"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "pannonian_plain_west"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "peloponnese"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "pindus_mountains"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "pontic_steppe"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "pripyat_marshes"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "pyrenees"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "rhine_valley"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "rhone_saone_corridor"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "sardinia"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "scandinavian_mountains"
+      },
+      "item": "minecraft:spruce_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "scottish_highlands"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "seine_basin"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "sicily"
+      },
+      "item": "minecraft:acacia_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "tagus_basin"
+      },
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "thames_basin"
+      },
+      "item": "minecraft:birch_leaves"
+    },
+    {
+      "priority": 200,
+      "when": {
+        "era": "era_0",
+        "local_area": "volga_upland"
+      },
+      "item": "minecraft:spruce_leaves"
+    }
+  ]
+}

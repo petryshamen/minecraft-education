@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 24,
+  "rarity": "Rare",
+  "maxUses": 1,
+  "sellers": [],
+  "buyers": [
+    "human_journey:hunter"
+  ],
+  "item": "minecraft:bow",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

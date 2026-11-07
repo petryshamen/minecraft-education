@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 10,
+  "rarity": "Limited",
+  "maxUses": 2,
+  "sellers": [
+    "human_journey:hunter"
+  ],
+  "buyers": [],
+  "item": "minecraft:rabbit",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

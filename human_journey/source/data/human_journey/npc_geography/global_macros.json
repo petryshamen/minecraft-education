@@ -22,7 +22,25 @@
           -1707,
           -4915
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "western_central_europe",
@@ -45,7 +63,25 @@
           -819,
           -3755
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "eastern_europe",
@@ -68,7 +104,25 @@
           1707,
           -4096
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "mediterranean_europe",
@@ -91,7 +145,25 @@
           -819,
           -2935
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
     },
     {
       "id": "north_africa",
@@ -114,7 +186,25 @@
           -1365,
           -2389
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau"
+        ],
+        "special": []
+      }
     },
     {
       "id": "west_central_africa",
@@ -137,7 +227,25 @@
           -1365,
           -1024
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "east_africa_horn",
@@ -164,7 +272,25 @@
           2048,
           -683
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "southern_africa",
@@ -187,7 +313,25 @@
           683,
           683
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau"
+        ],
+        "special": []
+      }
     },
     {
       "id": "near_east_caucasus",
@@ -218,7 +362,25 @@
           2048,
           -3072
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "arabian_peninsula",
@@ -245,7 +407,25 @@
           2389,
           -2048
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau"
+        ],
+        "special": []
+      }
     },
     {
       "id": "central_asia",
@@ -272,7 +452,25 @@
           3072,
           -3755
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "northern_asia",
@@ -295,7 +493,25 @@
           4096,
           -5461
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "south_asia",
@@ -322,7 +538,25 @@
           4096,
           -1707
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "east_asia",
@@ -345,7 +579,25 @@
           6485,
           -3755
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "southeast_asia",
@@ -368,7 +620,25 @@
           6144,
           -1365
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "oceania",
@@ -391,7 +661,25 @@
           7509,
           683
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "north_america",
@@ -430,7 +718,25 @@
           -12288,
           -5120
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "mesoamerica_caribbean",
@@ -465,7 +771,25 @@
           -7168,
           -1365
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "south_america",
@@ -488,7 +812,25 @@
           -5598,
           3823
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     }
   ],
   "local_areas": []

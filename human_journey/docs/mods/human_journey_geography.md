@@ -50,7 +50,7 @@ The JSON is the single editable source of polygon vertices. Validation covers al
 
 ## Names, content and context
 
-Europe Local Areas v1 adds local display labels only. `/hj npc context` reports the highest-priority matching local ID and label, or `none` in intentional gaps. Core prefixes new NPC names using only that local label (e.g. **Dnieper Fisher**, **Alps Hunter**, **Finnish Lakeland Forager**). Without a local label the names remain **Hunter**, **Fisher**, **Forager**. Macro names never become prefixes. Trades, skins and all other archetype content are identical in every location; no era labels, regional content overrides or seasonal changes are added.
+Europe Local Areas v1 adds local display labels only. `/hj npc context` reports the highest-priority matching local ID and label, or `none` in intentional gaps. Core prefixes new NPC names using only that local label (e.g. **Dnieper Fisher**, **Alps Hunter**, **Finnish Lakeland Forager**). Without a local label the names remain **Hunter**, **Fisher**, **Forager**. Macro names never become prefixes. Skins and base dialogue remain shared, with no era-label or season overrides. Core 0.7.0 now uses each area's complete production profile to filter seller commodities and resolve family outputs; buying remains geography-independent.
 
 Context is captured once at spawn by Core; existing NPCs are not refreshed by a datapack reload. Era stays read-only: `hj_civ / #era1 = 0` → `era_0`, `1` → `era_1`; economic roles remain Era 0 only. This geography neither writes progression nor affects Core's separate water/salt geography.
 
@@ -65,7 +65,7 @@ Five geography resources are now loaded together: the unchanged `global_macros.j
 | `eastern_europe.json` | `eastern_europe` | 9 |
 | `mediterranean_europe.json` | `mediterranean_europe` | 17 |
 
-All 55 local IDs and priorities are unique. Priority is technical precedence only; the highest-priority matching local wins, independently of macro priority. Each local declares Overworld dimension, parent macro, `display_label` and polygon. No `era_labels` are supplied. The set uses 55/64 local slots, 19/64 macros, 5/64 geography resources, and 1,125/16,384 composed NPC variants (3 archetypes × 75 context locations × 5 season states). Era 1 remains recognized but has no economic roles.
+All 55 local IDs and priorities are unique. Priority is technical precedence only; the highest-priority matching local wins, independently of macro priority. Each local declares Overworld dimension, parent macro, `display_label` and polygon. No `era_labels` are supplied. The original Core 0.6.1 release used 55/64 local slots, 19/64 macros, 5/64 geography resources, and 1,125/16,384 composed NPC variants (3 archetypes × 75 context locations × 5 season states). Era 1 remains recognized but has no economic roles.
 
 ### Minimal boundary corrections
 
@@ -111,6 +111,10 @@ Overlaps intentionally resolve by the supplied priorities: many river/mountain z
 
 ## Future geography (not implemented)
 
-Additional local areas outside Europe require capacity planning: only nine global slots remain in Core 0.6.1. A separate Core scaling update is planned before broader expansion. Later candidates include Somali Coast, Ethiopian Highlands and Rift Valley in East Africa & Horn. Do not add them to this release.
+Core 0.7.0 now supports 4,096 locals, 512 macros, 1,024 geography resources and 1,048,576 compositions. This content release still has exactly 55 European locals and 19 macros; it adds no new polygons. Later candidates include Somali Coast, Ethiopian Highlands and Rift Valley in East Africa & Horn. Do not add them to this release.
 
 Future eras may supply `era_labels` for educational name changes. Regional skins/trade availability will later primarily use macros, with selected local refinements. The current archetypes require no explicit 55-area override maps: Core supplies their name prefix automatically. Parent macros must agree with independently resolved macro context. Missing local areas remain valid.
+
+## Production economy profiles
+
+Every existing area now has the six approved profile arrays: temperature, moisture, vegetation, water, relief and special. An empty special array represents none. A local profile replaces the macro profile completely; gaps use macro fallback. Pontic Steppe has water `["inland", "river"]`. No polygon, priority, parent, label or calibration changed. Profiles do not infer Minecraft biome data. Economy mapping details: [Human Journey economy](human_journey_economy.md).

@@ -1,7 +1,7 @@
-<!-- hj-mod-inspection {"filename":"human_journey_core-0.6.1.jar","sha256":"c73b9b8e7944cbfe3d32768a8a1a5abf81c8dc358976f4f94965e8bc3c73db62","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.6.1","declared_version":"0.6.1"}]} -->
+<!-- hj-mod-inspection {"filename":"human_journey_core-0.7.0.jar","sha256":"2c39ce6e711f48809395280462420a7039e34f2b04102f85c01c3fc45998880d","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.7.0","declared_version":"0.7.0"}]} -->
 # Human Journey Core
 
-Inspected installed `human_journey_core-0.6.1.jar`, Core **0.6.1**, SHA-256 `c73b9b8e7944cbfe3d32768a8a1a5abf81c8dc358976f4f94965e8bc3c73db62`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Installed hash matches the published 0.6.1 checksum. Read-only metadata/class evidence was correlated with [the matching README, water schema and source](https://github.com/petryshamen/minecraft-education/tree/80c3d4a7ae3c1053773aeb4e8e643f53101f24a3/human_journey_core). No JAR was changed or rebuilt.
+Inspected installed `human_journey_core-0.7.0.jar`, Core **0.7.0**, SHA-256 `2c39ce6e711f48809395280462420a7039e34f2b04102f85c01c3fc45998880d`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Installed hash matches the published 0.7.0 checksum. Read-only metadata/class evidence was correlated with [the matching README, water schema and source](https://github.com/petryshamen/minecraft-education/tree/80c3d4a7ae3c1053773aeb4e8e643f53101f24a3/human_journey_core). No JAR was changed or rebuilt.
 
 Core is the engine/API; this datapack owns gameplay balance. The Core loader reads exactly `data/human_journey/core/temperature.json` (source: `source/data/human_journey/core/temperature.json`). Use `schema_version: 1`; unknown fields, wrong types, non-finite/out-of-range numbers reject the entire update.
 
@@ -78,3 +78,7 @@ Traveller remains a native Wandering Trader, independent of Core archetypes. Can
 Installed vanilla 1.21.8 codec bytecode was inspected as data: MerchantOffer `buy/buyB` use ItemCost (`id/count/components` exact component predicate); `sell` uses ItemStack (`id/count/components` patch). Potion outputs explicitly set `minecraft:potion_contents: {potion: minecraft:healing|night_vision|water_breathing}`; the horn sets `minecraft:instrument: minecraft:ponder_goat_horn`. Water payments use the registered separate `toughasnails:purified_water_bottle` item, never a generic potion cost. Salt/normal/dirty containers do not match it. These are native codecs, not inventory-rewriting workarounds.
 
 NPC geography calibration and macro IDs/priorities: [Human Journey geography](human_journey_geography.md). Macro context alone never prefixes visible NPC names; only local-area labels do that (Europe Local Areas v1 now supplies 55).
+
+## Production dynamic economy (0.4.0 content / Core 0.7.0)
+
+Required installed Core: `human_journey_core-0.7.0.jar`, SHA-256 `2c39ce6e711f48809395280462420a7039e34f2b04102f85c01c3fc45998880d`. The 0.6.1 sections above retain the earlier water/temperature/NPC integration history; those mechanics remain unchanged. Production economy resources require 0.7.0 on server and clients. See [the economy content note](human_journey_economy.md).

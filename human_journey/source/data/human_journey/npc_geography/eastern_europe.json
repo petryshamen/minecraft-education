@@ -28,7 +28,28 @@
           1708,
           -3345
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
     },
     {
       "id": "dniester_basin",
@@ -61,7 +82,25 @@
           1708,
           -3345.5
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
     },
     {
       "id": "dnieper_basin",
@@ -98,7 +137,25 @@
           1843,
           -3550
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "pripyat_marshes",
@@ -131,7 +188,25 @@
           1708,
           -3550.5
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "wetland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "azov_coast",
@@ -164,7 +239,25 @@
           2389,
           -3195
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "don_basin",
@@ -197,7 +290,25 @@
           2458,
           -3550
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "pontic_steppe",
@@ -238,7 +349,26 @@
           1708,
           -3140.671569
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "central_russian_upland",
@@ -271,7 +401,25 @@
           2458,
           -3686
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "volga_upland",
@@ -304,7 +452,25 @@
           2867,
           -3959
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
     }
   ]
 }

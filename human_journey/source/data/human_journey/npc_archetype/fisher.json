@@ -4,7 +4,7 @@
   "base": {
     "skin_url": "https://raw.githubusercontent.com/MarkusBordihn/BOs-Easy-NPC/f929f51540778bb8bcbb43989e6ff4a4c816ce85/core/Common/src/main/resources/assets/easy_npc/textures/entity/humanoid/humanoid_template.png",
     "behavior": {
-      "stationary": true,
+      "stationary": false,
       "invulnerable": true
     },
     "dialogue": {
@@ -28,117 +28,14 @@
       ]
     },
     "trading": {
-      "reset_minutes": 0,
-      "offers": [
-        {
-          "input": {
-            "item": "minecraft:oak_log",
-            "count": 6
-          },
-          "output": {
-            "item": "minecraft:cod",
-            "count": 1
-          },
-          "uses": 0,
-          "maxUses": 3
-        },
-        {
-          "input": {
-            "item": "minecraft:string",
-            "count": 2
-          },
-          "output": {
-            "item": "minecraft:salmon",
-            "count": 1
-          },
-          "uses": 0,
-          "maxUses": 2
-        },
-        {
-          "input": {
-            "item": "minecraft:charcoal",
-            "count": 4
-          },
-          "output": {
-            "item": "minecraft:cod",
-            "count": 1
-          },
-          "uses": 0,
-          "maxUses": 2
-        },
-        {
-          "input": {
-            "item": "minecraft:leather",
-            "count": 1
-          },
-          "output": {
-            "item": "minecraft:cod",
-            "count": 4
-          },
-          "uses": 0,
-          "maxUses": 2
-        },
-        {
-          "input": {
-            "item": "minecraft:oak_boat",
-            "count": 1
-          },
-          "output": {
-            "item": "minecraft:salmon",
-            "count": 1
-          },
-          "uses": 0,
-          "maxUses": 2
-        },
-        {
-          "input": {
-            "item": "minecraft:baked_potato",
-            "count": 2
-          },
-          "output": {
-            "item": "minecraft:cod",
-            "count": 1
-          },
-          "uses": 0,
-          "maxUses": 2
-        },
-        {
-          "input": {
-            "item": "minecraft:honey_bottle",
-            "count": 1
-          },
-          "output": {
-            "item": "minecraft:glow_ink_sac",
-            "count": 1
-          },
-          "uses": 0,
-          "maxUses": 1
-        },
-        {
-          "input": {
-            "item": "minecraft:fishing_rod",
-            "count": 1
-          },
-          "output": {
-            "item": "minecraft:nautilus_shell",
-            "count": 1
-          },
-          "uses": 0,
-          "maxUses": 1
-        },
-        {
-          "input": {
-            "item": "minecraft:leather",
-            "count": 1
-          },
-          "output": {
-            "item": "minecraft:ink_sac",
-            "count": 2
-          },
-          "uses": 0,
-          "maxUses": 2
-        }
-      ]
+      "reset_minutes": 0
+    },
+    "economy": {
+      "enabled": true,
+      "wandering": true,
+      "look_at_players": true,
+      "wander_radius": 10,
+      "family_outputs": {}
     }
   },
   "eras": {

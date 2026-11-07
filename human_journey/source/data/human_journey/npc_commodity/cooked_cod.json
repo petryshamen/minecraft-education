@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 12,
+  "rarity": "Limited",
+  "maxUses": 1,
+  "sellers": [],
+  "buyers": [
+    "human_journey:hunter",
+    "human_journey:forager"
+  ],
+  "item": "minecraft:cooked_cod",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

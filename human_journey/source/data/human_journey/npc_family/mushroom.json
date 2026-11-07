@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "members": [
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom"
+  ],
+  "default_member": "minecraft:brown_mushroom"
+}

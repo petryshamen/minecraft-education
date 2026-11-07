@@ -52,7 +52,29 @@
           478,
           -3946
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "fjord"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "deep_water_access",
+          "mountain_access",
+          "cave_access"
+        ]
+      }
     },
     {
       "id": "faroe_islands",
@@ -77,7 +99,25 @@
           -532,
           -4267
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "ocean"
+        ],
+        "relief": [
+          "island"
+        ],
+        "special": []
+      }
     },
     {
       "id": "icelandic_highlands",
@@ -114,7 +154,28 @@
           -1468,
           -4451
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
     },
     {
       "id": "baltic_archipelagos",
@@ -151,7 +212,25 @@
           1161,
           -4096
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "island"
+        ],
+        "special": []
+      }
     },
     {
       "id": "karelian_isthmus",
@@ -180,7 +259,25 @@
           1925,
           -4198
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "lake"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "bothnian_coast",
@@ -229,7 +326,25 @@
           1365,
           -4055
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "scandinavian_mountains",
@@ -302,7 +417,28 @@
           546,
           -3959
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "tundra"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
     },
     {
       "id": "kola_peninsula",
@@ -335,7 +471,25 @@
           2116,
           -4745
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "finnish_lakeland",
@@ -376,7 +530,27 @@
           1502,
           -4233
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "lake"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": [
+          "deep_water_access"
+        ]
+      }
     },
     {
       "id": "scottish_highlands",
@@ -413,7 +587,28 @@
           -464,
           -3932
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "shrubland"
+        ],
+        "water": [
+          "lake"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
     },
     {
       "id": "central_swedish_lakes",
@@ -450,7 +645,27 @@
           683,
           -3994
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "lake"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": [
+          "deep_water_access"
+        ]
+      }
     },
     {
       "id": "karelian_lake_country",
@@ -483,7 +698,27 @@
           1980,
           -4471
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "lake"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": [
+          "deep_water_access"
+        ]
+      }
     },
     {
       "id": "eastern_baltic_coast",
@@ -520,7 +755,25 @@
           1333.586957,
           -3755
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "danish_lowlands",
@@ -549,7 +802,25 @@
           513.20202,
           -3755
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
     },
     {
       "id": "northern_fennoscandia",
@@ -586,7 +857,25 @@
           956,
           -4642
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
     },
     {
       "id": "iceland",
@@ -627,7 +916,27 @@
           -1536,
           -4335
         ]
-      ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "island"
+        ],
+        "special": [
+          "cave_access"
+        ]
+      }
     }
   ]
 }

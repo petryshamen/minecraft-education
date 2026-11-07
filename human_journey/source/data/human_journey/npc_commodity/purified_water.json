@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 16,
+  "rarity": "Limited",
+  "maxUses": 1,
+  "sellers": [],
+  "buyers": [
+    "human_journey:hunter",
+    "human_journey:fisher",
+    "human_journey:forager"
+  ],
+  "item": "toughasnails:purified_water_bottle",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

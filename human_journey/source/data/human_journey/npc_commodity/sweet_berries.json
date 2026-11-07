@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 2,
+  "rarity": "Common",
+  "maxUses": 3,
+  "sellers": [
+    "human_journey:forager"
+  ],
+  "buyers": [
+    "human_journey:hunter"
+  ],
+  "item": "minecraft:sweet_berries",
+  "sellAvailability": {
+    "temperature": [
+      "cold",
+      "cool",
+      "temperate",
+      "warm"
+    ],
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 10,
+  "rarity": "Limited",
+  "maxUses": 2,
+  "sellers": [
+    "human_journey:fisher"
+  ],
+  "buyers": [],
+  "item": "minecraft:salmon",
+  "sellAvailability": {
+    "temperature": [
+      "cold",
+      "cool"
+    ],
+    "moisture": "any",
+    "vegetation": "any",
+    "water": [
+      "river",
+      "lake",
+      "coast",
+      "fjord",
+      "ocean"
+    ],
+    "relief": "any",
+    "special": "any"
+  }
+}

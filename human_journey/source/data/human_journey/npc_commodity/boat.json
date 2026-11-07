@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "era": "era_0",
+  "value": 12,
+  "rarity": "Limited",
+  "maxUses": 1,
+  "sellers": [],
+  "buyers": [
+    "human_journey:fisher"
+  ],
+  "family": "human_journey:boat",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}
