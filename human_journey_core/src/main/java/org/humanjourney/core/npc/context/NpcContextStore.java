@@ -28,7 +28,7 @@ public final class NpcContextStore {
         }catch(Exception e){throw new IllegalArgumentException(s.id()+" ["+s.pack()+"]: "+e.getMessage(),e);}
         var economy=EconomyCatalog.parse(goods,families,eras.ids(),roles,geo,vocabulary,stackItems);
         if(!goods.isEmpty())for(var area:java.util.stream.Stream.concat(geo.macros().stream(),geo.locals().stream()).toList())if(area.profile()==null)throw new IllegalArgumentException("economy geography requires complete profile: "+area.id());
-        if(!goods.isEmpty()||!families.isEmpty())for(var role:roles.values())for(String era:role.eras())for(var location:geo.validationLocations(era))for(String season:NpcArchetype.SEASONS){var context=NpcContext.of(era,season,location);economy.validateSettings(role.economy(context),context);}
+        for(var role:roles.values())for(String era:role.eras())for(var location:geo.validationLocations(era))for(String season:NpcArchetype.SEASONS){var context=NpcContext.of(era,season,location);economy.validateSettings(role.economy(context),context);}
         return new Data(eras,geo,roles,sources,checked,economy);
     }
     private static JsonElement parse(Source source){try{return JsonParser.parseString(source.json());}catch(Exception e){throw new IllegalArgumentException(source.id()+" ["+source.pack()+"]: "+e.getMessage(),e);}}
