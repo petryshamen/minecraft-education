@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "eras": [
+    {
+      "id": "era_test",
+      "conditions": [
+        {
+          "objective": "hj_economy_test",
+          "holder": "#era",
+          "operator": "EQUALS",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

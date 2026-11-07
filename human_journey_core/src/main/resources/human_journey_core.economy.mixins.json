@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8.7",
+  "package": "org.humanjourney.core.npc.economy.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemCostMixin",
+    "TradingDataMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

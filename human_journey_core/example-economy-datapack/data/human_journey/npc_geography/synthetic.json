@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "macro_regions": [
+    {
+      "id": "test_macro",
+      "polygon": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ],
+        [
+          100,
+          100
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    }
+  ],
+  "local_areas": [
+    {
+      "id": "test_local",
+      "macro_region": "test_macro",
+      "polygon": [
+        [
+          10,
+          10
+        ],
+        [
+          30,
+          10
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          10,
+          30
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

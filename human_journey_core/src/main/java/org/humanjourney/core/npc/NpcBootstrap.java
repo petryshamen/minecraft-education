@@ -6,7 +6,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public final class NpcBootstrap {
     public static void register(FMLJavaModLoadingContext context){
         AddReloadListenerEvent.BUS.addListener(event->event.addListener(new NpcReloadListener()));
-        AddReloadListenerEvent.BUS.addListener(event->event.addListener(new org.humanjourney.core.npc.context.NpcContextReloadListener()));
+        AddReloadListenerEvent.BUS.addListener(event->event.addListener(new org.humanjourney.core.npc.context.NpcContextReloadListener(event.getRegistries())));
+        org.humanjourney.core.npc.economy.EconomyBootstrap.register(context);
         RegisterCommandsEvent.BUS.addListener(NpcCommands::register);
         ServerStoppedEvent.BUS.addListener(event->{NpcTemplates.reset();org.humanjourney.core.npc.context.NpcContextStore.reset();});
         if(Boolean.getBoolean("humanjourney.waterSmoke")){org.humanjourney.core.npc.easynpc.NpcSmoke.register(context.getModBusGroup());org.humanjourney.core.npc.context.NpcContextSmoke.register(context.getModBusGroup());}

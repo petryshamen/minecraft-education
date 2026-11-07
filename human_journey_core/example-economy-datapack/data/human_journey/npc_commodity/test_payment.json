@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "era": "era_test",
+  "value": 2,
+  "rarity": "test",
+  "maxUses": 5,
+  "sellers": [],
+  "buyers": [
+    "test_trader"
+  ],
+  "family": "test_log",
+  "sellAvailability": {
+    "temperature": [
+      "hot"
+    ],
+    "moisture": "any",
+    "vegetation": "any",
+    "water": "any",
+    "relief": "any",
+    "special": "any"
+  }
+}

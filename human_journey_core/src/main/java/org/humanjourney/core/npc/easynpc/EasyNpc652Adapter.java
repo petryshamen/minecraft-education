@@ -19,7 +19,8 @@ import java.util.*;
 
 /** The only layer importing Easy NPC APIs. No preset import, custom renderer, ticking adapter or stock workaround. */
 public final class EasyNpc652Adapter {
-    public static String spawn(ServerPlayer player,NpcTemplate template,String name){
+    public static String spawn(ServerPlayer player,NpcTemplate template,String name){return spawn(player,template,name,null);}
+    public static String spawn(ServerPlayer player,NpcTemplate template,String name,org.humanjourney.core.npc.economy.EconomySpawn economy){
         NpcDependency.require();var level=player.level();var key=ResourceLocation.parse("easy_npc:humanoid");
         if(!BuiltInRegistries.ENTITY_TYPE.containsKey(key))throw new IllegalArgumentException("Easy NPC humanoid entity type is unavailable");
         var entity=BuiltInRegistries.ENTITY_TYPE.getValue(key).create(level,EntitySpawnReason.COMMAND);
@@ -32,7 +33,8 @@ public final class EasyNpc652Adapter {
             mob.setUUID(identity.entity());npc.setPresetUUID(identity.preset());npc.setNPCOwnerUUID(player.getUUID());npc.setActionPermissionLevel(2);
             mob.setCustomName(Component.literal(template.displayName(name)));mob.setCustomNameVisible(true);mob.setInvulnerable(template.invulnerable());mob.setPersistenceRequired();mob.setNoAi(template.stationary());
             npc.setHomePosition(safe);npc.setSkinDataEntry(SkinDataEntry.createRemoteSkin(template.skinUrl()));npc.setDialogDataSet(dialogs(template,identity));
-            var trading=new TradingDataSet();trading.setType(TradingType.ADVANCED);trading.setResetsEveryMin(template.resetMinutes());trading.setLastReset(System.currentTimeMillis());npc.setTradingDataSet(trading);npc.setTradingOffers(offers(template));
+            var trading=new TradingDataSet();trading.setType(TradingType.ADVANCED);trading.setResetsEveryMin(template.resetMinutes());trading.setLastReset(System.currentTimeMillis());npc.setTradingDataSet(trading);npc.setTradingOffers(economy==null?offers(template):economy.offers());
+            if(economy!=null){if(!(mob instanceof PathfinderMob pathfinder))throw new IllegalArgumentException("economic NPC must support native pathfinding");org.humanjourney.core.npc.economy.EconomyMovement.configure(pathfinder,economy);}
             // Only open dialogue on interaction. Trading is an explicit template button, avoiding two simultaneous screens.
             var interaction=new ActionDataSet();interaction.add(new ActionDataEntry(ActionDataType.OPEN_DEFAULT_DIALOG,identity.entity(),""));
             var events=new ActionEventSet();events.setActionEvent(ActionEventType.ON_INTERACTION,interaction);npc.setActionEventSet(events);

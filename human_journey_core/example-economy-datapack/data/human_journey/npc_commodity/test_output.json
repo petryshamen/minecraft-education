@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "era": "era_test",
+  "value": 5,
+  "rarity": "test",
+  "maxUses": 7,
+  "sellers": [
+    "test_trader"
+  ],
+  "buyers": [],
+  "item": "minecraft:flint",
+  "sellAvailability": {
+    "temperature": "any",
+    "moisture": "any",
+    "vegetation": "any",
+    "water": [
+      "river"
+    ],
+    "relief": "any",
+    "special": "any"
+  },
+  "components": {
+    "minecraft:custom_name": "Synthetic Output"
+  }
+}

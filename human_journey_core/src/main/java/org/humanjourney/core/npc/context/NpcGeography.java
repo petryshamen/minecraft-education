@@ -1,32 +1,34 @@
 package org.humanjourney.core.npc.context;
 import com.google.gson.*;
+import org.humanjourney.core.npc.economy.GeoProfile;
 import java.util.*;
 import org.humanjourney.core.water.WaterGeography;
 import org.humanjourney.core.water.WaterPolicy;
 import static org.humanjourney.core.npc.context.ContextJson.*;
 /** NPC polygons reuse only the existing pure geometry validator, never the water classifier. */
 public record NpcGeography(List<Area> macros,List<Area> locals){
-    public record Area(String id,String dimension,int priority,String parent,String label,Map<String,String> eraLabels,WaterGeography.Region shape){
+    public record Area(String id,String dimension,int priority,String parent,String label,Map<String,String> eraLabels,WaterGeography.Region shape,GeoProfile profile){
         public Area{eraLabels=Map.copyOf(eraLabels);}
         public String label(String era){return eraLabels.getOrDefault(era,label);}
     }
     public record Location(String macro,String local,String label){}
     public NpcGeography{macros=List.copyOf(macros);locals=List.copyOf(locals);}
     public static NpcGeography empty(){return new NpcGeography(List.of(),List.of());}
-    public static NpcGeography parse(List<JsonElement> resources,Set<String> eras){
+    public static NpcGeography parse(List<JsonElement> resources,Set<String> eras){return parse(resources,eras,GeoProfile.vocabulary(null));}
+    public static NpcGeography parse(List<JsonElement> resources,Set<String> eras,Map<String,Set<String>> vocabulary){
         List<Area> macros=new ArrayList<>(),locals=new ArrayList<>();Set<String> macroIds=new HashSet<>(),localIds=new HashSet<>();
         for(var e:resources){var root=object(e,"NPC geography");keys(root,"schema_version","macro_regions","local_areas");schema(root);
-            parseAreas(root,"macro_regions",false,macros,macroIds,eras);parseAreas(root,"local_areas",true,locals,localIds,eras);
+            parseAreas(root,"macro_regions",false,macros,macroIds,eras,vocabulary);parseAreas(root,"local_areas",true,locals,localIds,eras,vocabulary);
         }
-        if(macros.size()>64||locals.size()>64)throw new IllegalArgumentException("at most 64 macro regions and 64 local areas supported");
+        if(macros.size()>512||locals.size()>4096)throw new IllegalArgumentException("at most 512 macro regions and 4096 local areas supported");
         for(var local:locals)if(!local.parent().equals("none")){
             var parent=macros.stream().filter(a->a.id().equals(local.parent())).findFirst().orElseThrow(()->new IllegalArgumentException("unknown macro_region for "+local.id()));
             if(!parent.dimension().equals(local.dimension()))throw new IllegalArgumentException("local area/parent dimension mismatch: "+local.id());
         }return new NpcGeography(macros,locals);
     }
-    private static void parseAreas(JsonObject root,String key,boolean local,List<Area> out,Set<String> ids,Set<String> eras){
-        for(var e:array(root,key,0,64)){
-            var o=object(e,key);if(local)keys(o,"id","dimension","priority","macro_region","display_label","era_labels","polygon");else keys(o,"id","dimension","priority","polygon");
+    private static void parseAreas(JsonObject root,String key,boolean local,List<Area> out,Set<String> ids,Set<String> eras,Map<String,Set<String>> vocabulary){
+        for(var e:array(root,key,0,local?4096:512)){
+            var o=object(e,key);if(local)keys(o,"id","dimension","priority","macro_region","display_label","era_labels","polygon","profile");else keys(o,"id","dimension","priority","polygon","profile");
             String id=logical(text(o,"id",null,64));if(!ids.add(id))throw new IllegalArgumentException("duplicate "+key+" ID: "+id);
             String dim=resource(text(o,"dimension","minecraft:overworld",256));List<WaterGeography.Point> points=new ArrayList<>();
             for(var p:array(o,"polygon",3,256)){if(!p.isJsonArray()||p.getAsJsonArray().size()!=2)throw new IllegalArgumentException("polygon vertex must be [X,Z]");var pair=p.getAsJsonArray();for(var n:pair)if(!n.isJsonPrimitive()||!n.getAsJsonPrimitive().isNumber())throw new IllegalArgumentException("polygon coordinates must be numeric");points.add(new WaterGeography.Point(pair.get(0).getAsDouble(),pair.get(1).getAsDouble()));}
@@ -34,9 +36,10 @@ public record NpcGeography(List<Area> macros,List<Area> locals){
                 if(!eras.contains(label.getKey()))throw new IllegalArgumentException("unknown era in location labels: "+label.getKey());labels.put(label.getKey(),text(section(o,"era_labels"),label.getKey(),"",48));
             }
             String parent=local?text(o,"macro_region","none",64):"none";if(!parent.equals("none"))logical(parent);
-            out.add(new Area(id,dim,integer(o,"priority",0,-1000000,1000000),parent,local?text(o,"display_label","",48):"",labels,new WaterGeography.Region(id,dim,WaterPolicy.Quality.NORMAL,points)));
+            out.add(new Area(id,dim,integer(o,"priority",0,-1000000,1000000),parent,local?text(o,"display_label","",48):"",labels,new WaterGeography.Region(id,dim,WaterPolicy.Quality.NORMAL,points),o.has("profile")?GeoProfile.parse(o.get("profile"),vocabulary):null));
         }
     }
+    public GeoProfile profile(String macro,String local){if(!local.equals("none"))return locals.stream().filter(a->a.id().equals(local)).findFirst().map(a->a.profile()==null?GeoProfile.none():a.profile()).orElse(GeoProfile.none());return macros.stream().filter(a->a.id().equals(macro)).findFirst().map(a->a.profile()==null?GeoProfile.none():a.profile()).orElse(GeoProfile.none());}
     private Area match(List<Area> areas,String dimension,double x,double z){
         var matches=areas.stream().filter(a->a.dimension().equals(dimension)&&a.shape().contains(x,z)).sorted(Comparator.comparingInt(Area::priority).reversed()).toList();
         if(matches.isEmpty())return null;if(matches.size()>1&&matches.get(0).priority()==matches.get(1).priority())throw new IllegalArgumentException("Ambiguous NPC location: "+matches.get(0).id()+" and "+matches.get(1).id());return matches.getFirst();
