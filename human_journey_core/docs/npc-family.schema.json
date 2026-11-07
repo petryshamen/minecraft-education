@@ -1,0 +1,87 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "maxItems": 256
+    },
+    "default_member": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "output_overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "priority": {
+            "type": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000
+          },
+          "when": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "era": {
+                "type": "string",
+                "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$"
+              },
+              "macro_region": {
+                "type": "string",
+                "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$"
+              },
+              "local_area": {
+                "type": "string",
+                "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$"
+              },
+              "season": {
+                "enum": [
+                  "spring",
+                  "summer",
+                  "autumn",
+                  "winter",
+                  "none"
+                ]
+              }
+            },
+            "required": []
+          },
+          "item": {
+            "type": "string",
+            "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+          }
+        },
+        "required": [
+          "when",
+          "item"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "members"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:human-journey:npc-family:1",
+  "title": "npc-family \u2014 Core 0.7.0",
+  "description": "Runtime validates vocabulary additions, references, component codecs, geometry and composed data; see ECONOMY.md."
+}

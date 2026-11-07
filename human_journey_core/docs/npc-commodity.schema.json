@@ -1,0 +1,223 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "era": {
+      "type": "string",
+      "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$"
+    },
+    "value": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1000000000,
+      "multipleOf": 1e-06
+    },
+    "rarity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "maxUses": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000000
+    },
+    "sellers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^([a-z0-9_.-]+:)?[a-z0-9_./-]+$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "buyers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^([a-z0-9_.-]+:)?[a-z0-9_./-]+$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "item": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "family": {
+      "type": "string",
+      "pattern": "^([a-z0-9_.-]+:)?[a-z0-9_./-]+$"
+    },
+    "sellAvailability": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "temperature": {
+          "oneOf": [
+            {
+              "const": "any"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "moisture": {
+          "oneOf": [
+            {
+              "const": "any"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "vegetation": {
+          "oneOf": [
+            {
+              "const": "any"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "water": {
+          "oneOf": [
+            {
+              "const": "any"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "relief": {
+          "oneOf": [
+            {
+              "const": "any"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "special": {
+          "oneOf": [
+            {
+              "const": "any"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          ]
+        }
+      },
+      "required": [
+        "temperature",
+        "moisture",
+        "vegetation",
+        "water",
+        "relief",
+        "special"
+      ]
+    },
+    "components": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "era",
+    "value",
+    "rarity",
+    "maxUses",
+    "sellers",
+    "buyers",
+    "sellAvailability"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "item"
+      ],
+      "not": {
+        "required": [
+          "family"
+        ]
+      }
+    },
+    {
+      "required": [
+        "family"
+      ],
+      "not": {
+        "required": [
+          "item"
+        ]
+      }
+    }
+  ],
+  "anyOf": [
+    {
+      "properties": {
+        "sellers": {
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "buyers": {
+          "minItems": 1
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:human-journey:npc-commodity:1",
+  "title": "npc-commodity \u2014 Core 0.7.0",
+  "description": "Runtime validates vocabulary additions, references, component codecs, geometry and composed data; see ECONOMY.md."
+}

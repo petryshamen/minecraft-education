@@ -1,12 +1,13 @@
-# Human Journey Core 0.6.0 NPC context
+# Human Journey Core 0.7.0 NPC context
 
-**Build verified:** [GitHub Actions run 41960596385](https://github.com/petryshamen/minecraft-education/actions/runs/41960596385), source `c65ebfb3cad48c4116bd6e5e2fc8bbb2d5be0763`. All 81 unit/structural tests passed and all five no-world Forge data markers passed. The final runtime JAR has root resource-pack format 64, Core version 0.6.0 and Java 21 classes; its SHA-256 is `94b09d161ce5f8cb66d7bc490c66f0e8ba91114b11b7d9c7a9d305d962c9327a`. 83 pre-existing classes are byte-identical to Core 0.5.0, including all 15 temperature classes, all water/audio integration and the complete native Easy NPC adapter/parser/identity/static loader. Only NpcCommands and NpcBootstrap changed among existing classes. No NPC/world was created or gameplay/persistence/appearance/UI testing performed. Nothing was installed or deployed.
+Core 0.7 adds an opt-in [economy engine](ECONOMY.md) on these existing layers, with complete profiles and larger bounded geography limits. Static/story formats remain unchanged.
+
 
 Core resolves mechanics/context; datapacks own roles, availability, labels, skins, dialogue and trade balance. Context is captured **once at spawn**. Existing NPCs are never refreshed on era/season changes or `/reload`.
 
 ## Manual installation and first use
 
-Use Minecraft Java 1.21.8, Forge 58.1.18, TAN 21.8.0.2 and Easy NPC 6.5.2. Replace Core 0.5.0 with exactly one `human_journey_core-0.6.0.jar`, manually, in the test client/server. Optional Serene Seasons support is verified against **21.8.0.0**. Missing, unsupported or unavailable season API resolves to `none` with a diagnostic, not a Core crash.
+Use Minecraft Java 1.21.8, Forge 58.1.18, TAN 21.8.0.2 and Easy NPC 6.5.2. Replace Core 0.5.0 with exactly one `human_journey_core-0.7.0.jar`, manually, in the test client/server. Optional Serene Seasons support is verified against **21.8.0.0**. Missing, unsupported or unavailable season API resolves to `none` with a diagnostic, not a Core crash.
 
 Enable `HumanJourney-NPC-Integration-0.6.0.zip` in a test world's datapacks and run `/reload`. Leave the real Human Journey 0.3.15 progression and existing temperature/water packs unchanged. Disable the old 0.5 NPC **example** pack to avoid confusing two sources for Hunter. This new integration pack writes no progression scores and requires no geography database. It includes Era 0 Hunter/Fisher and the unchanged static Story Test. It deliberately has no Era 1 economic roles.
 
@@ -33,7 +34,7 @@ In an initialized Era 0 world the first command should report `Era: era_0`, seas
 
 Vanilla resource-pack priority selects each resource path. Context, all geography and archetypes validate as **one atomic set**, including all supported era/location/season compositions and registered trade items. Invalid data logs its resource/pack and preserves the last successful context set/revision. `/hj npc status` and `/hj npc context` show rejected reloads. A valid reload that removes resources removes them from the new set. Static templates retain their independent 0.5 atomic loader. An archetype takes precedence over a static template with the same ID, including wrong-era rejection; there is no Era 0 fallback.
 
-Limits: 32 eras, 16 AND conditions per era, 64 archetypes, 64 geography resources, 64 macro regions and 64 local areas, 256 vertices per polygon, 256 KiB characters per resource, and 16,384 validated composition variants in total. This is intentionally a bounded first release. Missing optional geography is valid. Missing context configuration is valid only when there are no archetypes/geography; static/story spawning still works.
+Limits: 32 eras, 16 AND conditions per era, 256 archetypes, 1024 geography resources, 512 macro regions and 4096 local areas, 256 vertices per polygon, 256 KiB characters per resource, and 1,048,576 validated composition variants in total. This is intentionally a bounded first release. Missing optional geography is valid. Missing context configuration is valid only when there are no archetypes/geography; static/story spawning still works.
 
 ## Era resolver
 

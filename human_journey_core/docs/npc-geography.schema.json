@@ -48,6 +48,78 @@
             },
             "minItems": 3,
             "maxItems": 256
+          },
+          "profile": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "temperature": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "moisture": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "vegetation": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "water": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "relief": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "special": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "temperature",
+              "moisture",
+              "vegetation",
+              "water",
+              "relief",
+              "special"
+            ],
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "urn:human-journey:npc-profile:1",
+            "title": "npc-profile \u2014 Core 0.7.0",
+            "description": "Runtime validates vocabulary additions, references, component codecs, geometry and composed data; see ECONOMY.md."
           }
         },
         "required": [
@@ -56,7 +128,7 @@
         ]
       },
       "minItems": 0,
-      "maxItems": 64
+      "maxItems": 512
     },
     "local_areas": {
       "type": "array",
@@ -140,6 +212,78 @@
               "type": "string",
               "maxLength": 48
             }
+          },
+          "profile": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "temperature": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "moisture": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "vegetation": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "water": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "relief": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "special": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]{1,64}$"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "temperature",
+              "moisture",
+              "vegetation",
+              "water",
+              "relief",
+              "special"
+            ],
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "urn:human-journey:npc-profile:1",
+            "title": "npc-profile \u2014 Core 0.7.0",
+            "description": "Runtime validates vocabulary additions, references, component codecs, geometry and composed data; see ECONOMY.md."
           }
         },
         "required": [
@@ -148,12 +292,12 @@
         ]
       },
       "minItems": 0,
-      "maxItems": 64
+      "maxItems": 4096
     }
   },
   "required": [],
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:human-journey:npc-geography:1",
-  "title": "Optional NPC geography (Core 0.6.0)",
+  "title": "NPC geography and optional complete profiles (Core 0.7.0)",
   "description": "Authoring schema. Runtime registry, cross-reference, geometry and fully composed template validation remain authoritative; see NPC.md."
 }

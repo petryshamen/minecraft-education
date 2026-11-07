@@ -23,7 +23,7 @@ public final class NpcContextStore {
         for(var s:archetypes)try{
             if(roles.containsKey(s.id()))throw new IllegalArgumentException("duplicate archetype ID: "+s.id());var role=NpcArchetype.parse(s.id(),parse(s),eras.ids(),geo);
             for(String era:role.eras())for(var location:geo.validationLocations(era))for(String season:new TreeSet<>(NpcArchetype.SEASONS)){
-                if(++checked>1048576)throw new IllegalArgumentException("NPC composition validation exceeds 1048576 variants; reduce MVP data combinations");role.compose(NpcContext.of(era,season,location),items);
+                if(++checked>1048576)throw new IllegalArgumentException("NPC composition validation exceeds 1048576 variants; reduce reachable data combinations");role.compose(NpcContext.of(era,season,location),items);
             }roles.put(s.id(),role);sources.put(s.id(),s.pack());
         }catch(Exception e){throw new IllegalArgumentException(s.id()+" ["+s.pack()+"]: "+e.getMessage(),e);}
         var economy=EconomyCatalog.parse(goods,families,eras.ids(),roles,geo,vocabulary,stackItems);

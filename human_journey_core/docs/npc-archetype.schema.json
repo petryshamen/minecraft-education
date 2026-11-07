@@ -42,7 +42,7 @@
           },
           "macro_regions": {
             "type": "object",
-            "maxProperties": 64,
+            "maxProperties": 4096,
             "propertyNames": {
               "type": "string",
               "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
@@ -59,7 +59,7 @@
           },
           "local_areas": {
             "type": "object",
-            "maxProperties": 64,
+            "maxProperties": 4096,
             "propertyNames": {
               "type": "string",
               "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
@@ -452,6 +452,42 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 48
+        },
+        "economy": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": false
+            },
+            "wandering": {
+              "type": "boolean",
+              "default": true
+            },
+            "look_at_players": {
+              "type": "boolean",
+              "default": true
+            },
+            "wander_radius": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 64,
+              "default": 10
+            },
+            "family_outputs": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "pattern": "^([a-z0-9_.-]+:)?[a-z0-9_./-]+$"
+              },
+              "additionalProperties": {
+                "type": "string",
+                "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+              }
+            }
+          },
+          "required": []
         }
       },
       "required": []
@@ -459,6 +495,6 @@
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:human-journey:npc-archetype:1",
-  "title": "NPC economic archetype (Core 0.6.0)",
+  "title": "NPC economic archetype (Core 0.7.0)",
   "description": "Authoring schema. Runtime registry, cross-reference, geometry and fully composed template validation remain authoritative; see NPC.md."
 }

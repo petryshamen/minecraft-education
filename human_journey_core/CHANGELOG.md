@@ -1,3 +1,9 @@
+# 0.7.0
+
+- Added atomic reloadable commodity/family/profile data, controlled vocabulary extensions, sell-only geography matching, opt-in dynamic offer generation and a four-priority exact/tolerant barter solver using actual stack limits. No production prices/catalogs/geography included.
+- Added frozen native family-cost predicates preserved through Easy NPC sanitization/save/load/network codecs, xp=10 native rewards, persisted spawn-time offer identity and bounded AI-enabled generic wandering/look behaviour. Preserved accepted native stock reset limitations and static/story paths.
+- Raised bounded worldwide geography/resource/patch/composition limits; added synthetic multi-hundred-area/file, solver, stock/XP/codec and regression checks, diagnostics and schema references. No gameplay testing, progression/WE CAN STAY changes or automatic deployment.
+
 # 0.6.1
 
 - Added an isolated reloadable fishing wait policy, vanilla fallback when missing, strict validation/last-valid retention and one read-only status line. Example policy sets 20–60s with native Lure effects scaled to 5s per level.
