@@ -10,6 +10,7 @@ public final class BarterSolver {
  }
  private static final Comparator<Result> ORDER=Comparator.comparingLong(Result::error).thenComparingInt(Result::totalItems).thenComparingInt(r->r.second()==null||r.first().good().id().equals(r.second().good().id())?1:2).thenComparingInt(r->r.second()==null?1:2).thenComparingInt(r->r.inputValue()>=r.outputValue()?0:1).thenComparing(r->r.first().good().id()).thenComparing(r->r.second()==null?"":r.second().good().id()).thenComparingInt(r->-r.first().count());
  private static Result best(Result a,Result b){return a==null||ORDER.compare(b,a)<0?b:a;}
+ /** Legacy deterministic quantity regression helper; runtime generation uses candidates + diversity selection. */
  public static Optional<Result> solve(Good output,List<Good> inputs){
   List<Payment> payments=new ArrayList<>();for(var input:inputs)if(!input.id().equals(output.id()))for(int q=1;q<=input.stack();q++)payments.add(new Payment(input,q));
   payments.sort(Comparator.comparing((Payment p)->p.good().id()).thenComparingInt(Payment::count));
@@ -26,6 +27,29 @@ public final class BarterSolver {
    }if(found!=null)return Optional.of(found);
   }return Optional.empty();
  }
+ /** One entry per unordered distinct commodity set; same-good split stacks share the singleton group. */
+ public record Candidate(List<String> commodities,Result recipe){public Candidate{commodities=List.copyOf(commodities);}}
+ public static List<Candidate> candidates(Good output,List<Good> inputs){
+  var goods=inputs.stream().filter(g->!g.id().equals(output.id())).sorted(Comparator.comparing(Good::id)).toList();var result=new ArrayList<Candidate>();
+  for(int i=0;i<goods.size();i++){
+   var a=goods.get(i);Result single=null;
+   for(int out=1;out<=output.stack();out++)for(int total=1;total<=a.stack()*2;total++){
+    var first=new Payment(a,Math.min(total,a.stack()));var second=total<=a.stack()?null:new Payment(a,total-a.stack());var candidate=legal(first,second,out,output.value()*out);if(candidate!=null)single=best(single,candidate);
+   }
+   if(single!=null)result.add(new Candidate(List.of(a.id()),single));
+   for(int j=i+1;j<goods.size();j++){
+    var b=goods.get(j);Result pair=null;
+    for(int out=1;out<=output.stack();out++)for(int qa=1;qa<=a.stack();qa++){
+     long target=output.value()*out;long floor=Math.floorDiv(target-a.value()*qa,b.value());
+     int low=(int)Math.max(1,Math.min(b.stack(),floor)),high=(int)Math.max(1,Math.min(b.stack(),floor+1));
+     var candidate=legal(new Payment(a,qa),new Payment(b,low),out,target);if(candidate!=null)pair=best(pair,candidate);
+     if(high!=low){candidate=legal(new Payment(a,qa),new Payment(b,high),out,target);if(candidate!=null)pair=best(pair,candidate);}
+    }
+    if(pair!=null)result.add(new Candidate(List.of(a.id(),b.id()),pair));
+   }
+  }return List.copyOf(result);
+ }
+ private static Result legal(Payment a,Payment b,int outputCount,long target){long error=Math.abs(a.value()+(b==null?0:b.value())-target);return error*10>target?null:new Result(a,b,outputCount,target,(error==0?1:3)+(b==null?0:1));}
  private static Payment choose(List<Payment> bucket,Payment a){return bucket.stream().filter(b->b.good().id().equals(a.good().id())).findFirst().orElse(bucket.getFirst());}
  private BarterSolver(){}
 }
