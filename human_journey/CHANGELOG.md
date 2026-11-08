@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.4.1
+
+- Replaced the generic mushroom family commodity with independent Brown/Red Mushroom outputs: value 4, Limited, maxUses 2 each, Forager seller, unrestricted geography. Removed the now-unused production mushroom family; Traveller metadata remains omitted under the existing role contract.
+- Verified compatibility with installed Core 0.7.1; no schema migration or datapack recreation of diversity/safe-wandering mechanics. Other families, commodity values/bindings/stock, profiles/Leaves, archetypes and protected gameplay remain unchanged. No gameplay testing or Core JAR changes.
+
 ## 0.4.0
 
 - Integrated the approved 49 Era 0 commodities, five native payment families and complete profiles on all 19 macros/55 European local areas using Core 0.7.0. Profiles filter selling only; approved values/stock remain unchanged.

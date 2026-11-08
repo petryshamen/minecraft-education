@@ -1,9 +1,9 @@
 # Human Journey Era 0 dynamic economy
 
-Content 0.4.0 requires the accepted Core 0.7.0 engine and Easy NPC 6.5.2. Core owns atomic reload, family input matching, legal barter quantities, offer persistence/XP and bounded movement. This datapack owns the approved catalog, profiles and family output rules. No Java algorithm or mod JAR is changed.
+Content 0.4.1 uses the accepted Core 0.7.1 engine and Easy NPC 6.5.2. Core owns atomic reload, family input matching, legal barter quantities, offer persistence/XP and bounded movement. This datapack owns the approved catalog, profiles and family output rules. No Java algorithm or mod JAR is changed.
 
-- `data/human_journey/npc_commodity/*.json`: 49 approved Era 0 commodities. Values, rarity metadata, H/F/G bindings and seller maxUses are copied from the task. Rarity never controls appearance. Core requires maxUses even for input-only goods; those use inert **1**, with empty sellers. All approved seller maxima stay 3/2/1 as specified.
-- `data/human_journey/npc_family/{wood_log,leaves,boat,wool,mushroom}.json`: lowercase resource IDs for the approved WOOD_LOG/LEAVES/BOAT/WOOL/MUSHROOM names. Members are 9 normal Overworld logs, 9 corresponding leaves, 9 normal boats plus bamboo raft, all 16 wool colours, and brown/red mushrooms. No stripped wood, stems, chest boats or chest rafts. White wool and brown mushroom are deterministic initial outputs.
+- `data/human_journey/npc_commodity/*.json`: 50 approved Era 0 commodities. Values, rarity metadata, H/F/G bindings and seller maxUses are copied from the task. Rarity never controls appearance. Core requires maxUses even for input-only goods; those use inert **1**, with empty sellers. All approved seller maxima stay 3/2/1 as specified.
+- `data/human_journey/npc_family/{wood_log,leaves,boat,wool}.json`: lowercase resource IDs for the approved WOOD_LOG/LEAVES/BOAT/WOOL names. Members are 9 normal Overworld logs, 9 corresponding leaves, 9 normal boats plus bamboo raft, all 16 wool colours. No stripped wood, stems, chest boats or chest rafts. White wool remains the initial wool output. Brown/red mushrooms are independent item commodities, each value 4, Limited, maxUses 2, Forager seller, no runtime Traveller binding and unrestricted sell geography.
 - `npc_geography/global_macros.json` and the four existing European files: all 74 areas have complete six-dimension profiles exactly as approved. Local replaces macro, never merges; no local uses the macro profile only as fallback. Empty special means none; Pontic water is inland plus river. Polygons, priorities, labels and parents are unchanged.
 - The three generic archetypes opt in through `base.economy`: enabled=true, wandering=true, look_at_players=true, wander_radius=10, family_outputs={}. Invulnerability is retained, stationary=false, reset_minutes=0, and obsolete static offer arrays are removed. Dialogue and the trade button remain. Static/story templates are untouched. Native generated offers use initial uses 0, commodity maxUses, xp=10 and rewardExp=true. xp=10 is a native parameter, not a fixed ten-point reward.
 
@@ -18,7 +18,7 @@ Core family rules accept era/macro/local/season context rather than profile pred
 5. cool → birch_leaves
 6. cold → spruce_leaves
 
-Polar/arid profiles fail Leaves sell availability, so no leaf offer reaches runtime output resolution there. The valid default oak member is only a family fallback/validation value; it does not create missing-geography goods. Warm/dry Crete and Azov produce acacia; cold Finnish Lakeland/Alps produce spruce. Forager mushroom output starts brown (red remains a valid payment member).
+Polar/arid profiles fail Leaves sell availability, so no leaf offer reaches runtime output resolution there. The valid default oak member is only a family fallback/validation value; it does not create missing-geography goods. Warm/dry Crete and Azov produce acacia; cold Finnish Lakeland/Alps produce spruce. Both brown and red mushroom outputs are generated independently; neither resolves through a family.
 
 ## Integration conventions and limits
 
@@ -28,4 +28,8 @@ Every matching seller commodity is requested from Core, without probability or a
 
 After manual `/reload`, inspect `/hj npc status`, `/hj npc context`, `/hj npc economy hunter|fisher|forager` and `/hj npc economy_match <commodity>`. Commands are read-only previews and must not rewrite progression. Vanilla reload success alone does not prove atomic Core policy acceptance. Automated standalone parser/solver checks do not prove live reload, UI, movement, XP delivery or world persistence; gameplay checks belong to the user.
 
-Validation: the unchanged accepted Core 0.7.0 pure Java parsers/composition/solver were compiled only into a temporary standalone checker (no mod JAR, Forge launch, installed-mod classpath or world). Registry IDs were checked against installed 1.21.8 item registration bytecode; default stack limits use tools/bows/rods/boats/rafts = 1, honey bottle = 16, other catalog items = 64. TAN purified bottle = 1, confirmed in the matching TAN registration source. The full production scan passed 1,125 compositions and 225 geography/role plans (1,857 offers), covering all 30 seller/role bindings with no infeasible seller. Live reload/native UI/XP/pathfinding/persistence remain manual.
+Validation is performed against the unchanged accepted Core 0.7.1 pure Java parsers/composition/diversity generator in a temporary standalone checker. No mod JAR is rebuilt or loaded on its classpath, and Minecraft is not launched. Item IDs are checked against installed 1.21.8 registration bytecode; current input stack defaults are retained. Live reload, native merchant UI, XP, navigation and world persistence remain user tests.
+
+## Core 0.7.1 compatibility / mushroom split
+
+No production schema migration is needed. The generic mushroom commodity and production family are removed. Other four families and every other commodity/profile are unchanged. Per-NPC random payment selection and buyer repetition avoidance come entirely from Core; values and ±10% tolerance are not changed. Both mushroom outputs appear in the same new Era 0 Forager, with independent native stock. Existing NPCs retain their saved offers and require a new spawn to use the split. Native stock restoration after reload remains accepted.

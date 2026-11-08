@@ -8,7 +8,6 @@
     "human_journey:forager"
   ],
   "buyers": [],
-  "family": "human_journey:mushroom",
   "sellAvailability": {
     "temperature": "any",
     "moisture": "any",
@@ -16,5 +15,6 @@
     "water": "any",
     "relief": "any",
     "special": "any"
-  }
+  },
+  "item": "minecraft:red_mushroom"
 }

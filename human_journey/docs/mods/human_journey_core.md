@@ -1,7 +1,7 @@
-<!-- hj-mod-inspection {"filename":"human_journey_core-0.7.0.jar","sha256":"2c39ce6e711f48809395280462420a7039e34f2b04102f85c01c3fc45998880d","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.7.0","declared_version":"0.7.0"}]} -->
+<!-- hj-mod-inspection {"filename":"human_journey_core-0.7.1.jar","sha256":"90754af47ea97fe20c2d3af4e193046d28dc1ba712f8de1c82f7b53232fbc0ef","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.7.1","declared_version":"0.7.1"}]} -->
 # Human Journey Core
 
-Inspected installed `human_journey_core-0.7.0.jar`, Core **0.7.0**, SHA-256 `2c39ce6e711f48809395280462420a7039e34f2b04102f85c01c3fc45998880d`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Installed hash matches the published 0.7.0 checksum. Read-only metadata/class evidence was correlated with [the matching README, water schema and source](https://github.com/petryshamen/minecraft-education/tree/80c3d4a7ae3c1053773aeb4e8e643f53101f24a3/human_journey_core). No JAR was changed or rebuilt.
+Inspected installed `human_journey_core-0.7.1.jar`, Core **0.7.1**, SHA-256 `90754af47ea97fe20c2d3af4e193046d28dc1ba712f8de1c82f7b53232fbc0ef`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Installed hash matches the published 0.7.1 checksum. Read-only metadata/class evidence was correlated with [the matching README, water schema and source](https://github.com/petryshamen/minecraft-education/tree/80c3d4a7ae3c1053773aeb4e8e643f53101f24a3/human_journey_core). No JAR was changed or rebuilt.
 
 Core is the engine/API; this datapack owns gameplay balance. The Core loader reads exactly `data/human_journey/core/temperature.json` (source: `source/data/human_journey/core/temperature.json`). Use `schema_version: 1`; unknown fields, wrong types, non-finite/out-of-range numbers reject the entire update.
 
@@ -81,4 +81,6 @@ NPC geography calibration and macro IDs/priorities: [Human Journey geography](hu
 
 ## Production dynamic economy (0.4.0 content / Core 0.7.0)
 
-Required installed Core: `human_journey_core-0.7.0.jar`, SHA-256 `2c39ce6e711f48809395280462420a7039e34f2b04102f85c01c3fc45998880d`. The 0.6.1 sections above retain the earlier water/temperature/NPC integration history; those mechanics remain unchanged. Production economy resources require 0.7.0 on server and clients. See [the economy content note](human_journey_economy.md).
+Required installed Core: `human_journey_core-0.7.1.jar`, SHA-256 `90754af47ea97fe20c2d3af4e193046d28dc1ba712f8de1c82f7b53232fbc0ef`. The 0.6.1 sections above retain the earlier water/temperature/NPC integration history; those mechanics remain unchanged. Production economy resources require 0.7.0 on server and clients. See [the economy content note](human_journey_economy.md).
+
+Core 0.7.1 is schema-compatible with 0.7.0. Payment candidate diversity, per-NPC buyer-use preference, spawn-only random choices and safer fluid/drop/path handling are engine behaviour; the datapack adds no equivalent functions/settings. Existing NPC offers do not reroll. Content 0.4.1 splits mushrooms into two item commodities and removes the unused production mushroom family; see the economy note.

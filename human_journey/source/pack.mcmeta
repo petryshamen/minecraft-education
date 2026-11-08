@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.4.0 — Era 0 Dynamic Economy"
+    "description": "Human Journey v0.4.1 — Separate mushroom commodities"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.4.0"
+    "version": "0.4.1"
   }
 }
