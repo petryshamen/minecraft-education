@@ -1,5 +1,7 @@
 # Human Journey Core 0.7.1
 
+**Build verified:** [GitHub Actions run 42450759482](https://github.com/petryshamen/minecraft-education/actions/runs/42450759482), source `800dc2c95cda1bd38abce19136dd4c56fca8b562`. All 144 unit/structural tests passed: all 123 previous tests plus 21 new diversity/safety tests. All eight no-world Forge data/Mixin checks passed, including a non-default selected family+concrete payment through native Easy NPC trade save/load. 139 existing classes are byte-identical to Core 0.7.0, including all 74 non-NPC classes (fishing, temperature, water, salt/purifier/shoreline/audio) and unchanged family integration. All JSON schemas and example data are byte-identical to 0.7.0. Runtime JAR SHA-256: `90754af47ea97fe20c2d3af4e193046d28dc1ba712f8de1c82f7b53232fbc0ef`. No NPC/world was created, gameplay-tested, installed or deployed.
+
 Payment-combination diversity with per-NPC usage avoidance, persisted spawn-only random choices, and conservative safe-land voluntary wandering. **[Patch architecture, diagnostics, limitations and manual checklist](DIVERSITY-SAFETY.md)**. No production data/schema migration is required; existing offers remain frozen and new NPCs receive the new selection.
 
 
