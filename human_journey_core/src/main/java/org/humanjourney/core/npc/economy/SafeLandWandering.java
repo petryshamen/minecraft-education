@@ -9,6 +9,7 @@ public final class SafeLandWandering {
  public static boolean landAt(PathfinderMob mob,BlockPos pos){
   var level=mob.level();if(!level.hasChunkAt(pos)||!level.hasChunkAt(pos.below())||pos.getY()<level.getMinY()+1||pos.getY()+mob.getBbHeight()>=level.getMaxY())return false;
   var box=mob.getBoundingBox().move(pos.getX()+.5-mob.getX(),pos.getY()-mob.getY(),pos.getZ()+.5-mob.getZ());boolean fluid=false;
+  for(int x=Mth.floor(box.minX)-1;x<=Mth.floor(box.maxX)+1;x++)for(int z=Mth.floor(box.minZ)-1;z<=Mth.floor(box.maxZ)+1;z++)if(!level.hasChunkAt(new BlockPos(x,pos.getY(),z)))return false;
   for(var cell:BlockPos.betweenClosed(Mth.floor(box.minX),Mth.floor(box.minY),Mth.floor(box.minZ),Mth.floor(box.maxX-1e-7),Mth.floor(box.maxY-1e-7),Mth.floor(box.maxZ-1e-7))){if(!level.hasChunkAt(cell))return false;if(!level.getFluidState(cell).isEmpty())fluid=true;}
   if(!level.getFluidState(pos.below()).isEmpty())fluid=true;
   var floor=level.getBlockState(pos.below());boolean support=floor.entityCanStandOn(level,pos.below(),mob);boolean clear=level.noCollision(mob,box);

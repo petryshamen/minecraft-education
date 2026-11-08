@@ -1,3 +1,8 @@
+# 0.7.1
+
+- Added uniformly selected legal payment commodity groups, per-NPC unused/least-used buyer preference and injectable randomness, retaining strict values/tolerance/stack limits and frozen native offer persistence. Seller availability/families/XP/stock are unchanged.
+- Added supported, fluid-free voluntary targets and path/step/corner safety, with bounded attempts and separate displaced-NPC recovery. Added stored generation diagnostics and synthetic diversity/safety/persistence regressions. No production content, schemas, progression or unrelated mechanics changed.
+
 # 0.7.0
 
 - Added atomic reloadable commodity/family/profile data, controlled vocabulary extensions, sell-only geography matching, opt-in dynamic offer generation and a four-priority exact/tolerant barter solver using actual stack limits. No production prices/catalogs/geography included.
