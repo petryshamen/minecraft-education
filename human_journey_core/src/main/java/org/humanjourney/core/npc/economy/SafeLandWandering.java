@@ -20,7 +20,8 @@ public final class SafeLandWandering {
  public static boolean path(PathfinderMob mob,Path path,BlockPos home,int radius,boolean remaining){
   if(path==null)return false;var nodes=new ArrayList<WanderSafety.Point>();int begin=remaining?path.getNextNodeIndex():0;
   for(int i=begin;i<path.getNodeCount();i++){var node=path.getNode(i);if(!safeType(node.type))return false;nodes.add(new WanderSafety.Point(node.x,node.y,node.z));}
-  var start=mob.blockPosition();return WanderSafety.route(new WanderSafety.Point(start.getX(),start.getY(),start.getZ()),nodes,p->EconomyMovement.inside(home.getX()+.5,home.getY(),home.getZ()+.5,p.x()+.5,p.y(),p.z()+.5,radius)&&landAt(mob,new BlockPos(p.x(),p.y(),p.z())));
+  // Revalidate planned walkable positions, not the transient floored feet cell during a native jump.
+  var start=mob.blockPosition();if(remaining&&path.getNodeCount()>0){var previous=path.getNode(Math.max(0,begin-1));start=new BlockPos(previous.x,previous.y,previous.z);}return WanderSafety.route(new WanderSafety.Point(start.getX(),start.getY(),start.getZ()),nodes,p->EconomyMovement.inside(home.getX()+.5,home.getY(),home.getZ()+.5,p.x()+.5,p.y(),p.z()+.5,radius)&&landAt(mob,new BlockPos(p.x(),p.y(),p.z())));
  }
  private SafeLandWandering(){}
 }
