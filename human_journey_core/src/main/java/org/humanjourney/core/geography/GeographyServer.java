@@ -9,7 +9,7 @@ import org.humanjourney.core.npc.context.*;
 public final class GeographyServer {
  private static MinecraftServer owner;private static final Map<UUID,GeographySyncTracker> clients=new HashMap<>();private static final Set<UUID> failures=new HashSet<>();
  public static GeographyRoles roles(ServerPlayer player){return GeographyRoles.from(player.getTags());}
- private static EraRules.Scores scores(ServerPlayer p){var board=p.serverLevel().getScoreboard();return (objective,holder)->{var o=board.getObjective(objective);if(o==null)return OptionalInt.empty();var value=board.getPlayerScoreInfo(ScoreHolder.forNameOnly(holder),o);return value==null?OptionalInt.empty():OptionalInt.of(value.value());};}
+ private static EraRules.Scores scores(ServerPlayer p){var board=p.level().getScoreboard();return (objective,holder)->{var o=board.getObjective(objective);if(o==null)return OptionalInt.empty();var value=board.getPlayerScoreInfo(ScoreHolder.forNameOnly(holder),o);return value==null?OptionalInt.empty():OptionalInt.of(value.value());};}
  public static GeographyContext context(ServerPlayer player){return GeographyContext.resolve(NpcContextStore.state().data(),scores(player),player.level().dimension().location().toString(),player.getX(),player.getZ());}
  private static String era(ServerPlayer player){try{return NpcContextStore.state().data().eraRules().resolve(scores(player));}catch(IllegalArgumentException e){return "unknown";}}
  private static boolean send(Object packet,ServerPlayer player){boolean sent=GeographyNetwork.send(packet,player);if(!sent&&failures.add(player.getUUID()))com.mojang.logging.LogUtils.getLogger().warn("[HJ Core] Geography client sync failed for {}; discovery remains authoritative on server",player.getScoreboardName());return sent;}
