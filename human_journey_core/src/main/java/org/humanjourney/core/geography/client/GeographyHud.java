@@ -12,6 +12,6 @@ public final class GeographyHud {
   int width=Math.max(mc.font.width(first),secondary.isBlank()?0:mc.font.width(second));var layout=HudPresentation.layout(graphics.guiWidth(),graphics.guiHeight(),width,!secondary.isBlank(),GeographyClientConfig.X.get(),GeographyClientConfig.Y.get(),scale);
   var pose=graphics.pose();pose.pushMatrix();try{pose.translate(layout.x(),layout.y());pose.scale((float)scale,(float)scale);int alpha=(int)Math.round(255*GeographyClientConfig.OPACITY.get());graphics.fill(0,0,layout.width(),layout.height(),alpha<<24);graphics.drawString(mc.font,first,5,5,0xFFFFFFFF,true);if(!secondary.isBlank())graphics.drawString(mc.font,second,5,16,0xFFB8C6D8,true);}finally{pose.popMatrix();}
  }
- private static String fit(String text,int width){var font=Minecraft.getInstance().font;return font.width(text)<=width?text:font.plainSubstrByWidth(text,Math.max(0,width-font.width("…")))+"…";}
+ private static String fit(String text,int width,boolean bold){var font=Minecraft.getInstance().font;var full=Component.literal(text);if(bold)full.withStyle(ChatFormatting.BOLD);if(font.width(full)<=width)return text;String value=font.plainSubstrByWidth(text,width);while(!value.isEmpty()){var c=Component.literal(value+"...");if(bold)c.withStyle(ChatFormatting.BOLD);if(font.width(c)<=width)return value+"...";value=value.substring(0,value.offsetByCodePoints(value.length(),-1));}return "...";}
  private GeographyHud(){}
 }
