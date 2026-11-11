@@ -14,7 +14,9 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.humanjourney.core.npc.context.NpcContextStore;
 class GeographyServerTest {
- @BeforeAll static void nativeRegistries(){SharedConstants.tryDetectVersion();Bootstrap.bootStrap();}
+ private static MockedStatic<net.minecraftforge.fml.ModLoader> loader;
+ @BeforeAll static void nativeRegistries(){loader=mockStatic(net.minecraftforge.fml.ModLoader.class);loader.when(net.minecraftforge.fml.ModLoader::get).thenReturn(mock(net.minecraftforge.fml.ModLoader.class));SharedConstants.tryDetectVersion();Bootstrap.bootStrap();}
+ @AfterAll static void closeLoader(){if(loader!=null)loader.close();}
  MinecraftServer server;SavedDiscovery saved;List<ServerPlayer> online;Map<UUID,GeographyContext> views;Map<UUID,Set<String>> tags;Map<UUID,Double> positions;Map<UUID,List<Object>> packets;AtomicInteger clock;
  MockedStatic<SavedDiscovery> saves;MockedStatic<GeographyNetwork> network;MockedStatic<GeographyServer> runtime;
  @BeforeEach void setup(){GeographyServer.clear();NpcContextStore.reset();server=mock(MinecraftServer.class);var players=mock(PlayerList.class);online=new ArrayList<>();views=new HashMap<>();tags=new HashMap<>();positions=new HashMap<>();packets=new HashMap<>();clock=new AtomicInteger(10);saved=new SavedDiscovery();when(server.getPlayerList()).thenReturn(players);when(players.getPlayers()).thenAnswer(i->online);when(server.getTickCount()).thenAnswer(i->clock.get());

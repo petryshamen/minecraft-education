@@ -1,3 +1,10 @@
+# 0.8.0
+
+- Added participant geography HUD using Forge 1.21.8 GUI layers, configurable placement/scale/opacity and server-authoritative context.
+- Added shared world SavedData for independent macro/local discovery IDs, teacher-excluded student eligibility, once-only participant chat notifications and bounded snapshot/delta synchronisation.
+- Added admin discovery status/list/mark/reset commands, stale-ID diagnostics and reusable read-only server/client discovery snapshots.
+- Added optional macro display/era labels without changing geographic resolution or NPC naming. Existing production data remains valid. No production data, economic balance, progression or unrelated mechanics changed.
+
 # 0.7.1
 
 - Added uniformly selected legal payment commodity groups, per-NPC unused/least-used buyer preference and injectable randomness, retaining strict values/tolerance/stack limits and frozen native offer persistence. Seller availability/families/XP/stock are unchanged.

@@ -1,9 +1,8 @@
-# Human Journey Core 0.7.1
+# Human Journey Core 0.8.0
 
-**Build verified:** [GitHub Actions run 42450759482](https://github.com/petryshamen/minecraft-education/actions/runs/42450759482), source `800dc2c95cda1bd38abce19136dd4c56fca8b562`. All 144 unit/structural tests passed: all 123 previous tests plus 21 new diversity/safety tests. All eight no-world Forge data/Mixin checks passed, including a non-default selected family+concrete payment through native Easy NPC trade save/load. 139 existing classes are byte-identical to Core 0.7.0, including all 74 non-NPC classes (fishing, temperature, water, salt/purifier/shoreline/audio) and unchanged family integration. All JSON schemas and example data are byte-identical to 0.7.0. Runtime JAR SHA-256: `90754af47ea97fe20c2d3af4e193046d28dc1ba712f8de1c82f7b53232fbc0ef`. No NPC/world was created, gameplay-tested, installed or deployed.
+Geography HUD and persistent civilisation-wide exploration. **[Geography architecture, commands, client settings and manual checklist](GEOGRAPHY.md)**. Install the runtime JAR manually on both server and participating clients. No Xaero dependency, production geography rewrite or main-datapack change is needed. Existing NPC/economy, safe wandering, fishing, temperature and water integrations remain unchanged.
 
-Payment-combination diversity with per-NPC usage avoidance, persisted spawn-only random choices, and conservative safe-land voluntary wandering. **[Patch architecture, diagnostics, limitations and manual checklist](DIVERSITY-SAFETY.md)**. No production data/schema migration is required; existing offers remain frozen and new NPCs receive the new selection.
-
+The server resolves context using the existing datapack geography and production participant tags. Students discover stable macro/local IDs for everyone; teachers can view the same HUD but never contribute through movement. No Minecraft gameplay testing or automatic deployment is performed.
 
 Data-driven NPC economy engine: commodity/family/profile schemas, deterministic value barter, native stack limits, frozen family payments, spawn-time persisted offers, native XP and bounded generic movement. **[Economy integration, schema reference, limitations and checklist](ECONOMY.md)**. Core supplies no production prices/catalogs or real regional mappings. The separate economy pack is synthetic test-only. Existing progression, story/WE CAN STAY, NPC context, fishing, temperature and water systems remain intact.
 
@@ -15,7 +14,7 @@ Spawn-time NPC context: `/hj npc spawn hunter` and `/hj npc spawn fisher` resolv
 
 **[NPC installation, complete context reference and manual checklist](NPC.md)** · [Static/story format](NPC-STATIC.md) · [Changelog](CHANGELOG.md).
 
-Install `human_journey_core-0.7.1.jar` and the separate `HumanJourney-NPC-Integration-0.6.0.zip` manually in a test world. Keep the real Human Journey 0.3.15 progression and existing temperature/water settings unchanged. The integration pack needs no geographic database and writes no scores. Era 1 is recognized but has no demo economic roles. `/hj npc context` diagnoses era/season/geography; `/hj npc status` reports load outcomes.
+Install `human_journey_core-0.8.0.jar` and the separate `HumanJourney-NPC-Integration-0.6.0.zip` manually in a test world. Keep the real Human Journey 0.3.15 progression and existing temperature/water settings unchanged. The integration pack needs no geographic database and writes no scores. Era 1 is recognized but has no demo economic roles. `/hj npc context` diagnoses era/season/geography; `/hj npc status` reports load outcomes.
 
 Schemas: [era resolver](docs/npc-context.schema.json), [archetypes](docs/npc-archetype.schema.json), [geography](docs/npc-geography.schema.json), [unchanged static templates](docs/npc-template.schema.json). Core 0.5 temperature/water/audio and native adapter behavior are preserved. No Minecraft gameplay testing or automatic deployment.
 
@@ -37,7 +36,7 @@ Adds persistent Salt Water, geographic classification, instant filter-capacity W
 
 ## Install manually
 
-Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.7.1.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
+Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.8.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
 
 ## Debug command
 
@@ -124,7 +123,7 @@ The existing pre-player-tick exposure reduction and post-server-tick net relief/
 
 ## Build and validation
 
-Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.7.1.jar` (the `-sources.jar` is not an installable mod).
+Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.8.0.jar` (the `-sources.jar` is not an installable mod).
 
 Repository workflow: `.github/workflows/human-journey-core.yml` runs from the `human_journey_core` folder on Core pushes or manual dispatch. `check/build` verifies root resource-pack metadata in the actual JAR. Unit tests cover strict policy validation, sparse fallback, independent Nether rate, damage intervals, disabled damage, reload replacement/removal, invalid reload retention and the existing water/cold policy invariants.
 

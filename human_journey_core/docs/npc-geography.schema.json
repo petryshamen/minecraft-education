@@ -116,6 +116,28 @@
               "relief",
               "special"
             ]
+          },
+          "display_label": {
+            "type": "string",
+            "maxLength": 48,
+            "default": ""
+          },
+          "era_labels": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string",
+              "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+              "not": {
+                "enum": [
+                  "none",
+                  "unknown"
+                ]
+              }
+            },
+            "additionalProperties": {
+              "type": "string",
+              "maxLength": 48
+            }
           }
         },
         "required": [
