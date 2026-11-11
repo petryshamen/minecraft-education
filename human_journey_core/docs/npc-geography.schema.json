@@ -312,6 +312,6 @@
   "required": [],
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:human-journey:npc-geography:1",
-  "title": "NPC geography and optional complete profiles (Core 0.7.0)",
-  "description": "Authoring schema. Runtime registry, cross-reference, geometry and fully composed template validation remain authoritative; see NPC.md."
+  "title": "NPC geography, optional labels and complete profiles (Core 0.8.0)",
+  "description": "Backward-compatible authoring schema. Optional macro display_label/era_labels mirror local labels. Runtime cross-reference/geometry validation remains authoritative; see NPC.md and GEOGRAPHY.md."
 }

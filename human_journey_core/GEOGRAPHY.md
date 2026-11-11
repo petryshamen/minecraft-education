@@ -1,5 +1,7 @@
 # Geography HUD and shared discovery — Core 0.8.0
 
+**Build verified:** [GitHub Actions run 43119081927](https://github.com/petryshamen/minecraft-education/actions/runs/43119081927), source `4260cd2d84c335662ac820c5bfbf2f03facada6b`. All 174 tests passed (all 144 existing + 30 new geography/discovery tests), with zero failures. All nine no-world Forge checks passed, including native compressed SavedData NBT and context/discovery packet codec round trips. 155 existing classes are byte-identical to Core 0.7.1, including economy/families/payment diversity/safe wandering/fishing/water/temperature; only Core bootstrap and additive NpcGeography parsing changed. Root pack.mcmeta format 64 and Java 21 metadata are verified. Runtime SHA-256: `cbe47eb6f84f6175d8757fe4e120b3758e9626402ddd3b2ed092b168f08aff08`. No world/player/NPC was created, no Minecraft gameplay testing, installation or deployment was performed.
+
 ## Installation and scope
 
 Minecraft Java 1.21.8, Java 21, Forge 58.1.18; retain the existing Core dependency stack. Manually replace the previous Core runtime JAR with `human_journey_core-0.8.0.jar` on server and clients. Keep only one Core version installed. Back up the test world before testing. Nothing is automatically installed or deployed. No new balance/example datapack is required: current `npc_geography` resources work as supplied. The new network channel requires Core on clients and server.
