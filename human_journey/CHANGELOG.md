@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.1
+
+- Europe Coverage v2: completed Northern 27 and full six-axis profiles; merged 17 duplicate stitch proposals, retained Pripyat Marshes/Azov Coast and all 55 old IDs. 150 physical areas become 198 reachable simple-polygon records under the actual winning macros, including 14 Caucasus/Central Asia boundary fragments.
+- Extended only the Mediterranean macro around the actual saved Crete landmass. Corrected coarse coverage/overlaps and removed unsupported marine slivers; Northern contours/profiles are authored geographic simplifications. Existing NPC snapshots, economic content/Leaves, progression and all other gameplay are unchanged.
+- Validated offline with unchanged Core 0.7.1 parsers/resolver: 3,270 compositions, 198 reachability witnesses, 17,512 boundary samples and 53 reference points. Read-only saved-terrain checks; seven witnesses remain reference-only. No Minecraft gameplay testing.
+
 ## 0.4.1
 
 - Replaced the generic mushroom family commodity with independent Brown/Red Mushroom outputs: value 4, Limited, maxUses 2 each, Forager seller, unrestricted geography. Removed the now-unused production mushroom family; Traveller metadata remains omitted under the existing role contract.

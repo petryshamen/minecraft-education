@@ -2,31 +2,933 @@
   "schema_version": 1,
   "local_areas": [
     {
-      "id": "eastern_carpathians",
+      "id": "azov_coast",
       "dimension": "minecraft:overworld",
-      "priority": 76,
+      "priority": 1193,
       "macro_region": "eastern_europe",
-      "display_label": "Carpathians",
+      "display_label": "Azov Coast",
       "polygon": [
         [
-          1708,
-          -3004.25
+          2697.0,
+          -3113.0
         ],
         [
-          1843,
-          -3038
+          2389.0,
+          -3113.0
         ],
         [
-          1877,
-          -3209
+          2389.0,
+          -3195.0
         ],
         [
-          1775,
-          -3345
+          2458.0,
+          -3263.0
         ],
         [
-          1708,
-          -3345
+          2662.0,
+          -3277.0
+        ],
+        [
+          2765.0,
+          -3195.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "balkan_interior__eastern_europe",
+      "dimension": "minecraft:overworld",
+      "priority": 1002,
+      "macro_region": "eastern_europe",
+      "display_label": "Balkan Interior",
+      "polygon": [
+        [
+          1868.12765,
+          -3068.620976
+        ],
+        [
+          1946.0,
+          -3052.0
+        ],
+        [
+          1952.891266,
+          -3031.07097
+        ],
+        [
+          2014.0,
+          -3004.0
+        ],
+        [
+          2014.0,
+          -2935.01
+        ],
+        [
+          1707.01,
+          -2935.01
+        ],
+        [
+          1707.01,
+          -3139.99557
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "balkan_mountains__eastern_europe",
+      "dimension": "minecraft:overworld",
+      "priority": 1163,
+      "macro_region": "eastern_europe",
+      "display_label": "Balkan Mountains",
+      "polygon": [
+        [
+          1802.0,
+          -2953.0
+        ],
+        [
+          1911.0,
+          -2939.0
+        ],
+        [
+          1911.0,
+          -2936.0
+        ],
+        [
+          1708.0,
+          -2936.0
+        ],
+        [
+          1708.0,
+          -2950.235294
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
+    },
+    {
+      "id": "baltic_lake_country",
+      "dimension": "minecraft:overworld",
+      "priority": 1047,
+      "macro_region": "eastern_europe",
+      "display_label": "Baltic Lake Country",
+      "polygon": [
+        [
+          2287.756879,
+          -3754.99
+        ],
+        [
+          2287.0,
+          -3748.0
+        ],
+        [
+          1992.160584,
+          -3748.0
+        ],
+        [
+          1946.0,
+          -3686.0
+        ],
+        [
+          1707.01,
+          -3686.0
+        ],
+        [
+          1707.01,
+          -3754.99
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "belarusian_lakeland",
+      "dimension": "minecraft:overworld",
+      "priority": 1049,
+      "macro_region": "eastern_europe",
+      "display_label": "Belarusian Lakes",
+      "polygon": [
+        [
+          1980.0,
+          -3721.0
+        ],
+        [
+          1707.01,
+          -3721.0
+        ],
+        [
+          1707.01,
+          -3754.99
+        ],
+        [
+          2115.96,
+          -3754.99
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "belarusian_uplands",
+      "dimension": "minecraft:overworld",
+      "priority": 1051,
+      "macro_region": "eastern_europe",
+      "display_label": "Belarusian Hills",
+      "polygon": [
+        [
+          1911.0,
+          -3584.0
+        ],
+        [
+          1707.01,
+          -3584.0
+        ],
+        [
+          1707.01,
+          -3686.004044
+        ],
+        [
+          1843.0,
+          -3741.0
+        ],
+        [
+          1922.568125,
+          -3754.99
+        ],
+        [
+          2150.510147,
+          -3754.99
+        ],
+        [
+          2185.0,
+          -3721.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "central_russian_upland",
+      "dimension": "minecraft:overworld",
+      "priority": 1057,
+      "macro_region": "eastern_europe",
+      "display_label": "Central Russian Hills",
+      "polygon": [
+        [
+          2389.0,
+          -3413.0
+        ],
+        [
+          2253.0,
+          -3550.0
+        ],
+        [
+          2321.0,
+          -3686.0
+        ],
+        [
+          2412.763398,
+          -3754.99
+        ],
+        [
+          2662.005024,
+          -3754.99
+        ],
+        [
+          2765.0,
+          -3550.0
+        ],
+        [
+          2662.0,
+          -3345.0
+        ],
+        [
+          2492.0,
+          -3345.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "crimean_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 1169,
+      "macro_region": "eastern_europe",
+      "display_label": "Crimean Mountains",
+      "polygon": [
+        [
+          2430.0,
+          -3086.0
+        ],
+        [
+          2427.119706,
+          -3072.01
+        ],
+        [
+          2307.524643,
+          -3072.01
+        ],
+        [
+          2342.0,
+          -3086.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
+    },
+    {
+      "id": "crimean_steppe",
+      "dimension": "minecraft:overworld",
+      "priority": 1060,
+      "macro_region": "eastern_europe",
+      "display_label": "Crimean Steppe",
+      "polygon": [
+        [
+          2505.0,
+          -3161.0
+        ],
+        [
+          2505.0,
+          -3072.01
+        ],
+        [
+          2219.0,
+          -3072.01
+        ],
+        [
+          2219.0,
+          -3106.0
+        ],
+        [
+          2253.0,
+          -3161.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "danube_delta",
+      "dimension": "minecraft:overworld",
+      "priority": 1142,
+      "macro_region": "eastern_europe",
+      "display_label": "Danube Delta",
+      "polygon": [
+        [
+          2047.99,
+          -3038.0
+        ],
+        [
+          1946.0,
+          -3038.0
+        ],
+        [
+          1946.0,
+          -3113.0
+        ],
+        [
+          2048.0,
+          -3113.0
+        ],
+        [
+          2048.0,
+          -3072.01
+        ],
+        [
+          2047.99,
+          -3072.01
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "dnieper_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 1143,
+      "macro_region": "eastern_europe",
+      "display_label": "Dnipro Valley",
+      "polygon": [
+        [
+          2130.0,
+          -3693.0
+        ],
+        [
+          2205.0,
+          -3734.0
+        ],
+        [
+          2239.0,
+          -3721.0
+        ],
+        [
+          2178.0,
+          -3686.0
+        ],
+        [
+          2096.0,
+          -3516.0
+        ],
+        [
+          2116.0,
+          -3454.0
+        ],
+        [
+          2198.0,
+          -3393.0
+        ],
+        [
+          2410.0,
+          -3331.0
+        ],
+        [
+          2410.0,
+          -3249.0
+        ],
+        [
+          2253.0,
+          -3161.0
+        ],
+        [
+          2212.0,
+          -3188.0
+        ],
+        [
+          2355.0,
+          -3256.0
+        ],
+        [
+          2362.0,
+          -3318.0
+        ],
+        [
+          2157.0,
+          -3359.0
+        ],
+        [
+          2048.0,
+          -3441.0
+        ],
+        [
+          2041.0,
+          -3516.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "dniester_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 1144,
+      "macro_region": "eastern_europe",
+      "display_label": "Dnister Valley",
+      "polygon": [
+        [
+          1809.0,
+          -3297.0
+        ],
+        [
+          1707.01,
+          -3330.996667
+        ],
+        [
+          1707.01,
+          -3365.996569
+        ],
+        [
+          1809.0,
+          -3331.0
+        ],
+        [
+          1946.0,
+          -3304.0
+        ],
+        [
+          2007.0,
+          -3236.0
+        ],
+        [
+          2048.0,
+          -3202.0
+        ],
+        [
+          2082.0,
+          -3181.0
+        ],
+        [
+          2075.0,
+          -3154.0
+        ],
+        [
+          2021.0,
+          -3168.0
+        ],
+        [
+          1911.0,
+          -3277.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "dnipro_lowland",
+      "dimension": "minecraft:overworld",
+      "priority": 1063,
+      "macro_region": "eastern_europe",
+      "display_label": "Dnipro Plains",
+      "polygon": [
+        [
+          2253.0,
+          -3379.0
+        ],
+        [
+          2082.0,
+          -3447.0
+        ],
+        [
+          2116.0,
+          -3550.0
+        ],
+        [
+          2253.0,
+          -3584.0
+        ],
+        [
+          2492.0,
+          -3516.0
+        ],
+        [
+          2492.0,
+          -3311.0
+        ],
+        [
+          2355.0,
+          -3243.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "dnipro_upland",
+      "dimension": "minecraft:overworld",
+      "priority": 1064,
+      "macro_region": "eastern_europe",
+      "display_label": "Dnipro Hills",
+      "polygon": [
+        [
+          2185.0,
+          -3229.0
+        ],
+        [
+          1911.0,
+          -3277.0
+        ],
+        [
+          1911.0,
+          -3447.0
+        ],
+        [
+          2082.0,
+          -3447.0
+        ],
+        [
+          2253.0,
+          -3379.0
+        ],
+        [
+          2355.0,
+          -3243.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "don_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 1145,
+      "macro_region": "eastern_europe",
+      "display_label": "Lower Don",
+      "polygon": [
+        [
+          2785.0,
+          -3222.0
+        ],
+        [
+          2662.0,
+          -3202.0
+        ],
+        [
+          2662.0,
+          -3243.0
+        ],
+        [
+          2765.0,
+          -3263.0
+        ],
+        [
+          2874.0,
+          -3270.0
+        ],
+        [
+          2956.0,
+          -3345.0
+        ],
+        [
+          2997.0,
+          -3325.0
+        ],
+        [
+          2908.0,
+          -3236.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "donets_ridge",
+      "dimension": "minecraft:overworld",
+      "priority": 1065,
+      "macro_region": "eastern_europe",
+      "display_label": "Donets Ridge",
+      "polygon": [
+        [
+          2785.0,
+          -3243.0
+        ],
+        [
+          2526.0,
+          -3229.0
+        ],
+        [
+          2526.0,
+          -3311.0
+        ],
+        [
+          2628.0,
+          -3359.0
+        ],
+        [
+          2785.0,
+          -3311.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "eastern_carpathians",
+      "dimension": "minecraft:overworld",
+      "priority": 1067,
+      "macro_region": "eastern_europe",
+      "display_label": "Eastern Carpathians",
+      "polygon": [
+        [
+          1823.0,
+          -3106.0
+        ],
+        [
+          1707.01,
+          -3072.002931
+        ],
+        [
+          1707.01,
+          -3379.0
+        ],
+        [
+          1775.0,
+          -3379.0
+        ],
+        [
+          1864.0,
+          -3249.0
+        ],
+        [
+          1823.292265,
+          -3203.851422
+        ],
+        [
+          1843.0,
+          -3174.0
         ]
       ],
       "profile": {
@@ -52,35 +954,51 @@
       }
     },
     {
-      "id": "dniester_basin",
+      "id": "eastern_europe_background",
       "dimension": "minecraft:overworld",
-      "priority": 75,
+      "priority": 1000,
       "macro_region": "eastern_europe",
-      "display_label": "Dniester",
+      "display_label": "Eastern Europe",
       "polygon": [
         [
-          1708,
-          -3139.833333
+          4096.0,
+          -4096.0
         ],
         [
-          1911,
-          -3106
+          4096.0,
+          -3755.01
         ],
         [
-          2116,
-          -3140
+          3071.99,
+          -3755.01
         ],
         [
-          2048,
-          -3379
+          3071.99,
+          -3072.01
         ],
         [
-          1843,
-          -3413
+          2047.99,
+          -3072.01
         ],
         [
-          1708,
-          -3345.5
+          2047.99,
+          -2935.01
+        ],
+        [
+          1707.01,
+          -2935.01
+        ],
+        [
+          1707.01,
+          -3754.99
+        ],
+        [
+          2731.01,
+          -3754.99
+        ],
+        [
+          2731.01,
+          -4096.0
         ]
       ],
       "profile": {
@@ -91,61 +1009,7 @@
           "moderate"
         ],
         "vegetation": [
-          "grassland"
-        ],
-        "water": [
-          "river"
-        ],
-        "relief": [
-          "valley"
-        ],
-        "special": []
-      }
-    },
-    {
-      "id": "dnieper_basin",
-      "dimension": "minecraft:overworld",
-      "priority": 74,
-      "macro_region": "eastern_europe",
-      "display_label": "Dnieper",
-      "polygon": [
-        [
-          1911,
-          -3140
-        ],
-        [
-          2185,
-          -3106
-        ],
-        [
-          2458,
-          -3209
-        ],
-        [
-          2458,
-          -3482
-        ],
-        [
-          2321,
-          -3686
-        ],
-        [
-          2048,
-          -3686
-        ],
-        [
-          1843,
-          -3550
-        ]
-      ],
-      "profile": {
-        "temperature": [
-          "cool"
-        ],
-        "moisture": [
-          "moderate"
-        ],
-        "vegetation": [
+          "woodland",
           "grassland"
         ],
         "water": [
@@ -158,35 +1022,347 @@
       }
     },
     {
-      "id": "pripyat_marshes",
+      "id": "kuban_plain",
       "dimension": "minecraft:overworld",
-      "priority": 73,
+      "priority": 1080,
       "macro_region": "eastern_europe",
-      "display_label": "Pripyat Marshes",
+      "display_label": "Kuban Plains",
       "polygon": [
         [
-          1708,
-          -3413
+          2867.0,
+          -3106.0
         ],
         [
-          1980,
-          -3413
+          2799.02,
+          -3072.01
         ],
         [
-          2185,
-          -3482
+          2526.0,
+          -3072.01
         ],
         [
-          2116,
-          -3618
+          2526.0,
+          -3174.0
         ],
         [
-          1843,
-          -3618
+          2662.0,
+          -3243.0
         ],
         [
-          1708,
-          -3550.5
+          2867.0,
+          -3243.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lower_danube_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 1087,
+      "macro_region": "eastern_europe",
+      "display_label": "Lower Danube Plains",
+      "polygon": [
+        [
+          1980.0,
+          -3106.0
+        ],
+        [
+          1980.0,
+          -2935.01
+        ],
+        [
+          1707.01,
+          -2935.01
+        ],
+        [
+          1707.01,
+          -3038.005
+        ],
+        [
+          1843.0,
+          -3106.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lower_volga_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 1148,
+      "macro_region": "eastern_europe",
+      "display_label": "Lower Volga",
+      "polygon": [
+        [
+          3071.99,
+          -3301.961875
+        ],
+        [
+          2990.0,
+          -3331.0
+        ],
+        [
+          3024.0,
+          -3359.0
+        ],
+        [
+          3071.99,
+          -3340.948716
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "moldavian_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 1090,
+      "macro_region": "eastern_europe",
+      "display_label": "Moldavian Hills",
+      "polygon": [
+        [
+          1911.0,
+          -3140.0
+        ],
+        [
+          1707.01,
+          -3140.0
+        ],
+        [
+          1707.01,
+          -3243.01
+        ],
+        [
+          1775.0,
+          -3311.0
+        ],
+        [
+          1911.0,
+          -3345.0
+        ],
+        [
+          2048.0,
+          -3243.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_forest_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 1091,
+      "macro_region": "eastern_europe",
+      "display_label": "Northern Forests",
+      "polygon": [
+        [
+          3004.0,
+          -3925.0
+        ],
+        [
+          2731.01,
+          -3958.998755
+        ],
+        [
+          2731.01,
+          -4096.0
+        ],
+        [
+          3823.0,
+          -4096.0
+        ],
+        [
+          3823.0,
+          -3959.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "oka_don_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 1092,
+      "macro_region": "eastern_europe",
+      "display_label": "Oka–Don Plains",
+      "polygon": [
+        [
+          2867.0,
+          -3277.0
+        ],
+        [
+          2662.0,
+          -3345.0
+        ],
+        [
+          2765.0,
+          -3550.0
+        ],
+        [
+          2662.005024,
+          -3754.99
+        ],
+        [
+          2731.01,
+          -3754.99
+        ],
+        [
+          2731.01,
+          -3789.253139
+        ],
+        [
+          2799.0,
+          -3823.0
+        ],
+        [
+          3004.0,
+          -3721.0
+        ],
+        [
+          3004.0,
+          -3345.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "polissia",
+      "dimension": "minecraft:overworld",
+      "priority": 1098,
+      "macro_region": "eastern_europe",
+      "display_label": "Polissia",
+      "polygon": [
+        [
+          1911.0,
+          -3434.0
+        ],
+        [
+          1707.01,
+          -3446.999363
+        ],
+        [
+          1707.01,
+          -3584.005
+        ],
+        [
+          1843.0,
+          -3652.0
+        ],
+        [
+          2048.0,
+          -3652.0
+        ],
+        [
+          2219.0,
+          -3584.0
+        ],
+        [
+          2219.0,
+          -3447.0
         ]
       ],
       "profile": {
@@ -197,6 +1373,7 @@
           "wet"
         ],
         "vegetation": [
+          "forest",
           "wetland"
         ],
         "water": [
@@ -209,145 +1386,59 @@
       }
     },
     {
-      "id": "azov_coast",
-      "dimension": "minecraft:overworld",
-      "priority": 72,
-      "macro_region": "eastern_europe",
-      "display_label": "Azov Coast",
-      "polygon": [
-        [
-          2389,
-          -3113
-        ],
-        [
-          2697,
-          -3113
-        ],
-        [
-          2765,
-          -3195
-        ],
-        [
-          2662,
-          -3277
-        ],
-        [
-          2458,
-          -3263
-        ],
-        [
-          2389,
-          -3195
-        ]
-      ],
-      "profile": {
-        "temperature": [
-          "warm"
-        ],
-        "moisture": [
-          "dry"
-        ],
-        "vegetation": [
-          "grassland"
-        ],
-        "water": [
-          "coast"
-        ],
-        "relief": [
-          "lowland"
-        ],
-        "special": []
-      }
-    },
-    {
-      "id": "don_basin",
-      "dimension": "minecraft:overworld",
-      "priority": 71,
-      "macro_region": "eastern_europe",
-      "display_label": "Don",
-      "polygon": [
-        [
-          2458,
-          -3209
-        ],
-        [
-          2867,
-          -3140
-        ],
-        [
-          3038,
-          -3277
-        ],
-        [
-          3004,
-          -3550
-        ],
-        [
-          2731,
-          -3686
-        ],
-        [
-          2458,
-          -3550
-        ]
-      ],
-      "profile": {
-        "temperature": [
-          "cool"
-        ],
-        "moisture": [
-          "dry"
-        ],
-        "vegetation": [
-          "grassland"
-        ],
-        "water": [
-          "river"
-        ],
-        "relief": [
-          "plain"
-        ],
-        "special": []
-      }
-    },
-    {
       "id": "pontic_steppe",
       "dimension": "minecraft:overworld",
-      "priority": 70,
+      "priority": 1099,
       "macro_region": "eastern_europe",
       "display_label": "Pontic Steppe",
       "polygon": [
         [
-          1708,
-          -3139.841642
+          2047.99,
+          -3072.0
         ],
         [
-          2048,
-          -3086
+          1707.01,
+          -3072.0
         ],
         [
-          2458,
-          -3086
+          1707.01,
+          -3243.002491
         ],
         [
-          2731,
-          -3140
+          1980.0,
+          -3311.0
         ],
         [
-          2731,
-          -3345
+          2253.0,
+          -3311.0
         ],
         [
-          2321,
-          -3345
+          2458.0,
+          -3379.0
         ],
         [
-          1911,
-          -3277
+          2731.0,
+          -3345.0
         ],
         [
-          1708,
-          -3140.671569
+          2867.0,
+          -3277.0
+        ],
+        [
+          2731.0,
+          -3140.0
+        ],
+        [
+          2321.0,
+          -3106.0
+        ],
+        [
+          2048.080294,
+          -3072.01
+        ],
+        [
+          2047.99,
+          -3072.01
         ]
       ],
       "profile": {
@@ -371,35 +1462,303 @@
       }
     },
     {
-      "id": "central_russian_upland",
+      "id": "pripyat_marshes",
       "dimension": "minecraft:overworld",
-      "priority": 69,
+      "priority": 1187,
       "macro_region": "eastern_europe",
-      "display_label": "Central Russian Upland",
+      "display_label": "Pripyat Marshes",
       "polygon": [
         [
-          2321,
-          -3413
+          1877.0,
+          -3482.0
         ],
         [
-          2594,
-          -3345
+          1707.01,
+          -3482.0
         ],
         [
-          2867,
-          -3482
+          1707.01,
+          -3570.802
         ],
         [
-          2867,
-          -3741
+          1843.0,
+          -3598.0
         ],
         [
-          2731,
-          -3741
+          2048.0,
+          -3577.0
         ],
         [
-          2458,
-          -3686
+          2068.0,
+          -3509.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "wet"
+        ],
+        "vegetation": [
+          "wetland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "southern_carpathians__eastern_europe",
+      "dimension": "minecraft:overworld",
+      "priority": 1184,
+      "macro_region": "eastern_europe",
+      "display_label": "Southern Carpathians",
+      "polygon": [
+        [
+          1816.0,
+          -3113.0
+        ],
+        [
+          1795.0,
+          -3079.0
+        ],
+        [
+          1708.0,
+          -3079.0
+        ],
+        [
+          1708.0,
+          -3128.104895
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
+    },
+    {
+      "id": "stavropol_upland",
+      "dimension": "minecraft:overworld",
+      "priority": 1110,
+      "macro_region": "eastern_europe",
+      "display_label": "Stavropol Hills",
+      "polygon": [
+        [
+          2867.0,
+          -3140.0
+        ],
+        [
+          3071.99,
+          -3140.0
+        ],
+        [
+          3071.99,
+          -3072.01
+        ],
+        [
+          2731.0,
+          -3072.01
+        ],
+        [
+          2731.0,
+          -3106.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "terek_kuma_lowland",
+      "dimension": "minecraft:overworld",
+      "priority": 1113,
+      "macro_region": "eastern_europe",
+      "display_label": "Terek–Kuma Plains",
+      "polygon": [
+        [
+          3026.673333,
+          -3072.01
+        ],
+        [
+          3071.99,
+          -3139.985
+        ],
+        [
+          3071.99,
+          -3072.01
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "transylvanian_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 1119,
+      "macro_region": "eastern_europe",
+      "display_label": "Transylvania",
+      "polygon": [
+        [
+          1775.0,
+          -3174.0
+        ],
+        [
+          1768.0,
+          -3106.0
+        ],
+        [
+          1707.01,
+          -3106.0
+        ],
+        [
+          1707.01,
+          -3243.0
+        ],
+        [
+          1741.0,
+          -3243.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "upper_volga_country",
+      "dimension": "minecraft:overworld",
+      "priority": 1124,
+      "macro_region": "eastern_europe",
+      "display_label": "Upper Volga",
+      "polygon": [
+        [
+          3004.0,
+          -3755.0
+        ],
+        [
+          2731.01,
+          -3755.0
+        ],
+        [
+          2731.01,
+          -4027.998755
+        ],
+        [
+          3004.0,
+          -3994.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ural_foreland",
+      "dimension": "minecraft:overworld",
+      "priority": 1126,
+      "macro_region": "eastern_europe",
+      "display_label": "Ural Foothills",
+      "polygon": [
+        [
+          4096.0,
+          -4096.0
+        ],
+        [
+          4096.0,
+          -3755.01
+        ],
+        [
+          3823.0,
+          -3755.01
+        ],
+        [
+          3823.0,
+          -4096.0
         ]
       ],
       "profile": {
@@ -422,35 +1781,93 @@
       }
     },
     {
-      "id": "volga_upland",
+      "id": "ural_mountains",
       "dimension": "minecraft:overworld",
-      "priority": 68,
+      "priority": 1185,
       "macro_region": "eastern_europe",
-      "display_label": "Volga Upland",
+      "display_label": "Ural Mountains",
       "polygon": [
         [
-          2867,
-          -3761
+          4096.0,
+          -3891.0
         ],
         [
-          3072,
-          -3761
+          4050.891122,
+          -3755.01
         ],
         [
-          3345,
-          -3768
+          3811.894439,
+          -3755.01
         ],
         [
-          3413,
-          -4028
+          3857.0,
+          -3823.0
         ],
         [
-          3072,
-          -4096
+          3959.0,
+          -4096.0
         ],
         [
-          2867,
-          -3959
+          4096.0,
+          -4096.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
+    },
+    {
+      "id": "volga_upland",
+      "dimension": "minecraft:overworld",
+      "priority": 1131,
+      "macro_region": "eastern_europe",
+      "display_label": "Volga Hills",
+      "polygon": [
+        [
+          3071.99,
+          -3277.0
+        ],
+        [
+          2935.0,
+          -3277.0
+        ],
+        [
+          3004.0,
+          -3721.0
+        ],
+        [
+          3140.0,
+          -3857.0
+        ],
+        [
+          3311.0,
+          -3823.0
+        ],
+        [
+          3324.51848,
+          -3755.01
+        ],
+        [
+          3071.99,
+          -3755.01
         ]
       ],
       "profile": {
@@ -468,6 +1885,150 @@
         ],
         "relief": [
           "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "volhynian_podolian_upland",
+      "dimension": "minecraft:overworld",
+      "priority": 1133,
+      "macro_region": "eastern_europe",
+      "display_label": "Volhynia–Podillia",
+      "polygon": [
+        [
+          1946.0,
+          -3277.0
+        ],
+        [
+          1707.01,
+          -3277.0
+        ],
+        [
+          1707.01,
+          -3481.998284
+        ],
+        [
+          1911.0,
+          -3447.0
+        ],
+        [
+          2048.0,
+          -3379.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "vyatka_kama_country",
+      "dimension": "minecraft:overworld",
+      "priority": 1135,
+      "macro_region": "eastern_europe",
+      "display_label": "Vyatka–Kama",
+      "polygon": [
+        [
+          3071.99,
+          -3750.163891
+        ],
+        [
+          3004.0,
+          -3755.0
+        ],
+        [
+          3004.0,
+          -4096.0
+        ],
+        [
+          3823.0,
+          -4096.0
+        ],
+        [
+          3823.0,
+          -3755.01
+        ],
+        [
+          3071.99,
+          -3755.01
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "western_carpathians__eastern_europe",
+      "dimension": "minecraft:overworld",
+      "priority": 1139,
+      "macro_region": "eastern_europe",
+      "display_label": "Western Carpathians",
+      "polygon": [
+        [
+          1713.0,
+          -3284.0
+        ],
+        [
+          1707.01,
+          -3283.813644
+        ],
+        [
+          1707.01,
+          -3380.760095
+        ],
+        [
+          1713.0,
+          -3379.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "hills"
         ],
         "special": []
       }

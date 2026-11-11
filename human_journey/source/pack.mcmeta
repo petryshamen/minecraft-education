@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.4.1 — Separate mushroom commodities"
+    "description": "Human Journey v0.5.1 — Europe Coverage v2"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.4.1"
+    "version": "0.5.1"
   }
 }

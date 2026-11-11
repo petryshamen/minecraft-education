@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "caspian_lowland",
+      "dimension": "minecraft:overworld",
+      "priority": 1055,
+      "macro_region": "central_asia",
+      "display_label": "Caspian Lowland",
+      "polygon": [
+        [
+          3755.0,
+          -3209.0
+        ],
+        [
+          3755.0,
+          -3072.01
+        ],
+        [
+          3072.0,
+          -3072.01
+        ],
+        [
+          3072.0,
+          -3277.0
+        ],
+        [
+          3277.0,
+          -3413.0
+        ],
+        [
+          3550.0,
+          -3413.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lower_volga_valley__central_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 1149,
+      "macro_region": "central_asia",
+      "display_label": "Lower Volga",
+      "polygon": [
+        [
+          3086.0,
+          -3297.0
+        ],
+        [
+          3072.0,
+          -3301.958333
+        ],
+        [
+          3072.0,
+          -3340.944954
+        ],
+        [
+          3133.0,
+          -3318.0
+        ],
+        [
+          3263.0,
+          -3188.0
+        ],
+        [
+          3366.0,
+          -3140.0
+        ],
+        [
+          3331.0,
+          -3106.0
+        ],
+        [
+          3222.0,
+          -3140.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "terek_kuma_lowland__central_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 1114,
+      "macro_region": "central_asia",
+      "display_label": "Terek–Kuma Plains",
+      "polygon": [
+        [
+          3345.0,
+          -3140.0
+        ],
+        [
+          3345.0,
+          -3072.01
+        ],
+        [
+          3072.0,
+          -3072.01
+        ],
+        [
+          3072.0,
+          -3140.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "trans_volga_steppe",
+      "dimension": "minecraft:overworld",
+      "priority": 1117,
+      "macro_region": "central_asia",
+      "display_label": "Trans-Volga Steppe",
+      "polygon": [
+        [
+          3550.0,
+          -3277.0
+        ],
+        [
+          3174.0,
+          -3277.0
+        ],
+        [
+          3174.0,
+          -3447.0
+        ],
+        [
+          3345.0,
+          -3652.0
+        ],
+        [
+          3448.0,
+          -3755.0
+        ],
+        [
+          3652.5,
+          -3755.0
+        ],
+        [
+          3823.0,
+          -3721.0
+        ],
+        [
+          3823.0,
+          -3413.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ural_foreland__central_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 1127,
+      "macro_region": "central_asia",
+      "display_label": "Ural Foothills",
+      "polygon": [
+        [
+          3823.0,
+          -3413.0
+        ],
+        [
+          3482.0,
+          -3482.0
+        ],
+        [
+          3482.0,
+          -3721.0
+        ],
+        [
+          3823.0,
+          -3755.0
+        ],
+        [
+          4096.0,
+          -3755.0
+        ],
+        [
+          4096.0,
+          -3482.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ural_mountains__central_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 1186,
+      "macro_region": "central_asia",
+      "display_label": "Ural Mountains",
+      "polygon": [
+        [
+          3891.0,
+          -3482.0
+        ],
+        [
+          3755.0,
+          -3482.0
+        ],
+        [
+          3721.0,
+          -3618.0
+        ],
+        [
+          3811.887805,
+          -3755.0
+        ],
+        [
+          4050.887805,
+          -3755.0
+        ],
+        [
+          4028.0,
+          -3686.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access",
+          "cave_access"
+        ]
+      }
+    },
+    {
+      "id": "volga_upland__central_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 1132,
+      "macro_region": "central_asia",
+      "display_label": "Volga Hills",
+      "polygon": [
+        [
+          3174.0,
+          -3447.0
+        ],
+        [
+          3072.0,
+          -3277.0
+        ],
+        [
+          3072.0,
+          -3755.0
+        ],
+        [
+          3324.520468,
+          -3755.0
+        ],
+        [
+          3345.0,
+          -3652.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland"
+        ],
+        "water": [
+          "river"
+        ],
+        "relief": [
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "vyatka_kama_country__central_asia",
+      "dimension": "minecraft:overworld",
+      "priority": 1136,
+      "macro_region": "central_asia",
+      "display_label": "Vyatka–Kama",
+      "polygon": [
+        [
+          3482.0,
+          -3721.0
+        ],
+        [
+          3072.0,
+          -3750.16318
+        ],
+        [
+          3072.0,
+          -3755.0
+        ],
+        [
+          3823.0,
+          -3755.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    }
+  ]
+}
