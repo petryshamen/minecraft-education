@@ -1,3 +1,5 @@
 {
-  "tooltip.human_journey_core.salt_water": "Salt Water — not drinkable; filtration and boiling do not remove salt"
+  "tooltip.human_journey_core.salt_water": "Salt Water — not drinkable; filtration and boiling do not remove salt",
+  "message.human_journey_core.new_region": "[Human Journey] New region discovered: %s",
+  "message.human_journey_core.new_area": "[Human Journey] New area discovered: %s"
 }

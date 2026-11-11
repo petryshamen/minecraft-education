@@ -28,15 +28,15 @@ public record NpcGeography(List<Area> macros,List<Area> locals){
     }
     private static void parseAreas(JsonObject root,String key,boolean local,List<Area> out,Set<String> ids,Set<String> eras,Map<String,Set<String>> vocabulary){
         for(var e:array(root,key,0,local?4096:512)){
-            var o=object(e,key);if(local)keys(o,"id","dimension","priority","macro_region","display_label","era_labels","polygon","profile");else keys(o,"id","dimension","priority","polygon","profile");
+            var o=object(e,key);if(local)keys(o,"id","dimension","priority","macro_region","display_label","era_labels","polygon","profile");else keys(o,"id","dimension","priority","polygon","profile","display_label","era_labels");
             String id=logical(text(o,"id",null,64));if(!ids.add(id))throw new IllegalArgumentException("duplicate "+key+" ID: "+id);
             String dim=resource(text(o,"dimension","minecraft:overworld",256));List<WaterGeography.Point> points=new ArrayList<>();
             for(var p:array(o,"polygon",3,256)){if(!p.isJsonArray()||p.getAsJsonArray().size()!=2)throw new IllegalArgumentException("polygon vertex must be [X,Z]");var pair=p.getAsJsonArray();for(var n:pair)if(!n.isJsonPrimitive()||!n.getAsJsonPrimitive().isNumber())throw new IllegalArgumentException("polygon coordinates must be numeric");points.add(new WaterGeography.Point(pair.get(0).getAsDouble(),pair.get(1).getAsDouble()));}
-            Map<String,String> labels=new TreeMap<>();if(local)for(var label:section(o,"era_labels").entrySet()){
+            Map<String,String> labels=new TreeMap<>();for(var label:section(o,"era_labels").entrySet()){
                 if(!eras.contains(label.getKey()))throw new IllegalArgumentException("unknown era in location labels: "+label.getKey());labels.put(label.getKey(),text(section(o,"era_labels"),label.getKey(),"",48));
             }
             String parent=local?text(o,"macro_region","none",64):"none";if(!parent.equals("none"))logical(parent);
-            out.add(new Area(id,dim,integer(o,"priority",0,-1000000,1000000),parent,local?text(o,"display_label","",48):"",labels,new WaterGeography.Region(id,dim,WaterPolicy.Quality.NORMAL,points),o.has("profile")?GeoProfile.parse(o.get("profile"),vocabulary):null));
+            out.add(new Area(id,dim,integer(o,"priority",0,-1000000,1000000),parent,text(o,"display_label","",48),labels,new WaterGeography.Region(id,dim,WaterPolicy.Quality.NORMAL,points),o.has("profile")?GeoProfile.parse(o.get("profile"),vocabulary):null));
         }
     }
     public GeoProfile profile(String macro,String local){if(!local.equals("none"))return locals.stream().filter(a->a.id().equals(local)).findFirst().map(a->a.profile()==null?GeoProfile.none():a.profile()).orElse(GeoProfile.none());return macros.stream().filter(a->a.id().equals(macro)).findFirst().map(a->a.profile()==null?GeoProfile.none():a.profile()).orElse(GeoProfile.none());}

@@ -1,3 +1,5 @@
 {
-  "tooltip.human_journey_core.salt_water": "Солона вода — непридатна для пиття; фільтрація та кип’ятіння не видаляють сіль"
+  "tooltip.human_journey_core.salt_water": "Солона вода — непридатна для пиття; фільтрація та кип’ятіння не видаляють сіль",
+  "message.human_journey_core.new_region": "[Human Journey] Відкрито новий регіон: %s",
+  "message.human_journey_core.new_area": "[Human Journey] Відкрито нову місцевість: %s"
 }

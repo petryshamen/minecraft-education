@@ -34,6 +34,7 @@ public final class HumanJourneyCore {
             com.mojang.logging.LogUtils.getLogger().info("[HJ Core] WATER_MIXIN_SMOKE_OK: all ten water targets loaded under ModLauncher");
         }
         org.humanjourney.core.npc.NpcBootstrap.register(context);
+        org.humanjourney.core.geography.GeographyBootstrap.register(context);
         org.humanjourney.core.fishing.FishingBootstrap.register();
         context.registerConfig(ModConfig.Type.SERVER, TemperatureConfig.SPEC,
                 "human_journey_core-server.toml");

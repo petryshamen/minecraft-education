@@ -1,0 +1,21 @@
+package org.humanjourney.core.geography;
+import java.util.*;
+import com.mojang.brigadier.arguments.*;
+import net.minecraft.commands.*;
+import net.minecraft.network.chat.Component;
+import net.minecraftforge.event.RegisterCommandsEvent;
+import org.humanjourney.core.npc.context.*;
+public final class GeographyCommands {
+ public static void register(RegisterCommandsEvent event){var discovery=Commands.literal("discovery");for(var kind:DiscoveryLedger.Kind.values()){
+  String name=kind.name().toLowerCase(Locale.ROOT);discovery.then(Commands.literal("list").then(Commands.literal(name).executes(c->list(c.getSource(),kind,1)).then(Commands.argument("page",IntegerArgumentType.integer(1)).executes(c->list(c.getSource(),kind,IntegerArgumentType.getInteger(c,"page"))))));
+  discovery.then(Commands.literal("mark").then(Commands.literal(name).then(Commands.argument("id",StringArgumentType.word()).suggests((c,b)->SharedSuggestionProvider.suggest(known(kind),b)).executes(c->mark(c.getSource(),kind,StringArgumentType.getString(c,"id"))))));
+ }discovery.then(Commands.literal("reset").executes(c->{SavedDiscovery.get(c.getSource().getServer()).reset();GeographyServer.resync(c.getSource().getServer());c.getSource().sendSuccess(()->Component.literal("Shared geography discovery reset. Move to re-evaluate discovery; standing still does not immediately rediscover."),true);return 1;}));
+ event.getDispatcher().register(Commands.literal("hj").then(Commands.literal("geography").requires(s->s.hasPermission(2)).then(Commands.literal("status").executes(c->status(c.getSource()))).then(discovery)));
+ }
+ private static List<NpcGeography.Area> areas(DiscoveryLedger.Kind kind){var geo=NpcContextStore.state().data().geography();return kind==DiscoveryLedger.Kind.MACRO?geo.macros():geo.locals();}
+ public static Set<String> known(DiscoveryLedger.Kind kind){var ids=new TreeSet<String>();for(var a:areas(kind))ids.add(a.id());return ids;}
+ private static int mark(CommandSourceStack source,DiscoveryLedger.Kind kind,String id){if(!known(kind).contains(id)){source.sendFailure(Component.literal("Unknown "+kind.name().toLowerCase(Locale.ROOT)+" geography ID: "+id));return 0;}var delta=SavedDiscovery.get(source.getServer()).mark(kind,id);GeographyServer.publish(source.getServer(),delta,GeographyContext.EMPTY,false);source.sendSuccess(()->Component.literal((delta.changed()?"Marked ":"Already discovered: ")+kind+" "+id),true);return 1;}
+ private static int list(CommandSourceStack source,DiscoveryLedger.Kind kind,int page){var snapshot=SavedDiscovery.get(source.getServer()).snapshot();var ids=new ArrayList<>(new TreeSet<>(kind==DiscoveryLedger.Kind.MACRO?snapshot.macros():snapshot.locals()));int pages=Math.max(1,(ids.size()+11)/12);if(page>pages){source.sendFailure(Component.literal("Page out of range: 1.."+pages));return 0;}var known=known(kind);var entries=ids.subList((page-1)*12,Math.min(page*12,ids.size())).stream().map(id->id+(known.contains(id)?"":" (stale)")).toList();source.sendSuccess(()->Component.literal(kind+" discoveries "+ids.size()+" | page "+page+"/"+pages+": "+entries),false);return 1;}
+ private static int status(CommandSourceStack source){try{var player=source.getPlayerOrException();var view=GeographyServer.context(player);var role=GeographyServer.roles(player);var state=SavedDiscovery.get(source.getServer()).snapshot();long staleMacros=state.macros().stream().filter(id->!known(DiscoveryLedger.Kind.MACRO).contains(id)).count(),staleLocals=state.locals().stream().filter(id->!known(DiscoveryLedger.Kind.LOCAL).contains(id)).count();String message="Macro: "+view.macroId()+" | "+view.macroLabel()+" | discovered="+state.macros().contains(view.macroId())+"\nLocal: "+view.localId()+" | "+view.localLabel()+" | discovered="+state.locals().contains(view.localId())+"\nShared: macros="+state.macros().size()+" locals="+state.locals().size()+" revision="+state.revision()+" stale="+staleMacros+"/"+staleLocals+"\nparticipant="+role.participant()+" student="+role.student()+" teacher="+role.teacher()+" can discover="+role.canDiscover();source.sendSuccess(()->Component.literal(message),false);return 1;}catch(Exception e){source.sendFailure(Component.literal("Geography: "+e.getMessage()));return 0;}}
+ private GeographyCommands(){}
+}
