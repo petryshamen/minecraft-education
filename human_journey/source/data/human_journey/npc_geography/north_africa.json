@@ -1,0 +1,2387 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "western_saharan_desert",
+      "dimension": "minecraft:overworld",
+      "priority": 10000,
+      "macro_region": "north_africa",
+      "display_label": "Western Saharan Desert",
+      "polygon": [
+        [
+          205,
+          -1024
+        ],
+        [
+          205,
+          -1707
+        ],
+        [
+          0,
+          -2048
+        ],
+        [
+          -68,
+          -2321
+        ],
+        [
+          -340.999599,
+          -2388.9999
+        ],
+        [
+          -341.000251,
+          -2388.9999
+        ],
+        [
+          -512,
+          -2321
+        ],
+        [
+          -655,
+          -2185
+        ],
+        [
+          -737,
+          -2014
+        ],
+        [
+          -908,
+          -1877
+        ],
+        [
+          -1058,
+          -1638
+        ],
+        [
+          -1195,
+          -1434
+        ],
+        [
+          -1195,
+          -1024
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "central_sahara",
+      "dimension": "minecraft:overworld",
+      "priority": 10010,
+      "macro_region": "north_africa",
+      "display_label": "Central Sahara",
+      "polygon": [
+        [
+          1365,
+          -1024
+        ],
+        [
+          1365,
+          -2048
+        ],
+        [
+          1024,
+          -2253
+        ],
+        [
+          683,
+          -2355
+        ],
+        [
+          205.001406,
+          -2388.9999
+        ],
+        [
+          204.999799,
+          -2388.9999
+        ],
+        [
+          -68,
+          -2253
+        ],
+        [
+          -137,
+          -1843
+        ],
+        [
+          -137,
+          -1024
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "eastern_sahara",
+      "dimension": "minecraft:overworld",
+      "priority": 10020,
+      "macro_region": "north_africa",
+      "display_label": "Eastern Sahara",
+      "polygon": [
+        [
+          2388.9999,
+          -1229.000029
+        ],
+        [
+          2388.9999,
+          -1502.000401
+        ],
+        [
+          2321.0,
+          -1775.0
+        ],
+        [
+          2185.0,
+          -2048.0
+        ],
+        [
+          2116.0,
+          -2157.0
+        ],
+        [
+          1707.0,
+          -2185.0
+        ],
+        [
+          1365.0,
+          -2253.0
+        ],
+        [
+          1161.0,
+          -2116.0
+        ],
+        [
+          1161.0,
+          -1024.0
+        ],
+        [
+          2047.9999,
+          -1024.0
+        ],
+        [
+          2047.999929,
+          -1024.000071
+        ],
+        [
+          2048.0,
+          -1024.0001
+        ],
+        [
+          2260.968809,
+          -1024.0001
+        ],
+        [
+          2346.924806,
+          -1161.630523
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_sahel",
+      "dimension": "minecraft:overworld",
+      "priority": 11030,
+      "macro_region": "north_africa",
+      "display_label": "Northern Sahel",
+      "polygon": [
+        [
+          2304.520679,
+          -1093.73418
+        ],
+        [
+          1707.0,
+          -1106.0
+        ],
+        [
+          1092.0,
+          -1113.0
+        ],
+        [
+          683.0,
+          -1126.0
+        ],
+        [
+          0.0,
+          -1174.0
+        ],
+        [
+          -683.0,
+          -1242.0
+        ],
+        [
+          -1195.0,
+          -1195.0
+        ],
+        [
+          -1195.0,
+          -1024.0
+        ],
+        [
+          2047.9999,
+          -1024.0
+        ],
+        [
+          2047.999929,
+          -1024.000071
+        ],
+        [
+          2048.0,
+          -1024.0001
+        ],
+        [
+          2260.968809,
+          -1024.0001
+        ],
+        [
+          2281.168312,
+          -1056.342999
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "atlantic_saharan_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 15040,
+      "macro_region": "north_africa",
+      "display_label": "Atlantic Saharan Coast",
+      "polygon": [
+        [
+          -1140,
+          -1024
+        ],
+        [
+          -1079,
+          -1229
+        ],
+        [
+          -1113,
+          -1399
+        ],
+        [
+          -1038,
+          -1604
+        ],
+        [
+          -867,
+          -1843
+        ],
+        [
+          -696,
+          -1993
+        ],
+        [
+          -642,
+          -2096
+        ],
+        [
+          -689,
+          -2116
+        ],
+        [
+          -758,
+          -2021
+        ],
+        [
+          -935,
+          -1871
+        ],
+        [
+          -1092,
+          -1638
+        ],
+        [
+          -1201,
+          -1434
+        ],
+        [
+          -1201,
+          -1024
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "moroccan_plains_plateaus",
+      "dimension": "minecraft:overworld",
+      "priority": 12050,
+      "macro_region": "north_africa",
+      "display_label": "Moroccan Plains",
+      "polygon": [
+        [
+          -478,
+          -2048
+        ],
+        [
+          -307,
+          -2185
+        ],
+        [
+          -102,
+          -2335
+        ],
+        [
+          -156.794016,
+          -2388.9999
+        ],
+        [
+          -434.05519,
+          -2388.9999
+        ],
+        [
+          -532,
+          -2321
+        ],
+        [
+          -649,
+          -2198
+        ],
+        [
+          -683,
+          -2048
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "rif_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 14060,
+      "macro_region": "north_africa",
+      "display_label": "Rif Mountains",
+      "polygon": [
+        [
+          -321,
+          -2359
+        ],
+        [
+          -164,
+          -2362
+        ],
+        [
+          -149.079003,
+          -2388.9999
+        ],
+        [
+          -387.486265,
+          -2388.9999
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "middle_atlas",
+      "dimension": "minecraft:overworld",
+      "priority": 14070,
+      "macro_region": "north_africa",
+      "display_label": "Middle Atlas",
+      "polygon": [
+        [
+          -294,
+          -2178
+        ],
+        [
+          -225,
+          -2246
+        ],
+        [
+          -239,
+          -2321
+        ],
+        [
+          -294,
+          -2328
+        ],
+        [
+          -389,
+          -2266
+        ],
+        [
+          -396,
+          -2198
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "high_atlas",
+      "dimension": "minecraft:overworld",
+      "priority": 14080,
+      "macro_region": "north_africa",
+      "display_label": "High Atlas",
+      "polygon": [
+        [
+          -553,
+          -2079
+        ],
+        [
+          -423,
+          -2116
+        ],
+        [
+          -232,
+          -2185
+        ],
+        [
+          -150,
+          -2212
+        ],
+        [
+          -184,
+          -2253
+        ],
+        [
+          -280,
+          -2239
+        ],
+        [
+          -437,
+          -2185
+        ],
+        [
+          -608,
+          -2130
+        ],
+        [
+          -669,
+          -2068
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "anti_atlas",
+      "dimension": "minecraft:overworld",
+      "priority": 14090,
+      "macro_region": "north_africa",
+      "display_label": "Anti-Atlas",
+      "polygon": [
+        [
+          -560,
+          -1959
+        ],
+        [
+          -362,
+          -2014
+        ],
+        [
+          -328,
+          -2096
+        ],
+        [
+          -437,
+          -2123
+        ],
+        [
+          -567,
+          -2055
+        ],
+        [
+          -669,
+          -2028
+        ],
+        [
+          -683,
+          -1959
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "arid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "tell_atlas",
+      "dimension": "minecraft:overworld",
+      "priority": 14100,
+      "macro_region": "north_africa",
+      "display_label": "Tell Atlas",
+      "polygon": [
+        [
+          0,
+          -2376
+        ],
+        [
+          54.219095,
+          -2388.9999
+        ],
+        [
+          -150,
+          -2388.9999
+        ],
+        [
+          -150,
+          -2362
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "algerian_high_plateaus",
+      "dimension": "minecraft:overworld",
+      "priority": 13110,
+      "macro_region": "north_africa",
+      "display_label": "Algerian High Plateaus",
+      "polygon": [
+        [
+          68,
+          -2253
+        ],
+        [
+          307,
+          -2307
+        ],
+        [
+          519,
+          -2342
+        ],
+        [
+          534.666633,
+          -2388.9999
+        ],
+        [
+          -10.0007,
+          -2388.9999
+        ],
+        [
+          -150,
+          -2369
+        ],
+        [
+          -150,
+          -2239
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "arid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "saharan_atlas",
+      "dimension": "minecraft:overworld",
+      "priority": 14120,
+      "macro_region": "north_africa",
+      "display_label": "Saharan Atlas",
+      "polygon": [
+        [
+          0,
+          -2171
+        ],
+        [
+          205,
+          -2225
+        ],
+        [
+          389,
+          -2294
+        ],
+        [
+          512,
+          -2321
+        ],
+        [
+          586.346557,
+          -2388.9999
+        ],
+        [
+          433.499749,
+          -2388.9999
+        ],
+        [
+          348,
+          -2355
+        ],
+        [
+          137,
+          -2294
+        ],
+        [
+          -89,
+          -2239
+        ],
+        [
+          -171,
+          -2157
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "tunisian_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 12130,
+      "macro_region": "north_africa",
+      "display_label": "Tunisian Plains",
+      "polygon": [
+        [
+          696,
+          -2280
+        ],
+        [
+          759.80482,
+          -2388.9999
+        ],
+        [
+          561.130775,
+          -2388.9999
+        ],
+        [
+          567,
+          -2280
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tunisian_chotts",
+      "dimension": "minecraft:overworld",
+      "priority": 13140,
+      "macro_region": "north_africa",
+      "display_label": "Tunisian Chotts",
+      "polygon": [
+        [
+          655,
+          -2219
+        ],
+        [
+          689,
+          -2280
+        ],
+        [
+          594,
+          -2369
+        ],
+        [
+          423,
+          -2369
+        ],
+        [
+          389,
+          -2301
+        ],
+        [
+          416,
+          -2219
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "jeffara_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 12150,
+      "macro_region": "north_africa",
+      "display_label": "Jeffara Plain",
+      "polygon": [
+        [
+          758,
+          -2178
+        ],
+        [
+          990,
+          -2171
+        ],
+        [
+          1058,
+          -2198
+        ],
+        [
+          1058,
+          -2232
+        ],
+        [
+          887,
+          -2266
+        ],
+        [
+          778,
+          -2294
+        ],
+        [
+          696,
+          -2335
+        ],
+        [
+          676,
+          -2253
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "arid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "nafusa_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 14160,
+      "macro_region": "north_africa",
+      "display_label": "Nafusa Mountains",
+      "polygon": [
+        [
+          819,
+          -2123
+        ],
+        [
+          935,
+          -2154
+        ],
+        [
+          908,
+          -2202
+        ],
+        [
+          785,
+          -2225
+        ],
+        [
+          683,
+          -2198
+        ],
+        [
+          683,
+          -2130
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "gulf_sirte_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 15170,
+      "macro_region": "north_africa",
+      "display_label": "Gulf of Sirte Coast",
+      "polygon": [
+        [
+          1133,
+          -2113
+        ],
+        [
+          1277,
+          -2048
+        ],
+        [
+          1393,
+          -2164
+        ],
+        [
+          1393,
+          -2198
+        ],
+        [
+          1359,
+          -2205
+        ],
+        [
+          1263,
+          -2092
+        ],
+        [
+          1133,
+          -2144
+        ],
+        [
+          997,
+          -2229
+        ],
+        [
+          990,
+          -2191
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "cyrenaican_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 14180,
+      "macro_region": "north_africa",
+      "display_label": "Cyrenaican Plateau",
+      "polygon": [
+        [
+          1550,
+          -2150
+        ],
+        [
+          1591,
+          -2198
+        ],
+        [
+          1570,
+          -2246
+        ],
+        [
+          1481,
+          -2260
+        ],
+        [
+          1386,
+          -2232
+        ],
+        [
+          1386,
+          -2161
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "marmarican_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 15190,
+      "macro_region": "north_africa",
+      "display_label": "Marmarican Coast",
+      "polygon": [
+        [
+          1707,
+          -2123
+        ],
+        [
+          1864,
+          -2099
+        ],
+        [
+          2062,
+          -2103
+        ],
+        [
+          2068,
+          -2137
+        ],
+        [
+          1864,
+          -2157
+        ],
+        [
+          1707,
+          -2178
+        ],
+        [
+          1577,
+          -2198
+        ],
+        [
+          1570,
+          -2144
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "maghreb_mediterranean_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 15200,
+      "macro_region": "north_africa",
+      "display_label": "Maghreb Mediterranean Coast",
+      "polygon": [
+        [
+          -273,
+          -2386
+        ],
+        [
+          -150,
+          -2376
+        ],
+        [
+          -116.621878,
+          -2388.9999
+        ],
+        [
+          -287.777285,
+          -2388.9999
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "mauritanian_plateaus",
+      "dimension": "minecraft:overworld",
+      "priority": 13210,
+      "macro_region": "north_africa",
+      "display_label": "Mauritanian Plateaus",
+      "polygon": [
+        [
+          -683,
+          -1161
+        ],
+        [
+          -614,
+          -1297
+        ],
+        [
+          -717,
+          -1502
+        ],
+        [
+          -874,
+          -1502
+        ],
+        [
+          -956,
+          -1365
+        ],
+        [
+          -922,
+          -1161
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ahaggar_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 14220,
+      "macro_region": "north_africa",
+      "display_label": "Ahaggar Mountains",
+      "polygon": [
+        [
+          526,
+          -1434
+        ],
+        [
+          614,
+          -1604
+        ],
+        [
+          546,
+          -1775
+        ],
+        [
+          287,
+          -1809
+        ],
+        [
+          171,
+          -1673
+        ],
+        [
+          171,
+          -1468
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "tassili_najjer",
+      "dimension": "minecraft:overworld",
+      "priority": 14230,
+      "macro_region": "north_africa",
+      "display_label": "Tassili n’Ajjer",
+      "polygon": [
+        [
+          710,
+          -1570
+        ],
+        [
+          758,
+          -1720
+        ],
+        [
+          683,
+          -1946
+        ],
+        [
+          553,
+          -1911
+        ],
+        [
+          464,
+          -1761
+        ],
+        [
+          478,
+          -1570
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "air_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 14240,
+      "macro_region": "north_africa",
+      "display_label": "Aïr Mountains",
+      "polygon": [
+        [
+          669,
+          -1161
+        ],
+        [
+          683,
+          -1331
+        ],
+        [
+          628,
+          -1434
+        ],
+        [
+          512,
+          -1406
+        ],
+        [
+          464,
+          -1277
+        ],
+        [
+          485,
+          -1161
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "tibesti_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 14250,
+      "macro_region": "north_africa",
+      "display_label": "Tibesti Mountains",
+      "polygon": [
+        [
+          1263,
+          -1256
+        ],
+        [
+          1393,
+          -1420
+        ],
+        [
+          1331,
+          -1611
+        ],
+        [
+          1167,
+          -1625
+        ],
+        [
+          1038,
+          -1475
+        ],
+        [
+          1038,
+          -1256
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "ennedi_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 14260,
+      "macro_region": "north_africa",
+      "display_label": "Ennedi Plateau",
+      "polygon": [
+        [
+          1604,
+          -1092
+        ],
+        [
+          1673,
+          -1256
+        ],
+        [
+          1591,
+          -1331
+        ],
+        [
+          1440,
+          -1311
+        ],
+        [
+          1393,
+          -1188
+        ],
+        [
+          1420,
+          -1092
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "northern_chad_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 12270,
+      "macro_region": "north_africa",
+      "display_label": "Northern Chad Basin",
+      "polygon": [
+        [
+          1502,
+          -1126
+        ],
+        [
+          1502,
+          -1181
+        ],
+        [
+          1365,
+          -1249
+        ],
+        [
+          1195,
+          -1263
+        ],
+        [
+          990,
+          -1229
+        ],
+        [
+          887,
+          -1126
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "nile_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 16280,
+      "macro_region": "north_africa",
+      "display_label": "Nile Valley",
+      "polygon": [
+        [
+          2281.346946,
+          -1345.547121
+        ],
+        [
+          2227.430617,
+          -1310.801042
+        ],
+        [
+          2171.338897,
+          -1271.536838
+        ],
+        [
+          2088.336493,
+          -1313.94024
+        ],
+        [
+          2090.133823,
+          -1376.846814
+        ],
+        [
+          2147.029971,
+          -1483.772333
+        ],
+        [
+          2254.275956,
+          -1642.617802
+        ],
+        [
+          2252.151253,
+          -1706.35891
+        ],
+        [
+          2237.384615,
+          -1754.596594
+        ],
+        [
+          2243.986759,
+          -1796.850316
+        ],
+        [
+          2203.253972,
+          -1786.975701
+        ],
+        [
+          2168.988263,
+          -1817.634493
+        ],
+        [
+          2135.998997,
+          -1859.356211
+        ],
+        [
+          2107.861273,
+          -1918.445432
+        ],
+        [
+          2130.994966,
+          -1983.026993
+        ],
+        [
+          2141.111936,
+          -2054.857474
+        ],
+        [
+          2124.888064,
+          -2057.142526
+        ],
+        [
+          2115.005034,
+          -1986.973007
+        ],
+        [
+          2090.138727,
+          -1917.554568
+        ],
+        [
+          2122.001003,
+          -1850.643789
+        ],
+        [
+          2157.011737,
+          -1806.365507
+        ],
+        [
+          2198.746028,
+          -1769.024299
+        ],
+        [
+          2224.013241,
+          -1775.149684
+        ],
+        [
+          2220.615385,
+          -1753.403406
+        ],
+        [
+          2235.848747,
+          -1703.64109
+        ],
+        [
+          2237.724044,
+          -1647.382198
+        ],
+        [
+          2132.970029,
+          -1492.227667
+        ],
+        [
+          2073.866177,
+          -1381.153186
+        ],
+        [
+          2071.663507,
+          -1304.05976
+        ],
+        [
+          2172.661103,
+          -1252.463162
+        ],
+        [
+          2236.569383,
+          -1297.198958
+        ],
+        [
+          2272.653054,
+          -1320.452879
+        ],
+        [
+          2311.062053,
+          -1208.798812
+        ],
+        [
+          2275.163128,
+          -1144.55863
+        ],
+        [
+          2214.92527,
+          -1067.985082
+        ],
+        [
+          2214.78646,
+          -1064.653646
+        ],
+        [
+          2211.404971,
+          -1064.511053
+        ],
+        [
+          2213.113264,
+          -1024.0001
+        ],
+        [
+          2231.803175,
+          -1024.0001
+        ],
+        [
+          2236.344558,
+          -1024.0001
+        ],
+        [
+          2256.368151,
+          -1024.0001
+        ],
+        [
+          2234.547403,
+          -1066.429332
+        ],
+        [
+          2288.836872,
+          -1135.44137
+        ],
+        [
+          2328.937947,
+          -1207.201188
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "nile_delta",
+      "dimension": "minecraft:overworld",
+      "priority": 17290,
+      "macro_region": "north_africa",
+      "display_label": "Nile Delta",
+      "polygon": [
+        [
+          2202,
+          -2113
+        ],
+        [
+          2208,
+          -2140
+        ],
+        [
+          2137,
+          -2164
+        ],
+        [
+          2082,
+          -2157
+        ],
+        [
+          2038,
+          -2140
+        ],
+        [
+          2041,
+          -2116
+        ],
+        [
+          2133,
+          -2047
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "eastern_desert_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 14300,
+      "macro_region": "north_africa",
+      "display_label": "Eastern Desert Mountains",
+      "polygon": [
+        [
+          2321,
+          -1946
+        ],
+        [
+          2232,
+          -2041
+        ],
+        [
+          2185,
+          -1946
+        ],
+        [
+          2219,
+          -1850
+        ],
+        [
+          2280,
+          -1720
+        ],
+        [
+          2388.9999,
+          -1502.0002
+        ],
+        [
+          2388.9999,
+          -1786.780722
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "egyptian_red_sea_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 15310,
+      "macro_region": "north_africa",
+      "display_label": "Egyptian Red Sea Coast",
+      "polygon": [
+        [
+          2287,
+          -1871
+        ],
+        [
+          2369,
+          -1693
+        ],
+        [
+          2388.9999,
+          -1657.954304
+        ],
+        [
+          2388.9999,
+          -1736.153149
+        ],
+        [
+          2318,
+          -1884
+        ],
+        [
+          2239,
+          -2048
+        ],
+        [
+          2212,
+          -2034
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "niger_bend",
+      "dimension": "minecraft:overworld",
+      "priority": 16320,
+      "macro_region": "north_africa",
+      "display_label": "Niger Bend",
+      "polygon": [
+        [
+          -189.448828,
+          -1138.252158
+        ],
+        [
+          -138.51782,
+          -1144.854325
+        ],
+        [
+          -70.636956,
+          -1111.405783
+        ],
+        [
+          -8.057562,
+          -1102.740944
+        ],
+        [
+          26.964721,
+          -1052.573891
+        ],
+        [
+          43.234475,
+          -1033.433004
+        ],
+        [
+          46.771852,
+          -1024.0
+        ],
+        [
+          65.728148,
+          -1024.0
+        ],
+        [
+          59.098685,
+          -1041.678568
+        ],
+        [
+          51.813888,
+          -1055.207478
+        ],
+        [
+          49.211986,
+          -1053.806454
+        ],
+        [
+          41.035279,
+          -1063.426109
+        ],
+        [
+          2.057562,
+          -1119.259056
+        ],
+        [
+          -65.363044,
+          -1128.594217
+        ],
+        [
+          -135.48218,
+          -1163.145675
+        ],
+        [
+          -192.551172,
+          -1155.747842
+        ],
+        [
+          -226.832165,
+          -1148.006973
+        ],
+        [
+          -270.87201,
+          -1096.44813
+        ],
+        [
+          -288.419248,
+          -1043.806416
+        ],
+        [
+          -271.580752,
+          -1038.193584
+        ],
+        [
+          -255.12799,
+          -1087.55187
+        ],
+        [
+          -217.167835,
+          -1131.993027
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "senegal_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 16330,
+      "macro_region": "north_africa",
+      "display_label": "Senegal Valley",
+      "polygon": [
+        [
+          -1034.657508,
+          -1118.490667
+        ],
+        [
+          -1001.45264,
+          -1112.630984
+        ],
+        [
+          -927.161671,
+          -1096.439362
+        ],
+        [
+          -911.175238,
+          -1063.526119
+        ],
+        [
+          -879.266389,
+          -1032.646588
+        ],
+        [
+          -879.1331,
+          -1032.513299
+        ],
+        [
+          -869.403615,
+          -1024.0
+        ],
+        [
+          -846.596385,
+          -1024.0
+        ],
+        [
+          -868.8669,
+          -1043.486701
+        ],
+        [
+          -878.690099,
+          -1053.309901
+        ],
+        [
+          -878.853321,
+          -1053.146679
+        ],
+        [
+          -898.824762,
+          -1072.473881
+        ],
+        [
+          -916.838329,
+          -1109.560638
+        ],
+        [
+          -998.54736,
+          -1127.369016
+        ],
+        [
+          -1033.342492,
+          -1133.509333
+        ],
+        [
+          -1079.824316,
+          -1133.509333
+        ],
+        [
+          -1110.438045,
+          -1126.706282
+        ],
+        [
+          -1132.110596,
+          -1096.364711
+        ],
+        [
+          -1119.889404,
+          -1087.635289
+        ],
+        [
+          -1101.561955,
+          -1113.293718
+        ],
+        [
+          -1078.175684,
+          -1118.490667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "inner_niger_delta_north1",
+      "dimension": "minecraft:overworld",
+      "priority": 28261,
+      "macro_region": "north_africa",
+      "display_label": "Inner Niger Delta",
+      "polygon": [
+        [
+          -177.0,
+          -1126.0
+        ],
+        [
+          -232.0,
+          -1154.0
+        ],
+        [
+          -321.0,
+          -1099.0
+        ],
+        [
+          -384.202247,
+          -1024.0
+        ],
+        [
+          -188.704918,
+          -1024.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

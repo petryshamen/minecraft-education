@@ -1,0 +1,3497 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "eastern_sahara_horn1",
+      "dimension": "minecraft:overworld",
+      "priority": 10021,
+      "macro_region": "east_africa_horn",
+      "display_label": "Eastern Sahara",
+      "polygon": [
+        [
+          2388.9999,
+          -1228.9998398826976
+        ],
+        [
+          2260.9688644688645,
+          -1024.0
+        ],
+        [
+          2388.9999,
+          -1024.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_sahel_horn1",
+      "dimension": "minecraft:overworld",
+      "priority": 11031,
+      "macro_region": "east_africa_horn",
+      "display_label": "Northern Sahel",
+      "polygon": [
+        [
+          2388.9999,
+          -1092.000002
+        ],
+        [
+          2304.520796,
+          -1093.734177
+        ],
+        [
+          2282.617986494579,
+          -1058.6639901056894
+        ],
+        [
+          2260.9688644688645,
+          -1024.0
+        ],
+        [
+          2388.9999,
+          -1024.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "southern_congolian_mosaic_east1",
+      "dimension": "minecraft:overworld",
+      "priority": 21071,
+      "macro_region": "east_africa_horn",
+      "display_label": "Southern Congolian Mosaic",
+      "polygon": [
+        [
+          2082.0,
+          730.0
+        ],
+        [
+          2082.0,
+          307.0
+        ],
+        [
+          2048.0,
+          308.072072
+        ],
+        [
+          2048.0,
+          730.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "upper_nile_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 30000,
+      "macro_region": "east_africa_horn",
+      "display_label": "Upper Nile Plains",
+      "polygon": [
+        [
+          2423.0,
+          -818.9999
+        ],
+        [
+          2389.0,
+          -818.9999
+        ],
+        [
+          2388.999929,
+          -818.999929
+        ],
+        [
+          2388.9999,
+          -819.0
+        ],
+        [
+          2388.9999,
+          -1031.0
+        ],
+        [
+          2265.3406593406594,
+          -1031.0
+        ],
+        [
+          2260.9688644688645,
+          -1024.0
+        ],
+        [
+          2260.968864,
+          -1024.0
+        ],
+        [
+          2048.0,
+          -1024.0
+        ],
+        [
+          2048.0,
+          -205.0
+        ],
+        [
+          2423.0,
+          -205.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "eastern_sudan_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 30010,
+      "macro_region": "east_africa_horn",
+      "display_label": "Eastern Sudan Plains",
+      "polygon": [
+        [
+          2388.9999,
+          -819.0
+        ],
+        [
+          2388.9999,
+          -1183.039499
+        ],
+        [
+          2354.505455,
+          -1173.768264
+        ],
+        [
+          2297.609279,
+          -1082.667643
+        ],
+        [
+          2266.0,
+          -819.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "arid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ethiopian_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 31020,
+      "macro_region": "east_africa_horn",
+      "display_label": "Ethiopian Highlands",
+      "polygon": [
+        [
+          2560.0,
+          -328.0
+        ],
+        [
+          2765.0,
+          -478.0
+        ],
+        [
+          2833.0,
+          -635.0
+        ],
+        [
+          2756.86211,
+          -818.9999
+        ],
+        [
+          2400.443869,
+          -818.9999
+        ],
+        [
+          2389.0,
+          -785.0
+        ],
+        [
+          2369.0,
+          -410.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "western_ethiopian_lowlands",
+      "dimension": "minecraft:overworld",
+      "priority": 32030,
+      "macro_region": "east_africa_horn",
+      "display_label": "Western Ethiopian Lowlands",
+      "polygon": [
+        [
+          2430.0,
+          -423.0
+        ],
+        [
+          2458.0,
+          -669.0
+        ],
+        [
+          2435.173928,
+          -818.9999
+        ],
+        [
+          2389.0,
+          -818.9999
+        ],
+        [
+          2388.999929,
+          -818.999929
+        ],
+        [
+          2388.9999,
+          -819.0
+        ],
+        [
+          2388.9999,
+          -821.318105
+        ],
+        [
+          2342.0,
+          -785.0
+        ],
+        [
+          2307.0,
+          -423.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "afar_depression",
+      "dimension": "minecraft:overworld",
+      "priority": 33040,
+      "macro_region": "east_africa_horn",
+      "display_label": "Afar Depression",
+      "polygon": [
+        [
+          2778.0,
+          -594.0
+        ],
+        [
+          2963.0,
+          -751.0
+        ],
+        [
+          2937.422056,
+          -818.9999
+        ],
+        [
+          2713.999975,
+          -818.9999
+        ],
+        [
+          2697.0,
+          -751.0
+        ],
+        [
+          2676.0,
+          -614.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ogaden_haud_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 30050,
+      "macro_region": "east_africa_horn",
+      "display_label": "Ogaden–Haud Plateau",
+      "polygon": [
+        [
+          3127.0,
+          -205.0
+        ],
+        [
+          3359.0,
+          -410.0
+        ],
+        [
+          3400.0,
+          -730.0
+        ],
+        [
+          3004.0,
+          -751.0
+        ],
+        [
+          2799.0,
+          -642.0
+        ],
+        [
+          2717.0,
+          -478.0
+        ],
+        [
+          2785.0,
+          -294.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "somali_interior_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 30060,
+      "macro_region": "east_africa_horn",
+      "display_label": "Somali Interior Plains",
+      "polygon": [
+        [
+          2881.0,
+          48.0
+        ],
+        [
+          3154.0,
+          -177.0
+        ],
+        [
+          3379.0,
+          -519.0
+        ],
+        [
+          3290.0,
+          -546.0
+        ],
+        [
+          2935.0,
+          -389.0
+        ],
+        [
+          2731.0,
+          -205.0
+        ],
+        [
+          2731.0,
+          130.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_kenyan_drylands",
+      "dimension": "minecraft:overworld",
+      "priority": 30070,
+      "macro_region": "east_africa_horn",
+      "display_label": "Northern Kenyan Drylands",
+      "polygon": [
+        [
+          2458.0,
+          61.0
+        ],
+        [
+          2772.0,
+          116.0
+        ],
+        [
+          2867.0,
+          -102.0
+        ],
+        [
+          2765.0,
+          -307.0
+        ],
+        [
+          2464.0,
+          -355.0
+        ],
+        [
+          2355.0,
+          -239.0
+        ],
+        [
+          2355.0,
+          -27.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "uganda_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 31080,
+      "macro_region": "east_africa_horn",
+      "display_label": "Uganda Plateau",
+      "polygon": [
+        [
+          2307.0,
+          68.0
+        ],
+        [
+          2389.0,
+          -123.0
+        ],
+        [
+          2355.0,
+          -294.0
+        ],
+        [
+          2075.0,
+          -287.0
+        ],
+        [
+          2048.0,
+          -248.882353
+        ],
+        [
+          2048.0,
+          106.060932
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kenyan_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 32090,
+      "macro_region": "east_africa_horn",
+      "display_label": "Kenyan Highlands",
+      "polygon": [
+        [
+          2574.0,
+          157.0
+        ],
+        [
+          2621.0,
+          41.0
+        ],
+        [
+          2553.0,
+          -123.0
+        ],
+        [
+          2396.0,
+          -143.0
+        ],
+        [
+          2335.0,
+          -7.0
+        ],
+        [
+          2335.0,
+          130.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "victoria_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 32100,
+      "macro_region": "east_africa_horn",
+      "display_label": "Lake Victoria Basin",
+      "polygon": [
+        [
+          2376.0,
+          225.0
+        ],
+        [
+          2410.0,
+          41.0
+        ],
+        [
+          2362.0,
+          -109.0
+        ],
+        [
+          2185.0,
+          -116.0
+        ],
+        [
+          2082.0,
+          -20.0
+        ],
+        [
+          2082.0,
+          246.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "serengeti_mara_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 33110,
+      "macro_region": "east_africa_horn",
+      "display_label": "Serengeti–Mara Plains",
+      "polygon": [
+        [
+          2417.0,
+          239.0
+        ],
+        [
+          2430.0,
+          89.0
+        ],
+        [
+          2335.0,
+          61.0
+        ],
+        [
+          2294.0,
+          123.0
+        ],
+        [
+          2280.0,
+          246.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "maasai_steppe",
+      "dimension": "minecraft:overworld",
+      "priority": 32120,
+      "macro_region": "east_africa_horn",
+      "display_label": "Maasai Steppe",
+      "polygon": [
+        [
+          2615.0,
+          341.0
+        ],
+        [
+          2628.0,
+          177.0
+        ],
+        [
+          2458.0,
+          164.0
+        ],
+        [
+          2389.0,
+          355.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "central_tanzanian_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 31130,
+      "macro_region": "east_africa_horn",
+      "display_label": "Central Tanzanian Plateau",
+      "polygon": [
+        [
+          2546.0,
+          621.0
+        ],
+        [
+          2574.0,
+          362.0
+        ],
+        [
+          2430.0,
+          253.0
+        ],
+        [
+          2185.0,
+          253.0
+        ],
+        [
+          2150.0,
+          621.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_miombo_woodlands",
+      "dimension": "minecraft:overworld",
+      "priority": 30140,
+      "macro_region": "east_africa_horn",
+      "display_label": "Northern Miombo Woodlands",
+      "polygon": [
+        [
+          2758.0,
+          819.0
+        ],
+        [
+          2758.0,
+          608.0
+        ],
+        [
+          2526.0,
+          478.0
+        ],
+        [
+          2116.0,
+          375.0
+        ],
+        [
+          2048.0,
+          443.5
+        ],
+        [
+          2048.0,
+          819.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "african_red_sea_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 38150,
+      "macro_region": "east_africa_horn",
+      "display_label": "African Red Sea Coast",
+      "polygon": [
+        [
+          2929.134113,
+          -780.786612
+        ],
+        [
+          2954.865887,
+          -803.213388
+        ],
+        [
+          2941.107,
+          -818.9999
+        ],
+        [
+          2895.828954,
+          -818.9999
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "gulf_aden_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 38160,
+      "macro_region": "east_africa_horn",
+      "display_label": "Gulf of Aden Coast",
+      "polygon": [
+        [
+          3070.15311,
+          -692.558483
+        ],
+        [
+          3212.330548,
+          -745.48585
+        ],
+        [
+          3361.445695,
+          -755.42686
+        ],
+        [
+          3502.808133,
+          -790.767469
+        ],
+        [
+          3495.750025,
+          -818.9999
+        ],
+        [
+          3486.261344,
+          -818.9999
+        ],
+        [
+          3356.554305,
+          -786.57314
+        ],
+        [
+          3205.669452,
+          -776.51415
+        ],
+        [
+          3073.84689,
+          -727.441517
+        ],
+        [
+          2978.294331,
+          -788.332854
+        ],
+        [
+          2950.148649,
+          -805.421304
+        ],
+        [
+          2933.851351,
+          -778.578696
+        ],
+        [
+          2961.705669,
+          -761.667146
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "somali_indian_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 38170,
+      "macro_region": "east_africa_horn",
+      "display_label": "Somali Indian Ocean Coast",
+      "polygon": [
+        [
+          3400.235529,
+          -589.149595
+        ],
+        [
+          3297.947874,
+          -452.766054
+        ],
+        [
+          3216.124093,
+          -316.060469
+        ],
+        [
+          3080.274816,
+          -150.463175
+        ],
+        [
+          2953.516993,
+          -19.774877
+        ],
+        [
+          2892.031331,
+          11.959659
+        ],
+        [
+          2788.54723,
+          104.283709
+        ],
+        [
+          2809.45277,
+          127.716291
+        ],
+        [
+          2909.968669,
+          38.040341
+        ],
+        [
+          2972.483007,
+          5.774877
+        ],
+        [
+          3103.725184,
+          -129.536825
+        ],
+        [
+          3241.875907,
+          -297.939531
+        ],
+        [
+          3324.052126,
+          -435.233946
+        ],
+        [
+          3425.764471,
+          -570.850405
+        ],
+        [
+          3517.853903,
+          -705.363059
+        ],
+        [
+          3514.693672,
+          -806.490427
+        ],
+        [
+          3483.306328,
+          -805.509573
+        ],
+        [
+          3486.146097,
+          -714.636941
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "swahili_coastal_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 38180,
+      "macro_region": "east_africa_horn",
+      "display_label": "Swahili Coastal Plain",
+      "polygon": [
+        [
+          2689.376794,
+          260.819295
+        ],
+        [
+          2644.742048,
+          350.088787
+        ],
+        [
+          2652.236228,
+          466.783883
+        ],
+        [
+          2666.747576,
+          551.778919
+        ],
+        [
+          2694.730201,
+          636.763189
+        ],
+        [
+          2736.298693,
+          726.997231
+        ],
+        [
+          2779.701307,
+          707.002769
+        ],
+        [
+          2739.269799,
+          619.236811
+        ],
+        [
+          2713.252424,
+          540.221081
+        ],
+        [
+          2699.763772,
+          461.216117
+        ],
+        [
+          2693.257952,
+          359.911213
+        ],
+        [
+          2730.623206,
+          285.180705
+        ],
+        [
+          2814.572683,
+          163.351586
+        ],
+        [
+          2822.497975,
+          120.328574
+        ],
+        [
+          2775.502025,
+          111.671426
+        ],
+        [
+          2769.427317,
+          144.648414
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "bale_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 37220,
+      "macro_region": "east_africa_horn",
+      "display_label": "Bale Mountains",
+      "polygon": [
+        [
+          2751.0,
+          -444.0
+        ],
+        [
+          2751.0,
+          -512.0
+        ],
+        [
+          2676.0,
+          -512.0
+        ],
+        [
+          2676.0,
+          -444.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "golis_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 35230,
+      "macro_region": "east_africa_horn",
+      "display_label": "Golis Mountains",
+      "polygon": [
+        [
+          3072.0,
+          -649.0
+        ],
+        [
+          3209.0,
+          -683.0
+        ],
+        [
+          3359.0,
+          -703.0
+        ],
+        [
+          3372.0,
+          -751.0
+        ],
+        [
+          3229.0,
+          -751.0
+        ],
+        [
+          3072.0,
+          -730.0
+        ],
+        [
+          2942.0,
+          -724.0
+        ],
+        [
+          2942.0,
+          -655.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "albertine_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 35240,
+      "macro_region": "east_africa_horn",
+      "display_label": "Albertine Rift Highlands",
+      "polygon": [
+        [
+          2089.0,
+          307.0
+        ],
+        [
+          2130.0,
+          137.0
+        ],
+        [
+          2164.0,
+          -116.0
+        ],
+        [
+          2150.0,
+          -212.0
+        ],
+        [
+          2062.0,
+          -232.0
+        ],
+        [
+          2048.0,
+          -201.290323
+        ],
+        [
+          2048.0,
+          307.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "rwanda_burundi_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 36250,
+      "macro_region": "east_africa_horn",
+      "display_label": "Rwanda–Burundi Highlands",
+      "polygon": [
+        [
+          2109.0,
+          307.0
+        ],
+        [
+          2116.0,
+          137.0
+        ],
+        [
+          2075.0,
+          68.0
+        ],
+        [
+          2048.0,
+          70.304878
+        ],
+        [
+          2048.0,
+          307.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "rwenzori_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 37260,
+      "macro_region": "east_africa_horn",
+      "display_label": "Rwenzori Mountains",
+      "polygon": [
+        [
+          2058.0,
+          -3.0
+        ],
+        [
+          2058.0,
+          -65.0
+        ],
+        [
+          2048.0,
+          -65.0
+        ],
+        [
+          2048.0,
+          -3.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "mount_elgon",
+      "dimension": "minecraft:overworld",
+      "priority": 37270,
+      "macro_region": "east_africa_horn",
+      "display_label": "Mount Elgon",
+      "polygon": [
+        [
+          2383.0,
+          -48.0
+        ],
+        [
+          2383.0,
+          -106.0
+        ],
+        [
+          2328.0,
+          -106.0
+        ],
+        [
+          2328.0,
+          -48.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "mount_kenya",
+      "dimension": "minecraft:overworld",
+      "priority": 37280,
+      "macro_region": "east_africa_horn",
+      "display_label": "Mount Kenya",
+      "polygon": [
+        [
+          2574.0,
+          38.0
+        ],
+        [
+          2574.0,
+          -27.0
+        ],
+        [
+          2519.0,
+          -27.0
+        ],
+        [
+          2519.0,
+          38.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "kilimanjaro_massif",
+      "dimension": "minecraft:overworld",
+      "priority": 37290,
+      "macro_region": "east_africa_horn",
+      "display_label": "Kilimanjaro Massif",
+      "polygon": [
+        [
+          2580.0,
+          236.0
+        ],
+        [
+          2580.0,
+          181.0
+        ],
+        [
+          2522.0,
+          181.0
+        ],
+        [
+          2522.0,
+          236.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "southern_tanzanian_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 35300,
+      "macro_region": "east_africa_horn",
+      "display_label": "Southern Tanzanian Highlands",
+      "polygon": [
+        [
+          2444.0,
+          717.0
+        ],
+        [
+          2512.0,
+          567.0
+        ],
+        [
+          2396.0,
+          478.0
+        ],
+        [
+          2260.0,
+          512.0
+        ],
+        [
+          2205.0,
+          614.0
+        ],
+        [
+          2205.0,
+          717.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "eastern_arc_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 36310,
+      "macro_region": "east_africa_horn",
+      "display_label": "Eastern Arc Highlands",
+      "polygon": [
+        [
+          2519.0,
+          594.0
+        ],
+        [
+          2526.0,
+          498.0
+        ],
+        [
+          2458.0,
+          498.0
+        ],
+        [
+          2430.0,
+          594.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "eastern_arc_highlands_east1",
+      "dimension": "minecraft:overworld",
+      "priority": 36311,
+      "macro_region": "east_africa_horn",
+      "display_label": "Eastern Arc Highlands",
+      "polygon": [
+        [
+          2601.0,
+          509.0
+        ],
+        [
+          2601.0,
+          437.0
+        ],
+        [
+          2546.0,
+          437.0
+        ],
+        [
+          2546.0,
+          509.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "eastern_arc_highlands_east2",
+      "dimension": "minecraft:overworld",
+      "priority": 36312,
+      "macro_region": "east_africa_horn",
+      "display_label": "Eastern Arc Highlands",
+      "polygon": [
+        [
+          2649.0,
+          355.0
+        ],
+        [
+          2656.0,
+          294.0
+        ],
+        [
+          2594.0,
+          294.0
+        ],
+        [
+          2594.0,
+          355.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "ethiopian_rift",
+      "dimension": "minecraft:overworld",
+      "priority": 36320,
+      "macro_region": "east_africa_horn",
+      "display_label": "Ethiopian Rift Valley",
+      "polygon": [
+        [
+          2625.66636,
+          -487.368058
+        ],
+        [
+          2659.374745,
+          -561.724791
+        ],
+        [
+          2712.320569,
+          -621.409173
+        ],
+        [
+          2681.679431,
+          -648.590827
+        ],
+        [
+          2624.625255,
+          -584.275209
+        ],
+        [
+          2590.33364,
+          -508.631942
+        ],
+        [
+          2522.990071,
+          -421.481441
+        ],
+        [
+          2474.325464,
+          -338.34607
+        ],
+        [
+          2509.674536,
+          -317.65393
+        ],
+        [
+          2557.009929,
+          -398.518559
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kenyan_rift",
+      "dimension": "minecraft:overworld",
+      "priority": 36330,
+      "macro_region": "east_africa_horn",
+      "display_label": "Kenyan Rift Valley",
+      "polygon": [
+        [
+          2439.836098,
+          -7.895231
+        ],
+        [
+          2460.340312,
+          41.314882
+        ],
+        [
+          2471.629438,
+          68.731331
+        ],
+        [
+          2439.848689,
+          165.008305
+        ],
+        [
+          2476.151311,
+          176.991695
+        ],
+        [
+          2512.370562,
+          67.268669
+        ],
+        [
+          2495.659688,
+          26.685118
+        ],
+        [
+          2476.163902,
+          -20.104769
+        ],
+        [
+          2462.823776,
+          -71.559542
+        ],
+        [
+          2448.976957,
+          -186.290322
+        ],
+        [
+          2411.023043,
+          -181.709678
+        ],
+        [
+          2425.176224,
+          -64.440458
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tanzanian_eastern_rift",
+      "dimension": "minecraft:overworld",
+      "priority": 36340,
+      "macro_region": "east_africa_horn",
+      "display_label": "Tanzanian Eastern Rift",
+      "polygon": [
+        [
+          2403.885333,
+          295.82256
+        ],
+        [
+          2403.885333,
+          355.0
+        ],
+        [
+          2442.114667,
+          355.0
+        ],
+        [
+          2442.114667,
+          304.17744
+        ],
+        [
+          2470.114667,
+          243.17744
+        ],
+        [
+          2470.114667,
+          177.0
+        ],
+        [
+          2431.885333,
+          177.0
+        ],
+        [
+          2431.885333,
+          234.82256
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "sudd_wetlands",
+      "dimension": "minecraft:overworld",
+      "priority": 38350,
+      "macro_region": "east_africa_horn",
+      "display_label": "Sudd Wetlands",
+      "polygon": [
+        [
+          2171.0,
+          -396.0
+        ],
+        [
+          2225.0,
+          -546.0
+        ],
+        [
+          2205.0,
+          -669.0
+        ],
+        [
+          2075.0,
+          -717.0
+        ],
+        [
+          2048.0,
+          -680.052632
+        ],
+        [
+          2048.0,
+          -405.015707
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "dry"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "white_nile_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 39360,
+      "macro_region": "east_africa_horn",
+      "display_label": "White Nile Valley",
+      "polygon": [
+        [
+          2169.583746,
+          -333.049072
+        ],
+        [
+          2168.561923,
+          -427.056836
+        ],
+        [
+          2116.111116,
+          -494.077311
+        ],
+        [
+          2171.660139,
+          -646.358254
+        ],
+        [
+          2249.83719,
+          -799.666497
+        ],
+        [
+          2241.585213,
+          -899.721715
+        ],
+        [
+          2236.344563,
+          -1024.0
+        ],
+        [
+          2213.113269,
+          -1024.0
+        ],
+        [
+          2218.414787,
+          -898.278285
+        ],
+        [
+          2226.16281,
+          -804.333503
+        ],
+        [
+          2150.339861,
+          -655.641746
+        ],
+        [
+          2089.888884,
+          -489.922689
+        ],
+        [
+          2145.438077,
+          -418.943164
+        ],
+        [
+          2146.416254,
+          -328.950928
+        ],
+        [
+          2175.578144,
+          -246.325573
+        ],
+        [
+          2139.273638,
+          -158.430454
+        ],
+        [
+          2160.726362,
+          -149.569546
+        ],
+        [
+          2200.421856,
+          -245.674427
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "blue_nile_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 39370,
+      "macro_region": "east_africa_horn",
+      "display_label": "Blue Nile Valley",
+      "polygon": [
+        [
+          2304.847283,
+          -929.73512
+        ],
+        [
+          2256.368202,
+          -1024.0
+        ],
+        [
+          2231.803226,
+          -1024.0
+        ],
+        [
+          2285.152717,
+          -920.26488
+        ],
+        [
+          2337.979889,
+          -802.419649
+        ],
+        [
+          2388.702289,
+          -756.873004
+        ],
+        [
+          2403.297711,
+          -773.126996
+        ],
+        [
+          2356.020111,
+          -815.580351
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "upper_blue_nile_gorge",
+      "dimension": "minecraft:overworld",
+      "priority": 39380,
+      "macro_region": "east_africa_horn",
+      "display_label": "Upper Blue Nile Gorge",
+      "polygon": [
+        [
+          2550.036311,
+          -697.124126
+        ],
+        [
+          2456.69168,
+          -699.765955
+        ],
+        [
+          2404.848635,
+          -771.403617
+        ],
+        [
+          2387.151365,
+          -758.596383
+        ],
+        [
+          2445.30832,
+          -678.234045
+        ],
+        [
+          2563.963689,
+          -674.875874
+        ],
+        [
+          2607.996941,
+          -772.463081
+        ],
+        [
+          2558.517904,
+          -801.426419
+        ],
+        [
+          2547.482096,
+          -782.573581
+        ],
+        [
+          2580.003059,
+          -763.536919
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "victoria_nile_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 39390,
+      "macro_region": "east_africa_horn",
+      "display_label": "Victoria Nile Valley",
+      "polygon": [
+        [
+          2230.218767,
+          -125.557333
+        ],
+        [
+          2209.183111,
+          -125.557333
+        ],
+        [
+          2198.183111,
+          -163.557333
+        ],
+        [
+          2150.0,
+          -163.557333
+        ],
+        [
+          2150.0,
+          -144.442667
+        ],
+        [
+          2183.816889,
+          -144.442667
+        ],
+        [
+          2194.816889,
+          -106.442667
+        ],
+        [
+          2227.781233,
+          -106.442667
+        ],
+        [
+          2247.321196,
+          -101.376751
+        ],
+        [
+          2256.51647,
+          -27.814559
+        ],
+        [
+          2275.48353,
+          -30.185441
+        ],
+        [
+          2264.678804,
+          -116.623249
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "awash_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 39400,
+      "macro_region": "east_africa_horn",
+      "display_label": "Awash Valley",
+      "polygon": [
+        [
+          2744.249186,
+          -662.76841
+        ],
+        [
+          2771.186235,
+          -695.477682
+        ],
+        [
+          2858.536765,
+          -742.588081
+        ],
+        [
+          2849.463235,
+          -759.411919
+        ],
+        [
+          2758.813765,
+          -710.522318
+        ],
+        [
+          2729.750814,
+          -675.23159
+        ],
+        [
+          2670.634119,
+          -609.331013
+        ],
+        [
+          2584.131794,
+          -582.116798
+        ],
+        [
+          2589.868206,
+          -563.883202
+        ],
+        [
+          2681.365881,
+          -592.668987
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "omo_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 39410,
+      "macro_region": "east_africa_horn",
+      "display_label": "Omo Valley",
+      "polygon": [
+        [
+          2483.606664,
+          -414.584176
+        ],
+        [
+          2440.421315,
+          -341.906393
+        ],
+        [
+          2455.072955,
+          -303.586718
+        ],
+        [
+          2472.927045,
+          -310.413282
+        ],
+        [
+          2461.578685,
+          -340.093607
+        ],
+        [
+          2500.393336,
+          -405.415824
+        ],
+        [
+          2535.557333,
+          -475.74382
+        ],
+        [
+          2535.557333,
+          -560.0
+        ],
+        [
+          2516.442667,
+          -560.0
+        ],
+        [
+          2516.442667,
+          -480.25618
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "juba_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 39420,
+      "macro_region": "east_africa_horn",
+      "display_label": "Juba Valley",
+      "polygon": [
+        [
+          2875.346206,
+          -158.647473
+        ],
+        [
+          2911.277045,
+          -80.797322
+        ],
+        [
+          2890.982883,
+          14.875157
+        ],
+        [
+          2911.017117,
+          19.124843
+        ],
+        [
+          2932.722955,
+          -83.202678
+        ],
+        [
+          2896.653794,
+          -161.352527
+        ],
+        [
+          2915.201486,
+          -263.364833
+        ],
+        [
+          2873.179253,
+          -295.165441
+        ],
+        [
+          2860.820747,
+          -278.834559
+        ],
+        [
+          2892.798514,
+          -254.635167
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "shabelle_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 39430,
+      "macro_region": "east_africa_horn",
+      "display_label": "Shabelle Valley",
+      "polygon": [
+        [
+          3077.139625,
+          -318.621074
+        ],
+        [
+          3096.046824,
+          -191.942841
+        ],
+        [
+          3073.045217,
+          -153.017045
+        ],
+        [
+          2999.211429,
+          -110.271167
+        ],
+        [
+          3008.788571,
+          -93.728833
+        ],
+        [
+          3086.954783,
+          -138.982955
+        ],
+        [
+          3115.953176,
+          -188.057159
+        ],
+        [
+          3094.860375,
+          -329.378926
+        ],
+        [
+          2977.682753,
+          -414.410474
+        ],
+        [
+          2734.61872,
+          -513.845761
+        ],
+        [
+          2727.38128,
+          -496.154239
+        ],
+        [
+          2968.317247,
+          -397.589526
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "arid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tana_valley_kenya",
+      "dimension": "minecraft:overworld",
+      "priority": 39440,
+      "macro_region": "east_africa_horn",
+      "display_label": "Tana Valley",
+      "polygon": [
+        [
+          2698.610677,
+          40.848604
+        ],
+        [
+          2728.778237,
+          161.518841
+        ],
+        [
+          2767.628973,
+          181.49922
+        ],
+        [
+          2776.371027,
+          164.50078
+        ],
+        [
+          2745.221763,
+          148.481159
+        ],
+        [
+          2713.389323,
+          21.151396
+        ],
+        [
+          2629.347202,
+          24.383785
+        ],
+        [
+          2569.977594,
+          4.91834
+        ],
+        [
+          2564.022406,
+          23.08166
+        ],
+        [
+          2626.652798,
+          43.616215
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "rufiji_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 39450,
+      "macro_region": "east_africa_horn",
+      "display_label": "Rufiji Valley",
+      "polygon": [
+        [
+          2672.234441,
+          540.857937
+        ],
+        [
+          2680.49254,
+          552.655222
+        ],
+        [
+          2699.50746,
+          539.344778
+        ],
+        [
+          2679.765559,
+          511.142063
+        ],
+        [
+          2604.576028,
+          548.736829
+        ],
+        [
+          2551.534777,
+          555.487534
+        ],
+        [
+          2554.465223,
+          578.512466
+        ],
+        [
+          2611.423972,
+          571.263171
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_tana",
+      "dimension": "minecraft:overworld",
+      "priority": 40460,
+      "macro_region": "east_africa_horn",
+      "display_label": "Lake Tana",
+      "polygon": [
+        [
+          2569.0,
+          -791.0
+        ],
+        [
+          2569.0,
+          -818.9999
+        ],
+        [
+          2527.0,
+          -818.9999
+        ],
+        [
+          2527.0,
+          -791.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_turkana",
+      "dimension": "minecraft:overworld",
+      "priority": 40470,
+      "macro_region": "east_africa_horn",
+      "display_label": "Lake Turkana",
+      "polygon": [
+        [
+          2473.0,
+          -160.0
+        ],
+        [
+          2509.0,
+          -314.0
+        ],
+        [
+          2471.0,
+          -335.0
+        ],
+        [
+          2444.0,
+          -239.0
+        ],
+        [
+          2441.0,
+          -164.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_victoria",
+      "dimension": "minecraft:overworld",
+      "priority": 40480,
+      "macro_region": "east_africa_horn",
+      "display_label": "Lake Victoria",
+      "polygon": [
+        [
+          2144.0,
+          82.0
+        ],
+        [
+          2171.0,
+          171.0
+        ],
+        [
+          2253.0,
+          212.0
+        ],
+        [
+          2335.0,
+          171.0
+        ],
+        [
+          2376.0,
+          82.0
+        ],
+        [
+          2386.0,
+          7.0
+        ],
+        [
+          2342.0,
+          -14.0
+        ],
+        [
+          2253.0,
+          -19.0
+        ],
+        [
+          2205.0,
+          -3.0
+        ],
+        [
+          2157.0,
+          20.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_albert",
+      "dimension": "minecraft:overworld",
+      "priority": 40490,
+      "macro_region": "east_africa_horn",
+      "display_label": "Lake Albert",
+      "polygon": [
+        [
+          2096.0,
+          -68.0
+        ],
+        [
+          2154.0,
+          -157.0
+        ],
+        [
+          2144.0,
+          -171.0
+        ],
+        [
+          2103.0,
+          -137.0
+        ],
+        [
+          2068.0,
+          -68.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_tanganyika",
+      "dimension": "minecraft:overworld",
+      "priority": 40520,
+      "macro_region": "east_africa_horn",
+      "display_label": "Lake Tanganyika",
+      "polygon": [
+        [
+          2062.0,
+          505.0
+        ],
+        [
+          2109.0,
+          604.0
+        ],
+        [
+          2130.0,
+          580.0
+        ],
+        [
+          2082.0,
+          464.0
+        ],
+        [
+          2048.0,
+          385.181818
+        ],
+        [
+          2048.0,
+          486.483871
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_malawi",
+      "dimension": "minecraft:overworld",
+      "priority": 40530,
+      "macro_region": "east_africa_horn",
+      "display_label": "Lake Malawi / Nyasa",
+      "polygon": [
+        [
+          2386.0,
+          785.0
+        ],
+        [
+          2342.0,
+          649.0
+        ],
+        [
+          2307.0,
+          649.0
+        ],
+        [
+          2318.0,
+          751.0
+        ],
+        [
+          2332.972477,
+          819.0
+        ],
+        [
+          2393.913793,
+          819.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "zanzibar_pemba_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 41540,
+      "macro_region": "east_africa_horn",
+      "display_label": "Zanzibar–Pemba Islands",
+      "polygon": [
+        [
+          2700.0,
+          444.0
+        ],
+        [
+          2700.0,
+          389.0
+        ],
+        [
+          2671.0,
+          389.0
+        ],
+        [
+          2671.0,
+          444.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "zanzibar_pemba_islands_east1",
+      "dimension": "minecraft:overworld",
+      "priority": 41541,
+      "macro_region": "east_africa_horn",
+      "display_label": "Zanzibar–Pemba Islands",
+      "polygon": [
+        [
+          2727.0,
+          375.0
+        ],
+        [
+          2727.0,
+          331.0
+        ],
+        [
+          2700.0,
+          331.0
+        ],
+        [
+          2700.0,
+          375.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "comoro_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 41550,
+      "macro_region": "east_africa_horn",
+      "display_label": "Comoro Islands",
+      "polygon": [
+        [
+          2970.0,
+          816.0
+        ],
+        [
+          2970.0,
+          775.0
+        ],
+        [
+          2942.0,
+          775.0
+        ],
+        [
+          2942.0,
+          816.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    }
+  ]
+}

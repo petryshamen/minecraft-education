@@ -1,0 +1,3472 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "sahel_belt",
+      "dimension": "minecraft:overworld",
+      "priority": 20000,
+      "macro_region": "west_central_africa",
+      "display_label": "Sahel",
+      "polygon": [
+        [
+          -137.0,
+          -874.0
+        ],
+        [
+          546.0,
+          -819.0
+        ],
+        [
+          1229.0,
+          -806.0
+        ],
+        [
+          2047.9999,
+          -832.999997
+        ],
+        [
+          2047.9999,
+          -1023.9999
+        ],
+        [
+          -1195.0,
+          -1023.9999
+        ],
+        [
+          -1195.0,
+          -853.0
+        ],
+        [
+          -683.0,
+          -819.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "western_sudanian_savanna",
+      "dimension": "minecraft:overworld",
+      "priority": 20010,
+      "macro_region": "west_central_africa",
+      "display_label": "Western Sudanian Savanna",
+      "polygon": [
+        [
+          -819.0,
+          -614.0
+        ],
+        [
+          -410.0,
+          -614.0
+        ],
+        [
+          0.0,
+          -614.0
+        ],
+        [
+          478.0,
+          -546.0
+        ],
+        [
+          956.0,
+          -580.0
+        ],
+        [
+          1024.0,
+          -867.0
+        ],
+        [
+          546.0,
+          -887.0
+        ],
+        [
+          -137.0,
+          -928.0
+        ],
+        [
+          -683.0,
+          -942.0
+        ],
+        [
+          -1126.0,
+          -956.0
+        ],
+        [
+          -1161.0,
+          -737.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "central_african_savanna",
+      "dimension": "minecraft:overworld",
+      "priority": 20020,
+      "macro_region": "west_central_africa",
+      "display_label": "Central African Savanna",
+      "polygon": [
+        [
+          2047.9999,
+          -320.336121
+        ],
+        [
+          2047.9999,
+          -683.0
+        ],
+        [
+          2047.9999,
+          -851.261346
+        ],
+        [
+          1707.0,
+          -894.0
+        ],
+        [
+          1229.0,
+          -887.0
+        ],
+        [
+          819.0,
+          -819.0
+        ],
+        [
+          819.0,
+          -341.0
+        ],
+        [
+          1365.0,
+          -307.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "guinean_forest_savanna",
+      "dimension": "minecraft:overworld",
+      "priority": 21030,
+      "macro_region": "west_central_africa",
+      "display_label": "Guinean Forest–Savanna",
+      "polygon": [
+        [
+          -751.0,
+          -532.0
+        ],
+        [
+          -273.0,
+          -464.0
+        ],
+        [
+          341.0,
+          -464.0
+        ],
+        [
+          683.0,
+          -492.0
+        ],
+        [
+          785.0,
+          -628.0
+        ],
+        [
+          478.0,
+          -717.0
+        ],
+        [
+          0.0,
+          -751.0
+        ],
+        [
+          -546.0,
+          -806.0
+        ],
+        [
+          -922.0,
+          -751.0
+        ],
+        [
+          -1024.0,
+          -614.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "upper_guinean_forests",
+      "dimension": "minecraft:overworld",
+      "priority": 21040,
+      "macro_region": "west_central_africa",
+      "display_label": "Upper Guinean Forests",
+      "polygon": [
+        [
+          -853.0,
+          -410.0
+        ],
+        [
+          -546.0,
+          -273.0
+        ],
+        [
+          -137.0,
+          -300.0
+        ],
+        [
+          14.0,
+          -355.0
+        ],
+        [
+          -34.0,
+          -478.0
+        ],
+        [
+          -273.0,
+          -553.0
+        ],
+        [
+          -580.0,
+          -642.0
+        ],
+        [
+          -853.0,
+          -649.0
+        ],
+        [
+          -1024.0,
+          -580.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lower_guinean_forests",
+      "dimension": "minecraft:overworld",
+      "priority": 21050,
+      "macro_region": "west_central_africa",
+      "display_label": "Lower Guinean Forests",
+      "polygon": [
+        [
+          853.0,
+          410.0
+        ],
+        [
+          1147.0,
+          314.0
+        ],
+        [
+          1161.0,
+          -205.0
+        ],
+        [
+          990.0,
+          -375.0
+        ],
+        [
+          703.0,
+          -355.0
+        ],
+        [
+          594.0,
+          -137.0
+        ],
+        [
+          594.0,
+          321.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "congo_basin_forests",
+      "dimension": "minecraft:overworld",
+      "priority": 20060,
+      "macro_region": "west_central_africa",
+      "display_label": "Congo Basin Forests",
+      "polygon": [
+        [
+          1570.0,
+          410.0
+        ],
+        [
+          2047.9999,
+          285.501927
+        ],
+        [
+          2047.9999,
+          -311.380237
+        ],
+        [
+          1570.0,
+          -355.0
+        ],
+        [
+          1092.0,
+          -300.0
+        ],
+        [
+          990.0,
+          -68.0
+        ],
+        [
+          990.0,
+          396.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "southern_congolian_mosaic",
+      "dimension": "minecraft:overworld",
+      "priority": 21070,
+      "macro_region": "west_central_africa",
+      "display_label": "Southern Congolian Mosaic",
+      "polygon": [
+        [
+          1638.0,
+          321.0
+        ],
+        [
+          1365.0,
+          307.0
+        ],
+        [
+          1024.0,
+          314.0
+        ],
+        [
+          819.0,
+          410.0
+        ],
+        [
+          819.0,
+          682.9999
+        ],
+        [
+          2047.9999,
+          682.9999
+        ],
+        [
+          2047.9999,
+          308.072075
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "senegambian_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 23080,
+      "macro_region": "west_central_africa",
+      "display_label": "Senegambian Coast",
+      "polygon": [
+        [
+          -1092.0,
+          -819.0
+        ],
+        [
+          -1051.0,
+          -901.0
+        ],
+        [
+          -1099.0,
+          -990.0
+        ],
+        [
+          -1119.999938,
+          -1023.9999
+        ],
+        [
+          -1201.000007,
+          -1023.9999
+        ],
+        [
+          -1215.0,
+          -833.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "upper_guinea_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 23090,
+      "macro_region": "west_central_africa",
+      "display_label": "Upper Guinea Coast",
+      "polygon": [
+        [
+          -1031.0,
+          -635.0
+        ],
+        [
+          -853.0,
+          -478.0
+        ],
+        [
+          -614.0,
+          -294.0
+        ],
+        [
+          -492.0,
+          -273.0
+        ],
+        [
+          -137.0,
+          -307.0
+        ],
+        [
+          -123.0,
+          -382.0
+        ],
+        [
+          -512.0,
+          -386.0
+        ],
+        [
+          -751.0,
+          -539.0
+        ],
+        [
+          -887.0,
+          -676.0
+        ],
+        [
+          -1044.0,
+          -840.0
+        ],
+        [
+          -1140.0,
+          -867.0
+        ],
+        [
+          -1154.0,
+          -785.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "wetland",
+          "forest"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "gulf_guinea_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 23100,
+      "macro_region": "west_central_africa",
+      "display_label": "Gulf of Guinea Coast",
+      "polygon": [
+        [
+          137.0,
+          -369.0
+        ],
+        [
+          341.0,
+          -314.0
+        ],
+        [
+          649.0,
+          -273.0
+        ],
+        [
+          669.0,
+          -341.0
+        ],
+        [
+          410.0,
+          -451.0
+        ],
+        [
+          171.0,
+          -471.0
+        ],
+        [
+          -34.0,
+          -444.0
+        ],
+        [
+          -137.0,
+          -375.0
+        ],
+        [
+          -137.0,
+          -300.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "atlantic_equatorial_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 23110,
+      "macro_region": "west_central_africa",
+      "display_label": "Atlantic Equatorial Coast",
+      "polygon": [
+        [
+          628.0,
+          -171.0
+        ],
+        [
+          587.0,
+          -34.0
+        ],
+        [
+          614.0,
+          123.0
+        ],
+        [
+          778.0,
+          375.0
+        ],
+        [
+          860.0,
+          437.0
+        ],
+        [
+          887.0,
+          396.0
+        ],
+        [
+          778.0,
+          218.0
+        ],
+        [
+          689.0,
+          0.0
+        ],
+        [
+          703.0,
+          -205.0
+        ],
+        [
+          628.0,
+          -280.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "fouta_djallon",
+      "dimension": "minecraft:overworld",
+      "priority": 24120,
+      "macro_region": "west_central_africa",
+      "display_label": "Fouta Djallon",
+      "polygon": [
+        [
+          -806.0,
+          -655.0
+        ],
+        [
+          -703.0,
+          -710.0
+        ],
+        [
+          -737.0,
+          -847.0
+        ],
+        [
+          -867.0,
+          -847.0
+        ],
+        [
+          -928.0,
+          -751.0
+        ],
+        [
+          -915.0,
+          -683.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "guinea_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 24130,
+      "macro_region": "west_central_africa",
+      "display_label": "Guinea Highlands",
+      "polygon": [
+        [
+          -724.0,
+          -512.0
+        ],
+        [
+          -601.0,
+          -464.0
+        ],
+        [
+          -512.0,
+          -505.0
+        ],
+        [
+          -526.0,
+          -621.0
+        ],
+        [
+          -628.0,
+          -683.0
+        ],
+        [
+          -765.0,
+          -669.0
+        ],
+        [
+          -806.0,
+          -573.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "mossi_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 22140,
+      "macro_region": "west_central_africa",
+      "display_label": "Mossi Plateau",
+      "polygon": [
+        [
+          27.0,
+          -737.0
+        ],
+        [
+          61.0,
+          -860.0
+        ],
+        [
+          -34.0,
+          -956.0
+        ],
+        [
+          -246.0,
+          -963.0
+        ],
+        [
+          -287.0,
+          -853.0
+        ],
+        [
+          -273.0,
+          -737.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "atakora_togo_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 24150,
+      "macro_region": "west_central_africa",
+      "display_label": "Atakora–Togo Highlands",
+      "polygon": [
+        [
+          75.0,
+          -437.0
+        ],
+        [
+          116.0,
+          -628.0
+        ],
+        [
+          137.0,
+          -737.0
+        ],
+        [
+          82.0,
+          -765.0
+        ],
+        [
+          7.0,
+          -662.0
+        ],
+        [
+          -34.0,
+          -532.0
+        ],
+        [
+          -27.0,
+          -430.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "hills",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "jos_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 24160,
+      "macro_region": "west_central_africa",
+      "display_label": "Jos Plateau",
+      "polygon": [
+        [
+          655.0,
+          -601.0
+        ],
+        [
+          689.0,
+          -649.0
+        ],
+        [
+          662.0,
+          -730.0
+        ],
+        [
+          573.0,
+          -730.0
+        ],
+        [
+          532.0,
+          -669.0
+        ],
+        [
+          546.0,
+          -601.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "cameroon_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 24170,
+      "macro_region": "west_central_africa",
+      "display_label": "Cameroon Highlands",
+      "polygon": [
+        [
+          662.0,
+          -266.0
+        ],
+        [
+          765.0,
+          -369.0
+        ],
+        [
+          806.0,
+          -478.0
+        ],
+        [
+          737.0,
+          -532.0
+        ],
+        [
+          642.0,
+          -444.0
+        ],
+        [
+          608.0,
+          -273.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "adamawa_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 22180,
+      "macro_region": "west_central_africa",
+      "display_label": "Adamawa Plateau",
+      "polygon": [
+        [
+          1010.0,
+          -403.0
+        ],
+        [
+          1099.0,
+          -464.0
+        ],
+        [
+          1051.0,
+          -587.0
+        ],
+        [
+          915.0,
+          -614.0
+        ],
+        [
+          771.0,
+          -546.0
+        ],
+        [
+          751.0,
+          -410.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "mandara_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 24190,
+      "macro_region": "west_central_africa",
+      "display_label": "Mandara Mountains",
+      "polygon": [
+        [
+          976.0,
+          -649.0
+        ],
+        [
+          1017.0,
+          -717.0
+        ],
+        [
+          990.0,
+          -799.0
+        ],
+        [
+          915.0,
+          -792.0
+        ],
+        [
+          874.0,
+          -724.0
+        ],
+        [
+          881.0,
+          -649.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "ubangi_uele_uplands",
+      "dimension": "minecraft:overworld",
+      "priority": 22200,
+      "macro_region": "west_central_africa",
+      "display_label": "Ubangi–Uele Uplands",
+      "polygon": [
+        [
+          1638.0,
+          -137.0
+        ],
+        [
+          2047.9999,
+          -142.999999
+        ],
+        [
+          2047.9999,
+          -375.00002
+        ],
+        [
+          1809.0,
+          -423.0
+        ],
+        [
+          1502.0,
+          -382.0
+        ],
+        [
+          1263.0,
+          -321.0
+        ],
+        [
+          1263.0,
+          -164.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "upland",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "bateke_plateaus",
+      "dimension": "minecraft:overworld",
+      "priority": 22210,
+      "macro_region": "west_central_africa",
+      "display_label": "Batéké Plateaus",
+      "polygon": [
+        [
+          1140.0,
+          287.0
+        ],
+        [
+          1201.0,
+          137.0
+        ],
+        [
+          1126.0,
+          27.0
+        ],
+        [
+          956.0,
+          68.0
+        ],
+        [
+          874.0,
+          150.0
+        ],
+        [
+          887.0,
+          266.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kasai_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 22220,
+      "macro_region": "west_central_africa",
+      "display_label": "Kasai Plateau",
+      "polygon": [
+        [
+          1761.0,
+          669.0
+        ],
+        [
+          1782.0,
+          410.0
+        ],
+        [
+          1604.0,
+          314.0
+        ],
+        [
+          1365.0,
+          307.0
+        ],
+        [
+          1161.0,
+          348.0
+        ],
+        [
+          1161.0,
+          669.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "mayombe_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 24230,
+      "macro_region": "west_central_africa",
+      "display_label": "Mayombe Highlands",
+      "polygon": [
+        [
+          799.0,
+          314.0
+        ],
+        [
+          881.0,
+          410.0
+        ],
+        [
+          969.0,
+          444.0
+        ],
+        [
+          997.0,
+          389.0
+        ],
+        [
+          860.0,
+          205.0
+        ],
+        [
+          778.0,
+          212.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "hills",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "chad_basin_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 21240,
+      "macro_region": "west_central_africa",
+      "display_label": "Chad Basin Plains",
+      "polygon": [
+        [
+          1277.0,
+          -669.0
+        ],
+        [
+          1468.0,
+          -819.0
+        ],
+        [
+          1501.999983,
+          -1023.9999
+        ],
+        [
+          886.999886,
+          -1023.9999
+        ],
+        [
+          771.0,
+          -922.0
+        ],
+        [
+          771.0,
+          -683.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_chad",
+      "dimension": "minecraft:overworld",
+      "priority": 28250,
+      "macro_region": "west_central_africa",
+      "display_label": "Lake Chad",
+      "polygon": [
+        [
+          1017.0,
+          -823.0
+        ],
+        [
+          1044.0,
+          -915.0
+        ],
+        [
+          1010.0,
+          -990.0
+        ],
+        [
+          928.0,
+          -1004.0
+        ],
+        [
+          881.0,
+          -922.0
+        ],
+        [
+          894.0,
+          -823.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "lake",
+          "river"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "inner_niger_delta",
+      "dimension": "minecraft:overworld",
+      "priority": 28260,
+      "macro_region": "west_central_africa",
+      "display_label": "Inner Niger Delta",
+      "polygon": [
+        [
+          -259.0,
+          -915.0
+        ],
+        [
+          -191.0,
+          -1004.0
+        ],
+        [
+          -188.70493,
+          -1023.9999
+        ],
+        [
+          -384.202331,
+          -1023.9999
+        ],
+        [
+          -396.0,
+          -1010.0
+        ],
+        [
+          -369.0,
+          -915.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "senegal_valley_south",
+      "dimension": "minecraft:overworld",
+      "priority": 26270,
+      "macro_region": "west_central_africa",
+      "display_label": "Senegal Valley",
+      "polygon": [
+        [
+          -855.240552,
+          -1011.60732
+        ],
+        [
+          -816.506055,
+          -969.814836
+        ],
+        [
+          -742.170482,
+          -935.192788
+        ],
+        [
+          -735.829518,
+          -948.807212
+        ],
+        [
+          -807.493945,
+          -982.185164
+        ],
+        [
+          -844.759448,
+          -1022.39268
+        ],
+        [
+          -846.59627,
+          -1023.9999
+        ],
+        [
+          -869.403501,
+          -1023.9999
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "gambia_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 26280,
+      "macro_region": "west_central_africa",
+      "display_label": "Gambia Valley",
+      "polygon": [
+        [
+          -1024.755289,
+          -913.686959
+        ],
+        [
+          -1000.092189,
+          -906.493555
+        ],
+        [
+          -960.458724,
+          -917.126924
+        ],
+        [
+          -937.813086,
+          -902.029832
+        ],
+        [
+          -913.486858,
+          -867.567676
+        ],
+        [
+          -856.609995,
+          -839.646307
+        ],
+        [
+          -849.390005,
+          -854.353693
+        ],
+        [
+          -902.513142,
+          -880.432324
+        ],
+        [
+          -926.186914,
+          -913.970168
+        ],
+        [
+          -957.541276,
+          -934.873076
+        ],
+        [
+          -999.907811,
+          -923.506445
+        ],
+        [
+          -1023.244711,
+          -930.313041
+        ],
+        [
+          -1092.121456,
+          -923.222788
+        ],
+        [
+          -1132.402184,
+          -926.170158
+        ],
+        [
+          -1133.597816,
+          -909.829842
+        ],
+        [
+          -1091.878544,
+          -906.777212
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "upper_niger_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 27290,
+      "macro_region": "west_central_africa",
+      "display_label": "Upper Niger Valley",
+      "polygon": [
+        [
+          -629.881119,
+          -720.492701
+        ],
+        [
+          -573.653217,
+          -779.78758
+        ],
+        [
+          -537.891659,
+          -830.274485
+        ],
+        [
+          -536.972163,
+          -858.778861
+        ],
+        [
+          -512.59889,
+          -870.545269
+        ],
+        [
+          -427.296904,
+          -907.24496
+        ],
+        [
+          -379.009721,
+          -920.322739
+        ],
+        [
+          -323.586646,
+          -949.06063
+        ],
+        [
+          -280.012557,
+          -982.50121
+        ],
+        [
+          -289.987443,
+          -995.49879
+        ],
+        [
+          -332.413354,
+          -962.93937
+        ],
+        [
+          -384.990279,
+          -935.677261
+        ],
+        [
+          -432.703096,
+          -922.75504
+        ],
+        [
+          -519.40111,
+          -885.454731
+        ],
+        [
+          -553.027837,
+          -869.221139
+        ],
+        [
+          -554.108341,
+          -835.725515
+        ],
+        [
+          -586.346783,
+          -790.21242
+        ],
+        [
+          -640.118881,
+          -733.507299
+        ],
+        [
+          -694.118881,
+          -702.507299
+        ],
+        [
+          -749.944311,
+          -643.636846
+        ],
+        [
+          -738.055689,
+          -632.363154
+        ],
+        [
+          -683.881119,
+          -689.492701
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "middle_niger_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 27300,
+      "macro_region": "west_central_africa",
+      "display_label": "Middle Niger Valley",
+      "polygon": [
+        [
+          54.620033,
+          -1003.071518
+        ],
+        [
+          67.48439,
+          -963.406416
+        ],
+        [
+          135.932001,
+          -916.097038
+        ],
+        [
+          169.861708,
+          -841.252095
+        ],
+        [
+          227.813298,
+          -798.051819
+        ],
+        [
+          266.829902,
+          -784.729077
+        ],
+        [
+          308.426358,
+          -707.208408
+        ],
+        [
+          320.883279,
+          -616.895728
+        ],
+        [
+          404.689333,
+          -579.648593
+        ],
+        [
+          453.433278,
+          -526.030253
+        ],
+        [
+          466.566722,
+          -537.969747
+        ],
+        [
+          415.310667,
+          -594.351407
+        ],
+        [
+          337.116721,
+          -629.104272
+        ],
+        [
+          325.573642,
+          -712.791592
+        ],
+        [
+          279.170098,
+          -799.270923
+        ],
+        [
+          236.186702,
+          -813.948181
+        ],
+        [
+          184.138292,
+          -852.747905
+        ],
+        [
+          150.067999,
+          -927.902962
+        ],
+        [
+          82.51561,
+          -974.593584
+        ],
+        [
+          71.379967,
+          -1008.928482
+        ],
+        [
+          65.728186,
+          -1023.9999
+        ],
+        [
+          46.771889,
+          -1023.9999
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lower_niger_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 27310,
+      "macro_region": "west_central_africa",
+      "display_label": "Lower Niger Valley",
+      "polygon": [
+        [
+          451.303721,
+          -444.620777
+        ],
+        [
+          446.094519,
+          -423.783971
+        ],
+        [
+          431.895398,
+          -401.065377
+        ],
+        [
+          448.104602,
+          -390.934623
+        ],
+        [
+          463.905481,
+          -416.216029
+        ],
+        [
+          470.696279,
+          -443.379223
+        ],
+        [
+          466.588486,
+          -478.295468
+        ],
+        [
+          469.542618,
+          -531.469855
+        ],
+        [
+          450.457382,
+          -532.530145
+        ],
+        [
+          447.411514,
+          -477.704532
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "niger_delta",
+      "dimension": "minecraft:overworld",
+      "priority": 28320,
+      "macro_region": "west_central_africa",
+      "display_label": "Niger Delta",
+      "polygon": [
+        [
+          355.0,
+          -307.0
+        ],
+        [
+          437.0,
+          -280.0
+        ],
+        [
+          532.0,
+          -300.0
+        ],
+        [
+          546.0,
+          -355.0
+        ],
+        [
+          492.0,
+          -410.0
+        ],
+        [
+          444.0,
+          -433.0
+        ],
+        [
+          375.0,
+          -410.0
+        ],
+        [
+          328.0,
+          -382.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "wetland",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "volta_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 21330,
+      "macro_region": "west_central_africa",
+      "display_label": "Volta Basin",
+      "polygon": [
+        [
+          -191.0,
+          -580.0
+        ],
+        [
+          -82.0,
+          -519.0
+        ],
+        [
+          -34.0,
+          -410.0
+        ],
+        [
+          61.0,
+          -382.0
+        ],
+        [
+          89.0,
+          -560.0
+        ],
+        [
+          41.0,
+          -806.0
+        ],
+        [
+          -102.0,
+          -922.0
+        ],
+        [
+          -300.0,
+          -853.0
+        ],
+        [
+          -307.0,
+          -683.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "benue_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 26340,
+      "macro_region": "west_central_africa",
+      "display_label": "Benue Valley",
+      "polygon": [
+        [
+          856.859357,
+          -634.800875
+        ],
+        [
+          783.794429,
+          -630.502938
+        ],
+        [
+          680.683152,
+          -610.285041
+        ],
+        [
+          607.809954,
+          -588.106241
+        ],
+        [
+          574.185649,
+          -534.702934
+        ],
+        [
+          499.584708,
+          -521.966188
+        ],
+        [
+          464.451294,
+          -540.457458
+        ],
+        [
+          455.548706,
+          -523.542542
+        ],
+        [
+          496.415292,
+          -502.033812
+        ],
+        [
+          585.814351,
+          -517.297066
+        ],
+        [
+          620.190046,
+          -571.893759
+        ],
+        [
+          685.316848,
+          -591.714959
+        ],
+        [
+          786.205571,
+          -611.497062
+        ],
+        [
+          849.140643,
+          -615.199125
+        ],
+        [
+          907.322078,
+          -554.202459
+        ],
+        [
+          926.762207,
+          -521.15424
+        ],
+        [
+          943.237793,
+          -530.84576
+        ],
+        [
+          922.677922,
+          -565.797541
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "chari_logone_floodplains",
+      "dimension": "minecraft:overworld",
+      "priority": 25350,
+      "macro_region": "west_central_africa",
+      "display_label": "Chari–Logone Floodplains",
+      "polygon": [
+        [
+          1092.0,
+          -580.0
+        ],
+        [
+          1229.0,
+          -594.0
+        ],
+        [
+          1283.0,
+          -696.0
+        ],
+        [
+          1092.0,
+          -860.0
+        ],
+        [
+          1024.0,
+          -887.0
+        ],
+        [
+          963.0,
+          -751.0
+        ],
+        [
+          976.0,
+          -621.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ubangi_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 26360,
+      "macro_region": "west_central_africa",
+      "display_label": "Ubangi Valley",
+      "polygon": [
+        [
+          1365.522073,
+          -338.868876
+        ],
+        [
+          1259.103988,
+          -306.291911
+        ],
+        [
+          1225.925288,
+          -214.247776
+        ],
+        [
+          1218.957561,
+          -139.593555
+        ],
+        [
+          1197.76,
+          -91.141987
+        ],
+        [
+          1197.76,
+          -13.257262
+        ],
+        [
+          1204.867182,
+          35.477703
+        ],
+        [
+          1225.132818,
+          32.522297
+        ],
+        [
+          1218.24,
+          -14.742738
+        ],
+        [
+          1218.24,
+          -86.858013
+        ],
+        [
+          1239.042439,
+          -134.406445
+        ],
+        [
+          1246.074712,
+          -209.752224
+        ],
+        [
+          1274.896012,
+          -289.708089
+        ],
+        [
+          1364.477927,
+          -317.131124
+        ],
+        [
+          1444.847157,
+          -283.807297
+        ],
+        [
+          1532.761925,
+          -281.762768
+        ],
+        [
+          1533.238075,
+          -302.237232
+        ],
+        [
+          1449.152843,
+          -304.192703
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "congo_lualaba_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 27370,
+      "macro_region": "west_central_africa",
+      "display_label": "Congo–Lualaba Valley",
+      "polygon": [
+        [
+          1812.58648,
+          585.275499
+        ],
+        [
+          1841.415141,
+          480.256805
+        ],
+        [
+          1849.52502,
+          414.364033
+        ],
+        [
+          1854.919864,
+          366.889413
+        ],
+        [
+          1805.781724,
+          268.613133
+        ],
+        [
+          1783.246832,
+          198.069125
+        ],
+        [
+          1747.298258,
+          21.321971
+        ],
+        [
+          1730.371678,
+          -41.094793
+        ],
+        [
+          1686.762417,
+          -83.640414
+        ],
+        [
+          1609.064081,
+          -147.871039
+        ],
+        [
+          1533.787678,
+          -161.654042
+        ],
+        [
+          1465.25863,
+          -158.491163
+        ],
+        [
+          1394.150847,
+          -126.544188
+        ],
+        [
+          1289.515154,
+          -77.303862
+        ],
+        [
+          1238.004345,
+          -10.339811
+        ],
+        [
+          1205.991937,
+          26.674537
+        ],
+        [
+          1138.973283,
+          114.390127
+        ],
+        [
+          1094.394667,
+          143.746777
+        ],
+        [
+          1094.394667,
+          208.106452
+        ],
+        [
+          1036.380832,
+          284.834427
+        ],
+        [
+          983.016597,
+          311.516545
+        ],
+        [
+          912.539732,
+          384.929945
+        ],
+        [
+          889.639407,
+          387.474426
+        ],
+        [
+          841.560536,
+          393.484284
+        ],
+        [
+          844.439464,
+          416.515716
+        ],
+        [
+          892.360593,
+          410.525574
+        ],
+        [
+          923.460268,
+          407.070055
+        ],
+        [
+          996.983403,
+          330.483455
+        ],
+        [
+          1051.619168,
+          303.165573
+        ],
+        [
+          1117.605333,
+          215.893548
+        ],
+        [
+          1117.605333,
+          156.253223
+        ],
+        [
+          1155.026717,
+          131.609873
+        ],
+        [
+          1224.008063,
+          41.325463
+        ],
+        [
+          1255.995655,
+          4.339811
+        ],
+        [
+          1304.484846,
+          -58.696138
+        ],
+        [
+          1403.849153,
+          -105.455812
+        ],
+        [
+          1470.74137,
+          -135.508837
+        ],
+        [
+          1532.212322,
+          -138.345958
+        ],
+        [
+          1598.935919,
+          -126.128961
+        ],
+        [
+          1671.237583,
+          -66.359586
+        ],
+        [
+          1709.628322,
+          -28.905207
+        ],
+        [
+          1724.701742,
+          26.678029
+        ],
+        [
+          1760.753168,
+          203.930875
+        ],
+        [
+          1784.218276,
+          277.386867
+        ],
+        [
+          1831.080136,
+          371.110587
+        ],
+        [
+          1826.47498,
+          411.635967
+        ],
+        [
+          1818.584859,
+          475.743195
+        ],
+        [
+          1791.41352,
+          574.724501
+        ],
+        [
+          1751.701311,
+          626.243043
+        ],
+        [
+          1775.296858,
+          682.9999
+        ],
+        [
+          1800.433396,
+          682.9999
+        ],
+        [
+          1778.298689,
+          629.756957
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "cuvette_centrale",
+      "dimension": "minecraft:overworld",
+      "priority": 25380,
+      "macro_region": "west_central_africa",
+      "display_label": "Cuvette Centrale",
+      "polygon": [
+        [
+          1461.0,
+          191.0
+        ],
+        [
+          1611.0,
+          34.0
+        ],
+        [
+          1543.0,
+          -171.0
+        ],
+        [
+          1297.0,
+          -212.0
+        ],
+        [
+          1120.0,
+          -177.0
+        ],
+        [
+          1065.0,
+          -14.0
+        ],
+        [
+          1079.0,
+          198.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "wetland",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ogooue_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 21390,
+      "macro_region": "west_central_africa",
+      "display_label": "Ogooué Basin",
+      "polygon": [
+        [
+          853.0,
+          198.0
+        ],
+        [
+          956.0,
+          68.0
+        ],
+        [
+          935.0,
+          -55.0
+        ],
+        [
+          778.0,
+          -61.0
+        ],
+        [
+          669.0,
+          20.0
+        ],
+        [
+          683.0,
+          177.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "sao_tome_principe",
+      "dimension": "minecraft:overworld",
+      "priority": 29400,
+      "macro_region": "west_central_africa",
+      "display_label": "São Tomé & Príncipe",
+      "polygon": [
+        [
+          474.0,
+          10.0
+        ],
+        [
+          526.0,
+          -89.0
+        ],
+        [
+          526.0,
+          -133.0
+        ],
+        [
+          485.0,
+          -133.0
+        ],
+        [
+          427.0,
+          -44.0
+        ],
+        [
+          427.0,
+          10.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "bioko",
+      "dimension": "minecraft:overworld",
+      "priority": 29410,
+      "macro_region": "west_central_africa",
+      "display_label": "Bioko",
+      "polygon": [
+        [
+          597.0,
+          -215.0
+        ],
+        [
+          614.0,
+          -249.0
+        ],
+        [
+          608.0,
+          -270.0
+        ],
+        [
+          580.0,
+          -270.0
+        ],
+        [
+          563.0,
+          -246.0
+        ],
+        [
+          567.0,
+          -215.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "dahomey_gap",
+      "dimension": "minecraft:overworld",
+      "priority": 23420,
+      "macro_region": "west_central_africa",
+      "display_label": "Dahomey Gap",
+      "polygon": [
+        [
+          225.0,
+          -396.0
+        ],
+        [
+          239.0,
+          -546.0
+        ],
+        [
+          171.0,
+          -635.0
+        ],
+        [
+          27.0,
+          -628.0
+        ],
+        [
+          -7.0,
+          -492.0
+        ],
+        [
+          10.0,
+          -382.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "uganda_plateau_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 31081,
+      "macro_region": "west_central_africa",
+      "display_label": "Uganda Plateau",
+      "polygon": [
+        [
+          2047.9999,
+          106.060947
+        ],
+        [
+          2047.9999,
+          -248.882212
+        ],
+        [
+          2007.0,
+          -191.0
+        ],
+        [
+          2028.0,
+          109.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "albertine_highlands_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 35241,
+      "macro_region": "west_central_africa",
+      "display_label": "Albertine Rift Highlands",
+      "polygon": [
+        [
+          2047.9999,
+          307.0
+        ],
+        [
+          2047.9999,
+          -201.290103
+        ],
+        [
+          2000.0,
+          -96.0
+        ],
+        [
+          1952.0,
+          68.0
+        ],
+        [
+          1925.0,
+          307.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "rwanda_burundi_highlands_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 36251,
+      "macro_region": "west_central_africa",
+      "display_label": "Rwanda–Burundi Highlands",
+      "polygon": [
+        [
+          2047.9999,
+          307.0
+        ],
+        [
+          2047.9999,
+          70.304887
+        ],
+        [
+          1993.0,
+          75.0
+        ],
+        [
+          1966.0,
+          164.0
+        ],
+        [
+          1966.0,
+          307.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "rwenzori_mountains_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 37261,
+      "macro_region": "west_central_africa",
+      "display_label": "Rwenzori Mountains",
+      "polygon": [
+        [
+          2047.9999,
+          -3.0
+        ],
+        [
+          2047.9999,
+          -65.0
+        ],
+        [
+          2024.0,
+          -65.0
+        ],
+        [
+          2024.0,
+          -3.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "sudd_wetlands_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 38351,
+      "macro_region": "west_central_africa",
+      "display_label": "Sudd Wetlands",
+      "polygon": [
+        [
+          2047.9999,
+          -405.015714
+        ],
+        [
+          2047.9999,
+          -680.052495
+        ],
+        [
+          1980.0,
+          -587.0
+        ],
+        [
+          1980.0,
+          -410.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "dry"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_edward",
+      "dimension": "minecraft:overworld",
+      "priority": 40500,
+      "macro_region": "west_central_africa",
+      "display_label": "Lake Edward",
+      "polygon": [
+        [
+          2024.0,
+          38.0
+        ],
+        [
+          2041.0,
+          3.0
+        ],
+        [
+          2021.0,
+          -7.0
+        ],
+        [
+          1997.0,
+          10.0
+        ],
+        [
+          1993.0,
+          38.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_kivu",
+      "dimension": "minecraft:overworld",
+      "priority": 40510,
+      "macro_region": "west_central_africa",
+      "display_label": "Lake Kivu",
+      "polygon": [
+        [
+          1997.0,
+          164.0
+        ],
+        [
+          2007.0,
+          113.0
+        ],
+        [
+          1987.0,
+          102.0
+        ],
+        [
+          1969.0,
+          126.0
+        ],
+        [
+          1969.0,
+          157.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_tanganyika_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 40521,
+      "macro_region": "west_central_africa",
+      "display_label": "Lake Tanganyika",
+      "polygon": [
+        [
+          2038.0,
+          362.0
+        ],
+        [
+          2017.0,
+          225.0
+        ],
+        [
+          1983.0,
+          225.0
+        ],
+        [
+          1980.0,
+          328.0
+        ],
+        [
+          2000.0,
+          423.0
+        ],
+        [
+          2047.9999,
+          486.483739
+        ],
+        [
+          2047.9999,
+          385.181586
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.2
+
+- Africa Coverage v1: added 168 supplied complete-profile local records for North, West/Central and East Africa/Horn, including neighboring-macro fragments. Extended only the East Africa/Horn polygon to cover the approved 36,311-block² wedge; all 198 European locals and Crete’s macro notch remain unchanged.
+- Applied three minimal rounding-edge clips (`eastern_sahara_horn1`, `northern_sahel_horn1`, `upper_nile_plains`) to eliminate actual Core parent conflicts; IDs, labels, priorities and profiles are preserved. Economy/families, progression, roles, skins/dialogues, water and temperature are unchanged.
+- Offline Core 0.7.1 validation: 366 reachable locals, 5,790 compositions, 28,236 boundary samples and 175 control checks. Read existing Earth 1500 block states, including small islands; the configured test save differs at 11 sampled controls. No Core changes, terrain writes or Minecraft gameplay testing.
+
 ## 0.5.1
 
 - Europe Coverage v2: completed Northern 27 and full six-axis profiles; merged 17 duplicate stitch proposals, retained Pripyat Marshes/Azov Coast and all 55 old IDs. 150 physical areas become 198 reachable simple-polygon records under the actual winning macros, including 14 Caucasus/Central Asia boundary fragments.

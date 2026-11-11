@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "southern_congolian_mosaic_south2",
+      "dimension": "minecraft:overworld",
+      "priority": 21072,
+      "macro_region": "southern_africa",
+      "display_label": "Southern Congolian Mosaic",
+      "polygon": [
+        [
+          2047.9999,
+          730.0
+        ],
+        [
+          2047.9999,
+          683.0
+        ],
+        [
+          819.0,
+          683.0
+        ],
+        [
+          819.0,
+          730.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "congo_lualaba_valley_south1",
+      "dimension": "minecraft:overworld",
+      "priority": 27371,
+      "macro_region": "southern_africa",
+      "display_label": "Congo–Lualaba Valley",
+      "polygon": [
+        [
+          1791.283826,
+          721.455039
+        ],
+        [
+          1812.716174,
+          712.544961
+        ],
+        [
+          1800.433438,
+          683.0
+        ],
+        [
+          1775.296899,
+          683.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_malawi_south1",
+      "dimension": "minecraft:overworld",
+      "priority": 40531,
+      "macro_region": "southern_africa",
+      "display_label": "Lake Malawi / Nyasa",
+      "polygon": [
+        [
+          2342.0,
+          860.0
+        ],
+        [
+          2365.0,
+          976.0
+        ],
+        [
+          2396.0,
+          997.0
+        ],
+        [
+          2413.0,
+          901.0
+        ],
+        [
+          2393.913816,
+          819.0001
+        ],
+        [
+          2332.972499,
+          819.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "comoro_islands_south1",
+      "dimension": "minecraft:overworld",
+      "priority": 41551,
+      "macro_region": "southern_africa",
+      "display_label": "Comoro Islands",
+      "polygon": [
+        [
+          3048.0,
+          850.0
+        ],
+        [
+          3048.0,
+          819.0001
+        ],
+        [
+          3014.0,
+          819.0001
+        ],
+        [
+          3014.0,
+          850.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "comoro_islands_south2",
+      "dimension": "minecraft:overworld",
+      "priority": 41552,
+      "macro_region": "southern_africa",
+      "display_label": "Comoro Islands",
+      "polygon": [
+        [
+          3099.0,
+          891.0
+        ],
+        [
+          3099.0,
+          857.0
+        ],
+        [
+          3072.0,
+          857.0
+        ],
+        [
+          3072.0,
+          891.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "comoro_islands_south3",
+      "dimension": "minecraft:overworld",
+      "priority": 41553,
+      "macro_region": "southern_africa",
+      "display_label": "Comoro Islands",
+      "polygon": [
+        [
+          2997.0,
+          850.0
+        ],
+        [
+          2997.0,
+          833.0
+        ],
+        [
+          2973.0,
+          833.0
+        ],
+        [
+          2973.0,
+          850.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    }
+  ]
+}
