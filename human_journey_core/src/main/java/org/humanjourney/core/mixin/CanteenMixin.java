@@ -22,5 +22,5 @@ public class CanteenMixin {
         else{stack.setDamageValue(stack.getDamageValue()+1);cir.setReturnValue(stack);}
     }
     @Inject(method="inventoryTick",at=@At("HEAD"),cancellable=true)
-    private void hjPreserve(ItemStack stack,ServerLevel level,Entity entity,EquipmentSlot slot,CallbackInfo ci){if(WaterContainers.kind(stack)!=null)ci.cancel();}
+    private void hjPreserve(ItemStack stack,ServerLevel level,Entity entity,EquipmentSlot slot,CallbackInfo ci){if(org.humanjourney.core.juice.JuiceState.marked(stack)||WaterContainers.kind(stack)!=null)ci.cancel();}
 }

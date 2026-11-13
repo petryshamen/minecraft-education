@@ -33,6 +33,7 @@ public final class HumanJourneyCore {
             WaterSmoke.register(context.getModBusGroup());
             com.mojang.logging.LogUtils.getLogger().info("[HJ Core] WATER_MIXIN_SMOKE_OK: all ten water targets loaded under ModLauncher");
         }
+        org.humanjourney.core.juice.JuiceBootstrap.register(context);
         org.humanjourney.core.npc.NpcBootstrap.register(context);
         org.humanjourney.core.geography.GeographyBootstrap.register(context);
         org.humanjourney.core.fishing.FishingBootstrap.register();

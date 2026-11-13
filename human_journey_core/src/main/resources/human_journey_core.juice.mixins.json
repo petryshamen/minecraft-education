@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8.7",
+  "package": "org.humanjourney.core.juice.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "JuiceCanteenMixin",
+    "BottleJuiceMixin",
+    "JuiceNameMixin",
+    "JuiceCraftGuardMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

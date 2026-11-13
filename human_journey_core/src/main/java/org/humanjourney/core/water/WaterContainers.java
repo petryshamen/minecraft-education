@@ -11,6 +11,7 @@ public final class WaterContainers {
     private static final String[] TIERS={"leather","copper","iron","gold","diamond","netherite"};
     public record Kind(Quality quality,String tier) { public boolean canteen(){return tier!=null;} }
     public static Kind kind(ItemStack stack){
+        if(org.humanjourney.core.juice.JuiceState.marked(stack))return null;
         var base=baseKind(stack);return base!=null&&SaltWater.marked(stack)?new Kind(Quality.SALT,base.tier()):base;
     }
     private static Kind baseKind(ItemStack stack){
@@ -31,7 +32,7 @@ public final class WaterContainers {
         return null;
     }
     /** Includes non-water potions so legacy broad furnace ingredients cannot destroy them. */
-    public static boolean heatGuard(ItemStack stack){return kind(stack)!=null || stack.is(Items.POTION);}
+    public static boolean heatGuard(ItemStack stack){return org.humanjourney.core.juice.JuiceState.marked(stack) || kind(stack)!=null || stack.is(Items.POTION);}
     public static ItemStack preserve(ItemStack original,Item replacement){return original.transmuteCopy(replacement,1);}
     public static ItemStack convert(ItemStack input,Quality target){
         Kind kind=kind(input);

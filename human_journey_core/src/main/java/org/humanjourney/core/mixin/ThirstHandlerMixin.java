@@ -18,6 +18,7 @@ public class ThirstHandlerMixin {
 
     @Inject(method="onItemUseFinish",at=@At("HEAD"),cancellable=true)
     private static void hjDrink(LivingEntityUseItemEvent.Finish event,CallbackInfo ci){
+        if(org.humanjourney.core.juice.JuiceState.marked(event.getItem())){ci.cancel();return;}
         if(event.getEntity() instanceof ServerPlayer player && WaterDrinking.item(player,event.getItem()))ci.cancel();
     }
 }
