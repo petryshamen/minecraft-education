@@ -1,3 +1,8 @@
+# 0.9.0
+
+- Added atomic reloadable juice definitions, persistent state on existing TAN canteens and one generic full-purified-canteen crafting recipe, preserving tiers/components and exact remaining uses.
+- Canteen servings delegate thirst/hydration/native effects to TAN's own handler; configured bottles gain a post-native completion healing bonus. Added configured names, safe unknown-ID handling, diagnostics and synthetic/native structural checks. No production juice catalog, ingredients, bottle recipes or progression changes.
+
 # 0.8.1
 
 - Updated fresh/missing-setting geography HUD defaults to X 85, Y 10, scale 0.8 and background opacity 0.35; enabled remains true. Existing valid custom values and validation ranges remain unchanged. No renderer, discovery, geography or other gameplay changes.

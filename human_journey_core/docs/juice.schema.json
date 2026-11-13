@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:human-journey:juice:1",
+  "title": "Human Journey Core juice definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "bottle_item",
+    "ingredient",
+    "canteen_display_name",
+    "heal_per_drink"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$"
+    },
+    "bottle_item": {
+      "$ref": "#/$defs/resource"
+    },
+    "ingredient": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "item"
+          ],
+          "properties": {
+            "item": {
+              "$ref": "#/$defs/resource"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "tag"
+          ],
+          "properties": {
+            "tag": {
+              "$ref": "#/$defs/resource"
+            }
+          }
+        }
+      ]
+    },
+    "canteen_display_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^(?=.*\\S)[^\\x00-\\x1F\\x7F-\\x9F]+$"
+    },
+    "heal_per_drink": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "$defs": {
+    "resource": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$",
+      "maxLength": 256
+    }
+  },
+  "description": "Runtime also validates finite healing, registered exact TAN JuiceItem bottles, nonempty staged ingredient tags and catalog-wide ID/bottle/ingredient uniqueness. Core ships no production definitions."
+}

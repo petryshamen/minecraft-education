@@ -1,6 +1,9 @@
-# Human Journey Core 0.8.1
+# Human Journey Core 0.9.0
 
-**Core 0.8.1 build verified:** [GitHub Actions run 43343851204](https://github.com/petryshamen/minecraft-education/actions/runs/43343851204), source `8e1d148007abffd3bd4fb91dfeabbf56100cd381`. All 179 tests passed (174 existing plus five config-default/correction/range tests), with zero failures; all nine no-world Forge checks passed. Only GeographyClientConfig.class differs from the prior runtime classes; rendering, discovery and other systems are byte-identical. Forge's actual correction path preserves valid custom values and fills only missing/invalid settings. Runtime SHA-256: `5306950b4f296d63af7dbba8e87690c483cd9c83d27d192e4dd295fc2126e484`. No gameplay testing or automatic installation.
+Reloadable juice canteens and configured bottled-juice healing. **[Juice schema, native TAN integration, Developer setup and manual checklist](JUICE.md)**. No production juice catalog/ingredients are bundled. Core 0.8.1 HUD defaults and all existing systems are retained. Manual installation only.
+
+
+**Core 0.8.1 baseline:** [GitHub Actions run 43343851204](https://github.com/petryshamen/minecraft-education/actions/runs/43343851204), source `8e1d148007abffd3bd4fb91dfeabbf56100cd381`. All 179 tests passed (174 existing plus five config-default/correction/range tests), with zero failures; all nine no-world Forge checks passed. Only GeographyClientConfig.class differs from the prior runtime classes; rendering, discovery and other systems are byte-identical. Forge's actual correction path preserves valid custom values and fills only missing/invalid settings. Runtime SHA-256: `5306950b4f296d63af7dbba8e87690c483cd9c83d27d192e4dd295fc2126e484`. No gameplay testing or automatic installation.
 
 Core 0.8.1 changes only geography HUD defaults: enabled=true, X=85, Y=10, scale=0.8, opacity=0.35. Existing custom configs and all ranges are retained; no config migration or rendering/discovery change. Manual installation only. The 0.8.0 build evidence below documents the unchanged geography implementation.
 
@@ -21,7 +24,7 @@ Spawn-time NPC context: `/hj npc spawn hunter` and `/hj npc spawn fisher` resolv
 
 **[NPC installation, complete context reference and manual checklist](NPC.md)** · [Static/story format](NPC-STATIC.md) · [Changelog](CHANGELOG.md).
 
-Install `human_journey_core-0.8.1.jar` and the separate `HumanJourney-NPC-Integration-0.6.0.zip` manually in a test world. Keep the real Human Journey 0.3.15 progression and existing temperature/water settings unchanged. The integration pack needs no geographic database and writes no scores. Era 1 is recognized but has no demo economic roles. `/hj npc context` diagnoses era/season/geography; `/hj npc status` reports load outcomes.
+Install `human_journey_core-0.9.0.jar` and the separate `HumanJourney-NPC-Integration-0.6.0.zip` manually in a test world. Keep the real Human Journey 0.3.15 progression and existing temperature/water settings unchanged. The integration pack needs no geographic database and writes no scores. Era 1 is recognized but has no demo economic roles. `/hj npc context` diagnoses era/season/geography; `/hj npc status` reports load outcomes.
 
 Schemas: [era resolver](docs/npc-context.schema.json), [archetypes](docs/npc-archetype.schema.json), [geography](docs/npc-geography.schema.json), [unchanged static templates](docs/npc-template.schema.json). Core 0.5 temperature/water/audio and native adapter behavior are preserved. No Minecraft gameplay testing or automatic deployment.
 
@@ -43,7 +46,7 @@ Adds persistent Salt Water, geographic classification, instant filter-capacity W
 
 ## Install manually
 
-Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.8.1.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
+Stop the test server/client, back up the world and replace the old Core JAR with `human_journey_core-0.9.0.jar` in the test profiles/server. Keep exactly one Core version. Teacher and students should use the same Core/TAN dependency stack. Nothing in this project installs into Minecraft or edits live mods, worlds or the Human Journey progression datapack automatically.
 
 ## Debug command
 
@@ -130,7 +133,7 @@ The existing pre-player-tick exposure reduction and post-server-tick net relief/
 
 ## Build and validation
 
-Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.8.1.jar` (the `-sources.jar` is not an installable mod).
+Use JDK 21. Windows: `./build.ps1 -JavaHome 'C:\path\to\jdk-21'`. Linux/macOS: `chmod +x gradlew` then `./gradlew --no-daemon test build`. The included wrapper is Gradle 9.3.1; ForgeGradle is pinned to 7.0.3. Expected runtime output: `build/libs/human_journey_core-0.9.0.jar` (the `-sources.jar` is not an installable mod).
 
 Repository workflow: `.github/workflows/human-journey-core.yml` runs from the `human_journey_core` folder on Core pushes or manual dispatch. `check/build` verifies root resource-pack metadata in the actual JAR. Unit tests cover strict policy validation, sparse fallback, independent Nether rate, damage intervals, disabled damage, reload replacement/removal, invalid reload retention and the existing water/cold policy invariants.
 
