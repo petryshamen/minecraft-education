@@ -1,5 +1,7 @@
 # Juice scaling and custom bottles — Core 0.10.0
 
+**Core 0.10.0 build verified:** [GitHub Actions run 43528787371](https://github.com/petryshamen/minecraft-education/actions/runs/43528787371), source `da4417d46b2fd500801e8100c40d496c330a05bd`. All 256 tests passed (221 prior tests retained/migrated + 35 new), zero failures; all eleven no-world Forge checks passed. Exact-unit planning/removal tests include normal/repeated takes, native quick-craft recipe clearing, split/tag/shifted grids, v1 defaults and custom bottle/canteen source/healing/persistence. Native data checks exercise registered six-tier canteens, shared item/model name/codecs, v2 recipes and bounded resource accounting. 201 existing classes are byte-identical to Core 0.9.0; existing class changes are confined to juice integration. Runtime SHA-256: `ca7324d31ff86d377dddddaf8b57a941438e26169ff1fa4ef404a4a3d6fa40be`. No Minecraft gameplay, automatic installation, main-datapack change or live-server deployment.
+
 Minecraft Java 1.21.8 / Java 21 / Forge 58.1.18 / Tough As Nails 21.8.0.2. Install matching `human_journey_core-0.10.0.jar` manually on server and clients, replacing the previous JAR. Core retains all 0.9 canteen/water behaviour and approved HUD defaults. No Minecraft gameplay testing, automatic installation, live-server change or main-datapack modification is performed.
 
 ## Definition location and compatibility
