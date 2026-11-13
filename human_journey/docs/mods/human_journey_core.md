@@ -1,7 +1,7 @@
-<!-- hj-mod-inspection {"filename":"human_journey_core-0.7.1.jar","sha256":"90754af47ea97fe20c2d3af4e193046d28dc1ba712f8de1c82f7b53232fbc0ef","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.7.1","declared_version":"0.7.1"}]} -->
+<!-- hj-mod-inspection {"filename":"human_journey_core-0.8.0.jar","sha256":"cbe47eb6f84f6175d8757fe4e120b3758e9626402ddd3b2ed092b168f08aff08","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.8.0","declared_version":"0.8.0"}]} -->
 # Human Journey Core
 
-Inspected installed `human_journey_core-0.7.1.jar`, Core **0.7.1**, SHA-256 `90754af47ea97fe20c2d3af4e193046d28dc1ba712f8de1c82f7b53232fbc0ef`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Installed hash matches the published 0.7.1 checksum. Read-only metadata/class evidence was correlated with [the matching README, water schema and source](https://github.com/petryshamen/minecraft-education/tree/80c3d4a7ae3c1053773aeb4e8e643f53101f24a3/human_journey_core). No JAR was changed or rebuilt.
+Inspected installed `human_journey_core-0.8.0.jar`, Core **0.8.0**, SHA-256 `cbe47eb6f84f6175d8757fe4e120b3758e9626402ddd3b2ed092b168f08aff08`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Metadata/hash matches the [verified Core 0.8.0 release contract](https://github.com/petryshamen/minecraft-education/blob/25c03fd0c6eba0846f4687642792b993e07d7a54/human_journey_core/GEOGRAPHY.md). Existing water/temperature/fishing/economy contracts remain unchanged; 0.8.0 adds HUD/shared discovery and optional macro labels. No JAR was changed, rebuilt or installed.
 
 Core is the engine/API; this datapack owns gameplay balance. The Core loader reads exactly `data/human_journey/core/temperature.json` (source: `source/data/human_journey/core/temperature.json`). Use `schema_version: 1`; unknown fields, wrong types, non-finite/out-of-range numbers reject the entire update.
 
@@ -84,3 +84,9 @@ NPC geography calibration and macro IDs/priorities: [Human Journey geography](hu
 Required installed Core: `human_journey_core-0.7.1.jar`, SHA-256 `90754af47ea97fe20c2d3af4e193046d28dc1ba712f8de1c82f7b53232fbc0ef`. The 0.6.1 sections above retain the earlier water/temperature/NPC integration history; those mechanics remain unchanged. Production economy resources require 0.7.0 on server and clients. See [the economy content note](human_journey_economy.md).
 
 Core 0.7.1 is schema-compatible with 0.7.0. Payment candidate diversity, per-NPC buyer-use preference, spawn-only random choices and safer fluid/drop/path handling are engine behaviour; the datapack adds no equivalent functions/settings. Existing NPC offers do not reroll. Content 0.4.1 splits mushrooms into two item commodities and removes the unused production mushroom family; see the economy note.
+
+## Geography HUD/shared discovery — Core 0.8.0
+
+`npc_geography/*.json` keeps schema 1 and complete replace-only profiles. Optional macro `display_label`/`era_labels` are now accepted but this production release does not add them. Core supplies dynamic HUD context and readable macro-ID fallbacks; NPC labels remain local-prefixed spawn-time snapshots. Current geography content/filenames and migration are in [the geography note](human_journey_geography.md).
+
+Participant HUD requires `hj_participant`. Natural shared discovery requires participant + `hj_student` + not `hj_teacher`, with teacher exclusion winning conflicting tags. Stable IDs are stored in the shared Overworld `human_journey_geography` SavedData. Reparenting does not erase historical discoveries; no datapack reset or per-player duplicate scoreboard is added. `/hj geography status` is read-only and permission-level 2; do not reset/mark discoveries just to force manual acceptance. Matching Core 0.8.0 is required on server and clients. Live reload, HUD, notifications and persistent-save gameplay remain user tests.

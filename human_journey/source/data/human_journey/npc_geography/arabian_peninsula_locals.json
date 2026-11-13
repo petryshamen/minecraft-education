@@ -1,0 +1,2798 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "gulf_aden_coast_arabia1",
+      "dimension": "minecraft:overworld",
+      "priority": 38161,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Gulf of Aden Coast",
+      "polygon": [
+        [
+          3495.191867,
+          -821.232531
+        ],
+        [
+          3486.261744,
+          -819.0
+        ],
+        [
+          3495.75,
+          -819.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "transjordan_plateau_arabia1",
+      "dimension": "minecraft:overworld",
+      "priority": 53121,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Transjordan Plateau",
+      "polygon": [
+        [
+          2464.988005,
+          -2010.061625
+        ],
+        [
+          2423.674059,
+          -2030.688354
+        ],
+        [
+          2423.0,
+          -2007.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "negev_highlands_arabia1",
+      "dimension": "minecraft:overworld",
+      "priority": 53141,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Negev Highlands",
+      "polygon": [
+        [
+          2412.999998,
+          -2028.000002
+        ],
+        [
+          2413.749355,
+          -2035.643439
+        ],
+        [
+          2389.000002,
+          -2047.999997
+        ],
+        [
+          2389.000002,
+          -2028.000002
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "arava_valley_arabia1",
+      "dimension": "minecraft:overworld",
+      "priority": 53151,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Arava Valley",
+      "polygon": [
+        [
+          2396.177862,
+          -2016.518951
+        ],
+        [
+          2397.123505,
+          -2032.59488
+        ],
+        [
+          2397.123505,
+          -2032.594881
+        ],
+        [
+          2400.012959,
+          -2042.501581
+        ],
+        [
+          2389.000002,
+          -2047.999997
+        ],
+        [
+          2389.000002,
+          -2016.941178
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "najd_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 70000,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Najd Plateau",
+      "polygon": [
+        [
+          3345.0,
+          -1570.0
+        ],
+        [
+          3293.813187,
+          -1707.0
+        ],
+        [
+          3072.0,
+          -1707.0
+        ],
+        [
+          2794.905936,
+          -1845.344181
+        ],
+        [
+          2697.0,
+          -1775.0
+        ],
+        [
+          2697.0,
+          -1434.0
+        ],
+        [
+          3072.0,
+          -1331.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hisma_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 71020,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Hisma Plateau",
+      "polygon": [
+        [
+          2634.999998,
+          -1925.180087
+        ],
+        [
+          2499.16129,
+          -1992.999998
+        ],
+        [
+          2437.000002,
+          -1992.999998
+        ],
+        [
+          2437.000002,
+          -1891.826087
+        ],
+        [
+          2463.11628,
+          -1843.000002
+        ],
+        [
+          2634.999998,
+          -1843.000002
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "arabian_shield_uplands",
+      "dimension": "minecraft:overworld",
+      "priority": 70030,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Arabian Shield Uplands",
+      "polygon": [
+        [
+          3072.0,
+          -1365.0
+        ],
+        [
+          2867.0,
+          -1741.0
+        ],
+        [
+          2628.0,
+          -1843.0
+        ],
+        [
+          2521.390244,
+          -1754.59191
+        ],
+        [
+          2615.0,
+          -1645.0
+        ],
+        [
+          2674.0,
+          -1468.0
+        ],
+        [
+          2737.0,
+          -1365.0
+        ],
+        [
+          2806.0,
+          -1304.0
+        ],
+        [
+          2833.0,
+          -1236.0
+        ],
+        [
+          2843.047612,
+          -1224.556886
+        ],
+        [
+          2970.0,
+          -1181.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "asir_najran_plateaus",
+      "dimension": "minecraft:overworld",
+      "priority": 71040,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Asir–Najran Plateaus",
+      "polygon": [
+        [
+          3140.0,
+          -1399.0
+        ],
+        [
+          2963.0,
+          -1502.0
+        ],
+        [
+          2854.0,
+          -1365.0
+        ],
+        [
+          2897.697855,
+          -1162.316332
+        ],
+        [
+          2905.0,
+          -1154.0
+        ],
+        [
+          2906.129032,
+          -1147.0
+        ],
+        [
+          3127.0,
+          -1147.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "as_summan_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 71050,
+      "macro_region": "arabian_peninsula",
+      "display_label": "As-Summan Plateau",
+      "polygon": [
+        [
+          3222.0,
+          -1673.0
+        ],
+        [
+          3277.0,
+          -1673.0
+        ],
+        [
+          3315.666667,
+          -1707.0
+        ],
+        [
+          3198.8,
+          -1707.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "oman_interior_plateaus",
+      "dimension": "minecraft:overworld",
+      "priority": 70060,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Omani Interior Plateaus",
+      "polygon": [
+        [
+          4028.0,
+          -1502.0
+        ],
+        [
+          3968.09849,
+          -1620.066745
+        ],
+        [
+          3905.0,
+          -1638.0
+        ],
+        [
+          3895.397229,
+          -1651.094688
+        ],
+        [
+          3789.0,
+          -1673.0
+        ],
+        [
+          3686.0,
+          -1502.0
+        ],
+        [
+          3652.0,
+          -1297.0
+        ],
+        [
+          3891.0,
+          -1277.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "jiddat_al_harasis",
+      "dimension": "minecraft:overworld",
+      "priority": 71070,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Jiddat al-Harasis",
+      "polygon": [
+        [
+          3939.0,
+          -1304.0
+        ],
+        [
+          3980.0,
+          -1386.0
+        ],
+        [
+          3987.0,
+          -1389.9375
+        ],
+        [
+          3987.0,
+          -1468.0
+        ],
+        [
+          3789.0,
+          -1468.0
+        ],
+        [
+          3789.0,
+          -1277.0
+        ],
+        [
+          3900.882353,
+          -1277.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "yemen_eastern_plateaus",
+      "dimension": "minecraft:overworld",
+      "priority": 71080,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Eastern Yemen Plateaus",
+      "polygon": [
+        [
+          3249.0,
+          -949.0
+        ],
+        [
+          3264.92841,
+          -950.798369
+        ],
+        [
+          3311.0,
+          -1161.0
+        ],
+        [
+          3072.0,
+          -1229.0
+        ],
+        [
+          3004.0,
+          -1092.0
+        ],
+        [
+          3004.0,
+          -922.0
+        ],
+        [
+          3228.821861,
+          -939.360761
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "arid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hadramawt_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 71090,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Hadramawt Plateau",
+      "polygon": [
+        [
+          3413.0,
+          -1010.0
+        ],
+        [
+          3453.034141,
+          -1020.190509
+        ],
+        [
+          3562.740877,
+          -1083.740142
+        ],
+        [
+          3557.0,
+          -1109.0
+        ],
+        [
+          3572.451527,
+          -1115.079289
+        ],
+        [
+          3550.0,
+          -1229.0
+        ],
+        [
+          3277.0,
+          -1242.0
+        ],
+        [
+          3188.0,
+          -1126.0
+        ],
+        [
+          3209.0,
+          -976.0
+        ],
+        [
+          3382.517241,
+          -993.862069
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "an_nafud",
+      "dimension": "minecraft:overworld",
+      "priority": 72100,
+      "macro_region": "arabian_peninsula",
+      "display_label": "An Nafud",
+      "polygon": [
+        [
+          2812.30989,
+          -1836.654945
+        ],
+        [
+          2628.0,
+          -1928.674963
+        ],
+        [
+          2628.0,
+          -1857.0
+        ],
+        [
+          2799.0,
+          -1830.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ad_dahna_sands",
+      "dimension": "minecraft:overworld",
+      "priority": 72110,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Ad Dahna Sands",
+      "polygon": [
+        [
+          3242.140898,
+          -1629.096681
+        ],
+        [
+          3297.431296,
+          -1519.521165
+        ],
+        [
+          3401.037,
+          -1408.805266
+        ],
+        [
+          3424.963,
+          -1431.194734
+        ],
+        [
+          3324.568704,
+          -1538.478835
+        ],
+        [
+          3269.859102,
+          -1646.903319
+        ],
+        [
+          3221.781758,
+          -1707.0
+        ],
+        [
+          3179.818242,
+          -1707.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "rub_al_khali",
+      "dimension": "minecraft:overworld",
+      "priority": 72120,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Rub al Khali",
+      "polygon": [
+        [
+          3304.0,
+          -1167.0
+        ],
+        [
+          3413.0,
+          -1188.0
+        ],
+        [
+          3584.0,
+          -1195.0
+        ],
+        [
+          3809.0,
+          -1331.0
+        ],
+        [
+          3802.0,
+          -1529.0
+        ],
+        [
+          3550.0,
+          -1618.0
+        ],
+        [
+          3345.0,
+          -1536.0
+        ],
+        [
+          3120.0,
+          -1434.0
+        ],
+        [
+          3052.0,
+          -1229.0
+        ],
+        [
+          3209.0,
+          -1126.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "jafurah_sands",
+      "dimension": "minecraft:overworld",
+      "priority": 72130,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Jafurah Sands",
+      "polygon": [
+        [
+          3459.276923,
+          -1698.907692
+        ],
+        [
+          3456.916667,
+          -1707.0
+        ],
+        [
+          3345.0,
+          -1707.0
+        ],
+        [
+          3345.0,
+          -1570.0
+        ],
+        [
+          3454.0,
+          -1570.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "sharqiya_sands",
+      "dimension": "minecraft:overworld",
+      "priority": 72140,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Sharqiyah Sands",
+      "polygon": [
+        [
+          4028.0,
+          -1413.0
+        ],
+        [
+          4048.0,
+          -1445.962963
+        ],
+        [
+          4048.0,
+          -1543.0
+        ],
+        [
+          3987.0,
+          -1543.0
+        ],
+        [
+          3953.0,
+          -1454.0
+        ],
+        [
+          3959.0,
+          -1386.0
+        ],
+        [
+          3980.0,
+          -1386.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ramlat_sabatayn",
+      "dimension": "minecraft:overworld",
+      "priority": 72150,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Ramlat as-Sabatayn",
+      "polygon": [
+        [
+          3297.0,
+          -1065.0
+        ],
+        [
+          3277.0,
+          -1113.0
+        ],
+        [
+          3154.0,
+          -1133.0
+        ],
+        [
+          3106.0,
+          -1017.0
+        ],
+        [
+          3209.0,
+          -990.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tuwaiq_escarpment",
+      "dimension": "minecraft:overworld",
+      "priority": 74160,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Tuwaiq Escarpment",
+      "polygon": [
+        [
+          3128.347155,
+          -1574.171112
+        ],
+        [
+          3061.009279,
+          -1439.495361
+        ],
+        [
+          3082.990721,
+          -1428.504639
+        ],
+        [
+          3151.652845,
+          -1565.828888
+        ],
+        [
+          3181.50239,
+          -1696.953672
+        ],
+        [
+          3171.291369,
+          -1707.0
+        ],
+        [
+          3136.249615,
+          -1707.0
+        ],
+        [
+          3154.49761,
+          -1689.046328
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "midian_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 74170,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Midian Mountains",
+      "polygon": [
+        [
+          2567.0,
+          -1857.0
+        ],
+        [
+          2533.0,
+          -1966.0
+        ],
+        [
+          2458.0,
+          -1993.0
+        ],
+        [
+          2411.231753,
+          -1952.266366
+        ],
+        [
+          2423.0,
+          -1918.0
+        ],
+        [
+          2492.0,
+          -1789.0
+        ],
+        [
+          2503.958333,
+          -1775.0
+        ],
+        [
+          2505.0,
+          -1775.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "hijaz_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 74180,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Hijaz Mountains",
+      "polygon": [
+        [
+          2778.0,
+          -1379.0
+        ],
+        [
+          2833.0,
+          -1468.0
+        ],
+        [
+          2703.0,
+          -1761.0
+        ],
+        [
+          2587.0,
+          -1843.0
+        ],
+        [
+          2510.88764,
+          -1766.88764
+        ],
+        [
+          2615.0,
+          -1645.0
+        ],
+        [
+          2672.305085,
+          -1473.084746
+        ],
+        [
+          2690.0,
+          -1447.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "asir_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 74190,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Asir Highlands",
+      "polygon": [
+        [
+          2990.0,
+          -1242.0
+        ],
+        [
+          2915.0,
+          -1420.0
+        ],
+        [
+          2833.0,
+          -1454.0
+        ],
+        [
+          2787.993669,
+          -1319.91864
+        ],
+        [
+          2806.0,
+          -1304.0
+        ],
+        [
+          2828.379622,
+          -1247.636507
+        ],
+        [
+          2848.189137,
+          -1218.701261
+        ],
+        [
+          2881.943677,
+          -1180.25859
+        ],
+        [
+          2949.0,
+          -1174.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "yemen_western_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 74200,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Western Yemen Highlands",
+      "polygon": [
+        [
+          3092.0,
+          -1010.0
+        ],
+        [
+          3086.0,
+          -1147.0
+        ],
+        [
+          3004.0,
+          -1201.0
+        ],
+        [
+          2935.0,
+          -1092.0
+        ],
+        [
+          2939.778614,
+          -952.054889
+        ],
+        [
+          2949.0,
+          -922.0
+        ],
+        [
+          2958.166282,
+          -885.989607
+        ],
+        [
+          3038.0,
+          -881.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "yemen_southern_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 75210,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Southern Yemen Highlands",
+      "polygon": [
+        [
+          3079.0,
+          -976.0
+        ],
+        [
+          3024.0,
+          -1010.0
+        ],
+        [
+          2970.0,
+          -990.0
+        ],
+        [
+          2970.0,
+          -894.0
+        ],
+        [
+          3045.0,
+          -894.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "western_arabian_harrats",
+      "dimension": "minecraft:overworld",
+      "priority": 75220,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Western Arabian Harrats",
+      "polygon": [
+        [
+          2765.0,
+          -1720.0
+        ],
+        [
+          2676.0,
+          -1720.0
+        ],
+        [
+          2676.0,
+          -1556.0
+        ],
+        [
+          2765.0,
+          -1556.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "western_arabian_harrats_arabia1",
+      "dimension": "minecraft:overworld",
+      "priority": 75221,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Western Arabian Harrats",
+      "polygon": [
+        [
+          2785.0,
+          -1809.0
+        ],
+        [
+          2697.0,
+          -1809.0
+        ],
+        [
+          2697.0,
+          -1720.0
+        ],
+        [
+          2785.0,
+          -1720.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "western_arabian_harrats_arabia2",
+      "dimension": "minecraft:overworld",
+      "priority": 75222,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Western Arabian Harrats",
+      "polygon": [
+        [
+          2832.999998,
+          -1826.325035
+        ],
+        [
+          2731.501466,
+          -1876.999998
+        ],
+        [
+          2731.000002,
+          -1876.999998
+        ],
+        [
+          2731.000002,
+          -1809.000002
+        ],
+        [
+          2832.999998,
+          -1809.000002
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "hajar_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 74230,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Hajar Mountains",
+      "polygon": [
+        [
+          3864.0,
+          -1693.909091
+        ],
+        [
+          3854.4,
+          -1707.0
+        ],
+        [
+          3782.0,
+          -1707.0
+        ],
+        [
+          3823.0,
+          -1618.0
+        ],
+        [
+          3898.0,
+          -1550.0
+        ],
+        [
+          4000.0,
+          -1516.0
+        ],
+        [
+          4069.0,
+          -1536.0
+        ],
+        [
+          4065.262272,
+          -1542.199158
+        ],
+        [
+          4028.0,
+          -1556.0
+        ],
+        [
+          4000.0,
+          -1611.0
+        ],
+        [
+          3905.0,
+          -1638.0
+        ],
+        [
+          3885.296296,
+          -1664.868687
+        ],
+        [
+          3864.0,
+          -1673.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "dhofar_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 74240,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Dhofar Mountains",
+      "polygon": [
+        [
+          3735.734067,
+          -1169.030127
+        ],
+        [
+          3775.0,
+          -1215.0
+        ],
+        [
+          3794.856537,
+          -1224.414738
+        ],
+        [
+          3727.0,
+          -1236.0
+        ],
+        [
+          3645.0,
+          -1195.0
+        ],
+        [
+          3598.0,
+          -1174.0
+        ],
+        [
+          3604.0,
+          -1147.0
+        ],
+        [
+          3700.0,
+          -1161.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "northern_red_sea_coastal_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 76250,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Northern Arabian Red Sea Coast",
+      "polygon": [
+        [
+          2747.57823,
+          -1373.872023
+        ],
+        [
+          2686.460112,
+          -1473.795295
+        ],
+        [
+          2627.110785,
+          -1651.843277
+        ],
+        [
+          2503.341936,
+          -1796.743392
+        ],
+        [
+          2435.556705,
+          -1923.472302
+        ],
+        [
+          2401.913027,
+          -2021.434777
+        ],
+        [
+          2389.0,
+          -2017.0
+        ],
+        [
+          2423.0,
+          -1918.0
+        ],
+        [
+          2492.0,
+          -1789.0
+        ],
+        [
+          2615.0,
+          -1645.0
+        ],
+        [
+          2674.0,
+          -1468.0
+        ],
+        [
+          2737.0,
+          -1365.0
+        ],
+        [
+          2806.0,
+          -1304.0
+        ],
+        [
+          2815.043143,
+          -1314.229129
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tihama_coastal_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 76260,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Tihama Coastal Plain",
+      "polygon": [
+        [
+          2963.464785,
+          -926.057433
+        ],
+        [
+          2936.827974,
+          -1012.873705
+        ],
+        [
+          2929.916472,
+          -1093.837012
+        ],
+        [
+          2919.138541,
+          -1160.660186
+        ],
+        [
+          2845.999827,
+          -1243.957054
+        ],
+        [
+          2819.958594,
+          -1309.542383
+        ],
+        [
+          2806.0,
+          -1304.0
+        ],
+        [
+          2833.0,
+          -1236.0
+        ],
+        [
+          2905.0,
+          -1154.0
+        ],
+        [
+          2915.0,
+          -1092.0
+        ],
+        [
+          2922.0,
+          -1010.0
+        ],
+        [
+          2949.0,
+          -922.0
+        ],
+        [
+          2963.0,
+          -867.0
+        ],
+        [
+          2977.554547,
+          -870.704794
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "arabian_gulf_coastal_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 76270,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Arabian Gulf Coastal Plain",
+      "polygon": [
+        [
+          3450.210537,
+          -1686.106732
+        ],
+        [
+          3511.392,
+          -1632.712
+        ],
+        [
+          3592.380969,
+          -1632.712
+        ],
+        [
+          3719.61211,
+          -1661.675187
+        ],
+        [
+          3773.824142,
+          -1707.0
+        ],
+        [
+          3754.666667,
+          -1707.0
+        ],
+        [
+          3714.0,
+          -1673.0
+        ],
+        [
+          3591.0,
+          -1645.0
+        ],
+        [
+          3516.0,
+          -1645.0
+        ],
+        [
+          3495.0,
+          -1673.0
+        ],
+        [
+          3499.181944,
+          -1675.987103
+        ],
+        [
+          3471.976924,
+          -1699.729667
+        ],
+        [
+          3475.0,
+          -1679.0
+        ],
+        [
+          3461.0,
+          -1693.0
+        ],
+        [
+          3456.916667,
+          -1707.0
+        ],
+        [
+          3444.116667,
+          -1707.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "al_batinah_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 76280,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Al Batinah Plain",
+      "polygon": [
+        [
+          3963.122503,
+          -1607.440669
+        ],
+        [
+          3997.797412,
+          -1600.301717
+        ],
+        [
+          4000.0,
+          -1611.0
+        ],
+        [
+          3905.0,
+          -1638.0
+        ],
+        [
+          3881.416273,
+          -1670.159628
+        ],
+        [
+          3849.671603,
+          -1694.648374
+        ],
+        [
+          3836.328397,
+          -1677.351626
+        ],
+        [
+          3871.915833,
+          -1649.898462
+        ],
+        [
+          3920.473021,
+          -1622.003907
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "oman_eastern_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 76290,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Eastern Omani Coast",
+      "polygon": [
+        [
+          4069.712,
+          -1505.436297
+        ],
+        [
+          4019.166443,
+          -1422.12973
+        ],
+        [
+          3970.693428,
+          -1394.863659
+        ],
+        [
+          3929.38573,
+          -1312.248264
+        ],
+        [
+          3884.769644,
+          -1280.645203
+        ],
+        [
+          3769.735561,
+          -1226.103181
+        ],
+        [
+          3775.0,
+          -1215.0
+        ],
+        [
+          3891.0,
+          -1270.0
+        ],
+        [
+          3939.0,
+          -1304.0
+        ],
+        [
+          3980.0,
+          -1386.0
+        ],
+        [
+          4028.0,
+          -1413.0
+        ],
+        [
+          4082.0,
+          -1502.0
+        ],
+        [
+          4082.0,
+          -1536.0
+        ],
+        [
+          4028.0,
+          -1556.0
+        ],
+        [
+          4000.0,
+          -1611.0
+        ],
+        [
+          3989.049388,
+          -1605.425143
+        ],
+        [
+          4019.228351,
+          -1546.145036
+        ],
+        [
+          4069.712,
+          -1527.447388
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "dhofar_coastal_plain",
+      "dimension": "minecraft:overworld",
+      "priority": 76300,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Dhofar Coastal Plain",
+      "polygon": [
+        [
+          3612.977689,
+          -1141.13136
+        ],
+        [
+          3618.0,
+          -1133.0
+        ],
+        [
+          3654.37474,
+          -1144.233375
+        ],
+        [
+          3655.583572,
+          -1144.980007
+        ],
+        [
+          3659.210068,
+          -1145.726639
+        ],
+        [
+          3686.0,
+          -1154.0
+        ],
+        [
+          3734.0,
+          -1167.0
+        ],
+        [
+          3732.814559,
+          -1176.48353
+        ],
+        [
+          3684.441235,
+          -1170.436865
+        ],
+        [
+          3648.416428,
+          -1163.019993
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "yemen_south_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 76310,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Southern Yemen Coast",
+      "polygon": [
+        [
+          3542.678174,
+          -1116.570051
+        ],
+        [
+          3553.065392,
+          -1070.866292
+        ],
+        [
+          3518.162141,
+          -1049.448388
+        ],
+        [
+          3409.689725,
+          -1021.837228
+        ],
+        [
+          3348.026245,
+          -1003.02464
+        ],
+        [
+          3305.94709,
+          -967.795581
+        ],
+        [
+          3245.76299,
+          -961.000602
+        ],
+        [
+          3069.573156,
+          -883.477074
+        ],
+        [
+          3036.567302,
+          -872.475123
+        ],
+        [
+          2964.141917,
+          -879.234826
+        ],
+        [
+          2963.0,
+          -867.0
+        ],
+        [
+          3038.0,
+          -860.0
+        ],
+        [
+          3092.0,
+          -874.0
+        ],
+        [
+          3249.0,
+          -949.0
+        ],
+        [
+          3311.0,
+          -956.0
+        ],
+        [
+          3413.0,
+          -1010.0
+        ],
+        [
+          3523.0,
+          -1038.0
+        ],
+        [
+          3567.0,
+          -1065.0
+        ],
+        [
+          3557.0,
+          -1109.0
+        ],
+        [
+          3618.0,
+          -1133.0
+        ],
+        [
+          3613.501064,
+          -1144.434794
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "wadi_hadramawt_masilah",
+      "dimension": "minecraft:overworld",
+      "priority": 77320,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Hadramawt–Masilah Valleys",
+      "polygon": [
+        [
+          3345.575555,
+          -1085.321219
+        ],
+        [
+          3395.625761,
+          -1063.481129
+        ],
+        [
+          3443.895605,
+          -1034.724626
+        ],
+        [
+          3490.261403,
+          -1029.666539
+        ],
+        [
+          3501.400204,
+          -1032.50187
+        ],
+        [
+          3503.036469,
+          -1047.500966
+        ],
+        [
+          3450.104395,
+          -1053.275374
+        ],
+        [
+          3404.374239,
+          -1080.518871
+        ],
+        [
+          3344.424445,
+          -1106.678781
+        ],
+        [
+          3328.217148,
+          -1097.417468
+        ],
+        [
+          3275.263276,
+          -1094.475586
+        ],
+        [
+          3233.111355,
+          -1081.110343
+        ],
+        [
+          3238.888645,
+          -1062.889657
+        ],
+        [
+          3278.736724,
+          -1075.524414
+        ],
+        [
+          3333.782852,
+          -1078.582532
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "qatar_peninsula",
+      "dimension": "minecraft:overworld",
+      "priority": 78350,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Qatar Peninsula",
+      "polygon": [
+        [
+          3496.067797,
+          -1673.762712
+        ],
+        [
+          3523.0,
+          -1693.0
+        ],
+        [
+          3523.0,
+          -1707.0
+        ],
+        [
+          3470.916667,
+          -1707.0
+        ],
+        [
+          3475.0,
+          -1679.0
+        ],
+        [
+          3465.588235,
+          -1688.411765
+        ],
+        [
+          3465.0,
+          -1679.0
+        ],
+        [
+          3492.0,
+          -1673.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "socotra",
+      "dimension": "minecraft:overworld",
+      "priority": 79360,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Socotra",
+      "polygon": [
+        [
+          3673.0,
+          -836.0
+        ],
+        [
+          3721.0,
+          -843.0
+        ],
+        [
+          3727.0,
+          -864.0
+        ],
+        [
+          3693.0,
+          -867.0
+        ],
+        [
+          3666.0,
+          -860.0
+        ],
+        [
+          3639.0,
+          -864.0
+        ],
+        [
+          3635.0,
+          -840.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "masirah",
+      "dimension": "minecraft:overworld",
+      "priority": 79370,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Masirah",
+      "polygon": [
+        [
+          4024.0,
+          -1386.0
+        ],
+        [
+          4028.0,
+          -1410.0
+        ],
+        [
+          4014.0,
+          -1417.0
+        ],
+        [
+          4000.0,
+          -1396.0
+        ],
+        [
+          4007.0,
+          -1376.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "farasan_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 79390,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Farasan Islands",
+      "polygon": [
+        [
+          2867.0,
+          -1126.0
+        ],
+        [
+          2881.0,
+          -1140.0
+        ],
+        [
+          2877.0,
+          -1154.0
+        ],
+        [
+          2857.0,
+          -1154.0
+        ],
+        [
+          2850.0,
+          -1133.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "farasan_islands_arabia1",
+      "dimension": "minecraft:overworld",
+      "priority": 79391,
+      "macro_region": "arabian_peninsula",
+      "display_label": "Farasan Islands",
+      "polygon": [
+        [
+          2860.0,
+          -1154.0
+        ],
+        [
+          2867.0,
+          -1164.0
+        ],
+        [
+          2854.0,
+          -1171.0
+        ],
+        [
+          2840.0,
+          -1167.0
+        ],
+        [
+          2843.0,
+          -1154.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "plain"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

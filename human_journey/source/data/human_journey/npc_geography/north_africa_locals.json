@@ -2,6 +2,216 @@
   "schema_version": 1,
   "local_areas": [
     {
+      "id": "eastern_desert_mountains_east1",
+      "dimension": "minecraft:overworld",
+      "priority": 14301,
+      "macro_region": "north_africa",
+      "display_label": "Eastern Desert Mountains",
+      "polygon": [
+        [
+          2403.0,
+          -1754.0
+        ],
+        [
+          2389.0,
+          -1786.780488
+        ],
+        [
+          2389.0,
+          -1502.0
+        ],
+        [
+          2502.0,
+          -1502.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "egyptian_red_sea_coast_east1",
+      "dimension": "minecraft:overworld",
+      "priority": 15311,
+      "macro_region": "north_africa",
+      "display_label": "Egyptian Red Sea Coast",
+      "polygon": [
+        [
+          2519.0,
+          -1502.0
+        ],
+        [
+          2403.0,
+          -1707.0
+        ],
+        [
+          2389.0,
+          -1736.152941
+        ],
+        [
+          2389.0,
+          -1657.954128
+        ],
+        [
+          2478.0,
+          -1502.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "african_red_sea_coast_arabia1__redsea_1",
+      "dimension": "minecraft:overworld",
+      "priority": 38152,
+      "macro_region": "north_africa",
+      "display_label": "African Red Sea Coast",
+      "polygon": [
+        [
+          2650.317728,
+          -1236.874272
+        ],
+        [
+          2555.110094,
+          -1373.171516
+        ],
+        [
+          2500.838017,
+          -1508.358328
+        ],
+        [
+          2469.161983,
+          -1495.641672
+        ],
+        [
+          2524.889906,
+          -1356.828484
+        ],
+        [
+          2614.181792,
+          -1229.0001
+        ],
+        [
+          2653.102496,
+          -1229.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "red_sea_hills__redsea_1",
+      "dimension": "minecraft:overworld",
+      "priority": 35191,
+      "macro_region": "north_africa",
+      "display_label": "Red Sea Hills",
+      "polygon": [
+        [
+          2567.0,
+          -1399.0
+        ],
+        [
+          2471.0,
+          -1502.0
+        ],
+        [
+          2403.0,
+          -1365.0
+        ],
+        [
+          2408.07733,
+          -1229.0001
+        ],
+        [
+          2644.857097,
+          -1229.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
       "id": "western_saharan_desert",
       "dimension": "minecraft:overworld",
       "priority": 10000,
@@ -2381,6 +2591,156 @@
           "lowland"
         ],
         "special": []
+      }
+    },
+    {
+      "id": "negev_highlands_north2",
+      "dimension": "minecraft:overworld",
+      "priority": 53142,
+      "macro_region": "north_africa",
+      "display_label": "Negev Highlands",
+      "polygon": [
+        [
+          2388.9999,
+          -2028.0
+        ],
+        [
+          2388.9999,
+          -2047.999959
+        ],
+        [
+          2349.67121,
+          -2087.328649
+        ],
+        [
+          2338.0,
+          -2028.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "arava_valley_north2",
+      "dimension": "minecraft:overworld",
+      "priority": 53152,
+      "macro_region": "north_africa",
+      "display_label": "Arava Valley",
+      "polygon": [
+        [
+          2380.876493,
+          -2035.40512
+        ],
+        [
+          2379.822136,
+          -2017.481051
+        ],
+        [
+          2388.9999,
+          -2016.941182
+        ],
+        [
+          2388.9999,
+          -2047.999959
+        ],
+        [
+          2385.554807,
+          -2051.445052
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "sinai_highlands",
+      "dimension": "minecraft:overworld",
+      "priority": 54190,
+      "macro_region": "north_africa",
+      "display_label": "Sinai Highlands",
+      "polygon": [
+        [
+          2369.0,
+          -1894.0
+        ],
+        [
+          2379.0,
+          -2007.0
+        ],
+        [
+          2321.0,
+          -2048.0
+        ],
+        [
+          2253.0,
+          -2014.0
+        ],
+        [
+          2263.0,
+          -1894.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
       }
     }
   ]

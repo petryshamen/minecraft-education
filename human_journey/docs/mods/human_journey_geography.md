@@ -1,5 +1,70 @@
 # Human Journey NPC geography
 
+## Current release — Three Regions & Red Sea, 0.5.3
+
+Installed and reviewed source **Core 0.8.0**, Minecraft 1.21.8 / Forge, geography **schema 1**. Current production has **550 locals / 19 macros / 13 geography resources**. The earlier Europe/Africa sections below describe their original releases; their file layouts and retained African Arabia parents are superseded by this section. No optional macro labels or era labels were added. Core supplies existing live HUD/default macro-label presentation; NPC names still use local prefixes captured at spawn.
+
+The user-approved `HJ_Three_Regions_Red_Sea_v1.zip` is the exact production input: all 366 deployed IDs retained, **184 added**, **12 updated**, **zero removed**. Only `resources/*.json` is deployed. The consolidated payload, baselines, ledgers, scripts and fixtures are review inputs, never additional live resources. Twelve legacy local files were replaced by the twelve grouped files below; only documentation referenced the old filenames, with no code/config migration needed. `global_macros.json` remains the sole macro definition file.
+
+| Local-only file under `data/human_journey/npc_geography/` | Records |
+| --- | ---: |
+| `arabian_peninsula_locals.json` | 43 |
+| `central_asia_locals.json` | 8 |
+| `east_africa_horn_locals.json` | 72 |
+| `eastern_europe_locals.json` | 38 |
+| `mediterranean_europe_locals.json` | 60 |
+| `near_east_caucasus_locals.json` | 73 |
+| `north_africa_locals.json` | 42 |
+| `northern_europe_locals.json` | 38 |
+| `south_asia_locals.json` | 2 |
+| `southern_africa_locals.json` | 58 |
+| `west_central_africa_locals.json` | 55 |
+| `western_central_europe_locals.json` | 61 |
+
+### Red Sea decision and stable-ID migration
+
+Only the polygons of `arabian_peninsula`, `north_africa` and `east_africa_horn` change, using the supplied final X/Z vertices without reconversion. The seam is a simplified educational shore division, not a coastline survey or political/maritime boundary. Recovered old-Arabia coverage north of Z -1229 becomes North Africa and south becomes East Africa & Horn. Priorities remain North 50 / Horn 60 / Arabia 80; macro profiles and the other 16 records are identical. The global covered-area union, prior African areas, Crete notch and earlier western EA gap are preserved by whole-polygon checks.
+
+| Existing ID | New parent / split |
+| --- | --- |
+| `eastern_desert_mountains_east1` | `north_africa` |
+| `egyptian_red_sea_coast_east1` | `north_africa` |
+| `eastern_sudan_plains_arabia1` | `east_africa_horn` |
+| `ethiopian_highlands_arabia1` | `east_africa_horn` |
+| `western_ethiopian_lowlands_arabia1` | `east_africa_horn` |
+| `afar_depression_arabia1` | `east_africa_horn` |
+| `african_red_sea_coast_arabia1` | `east_africa_horn`; added `african_red_sea_coast_arabia1__redsea_1` under `north_africa` |
+| `red_sea_hills` | `east_africa_horn`; added `red_sea_hills__redsea_1` under `north_africa` |
+| `eritrean_highlands` | `east_africa_horn` |
+| `simien_mountains` | `east_africa_horn` |
+| `lake_tana_arabia1` | `east_africa_horn` |
+
+Stable suffixes such as `_arabia1` are retained despite new parents. The small unchanged offshore `gulf_aden_coast_arabia1` remains Arabian; Somali mainland Ras Asir resolves to Horn. Assab/Dahlak/Ras Asir are valid macro-only controls, with no fabricated local. These 11 updated records keep their supplied priority, label and profile; the two split additions preserve the intended precedence.
+
+`greater_caucasus` is the twelfth update, keeping its deployed ID and label while adopting the approved polygon, priority and full profile: cold/cool; humid/moderate; forest/grassland/shrubland/barren; river/inland; mountain; mountain_access (no cave_access). This data describes regional context and does not create terrain/resources. `hujrah_plateau` was never deployed and was omitted by the final authoring payload as fully occluded; **`hujrah_plateau_near1`** represents Hujrah Plateau. The final total is 550, superseding the intermediate 549 proposal. The exact earlier rounding corrections in `eastern_sahara_horn1`, `northern_sahel_horn1` and `upper_nile_plains` are unchanged. There are no deviations from the supplied final production records.
+
+### Core, persistence and validation
+
+Installed test JAR: `human_journey_core-0.8.0.jar`, SHA-256 `cbe47eb6f84f6175d8757fe4e120b3758e9626402ddd3b2ed092b168f08aff08`; this matches the reviewed published engine. Schema blob `7ec47465bca618745658047967e681eab13ce870` and [Core geography contract](https://github.com/petryshamen/minecraft-education/blob/25c03fd0c6eba0846f4687642792b993e07d7a54/human_journey_core/GEOGRAPHY.md) blob `a51f69c2cce93fd8bcda01a7062804e8f0b4f00a` were verified. Geography keeps the exact existing resolver/complete-profile contract. HUD/shared discovery are existing Core 0.8.0 features, not implemented by this datapack; matching Core is needed on server/clients.
+
+Participant HUD requires `hj_participant`. Movement discovers only for participant + student + **not teacher**; teacher exclusion wins conflicting tags. Discovery remains one shared Overworld `human_journey_geography` SavedData ledger of stable IDs. No NPC/player/ledger data is rewritten or reset. Historical discoveries, including an old Arabia discovery, remain legitimate history after reparenting. Existing NPC snapshots stay unchanged; newly spawned NPCs use the current context. The normal accepted reload lets Core re-evaluate live HUD context. Era resolver, roles, economy catalog/families/values, water/temperature/fishing, progression/WE CAN STAY/Agriculture, skins/dialogues/commands and datapack filters are unchanged.
+
+The reviewed supplied `validate.py` ran unchanged with Python UTF-8 mode, jsonschema and GEOS C (Windows DLL lookup adapted by a scratch wrapper only). Result: **870 fixtures** (550 reachability + 302 regressions + 18 shore/island controls), **29,088 local boundary samples**, schema/vocabulary/whole-polygon containment, unique IDs/priorities, resource equivalence, retained IDs/profiles and macro coverage checks passed. Separately, unchanged current first-party Core 0.8.0 pure parsers/resolver prepared/accepted the final production resources offline: all 870 fixtures, **29,892 local+macro edge/both-side samples**, **8,550 composed NPC variants**, 50 commodities/four families/three Era-0-only roles. No installed mod JAR was executed and Core was not rebuilt or modified. Generic datapack validation additionally guards source references and progression-sensitive IDs. These are offline checks, not in-game reload or gameplay claims.
+
+### Saved terrain evidence and limits
+
+Read-only Earth 1500 block sections were available at all **320 named regression/shore controls**. Stored block states were decoded even when heightmaps were absent; no chunks were generated or terrain changed. Thirty-eight new island/coastal/wadi/Madagascar envelopes were sampled (16-block lattice for broad/narrow mainland contexts). Full column-center scans confirmed land in every new small-island envelope: Cyprus 3,963 columns; Socotra 1,240; Masirah 212; Bahrain 224; Farasan main 132 and technical fragment 35. A finer check of the small northern Madagascar dry-forest fragment found five land and nine water columns, avoiding a false absence from coarse sampling. Data was retained exactly; no island was dropped or moved.
+
+Surface blocks are sampled physical evidence, not complete hydrology, navigability, seasonal flow or 100% land coverage. Wadi/valley/coastal contexts may include dry land or water. The configured test save differs from Earth 1500 at 12 sampled controls; the existing test-world versus reference-world limitation remains. No world was copied or repaired. Manual terrain/HUD/NPC checks should use safe elevations and account for that difference.
+
+### Manual acceptance still required
+
+`/reload`, `/hj npc status`, `/hj npc context`, `/hj geography status`; inspect actual loaded errors/HUD. X/Z only, choose a safe Y: Port Sudan **2541,-1339** → North Africa / African Red Sea Coast; Massawa **2693,-1066** → Horn / African Red Sea Coast; Assab **2918,-888** → Horn / no local; Jeddah **2674,-1470** → Arabian / Northern Arabian Red Sea Coast; Farasan **2860,-1140** and Socotra **3686,-853** → Arabian island locals. Test both sides and fractional Red Sea/North-Horn seams; also Cape/Namib/Kalahari/Drakensberg, Anatolia/Levant/Caucasus/Zagros, Najd/Rub al Khali/Hajar/Dhofar and London/Kyiv/Crete/Upper Nile regressions.
+
+Spawn new H/F/G NPCs for current labels/profiles. Use an eligible participant-student for first discovery and participant-teacher for exclusion; both may see HUD. Already-discovered areas may not announce again. Do **not** reset shared discovery or refresh old NPCs merely to force a test. Gameplay/reload/HUD appearance and world-save behavior were not tested by this release.
+
+---
+
 ## Earth map calibration
 
 The user experimentally calibrated this Earth map against London, Quito, Singapore, New York, Kyiv, Baku, Mogadishu, Cape Town, Buenos Aires, Tokyo, Sydney, Honolulu, Reykjavík, Anchorage, Ushuaia, Oslo and Mexico City. Generate future locations from real longitude/latitude (decimal degrees; east/north positive):
@@ -18,7 +83,7 @@ The supplied decimal approximation is **68.2666667 blocks per degree**; prefer t
 
 ## Europe Coverage v2 — datapack 0.5.1
 
-Installed engine: **Human Journey Core 0.7.1**, unchanged geography schema 1. Resources remain `data/human_journey/npc_geography/*.json`; only `global_macros.json` defines the 19 macros. Six local-only files use the existing `id`, Overworld `dimension`, unique `priority`, `macro_region`, `display_label`, simple `polygon`, and complete six-array `profile`. No era labels, skins, dialogue or trade patches are added. Highest numeric priority wins; missing locals are valid. Core prefixes new NPCs with the local label only, never the macro name.
+Engine at the Europe v2 release: **Human Journey Core 0.7.1**, unchanged geography schema 1. Resources remain `data/human_journey/npc_geography/*.json`; only `global_macros.json` defines the 19 macros. Six local-only files use the existing `id`, Overworld `dimension`, unique `priority`, `macro_region`, `display_label`, simple `polygon`, and complete six-array `profile`. No era labels, skins, dialogue or trade patches are added. Highest numeric priority wins; missing locals are valid. Core prefixes new NPCs with the local label only, never the macro name.
 
 The task supplied 165 proposals, not a required record count. Merging 17 same-feature stitch proposals and retaining the distinct legacy Pripyat Marshes/Azov Coast gives **150 physical areas**, represented by **198 runtime locals** after all-global-macro clipping and removal of fully hidden/marine fragments. All **55 previous technical IDs** remain; 143 IDs are new. Northern Europe’s approved 27 features are all present, including southern fragments under neighboring macros. JSON resources are the authoritative complete ID/label/parent/profile inventory.
 
@@ -99,7 +164,7 @@ Europe Local Areas v1 shipped 55 IDs under Core 0.6.1’s former 64-local limit.
 
 Future local layers outside Europe, macro boundary redesign (e.g. Anatolia/Caucasus), regional skins/trades and era-sensitive labels remain separate work. No African/Asian geography expansion is implied by the minimum cross-boundary physical fragments. The existing [economy policy](human_journey_economy.md) and Core mechanics remain authoritative.
 
-## Africa Coverage v1 — datapack 0.5.2
+## Historical Africa Coverage v1 — datapack 0.5.2
 
 Added the accepted **168-record consolidated** North Africa / West & Central Africa / East Africa & Horn payload. Earlier 45-/94-record proposals are not loaded alongside it. All 198 European locals remain byte-for-byte unchanged. Runtime totals: **366 locals, 19 macros, 13 geography resources, 5,790 composed variants**, within unchanged Core 0.7.1 limits. There are no new skins, dialogue, trade overrides, commodity/family rules or progression writes; existing family rules/defaults remain valid. New NPCs capture local label/profile at spawn; existing NPC snapshots are not refreshed.
 

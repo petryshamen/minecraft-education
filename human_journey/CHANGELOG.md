@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.3
+
+- Integrated the exact approved Southern Africa, Near East/Caucasus and Arabian datasets: 550 locals, 184 additions, 12 existing-record updates, no deployed IDs removed. Regrouped 12 local-only files without duplicate snapshots; Greater Caucasus is refined under its stable ID and Hujrah remains `hujrah_plateau_near1`.
+- Corrected only North Africa/Horn/Arabia macro polygons and 11 existing Red Sea records, including two new north-side split fragments. All macro priorities/profiles, 16 other macros, global coverage, Crete notch and prior Upper Nile gap remain protected. Existing NPC/discovery state, economy and unrelated gameplay are untouched.
+- Verified installed/source Core 0.8.0 and exact schema 1. Supplied checks: 870 fixtures/29,088 local boundary samples; first-party offline checks: 29,892 local+macro boundary samples/8,550 compositions. Read stored Earth terrain at 320 control positions and island/coast/wadi envelopes; all new small islands are represented. No gameplay testing or Core changes.
+
 ## 0.5.2
 
 - Africa Coverage v1: added 168 supplied complete-profile local records for North, West/Central and East Africa/Horn, including neighboring-macro fragments. Extended only the East Africa/Horn polygon to cover the approved 36,311-block² wedge; all 198 European locals and Crete’s macro notch remain unchanged.

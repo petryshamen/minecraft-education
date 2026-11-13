@@ -3467,6 +3467,232 @@
         ],
         "special": []
       }
+    },
+    {
+      "id": "angolan_plateau_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 22501,
+      "macro_region": "west_central_africa",
+      "display_label": "Angolan Plateau",
+      "polygon": [
+        [
+          1502.0,
+          614.0
+        ],
+        [
+          887.0,
+          614.0
+        ],
+        [
+          898.612178,
+          682.9999
+        ],
+        [
+          1536.373577,
+          682.9999
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "angolan_coastal_plain_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 38611,
+      "macro_region": "west_central_africa",
+      "display_label": "Angolan Coastal Plain",
+      "polygon": [
+        [
+          908.26112,
+          682.9999
+        ],
+        [
+          951.704326,
+          682.9999
+        ],
+        [
+          920.628776,
+          595.078831
+        ],
+        [
+          872.862386,
+          405.008406
+        ],
+        [
+          833.137614,
+          414.991594
+        ],
+        [
+          881.371224,
+          606.921169
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "cuanza_valley_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 39656,
+      "macro_region": "west_central_africa",
+      "display_label": "Cuanza / Kwanza Valley",
+      "polygon": [
+        [
+          1117.226291,
+          631.901233
+        ],
+        [
+          1073.590155,
+          617.001089
+        ],
+        [
+          904.542565,
+          624.086916
+        ],
+        [
+          905.457435,
+          645.913084
+        ],
+        [
+          1070.409845,
+          638.998911
+        ],
+        [
+          1108.773709,
+          652.098767
+        ],
+        [
+          1170.575975,
+          682.9999
+        ],
+        [
+          1206.032624,
+          682.9999
+        ],
+        [
+          1205.007187,
+          675.791681
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lake_mweru",
+      "dimension": "minecraft:overworld",
+      "priority": 41045,
+      "macro_region": "west_central_africa",
+      "display_label": "Lake Mweru",
+      "polygon": [
+        [
+          1966.0,
+          655.0
+        ],
+        [
+          1993.0,
+          594.0
+        ],
+        [
+          1973.0,
+          573.0
+        ],
+        [
+          1946.0,
+          587.0
+        ],
+        [
+          1932.0,
+          649.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "valley"
+        ],
+        "special": []
+      }
     }
   ]
 }

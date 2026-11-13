@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "iranian_plateau_south_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 50091,
+      "macro_region": "south_asia",
+      "display_label": "Iranian Plateau",
+      "polygon": [
+        [
+          4403.0,
+          -1980.0
+        ],
+        [
+          4403.0,
+          -2321.0
+        ],
+        [
+          4182.145078,
+          -1879.290155
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "western_makran_coast_south_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 56361,
+      "macro_region": "south_asia",
+      "display_label": "Western Makran Coast",
+      "polygon": [
+        [
+          4135.454817,
+          -1712.058836
+        ],
+        [
+          4252.588175,
+          -1701.961132
+        ],
+        [
+          4349.469104,
+          -1704.988661
+        ],
+        [
+          4348.530896,
+          -1735.011339
+        ],
+        [
+          4253.411825,
+          -1732.038868
+        ],
+        [
+          4138.545183,
+          -1741.941164
+        ],
+        [
+          4114.897592,
+          -1744.795184
+        ],
+        [
+          4100.630863,
+          -1716.261726
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    }
+  ]
+}
