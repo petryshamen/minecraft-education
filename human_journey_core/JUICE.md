@@ -1,5 +1,7 @@
 # Juice canteens and healing — Core 0.9.0
 
+**Core 0.9.0 build verified:** [GitHub Actions run 43347893280](https://github.com/petryshamen/minecraft-education/actions/runs/43347893280), source `76967a2c2f77805a9cf9c9a7ab51224ee0dc5c39`. All 221 tests passed (179 existing + 42 new), zero failures; all ten no-world Forge checks passed. Native checks cover six TAN canteen tiers, seven native JuiceItem registrations, dynamic recipe JSON/network codecs, item NBT/component persistence and depletion. Tests execute TAN's real thirst/hydration/effect handler on mocked player dependencies; no gameplay world/player was constructed. 183 existing classes are byte-identical to Core 0.8.1, including NPC/economy, geography/discovery/HUD, fishing, temperature and unmodified water mechanics. Five existing class files change only for bootstrap and marked-juice guards, including WaterContainers' generated switch helper. Runtime SHA-256: `6135de5fdaaf75624ab045dba7263a331790359eb80e42c60f08b0019e39b721`. No automatic installation or live-server/main-datapack modification.
+
 ## Target and installation
 
 Minecraft Java 1.21.8 / Java 21 / Forge 58.1.18 / Tough As Nails 21.8.0.2. Base is Core 0.8.1, retaining approved HUD defaults. Install `human_journey_core-0.9.0.jar` manually on server and clients, replacing the prior Core JAR. Existing dependency stack remains unchanged. No Minecraft gameplay testing, automatic installation, live-server change or main-datapack deployment is performed.
