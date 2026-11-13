@@ -1,0 +1,18 @@
+package org.humanjourney.core.juice;
+import java.util.*;
+import net.minecraft.core.*;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.inventory.CraftingContainer;
+/** Immutable per-craft unit budget. Occupied cells do not determine price. */
+public final class JuiceCrafting {
+ public record Plan(JuiceDefinition definition,int carrier,List<Integer> units,ItemStack output){public Plan{units=List.copyOf(units);output=output.copy();}}
+ public record Remainders(NonNullList<ItemStack> grid,List<ItemStack> overflow){public Remainders{overflow=List.copyOf(overflow);}}
+ public static Plan plan(CraftingInput input,boolean bottle){var catalog=JuiceStore.state().catalog();int carrier=-1;JuiceDefinition d=null;long available=0;for(int i=0;i<input.size();i++){var s=input.getItem(i);if(s.isEmpty())continue;if(bottle?JuiceBottles.purified(s):JuiceContainers.fullPurified(s)){if(carrier>=0)return null;carrier=i;}else{if(JuiceState.marked(s))return null;var candidate=catalog.ingredients().get(BuiltInRegistries.ITEM.getKey(s.getItem()).toString());if(candidate==null||d!=null&&!d.id().equals(candidate.id()))return null;d=candidate;available+=s.getCount();}}if(carrier<0||d==null)return null;int needed=bottle?d.bottleIngredientCount():d.canteenIngredientCount();if(needed<1||needed>64||available<needed)return null;var units=new ArrayList<Integer>(Collections.nCopies(input.size(),0));units.set(carrier,1);for(int i=0;i<input.size()&&needed>0;i++)if(i!=carrier&&!input.getItem(i).isEmpty()){int n=Math.min(needed,input.getItem(i).getCount());units.set(i,n);needed-=n;}var output=bottle?JuiceBottles.create(input.getItem(carrier),d):JuiceContainers.create(input.getItem(carrier),d);return output.isEmpty()?null:new Plan(d,carrier,units,output);}
+ /** Called by the exact native ResultSlot removeItem redirect; native loop may visit unused matching cells. */
+ public static ItemStack remove(CraftingContainer input,Plan plan,int index,int vanillaAmount){int n=plan==null?vanillaAmount:plan.units().get(index);if(n<0||input.getItem(index).getCount()<n)throw new IllegalStateException("Juice crafting inputs changed during consumption");return input.removeItem(index,n);}
+ public static Remainders remainders(CraftingInput input,Plan plan){var grid=NonNullList.withSize(input.size(),ItemStack.EMPTY);var overflow=new ArrayList<ItemStack>();if(plan==null)return new Remainders(grid,overflow);for(int i=0;i<input.size();i++){int n=plan.units().get(i);if(i==plan.carrier()||n==0)continue;var source=input.getItem(i);var remainder=source.copyWithCount(1).getCraftingRemainder();if(remainder.isEmpty())continue;int total=Math.multiplyExact(remainder.getCount(),n);int limit=remainder.getMaxStackSize();int remaining=source.getCount()-n;if(remaining>0&&ItemStack.isSameItemSameComponents(source,remainder))limit=Math.max(0,limit-remaining);int here=Math.min(limit,total);if(here>0)grid.set(i,remainder.copyWithCount(here));total-=here;while(total>0){int count=Math.min(remainder.getMaxStackSize(),total);overflow.add(remainder.copyWithCount(count));total-=count;}}return new Remainders(grid,overflow);}
+ public static NonNullList<ItemStack> project(NonNullList<ItemStack> full,int fullWidth,CraftingInput.Positioned positioned){var input=positioned.input();var result=NonNullList.withSize(input.size(),ItemStack.EMPTY);for(int y=0;y<input.height();y++)for(int x=0;x<input.width();x++)result.set(y*input.width()+x,full.get((y+positioned.top())*fullWidth+x+positioned.left()));return result;}
+ private JuiceCrafting(){}
+}

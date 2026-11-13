@@ -7,7 +7,8 @@
     "JuiceCanteenMixin",
     "BottleJuiceMixin",
     "JuiceNameMixin",
-    "JuiceCraftGuardMixin"
+    "JuiceCraftGuardMixin",
+    "JuiceResultSlotMixin"
   ],
   "injectors": {
     "defaultRequire": 1
