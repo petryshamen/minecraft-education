@@ -411,6 +411,4071 @@
         ],
         "special": []
       }
+    },
+    {
+      "id": "iranian_plateau__ca1",
+      "dimension": "minecraft:overworld",
+      "priority": 50092,
+      "macro_region": "central_asia",
+      "display_label": "Iranian Plateau",
+      "polygon": [
+        [
+          4403.0,
+          -2458.0
+        ],
+        [
+          4090.742958,
+          -2494.609446
+        ],
+        [
+          4096.000038,
+          -2492.000093
+        ],
+        [
+          4198.000032,
+          -2458.000095
+        ],
+        [
+          4198.000056,
+          -2458.000083
+        ],
+        [
+          4301.00003,
+          -2389.0001
+        ],
+        [
+          4403.0,
+          -2389.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kopet_dag__ca1",
+      "dimension": "minecraft:overworld",
+      "priority": 54221,
+      "macro_region": "central_asia",
+      "display_label": "Kopet Dag",
+      "polygon": [
+        [
+          4185.0,
+          -2533.0
+        ],
+        [
+          4076.0,
+          -2621.0
+        ],
+        [
+          3857.0,
+          -2642.0
+        ],
+        [
+          3799.117768,
+          -2594.0001
+        ],
+        [
+          3823.0,
+          -2594.0001
+        ],
+        [
+          3823.000024,
+          -2594.000097
+        ],
+        [
+          3959.000024,
+          -2560.000097
+        ],
+        [
+          3959.000044,
+          -2560.00009
+        ],
+        [
+          4096.000038,
+          -2492.000093
+        ],
+        [
+          4116.389193,
+          -2485.203708
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "western_kazakhstan_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 800,
+      "macro_region": "central_asia",
+      "display_label": "Western Kazakhstan Plains",
+      "polygon": [
+        [
+          4233.0,
+          -3277.0
+        ],
+        [
+          4164.0,
+          -3482.0
+        ],
+        [
+          3618.0,
+          -3550.0
+        ],
+        [
+          3277.0,
+          -3413.0
+        ],
+        [
+          3277.0,
+          -3072.0001
+        ],
+        [
+          3413.0,
+          -3072.0001
+        ],
+        [
+          3413.000062,
+          -3072.000079
+        ],
+        [
+          3413.000097,
+          -3072.000024
+        ],
+        [
+          3413.000103,
+          -3072.0
+        ],
+        [
+          3959.0,
+          -3072.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_kazakh_steppe",
+      "dimension": "minecraft:overworld",
+      "priority": 802,
+      "macro_region": "central_asia",
+      "display_label": "Northern Kazakh Steppe",
+      "polygon": [
+        [
+          5120.0,
+          -3345.0
+        ],
+        [
+          5598.0,
+          -3482.0
+        ],
+        [
+          5734.0,
+          -3686.0
+        ],
+        [
+          5598.0,
+          -3755.0
+        ],
+        [
+          3959.0,
+          -3755.0
+        ],
+        [
+          3550.0,
+          -3686.0
+        ],
+        [
+          3482.0,
+          -3413.0
+        ],
+        [
+          4233.0,
+          -3311.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "southern_siberian_forest_steppe",
+      "dimension": "minecraft:overworld",
+      "priority": 110040,
+      "macro_region": "central_asia",
+      "display_label": "Southern Siberian Forest-Steppe",
+      "polygon": [
+        [
+          5803.0,
+          -3550.0
+        ],
+        [
+          5939.0,
+          -3686.0
+        ],
+        [
+          5871.0,
+          -3755.0
+        ],
+        [
+          4437.0,
+          -3755.0
+        ],
+        [
+          4437.0,
+          -3618.0
+        ],
+        [
+          5325.0,
+          -3550.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "turan_lowland",
+      "dimension": "minecraft:overworld",
+      "priority": 806,
+      "macro_region": "central_asia",
+      "display_label": "Turan Lowland",
+      "polygon": [
+        [
+          3857.0,
+          -2642.0
+        ],
+        [
+          4076.0,
+          -2621.0
+        ],
+        [
+          4185.0,
+          -2533.0
+        ],
+        [
+          4116.389193,
+          -2485.203708
+        ],
+        [
+          4198.000032,
+          -2458.000095
+        ],
+        [
+          4198.000056,
+          -2458.000083
+        ],
+        [
+          4202.87776,
+          -2454.732495
+        ],
+        [
+          4574.0,
+          -2492.0
+        ],
+        [
+          4847.0,
+          -2697.0
+        ],
+        [
+          4779.0,
+          -2970.0
+        ],
+        [
+          4506.0,
+          -3209.0
+        ],
+        [
+          3823.0,
+          -3209.0
+        ],
+        [
+          3550.0,
+          -2935.0
+        ],
+        [
+          3610.469031,
+          -2631.765596
+        ],
+        [
+          3686.000024,
+          -2594.0001
+        ],
+        [
+          3799.117768,
+          -2594.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "saryarka_uplands",
+      "dimension": "minecraft:overworld",
+      "priority": 120080,
+      "macro_region": "central_asia",
+      "display_label": "Saryarka Uplands",
+      "polygon": [
+        [
+          5257.0,
+          -3277.0
+        ],
+        [
+          5427.0,
+          -3447.0
+        ],
+        [
+          5257.0,
+          -3618.0
+        ],
+        [
+          4710.0,
+          -3686.0
+        ],
+        [
+          4437.0,
+          -3550.0
+        ],
+        [
+          4369.0,
+          -3243.0
+        ],
+        [
+          4779.0,
+          -3195.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "turgai_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 120100,
+      "macro_region": "central_asia",
+      "display_label": "Turgai Plateau",
+      "polygon": [
+        [
+          4540.0,
+          -3482.0
+        ],
+        [
+          4369.0,
+          -3721.0
+        ],
+        [
+          4164.0,
+          -3721.0
+        ],
+        [
+          4130.0,
+          -3482.0
+        ],
+        [
+          4164.0,
+          -3243.0
+        ],
+        [
+          4437.0,
+          -3209.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "mugodzhar_hills",
+      "dimension": "minecraft:overworld",
+      "priority": 130120,
+      "macro_region": "central_asia",
+      "display_label": "Mugodzhar Hills",
+      "polygon": [
+        [
+          4062.0,
+          -3243.0
+        ],
+        [
+          4096.0,
+          -3447.0
+        ],
+        [
+          3959.0,
+          -3495.0
+        ],
+        [
+          3878.0,
+          -3379.0
+        ],
+        [
+          3891.0,
+          -3209.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "mangystau_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 120140,
+      "macro_region": "central_asia",
+      "display_label": "Mangystau Plateau",
+      "polygon": [
+        [
+          3755.0,
+          -2867.0
+        ],
+        [
+          3755.0,
+          -3106.0
+        ],
+        [
+          3550.0,
+          -3140.0
+        ],
+        [
+          3413.000085,
+          -3072.000042
+        ],
+        [
+          3413.000097,
+          -3072.000024
+        ],
+        [
+          3447.000097,
+          -2935.000025
+        ],
+        [
+          3451.979198,
+          -2915.652661
+        ],
+        [
+          3550.0,
+          -2867.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ustyurt_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 120160,
+      "macro_region": "central_asia",
+      "display_label": "Ustyurt Plateau",
+      "polygon": [
+        [
+          4007.0,
+          -2867.0
+        ],
+        [
+          3980.0,
+          -3127.0
+        ],
+        [
+          3755.0,
+          -3140.0
+        ],
+        [
+          3686.0,
+          -3004.0
+        ],
+        [
+          3707.0,
+          -2799.0
+        ],
+        [
+          3857.0,
+          -2765.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "karakum_desert",
+      "dimension": "minecraft:overworld",
+      "priority": 120180,
+      "macro_region": "central_asia",
+      "display_label": "Karakum Desert",
+      "polygon": [
+        [
+          3857.0,
+          -2642.0
+        ],
+        [
+          4076.0,
+          -2621.0
+        ],
+        [
+          4185.0,
+          -2533.0
+        ],
+        [
+          4156.392107,
+          -2513.070906
+        ],
+        [
+          4164.0,
+          -2512.0
+        ],
+        [
+          4369.0,
+          -2628.0
+        ],
+        [
+          4233.0,
+          -2833.0
+        ],
+        [
+          4028.0,
+          -2935.0
+        ],
+        [
+          3755.0,
+          -2867.0
+        ],
+        [
+          3618.0,
+          -2662.0
+        ],
+        [
+          3754.666466,
+          -2594.0001
+        ],
+        [
+          3799.117768,
+          -2594.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kyzylkum_desert",
+      "dimension": "minecraft:overworld",
+      "priority": 120200,
+      "macro_region": "central_asia",
+      "display_label": "Kyzylkum Desert",
+      "polygon": [
+        [
+          4608.0,
+          -2765.0
+        ],
+        [
+          4642.0,
+          -2935.0
+        ],
+        [
+          4369.0,
+          -3106.0
+        ],
+        [
+          4096.0,
+          -3072.0
+        ],
+        [
+          4096.0,
+          -2799.0
+        ],
+        [
+          4369.0,
+          -2717.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "betpak_dala",
+      "dimension": "minecraft:overworld",
+      "priority": 120220,
+      "macro_region": "central_asia",
+      "display_label": "Betpak-Dala",
+      "polygon": [
+        [
+          5120.0,
+          -3072.0
+        ],
+        [
+          5120.0,
+          -3243.0
+        ],
+        [
+          4779.0,
+          -3277.0
+        ],
+        [
+          4506.0,
+          -3209.0
+        ],
+        [
+          4437.0,
+          -3004.0
+        ],
+        [
+          4710.0,
+          -3004.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "moyynkum_desert",
+      "dimension": "minecraft:overworld",
+      "priority": 130240,
+      "macro_region": "central_asia",
+      "display_label": "Moyynkum Desert",
+      "polygon": [
+        [
+          4847.0,
+          -2908.0
+        ],
+        [
+          5154.0,
+          -3004.0
+        ],
+        [
+          5120.0,
+          -3106.0
+        ],
+        [
+          4779.0,
+          -3038.0
+        ],
+        [
+          4608.0,
+          -2935.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "saryesik_atyrau_sands",
+      "dimension": "minecraft:overworld",
+      "priority": 130260,
+      "macro_region": "central_asia",
+      "display_label": "Saryesik-Atyrau Sands",
+      "polygon": [
+        [
+          5393.0,
+          -3004.0
+        ],
+        [
+          5427.0,
+          -3140.0
+        ],
+        [
+          5257.0,
+          -3161.0
+        ],
+        [
+          5120.0,
+          -3106.0
+        ],
+        [
+          5120.0,
+          -3004.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "aral_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 140280,
+      "macro_region": "central_asia",
+      "display_label": "Aral Basin",
+      "polygon": [
+        [
+          4164.0,
+          -2970.0
+        ],
+        [
+          4233.0,
+          -3072.0
+        ],
+        [
+          4219.0,
+          -3209.0
+        ],
+        [
+          4028.0,
+          -3209.0
+        ],
+        [
+          3946.0,
+          -3106.0
+        ],
+        [
+          3959.0,
+          -2970.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "balkhash_shores",
+      "dimension": "minecraft:overworld",
+      "priority": 150300,
+      "macro_region": "central_asia",
+      "display_label": "Lake Balkhash Shores",
+      "polygon": [
+        [
+          5086.0,
+          -3052.0
+        ],
+        [
+          5188.0,
+          -3092.0
+        ],
+        [
+          5379.0,
+          -3127.0
+        ],
+        [
+          5427.0,
+          -3181.0
+        ],
+        [
+          5291.0,
+          -3215.0
+        ],
+        [
+          5140.0,
+          -3202.0
+        ],
+        [
+          5018.0,
+          -3168.0
+        ],
+        [
+          4997.0,
+          -3079.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "alakol_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 140320,
+      "macro_region": "central_asia",
+      "display_label": "Alakol Basin",
+      "polygon": [
+        [
+          5632.0,
+          -3052.0
+        ],
+        [
+          5700.0,
+          -3174.0
+        ],
+        [
+          5598.0,
+          -3229.0
+        ],
+        [
+          5461.0,
+          -3188.0
+        ],
+        [
+          5461.0,
+          -3072.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "saryarka_lakes_wetlands",
+      "dimension": "minecraft:overworld",
+      "priority": 150340,
+      "macro_region": "central_asia",
+      "display_label": "Saryarka Lakes and Wetlands",
+      "polygon": [
+        [
+          4792.0,
+          -3400.0
+        ],
+        [
+          4813.0,
+          -3495.0
+        ],
+        [
+          4676.0,
+          -3516.0
+        ],
+        [
+          4622.0,
+          -3454.0
+        ],
+        [
+          4642.0,
+          -3400.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "saryarka_lakes_wetlands__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 150341,
+      "macro_region": "central_asia",
+      "display_label": "Saryarka Lakes and Wetlands",
+      "polygon": [
+        [
+          4437.0,
+          -3461.0
+        ],
+        [
+          4437.0,
+          -3557.0
+        ],
+        [
+          4328.0,
+          -3557.0
+        ],
+        [
+          4328.0,
+          -3461.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "zhetysu_alatau",
+      "dimension": "minecraft:overworld",
+      "priority": 130360,
+      "macro_region": "central_asia",
+      "display_label": "Zhetysu Alatau",
+      "polygon": [
+        [
+          5461.0,
+          -2970.0
+        ],
+        [
+          5639.0,
+          -3086.0
+        ],
+        [
+          5584.0,
+          -3174.0
+        ],
+        [
+          5393.0,
+          -3120.0
+        ],
+        [
+          5291.0,
+          -2970.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "tarbagatai_range",
+      "dimension": "minecraft:overworld",
+      "priority": 130380,
+      "macro_region": "central_asia",
+      "display_label": "Tarbagatai Range",
+      "polygon": [
+        [
+          5598.0,
+          -3168.0
+        ],
+        [
+          5837.0,
+          -3195.0
+        ],
+        [
+          5837.0,
+          -3277.0
+        ],
+        [
+          5598.0,
+          -3311.0
+        ],
+        [
+          5393.0,
+          -3277.0
+        ],
+        [
+          5393.0,
+          -3195.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "altai_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 130400,
+      "macro_region": "central_asia",
+      "display_label": "Altai Mountains",
+      "polygon": [
+        [
+          5803.0,
+          -3209.0
+        ],
+        [
+          6076.0,
+          -3229.0
+        ],
+        [
+          6349.0,
+          -3345.0
+        ],
+        [
+          6212.0,
+          -3516.0
+        ],
+        [
+          5973.0,
+          -3632.0
+        ],
+        [
+          5769.0,
+          -3584.0
+        ],
+        [
+          5598.0,
+          -3447.0
+        ],
+        [
+          5598.0,
+          -3277.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "western_tian_shan",
+      "dimension": "minecraft:overworld",
+      "priority": 130420,
+      "macro_region": "central_asia",
+      "display_label": "Western Tian Shan",
+      "polygon": [
+        [
+          4813.0,
+          -2697.0
+        ],
+        [
+          5052.0,
+          -2799.0
+        ],
+        [
+          5052.0,
+          -2956.0
+        ],
+        [
+          4847.0,
+          -2970.0
+        ],
+        [
+          4642.0,
+          -2867.0
+        ],
+        [
+          4642.0,
+          -2731.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "central_tian_shan",
+      "dimension": "minecraft:overworld",
+      "priority": 130440,
+      "macro_region": "central_asia",
+      "display_label": "Central Tian Shan",
+      "polygon": [
+        [
+          5257.0,
+          -2765.0
+        ],
+        [
+          5564.0,
+          -2833.0
+        ],
+        [
+          5530.0,
+          -3004.0
+        ],
+        [
+          5257.0,
+          -3004.0
+        ],
+        [
+          4983.0,
+          -2935.0
+        ],
+        [
+          4983.0,
+          -2765.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "eastern_tian_shan",
+      "dimension": "minecraft:overworld",
+      "priority": 130460,
+      "macro_region": "central_asia",
+      "display_label": "Eastern Tian Shan",
+      "polygon": [
+        [
+          5734.0,
+          -2833.0
+        ],
+        [
+          6076.0,
+          -2915.0
+        ],
+        [
+          6484.9999,
+          -2867.000012
+        ],
+        [
+          6484.9999,
+          -2983.719318
+        ],
+        [
+          6212.0,
+          -3038.0
+        ],
+        [
+          5803.0,
+          -3038.0
+        ],
+        [
+          5461.0,
+          -2983.0
+        ],
+        [
+          5461.0,
+          -2799.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "fergana_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 150480,
+      "macro_region": "central_asia",
+      "display_label": "Fergana Valley",
+      "polygon": [
+        [
+          4847.0,
+          -2724.0
+        ],
+        [
+          5024.0,
+          -2758.0
+        ],
+        [
+          5004.0,
+          -2813.0
+        ],
+        [
+          4847.0,
+          -2840.0
+        ],
+        [
+          4724.0,
+          -2806.0
+        ],
+        [
+          4717.0,
+          -2737.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "issyk_kul_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 160500,
+      "macro_region": "central_asia",
+      "display_label": "Issyk-Kul Basin",
+      "polygon": [
+        [
+          5345.0,
+          -2867.0
+        ],
+        [
+          5393.0,
+          -2901.0
+        ],
+        [
+          5352.0,
+          -2935.0
+        ],
+        [
+          5188.0,
+          -2935.0
+        ],
+        [
+          5147.0,
+          -2908.0
+        ],
+        [
+          5175.0,
+          -2867.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "valley",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "chu_talas_valleys",
+      "dimension": "minecraft:overworld",
+      "priority": 150520,
+      "macro_region": "central_asia",
+      "display_label": "Chu–Talas Valleys",
+      "polygon": [
+        [
+          5175.0,
+          -2895.0
+        ],
+        [
+          5175.0,
+          -2970.0
+        ],
+        [
+          5024.0,
+          -2976.0
+        ],
+        [
+          4915.0,
+          -2942.0
+        ],
+        [
+          4915.0,
+          -2888.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "chu_talas_valleys__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 150521,
+      "macro_region": "central_asia",
+      "display_label": "Chu–Talas Valleys",
+      "polygon": [
+        [
+          4949.0,
+          -2867.0
+        ],
+        [
+          4983.0,
+          -2915.0
+        ],
+        [
+          4902.0,
+          -2942.0
+        ],
+        [
+          4799.0,
+          -2922.0
+        ],
+        [
+          4820.0,
+          -2874.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ili_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 150540,
+      "macro_region": "central_asia",
+      "display_label": "Ili Valley",
+      "polygon": [
+        [
+          5325.0,
+          -2942.0
+        ],
+        [
+          5530.0,
+          -2963.0
+        ],
+        [
+          5687.0,
+          -2935.0
+        ],
+        [
+          5700.0,
+          -3011.0
+        ],
+        [
+          5530.0,
+          -3052.0
+        ],
+        [
+          5338.0,
+          -3017.0
+        ],
+        [
+          5188.0,
+          -3045.0
+        ],
+        [
+          5140.0,
+          -2949.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "pamir_alai",
+      "dimension": "minecraft:overworld",
+      "priority": 130560,
+      "macro_region": "central_asia",
+      "display_label": "Pamir-Alai",
+      "polygon": [
+        [
+          4779.0,
+          -2594.0
+        ],
+        [
+          5052.0,
+          -2649.0
+        ],
+        [
+          5052.0,
+          -2744.0
+        ],
+        [
+          4881.0,
+          -2778.0
+        ],
+        [
+          4642.0,
+          -2724.0
+        ],
+        [
+          4506.0,
+          -2697.0
+        ],
+        [
+          4540.0,
+          -2608.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "western_pamir",
+      "dimension": "minecraft:overworld",
+      "priority": 140580,
+      "macro_region": "central_asia",
+      "display_label": "Western Pamir",
+      "polygon": [
+        [
+          4949.0,
+          -2492.0
+        ],
+        [
+          5011.0,
+          -2628.0
+        ],
+        [
+          4970.0,
+          -2690.0
+        ],
+        [
+          4779.0,
+          -2662.0
+        ],
+        [
+          4758.0,
+          -2560.0
+        ],
+        [
+          4799.0,
+          -2499.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "eastern_pamir",
+      "dimension": "minecraft:overworld",
+      "priority": 140600,
+      "macro_region": "central_asia",
+      "display_label": "Eastern Pamir",
+      "polygon": [
+        [
+          5154.0,
+          -2492.0
+        ],
+        [
+          5216.0,
+          -2594.0
+        ],
+        [
+          5120.0,
+          -2697.0
+        ],
+        [
+          4970.0,
+          -2690.0
+        ],
+        [
+          5011.0,
+          -2628.0
+        ],
+        [
+          4949.0,
+          -2492.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "tajik_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 140620,
+      "macro_region": "central_asia",
+      "display_label": "Tajik Basin",
+      "polygon": [
+        [
+          4758.0,
+          -2512.0
+        ],
+        [
+          4806.0,
+          -2594.0
+        ],
+        [
+          4738.0,
+          -2662.0
+        ],
+        [
+          4594.0,
+          -2635.0
+        ],
+        [
+          4574.0,
+          -2512.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_afghan_plains",
+      "dimension": "minecraft:overworld",
+      "priority": 110640,
+      "macro_region": "central_asia",
+      "display_label": "Northern Afghan Plains",
+      "polygon": [
+        [
+          4676.0,
+          -2444.0
+        ],
+        [
+          4779.0,
+          -2505.0
+        ],
+        [
+          4710.0,
+          -2560.0
+        ],
+        [
+          4437.0,
+          -2560.0
+        ],
+        [
+          4233.0,
+          -2512.0
+        ],
+        [
+          4233.0,
+          -2434.553518
+        ],
+        [
+          4250.246556,
+          -2423.0
+        ],
+        [
+          4437.0,
+          -2423.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "badghyz_karabil_uplands",
+      "dimension": "minecraft:overworld",
+      "priority": 120660,
+      "macro_region": "central_asia",
+      "display_label": "Badghyz–Karabil Uplands",
+      "polygon": [
+        [
+          4424.0,
+          -2512.0
+        ],
+        [
+          4233.0,
+          -2580.0
+        ],
+        [
+          4161.628971,
+          -2551.868354
+        ],
+        [
+          4185.0,
+          -2533.0
+        ],
+        [
+          4116.389193,
+          -2485.203708
+        ],
+        [
+          4198.000032,
+          -2458.000095
+        ],
+        [
+          4198.000056,
+          -2458.000083
+        ],
+        [
+          4280.101629,
+          -2403.0
+        ],
+        [
+          4335.0,
+          -2403.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amu_darya_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 170680,
+      "macro_region": "central_asia",
+      "display_label": "Amu Darya Valley",
+      "polygon": [
+        [
+          4542.52975,
+          -2572.02596
+        ],
+        [
+          4456.524603,
+          -2591.352959
+        ],
+        [
+          4349.949431,
+          -2678.373054
+        ],
+        [
+          4241.078001,
+          -2774.259818
+        ],
+        [
+          4138.050728,
+          -2863.283384
+        ],
+        [
+          4086.033122,
+          -2908.557967
+        ],
+        [
+          4052.135178,
+          -2981.196417
+        ],
+        [
+          4029.864822,
+          -2970.803583
+        ],
+        [
+          4065.966878,
+          -2893.442033
+        ],
+        [
+          4121.949272,
+          -2844.716616
+        ],
+        [
+          4224.921999,
+          -2755.740182
+        ],
+        [
+          4334.050569,
+          -2659.626946
+        ],
+        [
+          4445.475397,
+          -2568.647041
+        ],
+        [
+          4537.47025,
+          -2547.97404
+        ],
+        [
+          4640.189394,
+          -2527.833032
+        ],
+        [
+          4777.750798,
+          -2513.775662
+        ],
+        [
+          4780.249202,
+          -2538.224338
+        ],
+        [
+          4643.810606,
+          -2552.166968
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "syr_darya_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 170700,
+      "macro_region": "central_asia",
+      "display_label": "Syr Darya Valley",
+      "polygon": [
+        [
+          4700.744336,
+          -2805.026567
+        ],
+        [
+          4686.997334,
+          -2885.544722
+        ],
+        [
+          4636.209617,
+          -2957.493988
+        ],
+        [
+          4476.993943,
+          -3061.947583
+        ],
+        [
+          4338.395213,
+          -3138.380706
+        ],
+        [
+          4164.879738,
+          -3151.571941
+        ],
+        [
+          4163.120262,
+          -3128.428059
+        ],
+        [
+          4331.604787,
+          -3115.619294
+        ],
+        [
+          4465.006057,
+          -3042.052417
+        ],
+        [
+          4619.790383,
+          -2940.506012
+        ],
+        [
+          4665.002666,
+          -2876.455278
+        ],
+        [
+          4679.255664,
+          -2792.973433
+        ],
+        [
+          4742.37132,
+          -2737.890678
+        ],
+        [
+          4850.669929,
+          -2773.990214
+        ],
+        [
+          4843.330071,
+          -2796.009786
+        ],
+        [
+          4747.62868,
+          -2764.109322
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "zeravshan_valley",
+      "dimension": "minecraft:overworld",
+      "priority": 170720,
+      "macro_region": "central_asia",
+      "display_label": "Zeravshan Valley",
+      "polygon": [
+        [
+          4575.812169,
+          -2716.384868
+        ],
+        [
+          4492.634664,
+          -2733.628985
+        ],
+        [
+          4395.304956,
+          -2726.532027
+        ],
+        [
+          4396.695044,
+          -2707.467973
+        ],
+        [
+          4491.365336,
+          -2714.371015
+        ],
+        [
+          4572.187831,
+          -2697.615132
+        ],
+        [
+          4668.371725,
+          -2680.403277
+        ],
+        [
+          4820.44258,
+          -2687.45292
+        ],
+        [
+          4819.55742,
+          -2706.54708
+        ],
+        [
+          4669.628275,
+          -2699.596723
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "eastern_caspian_coast",
+      "dimension": "minecraft:overworld",
+      "priority": 160740,
+      "macro_region": "central_asia",
+      "display_label": "Eastern Caspian Coast",
+      "polygon": [
+        [
+          3442.930232,
+          -3016.484531
+        ],
+        [
+          3489.40689,
+          -2970.007873
+        ],
+        [
+          3550.3976,
+          -2916.886932
+        ],
+        [
+          3590.260036,
+          -2837.162059
+        ],
+        [
+          3610.176176,
+          -2755.505886
+        ],
+        [
+          3637.456107,
+          -2686.800873
+        ],
+        [
+          3665.534052,
+          -2624.628282
+        ],
+        [
+          3680.465948,
+          -2631.371718
+        ],
+        [
+          3652.543893,
+          -2693.199127
+        ],
+        [
+          3625.823824,
+          -2760.494114
+        ],
+        [
+          3605.739964,
+          -2842.837941
+        ],
+        [
+          3563.6024,
+          -2927.113068
+        ],
+        [
+          3500.59311,
+          -2981.992127
+        ],
+        [
+          3465.069768,
+          -3017.515469
+        ],
+        [
+          3494.732315,
+          -3053.285011
+        ],
+        [
+          3543.069815,
+          -3135.861572
+        ],
+        [
+          3528.930185,
+          -3144.138428
+        ],
+        [
+          3481.267685,
+          -3062.714989
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "dzungarian_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 110760,
+      "macro_region": "central_asia",
+      "display_label": "Dzungarian Basin",
+      "polygon": [
+        [
+          6178.0,
+          -3004.0
+        ],
+        [
+          6246.0,
+          -3140.0
+        ],
+        [
+          6042.0,
+          -3243.0
+        ],
+        [
+          5837.0,
+          -3229.0
+        ],
+        [
+          5598.0,
+          -3174.0
+        ],
+        [
+          5598.0,
+          -3004.0
+        ],
+        [
+          5871.0,
+          -2963.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tarim_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 878,
+      "macro_region": "central_asia",
+      "display_label": "Tarim Basin",
+      "polygon": [
+        [
+          5871.0,
+          -2458.0
+        ],
+        [
+          6212.0,
+          -2594.0
+        ],
+        [
+          6281.0,
+          -2731.0
+        ],
+        [
+          6076.0,
+          -2867.0
+        ],
+        [
+          5666.0,
+          -2867.0
+        ],
+        [
+          5257.0,
+          -2785.0
+        ],
+        [
+          5120.0,
+          -2662.0
+        ],
+        [
+          5120.0,
+          -2526.0
+        ],
+        [
+          5393.0,
+          -2458.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "taklamakan_desert",
+      "dimension": "minecraft:overworld",
+      "priority": 120800,
+      "macro_region": "central_asia",
+      "display_label": "Taklamakan Desert",
+      "polygon": [
+        [
+          5871.0,
+          -2540.0
+        ],
+        [
+          6062.0,
+          -2697.0
+        ],
+        [
+          5871.0,
+          -2799.0
+        ],
+        [
+          5530.0,
+          -2799.0
+        ],
+        [
+          5345.0,
+          -2744.0
+        ],
+        [
+          5291.0,
+          -2560.0
+        ],
+        [
+          5530.0,
+          -2512.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tarim_river_corridor",
+      "dimension": "minecraft:overworld",
+      "priority": 170820,
+      "macro_region": "central_asia",
+      "display_label": "Tarim River Corridor",
+      "polygon": [
+        [
+          5734.714344,
+          -2807.184053
+        ],
+        [
+          5875.217116,
+          -2787.669779
+        ],
+        [
+          5966.243665,
+          -2755.091856
+        ],
+        [
+          6010.109631,
+          -2704.82877
+        ],
+        [
+          6016.5602,
+          -2667.046863
+        ],
+        [
+          6039.4398,
+          -2670.953137
+        ],
+        [
+          6031.890369,
+          -2715.17123
+        ],
+        [
+          5979.756335,
+          -2774.908144
+        ],
+        [
+          5880.782884,
+          -2810.330221
+        ],
+        [
+          5733.285656,
+          -2830.815947
+        ],
+        [
+          5629.390445,
+          -2803.314274
+        ],
+        [
+          5492.755982,
+          -2776.386314
+        ],
+        [
+          5497.244018,
+          -2753.613686
+        ],
+        [
+          5634.609555,
+          -2780.685726
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "turpan_hami_basins",
+      "dimension": "minecraft:overworld",
+      "priority": 140840,
+      "macro_region": "central_asia",
+      "display_label": "Turpan–Hami Basins",
+      "polygon": [
+        [
+          6484.9999,
+          -2847.0
+        ],
+        [
+          6484.9999,
+          -2956.466059
+        ],
+        [
+          6451.0,
+          -2970.0
+        ],
+        [
+          6281.0,
+          -2935.0
+        ],
+        [
+          6281.0,
+          -2847.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "turpan_hami_basins__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 140841,
+      "macro_region": "central_asia",
+      "display_label": "Turpan–Hami Basins",
+      "polygon": [
+        [
+          6178.0,
+          -2854.0
+        ],
+        [
+          6246.0,
+          -2908.0
+        ],
+        [
+          6144.0,
+          -2970.0
+        ],
+        [
+          6007.0,
+          -2949.0
+        ],
+        [
+          5973.0,
+          -2867.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kunlun_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 130860,
+      "macro_region": "central_asia",
+      "display_label": "Kunlun Mountains",
+      "polygon": [
+        [
+          6144.0,
+          -2423.0
+        ],
+        [
+          6417.0,
+          -2464.0
+        ],
+        [
+          6484.9999,
+          -2461.021902
+        ],
+        [
+          6484.9999,
+          -2492.0
+        ],
+        [
+          6212.0,
+          -2492.0
+        ],
+        [
+          6007.0,
+          -2458.0
+        ],
+        [
+          5803.0,
+          -2492.0
+        ],
+        [
+          5461.0,
+          -2492.0
+        ],
+        [
+          5188.0,
+          -2485.0
+        ],
+        [
+          5120.000071,
+          -2389.0001
+        ],
+        [
+          5885.852611,
+          -2389.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "northern_tibetan_plateau",
+      "dimension": "minecraft:overworld",
+      "priority": 110880,
+      "macro_region": "central_asia",
+      "display_label": "Northern Tibetan Plateau",
+      "polygon": [
+        [
+          6281.0,
+          -2478.0
+        ],
+        [
+          5803.0,
+          -2444.0
+        ],
+        [
+          5461.0,
+          -2437.0
+        ],
+        [
+          5421.195205,
+          -2389.0001
+        ],
+        [
+          6484.9999,
+          -2389.0001
+        ],
+        [
+          6484.9999,
+          -2436.901119
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "altun_mountains",
+      "dimension": "minecraft:overworld",
+      "priority": 140900,
+      "macro_region": "central_asia",
+      "display_label": "Altun Mountains",
+      "polygon": [
+        [
+          6281.0,
+          -2642.0
+        ],
+        [
+          6076.0,
+          -2526.0
+        ],
+        [
+          5871.0,
+          -2492.0
+        ],
+        [
+          5939.0,
+          -2437.0
+        ],
+        [
+          6144.0,
+          -2478.0
+        ],
+        [
+          6328.0,
+          -2574.0
+        ],
+        [
+          6484.9999,
+          -2626.078016
+        ],
+        [
+          6484.9999,
+          -2696.999973
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "qaidam_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 120920,
+      "macro_region": "central_asia",
+      "display_label": "Qaidam Basin",
+      "polygon": [
+        [
+          6484.9999,
+          -2459.194117
+        ],
+        [
+          6484.9999,
+          -2675.99996
+        ],
+        [
+          6281.0,
+          -2594.0
+        ],
+        [
+          6144.0,
+          -2492.0
+        ],
+        [
+          6417.0,
+          -2444.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lop_nur_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 130940,
+      "macro_region": "central_asia",
+      "display_label": "Lop Nur Basin",
+      "polygon": [
+        [
+          6281.0,
+          -2635.0
+        ],
+        [
+          6417.0,
+          -2765.0
+        ],
+        [
+          6349.0,
+          -2854.0
+        ],
+        [
+          6178.0,
+          -2833.0
+        ],
+        [
+          6076.0,
+          -2744.0
+        ],
+        [
+          6076.0,
+          -2635.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kuznetsk_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 120960,
+      "macro_region": "central_asia",
+      "display_label": "Kuznetsk Basin",
+      "polygon": [
+        [
+          6007.0,
+          -3686.0
+        ],
+        [
+          5982.5625,
+          -3755.0
+        ],
+        [
+          5803.0,
+          -3755.0
+        ],
+        [
+          5803.0,
+          -3686.0
+        ],
+        [
+          5837.0,
+          -3618.0
+        ],
+        [
+          5973.0,
+          -3604.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kuznetsk_alatau",
+      "dimension": "minecraft:overworld",
+      "priority": 130980,
+      "macro_region": "central_asia",
+      "display_label": "Kuznetsk Alatau",
+      "polygon": [
+        [
+          6076.0,
+          -3536.0
+        ],
+        [
+          6178.0,
+          -3618.0
+        ],
+        [
+          6189.216374,
+          -3755.0
+        ],
+        [
+          6039.15534,
+          -3755.0
+        ],
+        [
+          6007.0,
+          -3686.0
+        ],
+        [
+          5973.0,
+          -3584.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "western_sayan",
+      "dimension": "minecraft:overworld",
+      "priority": 131000,
+      "macro_region": "central_asia",
+      "display_label": "Western Sayan",
+      "polygon": [
+        [
+          6281.0,
+          -3468.0
+        ],
+        [
+          6484.9999,
+          -3549.99996
+        ],
+        [
+          6484.9999,
+          -3550.00015
+        ],
+        [
+          6417.0,
+          -3652.0
+        ],
+        [
+          6212.0,
+          -3652.0
+        ],
+        [
+          6076.0,
+          -3550.0
+        ],
+        [
+          6076.0,
+          -3447.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "tuva_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 141020,
+      "macro_region": "central_asia",
+      "display_label": "Tuva Basin",
+      "polygon": [
+        [
+          6417.0,
+          -3454.0
+        ],
+        [
+          6484.9999,
+          -3448.830417
+        ],
+        [
+          6484.9999,
+          -3547.199992
+        ],
+        [
+          6349.0,
+          -3536.0
+        ],
+        [
+          6246.0,
+          -3495.0
+        ],
+        [
+          6246.0,
+          -3475.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "western_mongolian_basins",
+      "dimension": "minecraft:overworld",
+      "priority": 111040,
+      "macro_region": "central_asia",
+      "display_label": "Western Mongolian Basins",
+      "polygon": [
+        [
+          6417.0,
+          -3454.0
+        ],
+        [
+          6281.0,
+          -3345.0
+        ],
+        [
+          6178.0,
+          -3243.0
+        ],
+        [
+          6178.0,
+          -3072.0
+        ],
+        [
+          6484.9999,
+          -3072.0
+        ],
+        [
+          6484.9999,
+          -3427.19712
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "mongolian_altai",
+      "dimension": "minecraft:overworld",
+      "priority": 131060,
+      "macro_region": "central_asia",
+      "display_label": "Mongolian Altai",
+      "polygon": [
+        [
+          6178.0,
+          -3052.0
+        ],
+        [
+          6417.0,
+          -2990.0
+        ],
+        [
+          6484.9999,
+          -3051.999909
+        ],
+        [
+          6484.9999,
+          -3052.00009
+        ],
+        [
+          6349.0,
+          -3174.0
+        ],
+        [
+          6281.0,
+          -3311.0
+        ],
+        [
+          6144.0,
+          -3345.0
+        ],
+        [
+          6007.0,
+          -3277.0
+        ],
+        [
+          6042.0,
+          -3174.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "uvs_nuur_basin",
+      "dimension": "minecraft:overworld",
+      "priority": 151080,
+      "macro_region": "central_asia",
+      "display_label": "Uvs Nuur Basin",
+      "polygon": [
+        [
+          6403.0,
+          -3366.0
+        ],
+        [
+          6431.0,
+          -3447.0
+        ],
+        [
+          6349.0,
+          -3475.0
+        ],
+        [
+          6226.0,
+          -3441.0
+        ],
+        [
+          6212.0,
+          -3366.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "afghan_central_highlands__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 2001,
+      "macro_region": "central_asia",
+      "display_label": "Afghan Central Highlands",
+      "polygon": [
+        [
+          4847.0,
+          -2423.0
+        ],
+        [
+          4642.0,
+          -2471.0
+        ],
+        [
+          4369.0,
+          -2437.0
+        ],
+        [
+          4295.500599,
+          -2392.684185
+        ],
+        [
+          4301.00003,
+          -2389.0001
+        ],
+        [
+          4437.0,
+          -2389.0001
+        ],
+        [
+          4830.00005,
+          -2389.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "hindu_kush__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 230021,
+      "macro_region": "central_asia",
+      "display_label": "Hindu Kush",
+      "polygon": [
+        [
+          5052.0,
+          -2451.0
+        ],
+        [
+          5052.0,
+          -2533.0
+        ],
+        [
+          4847.0,
+          -2526.0
+        ],
+        [
+          4642.0,
+          -2458.0
+        ],
+        [
+          4437.0,
+          -2430.0
+        ],
+        [
+          4437.0,
+          -2389.0001
+        ],
+        [
+          4882.533607,
+          -2389.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "karakoram__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 240241,
+      "macro_region": "central_asia",
+      "display_label": "Karakoram",
+      "polygon": [
+        [
+          5440.627172,
+          -2400.268487
+        ],
+        [
+          5251.045273,
+          -2505.128805
+        ],
+        [
+          5134.0,
+          -2485.0
+        ],
+        [
+          5098.553883,
+          -2389.0001
+        ],
+        [
+          5442.798146,
+          -2389.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "ladakh_zanskar__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 240261,
+      "macro_region": "central_asia",
+      "display_label": "Ladakh–Zanskar",
+      "polygon": [
+        [
+          5325.0,
+          -2410.0
+        ],
+        [
+          5272.691158,
+          -2389.0001
+        ],
+        [
+          5389.908782,
+          -2389.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "kabul_peshawar_valleys__central_asia2",
+      "dimension": "minecraft:overworld",
+      "priority": 261162,
+      "macro_region": "central_asia",
+      "display_label": "Kabul–Peshawar Valleys",
+      "polygon": [
+        [
+          4724.0,
+          -2396.0
+        ],
+        [
+          4715.185311,
+          -2389.0001
+        ],
+        [
+          4759.69949,
+          -2389.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
     }
   ]
 }

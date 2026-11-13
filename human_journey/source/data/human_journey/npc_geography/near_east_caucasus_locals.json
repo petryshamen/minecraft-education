@@ -9,19 +9,19 @@
       "display_label": "Caspian Lowland",
       "polygon": [
         [
-          3755.0,
-          -2935.0
-        ],
-        [
           3072.0,
           -2935.0
         ],
         [
-          3072.0,
+          3447.0,
+          -2935.0
+        ],
+        [
+          3413.0,
           -3072.0
         ],
         [
-          3755.0,
+          3072.0,
           -3072.0
         ]
       ],
@@ -731,36 +731,60 @@
       "display_label": "Iranian Plateau",
       "polygon": [
         [
-          3413.0,
-          -1911.0
-        ],
-        [
           4028.0,
-          -1809.0
+          -1809.000002
         ],
         [
-          4182.144933,
-          -1879.290089
+          4182.144931,
+          -1879.29009
         ],
         [
-          4403.0,
+          4316.159171,
+          -2147.318571
+        ],
+        [
+          4402.999998,
           -2321.000224
         ],
         [
-          4403.0,
-          -2458.0
+          4402.999998,
+          -2388.999998
+        ],
+        [
+          4301.0,
+          -2388.999998
+        ],
+        [
+          4300.999999,
+          -2388.999998
+        ],
+        [
+          4197.999999,
+          -2457.999998
+        ],
+        [
+          4095.999999,
+          -2491.999998
+        ],
+        [
+          4090.742663,
+          -2494.609479
         ],
         [
           3823.0,
-          -2526.0
+          -2525.999998
         ],
         [
-          3413.0,
-          -2437.0
+          3413.000001,
+          -2436.999998
         ],
         [
-          3209.0,
+          3209.000003,
           -2116.0
+        ],
+        [
+          3413.000001,
+          -1911.000002
         ]
       ],
       "profile": {
@@ -1495,28 +1519,36 @@
       "display_label": "Kopet Dag",
       "polygon": [
         [
-          3891.0,
-          -2492.0
-        ],
-        [
           4096.0,
           -2471.0
         ],
         [
-          4185.0,
-          -2533.0
+          4116.389091,
+          -2485.203636
         ],
         [
-          4076.0,
-          -2621.0
+          4096.0,
+          -2492.0
         ],
         [
-          3857.0,
-          -2642.0
+          3959.0,
+          -2560.0
+        ],
+        [
+          3823.0,
+          -2594.0
+        ],
+        [
+          3799.117647,
+          -2594.0
         ],
         [
           3734.0,
           -2540.0
+        ],
+        [
+          3891.0,
+          -2492.0
         ]
       ],
       "profile": {
@@ -4615,6 +4647,369 @@
         ],
         "relief": [
           "island",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "turan_lowland__near_east_caucasus1",
+      "dimension": "minecraft:overworld",
+      "priority": 807,
+      "macro_region": "near_east_caucasus",
+      "display_label": "Turan Lowland",
+      "polygon": [
+        [
+          3799.117647,
+          -2594.0
+        ],
+        [
+          3686.0,
+          -2594.0
+        ],
+        [
+          3610.469055,
+          -2631.765472
+        ],
+        [
+          3618.0,
+          -2594.0
+        ],
+        [
+          3749.39559,
+          -2552.767074
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "mangystau_plateau__near_east_caucasus1",
+      "dimension": "minecraft:overworld",
+      "priority": 120141,
+      "macro_region": "near_east_caucasus",
+      "display_label": "Mangystau Plateau",
+      "polygon": [
+        [
+          3413.0,
+          -2935.0
+        ],
+        [
+          3451.979079,
+          -2915.65272
+        ],
+        [
+          3447.0,
+          -2935.0
+        ],
+        [
+          3413.0,
+          -3072.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "karakum_desert__near_east_caucasus1",
+      "dimension": "minecraft:overworld",
+      "priority": 120181,
+      "macro_region": "near_east_caucasus",
+      "display_label": "Karakum Desert",
+      "polygon": [
+        [
+          3799.117647,
+          -2594.0
+        ],
+        [
+          3754.666667,
+          -2594.0
+        ],
+        [
+          3782.448529,
+          -2580.176829
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "badghyz_karabil_uplands__near_east_caucasus1",
+      "dimension": "minecraft:overworld",
+      "priority": 120661,
+      "macro_region": "near_east_caucasus",
+      "display_label": "Badghyz–Karabil Uplands",
+      "polygon": [
+        [
+          4096.0,
+          -2471.0
+        ],
+        [
+          4096.0,
+          -2403.0
+        ],
+        [
+          4280.101449,
+          -2403.0
+        ],
+        [
+          4198.0,
+          -2458.0
+        ],
+        [
+          4116.389091,
+          -2485.203636
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "afghan_central_highlands__near_east_caucasus2",
+      "dimension": "minecraft:overworld",
+      "priority": 2002,
+      "macro_region": "near_east_caucasus",
+      "display_label": "Afghan Central Highlands",
+      "polygon": [
+        [
+          4233.000002,
+          -2354.999999
+        ],
+        [
+          4233.000002,
+          -2185.000002
+        ],
+        [
+          4328.855315,
+          -2172.710859
+        ],
+        [
+          4436.999885,
+          -2388.999998
+        ],
+        [
+          4301.0,
+          -2388.999998
+        ],
+        [
+          4300.999999,
+          -2388.999998
+        ],
+        [
+          4295.500505,
+          -2392.684126
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "rigestan_dasht_margo__near_east_caucasus2",
+      "dimension": "minecraft:overworld",
+      "priority": 220042,
+      "macro_region": "near_east_caucasus",
+      "display_label": "Rigestan–Dasht-e Margo",
+      "polygon": [
+        [
+          4233.0,
+          -2185.0
+        ],
+        [
+          4198.0,
+          -2062.0
+        ],
+        [
+          4267.786383,
+          -2050.57299
+        ],
+        [
+          4343.095117,
+          -2201.190458
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "helmand_valley__near_east_caucasus1",
+      "dimension": "minecraft:overworld",
+      "priority": 270061,
+      "macro_region": "near_east_caucasus",
+      "display_label": "Helmand Valley",
+      "polygon": [
+        [
+          4237.697974,
+          -2106.643463
+        ],
+        [
+          4212.581811,
+          -2130.862619
+        ],
+        [
+          4197.418189,
+          -2115.137381
+        ],
+        [
+          4228.302026,
+          -2085.356537
+        ],
+        [
+          4283.408677,
+          -2081.817578
+        ],
+        [
+          4294.013328,
+          -2103.02688
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
           "plain"
         ],
         "special": []

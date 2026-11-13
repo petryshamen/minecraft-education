@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.5
+
+- Asia Coverage v1: 790 locals / 19 macros / 16 resources; 240 additions, three existing polygon updates, no IDs removed. Six approved macro polygons revised; global coverage loses nothing and gains 49,938 blocks² around the Maldives. Existing economy, juices, progression and other gameplay remain unchanged.
+- Removed one consecutive duplicate vertex from `iranian_plateau` required by Core validation; mathematical footprint, remaining coordinates and all non-polygon fields are identical. No other supplied-data deviation.
+- Supplied checks and offline Core 0.9.0 checks pass: 1,876 cases, 40,800 boundary samples and 12,150 NPC compositions. Read-only stored terrain checks cover 216 controls and land in all 34 new island fragments. No gameplay testing, Core changes or discovery/NPC resets.
+
 ## 0.5.4
 
 - Added seven Core schema-1 juice definitions (apple, cactus, chorus_fruit, glow_berry, melon, pumpkin, sweet_berry), each restoring 1.0 HP per successful drink. Uses Core’s generic six-tier, state-preserving canteen engine; no per-tier recipes/items, Agriculture/era gate or juice commodities were added.

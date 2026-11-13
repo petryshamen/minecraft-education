@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "kuznetsk_basin__northern_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 120961,
+      "macro_region": "northern_asia",
+      "display_label": "Kuznetsk Basin",
+      "polygon": [
+        [
+          5973.0,
+          -3782.0
+        ],
+        [
+          5803.0,
+          -3768.0
+        ],
+        [
+          5803.0,
+          -3755.0001
+        ],
+        [
+          5982.562465,
+          -3755.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kuznetsk_alatau__northern_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 130981,
+      "macro_region": "northern_asia",
+      "display_label": "Kuznetsk Alatau",
+      "polygon": [
+        [
+          6192.0,
+          -3789.0
+        ],
+        [
+          6055.0,
+          -3789.0
+        ],
+        [
+          6039.155386,
+          -3755.0001
+        ],
+        [
+          6189.216382,
+          -3755.0001
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    }
+  ]
+}

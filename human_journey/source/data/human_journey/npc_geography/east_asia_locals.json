@@ -1,0 +1,690 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "eastern_tian_shan__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 130461,
+      "macro_region": "east_asia",
+      "display_label": "Eastern Tian Shan",
+      "polygon": [
+        [
+          6554.0,
+          -2970.0
+        ],
+        [
+          6485.0,
+          -2983.719298
+        ],
+        [
+          6485.0,
+          -2867.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "turpan_hami_basins__east_asia2",
+      "dimension": "minecraft:overworld",
+      "priority": 140842,
+      "macro_region": "east_asia",
+      "display_label": "Turpan–Hami Basins",
+      "polygon": [
+        [
+          6554.0,
+          -2929.0
+        ],
+        [
+          6485.0,
+          -2956.466019
+        ],
+        [
+          6485.0,
+          -2847.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kunlun_mountains__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 130861,
+      "macro_region": "east_asia",
+      "display_label": "Kunlun Mountains",
+      "polygon": [
+        [
+          6554.0,
+          -2458.0
+        ],
+        [
+          6554.0,
+          -2492.0
+        ],
+        [
+          6485.0,
+          -2492.0
+        ],
+        [
+          6485.0,
+          -2461.021898
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "northern_tibetan_plateau__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 110881,
+      "macro_region": "east_asia",
+      "display_label": "Northern Tibetan Plateau",
+      "polygon": [
+        [
+          6554.0,
+          -2423.0
+        ],
+        [
+          6485.0,
+          -2436.901099
+        ],
+        [
+          6485.0,
+          -2389.0001
+        ],
+        [
+          6485.000071,
+          -2389.000071
+        ],
+        [
+          6485.0001,
+          -2389.0
+        ],
+        [
+          6485.0001,
+          -2355.000099
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "altun_mountains__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 140901,
+      "macro_region": "east_asia",
+      "display_label": "Altun Mountains",
+      "polygon": [
+        [
+          6533.0,
+          -2642.0
+        ],
+        [
+          6485.0,
+          -2697.0
+        ],
+        [
+          6485.0,
+          -2626.078049
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "qaidam_basin__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 120921,
+      "macro_region": "east_asia",
+      "display_label": "Qaidam Basin",
+      "polygon": [
+        [
+          6690.0,
+          -2505.0
+        ],
+        [
+          6690.0,
+          -2649.0
+        ],
+        [
+          6485.0,
+          -2676.0
+        ],
+        [
+          6485.0,
+          -2459.194139
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tuva_basin__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 141021,
+      "macro_region": "east_asia",
+      "display_label": "Tuva Basin",
+      "polygon": [
+        [
+          6588.0,
+          -3441.0
+        ],
+        [
+          6622.0,
+          -3516.0
+        ],
+        [
+          6519.0,
+          -3550.0
+        ],
+        [
+          6485.0,
+          -3547.2
+        ],
+        [
+          6485.0,
+          -3448.830409
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "western_mongolian_basins__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 111041,
+      "macro_region": "east_asia",
+      "display_label": "Western Mongolian Basins",
+      "polygon": [
+        [
+          6554.0,
+          -3400.0
+        ],
+        [
+          6485.0,
+          -3427.19708
+        ],
+        [
+          6485.0,
+          -3072.0
+        ],
+        [
+          6519.0,
+          -3072.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "eastern_himalaya__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 230341,
+      "macro_region": "east_asia",
+      "display_label": "Eastern Himalaya",
+      "polygon": [
+        [
+          6622.0,
+          -1979.5
+        ],
+        [
+          6588.0,
+          -2048.0
+        ],
+        [
+          6561.998644,
+          -2057.473898
+        ],
+        [
+          6485.0001,
+          -2069.631563
+        ],
+        [
+          6485.0001,
+          -2048.000072
+        ],
+        [
+          6588.000031,
+          -2014.000095
+        ],
+        [
+          6588.000083,
+          -2014.000055
+        ],
+        [
+          6622.0,
+          -1962.500182
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "yarlung_tsangpo_valley__east_asia2",
+      "dimension": "minecraft:overworld",
+      "priority": 270462,
+      "macro_region": "east_asia",
+      "display_label": "Yarlung Tsangpo Valley",
+      "polygon": [
+        [
+          6511.282533,
+          -2044.754667
+        ],
+        [
+          6494.83177,
+          -2044.754667
+        ],
+        [
+          6514.679741,
+          -2038.202909
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_myanmar_highlands__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 320001,
+      "macro_region": "east_asia",
+      "display_label": "Northern Myanmar Highlands",
+      "polygon": [
+        [
+          6758.0,
+          -1952.0
+        ],
+        [
+          6656.0,
+          -1952.0
+        ],
+        [
+          6641.392041,
+          -1933.126943
+        ],
+        [
+          6642.135938,
+          -1932.000158
+        ],
+        [
+          6655.999929,
+          -1946.00007
+        ],
+        [
+          6656.0,
+          -1946.0001
+        ],
+        [
+          6738.0,
+          -1946.0001
+        ],
+        [
+          6738.00006,
+          -1946.00008
+        ],
+        [
+          6738.000096,
+          -1946.000027
+        ],
+        [
+          6758.0,
+          -1875.706248
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "northern_lao_highlands__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 320221,
+      "macro_region": "east_asia",
+      "display_label": "Northern Lao Highlands",
+      "polygon": [
+        [
+          6924.594534,
+          -1548.874121
+        ],
+        [
+          6929.000045,
+          -1543.000107
+        ],
+        [
+          6963.481039,
+          -1547.394743
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "northern_vietnam_highlands__east_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 320281,
+      "macro_region": "east_asia",
+      "display_label": "Northern Vietnam Highlands",
+      "polygon": [
+        [
+          7202.0,
+          -1604.0
+        ],
+        [
+          7031.002512,
+          -1556.000705
+        ],
+        [
+          7201.999977,
+          -1597.000097
+        ],
+        [
+          7202.000041,
+          -1597.000091
+        ],
+        [
+          7338.997858,
+          -1536.001063
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,22 @@
 # Human Journey NPC geography
 
-## Current release — Three Regions & Red Sea, 0.5.3
+## Current release — Asia Coverage v1, 0.5.5
+
+Installed Core **0.9.0**, geography **schema 1**: **790 locals / 19 macros / 16 resources**. Deploy only the grouped `resources/*.json` from the approved Asia archive into `source/data/human_journey/npc_geography/`; fixtures, consolidated snapshots and validators are not runtime resources. Existing 550 IDs remain: 547 records unchanged, three polygon-only updates (`caspian_lowland__near_east_caucasus`, `iranian_plateau`, `kopet_dag`), 240 additions, zero removals. New files: `east_asia_locals.json`, `northern_asia_locals.json`, `southeast_asia_locals.json`; existing grouped files remain authoritative without duplicated macros.
+
+Only six macro polygons change: `near_east_caucasus`, `central_asia`, `south_asia`, `east_asia`, `southeast_asia`, `oceania`. Their other fields and the other 13 macro records are unchanged. Whole-polygon checks prove zero global coverage lost and 49,938 blocks² gained around the Maldives. Earlier European/African coverage, Crete notch, Red Sea division and Upper Nile gap are retained. Coordinates are supplied final X/Z, not reconverted.
+
+One necessary serialization correction: `iranian_plateau` contained consecutive identical vertices `[4095.999999, -2491.999998]` at indices 8/9. Core rejects duplicate vertices; only index 9 was removed. Polygon equality, zero Hausdorff distance and zero symmetric-difference area prove identical geometry. All other records match the supplied payload exactly.
+
+Hainan resolves in East Asia. New Guinea, Raja Ampat, Aru, Palau and Guam use Oceania macro fallback; **no Oceanian locals** are added. Halmahera/Kei/Tanimbar/Timor/Batanes remain Southeast Asian; Upper Assam/Namcha Barwa/Cox Bazar/Aizawl remain South Asian. Local labels prefix new NPC names; macro-only contexts retain generic role names. Existing NPC snapshots and the shared discovery ledger are untouched. Reload applies resources to live context; no automatic migration/reset is introduced. Roll back by restoring the prior datapack ZIP; do not clear SavedData or respawn old NPCs to force discovery.
+
+Validation: the supplied unchanged validator passes 176 physical controls, 40 macro controls, 790 reachable witnesses, 866 unchanged regressions and four intentional changes (1,876 total); 39,636 original local boundary samples. The actual first-party Core 0.9.0 pure parsers/resolver accept production offline: all 1,876 cases, 40,800 normalized local+macro edge/both-side samples, 12,150 NPC compositions, 50 commodities/four families/three Era-0 roles. Existing seven juice definitions and water policy also parse unchanged. No installed mod code was executed; Core was not rebuilt. These checks do not establish Minecraft reload acceptance or gameplay.
+
+Read-only Earth 1500 stored-block evidence covers 216/216 physical/macro controls and 72 selected envelopes. All 34 new island fragments contain sampled non-fluid land, including Lakshadweep and Maldives fragments. A finer one-block check of the tiny `kabul_peshawar_valleys__central_asia2` fragment finds 157 land columns. No corresponding test-save chunks were available at these controls: test-world terrain remains unverified, not absent. Surface samples do not prove complete coastlines, hydrology or navigability; no terrain was generated or edited.
+
+Manual acceptance: `/reload`, `/hj npc status`, `/hj npc context`, `/hj geography status`; inspect HUD and safe-Y X/Z controls: Ashgabat 3985,-2591 (Kopet Dag), Everest 5934,-1911 (Central Himalaya), Kathmandu 5825,-1892 (Nepal Middle Hills), Malé 5018,-285 and Addu 4994,43 (Maldivian Atolls), Hanoi 7226,-1436 (Red River Delta), Timor 8567,614 (Sumba–Timor Islands). Check seams/overlaps, Hainan and New Guinea macro fallback; Europe/Crete/Red Sea/Upper Nile regressions. Spawn fresh Hunter/Fisher/Forager to check context/profile/name; keep old snapshots. Participant-student discovery should occur once; teacher exclusion remains. Do not reset discovery. Water, temperature, juice/canteen behavior and all economy content remain unchanged and need only a normal manual smoke test.
+
+## Historical release — Three Regions & Red Sea, 0.5.3
 
 Installed and reviewed source **Core 0.8.0**, Minecraft 1.21.8 / Forge, geography **schema 1**. Current production has **550 locals / 19 macros / 13 geography resources**. The earlier Europe/Africa sections below describe their original releases; their file layouts and retained African Arabia parents are superseded by this section. No optional macro labels or era labels were added. Core supplies existing live HUD/default macro-label presentation; NPC names still use local prefixes captured at spawn.
 
