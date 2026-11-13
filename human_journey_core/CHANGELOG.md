@@ -1,3 +1,7 @@
+# 0.8.1
+
+- Updated fresh/missing-setting geography HUD defaults to X 85, Y 10, scale 0.8 and background opacity 0.35; enabled remains true. Existing valid custom values and validation ranges remain unchanged. No renderer, discovery, geography or other gameplay changes.
+
 # 0.8.0
 
 - Added participant geography HUD using Forge 1.21.8 GUI layers, configurable placement/scale/opacity and server-authoritative context.

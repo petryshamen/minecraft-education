@@ -1,10 +1,10 @@
-# Geography HUD and shared discovery — Core 0.8.0
+# Geography HUD and shared discovery — Core 0.8.1
 
 **Build verified:** [GitHub Actions run 43119081927](https://github.com/petryshamen/minecraft-education/actions/runs/43119081927), source `4260cd2d84c335662ac820c5bfbf2f03facada6b`. All 174 tests passed (all 144 existing + 30 new geography/discovery tests), with zero failures. All nine no-world Forge checks passed, including native compressed SavedData NBT and context/discovery packet codec round trips. 155 existing classes are byte-identical to Core 0.7.1, including economy/families/payment diversity/safe wandering/fishing/water/temperature; only Core bootstrap and additive NpcGeography parsing changed. Root pack.mcmeta format 64 and Java 21 metadata are verified. Runtime SHA-256: `cbe47eb6f84f6175d8757fe4e120b3758e9626402ddd3b2ed092b168f08aff08`. No world/player/NPC was created, no Minecraft gameplay testing, installation or deployment was performed.
 
 ## Installation and scope
 
-Minecraft Java 1.21.8, Java 21, Forge 58.1.18; retain the existing Core dependency stack. Manually replace the previous Core runtime JAR with `human_journey_core-0.8.0.jar` on server and clients. Keep only one Core version installed. Back up the test world before testing. Nothing is automatically installed or deployed. No new balance/example datapack is required: current `npc_geography` resources work as supplied. The new network channel requires Core on clients and server.
+Minecraft Java 1.21.8, Java 21, Forge 58.1.18; retain the existing Core dependency stack. Manually replace the previous Core runtime JAR with `human_journey_core-0.8.1.jar` on server and clients. Keep only one Core version installed. Back up the test world before testing. Nothing is automatically installed or deployed. No new balance/example datapack is required: current `npc_geography` resources work as supplied. The new network channel requires Core on clients and server.
 
 ## Eligibility and authority
 
@@ -28,18 +28,20 @@ Server state remains authoritative if a send fails; subsequent evaluations retry
 
 ## HUD and client options
 
+Core 0.8.1 changes defaults only. Forge keeps existing valid client settings, and supplies these defaults for newly generated configs or missing settings. No migration or forced overwrite is performed.
+
 The physical-client entrypoint registers `AddGuiOverlayLayersEvent` into Forge's `POST_SLEEP_STACK`; removed GUI-overlay events are not used. Rendering uses Minecraft GuiGraphics, font shadow and the 1.21.8 Matrix3x2fStack. Client types remain isolated from common/dedicated-server code. F1 hides the HUD along with normal GUI. No geography or no participant tag hides it.
 
-Default position is **X 170, Y 10 GUI-scaled pixels**, intended to sit right of a normal top-left minimap. Core does not inspect Xaero size/settings. Local text is bold white; macro text is smaller in emphasis (normal-weight muted grey) on the second line. Macro-only context uses one primary line. A black panel with 55% opacity fits text plus five-pixel padding (19-pixel one-line / 30-pixel two-line height). Long text is shortened to fit a compact maximum width, and the panel is clamped to the viewport. Small screens, UI scale and minimap settings can require adjusting the offsets.
+Default position is **X 85, Y 10 GUI-scaled pixels**, intended to sit right of a normal top-left minimap. Core does not inspect Xaero size/settings. Local text is bold white; macro text is smaller in emphasis (normal-weight muted grey) on the second line. Macro-only context uses one primary line. A black panel with 35% opacity fits text plus five-pixel padding (19-pixel one-line / 30-pixel two-line height). Long text is shortened to fit a compact maximum width, and the panel is clamped to the viewport. Small screens, UI scale and minimap settings can require adjusting the offsets.
 
 Edit `config/human_journey_core-client.toml`, section `[geography_hud]`:
 
 ```toml
 enabled = true
-x_offset = 170
+x_offset = 85
 y_offset = 10
-scale = 1.0
-background_opacity = 0.55
+scale = 0.8
+background_opacity = 0.35
 ```
 
 Offset range: -8192..8192 (clamped on-screen when rendered); scale: 0.5..3.0; opacity: 0.0..1.0. Apply client config through Forge's normal reload/restart mechanism; `/reload` is for server datapacks, not client settings. Disabling the HUD does not disable discovery or server synchronisation.
