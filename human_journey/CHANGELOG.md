@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.6
+
+- East / Northern Asia & Oceania v1: 1,156 locals / 21 technical macros (19 physical regions) / 19 resources. Added 366 local IDs, updated 11 existing polygons with four approved Central-to-Northern Asia parent changes; retained all 790 existing IDs and immutable fields. Five macro polygons updated and two separate dateline fragments added. Existing economy, progression, water/temperature, juices, NPC snapshots and discovery data remain untouched.
+- Core 0.9.0 required eight lossless consecutive-vertex removals: altai_mountains, kulunda_plain__central_asia1, eastern_mongolian_steppe, northeast_china_uplands, hokkaido_highlands, transbaikal_highlands__east_asia1, daurian_steppe_basins__east_asia1, guangxi_karst_uplands__southeast_asia1. Identical mathematical footprints verified; no other payload deviations. Existing Iranian Plateau repair retained.
+- Supplied checks passed; offline first-party Core parsing accepted all 21 macros/1,156 locals with zero skipped, 2,860 cases, 57,456 boundary samples and 17,670 NPC compositions. Macro union added 24,728,622.368036833 blocks²; numerical loss 0.00005954990349661237, within approved 0.001 tolerance. No Core changes or gameplay testing; terrain and 42 small-feature reviews remain manual.
+
 ## 0.5.5
 
 - Asia Coverage v1: 790 locals / 19 macros / 16 resources; 240 additions, three existing polygon updates, no IDs removed. Six approved macro polygons revised; global coverage loses nothing and gains 49,938 blocks² around the Maldives. Existing economy, juices, progression and other gameplay remain unchanged.

@@ -1,6 +1,41 @@
 # Human Journey NPC geography
 
-## Current release — Asia Coverage v1, 0.5.5
+## Current release — East / Northern Asia & Oceania v1, 0.5.6
+
+Installed test JAR and reviewed first-party source are **Core 0.9.0**, geography **schema 1**. JAR SHA-256 remains `6135de5fdaaf75624ab045dba7263a331790359eb80e42c60f08b0019e39b721`. Final production: **1,156 locals / 21 technical macros / 19 geography resources** (18 local files plus `global_macros.json`), representing **19 physical macro regions**. The approved handoff matches the deployed 0.5.5 baseline. Copy only `resources/*.json`; review snapshots, deltas, baselines, fixtures, sources, validators and follow-up notes are not loaded or packaged as runtime geography.
+
+All 790 existing local IDs remain; **366 additions, 11 polygon updates, zero removals**, with 779 existing records identical as JSON objects. Existing labels, dimensions, priorities and complete profiles stay identical. Only `kuznetsk_basin`, `kuznetsk_alatau`, `western_sayan`, `tuva_basin` change parent from Central to Northern Asia. Other updated IDs: `northern_kazakh_steppe`, `southern_siberian_forest_steppe`, `turgai_plateau`, `altai_mountains`, `tuva_basin__east_asia1`, `western_mongolian_basins`, `uvs_nuur_basin`. Iranian Plateau keeps the already-deployed 14-vertex repair.
+
+Five macro polygons change: `central_asia`, `northern_asia`, `east_asia`, `southeast_asia`, `oceania`; their other fields and the other 14 macros are unchanged. Added `northern_asia_dateline_west` (priority 41, display `Northern Asia`) and `oceania_dateline_west` (priority 51, display `Oceania`). These are separate polygons/IDs on the negative-longitude side, never edges connecting opposite map borders. Shared display labels do **not** merge discovery identities. Shared discovery is an optional future planner/Core decision, not a blocker or a datapack alias system.
+
+New local resources: `northern_asia_dateline_west_locals.json`, `oceania_locals.json`, `oceania_dateline_west_locals.json`; existing grouped files remain authoritative without duplicate IDs. Full profiles replace macro profiles; they do not merge fields. Optional macro labels do not prefix NPC names. Existing NPC snapshots, participant/student/teacher rules, discovery ledger and HUD configuration are untouched. Fresh NPCs capture the new context after a successful normal reload. Rollback restores the previous ZIP without clearing saved discovery or NPC data.
+
+### Exact compatibility normalization
+
+Core rejects repeated vertices which the supplied GEOS validator accepts. Removed only one consecutive duplicate per polygon below; polygon equality, zero Hausdorff distance and zero symmetric-difference area prove unchanged footprints. No remaining coordinate was rounded, moved or regenerated; all non-polygon fields and every other payload record are exact.
+
+| Local ID | Repeated X/Z (removed second occurrence, zero-based index) |
+| --- | --- |
+| `altai_mountains` | 6076.0, -3378.999998 (5) |
+| `kulunda_plain__central_asia1` | 5529.999999, -3515.999998 (2) |
+| `eastern_mongolian_steppe` | 7782.0, -3344.999998 (2) |
+| `northeast_china_uplands` | 8601.999999, -2765.000002 (12) |
+| `hokkaido_highlands` | 9857.999999, -2922.000002 (6) |
+| `transbaikal_highlands__east_asia1` | 7919.0, -3351.999998 (2) |
+| `daurian_steppe_basins__east_asia1` | 7919.0, -3351.999998 (2) |
+| `guangxi_karst_uplands__southeast_asia1` | 7168.000001, -1570.000002 (1) |
+
+### Evidence and pending acceptance
+
+All 53 archive checksums and baseline Git identities verified. Supplied `validate.py` ran unchanged with jsonschema/GEOS and a Windows DLL-lookup wrapper: **269 physical controls, 101 macro controls, 1,156 interior witnesses, 1,321 unchanged regressions, 13 intentional changes, 55,584 local boundary samples**. Macro union added **24,728,622.368036833 blocks²**, numerical loss **0.00005954990349661237**, below the approved **0.001** tolerance. This is a numeric tolerance result, not a claim of exact zero loss.
+
+Hash-verified, unmodified first-party Core 0.9.0 pure parser/store/resolver accepted final production offline: **21 macros, 1,156 locals, zero skipped, 19 resources, 2,860 control/witness/regression cases, 57,456 local+macro boundary samples, 17,670 compositions**. Existing 50 commodities, four families and three Era-0-only roles validate; Era 0/1 resolution stays read-only. Item-reference checks use inspected vanilla/TAN resources, not a running game registry. No installed mod was executed, modified or rebuilt. Offline parser acceptance is **not Minecraft reload/gameplay evidence**. Server/client installation versions beyond the inspected local test instance are not established.
+
+No terrain inspection or gameplay test was performed for this release. All **42 supplied small-feature flags remain pending**: tiny polygons/atolls may lack usable terrain at this map scale; missing chunks mean unknown terrain, never absent islands. Do not enlarge claims, build land or remove IDs to force acceptance. Main Planner approval is needed for material terrain/geometry revisions.
+
+Manual acceptance: `/reload`, `/hj npc status`, `/hj npc context`, `/hj geography status`; inspect logs, HUD, full profiles and fresh Hunter/Fisher/Forager names/snapshots. Check Chinese plains/mountains/dry basins and Hainan; Siberian/Central Asian and Far East/East Asian seams, Severnaya Zemlya and both dateline sides. Test northern Australia, Raja Ampat and northern Marianas; Timor/Kei/Halmahera remain Southeast Asia, Iwo Jima/Ogasawara remain East Asia. Nome/St. Lawrence/Aleutians/Revillagigedo must keep supplied negative-control outcomes. Compare Hilo/Kona/high volcanoes, Nadi/Suva, Port Moresby/Fly-Digul and Westland/Otago/Fiordland profiles. Test an eligible student discovering a new area once and teacher exclusion without clearing ledgers; keep old NPC snapshots. Spot-check Europe/Crete, Africa/Red Sea, Near East, South/Southeast Asia and existing economy/water/temperature/juice behavior. All remain user-world tests pending manual execution.
+
+## Historical release — Asia Coverage v1, 0.5.5
 
 Installed Core **0.9.0**, geography **schema 1**: **790 locals / 19 macros / 16 resources**. Deploy only the grouped `resources/*.json` from the approved Asia archive into `source/data/human_journey/npc_geography/`; fixtures, consolidated snapshots and validators are not runtime resources. Existing 550 IDs remain: 547 records unchanged, three polygon-only updates (`caspian_lowland__near_east_caucasus`, `iranian_plateau`, `kopet_dag`), 240 additions, zero removals. New files: `east_asia_locals.json`, `northern_asia_locals.json`, `southeast_asia_locals.json`; existing grouped files remain authoritative without duplicated macros.
 

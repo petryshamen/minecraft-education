@@ -5152,6 +5152,57 @@
           "mountain_access"
         ]
       }
+    },
+    {
+      "id": "qinghai_tibetan_uplands__south_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 90121,
+      "macro_region": "south_asia",
+      "display_label": "Qinghai–Tibetan Uplands",
+      "polygon": [
+        [
+          6485.000002,
+          -1930.631802
+        ],
+        [
+          6617.739121,
+          -1968.953974
+        ],
+        [
+          6587.999999,
+          -2013.999998
+        ],
+        [
+          6485.000002,
+          -2047.999997
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
     }
   ]
 }

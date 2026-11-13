@@ -1,0 +1,2011 @@
+{
+  "schema_version": 1,
+  "local_areas": [
+    {
+      "id": "fijian_high_islands__oceania_dateline_west3",
+      "dimension": "minecraft:overworld",
+      "priority": 721803,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Fijian High Islands",
+      "polygon": [
+        [
+          -12274.0,
+          1167.0
+        ],
+        [
+          -12274.0,
+          1140.0
+        ],
+        [
+          -12288.0,
+          1140.0
+        ],
+        [
+          -12288.0,
+          1167.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lau_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 731830,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Lau Islands",
+      "polygon": [
+        [
+          -12227.0,
+          1188.0
+        ],
+        [
+          -12213.0,
+          1188.0
+        ],
+        [
+          -12213.0,
+          1167.0
+        ],
+        [
+          -12227.0,
+          1167.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "chatham_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 732370,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Chatham Islands",
+      "polygon": [
+        [
+          -12063.0,
+          3011.0
+        ],
+        [
+          -12022.0,
+          3011.0
+        ],
+        [
+          -12025.0,
+          2980.0
+        ],
+        [
+          -12070.0,
+          2980.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "island",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "samoan_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 732640,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Samoan Islands",
+      "polygon": [
+        [
+          -11752.0,
+          945.0
+        ],
+        [
+          -11752.0,
+          918.0
+        ],
+        [
+          -11800.0,
+          918.0
+        ],
+        [
+          -11800.0,
+          945.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "samoan_islands__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 732641,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Samoan Islands",
+      "polygon": [
+        [
+          -11701.0,
+          963.0
+        ],
+        [
+          -11701.0,
+          942.0
+        ],
+        [
+          -11745.0,
+          942.0
+        ],
+        [
+          -11745.0,
+          963.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "samoan_islands__oceania_dateline_west2",
+      "dimension": "minecraft:overworld",
+      "priority": 732642,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Samoan Islands",
+      "polygon": [
+        [
+          -11643.0,
+          983.0
+        ],
+        [
+          -11643.0,
+          969.0
+        ],
+        [
+          -11667.0,
+          969.0
+        ],
+        [
+          -11667.0,
+          983.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tongan_limestone_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 732670,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Tongan Limestone Islands",
+      "polygon": [
+        [
+          -11950.0,
+          1454.0
+        ],
+        [
+          -11950.0,
+          1437.0
+        ],
+        [
+          -11974.0,
+          1437.0
+        ],
+        [
+          -11974.0,
+          1454.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tongan_limestone_islands__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 732671,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Tongan Limestone Islands",
+      "polygon": [
+        [
+          -11868.0,
+          1283.0
+        ],
+        [
+          -11868.0,
+          1263.0
+        ],
+        [
+          -11885.0,
+          1263.0
+        ],
+        [
+          -11885.0,
+          1283.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tongan_limestone_islands__oceania_dateline_west2",
+      "dimension": "minecraft:overworld",
+      "priority": 732672,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Tongan Limestone Islands",
+      "polygon": [
+        [
+          -11938.0,
+          1468.0
+        ],
+        [
+          -11938.0,
+          1454.0
+        ],
+        [
+          -11945.0,
+          1454.0
+        ],
+        [
+          -11945.0,
+          1468.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "rarotonga_island",
+      "dimension": "minecraft:overworld",
+      "priority": 732700,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Rarotonga Island",
+      "polygon": [
+        [
+          -10902.0,
+          1453.0
+        ],
+        [
+          -10902.0,
+          1446.0
+        ],
+        [
+          -10912.0,
+          1446.0
+        ],
+        [
+          -10912.0,
+          1453.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "aitutaki_atoll",
+      "dimension": "minecraft:overworld",
+      "priority": 732730,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Aitutaki Atoll",
+      "polygon": [
+        [
+          -10899.0,
+          1294.0
+        ],
+        [
+          -10899.0,
+          1283.0
+        ],
+        [
+          -10912.0,
+          1283.0
+        ],
+        [
+          -10912.0,
+          1294.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "society_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 732760,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Society Islands",
+      "polygon": [
+        [
+          -10180.0,
+          1222.0
+        ],
+        [
+          -10180.0,
+          1195.0
+        ],
+        [
+          -10216.0,
+          1195.0
+        ],
+        [
+          -10216.0,
+          1222.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "society_islands__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 732761,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Society Islands",
+      "polygon": [
+        [
+          -10332.0,
+          1157.0
+        ],
+        [
+          -10332.0,
+          1140.0
+        ],
+        [
+          -10346.0,
+          1140.0
+        ],
+        [
+          -10346.0,
+          1157.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "society_islands__oceania_dateline_west2",
+      "dimension": "minecraft:overworld",
+      "priority": 732762,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Society Islands",
+      "polygon": [
+        [
+          -10223.0,
+          1205.0
+        ],
+        [
+          -10223.0,
+          1191.0
+        ],
+        [
+          -10237.0,
+          1191.0
+        ],
+        [
+          -10237.0,
+          1205.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "society_islands__oceania_dateline_west3",
+      "dimension": "minecraft:overworld",
+      "priority": 732763,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Society Islands",
+      "polygon": [
+        [
+          -10356.0,
+          1133.0
+        ],
+        [
+          -10356.0,
+          1120.0
+        ],
+        [
+          -10364.0,
+          1120.0
+        ],
+        [
+          -10364.0,
+          1133.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tuamotu_atolls",
+      "dimension": "minecraft:overworld",
+      "priority": 732790,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Tuamotu Atolls",
+      "polygon": [
+        [
+          -10049.0,
+          1051.0
+        ],
+        [
+          -10049.0,
+          1017.0
+        ],
+        [
+          -10097.0,
+          1017.0
+        ],
+        [
+          -10097.0,
+          1051.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tuamotu_atolls__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 732791,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Tuamotu Atolls",
+      "polygon": [
+        [
+          -9929.0,
+          1130.0
+        ],
+        [
+          -9929.0,
+          1092.0
+        ],
+        [
+          -9957.0,
+          1092.0
+        ],
+        [
+          -9957.0,
+          1130.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tuamotu_atolls__oceania_dateline_west2",
+      "dimension": "minecraft:overworld",
+      "priority": 732792,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Tuamotu Atolls",
+      "polygon": [
+        [
+          -10110.0,
+          1027.0
+        ],
+        [
+          -10110.0,
+          1017.0
+        ],
+        [
+          -10127.0,
+          1017.0
+        ],
+        [
+          -10127.0,
+          1027.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "marquesas_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 732820,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Marquesas Islands",
+      "polygon": [
+        [
+          -9482.0,
+          676.0
+        ],
+        [
+          -9482.0,
+          659.0
+        ],
+        [
+          -9503.0,
+          659.0
+        ],
+        [
+          -9503.0,
+          676.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "mountain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "marquesas_islands__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 732821,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Marquesas Islands",
+      "polygon": [
+        [
+          -9557.0,
+          613.0
+        ],
+        [
+          -9557.0,
+          599.0
+        ],
+        [
+          -9578.0,
+          599.0
+        ],
+        [
+          -9578.0,
+          613.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "mountain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "austral_islands",
+      "dimension": "minecraft:overworld",
+      "priority": 732850,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Austral Islands",
+      "polygon": [
+        [
+          -10327.0,
+          1543.0
+        ],
+        [
+          -10327.0,
+          1526.0
+        ],
+        [
+          -10336.0,
+          1526.0
+        ],
+        [
+          -10336.0,
+          1543.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "austral_islands__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 732851,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Austral Islands",
+      "polygon": [
+        [
+          -10199.0,
+          1601.0
+        ],
+        [
+          -10199.0,
+          1589.0
+        ],
+        [
+          -10209.0,
+          1589.0
+        ],
+        [
+          -10209.0,
+          1601.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "austral_islands__oceania_dateline_west2",
+      "dimension": "minecraft:overworld",
+      "priority": 732852,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Austral Islands",
+      "polygon": [
+        [
+          -10075.0,
+          1635.0
+        ],
+        [
+          -10075.0,
+          1625.0
+        ],
+        [
+          -10086.0,
+          1625.0
+        ],
+        [
+          -10086.0,
+          1635.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "line_atolls",
+      "dimension": "minecraft:overworld",
+      "priority": 732880,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Line Atolls",
+      "polygon": [
+        [
+          -10728.0,
+          -113.0
+        ],
+        [
+          -10728.0,
+          -143.0
+        ],
+        [
+          -10759.0,
+          -143.0
+        ],
+        [
+          -10759.0,
+          -113.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "line_atolls__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 732881,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Line Atolls",
+      "polygon": [
+        [
+          -10868.0,
+          -259.0
+        ],
+        [
+          -10868.0,
+          -276.0
+        ],
+        [
+          -10885.0,
+          -276.0
+        ],
+        [
+          -10885.0,
+          -259.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "phoenix_atolls",
+      "dimension": "minecraft:overworld",
+      "priority": 732910,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Phoenix Atolls",
+      "polygon": [
+        [
+          -11711.0,
+          197.0
+        ],
+        [
+          -11711.0,
+          184.0
+        ],
+        [
+          -11728.0,
+          184.0
+        ],
+        [
+          -11728.0,
+          197.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "phoenix_atolls__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 732911,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Phoenix Atolls",
+      "polygon": [
+        [
+          -11909.0,
+          324.0
+        ],
+        [
+          -11909.0,
+          314.0
+        ],
+        [
+          -11919.0,
+          314.0
+        ],
+        [
+          -11919.0,
+          324.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "pitcairn_island",
+      "dimension": "minecraft:overworld",
+      "priority": 732940,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Pitcairn Island",
+      "polygon": [
+        [
+          -8880.0,
+          1713.0
+        ],
+        [
+          -8880.0,
+          1709.0
+        ],
+        [
+          -8884.0,
+          1709.0
+        ],
+        [
+          -8884.0,
+          1713.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "rapa_nui",
+      "dimension": "minecraft:overworld",
+      "priority": 732970,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Rapa Nui",
+      "polygon": [
+        [
+          -7455.0,
+          1857.0
+        ],
+        [
+          -7455.0,
+          1845.0
+        ],
+        [
+          -7472.0,
+          1845.0
+        ],
+        [
+          -7472.0,
+          1857.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_coastal_hills",
+      "dimension": "minecraft:overworld",
+      "priority": 723000,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian Coastal Hills",
+      "polygon": [
+        [
+          -10626.0,
+          -1290.0
+        ],
+        [
+          -10568.0,
+          -1328.0
+        ],
+        [
+          -10566.0,
+          -1339.0
+        ],
+        [
+          -10588.0,
+          -1362.0
+        ],
+        [
+          -10639.0,
+          -1386.0
+        ],
+        [
+          -10655.0,
+          -1352.0
+        ],
+        [
+          -10654.0,
+          -1300.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_coastal_hills__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 723001,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian Coastal Hills",
+      "polygon": [
+        [
+          -10663.0,
+          -1403.0
+        ],
+        [
+          -10646.0,
+          -1417.0
+        ],
+        [
+          -10663.0,
+          -1430.0
+        ],
+        [
+          -10694.0,
+          -1437.0
+        ],
+        [
+          -10697.0,
+          -1420.0
+        ],
+        [
+          -10697.0,
+          -1403.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_coastal_hills__oceania_dateline_west2",
+      "dimension": "minecraft:overworld",
+      "priority": 723002,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian Coastal Hills",
+      "polygon": [
+        [
+          -10790.0,
+          -1452.0
+        ],
+        [
+          -10762.0,
+          -1454.0
+        ],
+        [
+          -10769.0,
+          -1481.0
+        ],
+        [
+          -10787.0,
+          -1483.0
+        ],
+        [
+          -10807.0,
+          -1453.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_coastal_hills__oceania_dateline_west3",
+      "dimension": "minecraft:overworld",
+      "priority": 723003,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian Coastal Hills",
+      "polygon": [
+        [
+          -10875.0,
+          -1492.0
+        ],
+        [
+          -10874.0,
+          -1516.0
+        ],
+        [
+          -10895.0,
+          -1520.0
+        ],
+        [
+          -10909.0,
+          -1509.0
+        ],
+        [
+          -10909.0,
+          -1492.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_coastal_hills__oceania_dateline_west4",
+      "dimension": "minecraft:overworld",
+      "priority": 723004,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian Coastal Hills",
+      "polygon": [
+        [
+          -10697.0,
+          -1434.0
+        ],
+        [
+          -10697.0,
+          -1449.0
+        ],
+        [
+          -10738.0,
+          -1449.0
+        ],
+        [
+          -10738.0,
+          -1434.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_coastal_hills__oceania_dateline_west5",
+      "dimension": "minecraft:overworld",
+      "priority": 723005,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian Coastal Hills",
+      "polygon": [
+        [
+          -10703.0,
+          -1415.0
+        ],
+        [
+          -10703.0,
+          -1430.0
+        ],
+        [
+          -10720.0,
+          -1430.0
+        ],
+        [
+          -10720.0,
+          -1415.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_windward_forests",
+      "dimension": "minecraft:overworld",
+      "priority": 733030,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian Windward Forests",
+      "polygon": [
+        [
+          -10568.0,
+          -1328.0
+        ],
+        [
+          -10566.0,
+          -1339.0
+        ],
+        [
+          -10588.0,
+          -1362.0
+        ],
+        [
+          -10633.091262,
+          -1383.219417
+        ],
+        [
+          -10650.0,
+          -1318.0
+        ],
+        [
+          -10583.263158,
+          -1318.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_leeward_lowlands",
+      "dimension": "minecraft:overworld",
+      "priority": 733060,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian Leeward Lowlands",
+      "polygon": [
+        [
+          -10629.0,
+          -1381.294118
+        ],
+        [
+          -10639.0,
+          -1386.0
+        ],
+        [
+          -10655.0,
+          -1352.0
+        ],
+        [
+          -10654.0,
+          -1300.0
+        ],
+        [
+          -10645.6,
+          -1297.0
+        ],
+        [
+          -10629.0,
+          -1297.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hawaiian_high_volcanoes",
+      "dimension": "minecraft:overworld",
+      "priority": 753090,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian High Volcanoes",
+      "polygon": [
+        [
+          -10602.0,
+          -1365.0
+        ],
+        [
+          -10643.0,
+          -1365.0
+        ],
+        [
+          -10643.0,
+          -1321.0
+        ],
+        [
+          -10602.0,
+          -1321.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "hawaiian_high_volcanoes__oceania_dateline_west1",
+      "dimension": "minecraft:overworld",
+      "priority": 753091,
+      "macro_region": "oceania_dateline_west",
+      "display_label": "Hawaiian High Volcanoes",
+      "polygon": [
+        [
+          -10656.0,
+          -1408.764706
+        ],
+        [
+          -10656.0,
+          -1422.0
+        ],
+        [
+          -10673.0,
+          -1422.0
+        ],
+        [
+          -10673.0,
+          -1406.0
+        ],
+        [
+          -10659.357143,
+          -1406.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    }
+  ]
+}

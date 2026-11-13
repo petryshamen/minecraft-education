@@ -626,19 +626,39 @@
       "display_label": "Northern Kazakh Steppe",
       "polygon": [
         [
-          5120.0,
-          -3345.0
+          5597.84204,
+          -3481.954727
         ],
         [
-          5598.0,
-          -3482.0
+          5530.0,
+          -3516.0
         ],
         [
-          5734.0,
+          5325.0,
+          -3652.0
+        ],
+        [
+          5052.0,
+          -3748.0
+        ],
+        [
+          4915.0,
+          -3748.0
+        ],
+        [
+          4710.0,
+          -3755.0
+        ],
+        [
+          4369.0,
+          -3652.0
+        ],
+        [
+          4096.0,
           -3686.0
         ],
         [
-          5598.0,
+          4096.0,
           -3755.0
         ],
         [
@@ -656,6 +676,10 @@
         [
           4233.0,
           -3311.0
+        ],
+        [
+          5120.0,
+          -3345.0
         ]
       ],
       "profile": {
@@ -688,28 +712,36 @@
       "display_label": "Southern Siberian Forest-Steppe",
       "polygon": [
         [
-          5803.0,
-          -3550.0
-        ],
-        [
-          5939.0,
-          -3686.0
-        ],
-        [
-          5871.0,
-          -3755.0
-        ],
-        [
-          4437.0,
-          -3755.0
-        ],
-        [
           4437.0,
           -3618.0
         ],
         [
           5325.0,
           -3550.0
+        ],
+        [
+          5478.75,
+          -3550.0
+        ],
+        [
+          5325.0,
+          -3652.0
+        ],
+        [
+          5052.0,
+          -3748.0
+        ],
+        [
+          4915.0,
+          -3748.0
+        ],
+        [
+          4710.0,
+          -3755.0
+        ],
+        [
+          4437.0,
+          -3672.539589
         ]
       ],
       "profile": {
@@ -899,28 +931,36 @@
       "display_label": "Turgai Plateau",
       "polygon": [
         [
-          4540.0,
-          -3482.0
+          4409.595073,
+          -3664.261853
+        ],
+        [
+          4369.000001,
+          -3651.999998
         ],
         [
           4369.0,
-          -3721.0
+          -3651.999998
         ],
         [
-          4164.0,
-          -3721.0
+          4157.9238,
+          -3678.287876
         ],
         [
-          4130.0,
+          4130.000002,
           -3482.0
         ],
         [
-          4164.0,
-          -3243.0
+          4164.000002,
+          -3243.000002
         ],
         [
-          4437.0,
-          -3209.0
+          4436.999999,
+          -3209.000002
+        ],
+        [
+          4539.999998,
+          -3482.0
         ]
       ],
       "profile": {
@@ -1816,36 +1856,48 @@
       "display_label": "Altai Mountains",
       "polygon": [
         [
-          5803.0,
-          -3209.0
+          6076.0,
+          -3229.000002
+        ],
+        [
+          6348.999997,
+          -3345.000001
+        ],
+        [
+          6293.490346,
+          -3414.285769
+        ],
+        [
+          6281.0,
+          -3412.999998
         ],
         [
           6076.0,
-          -3229.0
+          -3378.999998
         ],
         [
-          6349.0,
-          -3345.0
+          5803.0,
+          -3378.999998
         ],
         [
-          6212.0,
-          -3516.0
+          5802.999999,
+          -3378.999998
         ],
         [
-          5973.0,
-          -3632.0
+          5624.765487,
+          -3468.443691
         ],
         [
-          5769.0,
-          -3584.0
+          5598.000002,
+          -3446.999999
         ],
         [
-          5598.0,
-          -3447.0
+          5598.000002,
+          -3277.000001
         ],
         [
-          5598.0,
-          -3277.0
+          5803.0,
+          -3209.000002
         ]
       ],
       "profile": {
@@ -3784,244 +3836,6 @@
       }
     },
     {
-      "id": "kuznetsk_basin",
-      "dimension": "minecraft:overworld",
-      "priority": 120960,
-      "macro_region": "central_asia",
-      "display_label": "Kuznetsk Basin",
-      "polygon": [
-        [
-          6007.0,
-          -3686.0
-        ],
-        [
-          5982.5625,
-          -3755.0
-        ],
-        [
-          5803.0,
-          -3755.0
-        ],
-        [
-          5803.0,
-          -3686.0
-        ],
-        [
-          5837.0,
-          -3618.0
-        ],
-        [
-          5973.0,
-          -3604.0
-        ]
-      ],
-      "profile": {
-        "temperature": [
-          "cool",
-          "temperate"
-        ],
-        "moisture": [
-          "moderate"
-        ],
-        "vegetation": [
-          "grassland",
-          "woodland",
-          "forest"
-        ],
-        "water": [
-          "inland",
-          "river"
-        ],
-        "relief": [
-          "plain"
-        ],
-        "special": []
-      }
-    },
-    {
-      "id": "kuznetsk_alatau",
-      "dimension": "minecraft:overworld",
-      "priority": 130980,
-      "macro_region": "central_asia",
-      "display_label": "Kuznetsk Alatau",
-      "polygon": [
-        [
-          6076.0,
-          -3536.0
-        ],
-        [
-          6178.0,
-          -3618.0
-        ],
-        [
-          6189.216374,
-          -3755.0
-        ],
-        [
-          6039.15534,
-          -3755.0
-        ],
-        [
-          6007.0,
-          -3686.0
-        ],
-        [
-          5973.0,
-          -3584.0
-        ]
-      ],
-      "profile": {
-        "temperature": [
-          "cold",
-          "cool"
-        ],
-        "moisture": [
-          "moderate",
-          "humid"
-        ],
-        "vegetation": [
-          "forest",
-          "woodland",
-          "grassland",
-          "tundra",
-          "barren"
-        ],
-        "water": [
-          "inland",
-          "river"
-        ],
-        "relief": [
-          "mountain",
-          "upland"
-        ],
-        "special": [
-          "mountain_access"
-        ]
-      }
-    },
-    {
-      "id": "western_sayan",
-      "dimension": "minecraft:overworld",
-      "priority": 131000,
-      "macro_region": "central_asia",
-      "display_label": "Western Sayan",
-      "polygon": [
-        [
-          6281.0,
-          -3468.0
-        ],
-        [
-          6484.9999,
-          -3549.99996
-        ],
-        [
-          6484.9999,
-          -3550.00015
-        ],
-        [
-          6417.0,
-          -3652.0
-        ],
-        [
-          6212.0,
-          -3652.0
-        ],
-        [
-          6076.0,
-          -3550.0
-        ],
-        [
-          6076.0,
-          -3447.0
-        ]
-      ],
-      "profile": {
-        "temperature": [
-          "cold",
-          "cool"
-        ],
-        "moisture": [
-          "moderate",
-          "humid"
-        ],
-        "vegetation": [
-          "forest",
-          "woodland",
-          "grassland",
-          "tundra",
-          "barren"
-        ],
-        "water": [
-          "inland",
-          "river"
-        ],
-        "relief": [
-          "mountain",
-          "upland"
-        ],
-        "special": [
-          "mountain_access"
-        ]
-      }
-    },
-    {
-      "id": "tuva_basin",
-      "dimension": "minecraft:overworld",
-      "priority": 141020,
-      "macro_region": "central_asia",
-      "display_label": "Tuva Basin",
-      "polygon": [
-        [
-          6417.0,
-          -3454.0
-        ],
-        [
-          6484.9999,
-          -3448.830417
-        ],
-        [
-          6484.9999,
-          -3547.199992
-        ],
-        [
-          6349.0,
-          -3536.0
-        ],
-        [
-          6246.0,
-          -3495.0
-        ],
-        [
-          6246.0,
-          -3475.0
-        ]
-      ],
-      "profile": {
-        "temperature": [
-          "cold",
-          "cool"
-        ],
-        "moisture": [
-          "dry",
-          "moderate"
-        ],
-        "vegetation": [
-          "grassland",
-          "shrubland",
-          "woodland"
-        ],
-        "water": [
-          "inland",
-          "river"
-        ],
-        "relief": [
-          "valley",
-          "plain"
-        ],
-        "special": []
-      }
-    },
-    {
       "id": "western_mongolian_basins",
       "dimension": "minecraft:overworld",
       "priority": 111040,
@@ -4029,28 +3843,32 @@
       "display_label": "Western Mongolian Basins",
       "polygon": [
         [
-          6417.0,
-          -3454.0
+          6281.000001,
+          -3344.999999
         ],
         [
-          6281.0,
-          -3345.0
+          6178.000002,
+          -3242.999999
         ],
         [
-          6178.0,
-          -3243.0
+          6178.000002,
+          -3072.000002
         ],
         [
-          6178.0,
-          -3072.0
+          6484.999898,
+          -3072.000002
         ],
         [
-          6484.9999,
-          -3072.0
+          6484.999898,
+          -3427.197119
         ],
         [
-          6484.9999,
-          -3427.19712
+          6471.314835,
+          -3432.591231
+        ],
+        [
+          6378.347369,
+          -3423.021051
         ]
       ],
       "profile": {
@@ -4156,24 +3974,24 @@
       "display_label": "Uvs Nuur Basin",
       "polygon": [
         [
-          6403.0,
-          -3366.0
+          6424.347889,
+          -3427.756398
         ],
         [
-          6431.0,
-          -3447.0
+          6281.0,
+          -3412.999998
         ],
         [
-          6349.0,
-          -3475.0
+          6218.849186,
+          -3402.692058
         ],
         [
-          6226.0,
-          -3441.0
+          6212.000002,
+          -3366.000002
         ],
         [
-          6212.0,
-          -3366.0
+          6402.999999,
+          -3366.000002
         ]
       ],
       "profile": {
@@ -4465,6 +4283,294 @@
           "grassland",
           "shrubland",
           "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "hexi_corridor__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 440781,
+      "macro_region": "central_asia",
+      "display_label": "Hexi Corridor",
+      "polygon": [
+        [
+          6472.736691,
+          -2755.417272
+        ],
+        [
+          6471.263309,
+          -2718.582728
+        ],
+        [
+          6484.9999,
+          -2718.033264
+        ],
+        [
+          6484.9999,
+          -2754.926744
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "southwest_siberian_forest_steppe__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 106031,
+      "macro_region": "central_asia",
+      "display_label": "Southwest Siberian Forest-Steppe",
+      "polygon": [
+        [
+          4779.0,
+          -3686.0
+        ],
+        [
+          5393.0,
+          -3550.0
+        ],
+        [
+          5484.59007,
+          -3504.204965
+        ],
+        [
+          5562.41581,
+          -3499.732725
+        ],
+        [
+          5530.0,
+          -3516.0
+        ],
+        [
+          5325.0,
+          -3652.0
+        ],
+        [
+          5052.0,
+          -3748.0
+        ],
+        [
+          4915.0,
+          -3748.0
+        ],
+        [
+          4710.0,
+          -3755.0
+        ],
+        [
+          4481.563107,
+          -3686.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "inland",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "baraba_lake_plain__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 540061,
+      "macro_region": "central_asia",
+      "display_label": "Baraba Lake Plain",
+      "polygon": [
+        [
+          5120.0,
+          -3652.0
+        ],
+        [
+          5325.0,
+          -3652.0
+        ],
+        [
+          5120.0,
+          -3724.087912
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kulunda_plain__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 540091,
+      "macro_region": "central_asia",
+      "display_label": "Kulunda Plain",
+      "polygon": [
+        [
+          5544.745722,
+          -3508.60013
+        ],
+        [
+          5529.999999,
+          -3515.999998
+        ],
+        [
+          5324.999999,
+          -3651.999998
+        ],
+        [
+          5270.240117,
+          -3671.25622
+        ],
+        [
+          5188.000002,
+          -3651.999998
+        ],
+        [
+          5188.000002,
+          -3595.407168
+        ],
+        [
+          5393.0,
+          -3550.000002
+        ],
+        [
+          5393.000001,
+          -3550.000002
+        ],
+        [
+          5529.0,
+          -3482.000002
+        ],
+        [
+          5529.999999,
+          -3482.000002
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "irtysh_river_valley__central_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 570181,
+      "macro_region": "central_asia",
+      "display_label": "Irtysh River Valley",
+      "polygon": [
+        [
+          5000.143416,
+          -3744.622383
+        ],
+        [
+          5003.676923,
+          -3748.0
+        ],
+        [
+          4996.914812,
+          -3748.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland",
+          "grassland"
         ],
         "water": [
           "inland",

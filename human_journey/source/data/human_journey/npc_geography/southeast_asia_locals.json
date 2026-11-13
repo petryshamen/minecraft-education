@@ -4801,6 +4801,109 @@
         ],
         "special": []
       }
+    },
+    {
+      "id": "south_china_hills__southeast_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 90271,
+      "macro_region": "southeast_asia",
+      "display_label": "South China Hills",
+      "polygon": [
+        [
+          7373.0,
+          -1468.0
+        ],
+        [
+          7407.0,
+          -1468.0
+        ],
+        [
+          7373.0,
+          -1502.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "guangxi_karst_uplands__southeast_asia1",
+      "dimension": "minecraft:overworld",
+      "priority": 431291,
+      "macro_region": "southeast_asia",
+      "display_label": "Guangxi Karst Uplands",
+      "polygon": [
+        [
+          7168.000001,
+          -1570.000002
+        ],
+        [
+          7304.666667,
+          -1502.000002
+        ],
+        [
+          7372.999995,
+          -1502.000002
+        ],
+        [
+          7338.999999,
+          -1535.999998
+        ],
+        [
+          7202.0,
+          -1596.999998
+        ],
+        [
+          7135.018676,
+          -1580.940148
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
     }
   ]
 }
