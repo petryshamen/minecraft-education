@@ -1,0 +1,29 @@
+package org.humanjourney.core.juice;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import org.mockito.MockedStatic;
+import java.util.*;
+import net.minecraft.SharedConstants;
+import net.minecraft.server.Bootstrap;
+import net.minecraft.server.level.*;
+import net.minecraft.world.entity.player.Abilities;
+import net.minecraft.world.item.*;
+import net.minecraft.core.component.DataComponents;
+class JuiceCustomBottleTest {
+ static MockedStatic<net.minecraftforge.fml.ModLoader> loader;
+ @BeforeAll static void init(){loader=mockStatic(net.minecraftforge.fml.ModLoader.class);loader.when(net.minecraftforge.fml.ModLoader::get).thenReturn(mock(net.minecraftforge.fml.ModLoader.class));SharedConstants.tryDetectVersion();Bootstrap.bootStrap();}
+ @AfterAll static void close(){loader.close();}
+ MockedStatic<JuiceBottles> bottles;JuiceDefinition def;
+ @BeforeEach void setup(){def=new JuiceDefinition(2,"custom",new JuiceDefinition.Bottle(true,null,"Fixture Juice","minecraft:glass_bottle"),new JuiceDefinition.Ingredient("minecraft:sand",null,Set.of("minecraft:sand")),2,8,"Fixture Canteen",1);JuiceStore.accept(JuiceCatalog.of(List.of(def)),"unit");bottles=mockStatic(JuiceBottles.class,CALLS_REAL_METHODS);bottles.when(()->JuiceBottles.carrier(any(ItemStack.class))).thenAnswer(i->{ItemStack s=i.getArgument(0);return s!=null&&s.is(Items.HONEY_BOTTLE);});}
+ @AfterEach void reset(){bottles.close();JuiceStore.reset();}
+ ItemStack bottle(){var s=new ItemStack(Items.HONEY_BOTTLE);JuiceState.setBottle(s,def);return s;}
+ ServerPlayer player(boolean creative){var p=mock(ServerPlayer.class);var abilities=new Abilities();abilities.instabuild=creative;when(p.getAbilities()).thenReturn(abilities);when(p.getHealth()).thenReturn(10F);when(p.getMaxHealth()).thenReturn(20F);return p;}
+ @Test void customIdentityAndNameSurviveNativeItemSaveLoad(){var s=bottle();s.set(DataComponents.CUSTOM_NAME,net.minecraft.network.chat.Component.literal("Personal name"));var ops=net.minecraft.resources.RegistryOps.create(net.minecraft.nbt.NbtOps.INSTANCE,net.minecraft.core.RegistryAccess.fromRegistryOfRegistries(net.minecraft.core.registries.BuiltInRegistries.REGISTRY));var restored=ItemStack.CODEC.parse(ops,ItemStack.CODEC.encodeStart(ops,s).getOrThrow()).getOrThrow();assertEquals(def.id(),JuiceState.id(restored));assertEquals("Fixture Juice",JuiceState.display(restored));assertEquals(s.get(DataComponents.CUSTOM_NAME),restored.get(DataComponents.CUSTOM_NAME));}
+ @Test void completionCallsSourceHealAndNativeRemainderExactlyOnce(){var p=player(false);var count=new java.util.concurrent.atomic.AtomicInteger();try(var bridge=mockStatic(NativeJuiceEffects.class)){var out=JuiceBottles.finish(bottle(),mock(ServerLevel.class),p,s->{count.incrementAndGet();s.shrink(1);return new ItemStack(Items.GLASS_BOTTLE);});assertTrue(out.is(Items.GLASS_BOTTLE));assertEquals(1,count.get());bridge.verify(()->NativeJuiceEffects.apply(eq(p),argThat(s->s.is(Items.GLASS_BOTTLE))),times(1));verify(p,times(1)).heal(1F);}}
+ @Test void creativeDelegatesNativeNonConsumptionSafely(){var p=player(true);var input=bottle();try(var bridge=mockStatic(NativeJuiceEffects.class)){var out=JuiceBottles.finish(input,mock(ServerLevel.class),p,s->{if(!p.getAbilities().instabuild)s.shrink(1);return s;});assertSame(input,out);assertEquals(1,input.getCount());verify(p).heal(1F);}}
+ @Test void clientOrUnknownIdDoesNotApplyEffectsHealingOrNativeFinish(){var p=player(false);var level=mock(ServerLevel.class);when(level.isClientSide()).thenReturn(true);try(var bridge=mockStatic(NativeJuiceEffects.class)){JuiceBottles.finish(bottle(),level,p,s->{fail("client completion");return s;});JuiceStore.accept(JuiceCatalog.empty(),"removed");JuiceBottles.finish(bottle(),mock(ServerLevel.class),p,s->{fail("unknown completion");return s;});bridge.verifyNoInteractions();verify(p,never()).heal(anyFloat());}}
+ @Test void customCarrierNeverEntersNativeBottleHealMap(){assertTrue(JuiceStore.state().catalog().bottles().isEmpty());var p=player(false);JuiceDrinking.bottle(Items.HONEY_BOTTLE,mock(ServerLevel.class),p);verify(p,never()).heal(anyFloat());}
+ @Test void renamedCustomBottleRefreshesOnlyDisplayCache(){var s=bottle();var d=new JuiceDefinition(2,def.id(),new JuiceDefinition.Bottle(true,null,"Updated Name",def.effectSourceItem()),def.ingredient(),2,8,def.canteenDisplayName(),1);JuiceStore.accept(JuiceCatalog.of(List.of(d)),"reload");JuiceState.refreshLabel(s);assertEquals("Updated Name",JuiceState.display(s));assertEquals(def.id(),JuiceState.id(s));}
+ @Test void noUseStartOrTickHealthHookAndNativeFinishIsDelegated()throws Exception{try(var in=getClass().getClassLoader().getResourceAsStream("org/humanjourney/core/juice/CustomJuiceBottleItem.class")){var c=new org.objectweb.asm.tree.ClassNode();new org.objectweb.asm.ClassReader(in).accept(c,0);assertEquals("toughasnails/item/DrinkItem",c.superName);boolean nativeFinish=false;for(var m:c.methods)for(var i:m.instructions)if(i instanceof org.objectweb.asm.tree.MethodInsnNode call){if(m.name.equals("use")||m.name.equals("onUseTick"))assertFalse(call.name.equals("heal")||call.name.equals("finish"));if(call.owner.equals("toughasnails/item/DrinkItem")&&call.name.equals("finishUsingItem"))nativeFinish=true;}assertTrue(nativeFinish);}}
+}
