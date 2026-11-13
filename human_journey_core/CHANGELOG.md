@@ -1,3 +1,8 @@
+# 0.10.0
+
+- Added backward-compatible juice schema v2 with independent bottle/canteen unit costs (1–64), native/custom bottle modes, one registered shared custom bottle and persistent flavour/name state.
+- Added a generic bottled-juice recipe and exact multi-stack crafting budgets/remainders through the native result-slot take path, including shifted grids and quick-craft recipe bookkeeping. Retained v1 one-unit defaults and native TAN effects/healing; production data and unrelated mechanics are unchanged.
+
 # 0.9.0
 
 - Added atomic reloadable juice definitions, persistent state on existing TAN canteens and one generic full-purified-canteen crafting recipe, preserving tiers/components and exact remaining uses.

@@ -1,96 +1,86 @@
-# Juice canteens and healing — Core 0.9.0
+# Juice scaling and custom bottles — Core 0.10.0
 
-**Core 0.9.0 build verified:** [GitHub Actions run 43347893280](https://github.com/petryshamen/minecraft-education/actions/runs/43347893280), source `76967a2c2f77805a9cf9c9a7ab51224ee0dc5c39`. All 221 tests passed (179 existing + 42 new), zero failures; all ten no-world Forge checks passed. Native checks cover six TAN canteen tiers, seven native JuiceItem registrations, dynamic recipe JSON/network codecs, item NBT/component persistence and depletion. Tests execute TAN's real thirst/hydration/effect handler on mocked player dependencies; no gameplay world/player was constructed. 183 existing classes are byte-identical to Core 0.8.1, including NPC/economy, geography/discovery/HUD, fishing, temperature and unmodified water mechanics. Five existing class files change only for bootstrap and marked-juice guards, including WaterContainers' generated switch helper. Runtime SHA-256: `6135de5fdaaf75624ab045dba7263a331790359eb80e42c60f08b0019e39b721`. No automatic installation or live-server/main-datapack modification.
+Minecraft Java 1.21.8 / Java 21 / Forge 58.1.18 / Tough As Nails 21.8.0.2. Install matching `human_journey_core-0.10.0.jar` manually on server and clients, replacing the previous JAR. Core retains all 0.9 canteen/water behaviour and approved HUD defaults. No Minecraft gameplay testing, automatic installation, live-server change or main-datapack modification is performed.
 
-## Target and installation
+## Definition location and compatibility
 
-Minecraft Java 1.21.8 / Java 21 / Forge 58.1.18 / Tough As Nails 21.8.0.2. Base is Core 0.8.1, retaining approved HUD defaults. Install `human_journey_core-0.9.0.jar` manually on server and clients, replacing the prior Core JAR. Existing dependency stack remains unchanged. No Minecraft gameplay testing, automatic installation, live-server change or main-datapack deployment is performed.
+One resource per juice: **`data/human_journey/core/juice/<file>.json`**. Reload with `/reload`. Stable body IDs are independent of filenames; normal datapack resource priority applies. Unknown fields, duplicate IDs, duplicate native-output bottle IDs, invalid items/tags, empty tags, ambiguous ingredient sets and non-finite/negative healing reject the new catalog atomically, retaining the last valid catalog and error diagnostics. Removing all definitions deliberately activates an empty catalog. Existing stored juice IDs are not rewritten.
 
-## Developer data contract
+**Schema v1 needs no startup migration.** Its fields remain `schema_version: 1`, `id`, `bottle_item`, `ingredient`, `canteen_display_name`, `heal_per_drink`. It resolves to native bottle mode, bottle ingredient count **1**, canteen ingredient count **1**. Existing Java fixture constructor/accessors remain compatible. The new generic bottle recipe can also use v1 definitions. Unrelated existing native/production recipes remain independent.
 
-Create one definition per juice under **`data/human_journey/core/juice/<file>.json`** in the Human Journey datapack. Resource files are selected using normal datapack priority. The stable body `id` is independent of the filename; duplicates across different files are rejected. Core ships no definitions or production ingredients. Reload with `/reload`.
+## Schema v2
+
+All top-level fields shown below are required. These are **authoring examples**, not production files; replace the example ingredient with Developer-selected registered content.
 
 ```json
 {
-  "schema_version": 1,
-  "id": "your_stable_juice_id",
-  "bottle_item": "toughasnails:your_existing_juice_item",
-  "ingredient": { "item": "your_namespace:your_chosen_ingredient" },
-  "canteen_display_name": "Your chosen player-facing name",
+  "schema_version": 2,
+  "id": "example_native",
+  "ingredient": { "item": "examplemod:chosen_ingredient" },
+  "bottle_ingredient_count": 2,
+  "canteen_ingredient_count": 8,
+  "bottle": { "type": "native", "item": "toughasnails:apple_juice" },
+  "canteen_display_name": "Example Juice Canteen",
   "heal_per_drink": 1.0
 }
 ```
 
-This is an authoring template, not an installable definition. Replace the bottle/ingredient placeholders with registered IDs. For an item-tag ingredient use `"ingredient": { "tag": "your_namespace:your_item_tag" }` instead. Tags use Minecraft 1.21.8's `data/<namespace>/tags/item/<path>.json` path.
+Native mode requires exactly `type` and `item`. The output must remain an exact supported TAN `JuiceItem` without Food/Consumable components. It is the output item and native effect source; no extra identity marker is added to native output bottles. Their own consumption, hydration/thirst, effects and glass return remain native, plus the existing HJ healing hook.
 
-| Field | Contract |
-| --- | --- |
-| `schema_version` | Required integer 1. Unknown fields are rejected. |
-| `id` | Required stable 1–64 character logical ID: `[a-z0-9_][a-z0-9_.-]*`. |
-| `bottle_item` | Required registered exact TAN `JuiceItem`; no Consumable/Food component or unsupported item subclass. Unique across the catalog. |
-| `ingredient` | Exactly one registered non-air item or non-empty item tag. Tag contents are resolved from the reload's staged registry lookup, not stale pre-reload tags. |
-| `canteen_display_name` | Required nonblank literal text, at most 128 characters, no control characters. No names are derived from technical IDs. |
-| `heal_per_drink` | Required finite non-negative number. `1.0` means one health point / half a heart. No global juice-healing default is imposed. |
-
-At most 256 definitions and 4096 members per ingredient tag are supported. Ingredient sets cannot overlap between juices: a single ingredient must identify exactly one juice for this generic two-input recipe. Empty/unknown tags, malformed fields, duplicate juice IDs/bottle IDs and ambiguous ingredients reject the whole new catalog. Last-valid catalog, source and revision are retained and the resource/reason is logged and shown by diagnostics. Removing all definition files is a valid empty catalog; previously filled removed juices are blocked until their definitions return. Validation schema: `docs/juice.schema.json`; registry/tag/overlap checks remain authoritative at runtime.
-
-The seven existing TAN bottled juice IDs in this exact version are:
-
-```text
-toughasnails:apple_juice
-toughasnails:cactus_juice
-toughasnails:chorus_fruit_juice
-toughasnails:glow_berry_juice
-toughasnails:melon_juice
-toughasnails:pumpkin_juice
-toughasnails:sweet_berry_juice
-```
-
-These are integration references, not a production catalog. HJ Developer supplies seven stable IDs, display names, actual ingredients/tags and the approved `heal_per_drink: 1.0` values. Core does not assign those ingredients or create bottled-juice recipes. Existing TAN bottle recipes are unchanged. Developer may independently override bottle recipes later if design calls for it.
-
-## Generic canteen crafting
-
-Core registers one `human_journey_core:juice_canteen` special crafting serializer and includes one capability recipe at `data/human_journey/recipe/juice_canteen.json`:
+Custom mode replaces only the `bottle` object:
 
 ```json
-{ "type": "human_journey_core:juice_canteen", "category": "misc" }
+{
+  "type": "custom",
+  "display_name": "Example Custom Juice",
+  "effect_source_item": "toughasnails:apple_juice"
+}
 ```
 
-Developer does **not** need seven recipes, fixed outputs, component-copy directives or new Java items for canteens. Put one completely full purified TAN canteen and one accepted ingredient into a 2×2 or 3×3 grid, in any positions. No other occupied cells are allowed. One ingredient is consumed per full canteen conversion. There is no sugar requirement. Normal ingredient crafting remainders apply, but the input canteen does not also leave an empty duplicate.
+The displayed source here is illustrative, **not a choice for production Carrot Juice**. Developer chooses the actual source after reviewing native profiles. Custom mode outputs the single **`human_journey_core:juice_bottle`** item and uses the selected native source for both bottled and canteen servings. Multiple custom flavours may share one effect source; their IDs, display names, ingredients, costs and healing remain independent. Native output bottle IDs must remain unique because unmarked native bottles identify their definition by item ID.
 
-DIRTY, NORMAL, SALT, empty, partly used, already-juiced or invalid canteens are rejected. The result keeps the exact purified carrier item, material/tier, full capacity and existing component overrides. The native six tiers are leather, copper, iron, gold, diamond and netherite. Special recipes have no automatic recipe-book layout/ghost placement; server-authoritative crafting results are used. The local client does not need the definition catalog for rendering or prediction.
+Ingredient is exactly one `{"item":"namespace:id"}` or `{"tag":"namespace:tag"}`. Tag contents are resolved against Forge's updated/staged tag lookup at reload. The entire catalog retains physical-item ambiguity protection: one item cannot identify two juices. Mixing different members of the same juice's tag is allowed; mixing ingredients belonging to different juices is rejected.
 
-## Item state and presentation
+Both quantity fields are independent **integers 1–64**, measured in actual item units. No ratio or material/tier multiplier exists. Stable IDs use `[a-z0-9_][a-z0-9_.-]{0,63}`. Display names are nonblank literal strings up to 128 characters without control characters. Healing is finite and non-negative; `1.0` is one health point / half a heart, capped to the maximum-health deficit. The existing bounded catalog limits remain 256 definitions and 4096 members per tag. Machine-readable combined v1/v2 schema: `docs/juice.schema.json`; runtime registry/cross-reference checks are authoritative.
 
-The carrier remains the existing `<tier>_purified_water_canteen`; juice is a separate content identity, not a fifth water quality. The native `minecraft:custom_data` component contains a namespaced compound:
+## Generic recipes
 
-```text
-human_journey:juice: {id: "stable_id", display_name: "Configured Juice Canteen"}
-```
+Core includes two special dynamic capability recipes:
 
-`display_name` is a cached presentation label, not authority for gameplay. Current server definitions supply all drink properties/healing. Only this compound is added/removed; unrelated custom data, enchantments and other components are preserved. Native item/component persistence and inventory packets carry the marker through inventory/container moves, drops, logout and saves. No juice/tier item classes or custom component registration are needed.
+| Resource | Serializer | Input/output |
+| --- | --- | --- |
+| `data/human_journey/recipe/juice_bottle.json` | `human_journey_core:juice_bottle` | One TAN purified water bottle + configured bottle cost → one native/custom juice bottle |
+| `data/human_journey/recipe/juice_canteen.json` | `human_journey_core:juice_canteen` | One completely full purified TAN canteen + configured canteen cost → one same-tier full juice canteen |
 
-An isolated ItemStack name hook uses the stored configured name. Existing custom names take precedence, with the configured juice name also shown as a concise tooltip so contents remain identifiable. Player-inventory ticks refresh the cached label after a valid display-name reload without changing identity or uses. Chest/drop labels refresh when returned to an inventory. No custom model/texture is introduced.
+No sugar, flavour-specific Java registration or per-tier recipe is required. A carrier stack may contain additional bottles for successive crafts; each completed craft consumes exactly **one** carrier unit. There must be one carrier cell, no unrelated occupied cells, and enough matching ingredient units across the remaining cells. Excess matching units may remain. For cost 8, one stack of 20 becomes 12; 4+4, mixed members of the same tag, or eight separate cells in a 3×3 grid are also valid. Extra matching cells do not increase the price and can remain unconsumed when the budget has already been met.
 
-## Native behaviour and completion hooks
+All six canteen tiers share exactly the same configured cost. Partial/dirty/normal/salt/already-juiced canteens are invalid; bottle recipes require TAN purified water bottles, rejecting normal/dirty/salt/empty/juice bottles. Existing compatible component overrides, names and canteen tier are preserved. Native bottle output uses the configured TAN item; custom output attaches flavour identity to the shared item. Recipes are special recipes with no automatic recipe-book ghost layout; server results are authoritative and clients do not need the full catalog.
 
-Exact TAN 21.8.0.2 inspection found all seven juices use `JuiceItem`, whose item-specific behaviour is native drink eligibility plus the base `DrinkItem` consumption/stat/advancement/glass-bottle handling. Thirst, hydration and unsafe-drink effect are applied by `ThirstHandler.onItemUseFinish` using live TAN drink tags. TAN juice items do not have extra per-flavour finish effects in this version.
+**Legacy fixed recipes are independent.** Core does not remove or reprice TAN/production recipes. After migrating production definitions, Developer must intentionally remove/override redundant fixed recipes that would otherwise offer a cheaper alternative. Do not assume the generic cost changes every other recipe using the same output.
 
-For a canteen, the completed-use hook constructs a one-serving stack of the configured bottle and calls **that exact TAN handler** using a synthetic GlitchCore Finish event. It does not consume/spawn a real bottle, broadcast a second global event or copy thirst/hydration/effect constants. TAN's current tags, precedence, thirst-enabled guard and effect duration/probability remain native. The original marked-canteen TAN finish event is suppressed, preventing an additional purified-water serving. Canteen eligibility uses the configured native bottle's `canAlwaysDrink()` value. Native canteen use duration and sounds remain intact.
+## Exact consumption and shift-click
 
-The same completed canteen call restores configured health once and advances damage by exactly one use in survival. Unbreaking does not grant extra juice servings: one successful sip always spends one use. Enchantments including Water Cleansing remain on the item, without converting juice back to water. Creative mode follows native no-depletion convention. The final sip transmutates to the matching empty canteen and removes only juice state and used-fill damage, preserving other component overrides.
+`JuiceCrafting` builds one immutable per-craft unit budget. It resolves the carrier/juice, sums available units, allocates the configured cost in grid order, and records **zero** for valid matching cells not needed for the cost. Minecraft trims empty grid borders; the planner explicitly maps trimmed recipe coordinates back to full 2×2/3×3 container indices.
 
-Configured bottled juices receive healing at **RETURN from native `DrinkItem.finishUsingItem`**, server-side only. Their native stack consumption, glass-bottle return, stats/criteria, thirst/hydration and finish effects remain untouched. No healing occurs on right-click, use ticks, interrupted use, the client, or unrelated drinks. The canteen bridge calls only TAN's thirst handler, so it cannot trigger a second bottle-healing hook. Health restoration is capped to the native maximum-health deficit; zero and large finite data values are safe.
+An isolated `ResultSlot` Mixin preserves the normal native result-taking/shift-click/stat/recipe-award path. For the two HJ quantity recipes only, it replaces native `removeItem(index, 1)` with that cell's exact budget, including zero. Native quick-craft clears its used-recipe holder before `onTake`, so the adapter captures the selected HJ recipe before that clear. Each completed take recomputes its current budget, and native result recalculation stops repeated crafting when a carrier/material is insufficient. Ordinary recipes keep their vanilla per-cell consumption.
 
-## Water compatibility and invalid state
+Normal ingredient crafting remainders are multiplied by actual consumed units. The carrier leaves no duplicated empty container. Grid remainders respect real max stack size and available merge space; overflow is split into legal stacks and routed through the normal player-inventory/drop fallback after the native take loop. A pickup guard refuses stale/invalid HJ results before taking. No custom global crafting loop or client-side resource deduction is introduced.
 
-Marked juice canteens are excluded from water quality classification, filtration, conversion/refilling and boiling. Heat guards prevent old fixed furnace/campfire recipes from stripping the marker. An isolated crafting guard blocks unrelated fixed recipes from consuming a juice carrier and silently producing water or refilling it. Ordinary unmarked water logic is unchanged. No Rain Collector, purifier, salt classification or treatment balance is redesigned.
+Support is for the normal vanilla/Forge inventory and crafting-table `ResultSlot` path. Third-party automated crafting systems that bypass it need a quantity-aware adapter; merely invoking the recipe's `assemble` method does not consume inputs. The normal server take path is covered by synthetic hook tests and no-world native-container checks; actual inventory clicks remain a user gameplay check.
 
-Unknown, malformed or removed juice IDs and invalid carrier states cannot drink, heal or spend uses; the canteen remains intact and the player receives a clear error directing them to diagnostics. Such items never fall back to purified water merely because their carrier item is purified. Restoring a valid definition restores their usability.
+## Shared item state, rendering and drinking
+
+Custom bottles and canteens use native `minecraft:custom_data`, compound **`human_journey:juice`**, with stable `id` and cached `display_name`. The marker is preserved by native item save/network transport through moves, storage, drops and saves. Cached text is presentation only; current server definitions determine all effects and healing. Custom names stay intact; the configured contents label is available in the tooltip. Existing canteen depletion remains one use per successful survival sip, retaining identity until the final matching-tier empty canteen. Creative mode retains native no-depletion convention.
+
+Exactly one Java item, `CustomJuiceBottleItem`, is registered. Modern `assets/human_journey_core/items/juice_bottle.json` selects one shared generated bottle model using the existing vanilla honey-bottle texture. No new flavour textures or client renderer classes are added. An unconfigured generic item cannot drink. Valid custom bottles show the configured bottle display name; canteens show their configured canteen name. Inventory ticks refresh labels after valid reloads.
+
+The custom bottle extends TAN `DrinkItem`, so native 32-tick drink animation, existing TAN sound compatibility, stats/criteria, survival consumption/glass-bottle return and creative convention are reused. Use eligibility comes from the configured source's native `canAlwaysDrink`. On server-side completion, Core calls the same exact TAN `ThirstHandler` on a virtual source bottle, heals once, then delegates physical consumption to native bottle completion. Custom items are excluded from the native-item healing map, and their marked original finish event is suppressed, preventing double hydration/healing. No right-click/tick/interruption/client healing hook exists.
+
+Custom canteens use `effect_source_item` through the existing canteen engine. Native-mode canteens still use their configured native bottle. No thirst/hydration/effect constants are copied. Unknown/removed/invalid custom IDs or a custom bottle whose definition has changed to native mode are blocked without consumption/healing or fallback to water. Restoring a valid matching definition restores use. Water quality, filtration/boiling, purifier, Rain Collector and Water Cleansing protections remain unchanged.
 
 ## Diagnostics
 
-Permission level 2:
+Permission level 2 commands remain:
 
 ```text
 /hjcore juice
@@ -98,19 +88,22 @@ Permission level 2:
 /hjcore juice show <id>
 ```
 
-The root command reports catalog source/revision/reload error and the main-hand canteen's tier, juice ID, remaining/max uses and validity. `show` reports bottle ID, ingredient/tag, configured display name and healing. IDs have tab completion; lists are paginated. Existing Core/NPC/geography commands remain registered.
+`show` now includes schema version, mode, native output or custom display name, effect source, independent bottle/canteen counts, ingredient and healing. Main-hand inspection recognises custom bottles (including unconfigured/invalid ones) as well as canteen tier/remaining/max uses. Errors retain the failed reload reason and last valid source/revision.
 
-## Automated evidence and known limits
+## Developer migration
 
-Tests use synthetic catalogs/ingredients, real item/component codecs, mocked players and the real TAN thirst handler. The no-world Forge data run exercises the exact six registered canteen tiers, seven registered juice bottle classes, native dynamic recipe/remainders, custom name/enchantment/data preservation, repeated depletion, unknown IDs and water guards. Mixin targets are loaded under ModLauncher. These checks are not Minecraft gameplay, GUI, world restart or dedicated-server gameplay startup testing.
+Keep existing IDs, filenames, ingredients, canteen names and healing unless intentionally changing production content. Change seven definitions to `schema_version: 2`; replace each old `bottle_item` with `bottle: {type: native, item: <same ID>}` and supply both required costs. Then remove/override redundant fixed bottle recipes deliberately. Core ships no production definitions or balance matrix.
 
-Integration deliberately accepts exact TAN `JuiceItem` bottles for the inspected version. Unrelated mod drinks, subclasses, Food/Consumable-driven drinks or future TAN versions with new special effects need an adapter review and are rejected instead of silently approximated. Third-party scripts listening to arbitrary global bottle-finish events are not replayed for virtual canteen servings; only TAN's own native handler is invoked. A separate future adapter would be needed for such hooks.
+For the eighth future custom juice, Developer supplies its stable ID, ingredient/tag, both costs, bottle display name, canteen display name, healing and a reviewed native `effect_source_item`. Use `bottle.type: custom`; no new Java item or per-flavour recipe is needed. The requested cost range, including 2/5 and 2/8, is supported for every tier. Developer—not Core—chooses Carrot's final profile and production data.
 
-## Manual checklist for the user / Developer
+Supported source IDs remain `toughasnails:apple_juice`, `cactus_juice`, `chorus_fruit_juice`, `glow_berry_juice`, `melon_juice`, `pumpkin_juice`, `sweet_berry_juice` (each with the `toughasnails:` namespace). Exact inspected TAN `JuiceItem` classes without Food/Consumable are supported; arbitrary mod drinks/new subclasses require adapter review. External global bottle-finish scripts are not replayed for virtual servings, only TAN's native handler.
 
-1. Supply test definitions with chosen ingredients; `/reload`; inspect `juice list/show`. Confirm invalid/duplicate definitions log clear errors and keep the last valid catalog. Confirm missing definitions disable only juice support.
-2. Craft with full purified leather and another-tier canteen. Verify same tier, full uses, chosen name and consumed ingredient. Reject partial/dirty/normal/salt canteens, wrong ingredients and extra occupied cells. Try inventory and crafting-table grids, normal take and shift-click.
-3. Drink while thirsty/injured; compare against the corresponding native bottle. Expect configured healing (1.0 = half heart), native thirst/hydration/effects and exactly one canteen use. Interrupt consumption and confirm no bonus/use. Check maximum health, creative convention and final matching empty tier.
-4. Test all six tiers and the seven eventual definitions. Preserve names, enchantments/Water Cleansing and custom components; move/drop/store items, log out and restart the test server. Verify juice identity and remaining uses persist.
-5. Remove/restore a test definition and inspect blocked/restored old canteens. Reload a name/heal change and inspect updated behaviour. Confirm no juice filtration/boiling/refill through legacy fixed recipes.
-6. Recheck ordinary DIRTY/NORMAL/PURIFIED/SALT water, native bottles, filtering, furnace/campfire, Rain Collector, purifier, temperature, NPC economy, geography/discovery, approved HUD defaults and progression. Nothing is automatically deployed to the main datapack or server.
+## Manual acceptance checklist — not performed by Core
+
+1. Start with existing v1 files unchanged; inspect defaults 1/1 and native healing/canteens. Migrate synthetic tests to v2, reload, and inspect mode/source/costs. Reject missing/invalid counts, source/name errors and ingredient ambiguity while retaining the last valid catalog.
+2. Test cost 2/8 with one stack, split stacks, mixed valid tag members, eight occupied ingredient cells, shifted/edge placements, excess units and insufficient units. Check exact before/after counts in inventory and crafting-table grids, normal clicks and shift-click; test full inventory and ingredient remainders.
+3. Test native output and shared custom output, bottle names/model/sounds, interrupted and completed drinking, half-heart healing and max-health cap, native source thirst/hydration, creative mode, glass return and removed IDs.
+4. Test all six canteen tiers at identical material cost, components/custom names, partial/wrong/salt/already-juiced rejection, custom effect source, one use per sip and final empty tier. Move/store/drop, log out and restart the test server; identity and remaining uses must persist.
+5. Recheck ordinary juices/water/treatment/purifier/Rain Collector, Water Cleansing, NPC economy, geography/discovery/HUD, fishing and temperature. Do not deploy production definitions until these checks are accepted.
+
+Automated tests and headless Forge data checks do not claim Minecraft GUI/gameplay or actual loaded-world restart testing. No Era/Agriculture/dessert/progression content, NPC commodities, production prices or main datapack is modified.
