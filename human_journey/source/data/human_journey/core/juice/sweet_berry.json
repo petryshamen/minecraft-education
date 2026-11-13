@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "sweet_berry",
+  "bottle_item": "toughasnails:sweet_berry_juice",
+  "ingredient": {
+    "item": "minecraft:sweet_berries"
+  },
+  "canteen_display_name": "Sweet Berry Juice Canteen",
+  "heal_per_drink": 1.0
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "chorus_fruit",
+  "bottle_item": "toughasnails:chorus_fruit_juice",
+  "ingredient": {
+    "item": "minecraft:chorus_fruit"
+  },
+  "canteen_display_name": "Chorus Fruit Juice Canteen",
+  "heal_per_drink": 1.0
+}

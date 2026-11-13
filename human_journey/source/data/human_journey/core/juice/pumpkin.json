@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "pumpkin",
+  "bottle_item": "toughasnails:pumpkin_juice",
+  "ingredient": {
+    "item": "minecraft:pumpkin"
+  },
+  "canteen_display_name": "Pumpkin Juice Canteen",
+  "heal_per_drink": 1.0
+}

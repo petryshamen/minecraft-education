@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "melon",
+  "bottle_item": "toughasnails:melon_juice",
+  "ingredient": {
+    "item": "minecraft:melon_slice"
+  },
+  "canteen_display_name": "Melon Juice Canteen",
+  "heal_per_drink": 1.0
+}

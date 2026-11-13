@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "juice",
+  "ingredients": [
+    "toughasnails:purified_water_bottle",
+    "minecraft:melon_slice"
+  ],
+  "result": {
+    "count": 1,
+    "id": "toughasnails:melon_juice"
+  }
+}

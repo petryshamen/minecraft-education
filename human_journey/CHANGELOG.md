@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.4
+
+- Added seven Core schema-1 juice definitions (apple, cactus, chorus_fruit, glow_berry, melon, pumpkin, sweet_berry), each restoring 1.0 HP per successful drink. Uses Core’s generic six-tier, state-preserving canteen engine; no per-tier recipes/items, Agriculture/era gate or juice commodities were added.
+- Overrode the seven exact TAN bottle recipe IDs with purified water + the corresponding ingredient, removing sugar while preserving native outputs/count/category/group. Native thirst/hydration/tags, water production, technology enforcement, geography/HUD and all other gameplay data remain unchanged.
+- Verified completed and installed Core 0.9.0 with the exact published JAR hash. In-game reload acceptance and gameplay remain manual tests; no mod was installed by this datapack task. Offline catalog/schema/recipe and recipe-initialization checks passed; no gameplay or mod installation was performed.
+
 ## 0.5.3
 
 - Integrated the exact approved Southern Africa, Near East/Caucasus and Arabian datasets: 550 locals, 184 additions, 12 existing-record updates, no deployed IDs removed. Regrouped 12 local-only files without duplicate snapshots; Greater Caucasus is refined under its stable ID and Hujrah remains `hujrah_plateau_near1`.
