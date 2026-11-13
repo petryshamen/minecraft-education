@@ -11,6 +11,7 @@ public final class JuiceState {
  public static String id(ItemStack stack){return data(stack).getString("id").orElse("");}
  public static String display(ItemStack stack){String name=data(stack).getString("display_name").orElse("");return name.isBlank()||name.length()>128?"Unresolved Juice Canteen":name;}
  public static void set(ItemStack stack,JuiceDefinition definition){var old=stack.get(DataComponents.CUSTOM_DATA);var data=old==null?new CompoundTag():old.copyTag();var juice=new CompoundTag();juice.putString("id",definition.id());juice.putString("display_name",definition.canteenDisplayName());data.put(KEY,juice);stack.set(DataComponents.CUSTOM_DATA,CustomData.of(data));}
+ public static void refreshLabel(ItemStack stack){if(!marked(stack))return;var def=JuiceContainers.definition(stack);if(def!=null&&!display(stack).equals(def.canteenDisplayName()))set(stack,def);}
  public static void clear(ItemStack stack){var old=stack.get(DataComponents.CUSTOM_DATA);if(old==null)return;var data=old.copyTag();data.remove(KEY);if(data.isEmpty())stack.remove(DataComponents.CUSTOM_DATA);else stack.set(DataComponents.CUSTOM_DATA,CustomData.of(data));}
  private JuiceState(){}
 }
