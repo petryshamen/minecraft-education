@@ -1,5 +1,7 @@
 # Discovered geography on Xaero World Map — Core 0.11.0
 
+**Verified Core 0.11.0:** [GitHub Actions build 43557161882](https://github.com/petryshamen/minecraft-education/actions/runs/43557161882), source `e9b2150633ac9575f3eef1b82bf1e115855b8b90`. All 296 tests passed (256 existing + 40 new), zero failures; all twelve no-world Forge checks passed. 217 existing runtime classes are byte-identical to 0.10.0; six changed class files are limited to geography bootstrap, transport integration, diagnostics and client config. All old tests, examples, schemas and existing packaged data/assets are unchanged. Runtime SHA-256 `ee96bf39d8e675300e300b2478b9caee35ebe0a1045fbcc83c04082734908519`. No Minecraft gameplay testing, automatic installation, live-server or main-datapack modification.
+
 Minecraft 1.21.8 / Forge 58.1.18. The optional client adapter supports **exactly Xaero World Map 1.39.13 Forge 1.21.8**. Install Core manually on server and participating clients; keep Xaero client-side. No geography datapack migration, new production content, Minimap API dependency or server Xaero installation is required. All gameplay/visual interaction acceptance remains manual.
 
 ## Inspected dependency and render hook
