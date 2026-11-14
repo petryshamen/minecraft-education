@@ -3,6 +3,7 @@ import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.client.gui.GuiGraphics;
+import org.humanjourney.core.integration.xaero.client.Xaero13913Adapter;
 /** Additive render-only hook, before native controls/dropdowns. No input or terrain hooks. */
 @Pseudo @Mixin(targets="xaero.map.gui.GuiMap",remap=false)
 public class GuiMapMixin {

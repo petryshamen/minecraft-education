@@ -1,3 +1,8 @@
+# 0.11.0
+
+- Added an isolated optional Xaero World Map 1.39.13 adapter with discovered Local outlines, priority-aware Local/Macro hover and configurable subtle presentation. No terrain, Minimap, input or permanent map-label changes.
+- Added discovered-only, privacy-filtered geometry projections and bounded atomic full/delta/reset synchronisation with revision checks, reload/Era refresh, indexed viewport/hover queries and diagnostics. Existing HUD defaults, discovery rules/storage, production geography and all unrelated gameplay systems are retained.
+
 # 0.10.0
 
 - Added backward-compatible juice schema v2 with independent bottle/canteen unit costs (1–64), native/custom bottle modes, one registered shared custom bottle and persistent flavour/name state.

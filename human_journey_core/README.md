@@ -1,4 +1,7 @@
-# Human Journey Core 0.10.0
+# Human Journey Core 0.11.0
+
+Optional Xaero World Map **1.39.13** integration: discovered Local outlines and Local/Macro hover, backed by bounded atomic discovered-only geometry synchronisation. No Xaero server dependency; HUD, shared discovery and other mechanics remain independent. **[Architecture, exact dependency/hook evidence, configuration, diagnostics and manual checklist](WORLD-MAP.md)**. Install manually on server and participating clients. No production datapack migration or gameplay testing.
+
 
 **Core 0.10.0 build verified:** [GitHub Actions run 43528787371](https://github.com/petryshamen/minecraft-education/actions/runs/43528787371), source `da4417d46b2fd500801e8100c40d496c330a05bd`. All 256 tests passed (221 prior tests retained/migrated + 35 new), zero failures; all eleven no-world Forge checks passed. Exact-unit planning/removal tests include normal/repeated takes, native quick-craft recipe clearing, split/tag/shifted grids, v1 defaults and custom bottle/canteen source/healing/persistence. Native data checks exercise registered six-tier canteens, shared item/model name/codecs, v2 recipes and bounded resource accounting. 201 existing classes are byte-identical to Core 0.9.0; existing class changes are confined to juice integration. Runtime SHA-256: `ca7324d31ff86d377dddddaf8b57a941438e26169ff1fa4ef404a4a3d6fa40be`. No Minecraft gameplay, automatic installation, main-datapack change or live-server deployment.
 
