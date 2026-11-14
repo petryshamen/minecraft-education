@@ -1,3 +1,8 @@
+# 0.13.0
+
+- Added reloadable independent water Map Features (polygon/polyline), separate shared proximity discovery/SavedData and bounded discovered-only revisioned transport, client BVH hover/rendering and admin diagnostics. No third geography/economic layer or production water catalog.
+- Added independent feature Hover/All/Off preference/control, feature tooltip precedence and hydrography styling. Shared HJ map controls now reserve the compass envelope and avoid each other/native widgets. Existing geography protocol, progression and unrelated mechanics remain unchanged.
+
 # 0.12.0
 
 - Added hover-first boundary modes (hover/locals/all/off), shared selected-area hover results and distinct normal/hover Local/Macro styles, retaining the cursor-following tooltip and existing map geometry/privacy protocol.

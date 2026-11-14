@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "synthetic_river",
+  "label": "Synthetic River",
+  "feature_type": "river",
+  "dimension": "minecraft:overworld",
+  "priority": 50,
+  "discovery_radius": 8,
+  "geometry": {
+    "type": "polyline",
+    "points": [
+      [
+        150,
+        80
+      ],
+      [
+        150,
+        230
+      ]
+    ]
+  }
+}

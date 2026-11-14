@@ -1,0 +1,3 @@
+# Synthetic map-feature test only
+
+Manual test-world installation only. Contains Synthetic Sea at X100..200/Z100..200 and Synthetic River at X150/Z80..230; these are artificial coordinates, not production geography. Relocate points to a desired test coast, or explore this coordinate range. Discovery is geometric and does not require actual water blocks. Radius8. Student requires hj_participant + hj_student and no hj_teacher. `/reload`; `/hj mapfeature status`. Teacher approaches first to test exclusion, then student. `/hj mapfeature discovery reset` resets feature knowledge only. See MAP-FEATURES.md for checklist A–H and schema. Do not integrate this synthetic content into the real datapack without replacing it with approved production data.

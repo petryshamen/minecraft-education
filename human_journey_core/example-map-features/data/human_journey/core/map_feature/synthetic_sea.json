@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "synthetic_sea",
+  "label": "Synthetic Sea",
+  "feature_type": "sea",
+  "dimension": "minecraft:overworld",
+  "priority": 50,
+  "discovery_radius": 8,
+  "geometry": {
+    "type": "polygon",
+    "points": [
+      [
+        100,
+        100
+      ],
+      [
+        200,
+        100
+      ],
+      [
+        200,
+        200
+      ],
+      [
+        100,
+        200
+      ]
+    ]
+  }
+}

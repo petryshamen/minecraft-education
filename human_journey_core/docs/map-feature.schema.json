@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HJ Map Feature v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "label",
+    "feature_type",
+    "dimension",
+    "geometry"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+      "not": {
+        "enum": [
+          "none",
+          "unknown"
+        ]
+      }
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "\\S"
+    },
+    "feature_type": {
+      "enum": [
+        "ocean",
+        "sea",
+        "gulf",
+        "bay",
+        "strait",
+        "lake",
+        "river"
+      ]
+    },
+    "dimension": {
+      "type": "string",
+      "maxLength": 256,
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": -1000000,
+      "maximum": 1000000,
+      "default": 0
+    },
+    "discovery_radius": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 64,
+      "default": 8
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "points"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "polygon",
+            "polyline"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 512,
+          "uniqueItems": true,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "number",
+              "minimum": -30000000,
+              "maximum": 30000000
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "polygon"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "points": {
+                "minItems": 3
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
