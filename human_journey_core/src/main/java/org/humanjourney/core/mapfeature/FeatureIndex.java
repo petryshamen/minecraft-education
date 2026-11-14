@@ -1,0 +1,13 @@
+package org.humanjourney.core.mapfeature;
+import java.util.*;
+import org.humanjourney.core.geography.map.MapArea.Bounds;
+/** Immutable dimension BVH shared by server proximity and discovered-client hover/viewport queries. */
+public final class FeatureIndex {
+ private final Map<String,Node> roots=new HashMap<>();
+ private static final class Node{final Bounds bounds;final Node left,right;final List<MapFeature.View> leaf;Node(List<MapFeature.View> list){Bounds b=list.getFirst().geometry().bounds();for(var f:list)b=b.union(f.geometry().bounds());bounds=b;if(list.size()<=12){leaf=List.copyOf(list);left=right=null;}else{var copy=new ArrayList<>(list);boolean x=b.maxX()-b.minX()>=b.maxZ()-b.minZ();copy.sort(Comparator.comparingDouble(f->x?f.geometry().bounds().minX()+f.geometry().bounds().maxX():f.geometry().bounds().minZ()+f.geometry().bounds().maxZ()));int m=copy.size()/2;left=new Node(copy.subList(0,m));right=new Node(copy.subList(m,copy.size()));leaf=null;}}void query(Bounds b,List<MapFeature.View> out){if(!bounds.intersects(b))return;if(leaf!=null){for(var f:leaf)if(f.geometry().bounds().intersects(b))out.add(f);}else{left.query(b,out);right.query(b,out);}}}
+ public record Selection(MapFeature.View feature,int candidates,boolean ambiguous){}
+ public FeatureIndex(Collection<MapFeature.View> features){Map<String,List<MapFeature.View>> groups=new HashMap<>();for(var f:features)groups.computeIfAbsent(f.dimension(),k->new ArrayList<>()).add(f);groups.forEach((d,v)->roots.put(d,new Node(v)));}
+ public List<MapFeature.View> query(String dimension,Bounds box){var out=new ArrayList<MapFeature.View>();var root=roots.get(dimension);if(root!=null)root.query(box,out);return out;}
+ public static Bounds around(double x,double z,double radius){return new Bounds(x-radius,z-radius,x+radius,z+radius);}
+ public Selection hover(String dimension,double x,double z,double lineTolerance){if(!Double.isFinite(x)||!Double.isFinite(z)||!Double.isFinite(lineTolerance)||lineTolerance<0||Math.abs(x)>30000000||Math.abs(z)>30000000)return new Selection(null,0,false);var candidates=query(dimension,around(x,z,lineTolerance));var lines=new ArrayList<MapFeature.View>();var polygons=new ArrayList<MapFeature.View>();for(var f:candidates)if(f.geometry().kind()==FeatureGeometry.Kind.POLYLINE){if(f.geometry().distanceSquared(x,z)<=lineTolerance*lineTolerance)lines.add(f);}else if(f.geometry().contains(x,z))polygons.add(f);var matching=lines.isEmpty()?polygons:lines;MapFeature.View best=null;boolean tie=false;for(var f:matching){if(best==null||f.priority()>best.priority()){best=f;tie=false;}else if(f.priority()==best.priority())tie=true;}return new Selection(tie?null:best,candidates.size(),tie);}
+}

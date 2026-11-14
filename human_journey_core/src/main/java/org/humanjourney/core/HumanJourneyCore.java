@@ -35,6 +35,7 @@ public final class HumanJourneyCore {
         }
         org.humanjourney.core.juice.JuiceBootstrap.register(context);
         org.humanjourney.core.npc.NpcBootstrap.register(context);
+        org.humanjourney.core.mapfeature.FeatureBootstrap.register(context);
         org.humanjourney.core.geography.GeographyBootstrap.register(context);
         org.humanjourney.core.fishing.FishingBootstrap.register();
         context.registerConfig(ModConfig.Type.SERVER, TemperatureConfig.SPEC,

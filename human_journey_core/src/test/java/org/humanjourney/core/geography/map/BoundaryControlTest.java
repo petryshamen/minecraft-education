@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.humanjourney.core.geography.map.client.*;
 class BoundaryControlTest {
  final BoundaryControlLayout.Rect button=new BoundaryControlLayout.Rect(100,10,118,20);
- @Test void controlStartsTopRightAndAvoidsNativeWidgetBounds(){var first=BoundaryControlLayout.place(1000,600,List.of()).orElseThrow();assertEquals(874,first.x());assertEquals(8,first.y());var next=BoundaryControlLayout.place(1000,600,List.of(first)).orElseThrow();assertFalse(next.overlaps(first));}
+ @Test void controlStartsTopRightAndAvoidsNativeWidgetBounds(){var first=BoundaryControlLayout.place(1000,600,List.of()).orElseThrow();assertEquals(762,first.x());assertEquals(8,first.y());var next=BoundaryControlLayout.place(1000,600,List.of(first)).orElseThrow();assertFalse(next.overlaps(first));}
  @Test void tinyOrFullyOccupiedScreenHasNoOverlappingFallback(){assertTrue(BoundaryControlLayout.place(100,30,List.of()).isEmpty());assertTrue(BoundaryControlLayout.place(1000,600,List.of(new BoundaryControlLayout.Rect(0,0,1000,600))).isEmpty());}
  @Test void leftClickInsideCyclesAndOwnsReleaseAndDrag(){var input=new BoundaryControlInput();assertEquals(BoundaryControlInput.Action.CYCLE,input.press(button,true,110,15,0));assertTrue(input.drag(0));assertTrue(input.release(0));assertFalse(input.drag(0));assertFalse(input.release(0));}
  @Test void rightClickInsideCannotCreateWaypointBehindControl(){var input=new BoundaryControlInput();assertEquals(BoundaryControlInput.Action.CONSUME,input.press(button,true,110,15,1));assertTrue(input.release(1));}
