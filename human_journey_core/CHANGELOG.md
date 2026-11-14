@@ -1,3 +1,8 @@
+# 0.12.0
+
+- Added hover-first boundary modes (hover/locals/all/off), shared selected-area hover results and distinct normal/hover Local/Macro styles, retaining the cursor-following tooltip and existing map geometry/privacy protocol.
+- Added an isolated exact-version client map control with persistent Forge config preference, legacy true-to-hover / false-to-off migration, bounded collision-free placement and scoped input capture. No server discovery, production geography or unrelated gameplay changes.
+
 # 0.11.0
 
 - Added an isolated optional Xaero World Map 1.39.13 adapter with discovered Local outlines, priority-aware Local/Macro hover and configurable subtle presentation. No terrain, Minimap, input or permanent map-label changes.

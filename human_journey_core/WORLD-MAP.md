@@ -1,6 +1,6 @@
-# Discovered geography on Xaero World Map — Core 0.11.0
+# Discovered geography on Xaero World Map — Core 0.12.0
 
-**Verified Core 0.11.0:** [GitHub Actions build 43557161882](https://github.com/petryshamen/minecraft-education/actions/runs/43557161882), source `e9b2150633ac9575f3eef1b82bf1e115855b8b90`. All 296 tests passed (256 existing + 40 new), zero failures; all twelve no-world Forge checks passed. 217 existing runtime classes are byte-identical to 0.10.0; six changed class files are limited to geography bootstrap, transport integration, diagnostics and client config. All old tests, examples, schemas and existing packaged data/assets are unchanged. Runtime SHA-256 `ee96bf39d8e675300e300b2478b9caee35ebe0a1045fbcc83c04082734908519`. No Minecraft gameplay testing, automatic installation, live-server or main-datapack modification.
+**Core 0.11.0 baseline:** [GitHub Actions build 43557161882](https://github.com/petryshamen/minecraft-education/actions/runs/43557161882), source `e9b2150633ac9575f3eef1b82bf1e115855b8b90`. All 296 tests passed (256 existing + 40 new), zero failures; all twelve no-world Forge checks passed. 217 existing runtime classes are byte-identical to 0.10.0; six changed class files are limited to geography bootstrap, transport integration, diagnostics and client config. All old tests, examples, schemas and existing packaged data/assets are unchanged. Runtime SHA-256 `ee96bf39d8e675300e300b2478b9caee35ebe0a1045fbcc83c04082734908519`. No Minecraft gameplay testing, automatic installation, live-server or main-datapack modification.
 
 Minecraft 1.21.8 / Forge 58.1.18. The optional client adapter supports **exactly Xaero World Map 1.39.13 Forge 1.21.8**. Install Core manually on server and participating clients; keep Xaero client-side. No geography datapack migration, new production content, Minimap API dependency or server Xaero installation is required. All gameplay/visual interaction acceptance remains manual.
 
@@ -8,7 +8,7 @@ Minecraft 1.21.8 / Forge 58.1.18. The optional client adapter supports **exactly
 
 Public CurseForge project 317780, file 6786823; Maven coordinate `curse.maven:xaeros-world-map-317780:6786823`. The inspected public JAR is 971120 bytes, SHA-256 `d0ff53b5039b61cd793fb6fe090d04f9807da9cf7f434957ff66b20c8a3cee33`, identical to the installed read-only Xaero artifact. Core does not redistribute its classes.
 
-The public artifact exposes no suitable arbitrary-polygon render callback; chunk/region highlighters do not implement these boundaries. The isolated optional `integration.xaero.mixin.GuiMapMixin` injects at `GuiMap.renderPreDropdown(GuiGraphics,int,int,float)` HEAD, after terrain rendering and before native controls/dropdowns. It does not intercept input or replace screens, terrain, waypoints or exploration storage. The adapter reads cached private `cameraX`, `cameraZ`, `scale`, `viewed`, `rightClickMenu`, `overWaypointsMenu` and `overPlayersMenu`; public APIs provide `getMapProcessor()`, current MapWorld/MapDimension, `getDimId()`, `getFutureDimension()` and `Misc.getMouseX/Y`.
+The public artifact exposes no suitable arbitrary-polygon render callback; chunk/region highlighters do not implement these boundaries. The isolated optional `integration.xaero.mixin.GuiMapMixin` injects at `GuiMap.renderPreDropdown(GuiGraphics,int,int,float)` HEAD, after terrain and the ordinary widget pass, before native dropdowns. The unchanged Mixin does not intercept input or replace screens, terrain, waypoints or exploration storage. The new client control uses public Forge screen events; only gestures beginning in its clickable bounds are consumed. The adapter reads cached private `cameraX`, `cameraZ`, `scale`, `viewed`, `rightClickMenu`, `overWaypointsMenu` and `overPlayersMenu`; public APIs provide `getMapProcessor()`, current MapWorld/MapDimension, `getDimId()`, `getFutureDimension()` and `Misc.getMouseX/Y`.
 
 The exact inspected transform is:
 
@@ -41,9 +41,39 @@ Join/respawn/resync obtains FULL; new discovery/admin mark uses DELTA; empty res
 
 `MapSpatialIndex` builds immutable per-dimension/per-kind bounding-volume hierarchies once per committed snapshot. Viewport queries cull Local polygons before rendering; point queries run native HJ polygon containment only on bounding-box candidates. Pathological overlapping polygons can still require many candidates, but unrelated distant geometry is pruned.
 
-Only discovered Local outlines render, low priority first/high priority last. Lines are clipped in world space before float conversion, use constant GUI-pixel thickness and preserve authoritative vertices. No Macro outlines, polygon fill, fog-of-war, permanent map labels or Minimap rendering. Defaults are a muted pale outline at 40% opacity and 1 GUI-pixel width. Hover uses highest-priority discovered Local; its discovered parent Macro wins, otherwise an independently containing discovered Macro is used. Macro-only and Local-only results are valid. Equal-priority ambiguity fails closed and is represented internally in hover diagnostics. The native HJ boundary/edge containment implementation is reused.
+### Boundary presentation modes
 
-Hover text uses bold primary and subdued secondary labels on a compact translucent background near the cursor, clamped to screen bounds. Extremely long labels are truncated visually. The overlay avoids native widgets, right-click menus, waypoint/player menus and hovered native elements; normal native controls/dropdowns draw later. No input is captured. Real-world pan/zoom alignment, native GUI interactions and visual appearance require the manual checklist below.
+`world_map_boundary_mode` is a lowercase string with four validated values:
+
+| Mode | Persistent outlines | Hover outlines |
+|---|---|---|
+| `hover` (new default) | none | selected discovered Macro, then Local |
+| `locals` | visible discovered Locals | selected Macro, then Local |
+| `all` | visible discovered Macros, then Locals | selected Macro, then Local |
+| `off` | none | none; tooltip still works independently |
+
+The master toggle disables all HJ map presentation. `world_map_hover_enabled` controls the tooltip only; disabling the tooltip does not disable boundary selection/highlighting. Mode switching never sends packets or requests additional geography.
+
+`MapSpatialIndex.Hover` retains its labels/candidate/ambiguity accessors and now exposes immutable selected `localArea`/`macroArea` plus nullable `localKey()`/`macroKey()`. One hover lookup drives both existing tooltip and draw selection. Highest-priority discovered Local and discovered-parent/independent-Macro rules are unchanged. Equal-priority ambiguity still fails closed for the ambiguous layer. A stale/unavailable selection cannot be substituted with another area.
+
+`BoundaryPresentation.plan` chooses ordered layers from the current immutable snapshot. Persistent modes use per-kind/dimension BVH viewport queries; Hover draws at most two selected polygons. Polygon vertices, native containment, screen transform and segment clipping remain unchanged; no polygon fill or simplification. Low-priority persistent polygons draw before more specific ones.
+
+| Style | RGB | Default GUI width | Default opacity |
+|---|---|---:|---:|
+| Normal Local | #D6E6CE | 1.0 | 0.25 |
+| Normal Macro | #7EA8D8 | 1.5 | 0.40 |
+| Hover Local | #FFFFFF | 2.0 | 0.90 |
+| Hover Macro | #7FC3FF | 2.0 | 0.60 |
+
+The tooltip's fit/drawing method is identical to approved Core 0.11.0: cursor +12 GUI-pixel offset, screen clamping, bold Local/primary and subdued Macro/secondary, same translucent panel and text shadow. No fixed panel or permanent geography labels. Native widget, waypoint/player-menu and hovered-element suppression remains. Boundary highlights share that suppression.
+
+### Fullscreen map mode control
+
+The isolated `XaeroBoundaryControl` attaches a native-style **118 × 20 GUI-pixel** button using Forge `ScreenEvent.Init.Post`, gated behind supported Xaero adapter loading. It starts **8 GUI pixels from top/right** and searches bounded alternate slots to avoid visible native widgets (4 rows, at most 32 columns, with spacing). On very small/occupied screens it hides and reports why rather than covering controls. It also hides while native dropdown/right-click/waypoint/player menus are open, the map is unavailable, the master toggle is off, or the player is not a participant. A final redraw keeps the button above geography outlines. No additional Xaero Mixin is added.
+
+Label/cycle: **HJ Borders: Hover → Locals → All → Off → Hover**. Selection applies immediately, is written through Forge's client config save, and persists across restart. Saving failure restores the previous in-memory preference and reports the problem. No permission or server request is involved. Mouse press handling captures only gestures that start inside a usable button: left click cycles; right/other clicks are consumed without creating a waypoint behind it; matching drag/release remains captured. Normal map clicks/drags outside it pass through. The button remains a normal navigable widget for keyboard use.
+
+Control initialization/access/placement failures are independent of boundary rendering. They hide the control and expose a diagnostic while config-based presentation remains usable. Rendering failure retains the existing session-disable mechanism for the adapter alone.
 
 ## Client configuration
 
@@ -52,17 +82,30 @@ In `human_journey_core-client.toml`:
 ```toml
 [world_map_geography]
 world_map_geography_enabled = true
-world_map_local_outlines_enabled = true
 world_map_hover_enabled = true
-world_map_outline_opacity = 0.4 # valid 0..1
-world_map_outline_width = 1.0 # valid 0.5..4 GUI pixels
+world_map_boundary_mode = "hover" # hover | locals | all | off
+world_map_local_outlines_enabled = true # legacy migration input; ignored once mode exists
+world_map_outline_opacity = 0.25
+world_map_outline_width = 1.0
+world_map_macro_opacity = 0.4
+world_map_macro_width = 1.5
+world_map_hover_local_opacity = 0.9
+world_map_hover_local_width = 2.0
+world_map_hover_macro_opacity = 0.6
+world_map_hover_macro_width = 2.0
 ```
 
-Existing valid settings are respected. HUD defaults remain enabled=true, X=85, Y=10, scale=0.8, background opacity=0.35; all previous ranges are unchanged. Changing map presentation does not alter discovery.
+All opacity ranges remain 0..1; all boundary widths use 0.5..4 GUI pixels. Colours are stable presentation constants, not per-region data. Existing Local width/opacity keys and valid values are retained: a Core 0.11.0 opacity of 0.4 stays 0.4, while fresh/missing settings use 0.25. HUD defaults remain enabled=true, X=85, Y=10, scale=0.8, background opacity=0.35; old ranges and custom values are retained.
+
+### Legacy migration
+
+Before Forge registration/loading of **this client file**, `MapConfigMigration` checks the existing `human_journey_core-client.toml` through NightConfig, preserving comments/other values. If the mode key is absent, old outlines=false writes `off`; true/missing writes `hover`. No fresh file is created by migration; Forge generates it normally. Once any explicit new mode exists, migration does nothing, so the old boolean cannot override it. Invalid explicit modes are corrected to `hover` by Forge validation, even when the old boolean is false. Deleting a mode during an already-running config hot reload follows Forge's normal default correction; legacy upgrade migration runs at client startup. A malformed/unreadable file logs a migration warning and is left to Forge's existing loading/error handling.
+
+This release changes no map network protocol (still protocol 1), payload, discovery storage/rules, production data or server synchronization. No Developer datapack migration is needed.
 
 ## Commands and diagnostics
 
-- `/hjmap status` — client-only: Xaero detected/version/supported/active/reason; received Macro/Local geometry counts; map sequence and discovery/data/presentation revisions; overlay toggle; last sync problem.
+- `/hjmap status` — client-only: Xaero detected/version/supported/active/reason; received Macro/Local geometry counts; map sequence and discovery/data/presentation revisions; overlay toggle; boundary mode; tooltip enabled; persistent Local/Macro activity; control availability/position; last sync problem.
 - `/hjmap resync` — request shared discovered geometry again (server checks eligibility/rate).
 - `/hj geography status` — existing permission-2 server diagnostic, now also reports resolvable Macro/Local geometry, data/discovery revisions and stale/unresolvable counts; existing context/tag/discovery totals remain.
 - `/hj geography discovery list macro [page]` and `list local [page]` — existing shared IDs, stale markers.
@@ -75,25 +118,23 @@ Synthetic tests cover privacy/projection, labels/reloads, roles, new discovery/a
 
 ## Manual acceptance checklist
 
-Use a separate test world; reset is destructive to shared discoveries in that world.
+**A — Default/migration:** fresh client config or old outlines=true with no new key starts `HJ Borders: Hover`; no full line network when cursor is outside discovered geography. Old outlines=false migrates to Off. Existing explicit mode/custom HUD values remain.
 
-**A — Known area:** open a discovered Local. Check subtle boundary alignment and Local + Macro hover.
+**B — Hover Local:** hover a discovered Japan Local. Check bright white selected Local, stronger-blue discovered Macro, and unchanged near-cursor tooltip that follows movement and clamps at screen edges.
 
-**B — Unknown neighbour:** verify ordinary terrain remains and no unknown Local outline/name appears. Already discovered Macro-only hover is allowed.
+**C — Move:** cross several discovered areas with the cursor. Previous highlight disappears immediately; Hover leaves no unrelated boundaries.
 
-**C — Student exploration:** cross into an undiscovered Local as participant+student; check existing chat notification, immediate shared outline and hover.
+**D — Unknown neighbour:** hover an undiscovered Korea/neighbouring Local. No unknown Local name/outline. Already discovered Macro-only hover/highlight remains allowed. Repeat teacher/student/shared discovery checks as needed.
 
-**D — Shared knowledge:** open the same map as a second student who has not visited; verify the discovery is visible, including after joining later.
+**E — Locals:** click the control once from Hover. Discovered Local network appears; no persistent Macro network. Hover Local/Macro are stronger.
 
-**E — Teacher exclusion:** travel through an unknown Local as teacher, including conflicting teacher+student tags. HUD can identify it, but map knowledge must not grow. After a student discovers it, the teacher should see it too. Check non-participants have no overlay.
+**F — All:** cycle again. Muted-blue discovered Macro network, pale detailed Locals and strongest hovered Local on top. Check boundaries align throughout pan/zoom and viewed-dimension changes.
 
-**F — Overlap:** check broad discovered Local before specific Local discovery; discover the higher-priority Local and verify hover changes. Check undiscovered parent redaction and Macro-only coverage.
+**G — Off:** cycle again. No outlines; tooltip still follows cursor when enabled. Disable tooltip separately and confirm Hover boundaries still work. Master off hides all HJ map presentation/control.
 
-**G — Camera/interactions:** pan, drag, zoom, vary GUI scale and viewed dimension; verify alignment, stable line width, accurate hover, buttons, waypoints, native tooltips and map opening/closing. Overworld geometry must not appear in another dimension. Adjust each client option and verify HUD remains unchanged.
+**H — Persistence:** select Locals/All/Off, close Minecraft, restart and reopen the map. Mode and unrelated settings persist; `/hjmap status` reports the selection.
 
-**H — Restart/reload:** restart client/server, reconnect, change discovered geometry/labels in a test datapack then `/reload`, and test an Era-sensitive label change. Existing discoveries persist, shapes/labels refresh, removed geography disappears. Check `/hjmap status` and server status. Test clients without Xaero and unsupported Xaero versions; only map integration should disable.
-
-**I — Admin reset:** mark a valid Macro/Local and verify immediate appearance; reset and verify immediate HJ overlay removal while native terrain stays. Move a student to rediscover and check no delayed pre-reset geometry returns.
+**I — Xaero interactions:** in each mode test drag, zoom, waypoint hover/click, native buttons and right-click menus. Clicking the HJ control must neither pan nor place a waypoint behind it; clicks outside remain normal. Check resized/GUI-scaled screens, native menus (control hides), and absence/unsupported-Xaero safety. Discovery/admin reset/reload must retain the prior protocol behaviour and privacy.
 
 ## Future adapters and limitations
 
