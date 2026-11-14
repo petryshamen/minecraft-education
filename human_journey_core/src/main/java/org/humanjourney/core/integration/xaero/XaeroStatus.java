@@ -5,6 +5,8 @@ public final class XaeroStatus {
  private static State state=new State(false,"absent",false,false,"Xaero World Map is not installed");private static boolean failed;
  public static boolean supported(boolean physicalClient,String version){return physicalClient&&"1.39.13".equals(version);}
  public static void detect(String version){failed=false;state=new State(version!=null,version==null?"absent":version,supported(true,version),false,version==null?"Xaero World Map is not installed":supported(true,version)?"Ready; waiting for fullscreen map hook":"Unsupported Xaero World Map version; only 1.39.13 is supported");if(version!=null&&!state.supported())com.mojang.logging.LogUtils.getLogger().warn("[HJ Core] {}: {}",state.reason(),version);}
+ private static volatile String control="Waiting for map control initialization";
+ public static String control(){return control;}public static void control(String reason){control=reason;}
  public static State state(){return state;}
  public static boolean failed(){return failed;}
  public static void observed(){if(!failed)state=new State(state.detected(),state.version(),state.supported(),true,"");}

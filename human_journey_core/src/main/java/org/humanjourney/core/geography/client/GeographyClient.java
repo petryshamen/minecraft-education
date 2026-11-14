@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 public final class GeographyClient {
  private static final ClientGeographyState STATE=new ClientGeographyState();
  public static ClientGeographyState state(){return STATE;}
- public static void register(FMLJavaModLoadingContext context){context.registerConfig(ModConfig.Type.CLIENT,GeographyClientConfig.SPEC,"human_journey_core-client.toml");
+ public static void register(FMLJavaModLoadingContext context){org.humanjourney.core.geography.map.client.MapConfigMigration.beforeRegistration(net.minecraftforge.fml.loading.FMLPaths.CONFIGDIR.get().resolve("human_journey_core-client.toml"));context.registerConfig(ModConfig.Type.CLIENT,GeographyClientConfig.SPEC,"human_journey_core-client.toml");
   org.humanjourney.core.geography.map.client.MapClient.register(context);
   GeographyNetwork.receiver(new GeographyNetwork.Receiver(){public void context(GeographyPackets.Context packet){org.humanjourney.core.geography.map.client.MapClient.role(packet.participant());STATE.accept(packet);}public void discovery(GeographyPackets.Discovery packet){STATE.accept(packet);}});
   ClientPlayerNetworkEvent.LoggingIn.BUS.addListener(event->STATE.clear());ClientPlayerNetworkEvent.LoggingOut.BUS.addListener(event->STATE.clear());
