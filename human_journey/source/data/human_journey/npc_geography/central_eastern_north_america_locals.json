@@ -1,0 +1,2987 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "canadian_parkland_plains",
+      "display_label": "Canadian Parkland Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840100,
+      "polygon": [
+        [
+          -6591.526168667,
+          -3413.333333333
+        ],
+        [
+          -6758.400035037,
+          -3488.426573108
+        ],
+        [
+          -6963.200026508,
+          -3549.866570549
+        ],
+        [
+          -7236.266688945,
+          -3618.133235409
+        ],
+        [
+          -7577.600009902,
+          -3686.3999
+        ],
+        [
+          -7850.666667,
+          -3686.3999
+        ],
+        [
+          -7850.66667695,
+          -3686.399900496
+        ],
+        [
+          -8063.999845773,
+          -3707.733217691
+        ],
+        [
+          -8055.466581153,
+          -3686.400054642
+        ],
+        [
+          -7850.666594046,
+          -3467.946735394
+        ],
+        [
+          -7850.666592406,
+          -3467.946733602
+        ],
+        [
+          -7801.904627871,
+          -3413.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "canadian_prairie_grasslands",
+      "display_label": "Canadian Prairie Grasslands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840201,
+      "polygon": [
+        [
+          -6553.6,
+          -3338.24
+        ],
+        [
+          -6553.6,
+          -3396.266557454
+        ],
+        [
+          -6758.400035037,
+          -3488.426573108
+        ],
+        [
+          -6963.200026508,
+          -3549.866570549
+        ],
+        [
+          -7017.813744911,
+          -3563.52
+        ],
+        [
+          -7850.666666667,
+          -3563.52
+        ],
+        [
+          -7850.666666667,
+          -3467.946812856
+        ],
+        [
+          -7850.666594046,
+          -3467.946735394
+        ],
+        [
+          -7850.666592406,
+          -3467.946733602
+        ],
+        [
+          -7734.857008809,
+          -3338.24
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_great_plains",
+      "display_label": "Northern Great Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840102,
+      "polygon": [
+        [
+          -6621.866666667,
+          -2867.2
+        ],
+        [
+          -6621.866666667,
+          -3345.066666667
+        ],
+        [
+          -7740.952246906,
+          -3345.066666667
+        ],
+        [
+          -7679.999933908,
+          -3276.800076124
+        ],
+        [
+          -7372.79994453,
+          -3072.000083205
+        ],
+        [
+          -7372.79993731,
+          -3072.00007791
+        ],
+        [
+          -7372.799930592,
+          -3072.00007199
+        ],
+        [
+          -7372.799924431,
+          -3072.000065493
+        ],
+        [
+          -7195.306591431,
+          -2867.200065493
+        ],
+        [
+          -7195.306585237,
+          -2867.200057575
+        ],
+        [
+          -7195.30657987,
+          -2867.200049075
+        ],
+        [
+          -7195.306575383,
+          -2867.200040079
+        ],
+        [
+          -7195.306571822,
+          -2867.200030677
+        ],
+        [
+          -7195.306569223,
+          -2867.200020966
+        ],
+        [
+          -7195.306567612,
+          -2867.200011043
+        ],
+        [
+          -7195.306566385,
+          -2867.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "central_high_plains",
+      "display_label": "Central High Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840103,
+      "polygon": [
+        [
+          -6758.4,
+          -2457.6
+        ],
+        [
+          -6758.4,
+          -2867.2
+        ],
+        [
+          -7195.306566385,
+          -2867.2
+        ],
+        [
+          -7181.653234354,
+          -2744.320017728
+        ],
+        [
+          -7161.173235986,
+          -2662.400024254
+        ],
+        [
+          -7161.173234258,
+          -2662.400015815
+        ],
+        [
+          -7161.173233264,
+          -2662.400007259
+        ],
+        [
+          -7161.173233009,
+          -2662.399998649
+        ],
+        [
+          -7161.173233496,
+          -2662.39999005
+        ],
+        [
+          -7167.999898764,
+          -2594.133340368
+        ],
+        [
+          -7133.866563422,
+          -2457.6
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "southern_high_plains",
+      "display_label": "Southern High Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840104,
+      "polygon": [
+        [
+          -6826.666666667,
+          -2048.0
+        ],
+        [
+          -6826.666666667,
+          -2457.6
+        ],
+        [
+          -7133.866563422,
+          -2457.6
+        ],
+        [
+          -7099.733237632,
+          -2321.066697838
+        ],
+        [
+          -7031.466579656,
+          -2150.400050898
+        ],
+        [
+          -6949.546538698,
+          -2048.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "central_tallgrass_plains",
+      "display_label": "Central Tallgrass Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840105,
+      "polygon": [
+        [
+          -6348.8,
+          -2184.533333333
+        ],
+        [
+          -6348.8,
+          -2935.466666667
+        ],
+        [
+          -6826.666666667,
+          -2935.466666667
+        ],
+        [
+          -6826.666666667,
+          -2184.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "red_river_lake_agassiz_plain",
+      "display_label": "Red River–Lake Agassiz Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840506,
+      "polygon": [
+        [
+          -6519.466666667,
+          -3140.266666667
+        ],
+        [
+          -6519.466666667,
+          -3380.906557473
+        ],
+        [
+          -6724.266666667,
+          -3473.06655736
+        ],
+        [
+          -6724.266666667,
+          -3140.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "upper_midwest_glacial_plains",
+      "display_label": "Upper Midwest Glacial Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840107,
+      "polygon": [
+        [
+          -5939.2,
+          -2833.066666667
+        ],
+        [
+          -5939.2,
+          -3194.879899719
+        ],
+        [
+          -5939.200007479,
+          -3194.87990028
+        ],
+        [
+          -5939.200012403,
+          -3194.879900772
+        ],
+        [
+          -6212.266679403,
+          -3229.013233772
+        ],
+        [
+          -6212.266690523,
+          -3229.013235806
+        ],
+        [
+          -6212.266701341,
+          -3229.013239082
+        ],
+        [
+          -6212.266711721,
+          -3229.013243557
+        ],
+        [
+          -6485.333375897,
+          -3365.546576645
+        ],
+        [
+          -6591.526168667,
+          -3413.333333333
+        ],
+        [
+          -6690.133333333,
+          -3413.333333333
+        ],
+        [
+          -6690.133333333,
+          -2833.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "great_lakes_lowlands",
+      "display_label": "Great Lakes Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840208,
+      "polygon": [
+        [
+          -5140.48,
+          -2730.666666667
+        ],
+        [
+          -5140.48,
+          -3181.811708721
+        ],
+        [
+          -5324.799988645,
+          -3160.746567647
+        ],
+        [
+          -5324.79999631,
+          -3160.746567068
+        ],
+        [
+          -5324.800003997,
+          -3160.74656708
+        ],
+        [
+          -5666.133336997,
+          -3174.39990008
+        ],
+        [
+          -5666.133340479,
+          -3174.39990028
+        ],
+        [
+          -5939.200007479,
+          -3194.87990028
+        ],
+        [
+          -5939.200012403,
+          -3194.879900772
+        ],
+        [
+          -6212.266679403,
+          -3229.013233772
+        ],
+        [
+          -6212.266690523,
+          -3229.013235806
+        ],
+        [
+          -6212.266701341,
+          -3229.013239082
+        ],
+        [
+          -6212.266711721,
+          -3229.013243557
+        ],
+        [
+          -6266.880224207,
+          -3256.32
+        ],
+        [
+          -6348.8,
+          -3256.32
+        ],
+        [
+          -6348.8,
+          -2730.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "st_lawrence_ottawa_lowlands",
+      "display_label": "St Lawrence–Ottawa Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840409,
+      "polygon": [
+        [
+          -5188.266666667,
+          -2976.426666667
+        ],
+        [
+          -4710.4,
+          -3153.92
+        ],
+        [
+          -4369.066666667,
+          -3358.72
+        ],
+        [
+          -4426.756629576,
+          -3374.103990109
+        ],
+        [
+          -4642.133298939,
+          -3304.106572921
+        ],
+        [
+          -4846.933295861,
+          -3222.186574152
+        ],
+        [
+          -4846.933307176,
+          -3222.186570392
+        ],
+        [
+          -4846.933318858,
+          -3222.186568005
+        ],
+        [
+          -5085.866652858,
+          -3188.053234005
+        ],
+        [
+          -5085.866655645,
+          -3188.053233647
+        ],
+        [
+          -5324.799988645,
+          -3160.746567647
+        ],
+        [
+          -5324.79999631,
+          -3160.746567068
+        ],
+        [
+          -5324.800003997,
+          -3160.74656708
+        ],
+        [
+          -5385.035587656,
+          -3163.15599037
+        ],
+        [
+          -5461.333333333,
+          -3140.266666667
+        ],
+        [
+          -5461.333333333,
+          -3003.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "maritime_appalachian_uplands",
+      "display_label": "Maritime Appalachian Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840110,
+      "polygon": [
+        [
+          -4369.066982894,
+          -2935.466666667
+        ],
+        [
+          -3959.466698289,
+          -3072.000094868
+        ],
+        [
+          -3959.466688787,
+          -3072.000097523
+        ],
+        [
+          -3959.46667907,
+          -3072.000099228
+        ],
+        [
+          -3959.466666667,
+          -3072.000100778
+        ],
+        [
+          -3959.466666667,
+          -3207.652370011
+        ],
+        [
+          -4068.693357988,
+          -3235.839903172
+        ],
+        [
+          -4068.693367661,
+          -3235.839906199
+        ],
+        [
+          -4068.693376979,
+          -3235.83991019
+        ],
+        [
+          -4068.693385844,
+          -3235.839915103
+        ],
+        [
+          -4068.693394167,
+          -3235.839920889
+        ],
+        [
+          -4068.693401861,
+          -3235.839927487
+        ],
+        [
+          -4068.693408848,
+          -3235.83993483
+        ],
+        [
+          -4068.693415055,
+          -3235.839942843
+        ],
+        [
+          -4068.69342042,
+          -3235.839951443
+        ],
+        [
+          -4068.693424886,
+          -3235.839960542
+        ],
+        [
+          -4068.693428408,
+          -3235.839970046
+        ],
+        [
+          -4068.693430951,
+          -3235.839979858
+        ],
+        [
+          -4068.693432486,
+          -3235.839989877
+        ],
+        [
+          -4068.693433,
+          -3235.84
+        ],
+        [
+          -4068.693433,
+          -3399.679906888
+        ],
+        [
+          -4164.266667238,
+          -3406.506566762
+        ],
+        [
+          -4369.066647929,
+          -3392.853234049
+        ],
+        [
+          -4642.133298939,
+          -3304.106572921
+        ],
+        [
+          -4778.666666667,
+          -3249.49322583
+        ],
+        [
+          -4778.666666667,
+          -2935.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "coast"
+        ],
+        "relief": [
+          "hills",
+          "upland",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "northern_appalachian_highlands",
+      "display_label": "Northern Appalachian Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840311,
+      "polygon": [
+        [
+          -4983.466666667,
+          -2730.666666667
+        ],
+        [
+          -4573.866666667,
+          -3003.733333333
+        ],
+        [
+          -4573.866666667,
+          -3208.533333333
+        ],
+        [
+          -4741.430156435,
+          -3264.387829923
+        ],
+        [
+          -4846.933295861,
+          -3222.186574152
+        ],
+        [
+          -4846.933307176,
+          -3222.186570392
+        ],
+        [
+          -4846.933318858,
+          -3222.186568005
+        ],
+        [
+          -4876.800220502,
+          -3217.919867699
+        ],
+        [
+          -5120.0,
+          -3072.0
+        ],
+        [
+          -5188.266666667,
+          -2730.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "tundra"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "appalachian_plateaus",
+      "display_label": "Appalachian Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840312,
+      "polygon": [
+        [
+          -5802.666666667,
+          -2286.933333333
+        ],
+        [
+          -5461.333333333,
+          -2525.866666667
+        ],
+        [
+          -5120.0,
+          -2764.8
+        ],
+        [
+          -5051.733333333,
+          -2901.333333333
+        ],
+        [
+          -5324.8,
+          -2935.466666667
+        ],
+        [
+          -5597.866666667,
+          -2730.666666667
+        ],
+        [
+          -5802.666666667,
+          -2525.866666667
+        ],
+        [
+          -6007.466666667,
+          -2321.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "interior_low_plateaus",
+      "display_label": "Interior Low Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840213,
+      "polygon": [
+        [
+          -5666.133333333,
+          -2321.066666667
+        ],
+        [
+          -5666.133333333,
+          -2730.666666667
+        ],
+        [
+          -6144.0,
+          -2730.666666667
+        ],
+        [
+          -6144.0,
+          -2321.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "central_till_plains",
+      "display_label": "Central Till Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840114,
+      "polygon": [
+        [
+          -5597.866666667,
+          -2491.733333333
+        ],
+        [
+          -5597.866666667,
+          -2901.333333333
+        ],
+        [
+          -6417.066666667,
+          -2901.333333333
+        ],
+        [
+          -6417.066666667,
+          -2491.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ozark_plateaus",
+      "display_label": "Ozark Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840515,
+      "polygon": [
+        [
+          -6212.266666667,
+          -2389.333333333
+        ],
+        [
+          -6109.866666667,
+          -2525.866666667
+        ],
+        [
+          -6178.133333333,
+          -2662.4
+        ],
+        [
+          -6417.066666667,
+          -2662.4
+        ],
+        [
+          -6485.333333333,
+          -2525.866666667
+        ],
+        [
+          -6485.333333333,
+          -2389.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ouachita_mountains",
+      "display_label": "Ouachita Mountains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840616,
+      "polygon": [
+        [
+          -6280.533333333,
+          -2293.76
+        ],
+        [
+          -6280.533333333,
+          -2402.986666667
+        ],
+        [
+          -6553.6,
+          -2402.986666667
+        ],
+        [
+          -6553.6,
+          -2293.76
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "texas_central_plains",
+      "display_label": "Texas Central Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840217,
+      "polygon": [
+        [
+          -6417.066666667,
+          -1911.466666667
+        ],
+        [
+          -6417.066666667,
+          -2321.066666667
+        ],
+        [
+          -6894.933333333,
+          -2321.066666667
+        ],
+        [
+          -6894.933333333,
+          -1979.733493495
+        ],
+        [
+          -6894.933254913,
+          -1979.73339547
+        ],
+        [
+          -6894.933249223,
+          -1979.733387602
+        ],
+        [
+          -6894.933244322,
+          -1979.73337922
+        ],
+        [
+          -6894.933240258,
+          -1979.733370402
+        ],
+        [
+          -6894.933237068,
+          -1979.733361231
+        ],
+        [
+          -6894.933234782,
+          -1979.733351795
+        ],
+        [
+          -6894.933233422,
+          -1979.733342181
+        ],
+        [
+          -6894.933233001,
+          -1979.73333248
+        ],
+        [
+          -6894.933233523,
+          -1979.733322785
+        ],
+        [
+          -6894.933234983,
+          -1979.733313185
+        ],
+        [
+          -6894.933237366,
+          -1979.733303773
+        ],
+        [
+          -6894.933240652,
+          -1979.733294636
+        ],
+        [
+          -6894.933244808,
+          -1979.733285861
+        ],
+        [
+          -6894.933249795,
+          -1979.73327753
+        ],
+        [
+          -6894.933333333,
+          -1979.733152222
+        ],
+        [
+          -6894.933333333,
+          -1911.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "gulf_coastal_plain",
+      "display_label": "Gulf Coastal Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840318,
+      "polygon": [
+        [
+          -5529.6,
+          -1706.666666667
+        ],
+        [
+          -5529.6,
+          -2321.066666667
+        ],
+        [
+          -6212.266666667,
+          -2321.066666667
+        ],
+        [
+          -6451.2,
+          -2321.066666667
+        ],
+        [
+          -6608.213333333,
+          -2013.866666667
+        ],
+        [
+          -6690.133333333,
+          -1911.466666667
+        ],
+        [
+          -6690.133333333,
+          -1729.422327631
+        ],
+        [
+          -6621.866650439,
+          -1706.666766667
+        ],
+        [
+          -6485.333333333,
+          -1706.666766667
+        ],
+        [
+          -6485.33332834,
+          -1706.666766542
+        ],
+        [
+          -6485.331330835,
+          -1706.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "atlantic_coastal_plain",
+      "display_label": "Atlantic Coastal Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840219,
+      "polygon": [
+        [
+          -5393.066764806,
+          -1843.200021809
+        ],
+        [
+          -5393.066763504,
+          -1843.200025716
+        ],
+        [
+          -5324.800098058,
+          -2184.533352945
+        ],
+        [
+          -5324.800095435,
+          -2184.533363203
+        ],
+        [
+          -5324.800091742,
+          -2184.533373126
+        ],
+        [
+          -5324.80008702,
+          -2184.533382603
+        ],
+        [
+          -5324.800081323,
+          -2184.533391528
+        ],
+        [
+          -5324.800074714,
+          -2184.5333998
+        ],
+        [
+          -5324.800067267,
+          -2184.533407327
+        ],
+        [
+          -4858.003442889,
+          -2608.893974944
+        ],
+        [
+          -4710.4,
+          -2867.2
+        ],
+        [
+          -4915.2,
+          -2935.466666667
+        ],
+        [
+          -5188.266666667,
+          -2764.8
+        ],
+        [
+          -5324.8,
+          -2457.6
+        ],
+        [
+          -5597.866666667,
+          -2252.8
+        ],
+        [
+          -5734.4,
+          -2116.266666667
+        ],
+        [
+          -5700.266666667,
+          -1911.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "appalachian_piedmont",
+      "display_label": "Appalachian Piedmont",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840420,
+      "polygon": [
+        [
+          -5700.266666667,
+          -2170.88
+        ],
+        [
+          -5358.933333333,
+          -2396.16
+        ],
+        [
+          -5181.44,
+          -2621.44
+        ],
+        [
+          -5051.733333333,
+          -2785.28
+        ],
+        [
+          -5085.866666667,
+          -2819.413333333
+        ],
+        [
+          -5324.8,
+          -2696.533333333
+        ],
+        [
+          -5597.866666667,
+          -2478.08
+        ],
+        [
+          -5870.933333333,
+          -2184.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "appalachian_valley_ridge",
+      "display_label": "Appalachian Valley & Ridge",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840521,
+      "polygon": [
+        [
+          -5802.666666667,
+          -2239.146666667
+        ],
+        [
+          -5584.213333333,
+          -2457.6
+        ],
+        [
+          -5324.8,
+          -2669.226666667
+        ],
+        [
+          -5085.866666667,
+          -2798.933333333
+        ],
+        [
+          -5154.133333333,
+          -2846.72
+        ],
+        [
+          -5393.066666667,
+          -2730.666666667
+        ],
+        [
+          -5693.44,
+          -2505.386666667
+        ],
+        [
+          -5925.546666667,
+          -2252.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "valley",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "blue_ridge_smoky_mountains",
+      "display_label": "Blue Ridge & Smoky Mountains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840622,
+      "polygon": [
+        [
+          -5666.133333333,
+          -2321.066666667
+        ],
+        [
+          -5481.813333333,
+          -2457.6
+        ],
+        [
+          -5345.28,
+          -2628.266666667
+        ],
+        [
+          -5277.013333333,
+          -2710.186666667
+        ],
+        [
+          -5324.8,
+          -2730.666666667
+        ],
+        [
+          -5427.2,
+          -2628.266666667
+        ],
+        [
+          -5625.173333333,
+          -2478.08
+        ],
+        [
+          -5768.533333333,
+          -2430.293333333
+        ],
+        [
+          -5768.533333333,
+          -2334.72
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "new_england_coastal_lowlands",
+      "display_label": "New England Coastal Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840523,
+      "polygon": [
+        [
+          -4710.4,
+          -2751.146666667
+        ],
+        [
+          -4539.733333333,
+          -3058.346666667
+        ],
+        [
+          -4642.133333333,
+          -3072.0
+        ],
+        [
+          -4846.933333333,
+          -2969.6
+        ],
+        [
+          -5038.08,
+          -2833.066666667
+        ],
+        [
+          -5072.213333333,
+          -2751.146666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "black_hills",
+      "display_label": "Black Hills",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840724,
+      "polygon": [
+        [
+          -7004.16,
+          -2962.773333333
+        ],
+        [
+          -7004.16,
+          -3072.0
+        ],
+        [
+          -7113.386666667,
+          -3072.0
+        ],
+        [
+          -7113.386666667,
+          -2962.773333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "badlands_missouri_plateaus",
+      "display_label": "Badlands & Missouri Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840425,
+      "polygon": [
+        [
+          -6826.666666667,
+          -2935.466666667
+        ],
+        [
+          -6826.666666667,
+          -3276.8
+        ],
+        [
+          -7133.866666667,
+          -3276.8
+        ],
+        [
+          -7133.866666667,
+          -2935.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "sandhills_platte_plains",
+      "display_label": "Sandhills–Platte Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840426,
+      "polygon": [
+        [
+          -6690.133333333,
+          -2730.666666667
+        ],
+        [
+          -6690.133333333,
+          -2935.466666667
+        ],
+        [
+          -7031.466666667,
+          -2935.466666667
+        ],
+        [
+          -7031.466666667,
+          -2730.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "edwards_plateau",
+      "display_label": "Edwards Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840527,
+      "polygon": [
+        [
+          -6690.133333333,
+          -1993.386666667
+        ],
+        [
+          -6690.133333333,
+          -2170.88
+        ],
+        [
+          -6963.2,
+          -2170.88
+        ],
+        [
+          -6963.2,
+          -2065.066826578
+        ],
+        [
+          -6905.855871903,
+          -1993.386666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lower_rio_grande_brushlands",
+      "display_label": "Rio Grande Plains & Brushlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840528,
+      "polygon": [
+        [
+          -6553.6,
+          -1993.386666667
+        ],
+        [
+          -6905.855871903,
+          -1993.386666667
+        ],
+        [
+          -6894.933254913,
+          -1979.73339547
+        ],
+        [
+          -6894.933249223,
+          -1979.733387602
+        ],
+        [
+          -6894.933244322,
+          -1979.73337922
+        ],
+        [
+          -6894.933240258,
+          -1979.733370402
+        ],
+        [
+          -6894.933237068,
+          -1979.733361231
+        ],
+        [
+          -6894.933234782,
+          -1979.733351795
+        ],
+        [
+          -6894.933233422,
+          -1979.733342181
+        ],
+        [
+          -6894.933233001,
+          -1979.73333248
+        ],
+        [
+          -6894.933233523,
+          -1979.733322785
+        ],
+        [
+          -6894.933234983,
+          -1979.733313185
+        ],
+        [
+          -6894.933237366,
+          -1979.733303773
+        ],
+        [
+          -6894.933240652,
+          -1979.733294636
+        ],
+        [
+          -6894.933244808,
+          -1979.733285861
+        ],
+        [
+          -6894.933249795,
+          -1979.73327753
+        ],
+        [
+          -6949.546537814,
+          -1897.813345902
+        ],
+        [
+          -6826.666612649,
+          -1774.933420737
+        ],
+        [
+          -6621.866650439,
+          -1706.666766667
+        ],
+        [
+          -6553.6,
+          -1706.666766667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "lower_mississippi_alluvial_plain",
+      "display_label": "Lower Mississippi Alluvial Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840729,
+      "polygon": [
+        [
+          -6055.253333333,
+          -1979.733333333
+        ],
+        [
+          -6075.733333333,
+          -2184.533333333
+        ],
+        [
+          -6109.866666667,
+          -2389.333333333
+        ],
+        [
+          -6075.733333333,
+          -2525.866666667
+        ],
+        [
+          -6144.0,
+          -2525.866666667
+        ],
+        [
+          -6314.666666667,
+          -2389.333333333
+        ],
+        [
+          -6314.666666667,
+          -2184.533333333
+        ],
+        [
+          -6314.666666667,
+          -1979.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "wetland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "florida_peninsula_lowlands",
+      "display_label": "Florida Peninsula Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840530,
+      "polygon": [
+        [
+          -5393.066666667,
+          -2102.613333333
+        ],
+        [
+          -5734.4,
+          -2102.613333333
+        ],
+        [
+          -5734.4,
+          -1661.155656935
+        ],
+        [
+          -5597.86665839,
+          -1638.4001
+        ],
+        [
+          -5461.333405409,
+          -1638.4001
+        ],
+        [
+          -5393.066763504,
+          -1843.200025716
+        ],
+        [
+          -5393.066666667,
+          -1843.200509902
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "everglades_big_cypress",
+      "display_label": "Everglades–Big Cypress Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840831,
+      "polygon": [
+        [
+          -5468.16,
+          -1706.666666667
+        ],
+        [
+          -5468.16,
+          -1809.066666667
+        ],
+        [
+          -5591.04,
+          -1809.066666667
+        ],
+        [
+          -5591.04,
+          -1706.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "florida_keys",
+      "display_label": "Florida Keys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840932,
+      "polygon": [
+        [
+          -5468.16,
+          -1740.8
+        ],
+        [
+          -5502.293333333,
+          -1727.146666667
+        ],
+        [
+          -5563.733333333,
+          -1699.84
+        ],
+        [
+          -5645.653333333,
+          -1706.666666667
+        ],
+        [
+          -5645.653333333,
+          -1646.364545824
+        ],
+        [
+          -5597.86665839,
+          -1638.4001
+        ],
+        [
+          -5461.333405409,
+          -1638.4001
+        ],
+        [
+          -5461.333350902,
+          -1638.400263523
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "driftless_uplands",
+      "display_label": "Driftless Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840633,
+      "polygon": [
+        [
+          -6075.733333333,
+          -2867.2
+        ],
+        [
+          -6075.733333333,
+          -3072.0
+        ],
+        [
+          -6280.533333333,
+          -3072.0
+        ],
+        [
+          -6280.533333333,
+          -2867.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plateau",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "adirondack_highlands",
+      "display_label": "Adirondack Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840734,
+      "polygon": [
+        [
+          -5003.946666667,
+          -2935.466666667
+        ],
+        [
+          -5003.946666667,
+          -3085.653333333
+        ],
+        [
+          -5160.96,
+          -3085.653333333
+        ],
+        [
+          -5160.96,
+          -2935.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "tundra"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "maritime_coastal_lowlands",
+      "display_label": "Maritime Coastal Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840635,
+      "polygon": [
+        [
+          -4334.933333333,
+          -3099.306666667
+        ],
+        [
+          -4096.0,
+          -3099.306666667
+        ],
+        [
+          -4096.0,
+          -3256.32
+        ],
+        [
+          -4369.066666667,
+          -3297.28
+        ],
+        [
+          -4505.6,
+          -3256.32
+        ],
+        [
+          -4505.6,
+          -3099.306666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "nova_scotia_atlantic_uplands",
+      "display_label": "Nova Scotia Atlantic Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840536,
+      "polygon": [
+        [
+          -4369.066982894,
+          -2935.466666667
+        ],
+        [
+          -4222.780590978,
+          -2984.228797306
+        ],
+        [
+          -4027.733333333,
+          -3106.133333333
+        ],
+        [
+          -4061.866666667,
+          -3208.533333333
+        ],
+        [
+          -4266.666666667,
+          -3174.4
+        ],
+        [
+          -4471.466666667,
+          -3106.133333333
+        ],
+        [
+          -4546.56,
+          -2935.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "river"
+        ],
+        "relief": [
+          "upland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "cape_breton_highlands",
+      "display_label": "Cape Breton Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840737,
+      "polygon": [
+        [
+          -4075.52,
+          -3133.44
+        ],
+        [
+          -4075.52,
+          -3215.36
+        ],
+        [
+          -4198.4,
+          -3215.36
+        ],
+        [
+          -4198.4,
+          -3133.44
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "tundra"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "cypress_hills",
+      "display_label": "Cypress Hills",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840738,
+      "polygon": [
+        [
+          -7406.933333333,
+          -3365.546666667
+        ],
+        [
+          -7406.933333333,
+          -3413.333333333
+        ],
+        [
+          -7557.12,
+          -3413.333333333
+        ],
+        [
+          -7557.12,
+          -3365.546666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "coteau_missouri_prairie_potholes",
+      "display_label": "Coteau du Missouri & Prairie Potholes",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840539,
+      "polygon": [
+        [
+          -6690.133333333,
+          -3072.0
+        ],
+        [
+          -6690.133333333,
+          -3413.333333333
+        ],
+        [
+          -6894.933333333,
+          -3413.333333333
+        ],
+        [
+          -6894.933333333,
+          -3072.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "flint_hills_osage_plains",
+      "display_label": "Flint Hills–Osage Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 840540,
+      "polygon": [
+        [
+          -6417.066666667,
+          -2389.333333333
+        ],
+        [
+          -6417.066666667,
+          -2730.666666667
+        ],
+        [
+          -6656.0,
+          -2730.666666667
+        ],
+        [
+          -6656.0,
+          -2389.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "central_eastern_north_america_base",
+      "display_label": "Central & Eastern North America",
+      "dimension": "minecraft:overworld",
+      "macro_region": "central_eastern_north_america",
+      "priority": 770000,
+      "polygon": [
+        [
+          -6826.666666667,
+          -1774.933333333
+        ],
+        [
+          -6621.866666667,
+          -1706.666666667
+        ],
+        [
+          -6485.333333333,
+          -1706.666666667
+        ],
+        [
+          -5802.666666667,
+          -1672.533333333
+        ],
+        [
+          -5597.866666667,
+          -1638.4
+        ],
+        [
+          -5461.333333333,
+          -1638.4
+        ],
+        [
+          -5393.066666667,
+          -1843.2
+        ],
+        [
+          -5324.8,
+          -2184.533333333
+        ],
+        [
+          -4573.866666667,
+          -2867.2
+        ],
+        [
+          -3959.466666667,
+          -3072.0
+        ],
+        [
+          -3413.333333333,
+          -3140.266666667
+        ],
+        [
+          -3413.333333333,
+          -3822.933333333
+        ],
+        [
+          -3987.911111333,
+          -3822.933333333
+        ],
+        [
+          -3959.466667,
+          -3788.8
+        ],
+        [
+          -3754.666667,
+          -3618.133333
+        ],
+        [
+          -3563.52,
+          -3399.68
+        ],
+        [
+          -3570.346667,
+          -3160.746667
+        ],
+        [
+          -3857.066667,
+          -3181.226667
+        ],
+        [
+          -4068.693333,
+          -3235.84
+        ],
+        [
+          -4068.693333,
+          -3399.68
+        ],
+        [
+          -4164.266667,
+          -3406.506667
+        ],
+        [
+          -4369.066667,
+          -3392.853333
+        ],
+        [
+          -4642.133333,
+          -3304.106667
+        ],
+        [
+          -4846.933333,
+          -3222.186667
+        ],
+        [
+          -5085.866667,
+          -3188.053333
+        ],
+        [
+          -5324.8,
+          -3160.746667
+        ],
+        [
+          -5666.133333,
+          -3174.4
+        ],
+        [
+          -5939.2,
+          -3194.88
+        ],
+        [
+          -6212.266667,
+          -3229.013333
+        ],
+        [
+          -6485.333333,
+          -3365.546667
+        ],
+        [
+          -6758.4,
+          -3488.426667
+        ],
+        [
+          -6963.2,
+          -3549.866667
+        ],
+        [
+          -7236.266667,
+          -3618.133333
+        ],
+        [
+          -7577.6,
+          -3686.4
+        ],
+        [
+          -7850.666667,
+          -3686.4
+        ],
+        [
+          -8063.999999839,
+          -3707.733333596
+        ],
+        [
+          -8055.466667,
+          -3686.4
+        ],
+        [
+          -7850.666667,
+          -3467.946667
+        ],
+        [
+          -7680.0,
+          -3276.8
+        ],
+        [
+          -7372.8,
+          -3072.0
+        ],
+        [
+          -7195.306667,
+          -2867.2
+        ],
+        [
+          -7181.653333,
+          -2744.32
+        ],
+        [
+          -7161.173333,
+          -2662.4
+        ],
+        [
+          -7168.0,
+          -2594.133333
+        ],
+        [
+          -7099.733333,
+          -2321.066667
+        ],
+        [
+          -7031.466667,
+          -2150.4
+        ],
+        [
+          -6894.933333,
+          -1979.733333
+        ],
+        [
+          -6949.546666493,
+          -1897.81333316
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

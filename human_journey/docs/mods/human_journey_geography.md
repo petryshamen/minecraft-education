@@ -1,6 +1,50 @@
 # Human Journey NPC geography
 
-## Current release — Arctic, Boreal & Western North America, 0.5.8
+## Current release — Central/Eastern North America, Mesoamerica & Andes, 0.5.9
+
+Baseline **0.5.8**, HEAD `1848424b6f79ac09997205056d2e0ce618a27c03`, Minecraft Java 1.21.8 / pack format 81. All captured production geography identities match; no concurrent geography reconciliation is needed. Installed test **Core 0.12.0**, SHA-256 `cd6f282030c15b9a86191d715617b027337b918e3a06cb8da584cd6fb9215631`, matches the completed first-party release. Geography remains schema 1. Core, HUD/Xaero settings, saved discovery, existing NPC snapshots and all non-geography gameplay are unchanged, including eight schema-v2 juices, economy, water, temperature, fishing and progression.
+
+Final **1,405 locals / 29 technical macros / 28 resources** (27 local files plus `global_macros.json`). Added **126 locals**, changed **zero deployed local records**, removed **zero IDs**. All **1,279 existing local objects and 23 existing local source files** are byte-for-byte preserved. Only four new local resources and the cumulative macro file change runtime geography. Authoring/review snapshots, deltas, scripts and reports are not loaded or packaged. The original handoff remains unchanged.
+
+| New local resource / technical parent | Count |
+| --- | ---: |
+| `central_eastern_north_america_locals.json` | 42 |
+| `mesoamerica_caribbean_locals.json` | 42 |
+| `andes_pacific_west_locals.json` | 38 |
+| `andes_pacific_west_offshore_locals.json` | 4 |
+
+All three physical regions have **42 records**, below the 100-record ceiling including technical fragments/backgrounds: 122 named physical units and four generic bases in total. Named locals outrank their matching-footprint bases. Added macros: `central_eastern_north_america` priority **61**, `andes_pacific_west` **58**, offshore Andes **59**. Existing `mesoamerica_caribbean` changes only polygon and priority **70 → 60**; `south_america` changes only polygon and priority **80 → 57**. Their other fields and all 24 other existing macros remain unchanged. Keep `north_america`/`south_america` fallback IDs. Andes components share display text but retain separate discovery identities; no alias/ledger migration is introduced.
+
+### Approved Core geometry accommodation
+
+Core’s near-segment tolerance rejects supplied Mesoamerica edges 35/37 as self-intersecting even though GEOS finds a valid polygon. After initial deferral, the user explicitly authorized border changes needed for Core compatibility. In **both** `mesoamerica_caribbean` and `mesoamerica_caribbean_base`, moved zero-based vertex **36** from **[-6949.546666493, -1897.81333316]** to **[-6949.54666648, -1897.81333316]**. X changes by ~**1.30003e-8 blocks**; no other coordinate moves. Symmetric-difference area is **1.3312324859908111e-6 blocks²**, Hausdorff distance **9.192612497172841e-9 blocks**. This is a tiny approved geometry change, not a claim of mathematical equality. No block-scale border redesign or political-boundary substitution is needed. All other records match the supplied final data exactly.
+
+### Structural evidence and limits
+
+All **74 archive checksums** and production identities verified. The unchanged supplied `validate_handoff.py`/final-stage validator passed on original data and again on the actual integrated resources, with review/delta/proposal copies consistently reflecting only the approved correction. Original attached documents/ZIP are untouched. Results: **1,405 reachable records**, **64 final-stage controls**, **351 earlier named-local assertions**, **4,660 final-stage probes**, and **13,380 probes across all 126 additions/five macro changes**. These overlapping checks are not summed as unique locations. No polygon gaps in any of the three new physical-region footprints. Compared with the deployed macro union: **1,815,304.926471082 blocks² added, 0.0 lost**. Named-land proxy coverage: **99.999980% Central/Eastern, 99.993807% Mesoamerica, 99.963001% Andes**; generalized Natural Earth in X/Z, not Earth-surface area or actual saved-map land.
+
+Hash-verified, unmodified first-party Core 0.12.0 pure parsers/store/resolver accept **29 macros / 1,405 locals / 28 resources, zero skipped**; **1,820 control/witness assertions**, **75,048 whole-pack edge/both-side samples**, **21,525 NPC compositions**. All 50 commodities/four families/three Era-0-only archetypes still validate; era resolution remains read-only. Item-reference callbacks use inspected resources, not a running registry. No installed mod code is executed, no Core is rebuilt, and no world/NPC is created. Offline acceptance does not establish Minecraft reload, HUD, Xaero display, stock, discovery or persistence behavior.
+
+### Manual acceptance pending
+
+Run `/reload`, `/hj npc status`, `/hj npc context`, `/hj geography status`; inspect parse/parent errors and actual HUD/profile labels. Use safe saved-terrain Y; X/Z controls and expected outcomes:
+
+| Control | X, Z | Expected local / macro |
+| --- | --- | --- |
+| Everglades | -5516, -1754 | `everglades_big_cypress` / Central & Eastern North America |
+| Florida Keys | -5583, -1677 | `florida_keys` / Central & Eastern North America |
+| Nassau | -5280, -1710 | `meso_bahamas_turks_banks` / Mesoamerica & Caribbean |
+| Cocos | -5943, -378 | `meso_cocos_island` / Mesoamerica & Caribbean |
+| Quito | -5359, 12 | `andes_ecuador_volcanic_highlands` / Andes main |
+| Titicaca | -4731, 1079 | `andes_titicaca_basin` / Andes main |
+| Galapagos Santa Cruz | -6164, 44 | `andes_galapagos_volcanic_islands` / Andes offshore |
+| Iquitos | -5001, 256 | no local / `south_america` fallback |
+
+Also inspect plains/Appalachian/Great Lakes contrasts; northern Mexican and Florida–Bahamas seams; Yucatan dry karst versus humid slopes; coastal Peru/Atacama versus highlands/Yungas; Chilean fjords versus dry forelands. Check each generic-background witness and both Andes components with fresh Hunter/Fisher/Forager snapshots. Preserve old NPC snapshots and ledgers; an eligible participant-student discovers once and teachers remain excluded. Earlier no-local fixtures may gain new content; earlier named-local expectations stay valid. Inspect small islands, shorelines, narrow valleys, altitude and biomes without generating terrain or widening claims. Existing juices/water/temperature/trades need only the usual manual smoke test.
+
+No Minecraft gameplay or saved-terrain inspection was performed. Remaining Svalbard, Big Diomede, older regional-budget, later Amazon/Orinoco/Guiana/Brazilian/eastern-Patagonian and Arctic work is outside this release. Restore the prior ZIP for rollback without clearing discovery or NPC data. The new region profile’s `lake` field does not change water quality. No live-server deployment is performed.
+
+## Historical release — Arctic, Boreal & Western North America, 0.5.8
 
 Actual baseline is **datapack 0.5.7**, Minecraft Java 1.21.8 / pack format 81. The handoff labels its capture 0.5.6 but cites `c379d39`, which is the 0.5.7 juice release; all captured geography blobs match current production. Reconciled against current HEAD `0c88a6ee764482fcc57c7cb136895839c306fcb1`; eight schema-v2 juices including Carrot and every non-geography gameplay resource are preserved. Installed test runtime is **Core 0.11.0**, SHA-256 `ee96bf39d8e675300e300b2478b9caee35ebe0a1045fbcc83c04082734908519`, matching the completed first-party release. Geography stays **schema 1**; no Core/mod/configuration is changed. Runtime observations beyond installed metadata are not claimed.
 

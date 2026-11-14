@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.9
+
+- Added Central/Eastern North America, Mesoamerica/Caribbean and Andes/Pacific West: 42 locals each, 126 additions total; final 1,405 locals / 29 technical macros / 28 resources. All 1,279 existing locals and 23 existing local files are preserved. Added three macros; applied approved Mesoamerica priority 60 and South America priority 57 with their final polygons; retained both broad fallback IDs.
+- Applied the user-approved Core compatibility correction to Mesoamerica macro/base vertex 36: X -6949.546666493 -> -6949.54666648, Z unchanged. This ~0.000000013-block adjustment avoids Core’s near-segment self-intersection rejection; footprint difference is ~0.000001331 square blocks. No other payload-record deviations, Core changes or gameplay changes.
+- Integrated handoff checks pass: 1,405 reachable locals, 64 final/351 earlier named controls, 13,380 trio boundary probes and zero regional gaps/global coverage loss. Offline Core 0.12.0 accepts all records with zero skipped: 1,820 control/witness checks, 75,048 whole-pack boundary samples and 21,525 NPC compositions. Geography/persistence regressions are structural only; no Minecraft gameplay or terrain testing.
+
 ## 0.5.8
 
 - Added Arctic America/Greenland (36 locals), Boreal North America (45) and Western North America (42 across three technical parents). Final geography: 1,279 locals / 26 macros / 24 resources; all 1,156 existing locals and their 18 source files remain unchanged. Added five macros and modified only Northern Europe, Northern Asia and Mesoamerica polygons; retained old North America fallback. Juice 0.5.7 and all other gameplay/persistence remain intact.

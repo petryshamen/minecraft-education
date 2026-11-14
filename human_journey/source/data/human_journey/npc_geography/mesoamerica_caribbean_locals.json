@@ -1,0 +1,2962 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "meso_central_mexican_plateau",
+      "display_label": "Central Mexican Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860100,
+      "polygon": [
+        [
+          -6758.4,
+          -1365.333333333
+        ],
+        [
+          -6758.4,
+          -1752.177672368
+        ],
+        [
+          -6826.66669829,
+          -1774.933238465
+        ],
+        [
+          -6826.666706938,
+          -1774.9332418
+        ],
+        [
+          -6826.666715241,
+          -1774.933245923
+        ],
+        [
+          -6826.666723126,
+          -1774.933250796
+        ],
+        [
+          -6826.666730526,
+          -1774.933256379
+        ],
+        [
+          -6826.666737378,
+          -1774.933262622
+        ],
+        [
+          -6949.546650951,
+          -1897.813176196
+        ],
+        [
+          -7031.466583795,
+          -1774.93327753
+        ],
+        [
+          -7031.466589666,
+          -1774.933269601
+        ],
+        [
+          -7031.466596289,
+          -1774.933262289
+        ],
+        [
+          -7031.466603601,
+          -1774.933255666
+        ],
+        [
+          -7031.46661153,
+          -1774.933249795
+        ],
+        [
+          -7236.26661153,
+          -1638.399916795
+        ],
+        [
+          -7236.266621385,
+          -1638.39991101
+        ],
+        [
+          -7236.266631836,
+          -1638.399906386
+        ],
+        [
+          -7236.266642746,
+          -1638.399902986
+        ],
+        [
+          -7236.266666667,
+          -1638.399897006
+        ],
+        [
+          -7236.266666667,
+          -1365.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_southern_sierra_madre_occidental",
+      "display_label": "Southern Sierra Madre Occidental",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860301,
+      "polygon": [
+        [
+          -7202.133333333,
+          -1365.333333333
+        ],
+        [
+          -7065.6,
+          -1433.6
+        ],
+        [
+          -7099.733333333,
+          -1706.666666667
+        ],
+        [
+          -7116.799909882,
+          -1718.044384366
+        ],
+        [
+          -7236.26661153,
+          -1638.399916795
+        ],
+        [
+          -7236.266621385,
+          -1638.39991101
+        ],
+        [
+          -7236.266631836,
+          -1638.399906386
+        ],
+        [
+          -7236.266642746,
+          -1638.399902986
+        ],
+        [
+          -7258.111983527,
+          -1632.938567831
+        ],
+        [
+          -7236.266666667,
+          -1501.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_sierra_madre_oriental",
+      "display_label": "Sierra Madre Oriental",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860302,
+      "polygon": [
+        [
+          -6621.866666667,
+          -1297.066666667
+        ],
+        [
+          -6587.733333333,
+          -1467.733333333
+        ],
+        [
+          -6751.835821419,
+          -1749.989612841
+        ],
+        [
+          -6826.66669829,
+          -1774.933238465
+        ],
+        [
+          -6826.666706938,
+          -1774.9332418
+        ],
+        [
+          -6826.666715241,
+          -1774.933245923
+        ],
+        [
+          -6826.666723126,
+          -1774.933250796
+        ],
+        [
+          -6826.666730526,
+          -1774.933256379
+        ],
+        [
+          -6826.666737378,
+          -1774.933262622
+        ],
+        [
+          -6883.555579126,
+          -1831.822104371
+        ],
+        [
+          -6894.933333333,
+          -1774.933333333
+        ],
+        [
+          -6860.8,
+          -1638.4
+        ],
+        [
+          -6826.666666667,
+          -1501.866666667
+        ],
+        [
+          -6792.533333333,
+          -1365.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_mexican_volcanic_belt",
+      "display_label": "Mexican Volcanic Belt",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860503,
+      "polygon": [
+        [
+          -7031.466666667,
+          -1283.413333333
+        ],
+        [
+          -6758.4,
+          -1269.76
+        ],
+        [
+          -6621.866666667,
+          -1262.933333333
+        ],
+        [
+          -6601.386666667,
+          -1399.466666667
+        ],
+        [
+          -6758.4,
+          -1433.6
+        ],
+        [
+          -7031.466666667,
+          -1467.733333333
+        ],
+        [
+          -7236.266666667,
+          -1433.6
+        ],
+        [
+          -7236.266666667,
+          -1297.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "mountain",
+          "plateau",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_balsas_depression",
+      "display_label": "Balsas Depression",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860604,
+      "polygon": [
+        [
+          -6826.666666667,
+          -1126.4
+        ],
+        [
+          -6621.866666667,
+          -1174.186666667
+        ],
+        [
+          -6656.0,
+          -1276.586666667
+        ],
+        [
+          -6894.933333333,
+          -1297.066666667
+        ],
+        [
+          -7099.733333333,
+          -1276.586666667
+        ],
+        [
+          -7099.733333333,
+          -1160.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_sierra_madre_sur",
+      "display_label": "Sierra Madre del Sur",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860405,
+      "polygon": [
+        [
+          -6621.866666667,
+          -1010.346666667
+        ],
+        [
+          -6417.066666667,
+          -1092.266666667
+        ],
+        [
+          -6485.333333333,
+          -1228.8
+        ],
+        [
+          -6690.133333333,
+          -1242.453333333
+        ],
+        [
+          -6963.2,
+          -1228.8
+        ],
+        [
+          -7133.866666667,
+          -1194.666666667
+        ],
+        [
+          -7133.866666667,
+          -1092.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_pacific_mexican_lowlands",
+      "display_label": "Pacific Mexican Dry Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860206,
+      "polygon": [
+        [
+          -7236.266666667,
+          -1228.8
+        ],
+        [
+          -7031.466666667,
+          -1092.266666667
+        ],
+        [
+          -6485.333333333,
+          -989.866666667
+        ],
+        [
+          -6348.8,
+          -1024.0
+        ],
+        [
+          -6396.586666667,
+          -1187.84
+        ],
+        [
+          -6826.666666667,
+          -1194.666666667
+        ],
+        [
+          -7099.733333333,
+          -1331.2
+        ],
+        [
+          -7263.57328392,
+          -1631.573242742
+        ],
+        [
+          -7372.799931126,
+          -1604.266581141
+        ],
+        [
+          -7441.066577557,
+          -1467.733288279
+        ],
+        [
+          -7441.066582334,
+          -1467.733279787
+        ],
+        [
+          -7441.066587914,
+          -1467.733271801
+        ],
+        [
+          -7441.066594244,
+          -1467.733264395
+        ],
+        [
+          -7441.066601265,
+          -1467.733257641
+        ],
+        [
+          -7441.06660891,
+          -1467.733251602
+        ],
+        [
+          -7441.066617107,
+          -1467.733246336
+        ],
+        [
+          -7441.066625777,
+          -1467.733241892
+        ],
+        [
+          -7441.066634838,
+          -1467.733238313
+        ],
+        [
+          -7441.066644205,
+          -1467.733235633
+        ],
+        [
+          -7441.066653788,
+          -1467.733233877
+        ],
+        [
+          -7441.066663496,
+          -1467.733233061
+        ],
+        [
+          -7441.066673238,
+          -1467.733233195
+        ],
+        [
+          -7537.443231775,
+          -1473.756768225
+        ],
+        [
+          -7577.6,
+          -1433.6
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_gulf_mexican_lowlands",
+      "display_label": "Gulf Mexican Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860207,
+      "polygon": [
+        [
+          -6826.666666667,
+          -1638.4
+        ],
+        [
+          -6690.133333333,
+          -1365.333333333
+        ],
+        [
+          -6621.866666667,
+          -1160.533333333
+        ],
+        [
+          -6212.266666667,
+          -1160.533333333
+        ],
+        [
+          -6144.0,
+          -1365.333333333
+        ],
+        [
+          -6310.290546945,
+          -1697.914427222
+        ],
+        [
+          -6485.333335831,
+          -1706.666566667
+        ],
+        [
+          -6621.866666667,
+          -1706.666566667
+        ],
+        [
+          -6621.866677371,
+          -1706.666567242
+        ],
+        [
+          -6621.866687953,
+          -1706.666568959
+        ],
+        [
+          -6621.86669829,
+          -1706.666571799
+        ],
+        [
+          -6826.666666667,
+          -1774.933227924
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "coast",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_northern_yucatan_karst",
+      "display_label": "Northern Yucatan Karst",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860508,
+      "polygon": [
+        [
+          -5870.933333333,
+          -1324.373333333
+        ],
+        [
+          -5870.933333333,
+          -1536.0
+        ],
+        [
+          -6246.4,
+          -1536.0
+        ],
+        [
+          -6246.4,
+          -1324.373333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_southern_yucatan_peten",
+      "display_label": "Southern Yucatan–Peten Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860309,
+      "polygon": [
+        [
+          -6007.466666667,
+          -1037.653333333
+        ],
+        [
+          -6007.466666667,
+          -1324.373333333
+        ],
+        [
+          -6382.933333333,
+          -1324.373333333
+        ],
+        [
+          -6382.933333333,
+          -1037.653333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "wetland"
+        ],
+        "water": [
+          "inland",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_chiapas_guatemala_highlands",
+      "display_label": "Chiapas–Guatemala Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860610,
+      "polygon": [
+        [
+          -6212.266666667,
+          -948.906666667
+        ],
+        [
+          -6041.6,
+          -969.386666667
+        ],
+        [
+          -6075.733333333,
+          -1119.573333333
+        ],
+        [
+          -6212.266666667,
+          -1194.666666667
+        ],
+        [
+          -6417.066666667,
+          -1194.666666667
+        ],
+        [
+          -6417.066666667,
+          -1024.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_soconusco_pacific_plain",
+      "display_label": "Soconusco Pacific Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860711,
+      "polygon": [
+        [
+          -6260.053333333,
+          -935.253333333
+        ],
+        [
+          -6130.346666667,
+          -921.6
+        ],
+        [
+          -6164.48,
+          -955.733333333
+        ],
+        [
+          -6294.186666667,
+          -1024.0
+        ],
+        [
+          -6417.066666667,
+          -1092.266666667
+        ],
+        [
+          -6417.066666667,
+          -976.213333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_belize_caribbean_lowlands",
+      "display_label": "Belize Caribbean Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860512,
+      "polygon": [
+        [
+          -5939.2,
+          -1071.786666667
+        ],
+        [
+          -5939.2,
+          -1276.586666667
+        ],
+        [
+          -6103.04,
+          -1276.586666667
+        ],
+        [
+          -6103.04,
+          -1071.786666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_honduras_interior_highlands",
+      "display_label": "Honduran Interior Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860213,
+      "polygon": [
+        [
+          -5700.266666667,
+          -866.986666667
+        ],
+        [
+          -5700.266666667,
+          -1112.746666667
+        ],
+        [
+          -6144.0,
+          -1112.746666667
+        ],
+        [
+          -6144.0,
+          -866.986666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "inland",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "plateau",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_mosquitia_caribbean_plains",
+      "display_label": "Mosquitia Caribbean Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860414,
+      "polygon": [
+        [
+          -5597.866666667,
+          -716.8
+        ],
+        [
+          -5597.866666667,
+          -1160.533333333
+        ],
+        [
+          -5836.8,
+          -1160.533333333
+        ],
+        [
+          -5905.066666667,
+          -1024.0
+        ],
+        [
+          -5905.066666667,
+          -887.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_pacific_volcanic_corridor",
+      "display_label": "Pacific Volcanic Corridor",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860515,
+      "polygon": [
+        [
+          -5939.2,
+          -791.893333333
+        ],
+        [
+          -5802.666666667,
+          -675.84
+        ],
+        [
+          -5768.533333333,
+          -730.453333333
+        ],
+        [
+          -5870.933333333,
+          -873.813333333
+        ],
+        [
+          -6075.733333333,
+          -1010.346666667
+        ],
+        [
+          -6191.786666667,
+          -1003.52
+        ],
+        [
+          -6191.786666667,
+          -887.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_nicaraguan_lake_basin",
+      "display_label": "Nicaraguan Lake Basin",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860616,
+      "polygon": [
+        [
+          -5782.186666667,
+          -723.626666667
+        ],
+        [
+          -5782.186666667,
+          -887.466666667
+        ],
+        [
+          -5959.68,
+          -887.466666667
+        ],
+        [
+          -5959.68,
+          -723.626666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_guanacaste_nicoya_drylands",
+      "display_label": "Guanacaste–Nicoya Drylands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860717,
+      "polygon": [
+        [
+          -5775.36,
+          -641.706666667
+        ],
+        [
+          -5775.36,
+          -771.413333333
+        ],
+        [
+          -5905.066666667,
+          -771.413333333
+        ],
+        [
+          -5905.066666667,
+          -641.706666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_talamanca_central_cordillera",
+      "display_label": "Talamanca & Central Cordillera",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860818,
+      "polygon": [
+        [
+          -5754.88,
+          -607.573333333
+        ],
+        [
+          -5645.653333333,
+          -552.96
+        ],
+        [
+          -5570.56,
+          -559.786666667
+        ],
+        [
+          -5652.48,
+          -641.706666667
+        ],
+        [
+          -5720.746666667,
+          -716.8
+        ],
+        [
+          -5789.013333333,
+          -771.413333333
+        ],
+        [
+          -5836.8,
+          -744.106666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm",
+          "cold"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_caribbean_isthmus_lowlands",
+      "display_label": "Caribbean Isthmus Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860319,
+      "polygon": [
+        [
+          -5393.066666667,
+          -669.013333333
+        ],
+        [
+          -5652.48,
+          -703.146666667
+        ],
+        [
+          -5652.48,
+          -887.466666667
+        ],
+        [
+          -5782.186666667,
+          -887.466666667
+        ],
+        [
+          -5782.186666667,
+          -600.746666667
+        ],
+        [
+          -5277.013433333,
+          -600.746666667
+        ],
+        [
+          -5277.013433333,
+          -648.533333333
+        ],
+        [
+          -5277.013432882,
+          -648.53334282
+        ],
+        [
+          -5277.013431752,
+          -648.533350701
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "lowland",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_south_pacific_rainforest_coast",
+      "display_label": "South Pacific Rainforest Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860520,
+      "polygon": [
+        [
+          -5666.133333333,
+          -512.0
+        ],
+        [
+          -5570.56,
+          -552.96
+        ],
+        [
+          -5597.866666667,
+          -600.746666667
+        ],
+        [
+          -5734.4,
+          -675.84
+        ],
+        [
+          -5816.32,
+          -682.666666667
+        ],
+        [
+          -5829.973333333,
+          -559.786666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_panama_pacific_savannas",
+      "display_label": "Panama Pacific Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860221,
+      "polygon": [
+        [
+          -5393.066666667,
+          -464.213333333
+        ],
+        [
+          -5393.066666667,
+          -621.226666667
+        ],
+        [
+          -5632.0,
+          -621.226666667
+        ],
+        [
+          -5632.0,
+          -464.213333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid",
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_darien_forests",
+      "display_label": "Darien Forests & Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860622,
+      "polygon": [
+        [
+          -5358.933579555,
+          -443.733333333
+        ],
+        [
+          -5358.933390915,
+          -443.733417173
+        ],
+        [
+          -5311.14675407,
+          -491.520054018
+        ],
+        [
+          -5277.013433333,
+          -593.920016228
+        ],
+        [
+          -5277.013433333,
+          -648.533333333
+        ],
+        [
+          -5277.013432882,
+          -648.53334282
+        ],
+        [
+          -5277.013431534,
+          -648.53335222
+        ],
+        [
+          -5277.013429299,
+          -648.533361451
+        ],
+        [
+          -5277.013426199,
+          -648.533370428
+        ],
+        [
+          -5277.013422261,
+          -648.53337907
+        ],
+        [
+          -5277.013417522,
+          -648.533387299
+        ],
+        [
+          -5277.013412022,
+          -648.533395042
+        ],
+        [
+          -5277.013405814,
+          -648.533402229
+        ],
+        [
+          -5277.013398951,
+          -648.533408794
+        ],
+        [
+          -5253.461485731,
+          -669.013333333
+        ],
+        [
+          -5447.68,
+          -669.013333333
+        ],
+        [
+          -5447.68,
+          -443.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "mountain",
+          "hills",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_cuban_plains_karst",
+      "display_label": "Cuban Plains & Karst",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860123,
+      "polygon": [
+        [
+          -5017.6,
+          -1317.546666667
+        ],
+        [
+          -5017.6,
+          -1624.746666667
+        ],
+        [
+          -5836.8,
+          -1624.746666667
+        ],
+        [
+          -5836.8,
+          -1317.546666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_cuban_mountain_belts",
+      "display_label": "Cuban Mountain Belts",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860524,
+      "polygon": [
+        [
+          -5174.613333333,
+          -1338.026666667
+        ],
+        [
+          -5031.253333333,
+          -1331.2
+        ],
+        [
+          -5038.08,
+          -1447.253333333
+        ],
+        [
+          -5222.4,
+          -1460.906666667
+        ],
+        [
+          -5324.8,
+          -1433.6
+        ],
+        [
+          -5324.8,
+          -1399.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_hispaniola_lowlands",
+      "display_label": "Hispaniola Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860225,
+      "polygon": [
+        [
+          -4642.133333333,
+          -1187.84
+        ],
+        [
+          -4642.133333333,
+          -1385.813333333
+        ],
+        [
+          -5120.0,
+          -1385.813333333
+        ],
+        [
+          -5120.0,
+          -1187.84
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "valley",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_hispaniola_cordilleras",
+      "display_label": "Hispaniola Cordilleras",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860526,
+      "polygon": [
+        [
+          -4942.506666667,
+          -1228.8
+        ],
+        [
+          -4812.8,
+          -1249.28
+        ],
+        [
+          -4737.706666667,
+          -1297.066666667
+        ],
+        [
+          -4765.013333333,
+          -1365.333333333
+        ],
+        [
+          -4867.413333333,
+          -1365.333333333
+        ],
+        [
+          -4942.506666667,
+          -1331.2
+        ],
+        [
+          -5085.866666667,
+          -1283.413333333
+        ],
+        [
+          -5099.52,
+          -1228.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_hispaniola_dry_valleys",
+      "display_label": "Hispaniola Dry Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860727,
+      "polygon": [
+        [
+          -4799.146666667,
+          -1235.626666667
+        ],
+        [
+          -4799.146666667,
+          -1283.413333333
+        ],
+        [
+          -4983.466666667,
+          -1283.413333333
+        ],
+        [
+          -4983.466666667,
+          -1235.626666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "arid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "inland",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_jamaican_karst_lowlands",
+      "display_label": "Jamaican Karst & Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860328,
+      "polygon": [
+        [
+          -5188.266666667,
+          -1194.666666667
+        ],
+        [
+          -5188.266666667,
+          -1276.586666667
+        ],
+        [
+          -5365.76,
+          -1276.586666667
+        ],
+        [
+          -5365.76,
+          -1194.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "hills",
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_jamaican_blue_mountains",
+      "display_label": "Jamaican Blue Mountains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860629,
+      "polygon": [
+        [
+          -5188.266666667,
+          -1215.146666667
+        ],
+        [
+          -5188.266666667,
+          -1249.28
+        ],
+        [
+          -5249.706666667,
+          -1249.28
+        ],
+        [
+          -5249.706666667,
+          -1215.146666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "meso_puerto_rico_north_highlands",
+      "display_label": "Puerto Rico North & Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860330,
+      "polygon": [
+        [
+          -4444.16,
+          -1215.146666667
+        ],
+        [
+          -4444.16,
+          -1276.586666667
+        ],
+        [
+          -4608.0,
+          -1276.586666667
+        ],
+        [
+          -4608.0,
+          -1215.146666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "mountain",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_puerto_rico_dry_south",
+      "display_label": "Puerto Rico Dry South",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860631,
+      "polygon": [
+        [
+          -4491.946666667,
+          -1208.32
+        ],
+        [
+          -4491.946666667,
+          -1234.261333333
+        ],
+        [
+          -4594.346666667,
+          -1234.261333333
+        ],
+        [
+          -4594.346666667,
+          -1208.32
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_bahamas_turks_banks",
+      "display_label": "Bahamas & Turks Limestone Banks",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860432,
+      "polygon": [
+        [
+          -5324.8,
+          -1536.0
+        ],
+        [
+          -5188.266666667,
+          -1474.56
+        ],
+        [
+          -4983.466666667,
+          -1406.293333333
+        ],
+        [
+          -4812.8,
+          -1406.293333333
+        ],
+        [
+          -4812.8,
+          -1945.6
+        ],
+        [
+          -5372.586564686,
+          -1945.6
+        ],
+        [
+          -5393.066568609,
+          -1843.199980388
+        ],
+        [
+          -5393.066571799,
+          -1843.199968377
+        ],
+        [
+          -5461.333238465,
+          -1638.399968377
+        ],
+        [
+          -5461.333241936,
+          -1638.399959422
+        ],
+        [
+          -5461.33324625,
+          -1638.399950841
+        ],
+        [
+          -5461.333251368,
+          -1638.399942714
+        ],
+        [
+          -5461.333257241,
+          -1638.399935115
+        ],
+        [
+          -5461.333263817,
+          -1638.399928115
+        ],
+        [
+          -5461.333271034,
+          -1638.399921777
+        ],
+        [
+          -5461.333278825,
+          -1638.399916161
+        ],
+        [
+          -5461.333287119,
+          -1638.399911319
+        ],
+        [
+          -5461.33329584,
+          -1638.399907295
+        ],
+        [
+          -5461.333304906,
+          -1638.399904125
+        ],
+        [
+          -5461.333314235,
+          -1638.399901841
+        ],
+        [
+          -5461.33332374,
+          -1638.399900461
+        ],
+        [
+          -5461.333333333,
+          -1638.3999
+        ],
+        [
+          -5495.466666667,
+          -1638.3999
+        ],
+        [
+          -5495.466666667,
+          -1590.613333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "dry"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_northern_lesser_antilles",
+      "display_label": "Northern Lesser Antilles",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860333,
+      "polygon": [
+        [
+          -4130.133333333,
+          -1105.92
+        ],
+        [
+          -4130.133333333,
+          -1297.066666667
+        ],
+        [
+          -4450.986666667,
+          -1297.066666667
+        ],
+        [
+          -4450.986666667,
+          -1105.92
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "forest"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_windward_volcanic_islands",
+      "display_label": "Lesser Antilles Volcanic Belt",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860434,
+      "polygon": [
+        [
+          -4116.48,
+          -805.546666667
+        ],
+        [
+          -4116.48,
+          -1160.533333333
+        ],
+        [
+          -4266.666666667,
+          -1160.533333333
+        ],
+        [
+          -4266.666666667,
+          -805.546666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_barbados_limestone_island",
+      "display_label": "Barbados Limestone Island",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860635,
+      "polygon": [
+        [
+          -4041.386666667,
+          -873.813333333
+        ],
+        [
+          -4041.386666667,
+          -921.6
+        ],
+        [
+          -4089.173333333,
+          -921.6
+        ],
+        [
+          -4089.173333333,
+          -873.813333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_southern_caribbean_dry_islands",
+      "display_label": "Southern Caribbean Dry Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860436,
+      "polygon": [
+        [
+          -4300.8,
+          -887.466666667
+        ],
+        [
+          -4874.24,
+          -887.466666667
+        ],
+        [
+          -4874.24,
+          -859.477449952
+        ],
+        [
+          -4846.933281884,
+          -843.093419083
+        ],
+        [
+          -4846.933273922,
+          -843.093413771
+        ],
+        [
+          -4846.933266504,
+          -843.093407723
+        ],
+        [
+          -4846.933259699,
+          -843.093400994
+        ],
+        [
+          -4846.933253568,
+          -843.093393645
+        ],
+        [
+          -4846.933248168,
+          -843.093385743
+        ],
+        [
+          -4819.626685686,
+          -798.72022171
+        ],
+        [
+          -4792.320092848,
+          -866.986703806
+        ],
+        [
+          -4792.320088733,
+          -866.986712781
+        ],
+        [
+          -4792.320083752,
+          -866.986721307
+        ],
+        [
+          -4792.320077956,
+          -866.9867293
+        ],
+        [
+          -4792.320071399,
+          -866.986736682
+        ],
+        [
+          -4792.320064147,
+          -866.986743382
+        ],
+        [
+          -4792.320056269,
+          -866.986749334
+        ],
+        [
+          -4792.320047842,
+          -866.98675448
+        ],
+        [
+          -4792.320038949,
+          -866.98675877
+        ],
+        [
+          -4792.320029676,
+          -866.986762162
+        ],
+        [
+          -4792.320020114,
+          -866.986764623
+        ],
+        [
+          -4792.320010356,
+          -866.986766129
+        ],
+        [
+          -4792.320000497,
+          -866.986766665
+        ],
+        [
+          -4792.319990633,
+          -866.986766227
+        ],
+        [
+          -4792.319980861,
+          -866.986764818
+        ],
+        [
+          -4792.319971275,
+          -866.986762452
+        ],
+        [
+          -4792.319961969,
+          -866.986759152
+        ],
+        [
+          -4792.319953034,
+          -866.986754951
+        ],
+        [
+          -4792.319944556,
+          -866.986749889
+        ],
+        [
+          -4792.319936619,
+          -866.986744016
+        ],
+        [
+          -4792.3199293,
+          -866.986737388
+        ],
+        [
+          -4792.319922671,
+          -866.986730072
+        ],
+        [
+          -4792.319916795,
+          -866.986722137
+        ],
+        [
+          -4751.359942182,
+          -805.546760218
+        ],
+        [
+          -4642.13332093,
+          -791.893432561
+        ],
+        [
+          -4642.133313722,
+          -791.893431391
+        ],
+        [
+          -4437.333313722,
+          -750.933431391
+        ],
+        [
+          -4437.333308665,
+          -750.933430243
+        ],
+        [
+          -4362.239996641,
+          -731.818769
+        ],
+        [
+          -4314.45335461,
+          -740.693431092
+        ],
+        [
+          -4300.8,
+          -744.106769744
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_trinidad_tobago",
+      "display_label": "Trinidad & Tobago",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860537,
+      "polygon": [
+        [
+          -4109.653333333,
+          -798.72
+        ],
+        [
+          -4232.533333333,
+          -798.72
+        ],
+        [
+          -4232.533333333,
+          -749.958210413
+        ],
+        [
+          -4222.293283719,
+          -744.106753491
+        ],
+        [
+          -4222.293275802,
+          -744.10674846
+        ],
+        [
+          -4222.293268391,
+          -744.10674271
+        ],
+        [
+          -4222.293261552,
+          -744.10673629
+        ],
+        [
+          -4222.293255344,
+          -744.106729258
+        ],
+        [
+          -4222.293249822,
+          -744.106721675
+        ],
+        [
+          -4222.293245036,
+          -744.106713608
+        ],
+        [
+          -4222.293241026,
+          -744.106705128
+        ],
+        [
+          -4205.226574359,
+          -703.146705128
+        ],
+        [
+          -4205.226571018,
+          -703.146695845
+        ],
+        [
+          -4205.226568609,
+          -703.146686278
+        ],
+        [
+          -4198.39991802,
+          -669.013433333
+        ],
+        [
+          -4109.653333333,
+          -669.013433333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_western_caribbean_islands",
+      "display_label": "Western Caribbean Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860138,
+      "polygon": [
+        [
+          -5393.066666667,
+          -819.2
+        ],
+        [
+          -5393.066666667,
+          -1378.986666667
+        ],
+        [
+          -6007.466666667,
+          -1378.986666667
+        ],
+        [
+          -6007.466666667,
+          -819.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_revillagigedo_islands",
+      "display_label": "Revillagigedo Volcanic Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860439,
+      "polygon": [
+        [
+          -7529.813333333,
+          -1242.453333333
+        ],
+        [
+          -7529.813333333,
+          -1344.853333333
+        ],
+        [
+          -7864.32,
+          -1344.853333333
+        ],
+        [
+          -7864.32,
+          -1242.453333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren",
+          "forest"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "meso_cocos_island",
+      "display_label": "Cocos Rainforest Island",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 860540,
+      "polygon": [
+        [
+          -5925.546666667,
+          -365.226666667
+        ],
+        [
+          -5925.546666667,
+          -389.12
+        ],
+        [
+          -5952.853333333,
+          -389.12
+        ],
+        [
+          -5952.853333333,
+          -365.226666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "mesoamerica_caribbean_base",
+      "display_label": "Mesoamerica & Caribbean",
+      "dimension": "minecraft:overworld",
+      "macro_region": "mesoamerica_caribbean",
+      "priority": 769000,
+      "polygon": [
+        [
+          -8055.466666667,
+          -1570.133333333
+        ],
+        [
+          -7850.666666667,
+          -1194.666666667
+        ],
+        [
+          -7168.0,
+          -1092.266666667
+        ],
+        [
+          -6417.066666667,
+          -955.733333333
+        ],
+        [
+          -6212.266666667,
+          -307.2
+        ],
+        [
+          -5666.133333333,
+          -307.2
+        ],
+        [
+          -5358.933333333,
+          -443.733333333
+        ],
+        [
+          -5311.146666667,
+          -491.52
+        ],
+        [
+          -5277.013333333,
+          -593.92
+        ],
+        [
+          -5277.013333333,
+          -648.533333333
+        ],
+        [
+          -5120.0,
+          -785.066666667
+        ],
+        [
+          -4949.333333333,
+          -863.573333333
+        ],
+        [
+          -4881.066666667,
+          -863.573333333
+        ],
+        [
+          -4846.933333333,
+          -843.093333333
+        ],
+        [
+          -4819.626666667,
+          -798.72
+        ],
+        [
+          -4792.32,
+          -866.986666667
+        ],
+        [
+          -4751.36,
+          -805.546666667
+        ],
+        [
+          -4642.133333333,
+          -791.893333333
+        ],
+        [
+          -4437.333333333,
+          -750.933333333
+        ],
+        [
+          -4362.24,
+          -731.818666667
+        ],
+        [
+          -4314.453333333,
+          -740.693333333
+        ],
+        [
+          -4246.186666667,
+          -757.76
+        ],
+        [
+          -4222.293333333,
+          -744.106666667
+        ],
+        [
+          -4205.226666667,
+          -703.146666667
+        ],
+        [
+          -4198.4,
+          -669.013333333
+        ],
+        [
+          -4096.0,
+          -669.013333333
+        ],
+        [
+          -3993.6,
+          -819.2
+        ],
+        [
+          -3993.6,
+          -2048.0
+        ],
+        [
+          -5352.106666667,
+          -2048.0
+        ],
+        [
+          -5393.066666667,
+          -1843.2
+        ],
+        [
+          -5461.333333333,
+          -1638.4
+        ],
+        [
+          -5597.866666667,
+          -1638.4
+        ],
+        [
+          -5802.666666667,
+          -1672.533333333
+        ],
+        [
+          -6485.333333333,
+          -1706.666666667
+        ],
+        [
+          -6621.866666667,
+          -1706.666666667
+        ],
+        [
+          -6826.666666667,
+          -1774.933333333
+        ],
+        [
+          -6949.54666648,
+          -1897.81333316
+        ],
+        [
+          -6894.933333,
+          -1979.733333
+        ],
+        [
+          -7031.466667,
+          -1774.933333
+        ],
+        [
+          -7236.266667,
+          -1638.4
+        ],
+        [
+          -7372.8,
+          -1604.266667
+        ],
+        [
+          -7441.066667,
+          -1467.733333
+        ],
+        [
+          -7987.2,
+          -1501.866667
+        ],
+        [
+          -8055.466666667,
+          -1604.266667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest"
+        ],
+        "water": [
+          "coast"
+        ],
+        "relief": [
+          "lowland"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

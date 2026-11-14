@@ -1,0 +1,2833 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "andes_choco_pacific_lowlands",
+      "display_label": "Choco Pacific Rainforest Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880100,
+      "polygon": [
+        [
+          -5188.266666667,
+          68.266666667
+        ],
+        [
+          -5188.266666667,
+          -648.533333333
+        ],
+        [
+          -5277.013180935,
+          -648.533333333
+        ],
+        [
+          -5277.013233333,
+          -648.53328777
+        ],
+        [
+          -5277.013233333,
+          -593.92
+        ],
+        [
+          -5277.013233908,
+          -593.919989296
+        ],
+        [
+          -5277.013235625,
+          -593.919978714
+        ],
+        [
+          -5277.013238465,
+          -593.919968377
+        ],
+        [
+          -5311.146571799,
+          -491.519968377
+        ],
+        [
+          -5311.146575134,
+          -491.519959729
+        ],
+        [
+          -5311.146579257,
+          -491.519951426
+        ],
+        [
+          -5311.14658413,
+          -491.519943541
+        ],
+        [
+          -5311.146589713,
+          -491.519936141
+        ],
+        [
+          -5311.146595956,
+          -491.519929289
+        ],
+        [
+          -5358.933262622,
+          -443.733262622
+        ],
+        [
+          -5358.933269402,
+          -443.733256438
+        ],
+        [
+          -5358.933276719,
+          -443.733250902
+        ],
+        [
+          -5358.933284514,
+          -443.733246059
+        ],
+        [
+          -5358.933292719,
+          -443.733241952
+        ],
+        [
+          -5597.866666667,
+          -337.540631309
+        ],
+        [
+          -5597.866666667,
+          68.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_caribbean_foreland_lowlands",
+      "display_label": "Northern Andean Caribbean Forelands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880101,
+      "polygon": [
+        [
+          -4915.2,
+          -477.866666667
+        ],
+        [
+          -4915.2,
+          -853.333333333
+        ],
+        [
+          -4971.593963609,
+          -853.333333333
+        ],
+        [
+          -5119.999945193,
+          -785.066581805
+        ],
+        [
+          -5277.013233333,
+          -648.53328777
+        ],
+        [
+          -5277.013233333,
+          -593.92
+        ],
+        [
+          -5277.013233908,
+          -593.919989296
+        ],
+        [
+          -5277.013235625,
+          -593.919978714
+        ],
+        [
+          -5277.013238465,
+          -593.919968377
+        ],
+        [
+          -5290.666666667,
+          -552.959683772
+        ],
+        [
+          -5290.666666667,
+          -477.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_guajira_dry_coast",
+      "display_label": "Guajira–Falcon Dry Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880502,
+      "polygon": [
+        [
+          -4684.373446569,
+          -723.626666667
+        ],
+        [
+          -4662.613474695,
+          -764.586613723
+        ],
+        [
+          -4810.608357032,
+          -821.26550483
+        ],
+        [
+          -4819.626573819,
+          -798.719962861
+        ],
+        [
+          -4819.62657781,
+          -798.719954127
+        ],
+        [
+          -4819.626582619,
+          -798.719945815
+        ],
+        [
+          -4819.626588204,
+          -798.719938004
+        ],
+        [
+          -4819.626594512,
+          -798.719930764
+        ],
+        [
+          -4819.626601485,
+          -798.719924162
+        ],
+        [
+          -4819.62660906,
+          -798.71991826
+        ],
+        [
+          -4819.626617165,
+          -798.719913112
+        ],
+        [
+          -4819.626625727,
+          -798.719908764
+        ],
+        [
+          -4819.626634667,
+          -798.719905258
+        ],
+        [
+          -4819.626643902,
+          -798.719902626
+        ],
+        [
+          -4819.626653346,
+          -798.719900891
+        ],
+        [
+          -4819.626662914,
+          -798.71990007
+        ],
+        [
+          -4819.626672516,
+          -798.719900171
+        ],
+        [
+          -4819.626682064,
+          -798.719901192
+        ],
+        [
+          -4819.62669147,
+          -798.719903125
+        ],
+        [
+          -4819.626700647,
+          -798.71990595
+        ],
+        [
+          -4819.626709511,
+          -798.719909643
+        ],
+        [
+          -4819.62671798,
+          -798.719914169
+        ],
+        [
+          -4819.626725976,
+          -798.719919486
+        ],
+        [
+          -4819.626733425,
+          -798.719925546
+        ],
+        [
+          -4819.626740258,
+          -798.719932293
+        ],
+        [
+          -4819.626746413,
+          -798.719939663
+        ],
+        [
+          -4819.626751833,
+          -798.71994759
+        ],
+        [
+          -4840.559896101,
+          -832.736307027
+        ],
+        [
+          -4921.078537012,
+          -863.573233333
+        ],
+        [
+          -4949.333311436,
+          -863.573233333
+        ],
+        [
+          -5017.6,
+          -832.170556594
+        ],
+        [
+          -5017.6,
+          -723.626666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "barren",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_santa_marta_perija_highlands",
+      "display_label": "Santa Marta–Perija Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880603,
+      "polygon": [
+        [
+          -4949.333333333,
+          -587.093333333
+        ],
+        [
+          -4901.546666667,
+          -614.4
+        ],
+        [
+          -4935.68,
+          -750.933333333
+        ],
+        [
+          -4983.466666667,
+          -785.066666667
+        ],
+        [
+          -5085.866666667,
+          -771.413333333
+        ],
+        [
+          -5085.866666667,
+          -682.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_merida_cordillera",
+      "display_label": "Merida Cordillera",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880404,
+      "polygon": [
+        [
+          -4812.800111803,
+          -477.866666667
+        ],
+        [
+          -4778.666756109,
+          -546.133378055
+        ],
+        [
+          -4778.666754978,
+          -546.133380249
+        ],
+        [
+          -4662.613474695,
+          -764.586613723
+        ],
+        [
+          -4680.438798124,
+          -771.413333333
+        ],
+        [
+          -4969.813333333,
+          -771.413333333
+        ],
+        [
+          -4969.813333333,
+          -477.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_colombian_west_central_cordilleras",
+      "display_label": "Colombian West & Central Cordilleras",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880305,
+      "polygon": [
+        [
+          -5188.266666667,
+          0.0
+        ],
+        [
+          -5085.866666667,
+          -204.8
+        ],
+        [
+          -5051.733333333,
+          -600.746666667
+        ],
+        [
+          -5236.053333333,
+          -628.053333333
+        ],
+        [
+          -5208.746666667,
+          -341.333333333
+        ],
+        [
+          -5263.36,
+          -136.533333333
+        ],
+        [
+          -5277.013333333,
+          0.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm",
+          "cold"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_colombian_eastern_cordillera",
+      "display_label": "Colombian Eastern Cordillera",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880406,
+      "polygon": [
+        [
+          -5051.733513611,
+          -68.266576528
+        ],
+        [
+          -5051.733416538,
+          -68.266722137
+        ],
+        [
+          -4915.200086658,
+          -273.066716957
+        ],
+        [
+          -4846.933422776,
+          -409.600044721
+        ],
+        [
+          -4812.800080161,
+          -477.866729952
+        ],
+        [
+          -4942.506666667,
+          -580.266666667
+        ],
+        [
+          -5079.04,
+          -477.866666667
+        ],
+        [
+          -5140.48,
+          -204.8
+        ],
+        [
+          -5188.266666667,
+          0.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_magdalena_valley",
+      "display_label": "Magdalena Valley",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880607,
+      "polygon": [
+        [
+          -5106.346666667,
+          -136.533333333
+        ],
+        [
+          -5085.866666667,
+          -409.6
+        ],
+        [
+          -5044.906666667,
+          -634.88
+        ],
+        [
+          -5120.0,
+          -614.4
+        ],
+        [
+          -5113.173333333,
+          -375.466666667
+        ],
+        [
+          -5174.613333333,
+          -116.053333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_cauca_valley",
+      "display_label": "Cauca Valley",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880608,
+      "polygon": [
+        [
+          -5222.4,
+          -102.4
+        ],
+        [
+          -5154.133333333,
+          -409.6
+        ],
+        [
+          -5140.48,
+          -600.746666667
+        ],
+        [
+          -5201.92,
+          -546.133333333
+        ],
+        [
+          -5215.573333333,
+          -341.333333333
+        ],
+        [
+          -5256.533333333,
+          -102.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_ecuador_north_pacific_lowlands",
+      "display_label": "Northern Ecuador Pacific Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880209,
+      "polygon": [
+        [
+          -5324.8,
+          68.266666667
+        ],
+        [
+          -5324.8,
+          -170.666666667
+        ],
+        [
+          -5563.733333333,
+          -170.666666667
+        ],
+        [
+          -5563.733333333,
+          68.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_tumbes_equatorial_dry_lowlands",
+      "display_label": "Tumbes–Equatorial Dry Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880210,
+      "polygon": [
+        [
+          -5324.8,
+          409.6
+        ],
+        [
+          -5324.8,
+          68.266666667
+        ],
+        [
+          -5597.866666667,
+          68.266666667
+        ],
+        [
+          -5597.866666667,
+          409.6
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "shrubland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_ecuador_volcanic_highlands",
+      "display_label": "Ecuadorian Volcanic Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880511,
+      "polygon": [
+        [
+          -5420.373333333,
+          136.533333333
+        ],
+        [
+          -5427.2,
+          307.2
+        ],
+        [
+          -5358.933333333,
+          307.2
+        ],
+        [
+          -5324.8,
+          68.266666667
+        ],
+        [
+          -5311.146666667,
+          -102.4
+        ],
+        [
+          -5393.066666667,
+          -102.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "forest",
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_northern_eastern_montane_forests",
+      "display_label": "Northern Eastern Andean Forests",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880312,
+      "polygon": [
+        [
+          -5283.84,
+          -102.4
+        ],
+        [
+          -5345.28,
+          136.533333333
+        ],
+        [
+          -5290.666666667,
+          375.466666667
+        ],
+        [
+          -5165.511231296,
+          375.466666667
+        ],
+        [
+          -5188.266749872,
+          341.333388803
+        ],
+        [
+          -5188.2667549,
+          341.333380396
+        ],
+        [
+          -5188.266759081,
+          341.333371537
+        ],
+        [
+          -5188.266762376,
+          341.333362312
+        ],
+        [
+          -5188.266764752,
+          341.333352808
+        ],
+        [
+          -5188.266766187,
+          341.333343118
+        ],
+        [
+          -5188.266766667,
+          341.333333333
+        ],
+        [
+          -5188.266766667,
+          136.533333333
+        ],
+        [
+          -5188.266766187,
+          136.533323549
+        ],
+        [
+          -5188.266764752,
+          136.533313858
+        ],
+        [
+          -5188.266762376,
+          136.533304355
+        ],
+        [
+          -5188.266759081,
+          136.533295129
+        ],
+        [
+          -5188.2667549,
+          136.533286271
+        ],
+        [
+          -5188.266749872,
+          136.533277863
+        ],
+        [
+          -5051.733442788,
+          -68.266682763
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_northern_peruvian_highlands",
+      "display_label": "Northern Peruvian Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880413,
+      "polygon": [
+        [
+          -5427.2,
+          477.866666667
+        ],
+        [
+          -5256.533333333,
+          614.4
+        ],
+        [
+          -5154.133333333,
+          512.0
+        ],
+        [
+          -5256.533333333,
+          238.933333333
+        ],
+        [
+          -5461.333333333,
+          238.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "forest",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_peruvian_coastal_desert",
+      "display_label": "Peruvian Coastal Desert",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880214,
+      "polygon": [
+        [
+          -5529.6,
+          614.4
+        ],
+        [
+          -5256.533333333,
+          1024.0
+        ],
+        [
+          -4915.2,
+          1331.2
+        ],
+        [
+          -4778.666666667,
+          1262.933333333
+        ],
+        [
+          -5051.733333333,
+          955.733333333
+        ],
+        [
+          -5256.533333333,
+          614.4
+        ],
+        [
+          -5393.066666667,
+          341.333333333
+        ],
+        [
+          -5597.866666667,
+          341.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_central_peruvian_cordilleras",
+      "display_label": "Central Peruvian Cordilleras",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880515,
+      "polygon": [
+        [
+          -5256.533333333,
+          750.933333333
+        ],
+        [
+          -5120.0,
+          955.733333333
+        ],
+        [
+          -4983.466666667,
+          955.733333333
+        ],
+        [
+          -5051.733333333,
+          750.933333333
+        ],
+        [
+          -5256.533333333,
+          546.133333333
+        ],
+        [
+          -5393.066666667,
+          546.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool",
+          "polar"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_southern_peruvian_highlands",
+      "display_label": "Southern Peruvian Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880416,
+      "polygon": [
+        [
+          -5051.733333333,
+          1092.266666667
+        ],
+        [
+          -4846.933333333,
+          1262.933333333
+        ],
+        [
+          -4642.133333333,
+          1194.666666667
+        ],
+        [
+          -4710.4,
+          955.733333333
+        ],
+        [
+          -4915.2,
+          750.933333333
+        ],
+        [
+          -5120.0,
+          819.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_peruvian_yungas",
+      "display_label": "Peruvian Yungas",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880317,
+      "polygon": [
+        [
+          -5256.533333333,
+          341.333333333
+        ],
+        [
+          -5229.226666667,
+          614.4
+        ],
+        [
+          -5024.426666667,
+          819.2
+        ],
+        [
+          -4710.4,
+          1058.133333333
+        ],
+        [
+          -4625.066737377,
+          972.800070711
+        ],
+        [
+          -4642.133404044,
+          955.733404044
+        ],
+        [
+          -4846.933404044,
+          750.933404044
+        ],
+        [
+          -5051.733404044,
+          546.133404044
+        ],
+        [
+          -5051.733410668,
+          546.133396732
+        ],
+        [
+          -5051.733416538,
+          546.133388803
+        ],
+        [
+          -5188.266749872,
+          341.333388803
+        ],
+        [
+          -5188.2667549,
+          341.333380396
+        ],
+        [
+          -5188.266759081,
+          341.333371537
+        ],
+        [
+          -5188.266762376,
+          341.333362312
+        ],
+        [
+          -5188.266764752,
+          341.333352808
+        ],
+        [
+          -5188.266766187,
+          341.333343118
+        ],
+        [
+          -5188.266766667,
+          341.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_titicaca_basin",
+      "display_label": "Titicaca Basin",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880718,
+      "polygon": [
+        [
+          -4676.266666667,
+          1146.88
+        ],
+        [
+          -4676.266666667,
+          989.866666667
+        ],
+        [
+          -4812.8,
+          989.866666667
+        ],
+        [
+          -4812.8,
+          1146.88
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland",
+          "shrubland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_dry_altiplano_salt_basins",
+      "display_label": "Dry Altiplano & Salt Basins",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880519,
+      "polygon": [
+        [
+          -4539.733333333,
+          1570.133333333
+        ],
+        [
+          -4539.733333333,
+          1160.533333333
+        ],
+        [
+          -4744.533333333,
+          1160.533333333
+        ],
+        [
+          -4744.533333333,
+          1570.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_bolivian_eastern_cordillera",
+      "display_label": "Bolivian Eastern Cordillera",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880420,
+      "polygon": [
+        [
+          -4696.746666667,
+          955.733333333
+        ],
+        [
+          -4683.093333333,
+          1297.066666667
+        ],
+        [
+          -4505.6,
+          1570.133333333
+        ],
+        [
+          -4369.066666667,
+          1570.133333333
+        ],
+        [
+          -4339.385544394,
+          1421.727721971
+        ],
+        [
+          -4437.333419361,
+          1160.533388727
+        ],
+        [
+          -4642.133404044,
+          955.733404044
+        ],
+        [
+          -4642.133474755,
+          955.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "forest",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_southern_yungas",
+      "display_label": "Southern Andean Yungas",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880621,
+      "polygon": [
+        [
+          -4628.48,
+          1126.4
+        ],
+        [
+          -4505.6,
+          1174.186666667
+        ],
+        [
+          -4437.333333333,
+          1433.6
+        ],
+        [
+          -4457.813333333,
+          1843.2
+        ],
+        [
+          -4437.333389558,
+          1911.466479253
+        ],
+        [
+          -4369.06676465,
+          1638.399979621
+        ],
+        [
+          -4334.933436381,
+          1433.600010007
+        ],
+        [
+          -4437.333419361,
+          1160.533388727
+        ],
+        [
+          -4611.657158009,
+          986.209650079
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_atacama_desert",
+      "display_label": "Atacama Desert",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880222,
+      "polygon": [
+        [
+          -4642.133333333,
+          1979.733333333
+        ],
+        [
+          -4642.133333333,
+          1228.8
+        ],
+        [
+          -4983.466666667,
+          1228.8
+        ],
+        [
+          -4983.466666667,
+          1979.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_western_volcanic_puna",
+      "display_label": "Western Volcanic Cordillera & Puna",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880623,
+      "polygon": [
+        [
+          -4744.533333333,
+          1433.6
+        ],
+        [
+          -4744.533333333,
+          1706.666666667
+        ],
+        [
+          -4710.4,
+          2048.0
+        ],
+        [
+          -4539.733333333,
+          1911.466666667
+        ],
+        [
+          -4505.6,
+          1604.266666667
+        ],
+        [
+          -4642.133333333,
+          1570.133333333
+        ],
+        [
+          -4642.133333333,
+          1194.666666667
+        ],
+        [
+          -4812.8,
+          1194.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool",
+          "polar"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "inland",
+          "lake"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_northwest_argentine_valleys",
+      "display_label": "Northwestern Argentine Andean Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880524,
+      "polygon": [
+        [
+          -4539.733445137,
+          2116.266666667
+        ],
+        [
+          -4539.733422776,
+          2116.266621945
+        ],
+        [
+          -4437.333427685,
+          1911.466631764
+        ],
+        [
+          -4369.06676465,
+          1638.399979621
+        ],
+        [
+          -4346.31121249,
+          1501.866666667
+        ],
+        [
+          -4573.866666667,
+          1501.866666667
+        ],
+        [
+          -4573.866666667,
+          2116.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_cuyo_dry_andes",
+      "display_label": "Cuyo & Dry Central Andes",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880425,
+      "polygon": [
+        [
+          -4744.533438743,
+          2525.866666667
+        ],
+        [
+          -4744.533428202,
+          2525.866635044
+        ],
+        [
+          -4744.533422776,
+          2525.866621945
+        ],
+        [
+          -4539.733422776,
+          2116.266621945
+        ],
+        [
+          -4505.6,
+          2047.999776393
+        ],
+        [
+          -4505.6,
+          1911.466666667
+        ],
+        [
+          -4846.933333333,
+          1911.466666667
+        ],
+        [
+          -4846.933333333,
+          2525.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_norte_chico_transverse_valleys",
+      "display_label": "Norte Chico Transverse Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880526,
+      "polygon": [
+        [
+          -4819.626666667,
+          2252.8
+        ],
+        [
+          -4819.626666667,
+          1809.066666667
+        ],
+        [
+          -4983.466666667,
+          1809.066666667
+        ],
+        [
+          -4983.466666667,
+          2252.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_central_chilean_lowlands",
+      "display_label": "Central Chilean Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880527,
+      "polygon": [
+        [
+          -4792.32,
+          2614.613333333
+        ],
+        [
+          -4792.32,
+          2184.533333333
+        ],
+        [
+          -5017.6,
+          2184.533333333
+        ],
+        [
+          -5017.6,
+          2614.613333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_central_chilean_coast_ranges",
+      "display_label": "Central Chilean Coast Ranges",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880628,
+      "polygon": [
+        [
+          -4969.813333333,
+          2628.266666667
+        ],
+        [
+          -4881.066666667,
+          2389.333333333
+        ],
+        [
+          -4860.586666667,
+          2184.533333333
+        ],
+        [
+          -4915.2,
+          2184.533333333
+        ],
+        [
+          -4983.466666667,
+          2389.333333333
+        ],
+        [
+          -5051.733333333,
+          2628.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid",
+          "dry"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "forest"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "hills",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_southern_andes_lake_district",
+      "display_label": "Southern Andean Lakes & Forests",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880329,
+      "polygon": [
+        [
+          -4846.933433333,
+          3140.266666667
+        ],
+        [
+          -4846.933433333,
+          2935.466666667
+        ],
+        [
+          -4846.933432993,
+          2935.466658419
+        ],
+        [
+          -4846.933431973,
+          2935.466650227
+        ],
+        [
+          -4812.800098639,
+          2730.666650227
+        ],
+        [
+          -4812.800097051,
+          2730.666642561
+        ],
+        [
+          -4812.800094868,
+          2730.666635044
+        ],
+        [
+          -4812.8,
+          2730.666350439
+        ],
+        [
+          -4812.8,
+          2525.866666667
+        ],
+        [
+          -5003.946666667,
+          2525.866666667
+        ],
+        [
+          -5003.946666667,
+          3140.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_valdivian_chiloe_coastal_forests",
+      "display_label": "Valdivian–Chiloe Coastal Forests",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880530,
+      "polygon": [
+        [
+          -4993.706666667,
+          3003.733333333
+        ],
+        [
+          -4993.706666667,
+          2594.133333333
+        ],
+        [
+          -5120.0,
+          2594.133333333
+        ],
+        [
+          -5120.0,
+          3003.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "hills",
+          "plain",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_patagonian_fjords_archipelagos",
+      "display_label": "Patagonian Fjords & Archipelagos",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880231,
+      "polygon": [
+        [
+          -4983.466666667,
+          3822.933333333
+        ],
+        [
+          -4983.466666667,
+          2935.466666667
+        ],
+        [
+          -5229.226564686,
+          2935.466666667
+        ],
+        [
+          -5324.7999,
+          3413.333343235
+        ],
+        [
+          -5324.7999,
+          3822.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "tundra"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "island",
+          "mountain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_patagonian_icefields",
+      "display_label": "Patagonian Icefields & Cordilleras",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880532,
+      "polygon": [
+        [
+          -5120.0,
+          3413.333333333
+        ],
+        [
+          -5051.733333333,
+          3618.133333333
+        ],
+        [
+          -4915.2,
+          3604.48
+        ],
+        [
+          -4894.72,
+          3345.066666667
+        ],
+        [
+          -4935.68,
+          3072.0
+        ],
+        [
+          -5099.52,
+          3072.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "barren",
+          "forest",
+          "tundra"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "fjord"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_eastern_andean_lake_forelands",
+      "display_label": "Eastern Andean Lake & Steppe Forelands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880433,
+      "polygon": [
+        [
+          -4901.546666667,
+          2525.866666667
+        ],
+        [
+          -4901.546666667,
+          2867.2
+        ],
+        [
+          -4935.68,
+          3003.733333333
+        ],
+        [
+          -4983.466666667,
+          3208.533333333
+        ],
+        [
+          -4983.466666667,
+          3549.866666667
+        ],
+        [
+          -4778.666772076,
+          3549.866666667
+        ],
+        [
+          -4846.933428202,
+          3345.066698289
+        ],
+        [
+          -4846.933431042,
+          3345.066687953
+        ],
+        [
+          -4846.933432759,
+          3345.066677371
+        ],
+        [
+          -4846.933433333,
+          3345.066666667
+        ],
+        [
+          -4846.933433333,
+          2935.466666667
+        ],
+        [
+          -4846.933432993,
+          2935.466658419
+        ],
+        [
+          -4846.933431973,
+          2935.466650227
+        ],
+        [
+          -4812.800098639,
+          2730.666650227
+        ],
+        [
+          -4812.800097051,
+          2730.666642561
+        ],
+        [
+          -4812.800094868,
+          2730.666635044
+        ],
+        [
+          -4744.533438743,
+          2525.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_fuegian_mountains_islands",
+      "display_label": "Fuegian Mountains & Southern Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880334,
+      "polygon": [
+        [
+          -5188.266666667,
+          3549.866666667
+        ],
+        [
+          -5188.266666667,
+          3857.066566667
+        ],
+        [
+          -4355.413433333,
+          3857.066566667
+        ],
+        [
+          -4355.413433333,
+          3754.666733333
+        ],
+        [
+          -4437.333361149,
+          3720.533430077
+        ],
+        [
+          -4642.133349773,
+          3686.400098639
+        ],
+        [
+          -4642.133359164,
+          3686.400096606
+        ],
+        [
+          -4642.133368316,
+          3686.400093681
+        ],
+        [
+          -4642.133377145,
+          3686.400089892
+        ],
+        [
+          -4642.13338557,
+          3686.400085272
+        ],
+        [
+          -4642.133393513,
+          3686.400079865
+        ],
+        [
+          -4642.1334009,
+          3686.400073721
+        ],
+        [
+          -4642.133407663,
+          3686.400066896
+        ],
+        [
+          -4703.57340431,
+          3618.133403956
+        ],
+        [
+          -4778.666733934,
+          3549.866740661
+        ],
+        [
+          -4778.666741135,
+          3549.866733408
+        ],
+        [
+          -4778.666747558,
+          3549.866725459
+        ],
+        [
+          -4778.666753137,
+          3549.866716895
+        ],
+        [
+          -4778.666757812,
+          3549.866707807
+        ],
+        [
+          -4778.666761535,
+          3549.866698289
+        ],
+        [
+          -4778.666772076,
+          3549.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "tundra",
+          "wetland"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "lake",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "island",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "andes_magellan_strait_forelands",
+      "display_label": "Magellan Strait Forelands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880635,
+      "polygon": [
+        [
+          -4642.133333333,
+          3693.226666667
+        ],
+        [
+          -4642.133333333,
+          3686.400101379
+        ],
+        [
+          -4642.133349773,
+          3686.400098639
+        ],
+        [
+          -4642.133359164,
+          3686.400096606
+        ],
+        [
+          -4642.133368316,
+          3686.400093681
+        ],
+        [
+          -4642.133377145,
+          3686.400089892
+        ],
+        [
+          -4642.13338557,
+          3686.400085272
+        ],
+        [
+          -4642.133393513,
+          3686.400079865
+        ],
+        [
+          -4642.1334009,
+          3686.400073721
+        ],
+        [
+          -4642.133407663,
+          3686.400066896
+        ],
+        [
+          -4703.57340431,
+          3618.133403956
+        ],
+        [
+          -4756.138815327,
+          3570.346666667
+        ],
+        [
+          -4915.2,
+          3570.346666667
+        ],
+        [
+          -4915.2,
+          3693.226666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_malpelo_rocky_island",
+      "display_label": "Malpelo Rocky Island",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 880536,
+      "polygon": [
+        [
+          -5560.32,
+          -262.826666667
+        ],
+        [
+          -5560.32,
+          -279.893333333
+        ],
+        [
+          -5580.8,
+          -279.893333333
+        ],
+        [
+          -5580.8,
+          -262.826666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "hot"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_pacific_west_base",
+      "display_label": "Andes & Pacific West",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west",
+      "priority": 768000,
+      "polygon": [
+        [
+          -4921.078518518,
+          -863.573333333
+        ],
+        [
+          -4949.333333333,
+          -863.573333333
+        ],
+        [
+          -5120.0,
+          -785.066666667
+        ],
+        [
+          -5277.013333333,
+          -648.533333333
+        ],
+        [
+          -5277.013333333,
+          -593.92
+        ],
+        [
+          -5311.146666667,
+          -491.52
+        ],
+        [
+          -5358.933333333,
+          -443.733333333
+        ],
+        [
+          -5628.669918699,
+          -323.850406504
+        ],
+        [
+          -5666.133333333,
+          -136.533333333
+        ],
+        [
+          -5597.866666667,
+          1024.0
+        ],
+        [
+          -5120.0,
+          2389.333333333
+        ],
+        [
+          -5324.8,
+          3413.333333333
+        ],
+        [
+          -5324.8,
+          3857.066666667
+        ],
+        [
+          -4355.413333333,
+          3857.066666667
+        ],
+        [
+          -4355.413333333,
+          3754.666666667
+        ],
+        [
+          -4437.333333333,
+          3720.533333333
+        ],
+        [
+          -4642.133333333,
+          3686.4
+        ],
+        [
+          -4703.573333333,
+          3618.133333333
+        ],
+        [
+          -4778.666666667,
+          3549.866666667
+        ],
+        [
+          -4846.933333333,
+          3345.066666667
+        ],
+        [
+          -4846.933333333,
+          3140.266666667
+        ],
+        [
+          -4846.933333333,
+          2935.466666667
+        ],
+        [
+          -4812.8,
+          2730.666666667
+        ],
+        [
+          -4744.533333333,
+          2525.866666667
+        ],
+        [
+          -4642.133333333,
+          2321.066666667
+        ],
+        [
+          -4539.733333333,
+          2116.266666667
+        ],
+        [
+          -4437.333333333,
+          1911.466666667
+        ],
+        [
+          -4369.066666667,
+          1638.4
+        ],
+        [
+          -4334.933333333,
+          1433.6
+        ],
+        [
+          -4437.333333333,
+          1160.533333333
+        ],
+        [
+          -4642.133333333,
+          955.733333333
+        ],
+        [
+          -4846.933333333,
+          750.933333333
+        ],
+        [
+          -5051.733333333,
+          546.133333333
+        ],
+        [
+          -5188.266666667,
+          341.333333333
+        ],
+        [
+          -5188.266666667,
+          136.533333333
+        ],
+        [
+          -5051.733333333,
+          -68.266666667
+        ],
+        [
+          -4915.2,
+          -273.066666667
+        ],
+        [
+          -4846.933333333,
+          -409.6
+        ],
+        [
+          -4778.666666667,
+          -546.133333333
+        ],
+        [
+          -4662.613333333,
+          -764.586666667
+        ],
+        [
+          -4810.608413284,
+          -821.265633456
+        ],
+        [
+          -4819.626666667,
+          -798.72
+        ],
+        [
+          -4840.559828694,
+          -832.736388294
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    }
+  ]
+}

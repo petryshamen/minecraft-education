@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "andes_galapagos_volcanic_islands",
+      "display_label": "Galapagos Volcanic Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west_offshore",
+      "priority": 880337,
+      "polygon": [
+        [
+          -6075.733333333,
+          136.533333333
+        ],
+        [
+          -6075.733333333,
+          -122.88
+        ],
+        [
+          -6314.666666667,
+          -122.88
+        ],
+        [
+          -6314.666666667,
+          136.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool",
+          "hot"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "barren",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean",
+          "inland"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_juan_fernandez_islands",
+      "display_label": "Juan Fernandez Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west_offshore",
+      "priority": 880338,
+      "polygon": [
+        [
+          -5352.106666667,
+          2321.066666667
+        ],
+        [
+          -5352.106666667,
+          2273.28
+        ],
+        [
+          -5529.6,
+          2273.28
+        ],
+        [
+          -5529.6,
+          2321.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_desventuradas_dry_islands",
+      "display_label": "Desventuradas Dry Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west_offshore",
+      "priority": 880339,
+      "polygon": [
+        [
+          -5440.853333333,
+          1815.893333333
+        ],
+        [
+          -5440.853333333,
+          1781.76
+        ],
+        [
+          -5481.813333333,
+          1781.76
+        ],
+        [
+          -5481.813333333,
+          1815.893333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "barren",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "andes_pacific_west_offshore_base",
+      "display_label": "Andes & Pacific West",
+      "dimension": "minecraft:overworld",
+      "macro_region": "andes_pacific_west_offshore",
+      "priority": 768001,
+      "polygon": [
+        [
+          -6417.066666667,
+          682.666666667
+        ],
+        [
+          -5666.133333333,
+          2457.6
+        ],
+        [
+          -5290.666666667,
+          2389.333333333
+        ],
+        [
+          -5379.413333333,
+          1774.933333333
+        ],
+        [
+          -5734.4,
+          1024.0
+        ],
+        [
+          -5734.4,
+          -136.533333333
+        ],
+        [
+          -6417.066666667,
+          -136.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "forest",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": []
+      }
+    }
+  ]
+}
