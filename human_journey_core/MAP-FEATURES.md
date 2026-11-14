@@ -1,5 +1,7 @@
 # Discoverable water map features — Core 0.13.0
 
+**Verified Core 0.13.0:** [GitHub Actions build 43654163293](https://github.com/petryshamen/minecraft-education/actions/runs/43654163293), source `cf07119d2bb7b44044a4ce286bdbe5a3711b37f2`. All 384 tests passed (330 retained + 54 new), zero failures; all thirteen no-world Forge checks passed. 265 existing class files are byte-identical to0.12.0; nine changed old files are confined to bootstrap/client config/map presentation/diagnostics. Existing Macro/Local transport, discovery, resolver, NPC/economy and unrelated gameplay classes remain unchanged. Runtime SHA-256 `018ea3536f265eb7a644654dc93bbc3095da37c5d1cbde0e89a8a63abff3caa9`. No Minecraft gameplay testing, automatic installation, production datapack or live-server modification.
+
 Minecraft 1.21.8 / Forge 58.1.18; optional client adapter exactly Xaero World Map 1.39.13. Manual installation only. No real-world water catalog, production coordinates or gameplay/progression changes are supplied.
 
 ## Separate cartography system
@@ -94,7 +96,7 @@ The exact-version adapter's shared layout now explicitly reserves a **112×104 G
 
 All server commands below require permission2:
 
-- `/hj mapfeature status`: loaded count, counts by all seven types, discovered count, stale count, catalog/discovery revision, last successful reload/error.
+- `/hj mapfeature status`: loaded count, counts by all seven types, discovered count, stale count plus up to8 stale IDs/remainder, catalog/discovery revision, last successful reload/error.
 - `/hj mapfeature discovery list [page]`: paginated stable known IDs, with stale markers.
 - `/hj mapfeature discovery mark <id>`: validates current ID, marks/syncs shared feature knowledge; no natural-discovery message.
 - `/hj mapfeature discovery reset`: clears only feature discoveries and client feature geometry.
