@@ -1,4 +1,4 @@
-package org.humanjourney.core.integration.xaero.client;
+package org.humanjourney.core.integration.xaero.mixin;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
