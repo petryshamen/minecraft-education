@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.7
+
+- Migrated all seven existing juices to Core 0.10.0 schema v2 and added custom Carrot Juice using Pumpkin Juice effects. Bottle/full-canteen costs: apple/cactus/chorus 1/3, glow/sweet berry 2/8, melon/carrot 2/5, pumpkin 1/1; every juice keeps 1.0 HP healing. Stable IDs/native outputs/names and all canteen tiers remain intact; Core owns exact-unit/split-stack crafting.
+- Retained all seven TAN sugar-free bottle overrides; corrected glow berry, melon and sweet berry to two ingredient entries (the other four already match). Verified the manually installed Core 0.10.0 release hash and offline eight-definition parser/catalog/recipe checks. No old schema-v1 or cheap bottle bypass remains; geography/HUD, economy, water/temperature, progression and technology locks are unchanged. No Core changes or Minecraft gameplay/reload testing.
+
 ## 0.5.6
 
 - East / Northern Asia & Oceania v1: 1,156 locals / 21 technical macros (19 physical regions) / 19 resources. Added 366 local IDs, updated 11 existing polygons with four approved Central-to-Northern Asia parent changes; retained all 790 existing IDs and immutable fields. Five macro polygons updated and two separate dateline fragments added. Existing economy, progression, water/temperature, juices, NPC snapshots and discovery data remain untouched.

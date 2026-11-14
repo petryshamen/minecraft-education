@@ -1,9 +1,14 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "apple",
-  "bottle_item": "toughasnails:apple_juice",
   "ingredient": {
     "item": "minecraft:apple"
+  },
+  "bottle_ingredient_count": 1,
+  "canteen_ingredient_count": 3,
+  "bottle": {
+    "type": "native",
+    "item": "toughasnails:apple_juice"
   },
   "canteen_display_name": "Apple Juice Canteen",
   "heal_per_drink": 1.0

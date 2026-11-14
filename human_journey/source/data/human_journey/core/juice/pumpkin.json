@@ -1,9 +1,14 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "pumpkin",
-  "bottle_item": "toughasnails:pumpkin_juice",
   "ingredient": {
     "item": "minecraft:pumpkin"
+  },
+  "bottle_ingredient_count": 1,
+  "canteen_ingredient_count": 1,
+  "bottle": {
+    "type": "native",
+    "item": "toughasnails:pumpkin_juice"
   },
   "canteen_display_name": "Pumpkin Juice Canteen",
   "heal_per_drink": 1.0

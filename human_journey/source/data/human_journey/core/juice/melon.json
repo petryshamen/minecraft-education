@@ -1,9 +1,14 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "melon",
-  "bottle_item": "toughasnails:melon_juice",
   "ingredient": {
     "item": "minecraft:melon_slice"
+  },
+  "bottle_ingredient_count": 2,
+  "canteen_ingredient_count": 5,
+  "bottle": {
+    "type": "native",
+    "item": "toughasnails:melon_juice"
   },
   "canteen_display_name": "Melon Juice Canteen",
   "heal_per_drink": 1.0

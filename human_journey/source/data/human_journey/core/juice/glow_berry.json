@@ -1,9 +1,14 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "glow_berry",
-  "bottle_item": "toughasnails:glow_berry_juice",
   "ingredient": {
     "item": "minecraft:glow_berries"
+  },
+  "bottle_ingredient_count": 2,
+  "canteen_ingredient_count": 8,
+  "bottle": {
+    "type": "native",
+    "item": "toughasnails:glow_berry_juice"
   },
   "canteen_display_name": "Glow Berry Juice Canteen",
   "heal_per_drink": 1.0

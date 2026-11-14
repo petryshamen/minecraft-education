@@ -1,9 +1,14 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "chorus_fruit",
-  "bottle_item": "toughasnails:chorus_fruit_juice",
   "ingredient": {
     "item": "minecraft:chorus_fruit"
+  },
+  "bottle_ingredient_count": 1,
+  "canteen_ingredient_count": 3,
+  "bottle": {
+    "type": "native",
+    "item": "toughasnails:chorus_fruit_juice"
   },
   "canteen_display_name": "Chorus Fruit Juice Canteen",
   "heal_per_drink": 1.0
