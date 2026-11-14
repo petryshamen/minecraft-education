@@ -17,7 +17,7 @@ minecraft {
         register('data') {
             workingDir = layout.buildDirectory.dir('datagen-smoke')
             systemProperty 'humanjourney.waterSmoke', 'true'
-            args '--mixin', 'human_journey_core.water.mixins.json', '--mixin', 'human_journey_core.fishing.mixins.json', '--mixin', 'human_journey_core.economy.mixins.json', '--mixin', 'human_journey_core.juice.mixins.json', '--mod', 'human_journey_core', '--all', '--output', layout.buildDirectory.dir('datagen-smoke-output').get().asFile.absolutePath
+            args '--mixin', 'human_journey_core.water.mixins.json', '--mixin', 'human_journey_core.fishing.mixins.json', '--mixin', 'human_journey_core.economy.mixins.json', '--mixin', 'human_journey_core.juice.mixins.json', '--mixin', 'human_journey_core.xaero.mixins.json', '--mod', 'human_journey_core', '--all', '--output', layout.buildDirectory.dir('datagen-smoke-output').get().asFile.absolutePath
         }
     }
 }
@@ -46,6 +46,9 @@ dependencies {
     testCompileOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
     testRuntimeOnly 'curse.maven:tough-as-nails-246391:7063978'
     testRuntimeOnly 'com.github.glitchfiend:GlitchCore-forge:1.21.8-21.8.0.0'
+    compileOnly 'curse.maven:xaeros-world-map-317780:6786823'
+    testCompileOnly 'curse.maven:xaeros-world-map-317780:6786823'
+    testRuntimeOnly 'curse.maven:xaeros-world-map-317780:6786823'
     compileOnly 'curse.maven:easy-npc-core-1308987:7402995'
     runtimeOnly 'curse.maven:easy-npc-core-1308987:7402995'
     testRuntimeOnly 'curse.maven:easy-npc-core-1308987:7402995'
@@ -76,7 +79,7 @@ tasks.withType(Jar).configureEach {
     reproducibleFileOrder = true
     manifest.attributes('Implementation-Version': project.version)
 }
-tasks.named('jar') { manifest.attributes('MixinConfigs': 'human_journey_core.water.mixins.json,human_journey_core.fishing.mixins.json,human_journey_core.economy.mixins.json,human_journey_core.juice.mixins.json') }
+tasks.named('jar') { manifest.attributes('MixinConfigs': 'human_journey_core.water.mixins.json,human_journey_core.fishing.mixins.json,human_journey_core.economy.mixins.json,human_journey_core.juice.mixins.json,human_journey_core.xaero.mixins.json') }
 tasks.named('processResources') {
     inputs.property 'mod_version', mod_version
     filesMatching('META-INF/mods.toml') { expand mod_version: mod_version }

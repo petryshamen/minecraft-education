@@ -1,0 +1,27 @@
+package org.humanjourney.core.geography.map;
+import java.util.*;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import org.humanjourney.core.geography.DiscoveryLedger;
+import org.humanjourney.core.water.WaterGeography;
+public final class MapPackets {
+ public static final int AREAS_PER_PACKET=8,REMOVALS_PER_PACKET=64,MAX_BYTES=48*1024,MAX_PARTS=1024,MAX_AREAS=4608;
+ public enum Mode{FULL,DELTA,CLEAR}
+ public enum Request{INSTANCE}
+ public record Header(UUID session,long sequence,long discovery,long data,long presentation){public Header{if(session==null||sequence<=0||discovery<0||data<0||presentation<0)throw new IllegalArgumentException("invalid map revision");}}
+ public record Frame(Header header,Mode mode,long base,int part,int parts,List<MapArea> areas,List<MapArea.Key> removals,String error){
+  public Frame{areas=List.copyOf(areas);removals=List.copyOf(removals);if(error==null){Objects.requireNonNull(header);Objects.requireNonNull(mode);if(parts<1||parts>MAX_PARTS||part<0||part>=parts||areas.size()>AREAS_PER_PACKET||removals.size()>REMOVALS_PER_PACKET||base<0||mode==Mode.DELTA&&(base==0||base>=header.sequence())||mode!=Mode.DELTA&&base!=0||mode==Mode.FULL&&!removals.isEmpty()||mode==Mode.CLEAR&&(parts!=1||!areas.isEmpty()||!removals.isEmpty()))throw new IllegalArgumentException("invalid map packet bounds");for(var key:removals)if(key.kind()==null||!DiscoveryLedger.validId(key.id()))throw new IllegalArgumentException("invalid removed map key");}}
+  public static Frame bad(String reason){return new Frame(null,Mode.FULL,0,0,1,List.of(),List.of(),reason);}
+  public boolean valid(){return error==null;}
+ }
+ private static void key(RegistryFriendlyByteBuf b,MapArea.Key key){b.writeVarInt(key.kind().ordinal());b.writeUtf(key.id(),64);}
+ private static MapArea.Kind kind(RegistryFriendlyByteBuf b){int n=b.readVarInt();if(n<0||n>=MapArea.Kind.values().length)throw new IllegalArgumentException("invalid map area kind");return MapArea.Kind.values()[n];}
+ private static int count(RegistryFriendlyByteBuf b,int max){int n=b.readVarInt();if(n<0||n>max)throw new IllegalArgumentException("invalid map list length");return n;}
+ public static final StreamCodec<RegistryFriendlyByteBuf,Frame> CODEC=new StreamCodec<>(){
+  public void encode(RegistryFriendlyByteBuf b,Frame f){if(!f.valid())throw new IllegalArgumentException("cannot send rejected frame");int start=b.writerIndex();var h=f.header();b.writeUUID(h.session());b.writeVarLong(h.sequence());b.writeVarLong(h.discovery());b.writeVarLong(h.data());b.writeVarLong(h.presentation());b.writeVarInt(f.mode().ordinal());b.writeVarLong(f.base());b.writeVarInt(f.part());b.writeVarInt(f.parts());b.writeVarInt(f.areas().size());for(var a:f.areas()){key(b,a.key());b.writeUtf(a.label(),128);b.writeUtf(a.dimension(),256);b.writeVarInt(a.priority());b.writeUtf(a.parent(),64);b.writeVarInt(a.points().size());for(var p:a.points()){b.writeDouble(p.x());b.writeDouble(p.z());}}b.writeVarInt(f.removals().size());for(var k:f.removals())key(b,k);if(b.writerIndex()-start>MAX_BYTES)throw new IllegalArgumentException("map packet exceeds byte bound");}
+  public Frame decode(RegistryFriendlyByteBuf b){try{if(b.readableBytes()>MAX_BYTES)throw new IllegalArgumentException("map packet too large");var h=new Header(b.readUUID(),b.readVarLong(),b.readVarLong(),b.readVarLong(),b.readVarLong());int mode=b.readVarInt();if(mode<0||mode>=Mode.values().length)throw new IllegalArgumentException("invalid map transfer mode");long base=b.readVarLong();int part=b.readVarInt(),parts=b.readVarInt(),n=count(b,AREAS_PER_PACKET);var areas=new ArrayList<MapArea>();for(int i=0;i<n;i++){var kind=kind(b);String id=b.readUtf(64),label=b.readUtf(128),dimension=b.readUtf(256);int priority=b.readVarInt();String parent=b.readUtf(64);int vertices=count(b,256);if(vertices<3)throw new IllegalArgumentException("too few polygon vertices");var points=new ArrayList<WaterGeography.Point>();for(int j=0;j<vertices;j++)points.add(new WaterGeography.Point(b.readDouble(),b.readDouble()));areas.add(MapArea.decoded(kind,id,label,dimension,priority,parent,points));}var removed=new ArrayList<MapArea.Key>();n=count(b,REMOVALS_PER_PACKET);for(int i=0;i<n;i++)removed.add(new MapArea.Key(kind(b),b.readUtf(64)));if(b.readableBytes()!=0)throw new IllegalArgumentException("unexpected trailing map bytes");return new Frame(h,Mode.values()[mode],base,part,parts,areas,removed,null);}catch(RuntimeException error){b.skipBytes(b.readableBytes());return Frame.bad("Malformed map packet: "+error.getClass().getSimpleName());}}
+ };
+ public static final StreamCodec<RegistryFriendlyByteBuf,Request> REQUEST=StreamCodec.unit(Request.INSTANCE);
+ public static List<Frame> frames(Header h,Mode mode,long base,Collection<MapArea> entries,Collection<MapArea.Key> removed){var areas=new ArrayList<>(entries);areas.sort(Comparator.comparing(MapArea::key));var removals=new ArrayList<>(new TreeSet<>(removed));int parts=Math.max(1,Math.max((areas.size()+AREAS_PER_PACKET-1)/AREAS_PER_PACKET,(removals.size()+REMOVALS_PER_PACKET-1)/REMOVALS_PER_PACKET));var out=new ArrayList<Frame>();for(int i=0;i<parts;i++){int a=Math.min(i*AREAS_PER_PACKET,areas.size()),k=Math.min(i*REMOVALS_PER_PACKET,removals.size());out.add(new Frame(h,mode,base,i,parts,areas.subList(a,Math.min(a+AREAS_PER_PACKET,areas.size())),removals.subList(k,Math.min(k+REMOVALS_PER_PACKET,removals.size())),null));}return List.copyOf(out);}
+ private MapPackets(){}
+}

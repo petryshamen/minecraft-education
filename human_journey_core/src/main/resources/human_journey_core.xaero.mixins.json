@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8.7",
+  "package": "org.humanjourney.core.integration.xaero",
+  "plugin": "org.humanjourney.core.integration.xaero.XaeroMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "client.GuiMapMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

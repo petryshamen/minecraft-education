@@ -11,7 +11,7 @@ public final class GeographyServer {
  public static GeographyRoles roles(ServerPlayer player){return GeographyRoles.from(player.getTags());}
  private static EraRules.Scores scores(ServerPlayer p){var board=p.level().getScoreboard();return (objective,holder)->{var o=board.getObjective(objective);if(o==null)return OptionalInt.empty();var value=board.getPlayerScoreInfo(ScoreHolder.forNameOnly(holder),o);return value==null?OptionalInt.empty():OptionalInt.of(value.value());};}
  public static GeographyContext context(ServerPlayer player){return GeographyContext.resolve(NpcContextStore.state().data(),scores(player),player.level().dimension().location().toString(),player.getX(),player.getZ());}
- private static String era(ServerPlayer player){try{return NpcContextStore.state().data().eraRules().resolve(scores(player));}catch(IllegalArgumentException e){return "unknown";}}
+ public static String era(ServerPlayer player){try{return NpcContextStore.state().data().eraRules().resolve(scores(player));}catch(IllegalArgumentException e){return "unknown";}}
  private static boolean send(Object packet,ServerPlayer player){boolean sent=GeographyNetwork.send(packet,player);if(!sent&&failures.add(player.getUUID()))com.mojang.logging.LogUtils.getLogger().warn("[HJ Core] Geography client sync failed for {}; discovery remains authoritative on server",player.getScoreboardName());return sent;}
  private static boolean snapshot(ServerPlayer player,DiscoveryLedger.Snapshot data){for(var part:GeographyPackets.snapshot(data))if(!send(part,player))return false;return true;}
  public static void tick(MinecraftServer server){
@@ -24,12 +24,13 @@ public final class GeographyServer {
    }else if(evaluate){cache.synced(-1);}
    var packet=new GeographyPackets.Context(role.participant(),view);if(cache.contextChanged(packet)&&send(packet,player))cache.sent(packet);
   }
+  org.humanjourney.core.geography.map.MapServer.sync(server);
  }
  public static void publish(MinecraftServer server,DiscoveryLedger.Delta delta,GeographyContext labels,boolean notify){if(!delta.changed())return;var packet=new GeographyPackets.Discovery(GeographyPackets.Kind.DELTA,delta.revision(),new ArrayList<>(delta.macros()),new ArrayList<>(delta.locals()));for(var player:server.getPlayerList().getPlayers())if(roles(player).participant()){
   var cache=clients.get(player.getUUID());if(cache==null||cache.needsSnapshot(delta.revision()-1)){if(snapshot(player,SavedDiscovery.get(server).snapshot())&&cache!=null)cache.synced(delta.revision());}else if(send(packet,player))cache.synced(delta.revision());
   if(notify){if(!delta.macros().isEmpty())player.sendSystemMessage(Component.translatable("message.human_journey_core.new_region",labels.macroLabel()));if(!delta.locals().isEmpty())player.sendSystemMessage(Component.translatable("message.human_journey_core.new_area",labels.localLabel()));}
- }}
- public static void resync(MinecraftServer server){var data=SavedDiscovery.get(server).snapshot();for(var player:server.getPlayerList().getPlayers())if(roles(player).participant()&&snapshot(player,data)){var cache=clients.get(player.getUUID());if(cache!=null)cache.synced(data.revision());}}
- public static void clear(){owner=null;clients.clear();failures.clear();}
+ }org.humanjourney.core.geography.map.MapServer.sync(server);}
+ public static void resync(MinecraftServer server){var data=SavedDiscovery.get(server).snapshot();for(var player:server.getPlayerList().getPlayers())if(roles(player).participant()&&snapshot(player,data)){var cache=clients.get(player.getUUID());if(cache!=null)cache.synced(data.revision());}org.humanjourney.core.geography.map.MapServer.sync(server);}
+ public static void clear(){org.humanjourney.core.geography.map.MapServer.clear();owner=null;clients.clear();failures.clear();}
  private GeographyServer(){}
 }
