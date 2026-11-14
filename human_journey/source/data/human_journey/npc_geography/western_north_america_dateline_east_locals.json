@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "aleutians_dateline_east",
+      "display_label": "Alaska Peninsula & Aleutians",
+      "dimension": "minecraft:overworld",
+      "macro_region": "western_north_america_dateline_east",
+      "priority": 820200,
+      "polygon": [
+        [
+          12287.98,
+          -3413.353333
+        ],
+        [
+          12287.98,
+          -3788.776391
+        ],
+        [
+          11878.403288,
+          -3720.513605
+        ],
+        [
+          11878.402481,
+          -3720.513487
+        ],
+        [
+          11605.353333,
+          -3686.382344
+        ],
+        [
+          11605.353333,
+          -3413.353333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "tundra",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "ocean",
+          "river"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "western_north_america_dateline_east_base",
+      "display_label": "Western North America",
+      "dimension": "minecraft:overworld",
+      "macro_region": "western_north_america_dateline_east",
+      "priority": 779003,
+      "polygon": [
+        [
+          11605.333333,
+          -3413.333333
+        ],
+        [
+          12288.0,
+          -3413.333333
+        ],
+        [
+          12288.0,
+          -3788.8
+        ],
+        [
+          11878.4,
+          -3720.533333
+        ],
+        [
+          11605.333333,
+          -3686.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "tundra",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "ocean",
+          "river"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.8
+
+- Added Arctic America/Greenland (36 locals), Boreal North America (45) and Western North America (42 across three technical parents). Final geography: 1,279 locals / 26 macros / 24 resources; all 1,156 existing locals and their 18 source files remain unchanged. Added five macros and modified only Northern Europe, Northern Asia and Mesoamerica polygons; retained old North America fallback. Juice 0.5.7 and all other gameplay/persistence remain intact.
+- Removed only a consecutive duplicate vertex at [-10308.266667, -4324.693333] (second occurrence/index 93) from the new Boreal macro and matching base local for Core compatibility. Both footprints are mathematically identical; no other payload-record deviation.
+- Supplied and integrated validators pass 4,424 assertions (11,070 original / 11,050 normalized boundary probes). Offline Core 0.11.0 accepts 26 macros/1,279 locals with zero skipped, 67,116 whole-pack boundary samples and 19,590 NPC compositions. Global union loses zero area; region footprints have no gaps. No Core changes, terrain edits, discovery reset or Minecraft gameplay testing; Svalbard/Big Diomede and older over-budget regions remain separate follow-ups.
+
 ## 0.5.7
 
 - Migrated all seven existing juices to Core 0.10.0 schema v2 and added custom Carrot Juice using Pumpkin Juice effects. Bottle/full-canteen costs: apple/cactus/chorus 1/3, glow/sweet berry 2/8, melon/carrot 2/5, pumpkin 1/1; every juice keeps 1.0 HP healing. Stable IDs/native outputs/names and all canteen tiers remain intact; Core owns exact-unit/split-stack crafting.

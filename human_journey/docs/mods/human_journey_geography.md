@@ -1,6 +1,34 @@
 # Human Journey NPC geography
 
-## Current release — East / Northern Asia & Oceania v1, 0.5.6
+## Current release — Arctic, Boreal & Western North America, 0.5.8
+
+Actual baseline is **datapack 0.5.7**, Minecraft Java 1.21.8 / pack format 81. The handoff labels its capture 0.5.6 but cites `c379d39`, which is the 0.5.7 juice release; all captured geography blobs match current production. Reconciled against current HEAD `0c88a6ee764482fcc57c7cb136895839c306fcb1`; eight schema-v2 juices including Carrot and every non-geography gameplay resource are preserved. Installed test runtime is **Core 0.11.0**, SHA-256 `ee96bf39d8e675300e300b2478b9caee35ebe0a1045fbcc83c04082734908519`, matching the completed first-party release. Geography stays **schema 1**; no Core/mod/configuration is changed. Runtime observations beyond installed metadata are not claimed.
+
+Final **1,279 locals / 26 technical macros / 24 geography resources** (23 local files and `global_macros.json`). **123 local additions, zero deployed-local updates/removals**: all 1,156 existing local JSON objects and all 18 existing local files are byte-for-byte preserved. The 13 Arctic/Boreal proposal refinements are already included among the new records; they are not changes to previously deployed content. Only the five new grouped local files and the macro file change runtime geography.
+
+| New technical parent / local file stem | Locals |
+| --- | ---: |
+| `arctic_america_greenland` | 36 |
+| `boreal_north_america` | 45 |
+| `western_north_america` | 38 |
+| `western_north_america_dateline_east` | 2 |
+| `western_north_america_mackenzie` | 2 |
+
+Each file is `<parent>_locals.json` under `data/human_journey/npc_geography/`. Arctic/Boreal/Western totals are **36/45/42**, each below the 100-record project ceiling, including technical fragments and five intentional low-priority generic base locals. Generic backgrounds match their parent footprint and yield to named landscapes. Western has 38 named physical areas; its three technical macros share a display label while retaining separate IDs/discovery identities. No cross-dateline polygon, alias table or discovery merge is introduced.
+
+Added the five named macros; changed only the polygons of `northern_europe`, `northern_asia`, `mesoamerica_caribbean`. Their other fields and the remaining 18 existing macro records are identical. Iceland remains European, positive-longitude Aleutians use the Western dateline component, and northern Mexican drylands remain physically continuous with Western North America. The old `north_america` fallback stays for future Central/Eastern work. Existing NPC snapshots, shared ledger, eligibility and HUD/Xaero settings are untouched. Fresh NPCs capture new contexts after normal reload; restoring the prior ZIP is the content rollback, without clearing saves.
+
+**Only compatibility correction:** the new `boreal_north_america` and `boreal_north_america_base` each contained a repeated consecutive vertex `[-10308.266667, -4324.693333]`. Removed the second occurrence at zero-based index 93 in both. Core rejects duplicates; polygon equality, zero Hausdorff distance and zero symmetric-difference area prove identical footprints. No remaining coordinate was rounded or moved. All other records match the approved payload; existing resource envelopes omit redundant empty arrays to preserve their original bytes.
+
+**Validation evidence:** all 67 archive checksums and captured production blob identities verified. The supplied unchanged validator passes **4,424 fixture/regression assertions, 11,070 boundary probes**. Repeated against the actual integrated resources with matching normalized review snapshots: **4,424 / 11,050**, all 1,279 locals reachable. Existing unmodified first-party Core 0.11.0 pure parsers/store/resolver accept **26 macros, 1,279 locals, zero skipped, 24 resources**, all **4,424 assertions**, **67,116 whole-pack boundary samples**, **19,590 NPC compositions**, 50 commodities/four families/three Era-0-only roles. Source hashes match pinned repository; no installed JAR code or game is executed. These offline checks do not prove live reload/registry/UI behavior.
+
+Whole-polygon coverage: compared with the **deployed 21-macro baseline**, area added is **2,169,157.8731391924 blocks²**, lost **0.0**. The supplied validator instead compares its later Arctic/Boreal proposal baseline: added **215,608.55578277927**, lost **0.0**. The three new physical-region footprints have zero uncovered polygon area. Named landscapes cover **99.626% / 99.657% / 99.229%** of the supplied generalized Natural Earth land proxy in map X/Z coordinates; generic bases cover remaining context. These percentages are neither Earth-surface area measurements nor Minecraft land verification.
+
+**Pending user-world acceptance:** no gameplay or saved-terrain inspection was performed. Check `/reload`, `/hj npc status`, `/hj npc context`, `/hj geography status`; logs must show no rejected/skipped resources. Inspect HUD, existing ledger and fresh Hunter/Fisher/Forager snapshots at safe terrain Y. X/Z controls: Bethel **-11043,-4150** (Western Alaska Coastal Lowlands), Denali **-10309,-4306** (Alaska Range), Vancouver **-8405,-3364** (Georgia–Fraser), Seattle **-8351,-3249** (Puget–Willamette), Yellowstone **-7543,-3045** (Northern Rockies), Las Vegas **-7860,-2469** (Mojave), Los Angeles **-8072,-2324** (Southern California Coastal Basins). Also check Greenland–Iceland, Arctic–Boreal–Western seams, Old Crow/Yukon Flats, Mackenzie–Selwyn, both Aleutian dateline sides, named-over-base priority and a generic-background witness. Eligible participant-student discovers once; teacher exclusion and old NPC snapshots remain. Do not reset ledgers. Check existing juices/water/temperature/trades as routine regressions.
+
+Known follow-ups remain **Svalbard's older gap, Big Diomede's old fallback assignment, earlier over-budget East/Northern Asia/Oceania, future Central/Eastern North America and later Arctic scope**. No tiny bounding-span flags are supplied for the new records, but islands/narrow strips/shorelines/biomes still need actual saved-map review. Missing chunks mean unknown terrain; report discrepancies rather than building terrain, widening polygons or removing IDs. Shared discovery across Western fragments is optional future Core/planner work, not a blocker. Review/audit inputs remain in the original handoff outside runtime resources; only approved grouped data is packaged.
+
+## Historical release — East / Northern Asia & Oceania v1, 0.5.6
 
 Installed test JAR and reviewed first-party source are **Core 0.9.0**, geography **schema 1**. JAR SHA-256 remains `6135de5fdaaf75624ab045dba7263a331790359eb80e42c60f08b0019e39b721`. Final production: **1,156 locals / 21 technical macros / 19 geography resources** (18 local files plus `global_macros.json`), representing **19 physical macro regions**. The approved handoff matches the deployed 0.5.5 baseline. Copy only `resources/*.json`; review snapshots, deltas, baselines, fixtures, sources, validators and follow-up notes are not loaded or packaged as runtime geography.
 

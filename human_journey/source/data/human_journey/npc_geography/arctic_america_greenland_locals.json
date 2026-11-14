@@ -1,0 +1,2770 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "seward_kotzebue_tundra",
+      "display_label": "Seward & Kotzebue Tundra",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800000,
+      "polygon": [
+        [
+          -10990.933333,
+          -4662.613333
+        ],
+        [
+          -11264.0,
+          -4710.4
+        ],
+        [
+          -11490.148375,
+          -4581.172357
+        ],
+        [
+          -11483.189012,
+          -4572.125185
+        ],
+        [
+          -11468.784148,
+          -4553.398861
+        ],
+        [
+          -11468.78035,
+          -4553.382942
+        ],
+        [
+          -11468.781016,
+          -4553.381987
+        ],
+        [
+          -11468.78971,
+          -4553.369517
+        ],
+        [
+          -11481.109481,
+          -4545.977654
+        ],
+        [
+          -11520.009718,
+          -4522.637512
+        ],
+        [
+          -11537.046667,
+          -4471.526665
+        ],
+        [
+          -11537.046667,
+          -4471.468647
+        ],
+        [
+          -11533.050896,
+          -4451.489795
+        ],
+        [
+          -11516.570174,
+          -4369.086184
+        ],
+        [
+          -11059.232952,
+          -4355.434326
+        ],
+        [
+          -11059.23262,
+          -4355.435129
+        ],
+        [
+          -11059.228284,
+          -4355.441617
+        ],
+        [
+          -10970.502781,
+          -4444.167121
+        ],
+        [
+          -11011.448449,
+          -4519.234179
+        ],
+        [
+          -11011.450773,
+          -4519.241589
+        ],
+        [
+          -11011.452424,
+          -4519.256734
+        ],
+        [
+          -11011.448182,
+          -4519.271368
+        ],
+        [
+          -11011.438686,
+          -4519.283282
+        ],
+        [
+          -11011.432759,
+          -4519.288299
+        ],
+        [
+          -10888.552759,
+          -4587.554966
+        ],
+        [
+          -10888.547286,
+          -4587.557028
+        ],
+        [
+          -10888.535978,
+          -4587.559482
+        ],
+        [
+          -10888.530143,
+          -4587.559873
+        ],
+        [
+          -10819.011758,
+          -4581.998402
+        ],
+        [
+          -10820.266667,
+          -4587.52
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "river"
+        ],
+        "relief": [
+          "hills",
+          "upland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brooks_range",
+      "display_label": "Brooks Range",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800010,
+      "polygon": [
+        [
+          -9259.424242,
+          -4676.286667
+        ],
+        [
+          -9216.0,
+          -4724.053333
+        ],
+        [
+          -9762.133333,
+          -4751.36
+        ],
+        [
+          -10308.266667,
+          -4724.053333
+        ],
+        [
+          -10922.666667,
+          -4669.44
+        ],
+        [
+          -10922.666667,
+          -4573.866667
+        ],
+        [
+          -10915.922916,
+          -4572.349323
+        ],
+        [
+          -10888.552759,
+          -4587.554966
+        ],
+        [
+          -10888.547286,
+          -4587.557028
+        ],
+        [
+          -10888.535978,
+          -4587.559482
+        ],
+        [
+          -10888.530143,
+          -4587.559873
+        ],
+        [
+          -10717.865355,
+          -4573.90669
+        ],
+        [
+          -10240.005014,
+          -4580.733265
+        ],
+        [
+          -9898.676002,
+          -4662.652228
+        ],
+        [
+          -9898.673436,
+          -4662.65267
+        ],
+        [
+          -9898.668269,
+          -4662.653216
+        ],
+        [
+          -9898.665667,
+          -4662.653321
+        ],
+        [
+          -9625.600699,
+          -4655.826697
+        ],
+        [
+          -9284.269063,
+          -4676.306595
+        ],
+        [
+          -9284.261049,
+          -4676.305434
+        ],
+        [
+          -9284.246139,
+          -4676.300029
+        ],
+        [
+          -9284.234594,
+          -4676.289156
+        ],
+        [
+          -9284.233519,
+          -4676.286667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brooks_foothills",
+      "display_label": "Brooks Foothills",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800020,
+      "polygon": [
+        [
+          -10581.333333,
+          -4676.266667
+        ],
+        [
+          -10103.466667,
+          -4696.746667
+        ],
+        [
+          -9557.333333,
+          -4710.4
+        ],
+        [
+          -9284.266667,
+          -4710.4
+        ],
+        [
+          -9284.266667,
+          -4792.32
+        ],
+        [
+          -9898.666667,
+          -4805.973333
+        ],
+        [
+          -10581.333333,
+          -4792.32
+        ],
+        [
+          -11127.466667,
+          -4744.533333
+        ],
+        [
+          -11127.466667,
+          -4655.786667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "alaska_yukon_coastal_plain",
+      "display_label": "Alaska\u2013Yukon Arctic Coastal Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800030,
+      "polygon": [
+        [
+          -10990.933333,
+          -4676.266667
+        ],
+        [
+          -10717.866667,
+          -4744.533333
+        ],
+        [
+          -10171.733333,
+          -4758.186667
+        ],
+        [
+          -9625.6,
+          -4744.533333
+        ],
+        [
+          -9523.2,
+          -4758.186667
+        ],
+        [
+          -9523.2,
+          -4846.933333
+        ],
+        [
+          -10240.0,
+          -4881.066667
+        ],
+        [
+          -10854.4,
+          -4922.026667
+        ],
+        [
+          -11332.266667,
+          -4778.666667
+        ],
+        [
+          -11468.8,
+          -4655.786667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "river"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "mackenzie_delta_tundra",
+      "display_label": "Mackenzie Delta Tundra",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800040,
+      "polygon": [
+        [
+          -9147.733333,
+          -4683.093333
+        ],
+        [
+          -9058.986667,
+          -4737.706667
+        ],
+        [
+          -9099.946667,
+          -4819.626667
+        ],
+        [
+          -9352.533333,
+          -4805.973333
+        ],
+        [
+          -9386.666667,
+          -4696.746667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "wetland",
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "coast"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "tuktoyaktuk_coastal_plain",
+      "display_label": "Tuktoyaktuk Coastal Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800050,
+      "polygon": [
+        [
+          -8874.666667,
+          -4683.093333
+        ],
+        [
+          -8465.066667,
+          -4710.4
+        ],
+        [
+          -8396.8,
+          -4792.32
+        ],
+        [
+          -8738.133333,
+          -4846.933333
+        ],
+        [
+          -9113.6,
+          -4819.626667
+        ],
+        [
+          -9154.56,
+          -4727.466667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "bluenose_tundra_uplands",
+      "display_label": "Bluenose Tundra Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800060,
+      "polygon": [
+        [
+          -8554.242382,
+          -4588.749562
+        ],
+        [
+          -8465.063379,
+          -4573.886395
+        ],
+        [
+          -8465.061634,
+          -4573.886023
+        ],
+        [
+          -8392.553037,
+          -4555.033788
+        ],
+        [
+          -7987.2,
+          -4526.08
+        ],
+        [
+          -7918.933333,
+          -4710.4
+        ],
+        [
+          -8192.0,
+          -4792.32
+        ],
+        [
+          -8601.6,
+          -4792.32
+        ],
+        [
+          -8806.4,
+          -4669.44
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "upland",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "coppermine_coronation_tundra",
+      "display_label": "Coppermine\u2013Coronation Tundra",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800070,
+      "polygon": [
+        [
+          -6894.933333,
+          -4437.333333
+        ],
+        [
+          -7099.733333,
+          -4676.266667
+        ],
+        [
+          -7509.333333,
+          -4744.533333
+        ],
+        [
+          -8021.333333,
+          -4744.533333
+        ],
+        [
+          -8533.333333,
+          -4642.133333
+        ],
+        [
+          -8551.291842,
+          -4588.257805
+        ],
+        [
+          -8465.063379,
+          -4573.886395
+        ],
+        [
+          -8465.061634,
+          -4573.886023
+        ],
+        [
+          -8123.729119,
+          -4485.139569
+        ],
+        [
+          -7645.864142,
+          -4403.219859
+        ],
+        [
+          -7236.265237,
+          -4369.086617
+        ],
+        [
+          -7017.0342,
+          -4355.932755
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "coast"
+        ],
+        "relief": [
+          "upland",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "back_river_barrenlands",
+      "display_label": "Back River Barrenlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800080,
+      "polygon": [
+        [
+          -7059.956762,
+          -4358.508109
+        ],
+        [
+          -6894.932135,
+          -4348.606631
+        ],
+        [
+          -6894.92383,
+          -4348.604265
+        ],
+        [
+          -6872.565939,
+          -4336.531004
+        ],
+        [
+          -6417.066667,
+          -4369.066667
+        ],
+        [
+          -6280.533333,
+          -4628.48
+        ],
+        [
+          -6690.133333,
+          -4710.4
+        ],
+        [
+          -7168.0,
+          -4676.266667
+        ],
+        [
+          -7372.8,
+          -4403.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "upland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "kivalliq_barrenlands",
+      "display_label": "Kivalliq Barrenlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800090,
+      "polygon": [
+        [
+          -5973.333333,
+          -4232.533333
+        ],
+        [
+          -5836.8,
+          -4437.333333
+        ],
+        [
+          -6212.266667,
+          -4560.213333
+        ],
+        [
+          -6690.133333,
+          -4505.6
+        ],
+        [
+          -6956.718054,
+          -4352.313786
+        ],
+        [
+          -6894.932135,
+          -4348.606631
+        ],
+        [
+          -6894.92383,
+          -4348.604265
+        ],
+        [
+          -6553.59271,
+          -4164.28546
+        ],
+        [
+          -6280.53566,
+          -4096.021197
+        ],
+        [
+          -6075.742277,
+          -4198.417889
+        ],
+        [
+          -6075.735323,
+          -4198.419901
+        ],
+        [
+          -6042.64272,
+          -4201.729161
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ungava_tundra",
+      "display_label": "Ungava Tundra",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800100,
+      "polygon": [
+        [
+          -5325.366039,
+          -3959.844026
+        ],
+        [
+          -5324.792082,
+          -3959.485303
+        ],
+        [
+          -5051.734524,
+          -3891.220913
+        ],
+        [
+          -4778.673689,
+          -3993.618727
+        ],
+        [
+          -4778.667666,
+          -3993.619975
+        ],
+        [
+          -4778.495024,
+          -3993.628607
+        ],
+        [
+          -4573.866667,
+          -4027.733333
+        ],
+        [
+          -4437.333333,
+          -4130.133333
+        ],
+        [
+          -4505.6,
+          -4300.8
+        ],
+        [
+          -5051.733333,
+          -4369.066667
+        ],
+        [
+          -5393.066667,
+          -4266.666667
+        ],
+        [
+          -5529.6,
+          -4096.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "upland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "torngat_mountains",
+      "display_label": "Torngat Mountains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800110,
+      "polygon": [
+        [
+          -4451.067564,
+          -3951.307025
+        ],
+        [
+          -4426.257341,
+          -3947.585492
+        ],
+        [
+          -4355.847803,
+          -3958.851018
+        ],
+        [
+          -4232.551928,
+          -4143.794829
+        ],
+        [
+          -4230.950745,
+          -4150.35968
+        ],
+        [
+          -4369.066667,
+          -4198.4
+        ],
+        [
+          -4519.253333,
+          -4109.653333
+        ],
+        [
+          -4608.0,
+          -4014.08
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren",
+          "shrubland"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "banks_island_lowlands",
+      "display_label": "Banks Island Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800120,
+      "polygon": [
+        [
+          -8396.8,
+          -4846.933333
+        ],
+        [
+          -8171.52,
+          -4887.893333
+        ],
+        [
+          -7987.2,
+          -4983.466667
+        ],
+        [
+          -7891.626667,
+          -5031.253333
+        ],
+        [
+          -8089.6,
+          -5085.866667
+        ],
+        [
+          -8465.066667,
+          -5099.52
+        ],
+        [
+          -8656.213333,
+          -4983.466667
+        ],
+        [
+          -8669.866667,
+          -4846.933333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "victoria_island_lowlands",
+      "display_label": "Victoria Island Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800130,
+      "polygon": [
+        [
+          -7714.133333,
+          -4655.786667
+        ],
+        [
+          -7099.733333,
+          -4662.613333
+        ],
+        [
+          -6860.8,
+          -4785.493333
+        ],
+        [
+          -7168.0,
+          -5031.253333
+        ],
+        [
+          -7830.186667,
+          -5038.08
+        ],
+        [
+          -7959.893333,
+          -4997.12
+        ],
+        [
+          -8151.04,
+          -4881.066667
+        ],
+        [
+          -8260.266667,
+          -4778.666667
+        ],
+        [
+          -8226.133333,
+          -4710.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "parry_islands_plateaus",
+      "display_label": "Parry Islands Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800140,
+      "polygon": [
+        [
+          -7645.866667,
+          -5038.08
+        ],
+        [
+          -6690.133333,
+          -5065.386667
+        ],
+        [
+          -6280.533333,
+          -5188.266667
+        ],
+        [
+          -6826.666667,
+          -5324.8
+        ],
+        [
+          -7987.2,
+          -5324.8
+        ],
+        [
+          -8465.066667,
+          -5256.533333
+        ],
+        [
+          -8499.2,
+          -5079.04
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "sverdrup_islands_lowlands",
+      "display_label": "Sverdrup Islands Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800150,
+      "polygon": [
+        [
+          -6963.2,
+          -5242.88
+        ],
+        [
+          -6144.0,
+          -5311.146667
+        ],
+        [
+          -6007.466667,
+          -5461.333333
+        ],
+        [
+          -6826.666667,
+          -5529.6
+        ],
+        [
+          -7577.6,
+          -5461.333333
+        ],
+        [
+          -7645.866667,
+          -5263.36
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "lowland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "ellesmere_axel_highlands",
+      "display_label": "Ellesmere\u2013Axel Heiberg Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800160,
+      "polygon": [
+        [
+          -5734.4,
+          -5174.613333
+        ],
+        [
+          -5188.266667,
+          -5188.266667
+        ],
+        [
+          -4778.666667,
+          -5324.8
+        ],
+        [
+          -4369.066667,
+          -5461.333333
+        ],
+        [
+          -4130.133333,
+          -5597.866667
+        ],
+        [
+          -4232.533333,
+          -5686.613333
+        ],
+        [
+          -4915.2,
+          -5713.92
+        ],
+        [
+          -6314.666667,
+          -5652.48
+        ],
+        [
+          -6758.4,
+          -5461.333333
+        ],
+        [
+          -6430.72,
+          -5358.933333
+        ],
+        [
+          -6280.533333,
+          -5222.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "eureka_polar_lowlands",
+      "display_label": "Eureka Polar Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800170,
+      "polygon": [
+        [
+          -5734.4,
+          -5393.066667
+        ],
+        [
+          -5563.733333,
+          -5474.986667
+        ],
+        [
+          -5734.4,
+          -5529.6
+        ],
+        [
+          -6075.733333,
+          -5495.466667
+        ],
+        [
+          -6109.866667,
+          -5399.893333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "coast"
+        ],
+        "relief": [
+          "lowland",
+          "upland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "devon_island_plateau",
+      "display_label": "Devon Island Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800180,
+      "polygon": [
+        [
+          -6007.466667,
+          -5072.213333
+        ],
+        [
+          -5358.933333,
+          -5092.693333
+        ],
+        [
+          -5645.653333,
+          -5181.44
+        ],
+        [
+          -6007.466667,
+          -5256.533333
+        ],
+        [
+          -6553.6,
+          -5236.053333
+        ],
+        [
+          -6621.866667,
+          -5079.04
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "somerset_boothia_plateaus",
+      "display_label": "Somerset\u2013Boothia Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800190,
+      "polygon": [
+        [
+          -6553.6,
+          -4608.0
+        ],
+        [
+          -6075.733333,
+          -4710.4
+        ],
+        [
+          -6144.0,
+          -5058.56
+        ],
+        [
+          -6758.4,
+          -5085.866667
+        ],
+        [
+          -7031.466667,
+          -4983.466667
+        ],
+        [
+          -7031.466667,
+          -4642.133333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "foxe_basin_lowlands",
+      "display_label": "Foxe Basin Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800200,
+      "polygon": [
+        [
+          -5734.600998,
+          -4232.533333
+        ],
+        [
+          -5734.40199,
+          -4232.553234
+        ],
+        [
+          -5734.388,
+          -4232.549333
+        ],
+        [
+          -5734.366667,
+          -4232.533333
+        ],
+        [
+          -5529.6,
+          -4232.533333
+        ],
+        [
+          -5154.133333,
+          -4464.64
+        ],
+        [
+          -5188.266667,
+          -4724.053333
+        ],
+        [
+          -5563.733333,
+          -4812.8
+        ],
+        [
+          -5939.2,
+          -4744.533333
+        ],
+        [
+          -6007.466667,
+          -4232.533333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "baffin_interior_lake_uplands",
+      "display_label": "Baffin Interior Lake Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800210,
+      "polygon": [
+        [
+          -4915.2,
+          -4253.013333
+        ],
+        [
+          -4505.6,
+          -4369.066667
+        ],
+        [
+          -4539.733333,
+          -4642.133333
+        ],
+        [
+          -4983.466667,
+          -4901.546667
+        ],
+        [
+          -5461.333333,
+          -4846.933333
+        ],
+        [
+          -5393.066667,
+          -4369.066667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "upland",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "baffin_bylot_mountains",
+      "display_label": "Baffin\u2013Bylot Mountains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800220,
+      "polygon": [
+        [
+          -4130.133333,
+          -4403.2
+        ],
+        [
+          -4300.8,
+          -4710.4
+        ],
+        [
+          -4915.2,
+          -5051.733333
+        ],
+        [
+          -5427.2,
+          -5038.08
+        ],
+        [
+          -4983.466667,
+          -4778.666667
+        ],
+        [
+          -4744.533333,
+          -4539.733333
+        ],
+        [
+          -4826.453333,
+          -4369.066667
+        ],
+        [
+          -4642.133333,
+          -4232.533333
+        ],
+        [
+          -4369.066667,
+          -4232.533333
+        ],
+        [
+          -4177.541667,
+          -4369.336905
+        ],
+        [
+          -4164.286097,
+          -4423.684739
+        ],
+        [
+          -4164.278883,
+          -4423.695836
+        ],
+        [
+          -4164.266318,
+          -4423.699997
+        ],
+        [
+          -4164.253907,
+          -4423.6954
+        ],
+        [
+          -4135.173289,
+          -4399.600031
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "west_greenland_fjords",
+      "display_label": "West Greenland Fjords",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800230,
+      "polygon": [
+        [
+          -3276.8,
+          -4082.346667
+        ],
+        [
+          -3003.733333,
+          -4164.266667
+        ],
+        [
+          -3140.266667,
+          -4437.333333
+        ],
+        [
+          -3310.933333,
+          -4669.44
+        ],
+        [
+          -3536.213333,
+          -4812.8
+        ],
+        [
+          -3822.933333,
+          -4949.333333
+        ],
+        [
+          -4164.266667,
+          -5051.733333
+        ],
+        [
+          -4232.533333,
+          -4778.666667
+        ],
+        [
+          -3891.2,
+          -4232.533333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "hills",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "northwest_greenland_coast",
+      "display_label": "Northwest Greenland Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800240,
+      "polygon": [
+        [
+          -3549.866667,
+          -4881.066667
+        ],
+        [
+          -4027.733333,
+          -5208.746667
+        ],
+        [
+          -3413.333333,
+          -5447.68
+        ],
+        [
+          -3276.8,
+          -5597.866667
+        ],
+        [
+          -4027.733333,
+          -5632.0
+        ],
+        [
+          -4573.866667,
+          -5461.333333
+        ],
+        [
+          -5017.6,
+          -5120.0
+        ],
+        [
+          -4369.066667,
+          -4881.066667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "fjord",
+          "coast"
+        ],
+        "relief": [
+          "mountain",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "east_greenland_mountains",
+      "display_label": "East Greenland Mountains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800250,
+      "polygon": [
+        [
+          -2457.6,
+          -4232.533333
+        ],
+        [
+          -2130.053652,
+          -4355.363214
+        ],
+        [
+          -1979.743973,
+          -4437.350311
+        ],
+        [
+          -1693.024958,
+          -4642.149608
+        ],
+        [
+          -1693.022277,
+          -4642.151222
+        ],
+        [
+          -1419.960145,
+          -4778.682289
+        ],
+        [
+          -1228.816385,
+          -5051.744802
+        ],
+        [
+          -1228.812,
+          -5051.749333
+        ],
+        [
+          -1202.769842,
+          -5071.280951
+        ],
+        [
+          -1194.666667,
+          -5085.866667
+        ],
+        [
+          -750.933333,
+          -5509.12
+        ],
+        [
+          -2048.0,
+          -5597.866667
+        ],
+        [
+          -2252.8,
+          -5324.8
+        ],
+        [
+          -2389.333333,
+          -4983.466667
+        ],
+        [
+          -2798.933333,
+          -4710.4
+        ],
+        [
+          -3072.0,
+          -4437.333333
+        ],
+        [
+          -3072.0,
+          -4061.866667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "fjord",
+          "coast"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "south_greenland_fjords",
+      "display_label": "South Greenland Fjords",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800260,
+      "polygon": [
+        [
+          -3345.066667,
+          -4041.386667
+        ],
+        [
+          -2867.2,
+          -4041.386667
+        ],
+        [
+          -2696.533333,
+          -4198.4
+        ],
+        [
+          -3037.866667,
+          -4300.8
+        ],
+        [
+          -3413.333333,
+          -4287.146667
+        ],
+        [
+          -3652.266667,
+          -4218.88
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "humid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "tundra",
+          "grassland"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "hills",
+          "mountain",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "disko_nuussuaq_uplands",
+      "display_label": "Disko\u2013Nuussuaq Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800270,
+      "polygon": [
+        [
+          -3481.6,
+          -4676.266667
+        ],
+        [
+          -3379.2,
+          -4778.666667
+        ],
+        [
+          -3481.6,
+          -4915.2
+        ],
+        [
+          -3925.333333,
+          -4901.546667
+        ],
+        [
+          -3891.2,
+          -4696.746667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "fjord",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "kangerlussuaq_interior",
+      "display_label": "Kangerlussuaq Dry Interior",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800280,
+      "polygon": [
+        [
+          -3399.68,
+          -4532.906667
+        ],
+        [
+          -3358.72,
+          -4614.826667
+        ],
+        [
+          -3502.08,
+          -4655.786667
+        ],
+        [
+          -3590.826667,
+          -4608.0
+        ],
+        [
+          -3577.173333,
+          -4532.906667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "upland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "scoresby_sund_fjords",
+      "display_label": "Scoresby Sund Fjords",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800290,
+      "polygon": [
+        [
+          -1474.604722,
+          -4751.36
+        ],
+        [
+          -1420.983162,
+          -4778.17078
+        ],
+        [
+          -1378.986667,
+          -4867.413333
+        ],
+        [
+          -1693.013333,
+          -4915.2
+        ],
+        [
+          -2082.133333,
+          -4881.066667
+        ],
+        [
+          -2082.133333,
+          -4751.36
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "mountain",
+          "valley",
+          "upland"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "greenland_ice_sheet",
+      "display_label": "Greenland Ice Sheet",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800300,
+      "polygon": [
+        [
+          -2990.08,
+          -4191.573333
+        ],
+        [
+          -2867.2,
+          -4300.8
+        ],
+        [
+          -2662.4,
+          -4505.6
+        ],
+        [
+          -2252.8,
+          -4710.4
+        ],
+        [
+          -1979.733333,
+          -4983.466667
+        ],
+        [
+          -1638.4,
+          -5256.533333
+        ],
+        [
+          -1706.666667,
+          -5461.333333
+        ],
+        [
+          -2457.6,
+          -5618.346667
+        ],
+        [
+          -3345.066667,
+          -5584.213333
+        ],
+        [
+          -4027.733333,
+          -5427.2
+        ],
+        [
+          -4164.266667,
+          -5256.533333
+        ],
+        [
+          -3891.2,
+          -5051.733333
+        ],
+        [
+          -3549.866667,
+          -4846.933333
+        ],
+        [
+          -3310.933333,
+          -4669.44
+        ],
+        [
+          -3379.2,
+          -4539.733333
+        ],
+        [
+          -3208.533333,
+          -4403.2
+        ],
+        [
+          -3174.4,
+          -4273.493333
+        ],
+        [
+          -3051.52,
+          -4177.92
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "inland"
+        ],
+        "relief": [
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "north_greenland_polar_desert",
+      "display_label": "North Greenland Polar Desert",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800310,
+      "polygon": [
+        [
+          -2321.066667,
+          -5529.6
+        ],
+        [
+          -853.333333,
+          -5529.6
+        ],
+        [
+          -853.333333,
+          -5720.746667
+        ],
+        [
+          -2594.133333,
+          -5741.226667
+        ],
+        [
+          -3686.4,
+          -5679.786667
+        ],
+        [
+          -3549.866667,
+          -5570.56
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "inland",
+          "coast"
+        ],
+        "relief": [
+          "upland",
+          "mountain",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "western_baffin_plateaus",
+      "display_label": "Western Baffin Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 780100,
+      "polygon": [
+        [
+          -5393.066667,
+          -4710.4
+        ],
+        [
+          -4983.466667,
+          -4915.2
+        ],
+        [
+          -5256.533333,
+          -5120.0
+        ],
+        [
+          -6144.0,
+          -5120.0
+        ],
+        [
+          -6280.533333,
+          -4710.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "upland",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "wager_bay_uplands",
+      "display_label": "Wager Bay Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 800115,
+      "polygon": [
+        [
+          -5939.2,
+          -4300.8
+        ],
+        [
+          -5802.666667,
+          -4505.6
+        ],
+        [
+          -5836.8,
+          -4724.053333
+        ],
+        [
+          -6314.666667,
+          -4730.88
+        ],
+        [
+          -6485.333333,
+          -4369.066667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "fjord",
+          "coast",
+          "lake",
+          "river"
+        ],
+        "relief": [
+          "upland",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "anderson_horton_tundra_plains",
+      "display_label": "Anderson\u2013Horton Tundra Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 780120,
+      "polygon": [
+        [
+          -8260.266667,
+          -4608.0
+        ],
+        [
+          -8533.333333,
+          -4812.8
+        ],
+        [
+          -9079.466667,
+          -4778.666667
+        ],
+        [
+          -9120.418667,
+          -4676.286667
+        ],
+        [
+          -9079.466667,
+          -4676.286667
+        ],
+        [
+          -9079.463379,
+          -4676.286395
+        ],
+        [
+          -8874.663379,
+          -4642.153061
+        ],
+        [
+          -8465.063379,
+          -4573.886395
+        ],
+        [
+          -8465.061634,
+          -4573.886023
+        ],
+        [
+          -8397.842522,
+          -4556.409054
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "shrubland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "arctic_america_greenland_base",
+      "display_label": "Arctic America & Greenland",
+      "dimension": "minecraft:overworld",
+      "macro_region": "arctic_america_greenland",
+      "priority": 779000,
+      "polygon": [
+        [
+          -9079.466667,
+          -4676.266667
+        ],
+        [
+          -8874.666667,
+          -4642.133333
+        ],
+        [
+          -8465.066667,
+          -4573.866667
+        ],
+        [
+          -8123.733333,
+          -4485.12
+        ],
+        [
+          -7645.866667,
+          -4403.2
+        ],
+        [
+          -7236.266667,
+          -4369.066667
+        ],
+        [
+          -6894.933333,
+          -4348.586667
+        ],
+        [
+          -6553.6,
+          -4164.266667
+        ],
+        [
+          -6280.533333,
+          -4096.0
+        ],
+        [
+          -6075.733333,
+          -4198.4
+        ],
+        [
+          -5734.4,
+          -4232.533333
+        ],
+        [
+          -5597.866667,
+          -4130.133333
+        ],
+        [
+          -5324.8,
+          -3959.466667
+        ],
+        [
+          -5051.733333,
+          -3891.2
+        ],
+        [
+          -4778.666667,
+          -3993.6
+        ],
+        [
+          -4642.133333,
+          -4000.426667
+        ],
+        [
+          -4505.6,
+          -3959.466667
+        ],
+        [
+          -4369.066667,
+          -3938.986667
+        ],
+        [
+          -4232.533333,
+          -4143.786667
+        ],
+        [
+          -4164.266667,
+          -4423.68
+        ],
+        [
+          -3686.4,
+          -4027.733333
+        ],
+        [
+          -2730.666667,
+          -4027.733333
+        ],
+        [
+          -1979.733333,
+          -4437.333333
+        ],
+        [
+          -1693.013333,
+          -4642.133333
+        ],
+        [
+          -1419.946667,
+          -4778.666667
+        ],
+        [
+          -1228.8,
+          -5051.733333
+        ],
+        [
+          -682.666667,
+          -5461.333333
+        ],
+        [
+          -682.666667,
+          -5802.666667
+        ],
+        [
+          -5802.666667,
+          -5802.666667
+        ],
+        [
+          -8874.666667,
+          -5372.586667
+        ],
+        [
+          -8874.666667,
+          -4983.466667
+        ],
+        [
+          -11741.866667,
+          -4915.2
+        ],
+        [
+          -11741.866667,
+          -4778.666667
+        ],
+        [
+          -11537.066667,
+          -4642.133333
+        ],
+        [
+          -11468.8,
+          -4553.386667
+        ],
+        [
+          -11524.549895,
+          -4519.93673
+        ],
+        [
+          -11522.989845,
+          -4519.01723
+        ],
+        [
+          -11522.98016,
+          -4519.002521
+        ],
+        [
+          -11522.985858,
+          -4518.985858
+        ],
+        [
+          -11537.066667,
+          -4504.905049
+        ],
+        [
+          -11537.066667,
+          -4471.466667
+        ],
+        [
+          -11516.586667,
+          -4369.066667
+        ],
+        [
+          -11059.219756,
+          -4355.413923
+        ],
+        [
+          -11059.214142,
+          -4355.427475
+        ],
+        [
+          -10970.478057,
+          -4444.16356
+        ],
+        [
+          -11011.430891,
+          -4519.243756
+        ],
+        [
+          -11011.432542,
+          -4519.258902
+        ],
+        [
+          -11011.423046,
+          -4519.270816
+        ],
+        [
+          -10888.543046,
+          -4587.537483
+        ],
+        [
+          -10888.531738,
+          -4587.539936
+        ],
+        [
+          -10717.866011,
+          -4573.886678
+        ],
+        [
+          -10240.002507,
+          -4580.713299
+        ],
+        [
+          -9898.671334,
+          -4662.632781
+        ],
+        [
+          -9898.666167,
+          -4662.633327
+        ],
+        [
+          -9625.60035,
+          -4655.806682
+        ],
+        [
+          -9284.267865,
+          -4676.286631
+        ],
+        [
+          -9284.252955,
+          -4676.281226
+        ],
+        [
+          -9284.246667,
+          -4676.266667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "polar",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren"
+        ],
+        "water": [
+          "inland",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "upland"
+        ],
+        "special": []
+      }
+    }
+  ]
+}
