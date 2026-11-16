@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "brazil_fernando_noronha",
+      "display_label": "Fernando de Noronha Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east_northeast_islands",
+      "priority": 920642,
+      "polygon": [
+        [
+          -2198.186666667,
+          279.893333333
+        ],
+        [
+          -2198.186666667,
+          245.76
+        ],
+        [
+          -2228.906666667,
+          245.76
+        ],
+        [
+          -2228.906666667,
+          279.893333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_rocas_atoll",
+      "display_label": "Rocas Atoll",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east_northeast_islands",
+      "priority": 920643,
+      "polygon": [
+        [
+          -2286.933333333,
+          279.893333333
+        ],
+        [
+          -2286.933333333,
+          245.76
+        ],
+        [
+          -2321.066666667,
+          245.76
+        ],
+        [
+          -2321.066666667,
+          279.893333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "barren",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazilian_highlands_east_northeast_islands_base",
+      "display_label": "Brazilian Highlands & East",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east_northeast_islands",
+      "priority": 768001,
+      "polygon": [
+        [
+          -2327.893333333,
+          307.2
+        ],
+        [
+          -2170.88,
+          307.2
+        ],
+        [
+          -2170.88,
+          204.8
+        ],
+        [
+          -2327.893333333,
+          204.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,2754 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "brazil_tocantins_araguaia_valleys",
+      "display_label": "Tocantins–Araguaia Cerrado Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920100,
+      "polygon": [
+        [
+          -3140.266666667,
+          1024.0
+        ],
+        [
+          -3140.266666667,
+          204.8
+        ],
+        [
+          -3208.532997923,
+          204.8
+        ],
+        [
+          -3208.533094819,
+          204.800193793
+        ],
+        [
+          -3208.533099302,
+          204.800201815
+        ],
+        [
+          -3208.533104503,
+          204.800209391
+        ],
+        [
+          -3208.533110377,
+          204.800216458
+        ],
+        [
+          -3208.533116875,
+          204.800222956
+        ],
+        [
+          -3208.533123942,
+          204.80022883
+        ],
+        [
+          -3208.533131518,
+          204.800234031
+        ],
+        [
+          -3208.53313954,
+          204.800238514
+        ],
+        [
+          -3345.066504076,
+          273.066920782
+        ],
+        [
+          -3515.733122264,
+          409.600215332
+        ],
+        [
+          -3549.866666667,
+          450.560468615
+        ],
+        [
+          -3549.866666667,
+          1024.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_bananal_araguaia_wetlands",
+      "display_label": "Bananal–Araguaia Seasonal Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920601,
+      "polygon": [
+        [
+          -3372.373333333,
+          942.08
+        ],
+        [
+          -3372.373333333,
+          614.4
+        ],
+        [
+          -3467.946666667,
+          614.4
+        ],
+        [
+          -3467.946666667,
+          942.08
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_maranhao_babacu_transition",
+      "display_label": "Maranhao Babacu–Cerrado Transition",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920202,
+      "polygon": [
+        [
+          -2901.333333333,
+          546.133333333
+        ],
+        [
+          -2901.333333333,
+          72.533434112
+        ],
+        [
+          -2935.466672892,
+          68.266766667
+        ],
+        [
+          -3140.266381257,
+          68.266766667
+        ],
+        [
+          -3208.533094819,
+          204.800193793
+        ],
+        [
+          -3208.533099302,
+          204.800201815
+        ],
+        [
+          -3208.533104503,
+          204.800209391
+        ],
+        [
+          -3208.533110377,
+          204.800216458
+        ],
+        [
+          -3208.533116875,
+          204.800222956
+        ],
+        [
+          -3208.533123942,
+          204.80022883
+        ],
+        [
+          -3208.533131518,
+          204.800234031
+        ],
+        [
+          -3208.53313954,
+          204.800238514
+        ],
+        [
+          -3242.666666667,
+          221.867002077
+        ],
+        [
+          -3242.666666667,
+          546.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_parnaiba_basin_plateaus",
+      "display_label": "Parnaiba Basin Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920303,
+      "polygon": [
+        [
+          -2935.466666667,
+          750.933333333
+        ],
+        [
+          -2798.933333333,
+          546.133333333
+        ],
+        [
+          -2764.8,
+          409.6
+        ],
+        [
+          -3140.266666667,
+          409.6
+        ],
+        [
+          -3140.266666667,
+          750.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_lencois_parnaiba_coast",
+      "display_label": "Lencois–Parnaiba Dunes & Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920704,
+      "polygon": [
+        [
+          -2764.8,
+          238.933333333
+        ],
+        [
+          -2764.8,
+          89.600100778
+        ],
+        [
+          -2935.466672892,
+          68.266766667
+        ],
+        [
+          -3072.0,
+          68.266766667
+        ],
+        [
+          -3072.0,
+          238.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "barren",
+          "wetland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_ceara_potiguar_coast",
+      "display_label": "Ceara–Potiguar Coastal Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920405,
+      "polygon": [
+        [
+          -2798.933333333,
+          136.533333333
+        ],
+        [
+          -2798.933333333,
+          238.933333333
+        ],
+        [
+          -2662.4,
+          290.133333333
+        ],
+        [
+          -2573.653333333,
+          375.466666667
+        ],
+        [
+          -2443.946666667,
+          375.466666667
+        ],
+        [
+          -2443.946666667,
+          436.906666667
+        ],
+        [
+          -2355.2,
+          436.906666667
+        ],
+        [
+          -2355.2,
+          409.601004988
+        ],
+        [
+          -2368.853427754,
+          273.066727444
+        ],
+        [
+          -2603.690865624,
+          136.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_northern_sertao",
+      "display_label": "Northern Sertao Depressions",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920106,
+      "polygon": [
+        [
+          -2355.2,
+          682.666666667
+        ],
+        [
+          -2355.2,
+          409.601004988
+        ],
+        [
+          -2368.853427754,
+          273.066727444
+        ],
+        [
+          -2451.046598957,
+          225.28
+        ],
+        [
+          -2901.333333333,
+          225.28
+        ],
+        [
+          -2901.333333333,
+          682.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_ibiapaba_uplands",
+      "display_label": "Ibiapaba Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920507,
+      "polygon": [
+        [
+          -2737.493333333,
+          341.333333333
+        ],
+        [
+          -2737.493333333,
+          170.666666667
+        ],
+        [
+          -2826.24,
+          170.666666667
+        ],
+        [
+          -2826.24,
+          341.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_araripe_plateau",
+      "display_label": "Araripe Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920608,
+      "polygon": [
+        [
+          -2628.266666667,
+          546.133333333
+        ],
+        [
+          -2628.266666667,
+          477.866666667
+        ],
+        [
+          -2785.28,
+          477.866666667
+        ],
+        [
+          -2785.28,
+          546.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_borborema_plateau",
+      "display_label": "Borborema Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920509,
+      "polygon": [
+        [
+          -2409.813333333,
+          648.533333333
+        ],
+        [
+          -2409.813333333,
+          409.6
+        ],
+        [
+          -2628.266666667,
+          409.6
+        ],
+        [
+          -2628.266666667,
+          648.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_eastern_northeast_coast",
+      "display_label": "Eastern Northeast Coastal Forest Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920710,
+      "polygon": [
+        [
+          -2437.12,
+          389.12
+        ],
+        [
+          -2437.12,
+          546.133333333
+        ],
+        [
+          -2553.173333333,
+          682.666666667
+        ],
+        [
+          -2553.173333333,
+          785.066666667
+        ],
+        [
+          -2364.354942684,
+          751.176186294
+        ],
+        [
+          -2334.720101074,
+          614.399994248
+        ],
+        [
+          -2357.248100499,
+          389.12
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "wetland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_sao_francisco_caatinga",
+      "display_label": "Sao Francisco Caatinga Depression",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920211,
+      "polygon": [
+        [
+          -2525.866666667,
+          1024.0
+        ],
+        [
+          -2525.866666667,
+          580.266666667
+        ],
+        [
+          -3003.733333333,
+          580.266666667
+        ],
+        [
+          -3003.733333333,
+          1024.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_raso_catarina",
+      "display_label": "Raso da Catarina Sandy Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920612,
+      "polygon": [
+        [
+          -2594.133333333,
+          716.8
+        ],
+        [
+          -2594.133333333,
+          546.133333333
+        ],
+        [
+          -2696.533333333,
+          546.133333333
+        ],
+        [
+          -2696.533333333,
+          716.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_chapada_diamantina",
+      "display_label": "Chapada Diamantina",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920713,
+      "polygon": [
+        [
+          -2785.28,
+          955.733333333
+        ],
+        [
+          -2785.28,
+          730.453333333
+        ],
+        [
+          -2901.333333333,
+          730.453333333
+        ],
+        [
+          -2901.333333333,
+          955.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_espinhaco_ranges",
+      "display_label": "Espinhaco Ranges",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920714,
+      "polygon": [
+        [
+          -2867.2,
+          1399.466666667
+        ],
+        [
+          -2867.2,
+          1024.0
+        ],
+        [
+          -2990.08,
+          1024.0
+        ],
+        [
+          -2990.08,
+          1399.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_sao_francisco_karst",
+      "display_label": "Sao Francisco Karst Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920315,
+      "polygon": [
+        [
+          -2969.6,
+          1351.68
+        ],
+        [
+          -2969.6,
+          955.733333333
+        ],
+        [
+          -3140.266666667,
+          955.733333333
+        ],
+        [
+          -3140.266666667,
+          1351.68
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "cave_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_western_bahia_urucuia",
+      "display_label": "Western Bahia–Urucuia Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920216,
+      "polygon": [
+        [
+          -3003.733333333,
+          1092.266666667
+        ],
+        [
+          -3003.733333333,
+          682.666666667
+        ],
+        [
+          -3208.533333333,
+          682.666666667
+        ],
+        [
+          -3208.533333333,
+          1092.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_jalapao_sandy_plateaus",
+      "display_label": "Jalapao Sandy Plateaus & Veredas",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920517,
+      "polygon": [
+        [
+          -3072.0,
+          819.2
+        ],
+        [
+          -3072.0,
+          580.266666667
+        ],
+        [
+          -3276.8,
+          580.266666667
+        ],
+        [
+          -3276.8,
+          819.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_goias_central_plateau",
+      "display_label": "Goias Central Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920118,
+      "polygon": [
+        [
+          -3140.266666667,
+          1331.2
+        ],
+        [
+          -3140.266666667,
+          819.2
+        ],
+        [
+          -3515.733333333,
+          819.2
+        ],
+        [
+          -3515.733333333,
+          1331.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_chapada_veadeiros",
+      "display_label": "Chapada dos Veadeiros",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920719,
+      "polygon": [
+        [
+          -3188.053333333,
+          1010.346666667
+        ],
+        [
+          -3188.053333333,
+          887.466666667
+        ],
+        [
+          -3304.106666667,
+          887.466666667
+        ],
+        [
+          -3304.106666667,
+          1010.346666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_parecis_mato_grosso",
+      "display_label": "Parecis–Mato Grosso Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920120,
+      "polygon": [
+        [
+          -3754.666666667,
+          1092.266666667
+        ],
+        [
+          -3754.666666667,
+          750.933333333
+        ],
+        [
+          -3850.239531385,
+          750.933333333
+        ],
+        [
+          -3891.199811882,
+          785.066900414
+        ],
+        [
+          -3891.1998159,
+          785.066903592
+        ],
+        [
+          -4027.733153333,
+          887.466906667
+        ],
+        [
+          -4127.030085355,
+          961.939605683
+        ],
+        [
+          -4061.866604863,
+          1092.266566667
+        ],
+        [
+          -3925.333333333,
+          1092.266566667
+        ],
+        [
+          -3925.333323709,
+          1092.266567131
+        ],
+        [
+          -3925.333314174,
+          1092.266568519
+        ],
+        [
+          -3925.333304817,
+          1092.266570819
+        ],
+        [
+          -3925.333295725,
+          1092.266574008
+        ],
+        [
+          -3925.333286982,
+          1092.266578058
+        ],
+        [
+          -3925.333278669,
+          1092.26658293
+        ],
+        [
+          -3925.333270864,
+          1092.26658858
+        ],
+        [
+          -3925.333173255,
+          1092.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_chapada_guimaraes",
+      "display_label": "Chapada dos Guimaraes",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920621,
+      "polygon": [
+        [
+          -3720.533333333,
+          1085.44
+        ],
+        [
+          -3720.533333333,
+          955.733333333
+        ],
+        [
+          -3822.933333333,
+          955.733333333
+        ],
+        [
+          -3822.933333333,
+          1085.44
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_araguaia_headwater_plateaus",
+      "display_label": "Araguaia Headwater Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920322,
+      "polygon": [
+        [
+          -3481.6,
+          1262.933333333
+        ],
+        [
+          -3481.6,
+          955.733333333
+        ],
+        [
+          -3720.533333333,
+          955.733333333
+        ],
+        [
+          -3720.533333333,
+          1262.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_paranaiba_upper_parana",
+      "display_label": "Paranaiba–Upper Parana Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920223,
+      "polygon": [
+        [
+          -3208.533333333,
+          1467.733333333
+        ],
+        [
+          -3208.533333333,
+          1228.8
+        ],
+        [
+          -3618.133333333,
+          1228.8
+        ],
+        [
+          -3618.133333333,
+          1467.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "hills",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_maracaju_plateau",
+      "display_label": "Maracaju Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920324,
+      "polygon": [
+        [
+          -3618.133333333,
+          1638.4
+        ],
+        [
+          -3618.133333333,
+          1228.8
+        ],
+        [
+          -3754.666566762,
+          1228.8
+        ],
+        [
+          -3754.666566902,
+          1228.800006862
+        ],
+        [
+          -3754.666568027,
+          1228.80001644
+        ],
+        [
+          -3788.799901361,
+          1433.60001644
+        ],
+        [
+          -3822.933231954,
+          1638.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_sao_paulo_interior",
+      "display_label": "Sao Paulo Interior Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920125,
+      "polygon": [
+        [
+          -3140.266666667,
+          1638.4
+        ],
+        [
+          -3140.266666667,
+          1365.333333333
+        ],
+        [
+          -3618.133333333,
+          1365.333333333
+        ],
+        [
+          -3618.133333333,
+          1638.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_bahia_atlantic_coast",
+      "display_label": "Bahia Atlantic Forest Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920426,
+      "polygon": [
+        [
+          -2730.666666667,
+          989.866666667
+        ],
+        [
+          -2798.933333333,
+          1262.933333333
+        ],
+        [
+          -2662.4,
+          1262.933333333
+        ],
+        [
+          -2525.866666667,
+          955.733333333
+        ],
+        [
+          -2491.733333333,
+          716.8
+        ],
+        [
+          -2730.666666667,
+          716.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_espirito_santo_lower_doce",
+      "display_label": "Espirito Santo–Lower Doce Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920427,
+      "polygon": [
+        [
+          -2722.133493411,
+          1467.733333333
+        ],
+        [
+          -2628.266666667,
+          1392.639871938
+        ],
+        [
+          -2628.266666667,
+          1228.8
+        ],
+        [
+          -2833.066666667,
+          1228.8
+        ],
+        [
+          -2833.066666667,
+          1467.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_eastern_minas_uplands",
+      "display_label": "Eastern Minas Forested Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920228,
+      "polygon": [
+        [
+          -2807.466826745,
+          1536.0
+        ],
+        [
+          -2730.666666667,
+          1474.559871938
+        ],
+        [
+          -2730.666666667,
+          955.733333333
+        ],
+        [
+          -2935.466666667,
+          955.733333333
+        ],
+        [
+          -2935.466666667,
+          1536.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_mantiqueira_ranges",
+      "display_label": "Mantiqueira Ranges",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920829,
+      "polygon": [
+        [
+          -3106.133333333,
+          1563.306666667
+        ],
+        [
+          -3010.56,
+          1529.173333333
+        ],
+        [
+          -2833.066666667,
+          1399.466666667
+        ],
+        [
+          -2914.986666667,
+          1331.2
+        ],
+        [
+          -3072.0,
+          1467.733333333
+        ],
+        [
+          -3188.053333333,
+          1501.866666667
+        ],
+        [
+          -3188.053333333,
+          1570.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_serra_mar_bocaina",
+      "display_label": "Serra do Mar–Bocaina Ranges",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920730,
+      "polygon": [
+        [
+          -3297.28,
+          1774.933333333
+        ],
+        [
+          -3085.653333333,
+          1611.093333333
+        ],
+        [
+          -2867.2,
+          1556.48
+        ],
+        [
+          -2867.2,
+          1515.52
+        ],
+        [
+          -3037.866666667,
+          1529.173333333
+        ],
+        [
+          -3208.533333333,
+          1570.133333333
+        ],
+        [
+          -3355.306666667,
+          1652.053333333
+        ],
+        [
+          -3355.306666667,
+          1774.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_rio_sao_paulo_coast",
+      "display_label": "Rio–Sao Paulo Coastal Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920931,
+      "polygon": [
+        [
+          -2764.8,
+          1467.733333333
+        ],
+        [
+          -2867.2,
+          1467.733333333
+        ],
+        [
+          -2867.2,
+          1542.826666667
+        ],
+        [
+          -3003.733333333,
+          1556.48
+        ],
+        [
+          -3167.573333333,
+          1617.92
+        ],
+        [
+          -3297.28,
+          1727.146666667
+        ],
+        [
+          -3324.586666667,
+          1761.28
+        ],
+        [
+          -3106.133333333,
+          1733.973333333
+        ],
+        [
+          -2935.466882184,
+          1638.40012069
+        ],
+        [
+          -2935.466746667,
+          1638.39994
+        ],
+        [
+          -2935.466741338,
+          1638.399933486
+        ],
+        [
+          -2935.466735481,
+          1638.399927442
+        ],
+        [
+          -2935.466729136,
+          1638.399921913
+        ],
+        [
+          -2768.962586009,
+          1505.196607411
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_canastra_plateau",
+      "display_label": "Canastra Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920732,
+      "polygon": [
+        [
+          -3072.0,
+          1433.6
+        ],
+        [
+          -3072.0,
+          1317.546666667
+        ],
+        [
+          -3263.146666667,
+          1317.546666667
+        ],
+        [
+          -3263.146666667,
+          1433.6
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_parana_basalt_plateaus",
+      "display_label": "Parana Interior Basalt Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920233,
+      "polygon": [
+        [
+          -3310.933333333,
+          1877.333333333
+        ],
+        [
+          -3310.933333333,
+          1570.133333333
+        ],
+        [
+          -3811.555454176,
+          1570.133333333
+        ],
+        [
+          -3822.93323204,
+          1638.400000514
+        ],
+        [
+          -3788.79990798,
+          1856.853274495
+        ],
+        [
+          -3758.079819722,
+          1877.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_araucaria_highlands",
+      "display_label": "Araucaria Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920434,
+      "polygon": [
+        [
+          -3447.466666667,
+          2013.866666667
+        ],
+        [
+          -3392.853333333,
+          1938.773333333
+        ],
+        [
+          -3351.893333333,
+          1856.853333333
+        ],
+        [
+          -3351.893333333,
+          1706.666666667
+        ],
+        [
+          -3549.866666667,
+          1706.666666667
+        ],
+        [
+          -3549.866666667,
+          1996.35467808
+        ],
+        [
+          -3447.466666667,
+          2027.519895471
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_serra_geral_escarpment",
+      "display_label": "Serra Geral Escarpment & Canyons",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920835,
+      "polygon": [
+        [
+          -3433.813333333,
+          2027.52
+        ],
+        [
+          -3392.853333333,
+          1979.733333333
+        ],
+        [
+          -3358.72,
+          1911.466666667
+        ],
+        [
+          -3358.72,
+          1904.64
+        ],
+        [
+          -3454.293333333,
+          1904.64
+        ],
+        [
+          -3454.293333333,
+          2025.442214312
+        ],
+        [
+          -3447.466637551,
+          2027.519904333
+        ],
+        [
+          -3447.466636189,
+          2027.519904758
+        ],
+        [
+          -3447.466338557,
+          2027.52
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau",
+          "valley"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazil_santa_catarina_coast",
+      "display_label": "Southern Atlantic Coastal Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920336,
+      "polygon": [
+        [
+          -3208.533333333,
+          1754.453333333
+        ],
+        [
+          -3447.466666667,
+          1754.453333333
+        ],
+        [
+          -3447.466666667,
+          2027.519895471
+        ],
+        [
+          -3447.466637551,
+          2027.519904333
+        ],
+        [
+          -3447.466636189,
+          2027.519904758
+        ],
+        [
+          -3276.800035085,
+          2082.133217111
+        ],
+        [
+          -3208.533333333,
+          1996.799839922
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "lake",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_upper_uruguay_forests",
+      "display_label": "Upper Uruguay Forested Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920637,
+      "polygon": [
+        [
+          -3515.733333333,
+          1774.933333333
+        ],
+        [
+          -3801.599898787,
+          1774.933333333
+        ],
+        [
+          -3788.79990798,
+          1856.853274495
+        ],
+        [
+          -3604.479956789,
+          1979.733241956
+        ],
+        [
+          -3515.733333333,
+          2006.743083877
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "hills",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_iguacu_parana_forests",
+      "display_label": "Iguacu–Parana Forest Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920738,
+      "polygon": [
+        [
+          -3618.133333333,
+          1795.413333333
+        ],
+        [
+          -3618.133333333,
+          1638.4
+        ],
+        [
+          -3822.933231954,
+          1638.4
+        ],
+        [
+          -3822.93323204,
+          1638.400000514
+        ],
+        [
+          -3798.399898787,
+          1795.413333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_xingu_araguaia_transition",
+      "display_label": "Xingu–Araguaia Forest–Cerrado Transition",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920239,
+      "polygon": [
+        [
+          -3481.6,
+          989.866666667
+        ],
+        [
+          -3481.6,
+          409.6
+        ],
+        [
+          -3515.732853099,
+          409.6
+        ],
+        [
+          -3515.733122264,
+          409.600215332
+        ],
+        [
+          -3686.399781173,
+          614.400206023
+        ],
+        [
+          -3686.399787285,
+          614.400212715
+        ],
+        [
+          -3686.399793977,
+          614.400218827
+        ],
+        [
+          -3891.199811882,
+          785.066900414
+        ],
+        [
+          -3891.1998159,
+          785.066903592
+        ],
+        [
+          -3891.2,
+          785.067041667
+        ],
+        [
+          -3891.2,
+          989.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_cuiaba_sao_lourenco_depression",
+      "display_label": "Cuiaba–Sao Lourenco Piedmont Depression",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920240,
+      "polygon": [
+        [
+          -3686.4,
+          1262.933333333
+        ],
+        [
+          -3686.4,
+          1058.133333333
+        ],
+        [
+          -3959.466666667,
+          1058.133333333
+        ],
+        [
+          -3959.466666667,
+          1092.266566667
+        ],
+        [
+          -3925.333333333,
+          1092.266566667
+        ],
+        [
+          -3925.333323709,
+          1092.266567131
+        ],
+        [
+          -3925.333314174,
+          1092.266568519
+        ],
+        [
+          -3925.333304817,
+          1092.266570819
+        ],
+        [
+          -3925.333295725,
+          1092.266574008
+        ],
+        [
+          -3925.333286982,
+          1092.266578058
+        ],
+        [
+          -3925.333278669,
+          1092.26658293
+        ],
+        [
+          -3925.333270864,
+          1092.26658858
+        ],
+        [
+          -3754.666604197,
+          1228.799921913
+        ],
+        [
+          -3754.666596966,
+          1228.799928293
+        ],
+        [
+          -3754.666590383,
+          1228.799935341
+        ],
+        [
+          -3754.66658451,
+          1228.799942989
+        ],
+        [
+          -3754.6665794,
+          1228.799951168
+        ],
+        [
+          -3754.666575102,
+          1228.799959801
+        ],
+        [
+          -3754.666571656,
+          1228.799968808
+        ],
+        [
+          -3754.666569093,
+          1228.799978104
+        ],
+        [
+          -3754.666567438,
+          1228.799987605
+        ],
+        [
+          -3754.666566705,
+          1228.799997221
+        ],
+        [
+          -3754.666566902,
+          1228.800006862
+        ],
+        [
+          -3754.666568027,
+          1228.80001644
+        ],
+        [
+          -3760.355454176,
+          1262.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazil_central_southern_minas_uplands",
+      "display_label": "Central–Southern Minas Rolling Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 920141,
+      "polygon": [
+        [
+          -2935.466666667,
+          1536.0
+        ],
+        [
+          -2935.466666667,
+          1297.066666667
+        ],
+        [
+          -3174.4,
+          1297.066666667
+        ],
+        [
+          -3174.4,
+          1536.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazilian_highlands_east_base",
+      "display_label": "Brazilian Highlands & East",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east",
+      "priority": 768000,
+      "polygon": [
+        [
+          -4061.866666667,
+          1092.266666667
+        ],
+        [
+          -3925.333333333,
+          1092.266666667
+        ],
+        [
+          -3754.666666667,
+          1228.8
+        ],
+        [
+          -3788.8,
+          1433.6
+        ],
+        [
+          -3822.933333333,
+          1638.4
+        ],
+        [
+          -3788.8,
+          1856.853333333
+        ],
+        [
+          -3604.48,
+          1979.733333333
+        ],
+        [
+          -3447.466666667,
+          2027.52
+        ],
+        [
+          -3276.8,
+          2082.133333333
+        ],
+        [
+          -3140.266666667,
+          1911.466666667
+        ],
+        [
+          -2935.466666667,
+          1638.4
+        ],
+        [
+          -2594.133333333,
+          1365.333333333
+        ],
+        [
+          -2423.466666667,
+          1024.0
+        ],
+        [
+          -2334.72,
+          614.4
+        ],
+        [
+          -2368.853333333,
+          273.066666667
+        ],
+        [
+          -2662.4,
+          102.4
+        ],
+        [
+          -2935.466666667,
+          68.266666667
+        ],
+        [
+          -3140.266466667,
+          68.266666667
+        ],
+        [
+          -3140.266466667,
+          68.266713881
+        ],
+        [
+          -3208.533184262,
+          204.800149071
+        ],
+        [
+          -3345.066558273,
+          273.066836077
+        ],
+        [
+          -3515.73319262,
+          409.600143555
+        ],
+        [
+          -3686.399857995,
+          614.400142005
+        ],
+        [
+          -3891.1998759,
+          785.066823592
+        ],
+        [
+          -4027.733213333,
+          887.466826667
+        ],
+        [
+          -4127.030212121,
+          961.939575758
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.10
+
+- Added Amazonia/Orinoco/Guiana (39 locals), Brazilian Highlands/East (50), and Southern Plains/Patagonia (55): 144 additions, eight polygon-only Andes replacements, no removed IDs; final 1,549 locals / 39 technical macros / 38 resources. Kept all 1,405 old IDs, 1,397 old objects unchanged and the prior Mesoamerica repair. Added ten macros; changed only Andes main geometry and South America fallback priority 57 → 50.
+- Under the standing Core-compatibility authorization, removed two duplicate consecutive Andes vertices and shifted two shared Amazonia/Andes clipping coordinates by 0.00000001 block, synchronizing three parent/base pairs. Recorded exact corrections and one more robust diagnostic witness in the geography note; no Core, profile, identity, discovery or unrelated gameplay changes.
+- Integrated supplied checks pass: 165 stage controls, 514 prior named assertions, 15,920 normalized boundary probes and full reachability. Offline Core 0.13.0 accepts all 1,549 locals/39 macros, zero skipped: 2,114 deduplicated cases, 83,358 whole-pack boundary samples, 23,835 NPC compositions. All new macro footprints have zero polygon gaps; numerical union loss ~0.0000002164 blocks² is below 0.00001 tolerance. No Minecraft gameplay or terrain testing.
+
 ## 0.5.9
 
 - Added Central/Eastern North America, Mesoamerica/Caribbean and Andes/Pacific West: 42 locals each, 126 additions total; final 1,405 locals / 29 technical macros / 28 resources. All 1,279 existing locals and 23 existing local files are preserved. Added three macros; applied approved Mesoamerica priority 60 and South America priority 57 with their final polygons; retained both broad fallback IDs.

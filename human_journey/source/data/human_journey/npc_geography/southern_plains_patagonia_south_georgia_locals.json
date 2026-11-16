@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "plains_south_georgia",
+      "display_label": "South Georgia Glacier–Tundra Mosaic",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia_south_georgia",
+      "priority": 940249,
+      "polygon": [
+        [
+          -2321.066766667,
+          3775.146566667
+        ],
+        [
+          -2321.066766667,
+          3638.613433333
+        ],
+        [
+          -2662.3999,
+          3638.613433333
+        ],
+        [
+          -2662.3999,
+          3775.146566667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "polar"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "fjord",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "southern_plains_patagonia_south_georgia_base",
+      "display_label": "Southern Plains & Patagonia",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia_south_georgia",
+      "priority": 769002,
+      "polygon": [
+        [
+          -2662.4,
+          3775.146666667
+        ],
+        [
+          -2321.066666667,
+          3775.146666667
+        ],
+        [
+          -2321.066666667,
+          3638.613333333
+        ],
+        [
+          -2662.4,
+          3638.613333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "polar"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "fjord",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    }
+  ]
+}

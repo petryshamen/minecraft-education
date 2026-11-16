@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "plains_falkland_malvinas",
+      "display_label": "Falkland / Malvinas Oceanic Grass–Heath",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia_falkland_malvinas",
+      "priority": 940248,
+      "polygon": [
+        [
+          -3891.2001,
+          3618.133233333
+        ],
+        [
+          -3891.2001,
+          3447.466766667
+        ],
+        [
+          -4266.666566667,
+          3447.466766667
+        ],
+        [
+          -4266.666566667,
+          3618.133233333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "wetland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "southern_plains_patagonia_falkland_malvinas_base",
+      "display_label": "Southern Plains & Patagonia",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia_falkland_malvinas",
+      "priority": 769001,
+      "polygon": [
+        [
+          -4266.666666667,
+          3618.133333333
+        ],
+        [
+          -3891.2,
+          3618.133333333
+        ],
+        [
+          -3891.2,
+          3447.466666667
+        ],
+        [
+          -4266.666666667,
+          3447.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "wetland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

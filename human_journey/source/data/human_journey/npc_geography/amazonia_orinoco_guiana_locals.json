@@ -1,0 +1,2970 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "amazon_venezuelan_coastal_ranges",
+      "display_label": "Venezuelan Coastal Ranges",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900400,
+      "polygon": [
+        [
+          -4130.133333333,
+          -614.4
+        ],
+        [
+          -4130.133333333,
+          -669.013233333
+        ],
+        [
+          -4198.4,
+          -669.013233333
+        ],
+        [
+          -4198.400009794,
+          -669.013233814
+        ],
+        [
+          -4198.400019494,
+          -669.013235252
+        ],
+        [
+          -4198.400029007,
+          -669.013237632
+        ],
+        [
+          -4198.400038241,
+          -669.013240934
+        ],
+        [
+          -4198.400047107,
+          -669.013245123
+        ],
+        [
+          -4198.40005552,
+          -669.013250161
+        ],
+        [
+          -4198.400063399,
+          -669.013255999
+        ],
+        [
+          -4198.400070668,
+          -669.01326258
+        ],
+        [
+          -4198.400077258,
+          -669.013269842
+        ],
+        [
+          -4198.400083105,
+          -669.013277714
+        ],
+        [
+          -4198.400088153,
+          -669.013286121
+        ],
+        [
+          -4198.400092354,
+          -669.013294982
+        ],
+        [
+          -4198.400095666,
+          -669.013304212
+        ],
+        [
+          -4198.400098058,
+          -669.013313721
+        ],
+        [
+          -4205.226762783,
+          -703.146637346
+        ],
+        [
+          -4222.293412534,
+          -744.10659675
+        ],
+        [
+          -4246.186681394,
+          -757.759893241
+        ],
+        [
+          -4314.453309079,
+          -740.693236319
+        ],
+        [
+          -4314.453315074,
+          -740.693235014
+        ],
+        [
+          -4362.239981741,
+          -731.818568348
+        ],
+        [
+          -4362.239992467,
+          -731.818566951
+        ],
+        [
+          -4362.240003281,
+          -731.818566721
+        ],
+        [
+          -4362.240014057,
+          -731.81856766
+        ],
+        [
+          -4362.240024668,
+          -731.818569757
+        ],
+        [
+          -4437.333355488,
+          -750.933235784
+        ],
+        [
+          -4608.000509903,
+          -785.066666667
+        ],
+        [
+          -4710.4,
+          -785.066666667
+        ],
+        [
+          -4710.4,
+          -782.888050346
+        ],
+        [
+          -4662.613297568,
+          -764.586760053
+        ],
+        [
+          -4662.613288746,
+          -764.586756177
+        ],
+        [
+          -4662.613280337,
+          -764.586751469
+        ],
+        [
+          -4662.613272421,
+          -764.586745975
+        ],
+        [
+          -4662.61326507,
+          -764.586739744
+        ],
+        [
+          -4662.613258353,
+          -764.586732834
+        ],
+        [
+          -4662.613252333,
+          -764.58672531
+        ],
+        [
+          -4662.613247064,
+          -764.586717241
+        ],
+        [
+          -4662.613242597,
+          -764.586708703
+        ],
+        [
+          -4662.613238972,
+          -764.586699774
+        ],
+        [
+          -4662.613236224,
+          -764.586690538
+        ],
+        [
+          -4662.613234377,
+          -764.58668108
+        ],
+        [
+          -4662.613233449,
+          -764.586671488
+        ],
+        [
+          -4662.613233449,
+          -764.586661852
+        ],
+        [
+          -4662.613234376,
+          -764.58665226
+        ],
+        [
+          -4662.613236222,
+          -764.586642802
+        ],
+        [
+          -4662.61323897,
+          -764.586633566
+        ],
+        [
+          -4662.613242594,
+          -764.586624637
+        ],
+        [
+          -4662.613247061,
+          -764.586616098
+        ],
+        [
+          -4662.613252329,
+          -764.586608029
+        ],
+        [
+          -4662.613258349,
+          -764.586600505
+        ],
+        [
+          -4710.4,
+          -710.4282933
+        ],
+        [
+          -4710.4,
+          -614.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "amazon_venezuelan_dry_coastal_lowlands",
+      "display_label": "Northern Dry Coastal Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900101,
+      "polygon": [
+        [
+          -4027.733333333,
+          -614.4
+        ],
+        [
+          -4027.733333333,
+          -769.137600264
+        ],
+        [
+          -4095.999917377,
+          -669.013276999
+        ],
+        [
+          -4095.999923237,
+          -669.013269244
+        ],
+        [
+          -4095.999929821,
+          -669.013262094
+        ],
+        [
+          -4095.999937069,
+          -669.013255618
+        ],
+        [
+          -4095.999944911,
+          -669.013249875
+        ],
+        [
+          -4095.999953274,
+          -669.013244921
+        ],
+        [
+          -4095.999962078,
+          -669.013240802
+        ],
+        [
+          -4095.999971241,
+          -669.013237558
+        ],
+        [
+          -4095.999980675,
+          -669.013235218
+        ],
+        [
+          -4095.999990292,
+          -669.013233805
+        ],
+        [
+          -4096.0,
+          -669.013233333
+        ],
+        [
+          -4198.4,
+          -669.013233333
+        ],
+        [
+          -4198.400009794,
+          -669.013233814
+        ],
+        [
+          -4198.400019494,
+          -669.013235252
+        ],
+        [
+          -4198.400029007,
+          -669.013237632
+        ],
+        [
+          -4198.400038241,
+          -669.013240934
+        ],
+        [
+          -4198.400047107,
+          -669.013245123
+        ],
+        [
+          -4198.40005552,
+          -669.013250161
+        ],
+        [
+          -4198.400063399,
+          -669.013255999
+        ],
+        [
+          -4198.400070668,
+          -669.01326258
+        ],
+        [
+          -4198.400077258,
+          -669.013269842
+        ],
+        [
+          -4198.400083105,
+          -669.013277714
+        ],
+        [
+          -4198.400088153,
+          -669.013286121
+        ],
+        [
+          -4198.400092354,
+          -669.013294982
+        ],
+        [
+          -4198.400095666,
+          -669.013304212
+        ],
+        [
+          -4198.400098058,
+          -669.013313721
+        ],
+        [
+          -4205.226762783,
+          -703.146637346
+        ],
+        [
+          -4222.293412534,
+          -744.10659675
+        ],
+        [
+          -4246.186681394,
+          -757.759893241
+        ],
+        [
+          -4314.453309079,
+          -740.693236319
+        ],
+        [
+          -4314.453315074,
+          -740.693235014
+        ],
+        [
+          -4362.239981741,
+          -731.818568348
+        ],
+        [
+          -4362.239992467,
+          -731.818566951
+        ],
+        [
+          -4362.240003281,
+          -731.818566721
+        ],
+        [
+          -4362.240014057,
+          -731.81856766
+        ],
+        [
+          -4362.240024668,
+          -731.818569757
+        ],
+        [
+          -4437.333355488,
+          -750.933235784
+        ],
+        [
+          -4642.133349362,
+          -791.893234558
+        ],
+        [
+          -4751.360012403,
+          -805.546567439
+        ],
+        [
+          -4751.360021797,
+          -805.546569072
+        ],
+        [
+          -4751.360030993,
+          -805.546571591
+        ],
+        [
+          -4751.360039907,
+          -805.546574975
+        ],
+        [
+          -4751.360048458,
+          -805.546579192
+        ],
+        [
+          -4751.360056569,
+          -805.546584205
+        ],
+        [
+          -4751.360064165,
+          -805.546589967
+        ],
+        [
+          -4751.360071178,
+          -805.546596427
+        ],
+        [
+          -4751.360077544,
+          -805.546603525
+        ],
+        [
+          -4751.360083205,
+          -805.546611197
+        ],
+        [
+          -4792.319977755,
+          -866.986453022
+        ],
+        [
+          -4810.608282746,
+          -821.265690545
+        ],
+        [
+          -4754.226485529,
+          -799.672661825
+        ],
+        [
+          -4662.613297568,
+          -764.586760053
+        ],
+        [
+          -4662.613288746,
+          -764.586756177
+        ],
+        [
+          -4662.613280337,
+          -764.586751469
+        ],
+        [
+          -4662.613272421,
+          -764.586745975
+        ],
+        [
+          -4662.61326507,
+          -764.586739744
+        ],
+        [
+          -4662.613258353,
+          -764.586732834
+        ],
+        [
+          -4662.613252333,
+          -764.58672531
+        ],
+        [
+          -4662.613247064,
+          -764.586717241
+        ],
+        [
+          -4662.613242597,
+          -764.586708703
+        ],
+        [
+          -4662.613238972,
+          -764.586699774
+        ],
+        [
+          -4662.613236224,
+          -764.586690538
+        ],
+        [
+          -4662.613234377,
+          -764.58668108
+        ],
+        [
+          -4662.613233449,
+          -764.586671488
+        ],
+        [
+          -4662.613233449,
+          -764.586661852
+        ],
+        [
+          -4662.613234376,
+          -764.58665226
+        ],
+        [
+          -4662.613236222,
+          -764.586642802
+        ],
+        [
+          -4662.61323897,
+          -764.586633566
+        ],
+        [
+          -4662.613242594,
+          -764.586624637
+        ],
+        [
+          -4662.613247061,
+          -764.586616098
+        ],
+        [
+          -4662.613252329,
+          -764.586608029
+        ],
+        [
+          -4662.613258349,
+          -764.586600505
+        ],
+        [
+          -4765.013253877,
+          -648.533272239
+        ],
+        [
+          -4787.768768703,
+          -614.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_western_llanos_piedmont",
+      "display_label": "Western Llanos Piedmont",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900202,
+      "polygon": [
+        [
+          -4846.933333333,
+          -204.8
+        ],
+        [
+          -4846.933333333,
+          -525.128021638
+        ],
+        [
+          -4922.026580818,
+          -409.599948585
+        ],
+        [
+          -4997.11990613,
+          -273.066629835
+        ],
+        [
+          -5014.186563589,
+          -204.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_flooded_llanos",
+      "display_label": "Flooded Llanos",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900303,
+      "polygon": [
+        [
+          -4437.333333333,
+          -341.333333333
+        ],
+        [
+          -4437.333333333,
+          -648.533333333
+        ],
+        [
+          -4765.013199971,
+          -648.533333333
+        ],
+        [
+          -4765.013253877,
+          -648.533272239
+        ],
+        [
+          -4833.279916472,
+          -546.133278347
+        ],
+        [
+          -4881.066666667,
+          -472.615201125
+        ],
+        [
+          -4881.066666667,
+          -341.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_eastern_llanos_high_plains",
+      "display_label": "Eastern Llanos High Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900104,
+      "polygon": [
+        [
+          -4198.4,
+          -170.666666667
+        ],
+        [
+          -4198.4,
+          -614.4
+        ],
+        [
+          -4787.768768703,
+          -614.4
+        ],
+        [
+          -4833.279916472,
+          -546.133278347
+        ],
+        [
+          -4881.066666667,
+          -472.615201125
+        ],
+        [
+          -4881.066666667,
+          -170.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_orinoco_delta",
+      "display_label": "Orinoco Delta",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900605,
+      "polygon": [
+        [
+          -4061.866666667,
+          -512.0
+        ],
+        [
+          -4061.866666667,
+          -719.075378042
+        ],
+        [
+          -4095.999917377,
+          -669.013276999
+        ],
+        [
+          -4095.999923237,
+          -669.013269244
+        ],
+        [
+          -4095.999929821,
+          -669.013262094
+        ],
+        [
+          -4095.999937069,
+          -669.013255618
+        ],
+        [
+          -4095.999944911,
+          -669.013249875
+        ],
+        [
+          -4095.999953274,
+          -669.013244921
+        ],
+        [
+          -4095.999962078,
+          -669.013240802
+        ],
+        [
+          -4095.999971241,
+          -669.013237558
+        ],
+        [
+          -4095.999980675,
+          -669.013235218
+        ],
+        [
+          -4095.999990292,
+          -669.013233805
+        ],
+        [
+          -4096.0,
+          -669.013233333
+        ],
+        [
+          -4198.4,
+          -669.013233333
+        ],
+        [
+          -4198.400009794,
+          -669.013233814
+        ],
+        [
+          -4198.400019494,
+          -669.013235252
+        ],
+        [
+          -4198.400029007,
+          -669.013237632
+        ],
+        [
+          -4198.400038241,
+          -669.013240934
+        ],
+        [
+          -4198.400047107,
+          -669.013245123
+        ],
+        [
+          -4198.40005552,
+          -669.013250161
+        ],
+        [
+          -4198.400063399,
+          -669.013255999
+        ],
+        [
+          -4198.400070668,
+          -669.01326258
+        ],
+        [
+          -4198.400077258,
+          -669.013269842
+        ],
+        [
+          -4198.400083105,
+          -669.013277714
+        ],
+        [
+          -4198.400088153,
+          -669.013286121
+        ],
+        [
+          -4198.400092354,
+          -669.013294982
+        ],
+        [
+          -4198.400095666,
+          -669.013304212
+        ],
+        [
+          -4198.400098058,
+          -669.013313721
+        ],
+        [
+          -4205.226762783,
+          -703.146637346
+        ],
+        [
+          -4219.448997222,
+          -737.28
+        ],
+        [
+          -4300.8,
+          -737.28
+        ],
+        [
+          -4300.8,
+          -512.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "wetland",
+          "forest",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "coast",
+          "lake"
+        ],
+        "relief": [
+          "lowland",
+          "plain",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_orinoco_guiana_transition",
+      "display_label": "Orinoco–Guiana Forest Transition",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900206,
+      "polygon": [
+        [
+          -4164.266666667,
+          -34.133333333
+        ],
+        [
+          -4164.266666667,
+          -477.866666667
+        ],
+        [
+          -4744.533333333,
+          -477.866666667
+        ],
+        [
+          -4744.533333333,
+          -34.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_guiana_tepui_highlands",
+      "display_label": "Guiana Tepui Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900507,
+      "polygon": [
+        [
+          -4027.733333333,
+          -238.933333333
+        ],
+        [
+          -4027.733333333,
+          -477.866666667
+        ],
+        [
+          -4437.333333333,
+          -477.866666667
+        ],
+        [
+          -4437.333333333,
+          -238.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "amazon_gran_sabana",
+      "display_label": "Gran Sabana",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900708,
+      "polygon": [
+        [
+          -4150.613333333,
+          -259.413333333
+        ],
+        [
+          -4150.613333333,
+          -361.813333333
+        ],
+        [
+          -4266.666666667,
+          -361.813333333
+        ],
+        [
+          -4266.666666667,
+          -259.413333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_guiana_interior_forests",
+      "display_label": "Guiana Interior Forested Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900009,
+      "polygon": [
+        [
+          -3413.333333333,
+          68.266666667
+        ],
+        [
+          -3413.333333333,
+          -559.786666667
+        ],
+        [
+          -4369.066666667,
+          -559.786666667
+        ],
+        [
+          -4369.066666667,
+          68.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_guiana_coastal_plain",
+      "display_label": "Guiana Coastal Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900410,
+      "polygon": [
+        [
+          -4096.0,
+          -409.6
+        ],
+        [
+          -3822.933333333,
+          -273.066666667
+        ],
+        [
+          -3549.866666667,
+          -122.88
+        ],
+        [
+          -3276.8,
+          0.0
+        ],
+        [
+          -3345.066666667,
+          -204.8
+        ],
+        [
+          -3618.133333333,
+          -443.733333333
+        ],
+        [
+          -3959.466666667,
+          -546.133333333
+        ],
+        [
+          -4232.533333333,
+          -614.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_rupununi_roraima_savannas",
+      "display_label": "Rupununi–Roraima Savannas",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900411,
+      "polygon": [
+        [
+          -3959.466666667,
+          -68.266666667
+        ],
+        [
+          -3959.466666667,
+          -307.2
+        ],
+        [
+          -4266.666666667,
+          -307.2
+        ],
+        [
+          -4266.666666667,
+          -68.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_tumucumaque_forested_ranges",
+      "display_label": "Tumucumaque Forested Ranges",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900312,
+      "polygon": [
+        [
+          -3481.6,
+          0.0
+        ],
+        [
+          -3481.6,
+          -273.066666667
+        ],
+        [
+          -3891.2,
+          -273.066666667
+        ],
+        [
+          -3891.2,
+          0.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "amazon_imeri_neblina_highlands",
+      "display_label": "Imeri–Neblina Highlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900513,
+      "polygon": [
+        [
+          -4437.333333333,
+          -34.133333333
+        ],
+        [
+          -4437.333333333,
+          -150.186666667
+        ],
+        [
+          -4608.0,
+          -150.186666667
+        ],
+        [
+          -4608.0,
+          -34.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "warm",
+          "cold"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "plateau"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "amazon_kanuku_forested_mountains",
+      "display_label": "Kanuku Forested Mountains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900614,
+      "polygon": [
+        [
+          -4014.08,
+          -170.666666667
+        ],
+        [
+          -4014.08,
+          -225.28
+        ],
+        [
+          -4078.933333333,
+          -225.28
+        ],
+        [
+          -4078.933333333,
+          -170.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "amazon_colombian_amazon_plains",
+      "display_label": "Caqueta–Putumayo Forest Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900115,
+      "polygon": [
+        [
+          -4710.4,
+          238.933333333
+        ],
+        [
+          -4710.4,
+          -238.933333333
+        ],
+        [
+          -5005.653230256,
+          -238.933333333
+        ],
+        [
+          -5031.253236319,
+          -136.533309079
+        ],
+        [
+          -5031.253239584,
+          -136.533298532
+        ],
+        [
+          -5031.253243992,
+          -136.533288409
+        ],
+        [
+          -5031.253249489,
+          -136.533278834
+        ],
+        [
+          -5119.999916156,
+          5.4499e-05
+        ],
+        [
+          -5119.999918077,
+          5.7346e-05
+        ],
+        [
+          -5215.573234378,
+          136.533366348
+        ],
+        [
+          -5218.986566611,
+          238.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_chiribiquete_tablelands",
+      "display_label": "Chiribiquete Tablelands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900516,
+      "polygon": [
+        [
+          -4846.933333333,
+          0.0
+        ],
+        [
+          -4846.933333333,
+          -170.666666667
+        ],
+        [
+          -5022.719896922,
+          -170.666666667
+        ],
+        [
+          -5031.253236319,
+          -136.533309079
+        ],
+        [
+          -5031.253239584,
+          -136.533298532
+        ],
+        [
+          -5031.253243992,
+          -136.533288409
+        ],
+        [
+          -5031.253249489,
+          -136.533278834
+        ],
+        [
+          -5051.733333333,
+          -105.025457535
+        ],
+        [
+          -5051.733333333,
+          0.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "amazon_napo_pastaza_lowlands",
+      "display_label": "Napo–Pastaza Forested Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900217,
+      "polygon": [
+        [
+          -4983.466666667,
+          375.466666667
+        ],
+        [
+          -4983.466666667,
+          -68.266666667
+        ],
+        [
+          -5075.626547398,
+          -68.266666667
+        ],
+        [
+          -5119.999916156,
+          5.4499e-05
+        ],
+        [
+          -5119.999918077,
+          5.7346e-05
+        ],
+        [
+          -5215.573234378,
+          136.533366348
+        ],
+        [
+          -5222.399899834,
+          341.333330009
+        ],
+        [
+          -5218.986566168,
+          375.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_maranon_ucayali_floodplains",
+      "display_label": "Maranon–Ucayali Floodplains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900518,
+      "polygon": [
+        [
+          -5051.733333333,
+          648.533333333
+        ],
+        [
+          -4935.68,
+          273.066666667
+        ],
+        [
+          -5051.733333333,
+          170.666666667
+        ],
+        [
+          -5219.304372374,
+          248.467506221
+        ],
+        [
+          -5222.399899834,
+          341.333330009
+        ],
+        [
+          -5222.399899501,
+          341.333333333
+        ],
+        [
+          -5133.653333333,
+          341.333333333
+        ],
+        [
+          -5133.653333333,
+          375.466666667
+        ],
+        [
+          -5106.346666667,
+          409.6
+        ],
+        [
+          -5131.290233983,
+          584.204971217
+        ],
+        [
+          -5092.693216714,
+          648.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_western_peruvian_terra_firme",
+      "display_label": "Western Peruvian Terra Firme",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900119,
+      "polygon": [
+        [
+          -4778.666666667,
+          819.2
+        ],
+        [
+          -4778.666666667,
+          273.066666667
+        ],
+        [
+          -5220.124344389,
+          273.066666667
+        ],
+        [
+          -5222.399899834,
+          341.333330009
+        ],
+        [
+          -5215.573235451,
+          409.599973829
+        ],
+        [
+          -5154.133244556,
+          546.13328693
+        ],
+        [
+          -5072.213255745,
+          682.666601615
+        ],
+        [
+          -4915.199943944,
+          819.199916224
+        ],
+        [
+          -4915.199776393,
+          819.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_purus_jurua_interfluves",
+      "display_label": "Purus–Jurua Interfluve Forests",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900220,
+      "polygon": [
+        [
+          -4437.333333333,
+          682.666666667
+        ],
+        [
+          -4437.333333333,
+          238.933333333
+        ],
+        [
+          -4983.466666667,
+          238.933333333
+        ],
+        [
+          -4983.466666667,
+          682.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_acre_madre_dios_forests",
+      "display_label": "Acre–Madre de Dios Forest Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900321,
+      "polygon": [
+        [
+          -4437.333333333,
+          1010.346666667
+        ],
+        [
+          -4437.333333333,
+          546.133333333
+        ],
+        [
+          -4983.466666667,
+          546.133333333
+        ],
+        [
+          -4983.466666667,
+          759.83754864
+        ],
+        [
+          -4915.199943944,
+          819.199916224
+        ],
+        [
+          -4642.133288612,
+          955.73324389
+        ],
+        [
+          -4642.133279294,
+          955.733249191
+        ],
+        [
+          -4642.133270598,
+          955.733255459
+        ],
+        [
+          -4642.133262622,
+          955.733262622
+        ],
+        [
+          -4587.519858578,
+          1010.346666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_beni_moxos_floodplain",
+      "display_label": "Beni–Moxos Seasonal Floodplain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900522,
+      "polygon": [
+        [
+          -4287.146666667,
+          785.066666667
+        ],
+        [
+          -4628.48,
+          785.066666667
+        ],
+        [
+          -4628.48,
+          969.386525245
+        ],
+        [
+          -4437.333262622,
+          1160.533262622
+        ],
+        [
+          -4437.333255497,
+          1160.533270552
+        ],
+        [
+          -4437.333249256,
+          1160.533279194
+        ],
+        [
+          -4437.33324397,
+          1160.533288453
+        ],
+        [
+          -4437.3332397,
+          1160.533298221
+        ],
+        [
+          -4432.570478861,
+          1173.233993792
+        ],
+        [
+          -4300.800053071,
+          1146.879908634
+        ],
+        [
+          -4287.146666667,
+          1131.178514269
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_madeira_guapore_lowlands",
+      "display_label": "Madeira–Guapore Forest & Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900223,
+      "polygon": [
+        [
+          -4193.947958607,
+          1024.0
+        ],
+        [
+          -4164.266742127,
+          989.866601049
+        ],
+        [
+          -4164.266734778,
+          989.866593449
+        ],
+        [
+          -4164.266726667,
+          989.866586667
+        ],
+        [
+          -4027.733393333,
+          887.466586667
+        ],
+        [
+          -4027.733333333,
+          887.466541667
+        ],
+        [
+          -4027.733333333,
+          409.6
+        ],
+        [
+          -4505.6,
+          409.6
+        ],
+        [
+          -4505.6,
+          1024.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "wetland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_solimoes_amazon_floodplain",
+      "display_label": "Solimoes–Amazon Floodplain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900624,
+      "polygon": [
+        [
+          -4710.4,
+          354.986666667
+        ],
+        [
+          -4369.066666667,
+          320.853333333
+        ],
+        [
+          -4027.733333333,
+          273.066666667
+        ],
+        [
+          -3686.4,
+          191.146666667
+        ],
+        [
+          -3413.333333333,
+          102.4
+        ],
+        [
+          -3413.333333333,
+          0.0
+        ],
+        [
+          -3686.4,
+          88.746666667
+        ],
+        [
+          -4027.733333333,
+          170.666666667
+        ],
+        [
+          -4369.066666667,
+          225.28
+        ],
+        [
+          -4710.4,
+          252.586666667
+        ],
+        [
+          -5051.733333333,
+          218.453333333
+        ],
+        [
+          -5051.733333333,
+          314.026666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "wetland",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_rio_negro_igapo_forests",
+      "display_label": "Rio Negro Igapo Forests",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900325,
+      "polygon": [
+        [
+          -4027.733333333,
+          238.933333333
+        ],
+        [
+          -4027.733333333,
+          -102.4
+        ],
+        [
+          -4642.133333333,
+          -102.4
+        ],
+        [
+          -4642.133333333,
+          238.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_japura_negro_terra_firme",
+      "display_label": "Japura–Negro Terra Firme",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900226,
+      "polygon": [
+        [
+          -4300.8,
+          245.76
+        ],
+        [
+          -4300.8,
+          -136.533333333
+        ],
+        [
+          -4846.933333333,
+          -136.533333333
+        ],
+        [
+          -4846.933333333,
+          245.76
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_central_amazon_terra_firme",
+      "display_label": "Central Amazon Terra Firme",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900127,
+      "polygon": [
+        [
+          -3822.933333333,
+          443.733333333
+        ],
+        [
+          -3822.933333333,
+          -68.266666667
+        ],
+        [
+          -4437.333333333,
+          -68.266666667
+        ],
+        [
+          -4437.333333333,
+          443.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_madeira_tapajos_forests",
+      "display_label": "Madeira–Tapajos Forests",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900128,
+      "polygon": [
+        [
+          -3768.320156205,
+          682.666666667
+        ],
+        [
+          -3754.666666667,
+          671.288758718
+        ],
+        [
+          -3754.666666667,
+          204.8
+        ],
+        [
+          -4300.8,
+          204.8
+        ],
+        [
+          -4300.8,
+          682.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_tapajos_xingu_forests",
+      "display_label": "Tapajos–Xingu Forests",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900229,
+      "polygon": [
+        [
+          -3686.400156205,
+          614.4
+        ],
+        [
+          -3686.400071002,
+          614.399928998
+        ],
+        [
+          -3515.733410155,
+          409.599935982
+        ],
+        [
+          -3515.733403333,
+          409.599928586
+        ],
+        [
+          -3515.733395803,
+          409.599921913
+        ],
+        [
+          -3481.6,
+          382.293205271
+        ],
+        [
+          -3481.6,
+          136.533333333
+        ],
+        [
+          -3891.2,
+          136.533333333
+        ],
+        [
+          -3891.2,
+          614.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_lower_amazon_forests_plateaus",
+      "display_label": "Lower Amazon Forests & Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900230,
+      "polygon": [
+        [
+          -3208.53355694,
+          204.8
+        ],
+        [
+          -3208.533407869,
+          204.799925464
+        ],
+        [
+          -3140.266766667,
+          68.26664306
+        ],
+        [
+          -3140.266766667,
+          -204.8
+        ],
+        [
+          -3891.2,
+          -204.8
+        ],
+        [
+          -3891.2,
+          204.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_amazon_estuary_marajo",
+      "display_label": "Amazon Estuary & Marajo Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900731,
+      "polygon": [
+        [
+          -3208.533333333,
+          170.666666667
+        ],
+        [
+          -3208.533333333,
+          -102.4
+        ],
+        [
+          -3549.866666667,
+          -102.4
+        ],
+        [
+          -3549.866666667,
+          170.666666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "wetland",
+          "forest",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "coast",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_amapa_coastal_mosaic",
+      "display_label": "Amapa Coastal Savanna–Wetland Mosaic",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900532,
+      "polygon": [
+        [
+          -3310.933333333,
+          -34.133333333
+        ],
+        [
+          -3310.933333333,
+          -375.466666667
+        ],
+        [
+          -3549.866666667,
+          -375.466666667
+        ],
+        [
+          -3549.866666667,
+          -34.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "lake"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_southern_amazon_forest_transition",
+      "display_label": "Southern Amazon Forest Transition",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900133,
+      "polygon": [
+        [
+          -4369.066666667,
+          546.133333333
+        ],
+        [
+          -4369.066666667,
+          1160.533231353
+        ],
+        [
+          -4300.800053071,
+          1146.879908634
+        ],
+        [
+          -4164.266742127,
+          989.866601049
+        ],
+        [
+          -4164.266734778,
+          989.866593449
+        ],
+        [
+          -4164.266726667,
+          989.866586667
+        ],
+        [
+          -4027.733393333,
+          887.466586667
+        ],
+        [
+          -3891.20006205,
+          785.066588204
+        ],
+        [
+          -3686.400071002,
+          614.399928998
+        ],
+        [
+          -3629.511241282,
+          546.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plain",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_lower_tocantins_capim_forests",
+      "display_label": "Lower Tocantins–Capim Forests",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900334,
+      "polygon": [
+        [
+          -3515.733463504,
+          409.6
+        ],
+        [
+          -3515.733410155,
+          409.599935982
+        ],
+        [
+          -3515.733403333,
+          409.599928586
+        ],
+        [
+          -3515.733395803,
+          409.599921913
+        ],
+        [
+          -3345.066729136,
+          273.06658858
+        ],
+        [
+          -3345.066720562,
+          273.066582433
+        ],
+        [
+          -3345.066711388,
+          273.066577224
+        ],
+        [
+          -3208.533407869,
+          204.799925464
+        ],
+        [
+          -3140.26677847,
+          68.266666667
+        ],
+        [
+          -3549.866666667,
+          68.266666667
+        ],
+        [
+          -3549.866666667,
+          409.6
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "rainforest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazon_campinarana_white_sand_mosaic",
+      "display_label": "Campinarana White-Sand Mosaic",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 900435,
+      "polygon": [
+        [
+          -4369.066666667,
+          102.4
+        ],
+        [
+          -4369.066666667,
+          -102.4
+        ],
+        [
+          -4710.4,
+          -102.4
+        ],
+        [
+          -4710.4,
+          102.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazonia_orinoco_guiana_base",
+      "display_label": "Amazonia, Orinoco & Guiana",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana",
+      "priority": 767000,
+      "polygon": [
+        [
+          -4300.8,
+          1146.88
+        ],
+        [
+          -4164.266666667,
+          989.866666667
+        ],
+        [
+          -4027.733333333,
+          887.466666667
+        ],
+        [
+          -3891.2,
+          785.066666667
+        ],
+        [
+          -3686.4,
+          614.4
+        ],
+        [
+          -3515.733333333,
+          409.6
+        ],
+        [
+          -3345.066666667,
+          273.066666667
+        ],
+        [
+          -3208.533333333,
+          204.8
+        ],
+        [
+          -3140.266666667,
+          68.266666667
+        ],
+        [
+          -3140.266666667,
+          -341.333333333
+        ],
+        [
+          -3413.333333333,
+          -682.666666667
+        ],
+        [
+          -3959.466666667,
+          -907.946666667
+        ],
+        [
+          -3993.6,
+          -907.946666667
+        ],
+        [
+          -3993.6,
+          -819.2
+        ],
+        [
+          -4096.0,
+          -669.013333333
+        ],
+        [
+          -4198.4,
+          -669.013333333
+        ],
+        [
+          -4205.226666667,
+          -703.146666667
+        ],
+        [
+          -4222.293333333,
+          -744.106666667
+        ],
+        [
+          -4246.186666667,
+          -757.76
+        ],
+        [
+          -4314.453333333,
+          -740.693333333
+        ],
+        [
+          -4362.24,
+          -731.818666667
+        ],
+        [
+          -4437.333333333,
+          -750.933333333
+        ],
+        [
+          -4642.133333333,
+          -791.893333333
+        ],
+        [
+          -4751.36,
+          -805.546666667
+        ],
+        [
+          -4792.32,
+          -866.986666667
+        ],
+        [
+          -4819.626666667,
+          -798.72
+        ],
+        [
+          -4810.608413274,
+          -821.265633456
+        ],
+        [
+          -4754.226521294,
+          -799.672568439
+        ],
+        [
+          -4662.613333333,
+          -764.586666667
+        ],
+        [
+          -4765.013333333,
+          -648.533333333
+        ],
+        [
+          -4833.28,
+          -546.133333333
+        ],
+        [
+          -4922.026666667,
+          -409.6
+        ],
+        [
+          -4997.12,
+          -273.066666667
+        ],
+        [
+          -5031.253333333,
+          -136.533333333
+        ],
+        [
+          -5120.0,
+          0.0
+        ],
+        [
+          -5215.573333333,
+          136.533333333
+        ],
+        [
+          -5222.4,
+          341.333333333
+        ],
+        [
+          -5215.573333333,
+          409.6
+        ],
+        [
+          -5154.133333333,
+          546.133333333
+        ],
+        [
+          -5072.213333333,
+          682.666666667
+        ],
+        [
+          -4915.2,
+          819.2
+        ],
+        [
+          -4642.133333333,
+          955.733333333
+        ],
+        [
+          -4437.333333333,
+          1160.533333333
+        ],
+        [
+          -4432.570542635,
+          1173.234108527
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "rainforest",
+          "forest",
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "plateau"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

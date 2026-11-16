@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "amazon_venezuelan_dry_coastal_lowlands__coastal",
+      "display_label": "Northern Dry Coastal Lowlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana_coastal_west",
+      "priority": 900101,
+      "polygon": [
+        [
+          -4881.066694365,
+          -863.573233333
+        ],
+        [
+          -4921.077977802,
+          -863.573233333
+        ],
+        [
+          -4840.560068534,
+          -832.73658723
+        ],
+        [
+          -4846.933405709,
+          -843.093260139
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "amazonia_orinoco_guiana_coastal_west_base",
+      "display_label": "Amazonia, Orinoco & Guiana",
+      "dimension": "minecraft:overworld",
+      "macro_region": "amazonia_orinoco_guiana_coastal_west",
+      "priority": 767001,
+      "polygon": [
+        [
+          -4846.933333333,
+          -843.093333333
+        ],
+        [
+          -4881.066666667,
+          -863.573333333
+        ],
+        [
+          -4921.078518518,
+          -863.573333333
+        ],
+        [
+          -4840.559828704,
+          -832.736388294
+        ],
+        [
+          -4819.626666667,
+          -798.72
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "coast",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "island"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

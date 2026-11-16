@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.5.9 — Central/Eastern North America, Mesoamerica & Andes (Core 0.10.0 required)"
+    "description": "Human Journey v0.5.10 — Amazonia, Brazil & Southern Plains (Core 0.10.0 required)"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.5.9"
+    "version": "0.5.10"
   }
 }

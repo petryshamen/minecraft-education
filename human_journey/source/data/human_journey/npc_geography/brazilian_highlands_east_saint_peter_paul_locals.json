@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "brazil_saint_peter_paul",
+      "display_label": "Saint Peter & Saint Paul Rocks",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east_saint_peter_paul",
+      "priority": 920645,
+      "polygon": [
+        [
+          -1989.973333333,
+          -51.2
+        ],
+        [
+          -1989.973333333,
+          -75.093333333
+        ],
+        [
+          -2013.866666667,
+          -75.093333333
+        ],
+        [
+          -2013.866666667,
+          -51.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "brazilian_highlands_east_saint_peter_paul_base",
+      "display_label": "Brazilian Highlands & East",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east_saint_peter_paul",
+      "priority": 768003,
+      "polygon": [
+        [
+          -2027.52,
+          -40.96
+        ],
+        [
+          -1979.733333333,
+          -40.96
+        ],
+        [
+          -1979.733333333,
+          -81.92
+        ],
+        [
+          -2027.52,
+          -81.92
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

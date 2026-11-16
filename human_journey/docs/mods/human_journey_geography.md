@@ -1,6 +1,71 @@
 # Human Journey NPC geography
 
-## Current release — Central/Eastern North America, Mesoamerica & Andes, 0.5.9
+## Current release — Amazonia, Brazil & Southern Plains, 0.5.10
+
+Reconciled against **0.5.9**, branch `main`, HEAD `72c41f7631b6754d81a3d7053649a34532894c40`. The previous 1,405-local handoff is already deployed, so only this trio’s **144 additions and eight replacements** are applied. Final: **1,549 locals / 39 technical macros / 38 runtime geography resources** (37 local files plus one global macro). All 1,405 IDs remain; **1,397 old objects are identical**, with no removals. Relative to historical 0.5.8, all **1,279 local objects remain identical** and there are 270 cumulative additions; 126 belong to the previous release, not this trio. Existing Mesoamerica macro/base numerical repair is carried forward, not reverted to the older handoff snapshot. A UTF-8 comparison confirms labels match; no label migration is needed.
+
+Installed test runtime: **Core 0.13.0**, SHA-256 `018ea3536f265eb7a644654dc93bbc3095da37c5d1cbde0e89a8a63abff3caa9`; Minecraft Java **1.21.8**, pack format **81**, TAN **21.8.0.2**. The user replaced Core 0.12.0 with 0.13.0 during preparation. All 18 pure parser/resolver/economy source files from the completed 0.13.0 release match the checked 0.12.0 files and current repository hashes; their installed runtime class bytes are identical. Geography schema/contract remain unchanged. No Core rebuild, mod replacement or settings change is performed.
+
+### Runtime content and preservation
+
+| Technical parent (file `<id>_locals.json`) | Records |
+| --- | ---: |
+| `amazonia_orinoco_guiana` | 37 |
+| `amazonia_orinoco_guiana_coastal_west` | 2 |
+| `brazilian_highlands_east` | 43 |
+| `brazilian_highlands_east_northeast_islands` | 3 |
+| `brazilian_highlands_east_saint_peter_paul` | 2 |
+| `brazilian_highlands_east_trindade_martim_vaz` | 2 |
+| `southern_plains_patagonia` | 49 |
+| `southern_plains_patagonia_falkland_malvinas` | 2 |
+| `southern_plains_patagonia_south_georgia` | 2 |
+| `southern_plains_patagonia_south_sandwich` | 2 |
+
+Physical-region totals **39 / 50 / 55**, including all backgrounds/fragments, remain below 100. Their named physical units total **36 / 46 / 51**. Added macro priorities follow the handoff: Amazonia main/coastal **55/56**, Brazilian main/islands **53/54**, Southern Plains main/islands **51/52**. Existing South America fallback changes **57 → 50 only**; Andes main changes polygon only, retaining priority 58; all other existing macro objects are unchanged. Technical components retain their shared physical labels but separate discovery IDs.
+
+Polygon-only replacements under stable IDs: `andes_guajira_dry_coast`, `andes_merida_cordillera`, `andes_colombian_eastern_cordillera`, `andes_northern_eastern_montane_forests`, `andes_northern_peruvian_highlands`, `andes_southern_peruvian_highlands`, `andes_peruvian_yungas`, `andes_pacific_west_base`. Exact preimages match deployed records; labels, profiles, parents, dimensions and priorities are unchanged. Only `andes_pacific_west_locals.json` among existing local files is rewritten; the other 26 local files retain exact bytes. Runtime changes are ten added files, the Andes local file and the cumulative macro file. Review snapshots/deltas/audits/scripts stay outside runtime loading. Original attachments remain unchanged.
+
+### Minimal Core geometry accommodations
+
+The user’s standing authorization permits minimal border corrections needed by Core. GEOS accepted the supplied near-touching edges, but Core’s 1e-7 segment tolerance rejected them. Two shared vertex adjustments, applied to the matching Amazonia and Andes macro/base polygons, resolve this without a block-scale geography change:
+
+| Original X/Z | Corrected X/Z |
+| --- | --- |
+| `[-4840.559828694, -832.736388294]` | `[-4840.559828704, -832.736388294]` |
+| `[-4810.608413284, -821.265633456]` | `[-4810.608413274, -821.265633456]` |
+
+Affected pairs: `amazonia_orinoco_guiana_coastal_west`/base (first point), `amazonia_orinoco_guiana`/base (second point), `andes_pacific_west`/base (both). Each move is approximately **1e-8 block**. In Andes main/base, also removed the second/third consecutive copies of **[-5120.0, 2389.333333333]**, original indices **12/13**, retaining the first copy. These duplicate removals alone preserve the mathematical footprint. Combined point adjustments have symmetric-difference area at most **5.44955e-7 blocks²** per polygon and Hausdorff distance at most **9.28429e-9 blocks**. No other supplied geometry is changed; prior Mesoamerica repair is intact. Remaining full profile arrays and all IDs are exact.
+
+One GEOS-generated reachability witness for the coastal-west background lies on an extremely thin beak treated as an Andes edge by Core. Its Core diagnostic witness is instead **X -4900, Z -863.573283333**, inside the existing wider background strip. This changes only a test point, not any resource or expected named-place outcome. The original point **-4830.093247682931,-815.7281941470001** resolves to Andes under Core and must not be advertised as an Amazonian gameplay control. Generic-background reachability is not proof of a whole saved block or meaningful new named landscape.
+
+### Validation and evidence limits
+
+All **108 archive checksums** verified before running supplied scripts. The unchanged final-stage/trio validators pass on integrated resources with review copies normalized only for documented compatibility corrections: **1,549 reachable records, 165 named stage controls, 514 earlier named assertions, 15,920 probes** (original handoff 15,960 before redundant-vertex removal). Counts overlap; they are not summed as unique locations. All ten new macro footprints have **zero uncovered polygon area**. Named generalized-land proxy coverage is approximately **99.999982% Amazonia, 99.999984% Brazil, 99.999968% Plains**. These are X/Z proxy measures, not equal-area Earth or saved Minecraft terrain surveys. Continental residual fallback strips remain as documented by the original audit.
+
+Against deployed 0.5.9, macro union adds **133,507.60783028926 blocks²**; numerical loss **2.1635059965774417e-7 blocks²**, below the validator’s **1e-5** tolerance. Do not report that floating-point loss as exactly zero. Unmodified first-party Core pure parser/store/resolver accepts **39 macros / 1,549 locals / 38 resources, zero skipped**: **2,114 deduplicated coordinate/expectation cases, 83,358 whole-pack boundary samples, 23,835 NPC compositions**. All 50 commodities/four families/three Era-0-only roles validate; progression resolver remains read-only. Registry callbacks use inspected resource evidence, not a running registry. No installed JAR code, game or world is executed. Offline acceptance does not establish runtime reload/HUD/NPC/persistence success.
+
+### Manual acceptance pending
+
+Run `/reload`, `/hj npc status`, `/hj npc context`, `/hj geography status`; check logs for parse/skipped/parent conflicts. Use actual safe terrain Y; expected X/Z controls:
+
+| Control | X, Z | Expected local |
+| --- | --- | --- |
+| Pucallpa | -5089, 572 | `amazon_maranon_ucayali_floodplains` |
+| Manaus | -4096, 212 | `amazon_solimoes_amazon_floodplain` |
+| Brasilia | -3270, 1079 | `brazil_goias_central_plateau` |
+| Northern Pantanal (Caceres) | -3937, 1097 | `plains_northern_pantanal` |
+| Southern Pantanal (Corumba) | -3936, 1298 | `plains_southern_pantanal` |
+| Bodoquena (Bonito) | -3856, 1442 | `plains_bodoquena_karst` |
+| Buenos Aires / La Plata shore | -3985, 2362 | `plains_la_plata_coast` |
+| Staten Island Atlantic forest fringe | -4376, 3738 | `plains_staten_island_fringe` |
+| Falklands/Malvinas (Stanley) | -3949, 3529 | `plains_falkland_malvinas` |
+| South Georgia | -2492, 3707 | `plains_south_georgia` |
+
+Traverse the eight revised Andes seams in both directions; compare Llanos/Pucallpa lowlands with cordilleras/Yungas. Check cerrado/caatinga/humid-coast/araucarian contrasts, Pantanal/Chaco/Pampas/Monte/Patagonian transitions, eastern Payunia versus retained Andes and only the authored Staten forest fringe. Inspect Brazilian islands, South Sandwich, narrow coasts, heights and actual biomes without manufacturing terrain. Use fresh NPCs for new profiles/names; keep existing NPC snapshots and shared ledgers. Test eligible Student discovery once and Teacher exclusion, technical component identities and generic witnesses without resets. Spot-check existing juices, water, temperature, trades and earlier geography. Water potability remains governed by water policy, not geography tags.
+
+No Minecraft gameplay or saved-terrain inspection was performed. Core, HUD/Xaero settings, water/temperature/fishing, eight juices, economy and all Era/progression/roles remain unchanged. No live-server deployment. Svalbard, Big Diomede, earlier over-budget regions and future Arctic scope remain separate work; completing these proposal sets does not certify all world terrain. Rollback restores the prior ZIP without clearing discovery or entities.
+
+## Historical release — Central/Eastern North America, Mesoamerica & Andes, 0.5.9
 
 Baseline **0.5.8**, HEAD `1848424b6f79ac09997205056d2e0ce618a27c03`, Minecraft Java 1.21.8 / pack format 81. All captured production geography identities match; no concurrent geography reconciliation is needed. Installed test **Core 0.12.0**, SHA-256 `cd6f282030c15b9a86191d715617b027337b918e3a06cb8da584cd6fb9215631`, matches the completed first-party release. Geography remains schema 1. Core, HUD/Xaero settings, saved discovery, existing NPC snapshots and all non-geography gameplay are unchanged, including eight schema-v2 juices, economy, water, temperature, fishing and progression.
 

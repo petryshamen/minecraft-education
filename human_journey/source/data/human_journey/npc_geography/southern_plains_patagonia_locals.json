@@ -1,0 +1,3267 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "plains_chiquitano_forests",
+      "display_label": "Chiquitano Seasonal Forests & Low Hills",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940100,
+      "polygon": [
+        [
+          -3891.2,
+          1297.066666667
+        ],
+        [
+          -3891.2,
+          1119.573717521
+        ],
+        [
+          -3925.333438567,
+          1092.266966667
+        ],
+        [
+          -4061.866790274,
+          1092.266966667
+        ],
+        [
+          -4061.866800322,
+          1092.266966161
+        ],
+        [
+          -4061.866810268,
+          1092.266964648
+        ],
+        [
+          -4061.866820012,
+          1092.266962143
+        ],
+        [
+          -4061.866829455,
+          1092.266958672
+        ],
+        [
+          -4061.866838501,
+          1092.266954269
+        ],
+        [
+          -4061.866847059,
+          1092.26694898
+        ],
+        [
+          -4061.866855043,
+          1092.266942857
+        ],
+        [
+          -4061.866862371,
+          1092.266935964
+        ],
+        [
+          -4061.866868969,
+          1092.266928369
+        ],
+        [
+          -4061.86687477,
+          1092.266920149
+        ],
+        [
+          -4061.866879717,
+          1092.266911388
+        ],
+        [
+          -4127.030410601,
+          961.939849618
+        ],
+        [
+          -4164.266461186,
+          989.866887556
+        ],
+        [
+          -4300.799818398,
+          1146.88024835
+        ],
+        [
+          -4300.799824887,
+          1146.88025514
+        ],
+        [
+          -4300.799831984,
+          1146.880261291
+        ],
+        [
+          -4300.799839626,
+          1146.88026675
+        ],
+        [
+          -4300.799847747,
+          1146.880271467
+        ],
+        [
+          -4300.799856275,
+          1146.880275401
+        ],
+        [
+          -4300.799865134,
+          1146.880278518
+        ],
+        [
+          -4300.799874247,
+          1146.880280791
+        ],
+        [
+          -4432.570137865,
+          1173.234333514
+        ],
+        [
+          -4386.133012933,
+          1297.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "plateau"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_santa_cruz_forelands",
+      "display_label": "Santa Cruz Alluvial Forelands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940301,
+      "polygon": [
+        [
+          -4232.533333333,
+          1297.066666667
+        ],
+        [
+          -4232.533333333,
+          1126.4
+        ],
+        [
+          -4282.990906789,
+          1126.4
+        ],
+        [
+          -4300.799818398,
+          1146.88024835
+        ],
+        [
+          -4300.799824887,
+          1146.88025514
+        ],
+        [
+          -4300.799831984,
+          1146.880261291
+        ],
+        [
+          -4300.799839626,
+          1146.88026675
+        ],
+        [
+          -4300.799847747,
+          1146.880271467
+        ],
+        [
+          -4300.799856275,
+          1146.880275401
+        ],
+        [
+          -4300.799865134,
+          1146.880278518
+        ],
+        [
+          -4300.799874247,
+          1146.880280791
+        ],
+        [
+          -4432.570137865,
+          1173.234333514
+        ],
+        [
+          -4386.133012933,
+          1297.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "valley",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_northern_pantanal",
+      "display_label": "Northern Pantanal Floodplains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940402,
+      "polygon": [
+        [
+          -3760.355859694,
+          1262.933333333
+        ],
+        [
+          -3754.666991522,
+          1228.800124303
+        ],
+        [
+          -3925.333438567,
+          1092.266966667
+        ],
+        [
+          -4048.213333333,
+          1092.266966667
+        ],
+        [
+          -4048.213333333,
+          1262.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "forest",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_southern_pantanal",
+      "display_label": "Southern Pantanal Floodplains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940403,
+      "polygon": [
+        [
+          -3805.866970805,
+          1536.0
+        ],
+        [
+          -3788.800295918,
+          1433.59995068
+        ],
+        [
+          -3760.355859694,
+          1262.933333333
+        ],
+        [
+          -4027.733333333,
+          1262.933333333
+        ],
+        [
+          -4027.733333333,
+          1536.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_bodoquena_karst",
+      "display_label": "Bodoquena Karst Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940704,
+      "polygon": [
+        [
+          -3836.586666667,
+          1501.866666667
+        ],
+        [
+          -3836.586666667,
+          1406.293333333
+        ],
+        [
+          -3884.373333333,
+          1406.293333333
+        ],
+        [
+          -3884.373333333,
+          1501.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": [
+          "cave_access"
+        ]
+      }
+    },
+    {
+      "id": "plains_chaco_sandy_plains",
+      "display_label": "Western Chaco Sandy Plains & Dunes",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940305,
+      "polygon": [
+        [
+          -4096.0,
+          1570.133333333
+        ],
+        [
+          -4096.0,
+          1331.2
+        ],
+        [
+          -4334.933333333,
+          1331.2
+        ],
+        [
+          -4334.933333333,
+          1433.599145599
+        ],
+        [
+          -4334.933033606,
+          1433.599944873
+        ],
+        [
+          -4334.933030447,
+          1433.599954859
+        ],
+        [
+          -4334.933028349,
+          1433.59996512
+        ],
+        [
+          -4334.933027337,
+          1433.599975545
+        ],
+        [
+          -4334.933027421,
+          1433.599986018
+        ],
+        [
+          -4334.933028599,
+          1433.599996425
+        ],
+        [
+          -4334.933333333,
+          1433.601824831
+        ],
+        [
+          -4334.933333333,
+          1570.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "woodland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_dry_chaco",
+      "display_label": "Dry Chaco Woodlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940106,
+      "polygon": [
+        [
+          -3993.6,
+          2116.266666667
+        ],
+        [
+          -3993.6,
+          1297.066666667
+        ],
+        [
+          -4386.133012933,
+          1297.066666667
+        ],
+        [
+          -4334.933033606,
+          1433.599944873
+        ],
+        [
+          -4334.933030447,
+          1433.599954859
+        ],
+        [
+          -4334.933028349,
+          1433.59996512
+        ],
+        [
+          -4334.933027337,
+          1433.599975545
+        ],
+        [
+          -4334.933027421,
+          1433.599986018
+        ],
+        [
+          -4334.933028599,
+          1433.599996425
+        ],
+        [
+          -4369.066372062,
+          1638.400057198
+        ],
+        [
+          -4369.066373687,
+          1638.400065012
+        ],
+        [
+          -4399.448508917,
+          1759.928605933
+        ],
+        [
+          -4437.333047615,
+          1911.466760727
+        ],
+        [
+          -4437.333050841,
+          1911.466771168
+        ],
+        [
+          -4437.333055187,
+          1911.466781194
+        ],
+        [
+          -4437.333333333,
+          1911.467337488
+        ],
+        [
+          -4437.333333333,
+          2116.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_humid_chaco",
+      "display_label": "Humid Chaco Savannas & Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940207,
+      "polygon": [
+        [
+          -3857.066666667,
+          2048.0
+        ],
+        [
+          -3857.066666667,
+          1501.866666667
+        ],
+        [
+          -4164.266666667,
+          1501.866666667
+        ],
+        [
+          -4164.266666667,
+          2048.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "grassland",
+          "wetland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_paraguay_river_plain",
+      "display_label": "Paraguay River Floodplain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940608,
+      "polygon": [
+        [
+          -3945.813333333,
+          1877.333333333
+        ],
+        [
+          -3870.72,
+          1501.866666667
+        ],
+        [
+          -3932.16,
+          1501.866666667
+        ],
+        [
+          -3973.12,
+          1672.533333333
+        ],
+        [
+          -4027.733333333,
+          1877.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "wetland",
+          "forest",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_eastern_paraguay_forests",
+      "display_label": "Eastern Paraguay Forested Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940209,
+      "polygon": [
+        [
+          -3790.933636973,
+          1843.2
+        ],
+        [
+          -3822.933634722,
+          1638.400014409
+        ],
+        [
+          -3822.933635804,
+          1638.400003798
+        ],
+        [
+          -3822.93363575,
+          1638.399993132
+        ],
+        [
+          -3822.93363456,
+          1638.399982532
+        ],
+        [
+          -3800.178081916,
+          1501.866666667
+        ],
+        [
+          -3959.466666667,
+          1501.866666667
+        ],
+        [
+          -3959.466666667,
+          1843.2
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "moderate"
+        ],
+        "vegetation": [
+          "forest",
+          "woodland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "plateau",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_campos_malezales",
+      "display_label": "Campos & Malezales Wet Grasslands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940310,
+      "polygon": [
+        [
+          -3686.4,
+          2082.133333333
+        ],
+        [
+          -3686.4,
+          1925.120360555
+        ],
+        [
+          -3788.80023951,
+          1856.853534215
+        ],
+        [
+          -3788.800247807,
+          1856.85352804
+        ],
+        [
+          -3788.800255423,
+          1856.853521042
+        ],
+        [
+          -3788.800262274,
+          1856.853513294
+        ],
+        [
+          -3788.800268289,
+          1856.85350488
+        ],
+        [
+          -3788.800273403,
+          1856.85349589
+        ],
+        [
+          -3788.800277561,
+          1856.853486419
+        ],
+        [
+          -3788.800280718,
+          1856.85347657
+        ],
+        [
+          -3788.800282841,
+          1856.853466448
+        ],
+        [
+          -3796.266970307,
+          1809.066666667
+        ],
+        [
+          -3891.2,
+          1809.066666667
+        ],
+        [
+          -3891.2,
+          2082.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_ibera_wetlands",
+      "display_label": "Ibera Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940711,
+      "polygon": [
+        [
+          -3857.066666667,
+          2013.866666667
+        ],
+        [
+          -3857.066666667,
+          1863.68
+        ],
+        [
+          -3993.6,
+          1863.68
+        ],
+        [
+          -3993.6,
+          2013.866666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "wet",
+          "humid"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_middle_parana",
+      "display_label": "Middle Parana River Plain",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940712,
+      "polygon": [
+        [
+          -4068.693333333,
+          2286.933333333
+        ],
+        [
+          -3973.12,
+          1979.733333333
+        ],
+        [
+          -3945.813333333,
+          1774.933333333
+        ],
+        [
+          -4014.08,
+          1774.933333333
+        ],
+        [
+          -4143.786666667,
+          2013.866666667
+        ],
+        [
+          -4164.266666667,
+          2286.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "wetland",
+          "forest",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_parana_delta",
+      "display_label": "Parana Delta Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940813,
+      "polygon": [
+        [
+          -4082.346666667,
+          2300.586666667
+        ],
+        [
+          -4027.733333333,
+          2362.026666667
+        ],
+        [
+          -3983.36,
+          2351.786666667
+        ],
+        [
+          -4000.426666667,
+          2300.586666667
+        ],
+        [
+          -4116.48,
+          2245.973333333
+        ],
+        [
+          -4136.96,
+          2266.453333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "wetland",
+          "forest",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "coast"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_entre_rios_plains",
+      "display_label": "Entre Rios Rolling Plains & Palm Savannas",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940214,
+      "polygon": [
+        [
+          -3911.68,
+          2286.933333333
+        ],
+        [
+          -3911.68,
+          2013.866666667
+        ],
+        [
+          -4143.786666667,
+          2013.866666667
+        ],
+        [
+          -4143.786666667,
+          2286.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_northern_espinal",
+      "display_label": "Northern Espinal Woodland Arc",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940215,
+      "polygon": [
+        [
+          -4061.866666667,
+          2252.8
+        ],
+        [
+          -4061.866666667,
+          2048.0
+        ],
+        [
+          -4471.466666667,
+          2048.0
+        ],
+        [
+          -4471.466666667,
+          2252.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "woodland",
+          "forest",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_calden_espinal",
+      "display_label": "Western Espinal Calden Woodlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940216,
+      "polygon": [
+        [
+          -4232.533333333,
+          2696.533333333
+        ],
+        [
+          -4232.533333333,
+          2252.8
+        ],
+        [
+          -4505.6,
+          2252.8
+        ],
+        [
+          -4505.6,
+          2696.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "woodland",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_humid_pampa",
+      "display_label": "Humid Rolling Pampa",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940117,
+      "polygon": [
+        [
+          -3891.2,
+          2662.4
+        ],
+        [
+          -3891.2,
+          2184.533333333
+        ],
+        [
+          -4369.066666667,
+          2184.533333333
+        ],
+        [
+          -4369.066666667,
+          2662.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_flooding_pampa",
+      "display_label": "Salado Flooding Pampa",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940418,
+      "polygon": [
+        [
+          -3822.933333333,
+          2560.0
+        ],
+        [
+          -3822.933333333,
+          2409.813333333
+        ],
+        [
+          -4096.0,
+          2409.813333333
+        ],
+        [
+          -4096.0,
+          2560.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "wetland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_sandy_pampa",
+      "display_label": "Sandy Western Pampa",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940319,
+      "polygon": [
+        [
+          -4232.533333333,
+          2491.733333333
+        ],
+        [
+          -4232.533333333,
+          2286.933333333
+        ],
+        [
+          -4505.6,
+          2286.933333333
+        ],
+        [
+          -4505.6,
+          2491.733333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_tandilia_hills",
+      "display_label": "Tandilia Low Hills",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940720,
+      "polygon": [
+        [
+          -3925.333333333,
+          2628.266666667
+        ],
+        [
+          -3925.333333333,
+          2491.733333333
+        ],
+        [
+          -4130.133333333,
+          2491.733333333
+        ],
+        [
+          -4130.133333333,
+          2628.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_ventania_ranges",
+      "display_label": "Ventania Ranges",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940721,
+      "polygon": [
+        [
+          -4164.266666667,
+          2662.4
+        ],
+        [
+          -4164.266666667,
+          2560.0
+        ],
+        [
+          -4300.8,
+          2560.0
+        ],
+        [
+          -4300.8,
+          2662.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "moderate",
+          "humid",
+          "dry"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "plains_pampa_dune_coast",
+      "display_label": "Pampa Dune Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940822,
+      "polygon": [
+        [
+          -4096.0,
+          2744.32
+        ],
+        [
+          -3925.333333333,
+          2635.093333333
+        ],
+        [
+          -3836.586666667,
+          2525.866666667
+        ],
+        [
+          -3836.586666667,
+          2437.12
+        ],
+        [
+          -3918.506666667,
+          2437.12
+        ],
+        [
+          -3918.506666667,
+          2525.866666667
+        ],
+        [
+          -3959.466666667,
+          2594.133333333
+        ],
+        [
+          -4130.133333333,
+          2621.44
+        ],
+        [
+          -4314.453333333,
+          2641.92
+        ],
+        [
+          -4314.453333333,
+          2744.32
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "wetland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean",
+          "lake",
+          "river"
+        ],
+        "relief": [
+          "plain",
+          "hills",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_uruguay_rolling_grasslands",
+      "display_label": "Uruguay Rolling Grasslands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940123,
+      "polygon": [
+        [
+          -3686.4,
+          2416.64
+        ],
+        [
+          -3686.4,
+          1979.733333333
+        ],
+        [
+          -4027.733333333,
+          1979.733333333
+        ],
+        [
+          -4027.733333333,
+          2416.64
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_eastern_uruguay_sierras",
+      "display_label": "Eastern Uruguay Sierras",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940424,
+      "polygon": [
+        [
+          -3618.133333333,
+          2375.68
+        ],
+        [
+          -3618.133333333,
+          2082.133333333
+        ],
+        [
+          -3734.186666667,
+          2082.133333333
+        ],
+        [
+          -3754.666666667,
+          2184.533333333
+        ],
+        [
+          -3795.626666667,
+          2321.066666667
+        ],
+        [
+          -3795.626666667,
+          2375.68
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "forest",
+          "woodland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_lagoon_coast",
+      "display_label": "Uruguay–Rio Grande Lagoon Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940625,
+      "polygon": [
+        [
+          -3549.866666667,
+          2321.066666667
+        ],
+        [
+          -3379.911275166,
+          2049.138040266
+        ],
+        [
+          -3447.466756062,
+          2027.520286379
+        ],
+        [
+          -3447.467697023,
+          2027.52
+        ],
+        [
+          -3522.56,
+          2027.52
+        ],
+        [
+          -3597.653333333,
+          2150.4
+        ],
+        [
+          -3686.4,
+          2280.106666667
+        ],
+        [
+          -3822.933333333,
+          2355.2
+        ],
+        [
+          -3822.933333333,
+          2409.813333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "humid",
+          "wet",
+          "moderate"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "shrubland",
+          "forest"
+        ],
+        "water": [
+          "coast",
+          "lake",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "island"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_la_plata_coast",
+      "display_label": "Lower Uruguay–La Plata Estuary Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940726,
+      "polygon": [
+        [
+          -3788.8,
+          2416.64
+        ],
+        [
+          -3788.8,
+          2321.066666667
+        ],
+        [
+          -4027.733333333,
+          2321.066666667
+        ],
+        [
+          -4027.733333333,
+          2416.64
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "wetland",
+          "forest"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "lowland",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_northern_campos",
+      "display_label": "Northern Campos Grasslands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940227,
+      "polygon": [
+        [
+          -3447.466666667,
+          2252.8
+        ],
+        [
+          -3447.466666667,
+          2027.520314986
+        ],
+        [
+          -3447.466756062,
+          2027.520286379
+        ],
+        [
+          -3604.480115538,
+          1979.733611756
+        ],
+        [
+          -3604.480124715,
+          1979.733608466
+        ],
+        [
+          -3604.480133527,
+          1979.733604299
+        ],
+        [
+          -3604.480141892,
+          1979.733599293
+        ],
+        [
+          -3706.880540832,
+          1911.466666667
+        ],
+        [
+          -3891.2,
+          1911.466666667
+        ],
+        [
+          -3891.2,
+          2252.8
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_rio_grande_shield_hills",
+      "display_label": "Rio Grande Shield Hills",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940428,
+      "polygon": [
+        [
+          -3549.866666667,
+          2184.533333333
+        ],
+        [
+          -3549.866666667,
+          2048.0
+        ],
+        [
+          -3788.8,
+          2048.0
+        ],
+        [
+          -3788.8,
+          2184.533333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "hills",
+          "upland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_pampean_sierras",
+      "display_label": "Pampean Sierras",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940529,
+      "polygon": [
+        [
+          -4403.2,
+          2321.066666667
+        ],
+        [
+          -4403.2,
+          1911.466666667
+        ],
+        [
+          -4437.3330241,
+          1911.466666667
+        ],
+        [
+          -4437.333047615,
+          1911.466760727
+        ],
+        [
+          -4437.333050841,
+          1911.466771168
+        ],
+        [
+          -4437.333055187,
+          1911.466781194
+        ],
+        [
+          -4539.733065005,
+          2116.266800831
+        ],
+        [
+          -4573.866666667,
+          2184.534004155
+        ],
+        [
+          -4573.866666667,
+          2321.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland",
+          "forest"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "plains_salinas_grandes",
+      "display_label": "Salinas Grandes Dry Basins",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940630,
+      "polygon": [
+        [
+          -4389.546666667,
+          2095.786666667
+        ],
+        [
+          -4389.546666667,
+          1979.733333333
+        ],
+        [
+          -4471.466331256,
+          1979.733333333
+        ],
+        [
+          -4491.946666667,
+          2020.694004155
+        ],
+        [
+          -4491.946666667,
+          2095.786666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "shrubland",
+          "grassland"
+        ],
+        "water": [
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_ansenuza_wetlands",
+      "display_label": "Ansenuza Saline Lake & Wetlands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940731,
+      "polygon": [
+        [
+          -4232.533333333,
+          2150.4
+        ],
+        [
+          -4232.533333333,
+          2013.866666667
+        ],
+        [
+          -4334.933333333,
+          2013.866666667
+        ],
+        [
+          -4334.933333333,
+          2150.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "wetland",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "lake",
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "lowland"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_cuyo_monte",
+      "display_label": "Cuyo Monte Shrub Plains",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940132,
+      "polygon": [
+        [
+          -4437.333333333,
+          2560.0
+        ],
+        [
+          -4437.333333333,
+          2048.0
+        ],
+        [
+          -4505.599664589,
+          2048.0
+        ],
+        [
+          -4539.733065005,
+          2116.266800831
+        ],
+        [
+          -4642.133065005,
+          2321.066800831
+        ],
+        [
+          -4710.4,
+          2457.600670821
+        ],
+        [
+          -4710.4,
+          2560.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "warm",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau",
+          "valley"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_northern_patagonia_monte",
+      "display_label": "Northern Patagonia Monte Plateaus",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940233,
+      "polygon": [
+        [
+          -4710.4,
+          2730.666666667
+        ],
+        [
+          -4642.133333333,
+          2764.8
+        ],
+        [
+          -4505.6,
+          2798.933333333
+        ],
+        [
+          -4437.333333333,
+          2901.333333333
+        ],
+        [
+          -4300.8,
+          2901.333333333
+        ],
+        [
+          -4300.8,
+          2662.4
+        ],
+        [
+          -4437.333333333,
+          2560.0
+        ],
+        [
+          -4505.6,
+          2457.6
+        ],
+        [
+          -4710.399664589,
+          2457.6
+        ],
+        [
+          -4744.53305547,
+          2525.866781762
+        ],
+        [
+          -4807.923508354,
+          2716.038140414
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_payunia_uplands",
+      "display_label": "Payunia Volcanic Foreland Uplands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940534,
+      "polygon": [
+        [
+          -4573.866666667,
+          2594.133333333
+        ],
+        [
+          -4573.866666667,
+          2423.466666667
+        ],
+        [
+          -4693.332997923,
+          2423.466666667
+        ],
+        [
+          -4744.53305547,
+          2525.866781762
+        ],
+        [
+          -4767.288572661,
+          2594.133333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "arid",
+          "dry"
+        ],
+        "vegetation": [
+          "barren",
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "plains_neuquen_negro_valleys",
+      "display_label": "Neuquen–Negro River Valleys",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940635,
+      "polygon": [
+        [
+          -4710.4,
+          2696.533333333
+        ],
+        [
+          -4539.733333333,
+          2710.186666667
+        ],
+        [
+          -4300.8,
+          2833.066666667
+        ],
+        [
+          -4300.8,
+          2764.8
+        ],
+        [
+          -4505.6,
+          2628.266666667
+        ],
+        [
+          -4710.4,
+          2594.133333333
+        ],
+        [
+          -4778.666666667,
+          2662.4
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_northern_steppe",
+      "display_label": "Northern Patagonian Steppe Mesetas",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940136,
+      "polygon": [
+        [
+          -4437.333333333,
+          3140.266666667
+        ],
+        [
+          -4437.333333333,
+          2696.533333333
+        ],
+        [
+          -4801.421905994,
+          2696.533333333
+        ],
+        [
+          -4812.799707952,
+          2730.666739205
+        ],
+        [
+          -4846.933033333,
+          2935.466691496
+        ],
+        [
+          -4846.933033333,
+          3140.266666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_somuncura_plateau",
+      "display_label": "Somuncura Basalt Plateau",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940537,
+      "polygon": [
+        [
+          -4437.333333333,
+          2894.506666667
+        ],
+        [
+          -4437.333333333,
+          2771.626666667
+        ],
+        [
+          -4669.44,
+          2771.626666667
+        ],
+        [
+          -4669.44,
+          2894.506666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "arid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_central_steppe",
+      "display_label": "Central Patagonian Steppe",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940238,
+      "polygon": [
+        [
+          -4437.333333333,
+          3413.333333333
+        ],
+        [
+          -4437.333333333,
+          3003.733333333
+        ],
+        [
+          -4846.933033333,
+          3003.733333333
+        ],
+        [
+          -4846.933033333,
+          3345.066617984
+        ],
+        [
+          -4824.177461549,
+          3413.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_santa_cruz_high_mesetas",
+      "display_label": "Santa Cruz High Basalt Mesetas",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940539,
+      "polygon": [
+        [
+          -4812.8,
+          3345.066666667
+        ],
+        [
+          -4812.8,
+          3140.266666667
+        ],
+        [
+          -4846.933033333,
+          3140.266666667
+        ],
+        [
+          -4846.933033333,
+          3345.066617984
+        ],
+        [
+          -4846.933017105,
+          3345.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_southern_steppe",
+      "display_label": "Southern Patagonian Steppe",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940240,
+      "polygon": [
+        [
+          -4437.333333333,
+          3345.066666667
+        ],
+        [
+          -4846.933017105,
+          3345.066666667
+        ],
+        [
+          -4824.130926551,
+          3413.472938329
+        ],
+        [
+          -4778.666406854,
+          3549.866497422
+        ],
+        [
+          -4741.144190238,
+          3583.977603436
+        ],
+        [
+          -4703.573124113,
+          3618.133118095
+        ],
+        [
+          -4703.573117051,
+          3618.133125192
+        ],
+        [
+          -4642.133180528,
+          3686.399721329
+        ],
+        [
+          -4437.333333333,
+          3720.533029195
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plateau",
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_chubut_valley",
+      "display_label": "Chubut River Valley",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940641,
+      "polygon": [
+        [
+          -4778.666666667,
+          2976.426666667
+        ],
+        [
+          -4573.866666667,
+          2983.253333333
+        ],
+        [
+          -4416.853333333,
+          2983.253333333
+        ],
+        [
+          -4437.333333333,
+          2935.466666667
+        ],
+        [
+          -4642.133333333,
+          2921.813333333
+        ],
+        [
+          -4778.666666667,
+          2935.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cool",
+          "temperate"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_deseado_san_jorge_coast",
+      "display_label": "Deseado–San Jorge Coastal Steppe",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940442,
+      "polygon": [
+        [
+          -4300.8001,
+          3345.066666667
+        ],
+        [
+          -4300.80009952,
+          3345.066656882
+        ],
+        [
+          -4300.800098085,
+          3345.066647192
+        ],
+        [
+          -4300.800095709,
+          3345.066637688
+        ],
+        [
+          -4300.800092415,
+          3345.066628463
+        ],
+        [
+          -4300.800088233,
+          3345.066619604
+        ],
+        [
+          -4300.800083205,
+          3345.066611197
+        ],
+        [
+          -4300.8,
+          3345.066486389
+        ],
+        [
+          -4300.8,
+          3072.0
+        ],
+        [
+          -4676.266666667,
+          3072.0
+        ],
+        [
+          -4676.266666667,
+          3345.066666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_valdes_northern_coast",
+      "display_label": "Valdes–Northern Patagonian Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940443,
+      "polygon": [
+        [
+          -4232.533333333,
+          3072.0
+        ],
+        [
+          -4232.533333333,
+          2730.666666667
+        ],
+        [
+          -4539.733333333,
+          2730.666666667
+        ],
+        [
+          -4539.733333333,
+          3072.0
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "temperate",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "shrubland",
+          "grassland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_santa_cruz_valley",
+      "display_label": "Santa Cruz River Valley",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940644,
+      "polygon": [
+        [
+          -4662.613333333,
+          3447.466666667
+        ],
+        [
+          -4662.613333333,
+          3392.853333333
+        ],
+        [
+          -4831.004128216,
+          3392.853333333
+        ],
+        [
+          -4824.130926551,
+          3413.472938329
+        ],
+        [
+          -4812.799683772,
+          3447.466666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "valley",
+          "plain"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_southern_atlantic_coast",
+      "display_label": "Southern Patagonian Atlantic Coast",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940445,
+      "polygon": [
+        [
+          -4369.066666667,
+          3413.333333333
+        ],
+        [
+          -4608.0,
+          3310.933333333
+        ],
+        [
+          -4642.133333333,
+          3433.813333333
+        ],
+        [
+          -4730.88,
+          3515.733333333
+        ],
+        [
+          -4744.008136516,
+          3581.374015911
+        ],
+        [
+          -4741.144190238,
+          3583.977603436
+        ],
+        [
+          -4703.573124113,
+          3618.133118095
+        ],
+        [
+          -4703.573117051,
+          3618.133125192
+        ],
+        [
+          -4642.133180528,
+          3686.399721329
+        ],
+        [
+          -4500.891828173,
+          3709.939946722
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "ocean"
+        ],
+        "relief": [
+          "plain",
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_fuegian_steppe",
+      "display_label": "Northern Fuegian Steppe",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940546,
+      "polygon": [
+        [
+          -4437.333333333,
+          3713.706666667
+        ],
+        [
+          -4437.333333333,
+          3584.0
+        ],
+        [
+          -4741.119554018,
+          3584.0
+        ],
+        [
+          -4703.573124113,
+          3618.133118095
+        ],
+        [
+          -4703.573117051,
+          3618.133125192
+        ],
+        [
+          -4642.133180528,
+          3686.399721329
+        ],
+        [
+          -4478.291508503,
+          3713.706666667
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "dry",
+          "moderate"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland"
+        ],
+        "water": [
+          "coast",
+          "river",
+          "lake",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "hills"
+        ],
+        "special": []
+      }
+    },
+    {
+      "id": "plains_staten_island_fringe",
+      "display_label": "Staten Island Atlantic Forest Fringe",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 940847,
+      "polygon": [
+        [
+          -4300.8001,
+          3781.973333333
+        ],
+        [
+          -4300.8001,
+          3713.706666667
+        ],
+        [
+          -4471.466666667,
+          3713.706666667
+        ],
+        [
+          -4471.466666667,
+          3714.844140306
+        ],
+        [
+          -4437.333261261,
+          3720.533041207
+        ],
+        [
+          -4437.333250069,
+          3720.53304374
+        ],
+        [
+          -4437.33323924,
+          3720.533047538
+        ],
+        [
+          -4379.329834592,
+          3744.701132809
+        ],
+        [
+          -4355.413094871,
+          3754.666441026
+        ],
+        [
+          -4355.413086024,
+          3754.666445232
+        ],
+        [
+          -4355.413077631,
+          3754.666450284
+        ],
+        [
+          -4355.413069772,
+          3754.666456132
+        ],
+        [
+          -4355.413062524,
+          3754.666462722
+        ],
+        [
+          -4355.413055955,
+          3754.666469989
+        ],
+        [
+          -4355.413050128,
+          3754.666477864
+        ],
+        [
+          -4355.4130451,
+          3754.666486271
+        ],
+        [
+          -4355.413040918,
+          3754.66649513
+        ],
+        [
+          -4355.413037624,
+          3754.666504355
+        ],
+        [
+          -4355.413035248,
+          3754.666513859
+        ],
+        [
+          -4355.413033813,
+          3754.666523549
+        ],
+        [
+          -4355.413033333,
+          3754.666533334
+        ],
+        [
+          -4355.413033333,
+          3781.973333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "cool"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "forest",
+          "tundra",
+          "wetland"
+        ],
+        "water": [
+          "coast",
+          "fjord",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain",
+          "hills"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "southern_plains_patagonia_base",
+      "display_label": "Southern Plains & Patagonia",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia",
+      "priority": 769000,
+      "polygon": [
+        [
+          -4300.8,
+          3822.933333333
+        ],
+        [
+          -4300.8,
+          3618.133333333
+        ],
+        [
+          -4300.8,
+          3345.066666667
+        ],
+        [
+          -4027.733333333,
+          2935.466666667
+        ],
+        [
+          -3618.133333333,
+          2662.4
+        ],
+        [
+          -3140.266666667,
+          2389.333333333
+        ],
+        [
+          -3140.266666667,
+          2048.0
+        ],
+        [
+          -3196.763085912,
+          1982.08751088
+        ],
+        [
+          -3276.799929831,
+          2082.133565778
+        ],
+        [
+          -3447.466726264,
+          2027.52019092
+        ],
+        [
+          -3604.480086422,
+          1979.733516088
+        ],
+        [
+          -3788.80018404,
+          1856.85345101
+        ],
+        [
+          -3822.93353592,
+          1638.399998972
+        ],
+        [
+          -3788.800197279,
+          1433.59996712
+        ],
+        [
+          -3754.666883237,
+          1228.800082869
+        ],
+        [
+          -3925.333403489,
+          1092.266866667
+        ],
+        [
+          -4061.866790274,
+          1092.266866667
+        ],
+        [
+          -4127.030374744,
+          961.939697725
+        ],
+        [
+          -4164.266529679,
+          989.866813926
+        ],
+        [
+          -4300.799893859,
+          1146.880182733
+        ],
+        [
+          -4432.570272788,
+          1173.234258518
+        ],
+        [
+          -4334.933127238,
+          1433.599979985
+        ],
+        [
+          -4369.066470701,
+          1638.400040758
+        ],
+        [
+          -4399.448605931,
+          1759.928581679
+        ],
+        [
+          -4437.333144629,
+          1911.466736473
+        ],
+        [
+          -4539.733154448,
+          2116.26675611
+        ],
+        [
+          -4642.133154448,
+          2321.06675611
+        ],
+        [
+          -4744.533148091,
+          2525.866743397
+        ],
+        [
+          -4812.799805301,
+          2730.666715026
+        ],
+        [
+          -4846.933133333,
+          2935.46668322
+        ],
+        [
+          -4846.933133333,
+          3345.066634211
+        ],
+        [
+          -4824.131021419,
+          3413.472969951
+        ],
+        [
+          -4778.666493458,
+          3549.866553837
+        ],
+        [
+          -4741.144257505,
+          3583.97767743
+        ],
+        [
+          -4703.573191381,
+          3618.133192089
+        ],
+        [
+          -4642.133231463,
+          3686.39981422
+        ],
+        [
+          -4437.333277701,
+          3720.533139846
+        ],
+        [
+          -4379.329873054,
+          3744.701225117
+        ],
+        [
+          -4355.413133333,
+          3754.666533334
+        ],
+        [
+          -4355.413133333,
+          3822.933333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm",
+          "temperate",
+          "cool",
+          "cold"
+        ],
+        "moisture": [
+          "dry",
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "woodland",
+          "wetland"
+        ],
+        "water": [
+          "river",
+          "inland"
+        ],
+        "relief": [
+          "plain",
+          "plateau",
+          "hills"
+        ],
+        "special": []
+      }
+    }
+  ]
+}

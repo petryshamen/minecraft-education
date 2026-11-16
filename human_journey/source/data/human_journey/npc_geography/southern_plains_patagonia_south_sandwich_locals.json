@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "plains_south_sandwich",
+      "display_label": "South Sandwich Volcanic Ice Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia_south_sandwich",
+      "priority": 940250,
+      "polygon": [
+        [
+          -1761.2801,
+          4095.9999
+        ],
+        [
+          -1761.2801,
+          3802.453433333
+        ],
+        [
+          -2013.866566667,
+          3802.453433333
+        ],
+        [
+          -2013.866566667,
+          4095.9999
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "polar"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "barren",
+          "tundra"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "southern_plains_patagonia_south_sandwich_base",
+      "display_label": "Southern Plains & Patagonia",
+      "dimension": "minecraft:overworld",
+      "macro_region": "southern_plains_patagonia_south_sandwich",
+      "priority": 769003,
+      "polygon": [
+        [
+          -2013.866666667,
+          4096.0
+        ],
+        [
+          -1761.28,
+          4096.0
+        ],
+        [
+          -1761.28,
+          3802.453333333
+        ],
+        [
+          -2013.866666667,
+          3802.453333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "cold",
+          "polar"
+        ],
+        "moisture": [
+          "humid",
+          "wet"
+        ],
+        "vegetation": [
+          "tundra",
+          "barren",
+          "grassland"
+        ],
+        "water": [
+          "coast",
+          "fjord",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    }
+  ]
+}

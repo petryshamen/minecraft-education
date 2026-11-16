@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "macro_regions": [],
+  "local_areas": [
+    {
+      "id": "brazil_trindade_martim_vaz",
+      "display_label": "Trindade–Martim Vaz Volcanic Islands",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east_trindade_martim_vaz",
+      "priority": 920644,
+      "polygon": [
+        [
+          -1952.426666667,
+          1423.36
+        ],
+        [
+          -1952.426666667,
+          1375.573333333
+        ],
+        [
+          -2027.52,
+          1375.573333333
+        ],
+        [
+          -2027.52,
+          1423.36
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills",
+          "mountain"
+        ],
+        "special": [
+          "mountain_access"
+        ]
+      }
+    },
+    {
+      "id": "brazilian_highlands_east_trindade_martim_vaz_base",
+      "display_label": "Brazilian Highlands & East",
+      "dimension": "minecraft:overworld",
+      "macro_region": "brazilian_highlands_east_trindade_martim_vaz",
+      "priority": 768002,
+      "polygon": [
+        [
+          -2048.0,
+          1447.253333333
+        ],
+        [
+          -1911.466666667,
+          1447.253333333
+        ],
+        [
+          -1911.466666667,
+          1365.333333333
+        ],
+        [
+          -2048.0,
+          1365.333333333
+        ]
+      ],
+      "profile": {
+        "temperature": [
+          "hot",
+          "warm"
+        ],
+        "moisture": [
+          "moderate",
+          "humid"
+        ],
+        "vegetation": [
+          "grassland",
+          "shrubland",
+          "barren"
+        ],
+        "water": [
+          "coast",
+          "ocean"
+        ],
+        "relief": [
+          "island",
+          "hills"
+        ],
+        "special": []
+      }
+    }
+  ]
+}
