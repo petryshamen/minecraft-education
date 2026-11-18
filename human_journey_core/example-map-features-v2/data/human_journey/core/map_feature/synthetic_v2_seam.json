@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "id": "synthetic_v2_seam",
+  "label": "Synthetic V2 Seam",
+  "feature_type": "ocean",
+  "dimension": "minecraft:overworld",
+  "priority": 10,
+  "discovery_radius": 8,
+  "geometry": {
+    "type": "multipolygon",
+    "polygons": [
+      {
+        "outer": [
+          [
+            -12288,
+            0
+          ],
+          [
+            -12208,
+            0
+          ],
+          [
+            -12208,
+            100
+          ],
+          [
+            -12288,
+            100
+          ]
+        ],
+        "holes": []
+      },
+      {
+        "outer": [
+          [
+            12208,
+            0
+          ],
+          [
+            12288,
+            0
+          ],
+          [
+            12288,
+            100
+          ],
+          [
+            12208,
+            100
+          ]
+        ],
+        "holes": []
+      }
+    ]
+  }
+}

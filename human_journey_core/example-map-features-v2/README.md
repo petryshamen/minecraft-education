@@ -1,0 +1,5 @@
+# Synthetic geometry v2 test only
+
+Core0.14.0 required on server/clients. Manually install only into a test world. No production geography: Sea at X/Z0..200 with excluded hole50..100; higher-priority Strait120..180; one shared multipart feature at X400..500 and800..900 (hole830..850/Z30..50); one seam-style ID near X−12288/+12288. All radius8. Deep hole test point75,75; island coast point55,75; water20,20. Discovery is planar geometry, not actual water blocks. Use unknown synthetic IDs to test student discovery; teachers cannot discover. `/hj mapfeature status`, `show <id>` and `/hjmap resync`. Full schema/migration/checklist MAP-GEOMETRY.md. Do not integrate this synthetic content into production.
+
+Use this v2 fixture alone for overlap acceptance tests. The unchanged legacy example has different synthetic priorities and overlapping coordinates; loading both is supported but can change which feature wins hover.

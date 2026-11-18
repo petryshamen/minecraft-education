@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "id": "synthetic_v2_sea",
+  "label": "Synthetic V2 Sea",
+  "feature_type": "sea",
+  "dimension": "minecraft:overworld",
+  "priority": 20,
+  "discovery_radius": 8,
+  "geometry": {
+    "type": "polygon",
+    "outer": [
+      [
+        0,
+        0
+      ],
+      [
+        200,
+        0
+      ],
+      [
+        200,
+        200
+      ],
+      [
+        0,
+        200
+      ]
+    ],
+    "holes": [
+      [
+        [
+          50,
+          50
+        ],
+        [
+          100,
+          50
+        ],
+        [
+          100,
+          100
+        ],
+        [
+          50,
+          100
+        ]
+      ]
+    ]
+  }
+}

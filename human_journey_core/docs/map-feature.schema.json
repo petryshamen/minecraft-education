@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "HJ Map Feature v1",
+  "title": "HJ Map Feature schema v1 / v2",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -13,7 +13,10 @@
   ],
   "properties": {
     "schema_version": {
-      "const": 1
+      "enum": [
+        1,
+        2
+      ]
     },
     "id": {
       "type": "string",
@@ -60,54 +63,205 @@
       "default": 8
     },
     "geometry": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number",
+        "minimum": -30000000,
+        "maximum": 30000000
+      }
+    },
+    "ring": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4096,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/point"
+      }
+    },
+    "line": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4096,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/point"
+      }
+    },
+    "part": {
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "type",
-        "points"
+        "outer"
       ],
       "properties": {
-        "type": {
-          "enum": [
-            "polygon",
-            "polyline"
-          ]
+        "outer": {
+          "$ref": "#/$defs/ring"
         },
-        "points": {
+        "holes": {
           "type": "array",
-          "minItems": 2,
-          "maxItems": 512,
-          "uniqueItems": true,
+          "maxItems": 127,
           "items": {
-            "type": "array",
-            "minItems": 2,
-            "maxItems": 2,
-            "items": {
-              "type": "number",
-              "minimum": -30000000,
-              "maximum": 30000000
-            }
-          }
+            "$ref": "#/$defs/ring"
+          },
+          "default": []
         }
-      },
-      "allOf": [
+      }
+    },
+    "v1Geometry": {
+      "oneOf": [
         {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "polygon"
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "points"
+          ],
+          "properties": {
+            "type": {
+              "const": "polygon"
+            },
+            "points": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 512,
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/point"
               }
             }
-          },
-          "then": {
-            "properties": {
-              "points": {
-                "minItems": 3
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "points"
+          ],
+          "properties": {
+            "type": {
+              "const": "polyline"
+            },
+            "points": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 512,
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/point"
               }
             }
           }
         }
       ]
+    },
+    "v2Geometry": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "outer"
+          ],
+          "properties": {
+            "type": {
+              "const": "polygon"
+            },
+            "outer": {
+              "$ref": "#/$defs/ring"
+            },
+            "holes": {
+              "type": "array",
+              "maxItems": 127,
+              "items": {
+                "$ref": "#/$defs/ring"
+              },
+              "default": []
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "polygons"
+          ],
+          "properties": {
+            "type": {
+              "const": "multipolygon"
+            },
+            "polygons": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 128,
+              "items": {
+                "$ref": "#/$defs/part"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "points"
+          ],
+          "properties": {
+            "type": {
+              "const": "polyline"
+            },
+            "points": {
+              "$ref": "#/$defs/line"
+            }
+          }
+        }
+      ]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": 1
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "geometry": {
+            "$ref": "#/$defs/v1Geometry"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": 2
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "geometry": {
+            "$ref": "#/$defs/v2Geometry"
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Core additionally validates topology, duplicate signed-zero vertices, total 128 rings / 4096 vertices per feature and catalog budgets."
 }

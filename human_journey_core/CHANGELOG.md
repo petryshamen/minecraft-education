@@ -1,3 +1,8 @@
+# 0.14.0
+
+- Added schema-v2 polygon holes/multipolygons with strict topology and catalog budgets, preserved schema1 and ID-only discoveries, and extended part-aware proximity/hover/rendering without changing priorities or geography context.
+- Added feature protocol2 with bounded16KiB fragments for large geometry, atomic publication and diagnostics. Existing Macro/Local protocol, controls and unrelated mechanics remain; no Japan/production data edits. Server and clients must update together.
+
 # 0.13.0
 
 - Added reloadable independent water Map Features (polygon/polyline), separate shared proximity discovery/SavedData and bounded discovered-only revisioned transport, client BVH hover/rendering and admin diagnostics. No third geography/economic layer or production water catalog.

@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "id": "synthetic_v2_strait",
+  "label": "Synthetic V2 Strait",
+  "feature_type": "strait",
+  "dimension": "minecraft:overworld",
+  "priority": 30,
+  "discovery_radius": 8,
+  "geometry": {
+    "type": "polygon",
+    "outer": [
+      [
+        120,
+        120
+      ],
+      [
+        180,
+        120
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        120,
+        180
+      ]
+    ],
+    "holes": []
+  }
+}
