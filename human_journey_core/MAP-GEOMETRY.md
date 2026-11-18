@@ -1,5 +1,7 @@
 # Map Feature geometry v2 — Core 0.14.0
 
+**Verified Core 0.14.0:** [GitHub Actions build 44214582660](https://github.com/petryshamen/minecraft-education/actions/runs/44214582660), source `44d2b5dedacf258024e0de20ed2054b780e6472e`. All 424 tests passed (384 prior tests byte-identical + 40 new), zero failures; all fourteen no-world Forge checks passed. 288 prior runtime classes are byte-identical, including geography/HUD/controls, feature SavedData, NPC/economy and unrelated gameplay. Existing changes are confined to feature geometry/index/catalog/discovery/transport/diagnostics and the Xaero feature renderer. Runtime SHA-256 `39ac922532501161bdbcbd614aeb8e8a76bb6fe88d08f3010e2dc71378b1067c`. No Minecraft gameplay testing, installation, production pilot/main-datapack or live-server change.
+
 Minecraft1.21.8 / Forge58.1.18 / optional Xaero World Map1.39.13. Update Core on server and participating clients together: the **feature channel is now protocol2**, required for topology and fragmented geometry. The Macro/Local geography protocol remains1. Schema-v1 JSON and ID-only SavedData stay compatible; no production migration/reset is needed just to load0.14.0. No Japan pilot/production content is changed or supplied.
 
 ## JSON contract
