@@ -39,9 +39,10 @@ jobs:
           grep -R 'JUICE_SCALING_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'MAP_GEOMETRY_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'MAP_FEATURE_SMOKE_OK' build/datagen-smoke/logs/latest.log
+          grep -R 'MAP_GEOMETRY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
       - uses: actions/upload-artifact@v4
         with:
-          name: HumanJourneyCore-0.13.0
+          name: HumanJourneyCore-0.14.0
           if-no-files-found: error
           path: |
             human_journey_core/build/libs/*.jar
