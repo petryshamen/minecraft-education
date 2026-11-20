@@ -22,16 +22,18 @@ public final class NpcGeography {
         return parse(resources,eras,vocabulary,java.util.stream.IntStream.range(0,resources.size()).mapToObj(i->"geography resource["+i+"]").toList());
     }
     public static NpcGeography parse(List<JsonElement> resources,Set<String> eras,Map<String,Set<String>> vocabulary,List<String> sources){
-        List<Area> macros=new ArrayList<>(),locals=new ArrayList<>();Set<String> macroIds=new HashSet<>(),localIds=new HashSet<>();int resourceIndex=0;long[] totals={0,0};
-        for(var e:resources){String source=sources.get(resourceIndex++);try{var root=object(e,"NPC geography");keys(root,"schema_version","macro_regions","local_areas");int version=integer(root,"schema_version",1,1,2);
+        List<Area> macros=new ArrayList<>(),locals=new ArrayList<>();Set<String> macroIds=new HashSet<>(),localIds=new HashSet<>();int resourceIndex=0;long[] totals={0,0};var localSources=new HashMap<String,String>();
+        for(var e:resources){String source=sources.get(resourceIndex++);try{var root=object(e,"NPC geography");keys(root,"schema_version","macro_regions","local_areas");int version=integer(root,"schema_version",1,1,2);int beforeLocals=locals.size();
             parseAreas(root,"macro_regions",false,macros,macroIds,eras,vocabulary,version,totals);parseAreas(root,"local_areas",true,locals,localIds,eras,vocabulary,version,totals);
-            if(macros.size()>512||locals.size()>4096)throw new IllegalArgumentException("area count exceeded");}catch(RuntimeException error){throw new IllegalArgumentException(source+": "+error.getMessage(),error);}
+            for(int i=beforeLocals;i<locals.size();i++)localSources.put(locals.get(i).id(),source);if(macros.size()>512||locals.size()>4096)throw new IllegalArgumentException("area count exceeded");}catch(RuntimeException error){throw new IllegalArgumentException(source+": "+error.getMessage(),error);}
         }
         if(macros.size()>512||locals.size()>4096)throw new IllegalArgumentException("at most 512 macro regions and 4096 local areas supported");
+        var parents=new HashMap<String,Area>();for(var a:macros)parents.put(a.id(),a);for(var local:locals)if(!local.parent().equals("none")&&(!parents.containsKey(local.parent())||!parents.get(local.parent()).dimension().equals(local.dimension())))throw new IllegalArgumentException(localSources.get(local.id())+": local["+local.id()+"] invalid macro_region parent or dimension: "+local.parent());
         return new NpcGeography(macros,locals);
     }
     private static void parseAreas(JsonObject root,String key,boolean local,List<Area> out,Set<String> ids,Set<String> eras,Map<String,Set<String>> vocabulary,int version,long[] totals){
         for(var e:array(root,key,0,local?4096:512)){
+            if(out.size()>=(local?4096:512))throw new IllegalArgumentException(key+": global area count exceeded");
             var o=object(e,key);if(local)keys(o,"id","dimension","priority","macro_region","display_label","era_labels","polygon","geometry","profile");else keys(o,"id","dimension","priority","polygon","geometry","profile","display_label","era_labels");
             String id=logical(text(o,"id",null,64));if(!ids.add(id))throw new IllegalArgumentException("duplicate "+key+" ID: "+id);
             String dim=resource(text(o,"dimension","minecraft:overworld",256));org.humanjourney.core.mapfeature.FeatureGeometry shape;
