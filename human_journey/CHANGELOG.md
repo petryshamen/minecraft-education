@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.12
+
+- Added all 73 exact approved Europe water Map Features, including 1,274 island holes and 121,066 vertices, plus required geography source/license notices. Combined catalog: 80 definitions; all seven Japan files/IDs remain byte-identical. No Macro/Local, discovery-history or gameplay changes; no migration/reset.
+- Requires Core 0.14.2 on server and participating clients (expanded geometry limits despite unchanged protocol 2). Exact hashes/schema/topology/budgets and offline released-Core audit pass: 3,970 fixtures / 11,888 behavior assertions. No Forge reload or Minecraft gameplay/terrain/UI/network test; manual acceptance pending.
+
 ## 0.5.11
 
 - Added the seven exact approved Japan water Map Features: six schema-v2 polygons, 292 island holes / 298 rings and the unchanged 110-point schema-v1 Shinano open polyline; 11,614 vertices total. Stable IDs, priorities and discovery radii are preserved; no geometry or source-gap correction, Macro/Local edits or gameplay changes. Requires Core 0.14.0 / feature protocol 2 on server and participating clients.

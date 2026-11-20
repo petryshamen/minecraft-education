@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.5.11 — Japan Water Map Features v2 (Core 0.14.0 required)"
+    "description": "Human Journey v0.5.12 — Europe Water Map Features v1 (Core 0.14.2 required)"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.5.11"
+    "version": "0.5.12"
   }
 }

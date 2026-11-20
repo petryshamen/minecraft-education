@@ -1,0 +1,22 @@
+Human Journey Europe Water Features v1 — third-party geography sources
+
+Marine extents: Flanders Marine Institute (2018), IHO Sea Areas version 3,
+https://doi.org/10.14284/323 ; based on IHO Limits of Oceans and Seas (1953).
+VLIZ metadata identifies CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/
+SeaVoX source identity and attribution: https://www.marineregions.org/sources.php
+The distributed marine geometries are HJ-projected, simplified adaptations with
+physical land exclusions; authored end sections are documented in the review.
+
+Natural Earth land, marine locating envelopes, lakes and Europe lake supplement:
+public domain, https://www.naturalearthdata.com/about/terms-of-use/ .
+
+Lake-island exclusions: GSHHG 2.3.7 high-resolution L3 data, Paul Wessel and
+Walter H. F. Smith; https://www.soest.hawaii.edu/wessel/gshhg/ .
+Wessel & Smith (1996), JGR 101(B4), 8741–8743, doi:10.1029/96JB00104.
+GSHHG is LGPL v3 or later; accompanying GSHHG_LICENSE.TXT,
+GSHHG_COPYING.LESSERv3 and GSHHG_COPYINGv3 retain its notices/terms.
+The selected original island outlines and source IDs, coordinate transform,
+simplification and source URLs are retained in the review package.
+
+These source notices apply to the relevant data adaptations, not to unrelated
+Human Journey code or content. No unrestricted-use claim is made for VLIZ data.
