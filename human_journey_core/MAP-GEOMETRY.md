@@ -1,6 +1,8 @@
 # Map Feature geometry v2 — Core 0.14.2
 
-Capacity update0.14.2: schema-v2 now supports512rings/16384total vertices per feature, including multipart and open polylines. Schema1 remains512points. Catalog limits stay1,048,576vertices/65,536rings/2048features. JSON resource ceiling is2MiB characters (reload64MiB unchanged); serialized feature288KiB; fragments16KiB, packets48KiB, transfer staging24MiB and4096parts unchanged. A maximum valid feature is about264KiB serialized and uses17fragments; the288KiB ceiling includes metadata/topology headroom. Protocol/schema/SavedData identities unchanged. No production water data supplied or edited.
+**Verified Core 0.14.2:** [GitHub Actions build 44783613526](https://github.com/petryshamen/minecraft-education/actions/runs/44783613526), source `d93a10f7acd02d8fd6f756adbbb33973bf93730a`. All 462 tests passed (444 retained +18new; one old quota method migrated to expanded limits), zero failures, plus14 no-world Forge checks and an identical benchmark harness against exact0.14.1 source. 316 prior runtime classes are byte-identical, including HUD/buttons/discovery/transport state/Xaero and unrelated systems. Runtime SHA-256 `89228db1e711913b99903de897821c88cffdb9ae1829710a3d561c621c0d035a`. No Minecraft gameplay testing, installation, production geography or live-server changes.
+
+Capacity update0.14.2: schema-v2 now supports512rings/16384total vertices per feature, including multipart and open polylines. Schema1 remains512points. Catalog limits stay1,048,576vertices/65,536rings/2048features. JSON resource ceiling is2MiB characters (reload64MiB unchanged); serialized feature288KiB; fragments16KiB, packets48KiB, transfer staging24MiB and4096parts unchanged. The maximum synthetic holed polygon serializes to262712bytes (about257KiB) and uses17fragments; the288KiB ceiling includes metadata/topology headroom. Protocol/schema/SavedData identities unchanged. No production water data supplied or edited.
 
 Geography can resume Europe Water using existing schema_version2 and stable IDs. Mediterranean/Baltic-like156–250island synthetic cases and the512ring/16384vertex extremes are tested. Count every outer and hole toward512rings and all their vertices toward16384; keep catalog totals bounded. Preserve approved island selection, priorities, labels and discovery_radius. Validate strict disjoint interior holes, `/reload`, inspect `/hj mapfeature status` and `/hj mapfeature show <id>`, then manually test holes/HUD/hover after updating all participating clients. No discovery reset or schema migration is required. Do not integrate production data until this Core build is accepted.
 
@@ -127,3 +129,17 @@ Use a separate test world/unknown feature IDs for natural-discovery checks; rese
 ## Known limits
 
 Validation is planar world X/Z with the existing edge tolerance; no spherical/wrapping/terrain repair. Segment-BVH topology validation remains bounded by per-feature/catalog quotas; adversarial heavily overlapping segment bounds can still approach quadratic exact-predicate work. Production simplification matters. Equal-priority distinct features still fail closed. Overlapping parts are union semantics, not an automatic dissolve or cross-part hole subtraction. Very dense overlap increases candidates; maximal full-state transfer/staging remains bounded but can create an event-driven CPU/network burst. Actual UI and world restart acceptance remain manual.
+
+## Synthetic same-runner benchmark
+
+Exact0.14.1 source (commitdf297f47da828ee40ca8796bd00a028a637db461) and0.14.2 run the identical harness on the same GitHub runner/JDK. Two warmups, median of seven samples; lookup is median batch of2000 alternating water/hole positions. Validation includes Gson parsing and topology; indexing is a separate immutable FeatureIndex build; serialization is raw feature serialization plus fragmentation (not network latency). No performance thresholds depend on timing luck.
+
+| Synthetic case | Holes / vertices | Validation ms | Index ms | Serialization ms | Lookup us | Bytes / fragments |
+|---|---:|---:|---:|---:|---:|---:|
+| 0.14.1 shared baseline | 100 / 3712 | 9.076 | 0.004 | 0.860 | 2.254 | 59549 / 4 |
+| shared_baseline | 100 / 3712 | 17.504 | 0.003 | 0.728 | 4.500 | 59549 / 4 |
+| mediterranean_like | 156 / 5504 | 17.169 | 0.002 | 0.500 | 5.300 | 88278 / 6 |
+| baltic_like | 250 / 9024 | 27.693 | 0.003 | 0.714 | 7.250 | 144692 / 9 |
+| maximum | 511 / 16384 | 25.384 | 0.003 | 1.040 | 2.781 | 262712 / 17 |
+
+On the shared3712vertex case, new/old elapsed-time ratios (lower is faster): validation: 1.93x, indexing: 0.82x, serialization: 0.85x, lookup: 2.00x. The shared small case was slower in validation/lookup in this run; segment BVHs have an up-front construction cost, and lookup/index bytecode itself is unchanged. This is not evidence of a general speedup. Production-like larger cases and the maximum are rejected by exact0.14.1 ring/vertex limits, so no successful old pipeline or meaningful timing ratio exists for those sizes. They are now supported without relaxing catalog quotas. Synthetic circles/grid islands approximate complexity, not real coastline shape. Shared-runner scheduling, JVM warmup and GC can affect these measurements; these are unit benchmarks, not Minecraft gameplay/FPS/server-tick performance.
