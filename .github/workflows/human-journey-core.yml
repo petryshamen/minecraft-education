@@ -40,11 +40,24 @@ jobs:
           grep -R 'MAP_GEOMETRY_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'MAP_FEATURE_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'MAP_GEOMETRY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
+      - name: Check out exact 0.14.1 benchmark reference
+        uses: actions/checkout@v4
+        with:
+          ref: df297f47da828ee40ca8796bd00a028a637db461
+          path: baseline-0141
+      - name: Compare identical synthetic benchmark against exact 0.14.1
+        working-directory: baseline-0141/human_journey_core
+        run: |
+          cp ../../human_journey_core/src/test/java/org/humanjourney/core/mapfeature/GeometryCapacityBenchmarkTest.java src/test/java/org/humanjourney/core/mapfeature/
+          chmod +x gradlew
+          ./gradlew --no-daemon test --tests org.humanjourney.core.mapfeature.GeometryCapacityBenchmarkTest
+          cp build/reports/map-feature-capacity-benchmark.json ../../human_journey_core/build/reports/map-feature-capacity-benchmark-baseline.json
       - uses: actions/upload-artifact@v4
         with:
-          name: HumanJourneyCore-0.14.1
+          name: HumanJourneyCore-0.14.2
           if-no-files-found: error
           path: |
             human_journey_core/build/libs/*.jar
             human_journey_core/build/reports/tests/test/**
+            human_journey_core/build/reports/map-feature-capacity-benchmark*.json
             human_journey_core/build/datagen-smoke/logs/latest.log

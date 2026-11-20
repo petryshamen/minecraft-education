@@ -1,0 +1,17 @@
+package org.humanjourney.core.mapfeature;
+import java.util.*;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import org.mockito.MockedStatic;
+import net.minecraft.SharedConstants;
+import net.minecraft.server.Bootstrap;
+class GeometryCapacityProtocolTest {
+ static MockedStatic<net.minecraftforge.fml.ModLoader> loader;
+ @BeforeAll static void bootstrap(){loader=mockStatic(net.minecraftforge.fml.ModLoader.class);loader.when(net.minecraftforge.fml.ModLoader::get).thenReturn(mock(net.minecraftforge.fml.ModLoader.class));SharedConstants.tryDetectVersion();Bootstrap.bootStrap();}
+ @AfterAll static void close(){loader.close();}
+ @Test void maximumHolesAndMultipartSerializeFragmentAndReconstructAtomically(){for(var geometry:List.of(GeometryCapacityTest.manyHoles(),GeometryCapacityTest.manyParts())){var f=GeometryV2Test.view("maximum",geometry);var parts=FeatureProtocolTest.full(2,List.of(f));assertTrue(parts.size()>=17);assertTrue(parts.size()<=18);var mirror=new ClientFeatureState();FeatureProtocolTest.apply(mirror,FeatureProtocolTest.full(1,List.of(FeatureProtocolTest.view("old"))));for(int i=parts.size()-1;i>=0;i--){var frame=parts.get(i);for(var fragment:frame.fragments()){assertTrue(fragment.data().length<=16*1024);assertTrue(fragment.length()<=288*1024);}var b=FeatureProtocolTest.buffer();try{FeaturePackets.CODEC.encode(b,frame);assertTrue(b.readableBytes()<=48*1024);mirror.accept(FeaturePackets.CODEC.decode(b));}finally{b.release();}if(i>0)assertEquals(Set.of("old"),mirror.snapshot().features().keySet());}assertEquals(Map.of("maximum",f),mirror.snapshot().features());assertNotNull(mirror.snapshot().index().hover(f.dimension(),geometry.parts().size()>1?0:-1000,0,2).feature());}}
+ @Test void interruptedMaximumTransferAndStaleFragmentsRetainNewerVisibleState(){var f=GeometryV2Test.view("maximum",GeometryCapacityTest.manyParts());var parts=FeatureProtocolTest.full(2,List.of(f));var mirror=new ClientFeatureState();FeatureProtocolTest.apply(mirror,FeatureProtocolTest.full(1,List.of(FeatureProtocolTest.view("old"))));mirror.accept(parts.getFirst());assertEquals(Set.of("old"),mirror.snapshot().features().keySet());FeatureProtocolTest.apply(mirror,FeatureProtocolTest.full(3,List.of(FeatureProtocolTest.view("newer"))));parts.forEach(mirror::accept);assertEquals(Set.of("newer"),mirror.snapshot().features().keySet());}
+ @Test void capacityDoesNotChangePacketFragmentTransactionOrProtocolBounds()throws Exception{assertEquals(16*1024,FeaturePackets.CHUNK_BYTES);assertEquals(48*1024,FeaturePackets.MAX_BYTES);assertEquals(24*1024*1024,FeaturePackets.MAX_TRANSFER_BYTES);assertEquals(4096,FeaturePackets.MAX_PARTS);assertEquals(288*1024,FeaturePackets.MAX_FEATURE_BYTES);String network=java.nio.file.Files.readString(java.nio.file.Path.of(System.getProperty("humanjourney.projectDir"),"src/main/java/org/humanjourney/core/mapfeature/FeatureNetwork.java"));assertTrue(network.contains("networkProtocolVersion(2)"));}
+ @Test void maxPolylineAlsoSurvivesNativeCodec(){var points=new ArrayList<org.humanjourney.core.water.WaterGeography.Point>();for(int i=0;i<16384;i++)points.add(new org.humanjourney.core.water.WaterGeography.Point(i,i%2));var feature=GeometryV2Test.view("line",FeatureGeometry.polyline(points));var mirror=new ClientFeatureState();for(var frame:FeatureProtocolTest.full(1,List.of(feature)))mirror.accept(GeometryV2ProtocolTest.wire(frame));assertEquals(feature,mirror.snapshot().features().get("line"));}
+}

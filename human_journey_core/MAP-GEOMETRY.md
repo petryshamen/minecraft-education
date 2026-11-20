@@ -1,6 +1,11 @@
-# Map Feature geometry v2 — Core 0.14.0
+# Map Feature geometry v2 — Core 0.14.2
 
-**Verified Core 0.14.0:** [GitHub Actions build 44214582660](https://github.com/petryshamen/minecraft-education/actions/runs/44214582660), source `44d2b5dedacf258024e0de20ed2054b780e6472e`. All 424 tests passed (384 prior tests byte-identical + 40 new), zero failures; all fourteen no-world Forge checks passed. 288 prior runtime classes are byte-identical, including geography/HUD/controls, feature SavedData, NPC/economy and unrelated gameplay. Existing changes are confined to feature geometry/index/catalog/discovery/transport/diagnostics and the Xaero feature renderer. Runtime SHA-256 `39ac922532501161bdbcbd614aeb8e8a76bb6fe88d08f3010e2dc71378b1067c`. No Minecraft gameplay testing, installation, production pilot/main-datapack or live-server change.
+Capacity update0.14.2: schema-v2 now supports512rings/16384total vertices per feature, including multipart and open polylines. Schema1 remains512points. Catalog limits stay1,048,576vertices/65,536rings/2048features. JSON resource ceiling is2MiB characters (reload64MiB unchanged); serialized feature288KiB; fragments16KiB, packets48KiB, transfer staging24MiB and4096parts unchanged. A maximum valid feature is about264KiB serialized and uses17fragments; the288KiB ceiling includes metadata/topology headroom. Protocol/schema/SavedData identities unchanged. No production water data supplied or edited.
+
+Geography can resume Europe Water using existing schema_version2 and stable IDs. Mediterranean/Baltic-like156–250island synthetic cases and the512ring/16384vertex extremes are tested. Count every outer and hole toward512rings and all their vertices toward16384; keep catalog totals bounded. Preserve approved island selection, priorities, labels and discovery_radius. Validate strict disjoint interior holes, `/reload`, inspect `/hj mapfeature status` and `/hj mapfeature show <id>`, then manually test holes/HUD/hover after updating all participating clients. No discovery reset or schema migration is required. Do not integrate production data until this Core build is accepted.
+
+
+**Core 0.14.0 baseline:** [GitHub Actions build 44214582660](https://github.com/petryshamen/minecraft-education/actions/runs/44214582660), source `44d2b5dedacf258024e0de20ed2054b780e6472e`. All 424 tests passed (384 prior tests byte-identical + 40 new), zero failures; all fourteen no-world Forge checks passed. 288 prior runtime classes are byte-identical, including geography/HUD/controls, feature SavedData, NPC/economy and unrelated gameplay. Existing changes are confined to feature geometry/index/catalog/discovery/transport/diagnostics and the Xaero feature renderer. Runtime SHA-256 `39ac922532501161bdbcbd614aeb8e8a76bb6fe88d08f3010e2dc71378b1067c`. No Minecraft gameplay testing, installation, production pilot/main-datapack or live-server change.
 
 Minecraft1.21.8 / Forge58.1.18 / optional Xaero World Map1.39.13. Update Core on server and participating clients together: the **feature channel is now protocol2**, required for topology and fragmented geometry. The Macro/Local geography protocol remains1. Schema-v1 JSON and ID-only SavedData stay compatible; no production migration/reset is needed just to load0.14.0. No Japan pilot/production content is changed or supplied.
 
@@ -52,7 +57,7 @@ Priority is unchanged: highest-priority discovered containing feature wins; dist
 
 ## Validation and complexity bounds
 
-Every ring is finite/within±30million,≥3 distinct points, non-degenerate, without duplicate vertices, zero-length/backtracking edges or self-intersections. Signed numeric zero is treated as the same position for duplicate validation; coordinates themselves are not rewritten. Segment bounding boxes and an X-sorted broad phase prune self-intersection checks.
+Every ring is finite/within±30million,≥3 distinct points, non-degenerate, without duplicate vertices, zero-length/backtracking edges or self-intersections. Signed numeric zero is treated as the same position for duplicate validation; coordinates themselves are not rewritten. Immutable per-ring segment BVHs prune self-intersection and inter-ring crossing checks at construction. Exact predicates, adjacent-edge checks and hole topology requirements remain unchanged; indexes are never rebuilt per frame.
 
 Holes must be strictly inside the outer ring with disjoint boundaries. Touching/crossing the outer ring, overlapping/touching/nested holes, malformed data and unsupported fields reject the **entire feature/catalog reload**, with resource/pack/feature/part/ring context. No clipping/repair is attempted. A single contained hole point plus absence of any ring crossing proves full containment for validated simple rings, including concave outers. Existing last-valid catalog semantics remain.
 
@@ -60,21 +65,21 @@ Holes must be strictly inside the outer ring with disjoint boundaries. Touching/
 |---|---:|
 | Effective feature definitions | 2048 |
 | Schema1 points/feature | 512 |
-| Schema2 total vertices/feature | 4096 |
-| Total polygon rings/feature (outer + holes) | 128 |
-| Polygon parts/feature | 128, constrained by total rings |
+| Schema2 total vertices/feature | 16384 |
+| Total polygon rings/feature (outer + holes) | 512 |
+| Polygon parts/feature | 512, constrained by total rings |
 | Catalog vertices | 1,048,576 |
 | Catalog polygon rings | 65,536 |
-| JSON characters/resource | 512KiB |
+| JSON characters/resource | 2MiB |
 | JSON characters/reload | 64MiB |
-| Serialized feature | 80KiB |
+| Serialized feature | 288KiB |
 | Raw fragment payload | 16KiB |
 | Feature network packet | 48KiB |
 | Transfer parts | 4096 |
 | Estimated geometry/fragment staging budget | 24MiB/transaction |
 | Pending transactions | 2 |
 
-The128ring target supports128disconnected outers, or one outer +127holes, sharing the4096vertex budget. Tests exercise both at the limit. Catalog quotas are enforced incrementally while parsing and before building/publishing indexes; this avoids accepting2048maximum-size objects without a global budget. V2 open lines may also use4096points. No multipolyline support is introduced.
+The512ring target supports512disconnected outers, or one outer +511holes, sharing the16384vertex budget. Tests exercise both at the limit. Catalog quotas are enforced incrementally while parsing and before building/publishing indexes; this avoids accepting2048maximum-size objects without a global budget. V2 open lines may also use16384points. No multipolyline support is introduced.
 
 ## Part-aware index and rendering
 
@@ -84,7 +89,7 @@ Hover selection carries the matching part index. Hover highlights **that compone
 
 ## Feature protocol2 and atomic publication
 
-The feature channel alone advances to2. ID/label/type/dimension/priority/topology presentation data remain discovered-only; no radius, profiles, hidden catalog or progression is sent. Small features≤512vertices batch up to4per packet as before. Larger features serialize to≤80KiB and split into indexed≤16KiB fragments with stable ID/count/length metadata. Each fragment packet contains one fragment, staying below48KiB. Full transaction headers retain session/sequence/discovery/catalog revision and exact delta base.
+The feature channel remains protocol2; the wire structure is unchanged. Update Core server and clients to0.14.2 before enabling expanded geometry: older protocol2 clients enforce their old capacity and cannot reconstruct larger features. ID/label/type/dimension/priority/topology presentation data remain discovered-only; no radius, profiles, hidden catalog or progression is sent. Small features≤512vertices batch up to4per packet as before. Larger features serialize to≤288KiB and split into indexed≤16KiB fragments with stable ID/count/length metadata. Each fragment packet contains one fragment, staying below48KiB. Full transaction headers retain session/sequence/discovery/catalog revision and exact delta base.
 
 The client stages at most2bounded transactions, validates fragment lengths/indices/identity, reconstructs each complete feature, checks topology and catalog quotas, then atomically publishes the complete snapshot/index. Partial large features are never rendered. Missing/conflicting/duplicate fragments, extra bytes, stale/revision-regressing data or invalid geometry preserve the last valid state. Reset/reconnect/resync protections remain. Header overhead and whole-feature staging are bounded separately by feature/part counts; the24MiB budget tracks geometry estimates and fragment payload, not the complete Java heap footprint. Current visible state plus staging may coexist. Full known-world transfer is still event-driven rather than bandwidth-budgeted per tick.
 
@@ -99,7 +104,7 @@ No geometry or schema number is added to SavedData. `human_journey_map_features.
 1. Keep each production feature's **id**, label, type, dimension, priority and radius. Do not edit/reset the discovery ledger.
 2. For a simple polygon needing island exclusions, set schema_version2, replace geometry.points with geometry.outer containing the same outer ring, and add geometry.holes from Geography's own approved simplified island coordinates. Do not repeat ring endpoints. Do not add island Local Areas as masks.
 3. For genuinely disconnected/seam geometry, use multipolygon.polygons with one outer/holes object per component under the same feature ID. Choose explicit world coordinates; Core never wraps longitude or joins components.
-4. Check every hole strictly inside its outer and not touching/nesting/crossing another ring. Keep total feature≤128rings/4096vertices and catalog quotas. Simplify to HJ scale; importing every tiny island is not required or recommended.
+4. Check every hole strictly inside its outer and not touching/nesting/crossing another ring. Keep total feature≤512rings/16384vertices and catalog quotas. Simplify to HJ scale; importing every tiny island is not required or recommended.
 5. Overlapping Ocean/Sea/Strait features each need geometrically appropriate exclusions; priority only chooses among true matches. It cannot repair an island left inside another feature's outer.
 6. Test copies via `/reload`, status/show and manual checklist below, then let Developer integrate approved content separately. Existingv1 rivers/polygons can stay unchanged. This Core task supplies no Japan/real-world holes or priority choices and never modifies the pilot/main datapack.
 
@@ -121,4 +126,4 @@ Use a separate test world/unknown feature IDs for natural-discovery checks; rese
 
 ## Known limits
 
-Validation is planar world X/Z with the existing edge tolerance; no spherical/wrapping/terrain repair. Ring topology validation uses bounded broad-phase pruning and can approach quadratic work for adversarial geometry. Production simplification matters. Equal-priority distinct features still fail closed. Overlapping parts are union semantics, not an automatic dissolve or cross-part hole subtraction. Very dense overlap increases candidates; maximal full-state transfer/staging remains bounded but can create an event-driven CPU/network burst. Actual UI and world restart acceptance remain manual.
+Validation is planar world X/Z with the existing edge tolerance; no spherical/wrapping/terrain repair. Segment-BVH topology validation remains bounded by per-feature/catalog quotas; adversarial heavily overlapping segment bounds can still approach quadratic exact-predicate work. Production simplification matters. Equal-priority distinct features still fail closed. Overlapping parts are union semantics, not an automatic dissolve or cross-part hole subtraction. Very dense overlap increases candidates; maximal full-state transfer/staging remains bounded but can create an event-driven CPU/network burst. Actual UI and world restart acceptance remain manual.

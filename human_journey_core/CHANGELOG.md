@@ -1,3 +1,8 @@
+# 0.14.2
+
+- Raised schema-v2 feature budgets to512rings/16384vertices, JSON resource2MiB and serialized feature288KiB, retaining schema1/global quotas,16KiB fragments,48KiB packets,24MiB staging and protocol2 wire layout.
+- Added immutable segment-BVH topology pruning and synthetic maximum/production-like pipeline/benchmark coverage against exact0.14.1 on the same runner. No production geography, discovery/HUD/rendering or unrelated gameplay changes; update clients/server before expanded data.
+
 # 0.14.1
 
 - Geography HUD now resolves physical location from discovered-only client Map Features; exact holed/multipart polygon containment, existing priorities and fixed2-block river tolerance. Local/Macro fallback, discovery, SavedData, protocols and HUD styling/config unchanged.

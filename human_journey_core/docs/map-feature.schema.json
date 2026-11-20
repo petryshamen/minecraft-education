@@ -80,7 +80,7 @@
     "ring": {
       "type": "array",
       "minItems": 3,
-      "maxItems": 4096,
+      "maxItems": 16384,
       "uniqueItems": true,
       "items": {
         "$ref": "#/$defs/point"
@@ -89,7 +89,7 @@
     "line": {
       "type": "array",
       "minItems": 2,
-      "maxItems": 4096,
+      "maxItems": 16384,
       "uniqueItems": true,
       "items": {
         "$ref": "#/$defs/point"
@@ -107,7 +107,7 @@
         },
         "holes": {
           "type": "array",
-          "maxItems": 127,
+          "maxItems": 511,
           "items": {
             "$ref": "#/$defs/ring"
           },
@@ -181,7 +181,7 @@
             },
             "holes": {
               "type": "array",
-              "maxItems": 127,
+              "maxItems": 511,
               "items": {
                 "$ref": "#/$defs/ring"
               },
@@ -203,7 +203,7 @@
             "polygons": {
               "type": "array",
               "minItems": 1,
-              "maxItems": 128,
+              "maxItems": 512,
               "items": {
                 "$ref": "#/$defs/part"
               }
@@ -263,5 +263,5 @@
       }
     }
   ],
-  "$comment": "Core additionally validates topology, duplicate signed-zero vertices, total 128 rings / 4096 vertices per feature and catalog budgets."
+  "$comment": "Core additionally validates topology, duplicate signed-zero vertices, total 512 rings / 16384 vertices per feature and catalog budgets."
 }
