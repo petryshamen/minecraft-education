@@ -14,7 +14,18 @@
       "type": "array",
       "maxItems": 512,
       "items": {
-        "$ref": "#/$defs/area"
+        "allOf": [
+          {
+            "$ref": "#/$defs/area"
+          },
+          {
+            "not": {
+              "required": [
+                "macro_region"
+              ]
+            }
+          }
+        ]
       }
     },
     "local_areas": {
@@ -84,8 +95,9 @@
         },
         "dimension": {
           "type": "string",
+          "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$",
           "maxLength": 256,
-          "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+          "default": "minecraft:overworld"
         },
         "priority": {
           "type": "integer",
@@ -94,21 +106,112 @@
           "default": 0
         },
         "macro_region": {
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+              "not": {
+                "enum": [
+                  "none",
+                  "unknown"
+                ]
+              }
+            },
+            {
+              "const": "none"
+            }
+          ],
+          "default": "none"
         },
         "display_label": {
           "type": "string",
-          "maxLength": 48
+          "maxLength": 48,
+          "default": ""
         },
         "era_labels": {
           "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]{0,63}$",
+            "not": {
+              "enum": [
+                "none",
+                "unknown"
+              ]
+            }
+          },
           "additionalProperties": {
             "type": "string",
             "maxLength": 48
           }
         },
         "profile": {
-          "type": "object"
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "temperature": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "moisture": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "vegetation": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "water": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "relief": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "special": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,64}$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "temperature",
+            "moisture",
+            "vegetation",
+            "water",
+            "relief",
+            "special"
+          ]
         },
         "polygon": {
           "type": "array",
