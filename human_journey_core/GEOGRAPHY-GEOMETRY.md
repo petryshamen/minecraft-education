@@ -1,5 +1,7 @@
 # Macro/Local Geography geometry v2 — Core0.15.0
 
+**Verified Core0.15.0:** [GitHub Actions build 44800372832](https://github.com/petryshamen/minecraft-education/actions/runs/44800372832), source `ea34c69737ce4e8bbc92b7c0ae3a4921d2c5dd01`. 488tests passed (462retained+26new; two superseded packet-limit/button-position assertions updated), zero failures;15no-world Forge checks and exact0.14.2 same-runner reference benchmark passed. 300prior runtime classes are byte-identical, including all Map Feature/HUD classes, SavedData/discovery, water/juice/temperature/fishing and NPC economy/adapter. Runtime SHA-256 `8cda56aec9f1e1af6c2a439902a88cf25f51f9722f68f800dbc21b118f17c092`. No Minecraft gameplay testing, automatic installation, production geography or live-server changes.
+
 Resources remain `data/<namespace>/npc_geography/<file>.json`. Root `schema_version` defaults1; schema1 uses the unchanged `polygon` field and256point cap. A resource may instead select `schema_version:2`, and every area in that resource uses `geometry` (not `polygon`). V1/v2 files coexist. Metadata is unchanged: id, dimension, priority, macro_region for Locals, display_label, era_labels, profile. There is no third layer or production data.
 
 ```json
@@ -57,3 +59,24 @@ The two buttons now stay on the far-right rail,2GUI pixels from the edge, beginn
 Dense overlap returns many real bounding candidates; an index cannot remove actual overlap. Topology has bounded but potentially quadratic adversarial exact-predicate work. Frame rendering still processes vertices of relevant visible components. Full known-world transfers remain event-driven bursts. Discovery and location describe configured X/Z geometry, not terrain/Y. Parent fallback intentionally need not geometrically contain a Local. Gameplay/FPS/TPS/restart/visual testing is manual.
 
 Manual: legacy context/profile/NPC names unchanged; pilot hole interior/edge excludes; either multipart component yields one ID; priority/tie and parent rules unchanged; unknown geography absent from map packets; large reload publishes atomically; Hover/Locals/All/Off show separate coastlines; Features HUD still takes precedence; buttons clear coordinates/compass across resize; students share IDs, teachers do not discover; restart/reconnect/resync preserve state. No automatic installation/live-server change.
+
+## Reproducible synthetic benchmark
+
+The identical GeographyIndexBenchmarkTest harness runs against new source and exact0.14.2 commitc38e2e688b9ef218d7c53bf6b744d8e33be26d35 on the same GitHub runner/JDK21. Two warmups and median of five measured samples; repeated lookup batches256. Parsing includes JSON parsing, geography validation, ID maps and construction of the ready immutable index; it excludes full NPC/economy composition validation and client reconstruction. Existing composition safety caps remain unchanged. Index duration is recorded separately during construction (a single constructor sample, not a repeated-timing median); baseline has no index. Single lookup timings are noise-sensitive. Coarse areas have4vertices/1ring; detailed v2 areas64vertices/2rings including a hole. Fixtures split over32area resources and remain within quotas.
+
+| Version / fixture | Locals | Points/rings per area | Parse+validate+publish ms | Index ms | Single lookup us | Repeated lookup us | Candidates |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 0.14.2 / 1500_v1_coarse_distributed | 1500 | 4/1 | 19.899 | 0.000 | 275.075 | 17.937 | 1500 |
+| 0.14.2 / 1500_v1_coarse_dense | 1500 | 4/1 | 11.169 | 0.000 | 221.595 | 59.618 | 1500 |
+| 0.14.2 / 4096_v1_coarse_distributed | 4096 | 4/1 | 16.029 | 0.000 | 86.972 | 47.576 | 4096 |
+| 0.14.2 / 4096_v1_coarse_dense | 4096 | 4/1 | 9.655 | 0.000 | 93.872 | 87.879 | 4096 |
+| 0.15.0 / 1500_v1_coarse_distributed | 1500 | 4/1 | 27.131 | 13.087 | 4.958 | 1.498 | 1 |
+| 0.15.0 / 1500_v1_coarse_dense | 1500 | 4/1 | 16.865 | 4.284 | 307.773 | 59.562 | 1500 |
+| 0.15.0 / 1500_v2_detailed_distributed | 1500 | 64/2 | 120.279 | 1.574 | 21.592 | 1.166 | 1 |
+| 0.15.0 / 1500_v2_detailed_dense | 1500 | 64/2 | 86.506 | 0.756 | 251.640 | 237.763 | 1500 |
+| 0.15.0 / 4096_v1_coarse_distributed | 4096 | 4/1 | 21.797 | 2.849 | 0.151 | 0.107 | 1 |
+| 0.15.0 / 4096_v1_coarse_dense | 4096 | 4/1 | 30.176 | 1.010 | 296.928 | 197.360 | 4096 |
+| 0.15.0 / 4096_v2_detailed_distributed | 4096 | 64/2 | 338.249 | 2.763 | 0.401 | 0.194 | 1 |
+| 0.15.0 / 4096_v2_detailed_dense | 4096 | 64/2 | 329.067 | 0.898 | 776.983 | 640.716 | 4096 |
+
+Distributed queries inspect exactly1component candidate at1500and4096Locals, versus all1500/4096in the exact legacy linear resolver. Dense-overlap fixtures genuinely contain all areas, so candidates remain1500/4096and can be slower with index/validation/deduplication overhead; the index cannot eliminate real overlap. Selection is single-pass by priority after containment, with duplicate-ID handling only for multipart matches, not a sort of all matches. Exact0.14.2 cannot parse v2, so detailed-v2 timings have no successful legacy counterpart. No TPS/FPS/gameplay performance is inferred; JVM warmup, scheduling and GC affect these synthetic measurements. Source harness, fixture generation and workflow are in the complete source ZIP; raw measurements are also in the Actions artifact.

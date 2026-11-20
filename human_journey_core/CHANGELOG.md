@@ -1,4 +1,4 @@
-#0.15.0
+# 0.15.0
 
 - Added Macro/Local geography schema2 holes/multipolygons,4096vertex/128ring per-area and aggregate quotas, immutable ID maps and authoritative per-dimension/kind component BVH. Schema1/count/profile/parent/priority/discovery contracts retained.
 - Added discovered geography-map protocol2 bounded fragments, atomic geometry/index publication and hole/component-aware Xaero rendering, with colours/modes/HUD unchanged. Map controls use a strict far-right rail instead of coordinate-covering left fallback. No production polygons edited.
