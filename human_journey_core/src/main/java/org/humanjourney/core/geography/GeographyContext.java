@@ -10,7 +10,7 @@ public record GeographyContext(String macroId,String macroLabel,String localId,S
  public static GeographyContext resolve(NpcContextStore.Data data,EraRules.Scores scores,String dimension,double x,double z){
   String era;try{era=data.eraRules().resolve(scores);}catch(IllegalArgumentException e){era="unknown";}
   var geo=data.geography();var location=geo.resolve(dimension,x,z,era);String currentEra=era;
-  var macro=geo.macros().stream().filter(a->a.id().equals(location.macro())).findFirst();var local=geo.locals().stream().filter(a->a.id().equals(location.local())).findFirst();
+  var macro=Optional.ofNullable(geo.macroIds().get(location.macro()));var local=Optional.ofNullable(geo.localIds().get(location.local()));
   return new GeographyContext(macro.map(NpcGeography.Area::id).orElse(""),macro.map(a->label(a,currentEra)).orElse(""),local.map(NpcGeography.Area::id).orElse(""),local.map(a->label(a,currentEra)).orElse(""));
  }
 }

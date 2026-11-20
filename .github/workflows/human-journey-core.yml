@@ -40,24 +40,26 @@ jobs:
           grep -R 'MAP_GEOMETRY_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'MAP_FEATURE_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'MAP_GEOMETRY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
-      - name: Check out exact 0.14.1 benchmark reference
+          grep -R 'GEOGRAPHY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
+      - name: Check out exact 0.14.2 benchmark reference
         uses: actions/checkout@v4
         with:
-          ref: df297f47da828ee40ca8796bd00a028a637db461
-          path: baseline-0141
-      - name: Compare identical synthetic benchmark against exact 0.14.1
-        working-directory: baseline-0141/human_journey_core
+          ref: c38e2e688b9ef218d7c53bf6b744d8e33be26d35
+          path: baseline-0142
+      - name: Compare identical synthetic benchmark against exact 0.14.2
+        working-directory: baseline-0142/human_journey_core
         run: |
-          cp ../../human_journey_core/src/test/java/org/humanjourney/core/mapfeature/GeometryCapacityBenchmarkTest.java src/test/java/org/humanjourney/core/mapfeature/
+          cp ../../human_journey_core/src/test/java/org/humanjourney/core/geography/GeographyIndexBenchmarkTest.java src/test/java/org/humanjourney/core/geography/
           chmod +x gradlew
-          ./gradlew --no-daemon test --tests org.humanjourney.core.mapfeature.GeometryCapacityBenchmarkTest
-          cp build/reports/map-feature-capacity-benchmark.json ../../human_journey_core/build/reports/map-feature-capacity-benchmark-baseline.json
+          ./gradlew --no-daemon test --tests org.humanjourney.core.geography.GeographyIndexBenchmarkTest
+          cp build/reports/geography-index-benchmark.json ../../human_journey_core/build/reports/geography-index-benchmark-baseline.json
       - uses: actions/upload-artifact@v4
         with:
-          name: HumanJourneyCore-0.14.2
+          name: HumanJourneyCore-0.15.0
           if-no-files-found: error
           path: |
             human_journey_core/build/libs/*.jar
             human_journey_core/build/reports/tests/test/**
             human_journey_core/build/reports/map-feature-capacity-benchmark*.json
+            human_journey_core/build/reports/geography-index-benchmark*.json
             human_journey_core/build/datagen-smoke/logs/latest.log
