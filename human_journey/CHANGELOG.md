@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.11
+
+- Added the seven exact approved Japan water Map Features: six schema-v2 polygons, 292 island holes / 298 rings and the unchanged 110-point schema-v1 Shinano open polyline; 11,614 vertices total. Stable IDs, priorities and discovery radii are preserved; no geometry or source-gap correction, Macro/Local edits or gameplay changes. Requires Core 0.14.0 / feature protocol 2 on server and participating clients.
+- Verified the manually installed 0.14.0 JAR and exact resource/provenance hashes. Supplied Python checks pass 21,038 assertions; released-Core content audit passes 896 fixtures / 2,672 assertions. Extra sweep confirms 14,158 corresponding-feature hole-boundary exclusions; documented 172 secondary-sea shoreline hits (56 on the supplied land proxy, at most 0.135 block inland), plus the unchanged ~0.393-block Shinano source gap. Terrain/rendered UI/gameplay remain manual checks.
+
 ## 0.5.10
 
 - Added Amazonia/Orinoco/Guiana (39 locals), Brazilian Highlands/East (50), and Southern Plains/Patagonia (55): 144 additions, eight polygon-only Andes replacements, no removed IDs; final 1,549 locals / 39 technical macros / 38 resources. Kept all 1,405 old IDs, 1,397 old objects unchanged and the prior Mesoamerica repair. Added ten macros; changed only Andes main geometry and South America fallback priority 57 → 50.
