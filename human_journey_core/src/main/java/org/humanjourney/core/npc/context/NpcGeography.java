@@ -45,7 +45,7 @@ public final class NpcGeography {
         }
     }
     public GeoProfile profile(String macro,String local){var area=!local.equals("none")?localIds.get(local):macroIds.get(macro);return area==null||area.profile()==null?GeoProfile.none():area.profile();}
-    private Area match(String kind,String dimension,double x,double z){var matches=new TreeMap<String,Area>();for(var e:index.point(dimension,kind,x,z))if(e.contains(x,z))matches.put(e.area().id(),e.area());Area best=null;boolean tie=false;for(var a:matches.values())if(best==null||a.priority()>best.priority()){best=a;tie=false;}else if(a.priority()==best.priority())tie=true;if(tie)throw new IllegalArgumentException("Ambiguous NPC location in "+kind);return best;}
+    private Area match(String kind,String dimension,double x,double z){Area best=null;boolean tie=false;var seen=new HashSet<String>();for(var e:index.point(dimension,kind,x,z)){var area=e.area();if(!e.contains(x,z)||area.shape().parts().size()>1&&!seen.add(area.id()))continue;if(best==null||area.priority()>best.priority()){best=area;tie=false;}else if(area.priority()==best.priority())tie=true;}if(tie)throw new IllegalArgumentException("Ambiguous NPC location in "+kind);return best;}
     public int candidateCount(String dimension,double x,double z){return index.point(dimension,"MACRO",x,z).size()+index.point(dimension,"LOCAL",x,z).size();}
     public Location resolve(String dimension,double x,double z,String era){
         Area macro=match("MACRO",dimension,x,z),local=match("LOCAL",dimension,x,z);
