@@ -216,7 +216,7 @@
         "polygon": {
           "type": "array",
           "minItems": 3,
-          "maxItems": 512,
+          "maxItems": 256,
           "uniqueItems": true,
           "items": {
             "$ref": "#/$defs/point"
