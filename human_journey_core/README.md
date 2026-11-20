@@ -1,6 +1,22 @@
-# Human Journey Core 0.14.0
+# Human Journey Core 0.14.1
 
-**Verified Core 0.14.0:** [GitHub Actions build 44214582660](https://github.com/petryshamen/minecraft-education/actions/runs/44214582660), source `44d2b5dedacf258024e0de20ed2054b780e6472e`. All 424 tests passed (384 prior tests byte-identical + 40 new), zero failures; all fourteen no-world Forge checks passed. 288 prior runtime classes are byte-identical, including geography/HUD/controls, feature SavedData, NPC/economy and unrelated gameplay. Existing changes are confined to feature geometry/index/catalog/discovery/transport/diagnostics and the Xaero feature renderer. Runtime SHA-256 `39ac922532501161bdbcbd614aeb8e8a76bb6fe88d08f3010e2dc71378b1067c`. No Minecraft gameplay testing, installation, production pilot/main-datapack or live-server change.
+Discovered Map Features now provide the physical-location HUD primary line, with current Local (otherwise Macro) as secondary. Exact polygon/multipolygon containment respects holes and existing priorities. Rivers use a fixed **2-block horizontal location tolerance**, independent of discovery radius and map zoom. No matching feature preserves the previous HUD exactly. Uses only the already synchronized discovered-only mirror, independent of fullscreen HJ Features Hover/All/Off or drawing enabled; no new protocol, server resolution or discovery changes.
+
+The two fullscreen HJ buttons prefer the right edge **below the reserved compass**, clearing the top coordinate strip. At 1000x600 GUI size they move from x762/y8,32 to x874/y108,132 (112 GUI pixels right); sizes/click handling/mode persistence are unchanged. Existing collision-free fallback handles occupied native widgets; very small/fully occupied screens may hide controls as before. Actual coordinate readability at your GUI scale remains a manual check.
+
+Manual acceptance (no Minecraft gameplay testing performed):
+
+1. Stand in the discovered Sea of Japan at the tested Japan position: `Sea of Japan` / `East Asia`.
+2. Move into an excluded island hole, including its edge: sea disappears and normal Local/Macro returns (unless another valid feature independently contains it).
+3. Enter discovered Korea Strait: configured higher-priority `Korea Strait` replaces the broader sea.
+4. Move outside known features: exact previous Local/Macro or hidden HUD remains.
+5. Near a discovered river: label within 2 horizontal blocks, normal geography outside; discovery radius is irrelevant. HJ Features Off must not change this location HUD.
+6. Open the fullscreen map: verify both buttons clear coordinates and compass, still cycle modes, and remain clickable after resizing/UI-scale changes.
+
+Limitations: the HUD represents configured X/Z geometry, not actual water blocks/Y/terrain. Existing direct-river precedence and equal-priority ambiguity (fallback geography) are retained. An undiscovered/removed/not-yet-synchronized feature cannot display. No schema/config migration or new datapack is required; existing labels and geometry are used. Existing HUD offsets/scale/opacity/fonts/colours are unchanged. Optional exact Xaero1.39.13 gate remains; location HUD itself does not depend on Xaero.
+
+
+**Core 0.14.0 baseline:** [GitHub Actions build 44214582660](https://github.com/petryshamen/minecraft-education/actions/runs/44214582660), source `44d2b5dedacf258024e0de20ed2054b780e6472e`. All 424 tests passed (384 prior tests byte-identical + 40 new), zero failures; all fourteen no-world Forge checks passed. 288 prior runtime classes are byte-identical, including geography/HUD/controls, feature SavedData, NPC/economy and unrelated gameplay. Existing changes are confined to feature geometry/index/catalog/discovery/transport/diagnostics and the Xaero feature renderer. Runtime SHA-256 `39ac922532501161bdbcbd614aeb8e8a76bb6fe88d08f3010e2dc71378b1067c`. No Minecraft gameplay testing, installation, production pilot/main-datapack or live-server change.
 
 Map Feature geometry schema v2: island holes and disconnected polygon parts, stable discovery IDs, part-aware hover/rendering and bounded fragmented feature transport. **[Exact v2 schema, migration, budgets and manual checklist](MAP-GEOMETRY.md)**. Schema1 JSON and SavedData remain valid. Update server/clients together for feature protocol2; Macro/Local protocol stays1. No production pilot edits or automatic installation.
 

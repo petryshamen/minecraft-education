@@ -1,3 +1,8 @@
+# 0.14.1
+
+- Geography HUD now resolves physical location from discovered-only client Map Features; exact holed/multipart polygon containment, existing priorities and fixed2-block river tolerance. Local/Macro fallback, discovery, SavedData, protocols and HUD styling/config unchanged.
+- Fullscreen HJ Borders/Features buttons prefer the right edge below the compass to clear coordinates, retaining native-widget collision handling and existing mode/input behaviour. No production geography edits or automatic installation.
+
 # 0.14.0
 
 - Added schema-v2 polygon holes/multipolygons with strict topology and catalog budgets, preserved schema1 and ID-only discoveries, and extended part-aware proximity/hover/rendering without changing priorities or geography context.
