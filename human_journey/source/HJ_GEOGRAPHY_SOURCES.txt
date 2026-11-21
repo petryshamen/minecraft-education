@@ -1,0 +1,27 @@
+Human Journey Europe Local Geometry Refinement v2 — source attribution
+
+GMBA Mountain Inventory v2, Snethlage and colleagues.
+Dataset: https://doi.org/10.48601/earthenv-t9k2-1407
+Methodology: https://doi.org/10.1038/s41597-022-01256-y
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Geometry mirror: digital-landscape/AlpTap, commit
+a0c05f948fdfcd5abe00bff510bb148fe7ae7614, public/data/mode-37dabf082c4a/regions/.
+This pack contains adapted/simplified/projected geometry, not original survey
+data. Some mirror inputs were already simplified at 0.015 degrees. Local shapes
+were clipped/refined with physical land/lake masks, existing region envelopes
+and approved parent-edge corrections. No endorsement by source authors implied.
+
+Natural Earth 1:10m physical land: public domain.
+https://www.naturalearthdata.com/about/terms-of-use/
+GSHHG 2.3.7 lake/island masks, Paul Wessel and Walter H. F. Smith:
+https://www.soest.hawaii.edu/wessel/gshhg/
+LGPL v3 or later; accompanying GSHHG_LICENSE.TXT, GSHHG_COPYING.LESSERv3
+and GSHHG_COPYINGv3 retain the source notices and license terms.
+
+Projection: X = longitude * 1024/15; Z = -latitude * 1024/15.
+Adaptation: Human Journey Geography, Europe Local Geometry Refinement v2.
+The approved source/provenance archive is
+HJ_Europe_Local_Geometry_Refinement_v2_Candidate.zip (SHA-256
+649c4af3a220580c3584fa6dff7db0b13865bd8256fbda77c8075fcb27f32bc2).
+These notices concern the relevant geometry adaptations, not unrelated content.

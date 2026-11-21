@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.13
+
+- Migrated exactly 190 existing European Local geometries to the approved schema-v2 resources, preserving all IDs/metadata/profiles/priorities/parents. Replaced five aggregates with 190 one-area files and two residual aggregates (87 unchanged records); final 39 Macros / 1,549 Locals / 225 resources. All 80 Water Features and unrelated gameplay/discovery data remain unchanged; no reset or new geography IDs.
+- Requires Core 0.15.1 / geography-map protocol 3 on server and clients. Exact candidate hashes, schema/topology/budgets, metadata protection and full released-Core load pass: 52,366 coordinate checks, zero resolution errors; all 39,837 old resolved land-grid points retained, 18 gained. Same-domain dry-land coverage 83.56889% → 83.61541%; approved 0.593 block² sub-grid loss remains within the net improvement. Inherited northern/island/interface gaps remain deferred. No Forge reload or gameplay/terrain/UI test.
+
 ## 0.5.12
 
 - Added all 73 exact approved Europe water Map Features, including 1,274 island holes and 121,066 vertices, plus required geography source/license notices. Combined catalog: 80 definitions; all seven Japan files/IDs remain byte-identical. No Macro/Local, discovery-history or gameplay changes; no migration/reset.
