@@ -1,5 +1,7 @@
 # Macro/Local Geography geometry v2 — Core0.15.1
 
+**Verified Core 0.15.1:** [Actions build 44841342335](https://github.com/petryshamen/minecraft-education/actions/runs/44841342335), source `48caf041085bc71755efa2cb421df1dd293fc1d0`. 500 tests passed, zero failures; 15 no-world Forge checks. 329 prior runtime classes byte-identical. JAR SHA-256 `ff05f1206a753b32beb0e0cb4bbf1ae0b85ec0f87236edaad04abfac952532b6`. No Minecraft gameplay testing, installation, production-data or live-server changes.
+
 Capacity release0.15.1: v2 now permits512rings/16384vertices per area. Schema1 stays256points. Catalog counts512Macros/4096Locals and1,179,648vertices/65,536rings remain unchanged. JSON resource limit2MiB characters, total64MiB unchanged; serialized map area288KiB, raw fragments16KiB, packets48KiB,8192transaction parts,24MiB staging and2pending transactions. Only geography-map protocol advances2→3, rejecting older0.15.0 clients at the channel gate; ordinary context/discovery stays1 and Map Features stays2. Update server/all clients together BEFORE using larger geometry. Wire layout/schema/SavedData identities remain, with no discovery reset.
 
 The attached Europe review is frozen external regression data, not production content approval. Its190refined IDs (147626vertices/3944rings) and full39Macro/1549Local proposed catalog are exercised without changing coordinates; bytes and SHA-256 provenance are retained in a test-only fixture ZIP. All ten old capacity blockers are explicitly enumerated in the release report. Review coverage gaps, geography/priority/parent decisions and terrain acceptance remain separate. Do not deploy the review simply because Core now accepts it.
@@ -34,7 +36,7 @@ All coordinates are explicit X/Z, finite within±30million; no wrapping. Outer b
 | Transfer parts |8192|
 | Estimated staged geometry/fragments |24MiB/transaction,2pending|
 
-The vertex aggregate equals4608×256, preserving the theoretical existing v1 maximum. V2 areas share aggregate budgets, not4608×4096. JSON limits apply to encoded content as well as geometry; split large resource catalogs over files. The new geography file-count/resource limits allow one-file-per-area and ordinary16384point geometry. Pending staging estimates do not represent total Java heap: current snapshots, reconstructed objects, point/segment/component BVHs and staged bytes coexist.
+The vertex aggregate equals4608×256, preserving the theoretical existing v1 maximum. V2 areas share aggregate budgets, not4608×16384. JSON limits apply to encoded content as well as geometry; split large resource catalogs over files. The new geography file-count/resource limits allow one-file-per-area and ordinary16384point geometry. Pending staging estimates do not represent total Java heap: current snapshots, reconstructed objects, point/segment/component BVHs and staged bytes coexist.
 
 ## Authoritative indexed resolution
 
@@ -54,12 +56,12 @@ The two buttons now stay on the far-right rail,2GUI pixels from the edge, beginn
 
 ## Geography handoff / Europe refinement pilot
 
-1. Accept/install Core0.15.0 manually on server/all clients first. Keep existing stable IDs, hierarchy, parents, labels/era labels, profiles and priorities. Do not reset discovery.
+1. Accept/install Core0.15.1 manually on server/all clients first. Keep existing stable IDs, hierarchy, parents, labels/era labels, profiles and priorities. Do not reset discovery.
 2. Keep valid v1 files unchanged. For detailed pilot areas, use a separate schema_version2 file and replace polygon with geometry.outer/holes or geometry.polygons. A file has one schema version; do not mix area field formats within it.
 3. Count every outer+hole toward512rings and all points toward16384 per area; enforce1,179,648/65,536 global totals and512/4096area caps. No coordinate wrapping, Local-as-water-mask or production repair is provided.
 4. `/reload`; inspect server resource/area/component/ring errors and `/hj geography status` candidate counts. Invalid reload keeps complete previous state. Check `/hj npc context`, profiles and fixed NPC spawn-time context.
 5. Manually test water/land hole positions, disconnected parts, overlapping priorities, known parent fallback/conflicts, discovered-only hover, all Borders/Features modes and Map Feature location HUD. A known area migrated v1→v2 should keep discovery after restart/reconnect; teachers still cannot discover.
-6. Geography/Developer separately author and approve Europe polygons. This engine release supplies only synthetic tests, no Europe/Japan edits, no profile/priority changes.
+6. Geography/Developer separately author and approve Europe polygons. This engine release supplies synthetic tests and frozen external regression data, no production Europe/Japan edits, no profile/priority changes.
 
 ## Known limits / manual checklist
 
@@ -87,3 +89,20 @@ The identical GeographyIndexBenchmarkTest harness runs against new source and ex
 | 0.15.0 / 4096_v2_detailed_dense | 4096 | 64/2 | 329.067 | 0.898 | 776.983 | 640.716 | 4096 |
 
 Distributed queries inspect exactly1component candidate at1500and4096Locals, versus all1500/4096in the exact legacy linear resolver. Dense-overlap fixtures genuinely contain all areas, so candidates remain1500/4096and can be slower with index/validation/deduplication overhead; the index cannot eliminate real overlap. Selection is single-pass by priority after containment, with duplicate-ID handling only for multipart matches, not a sort of all matches. Exact0.14.2 cannot parse v2, so detailed-v2 timings have no successful legacy counterpart. No TPS/FPS/gameplay performance is inferred; JVM warmup, scheduling and GC affect these synthetic measurements. Source harness, fixture generation and workflow are in the complete source ZIP; raw measurements are also in the Actions artifact.
+
+## Capacity benchmark
+
+Identical harness and frozen fixture bytes on the same GitHub runner/JDK21, comparing exact 0.15.0 archive commit 2810f7c240af0e0086cedd5439dfbff994b1fcee. Two warmups, median five measurements; point queries batched256. Parsing includes JSON, topology validation and ready index construction. *Index time is a single constructor measurement, not a median. Transfer preparation measures serialization/fragment creation, not network latency or client reconstruction. Lookup samples use one outer-ring vertex and are not a representative whole-world route. Unsupported cases are rejected by old capacity, not timed as successful loads. JVM/GC/scheduling affect timings; no gameplay TPS/FPS claim.
+
+| Version / fixture | Vertices / rings | Parse+validate+index ms | Index ms* | Lookup us | Candidates | Transfer preparation ms | Fragments |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 0.15.0 / shared_100_holes | 3712 / 101 | 11.121 | 1.429 | 5.673 | 1 | 0.673 | 4 |
+| 0.15.0 / synthetic_250_holes | 9024 / 251 | unsupported | — | — | — | — | — |
+| 0.15.0 / synthetic_maximum | 16384 / 512 | unsupported | — | — | — | — | — |
+| 0.15.0 / bothnian_coast | 3712 / 363 | unsupported | — | — | — | — | — |
+| 0.15.0 / scandinavian_mountains | 7919 / 236 | unsupported | — | — | — | — | — |
+| 0.15.1 / shared_100_holes | 3712 / 101 | 12.763 | 1.519 | 6.455 | 1 | 0.387 | 4 |
+| 0.15.1 / synthetic_250_holes | 9024 / 251 | 21.402 | 0.049 | 3.640 | 1 | 1.110 | 9 |
+| 0.15.1 / synthetic_maximum | 16384 / 512 | 28.387 | 0.031 | 3.455 | 1 | 0.933 | 17 |
+| 0.15.1 / bothnian_coast | 3712 / 363 | 9.792 | 4.666 | 1.611 | 1 | 0.282 | 4 |
+| 0.15.1 / scandinavian_mountains | 7919 / 236 | 14.374 | 0.382 | 0.863 | 1 | 0.296 | 8 |
