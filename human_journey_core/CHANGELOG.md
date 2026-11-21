@@ -1,3 +1,8 @@
+# 0.15.1
+
+- Raised v2 Macro/Local area capacity to512rings/16384vertices, JSON resource2MiB and serialized area288KiB; aggregate quotas, component indexes, fragment/packet/staging bounds and schema1 unchanged. Quota errors include actual counts/limits and source provenance.
+- Geography-map protocol3 gates older0.15.0 clients; context/discovery and Map Features protocols remain unchanged. Added synthetic maximum/native-transfer tests and frozen unmodified Europe review regression fixtures. Capacity acceptance does not approve coverage or install production data.
+
 # 0.15.0
 
 - Added Macro/Local geography schema2 holes/multipolygons,4096vertex/128ring per-area and aggregate quotas, immutable ID maps and authoritative per-dimension/kind component BVH. Schema1/count/profile/parent/priority/discovery contracts retained.

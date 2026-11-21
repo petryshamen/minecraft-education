@@ -51,7 +51,7 @@
     "ring": {
       "type": "array",
       "minItems": 3,
-      "maxItems": 4096,
+      "maxItems": 16384,
       "uniqueItems": true,
       "items": {
         "$ref": "#/$defs/point"
@@ -69,7 +69,7 @@
         },
         "holes": {
           "type": "array",
-          "maxItems": 127,
+          "maxItems": 511,
           "items": {
             "$ref": "#/$defs/ring"
           },
@@ -240,7 +240,7 @@
                 },
                 "holes": {
                   "type": "array",
-                  "maxItems": 127,
+                  "maxItems": 511,
                   "items": {
                     "$ref": "#/$defs/ring"
                   },
@@ -262,7 +262,7 @@
                 "polygons": {
                   "type": "array",
                   "minItems": 1,
-                  "maxItems": 128,
+                  "maxItems": 512,
                   "items": {
                     "$ref": "#/$defs/part"
                   }
@@ -345,5 +345,5 @@
       }
     }
   ],
-  "$comment": "Core additionally validates topology, labels/IDs/profiles/era labels, parents, total4096vertices/128rings per v2 area and aggregate budgets. macro_region is only valid for Locals."
+  "$comment": "Core additionally validates topology, labels/IDs/profiles/era labels, parents, total16384vertices/512rings per v2 area and aggregate budgets. macro_region is only valid for Locals."
 }

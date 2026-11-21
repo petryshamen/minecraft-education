@@ -1,6 +1,13 @@
-# Macro/Local Geography geometry v2 — Core0.15.0
+# Macro/Local Geography geometry v2 — Core0.15.1
 
-**Verified Core0.15.0:** [GitHub Actions build 44800372832](https://github.com/petryshamen/minecraft-education/actions/runs/44800372832), source `ea34c69737ce4e8bbc92b7c0ae3a4921d2c5dd01`. 488tests passed (462retained+26new; two superseded packet-limit/button-position assertions updated), zero failures;15no-world Forge checks and exact0.14.2 same-runner reference benchmark passed. 300prior runtime classes are byte-identical, including all Map Feature/HUD classes, SavedData/discovery, water/juice/temperature/fishing and NPC economy/adapter. Runtime SHA-256 `8cda56aec9f1e1af6c2a439902a88cf25f51f9722f68f800dbc21b118f17c092`. No Minecraft gameplay testing, automatic installation, production geography or live-server changes.
+Capacity release0.15.1: v2 now permits512rings/16384vertices per area. Schema1 stays256points. Catalog counts512Macros/4096Locals and1,179,648vertices/65,536rings remain unchanged. JSON resource limit2MiB characters, total64MiB unchanged; serialized map area288KiB, raw fragments16KiB, packets48KiB,8192transaction parts,24MiB staging and2pending transactions. Only geography-map protocol advances2→3, rejecting older0.15.0 clients at the channel gate; ordinary context/discovery stays1 and Map Features stays2. Update server/all clients together BEFORE using larger geometry. Wire layout/schema/SavedData identities remain, with no discovery reset.
+
+The attached Europe review is frozen external regression data, not production content approval. Its190refined IDs (147626vertices/3944rings) and full39Macro/1549Local proposed catalog are exercised without changing coordinates; bytes and SHA-256 provenance are retained in a test-only fixture ZIP. All ten old capacity blockers are explicitly enumerated in the release report. Review coverage gaps, geography/priority/parent decisions and terrain acceptance remain separate. Do not deploy the review simply because Core now accepts it.
+
+Geography resume: continue from the exact supplied checkpoint; no redraw/restart/reduced-detail workaround needed for capacity. Keep IDs, parents, profiles, priorities, labels and existing schema2. Count all outers+holes toward512rings and all points toward16384, respect aggregate quotas, and validate normal formatted per-area resources under2MiB. Resource/Area quota errors now show actual vertex/ring totals and limits. Planner/Geography separately resolve coverage and approve the content migration; Developer integrates only accepted data. No main datapack or review coordinates were modified by Core.
+
+
+**Core0.15.0 baseline:** [GitHub Actions build 44800372832](https://github.com/petryshamen/minecraft-education/actions/runs/44800372832), source `ea34c69737ce4e8bbc92b7c0ae3a4921d2c5dd01`. 488tests passed (462retained+26new; two superseded packet-limit/button-position assertions updated), zero failures;15no-world Forge checks and exact0.14.2 same-runner reference benchmark passed. 300prior runtime classes are byte-identical, including all Map Feature/HUD classes, SavedData/discovery, water/juice/temperature/fishing and NPC economy/adapter. Runtime SHA-256 `8cda56aec9f1e1af6c2a439902a88cf25f51f9722f68f800dbc21b118f17c092`. No Minecraft gameplay testing, automatic installation, production geography or live-server changes.
 
 Resources remain `data/<namespace>/npc_geography/<file>.json`. Root `schema_version` defaults1; schema1 uses the unchanged `polygon` field and256point cap. A resource may instead select `schema_version:2`, and every area in that resource uses `geometry` (not `polygon`). V1/v2 files coexist. Metadata is unchanged: id, dimension, priority, macro_region for Locals, display_label, era_labels, profile. There is no third layer or production data.
 
@@ -13,21 +20,21 @@ All coordinates are explicit X/Z, finite within±30million; no wrapping. Outer b
 | Budget | Value |
 |---|---:|
 | Schema1 points/area |256|
-| V2 total vertices/area |4096|
-| V2 total rings/area (outers+holes) |128|
+| V2 total vertices/area |16384|
+| V2 total rings/area (outers+holes) |512|
 | Macros / Locals |512 /4096|
 | Aggregate Macro+Local vertices |1,179,648|
 | Aggregate Macro+Local rings |65,536|
 | Geography resource files |4608|
-| JSON characters/geography resource |512KiB|
+| JSON characters/geography resource |2MiB|
 | JSON characters/geography reload |64MiB|
 | Non-geography NPC/economy JSON |original256KiB/resource,16MiB total|
-| Serialized map area |80KiB|
+| Serialized map area |288KiB|
 | Raw fragment / packet |16KiB /48KiB|
 | Transfer parts |8192|
 | Estimated staged geometry/fragments |24MiB/transaction,2pending|
 
-The vertex aggregate equals4608×256, preserving the theoretical existing v1 maximum. V2 areas share aggregate budgets, not4608×4096. JSON limits apply to encoded content as well as geometry; split large resource catalogs over files. The new geography file-count/resource limits allow one-file-per-area and ordinary4096point geometry. Pending staging estimates do not represent total Java heap: current snapshots, reconstructed objects, point/segment/component BVHs and staged bytes coexist.
+The vertex aggregate equals4608×256, preserving the theoretical existing v1 maximum. V2 areas share aggregate budgets, not4608×4096. JSON limits apply to encoded content as well as geometry; split large resource catalogs over files. The new geography file-count/resource limits allow one-file-per-area and ordinary16384point geometry. Pending staging estimates do not represent total Java heap: current snapshots, reconstructed objects, point/segment/component BVHs and staged bytes coexist.
 
 ## Authoritative indexed resolution
 
@@ -37,7 +44,7 @@ The discovered client MapSpatialIndex uses the same low-level component BVH. Its
 
 ## Map transport and presentation
 
-**Update server and clients together:** only `human_journey_core:geography_map` advances1→2 for nested topology and bounded fragments. Ordinary geography context/discovery channel remains1; Map Feature protocol remains2. No mixed geography-map1/2 compatibility. Small≤256vertex areas batch≤8; larger areas serialize≤80KiB into≤16KiB kind+ID/index/count/length fragments. Max4096vertex geometry uses5fragments. Whole/delta/clear headers retain session/sequence/discovery/data/presentation revisions and exact base. Completed geometry/topology/aggregate/parent validation precedes atomic state/index publication; incomplete/stale/revoked/conflicting transactions do not expose partial areas. Existing resync/reconnect protection remains.
+**Update server and clients together:** only `human_journey_core:geography_map` uses protocol3 for expanded capacity; wire layout remains the bounded nested-topology format. Ordinary geography context/discovery channel remains1; Map Feature protocol remains2. No mixed geography-map2/3 compatibility. Small≤256vertex areas batch≤8; larger areas serialize≤288KiB into≤16KiB kind+ID/index/count/length fragments. Max16384vertex geometry uses17fragments. Whole/delta/clear headers retain session/sequence/discovery/data/presentation revisions and exact base. Completed geometry/topology/aggregate/parent validation precedes atomic state/index publication; incomplete/stale/revoked/conflicting transactions do not expose partial areas. Existing resync/reconnect protection remains.
 
 Hover resolves holes and individual components. Hover highlights matching component's outer+holes; Locals/All viewport-cull components then render every outer/hole as separate closed paths. No connecting lines, fills, colour/width/opacity or tooltip changes. Features/HUD precedence unchanged. SavedData still stores stable Macro/Local IDs, not geometry; no discovery reset/migration. Schema1 old production resources stay valid. No production polygons/profiles/priorities edited.
 
@@ -49,7 +56,7 @@ The two buttons now stay on the far-right rail,2GUI pixels from the edge, beginn
 
 1. Accept/install Core0.15.0 manually on server/all clients first. Keep existing stable IDs, hierarchy, parents, labels/era labels, profiles and priorities. Do not reset discovery.
 2. Keep valid v1 files unchanged. For detailed pilot areas, use a separate schema_version2 file and replace polygon with geometry.outer/holes or geometry.polygons. A file has one schema version; do not mix area field formats within it.
-3. Count every outer+hole toward128rings and all points toward4096 per area; enforce1,179,648/65,536 global totals and512/4096area caps. No coordinate wrapping, Local-as-water-mask or production repair is provided.
+3. Count every outer+hole toward512rings and all points toward16384 per area; enforce1,179,648/65,536 global totals and512/4096area caps. No coordinate wrapping, Local-as-water-mask or production repair is provided.
 4. `/reload`; inspect server resource/area/component/ring errors and `/hj geography status` candidate counts. Invalid reload keeps complete previous state. Check `/hj npc context`, profiles and fixed NPC spawn-time context.
 5. Manually test water/land hole positions, disconnected parts, overlapping priorities, known parent fallback/conflicts, discovered-only hover, all Borders/Features modes and Map Feature location HUD. A known area migrated v1→v2 should keep discovery after restart/reconnect; teachers still cannot discover.
 6. Geography/Developer separately author and approve Europe polygons. This engine release supplies only synthetic tests, no Europe/Japan edits, no profile/priority changes.
@@ -60,7 +67,7 @@ Dense overlap returns many real bounding candidates; an index cannot remove actu
 
 Manual: legacy context/profile/NPC names unchanged; pilot hole interior/edge excludes; either multipart component yields one ID; priority/tie and parent rules unchanged; unknown geography absent from map packets; large reload publishes atomically; Hover/Locals/All/Off show separate coastlines; Features HUD still takes precedence; buttons clear coordinates/compass across resize; students share IDs, teachers do not discover; restart/reconnect/resync preserve state. No automatic installation/live-server change.
 
-## Reproducible synthetic benchmark
+## Core0.15.0 baseline benchmark (historical)
 
 The identical GeographyIndexBenchmarkTest harness runs against new source and exact0.14.2 commitc38e2e688b9ef218d7c53bf6b744d8e33be26d35 on the same GitHub runner/JDK21. Two warmups and median of five measured samples; repeated lookup batches256. Parsing includes JSON parsing, geography validation, ID maps and construction of the ready immutable index; it excludes full NPC/economy composition validation and client reconstruction. Existing composition safety caps remain unchanged. Index duration is recorded separately during construction (a single constructor sample, not a repeated-timing median); baseline has no index. Single lookup timings are noise-sensitive. Coarse areas have4vertices/1ring; detailed v2 areas64vertices/2rings including a hole. Fixtures split over32area resources and remain within quotas.
 

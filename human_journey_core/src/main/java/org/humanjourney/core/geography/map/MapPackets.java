@@ -9,7 +9,7 @@ import org.humanjourney.core.geography.DiscoveryLedger;
 import org.humanjourney.core.water.WaterGeography.Point;
 /** Geography-map protocol2: small areas batch normally; a large feature is bounded serialized fragments. */
 public final class MapPackets {
- public static final int AREAS_PER_PACKET=8,REMOVALS_PER_PACKET=64,MAX_BYTES=48*1024,MAX_PARTS=8192,MAX_AREAS=4608,CHUNK_BYTES=16*1024,MAX_AREA_BYTES=80*1024,MAX_TRANSFER_BYTES=24*1024*1024;
+ public static final int AREAS_PER_PACKET=8,REMOVALS_PER_PACKET=64,MAX_BYTES=48*1024,MAX_PARTS=8192,MAX_AREAS=4608,CHUNK_BYTES=16*1024,MAX_AREA_BYTES=288*1024,MAX_TRANSFER_BYTES=24*1024*1024;
  public enum Mode{FULL,DELTA,CLEAR}public enum Request{INSTANCE}
  public record Header(UUID session,long sequence,long discovery,long data,long presentation){public Header{if(session==null||sequence<=0||discovery<0||data<0||presentation<0)throw new IllegalArgumentException("invalid geography revision");}}
  public record Fragment(MapArea.Key key,int index,int count,int length,byte[] data){public Fragment{data=data.clone();if(key==null||key.kind()==null||!DiscoveryLedger.validId(key.id())||length<1||length>MAX_AREA_BYTES||count!=(length+CHUNK_BYTES-1)/CHUNK_BYTES||index<0||index>=count||data.length!=Math.min(CHUNK_BYTES,length-index*CHUNK_BYTES))throw new IllegalArgumentException("invalid geography fragment");}@Override public byte[] data(){return data.clone();}@Override public boolean equals(Object o){return o instanceof Fragment f&&key.equals(f.key)&&index==f.index&&count==f.count&&length==f.length&&Arrays.equals(data,f.data);}@Override public int hashCode(){return Objects.hash(key,index,count,length,Arrays.hashCode(data));}}
