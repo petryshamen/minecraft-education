@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.14
+
+- Added the 33 exact approved Africa water Map Features (13 marine bodies, 20 lakes/reservoirs), 193 island holes / 20,557 vertices, plus supplied source/license notices. Combined catalog 113 features; all 80 Japan/Europe definitions and all 225 Macro/Local geography resources remain byte-identical. Shared Red Sea/Aden/Suez/Aqaba IDs are global; no river, ocean, canal, discovery reset or unrelated gameplay change.
+- Verified installed/released Core 0.15.3 identity. Structural checks pass 3,207 assertions, 188 independent island samples and 11 overlap pairs; complete released-Core catalog passes 2,743 fixtures / 5,952 behavior assertions. No coordinate edits, Forge reload, network session or Minecraft terrain/gameplay test; manual acceptance pending. Server and participating clients require matching Core 0.15.3.
+
 ## 0.5.13
 
 - Migrated exactly 190 existing European Local geometries to the approved schema-v2 resources, preserving all IDs/metadata/profiles/priorities/parents. Replaced five aggregates with 190 one-area files and two residual aggregates (87 unchanged records); final 39 Macros / 1,549 Locals / 225 resources. All 80 Water Features and unrelated gameplay/discovery data remain unchanged; no reset or new geography IDs.
