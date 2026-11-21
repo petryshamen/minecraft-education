@@ -1,3 +1,7 @@
+# 0.15.2
+
+- Moved fullscreen HJ Borders/Features controls between screen centre and right edge; replaced the extreme-edge-only placement with nearby collision-safe fallbacks so right-side widgets do not unnecessarily hide them. No HUD, discovery, geography or gameplay changes.
+
 # 0.15.1
 
 - Raised v2 Macro/Local area capacity to512rings/16384vertices, JSON resource2MiB and serialized area288KiB; aggregate quotas, component indexes, fragment/packet/staging bounds and schema1 unchanged. Quota errors include actual counts/limits and source provenance.

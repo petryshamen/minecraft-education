@@ -50,9 +50,9 @@ The discovered client MapSpatialIndex uses the same low-level component BVH. Its
 
 Hover resolves holes and individual components. Hover highlights matching component's outer+holes; Locals/All viewport-cull components then render every outer/hole as separate closed paths. No connecting lines, fills, colour/width/opacity or tooltip changes. Features/HUD precedence unchanged. SavedData still stores stable Macro/Local IDs, not geometry; no discovery reset/migration. Schema1 old production resources stay valid. No production polygons/profiles/priorities edited.
 
-## Map buttons
+## Map buttons — 0.15.2
 
-The two buttons now stay on the far-right rail,2GUI pixels from the edge, beginning below compass at y108/132. If native widgets occupy that slot, they move down the SAME right rail; there is no leftward fallback over Xaero's centred coordinate readout. No safe right slot means controls hide for that frame and config remains usable. Single-button legacy helper is unchanged. At1000GUI width, x880 (previous preferred874, but previous fallback could shift much farther left). Test actual GUI scales manually; no live visual testing performed.
+HJ Borders and HJ Features now centre on75%of the GUI width, between centre and right edge, at y64/88 below the top coordinate strip. At1000GUI width, x691 (buttons118wide). Bounded nearby right-half columns and lower rows avoid native widgets/compass; an occupied extreme right rail no longer hides both controls. Tiny or fully obstructed screens may still lack safe space. Native menus/map readiness and existing client enable settings still apply. Single-control legacy helper, mode semantics/input/render hooks and gameplay remain unchanged. Actual visual/click acceptance is manual.
 
 ## Geography handoff / Europe refinement pilot
 

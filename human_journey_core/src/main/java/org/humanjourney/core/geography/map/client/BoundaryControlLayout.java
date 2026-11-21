@@ -9,7 +9,23 @@ public final class BoundaryControlLayout {
  private static Optional<Rect> find(int width,int height,List<Rect> occupied,int groupHeight){if(width<WIDTH+MARGIN*2||height<groupHeight+MARGIN*2)return Optional.empty();var blocked=new ArrayList<>(occupied);blocked.add(compass(width,height));for(int row=0;row<8;row++){int y=MARGIN+row*(groupHeight+4);if(y+groupHeight>height-MARGIN)break;int inset=y<COMPASS_HEIGHT?COMPASS_WIDTH:0;for(int column=0;column<32;column++){int x=width-WIDTH-MARGIN-inset-column*(WIDTH+4);if(x<MARGIN)break;var r=new Rect(x,y,WIDTH,groupHeight);if(blocked.stream().noneMatch(r::overlaps))return Optional.of(r);}}return Optional.empty();}
  public static Optional<Rect> place(int width,int height,List<Rect> occupied){return find(width,height,occupied,HEIGHT);}
  public static Optional<List<Rect>> placePair(int width,int height,List<Rect> occupied){
-  // Strict far-right rail: never fall back left into Xaero's centred coordinates.
-  int x=width-WIDTH-2,groupHeight=HEIGHT*2+4;if(x<MARGIN)return Optional.empty();for(int y=COMPASS_HEIGHT+4;y+groupHeight<=height-MARGIN;y+=groupHeight+4){var r=new Rect(x,y,WIDTH,groupHeight);if(!r.overlaps(compass(width,height))&&occupied.stream().noneMatch(r::overlaps))return Optional.of(List.of(new Rect(x,y,WIDTH,HEIGHT),new Rect(x,y+HEIGHT+4,WIDTH,HEIGHT)));}return Optional.empty();}
+  int groupHeight=HEIGHT*2+4,firstY=64;
+  if(width<WIDTH+MARGIN*2||height<firstY+groupHeight+MARGIN)return Optional.empty();
+  // Centre the pair three quarters across the screen, below the coordinate strip.
+  // Try nearby right-half columns as well: an occupied screen-edge rail must not hide it.
+  int minX=Math.max(MARGIN,width/2+MARGIN),maxX=width-WIDTH-MARGIN;
+  if(minX>maxX)minX=MARGIN;
+  int preferred=Math.max(minX,Math.min(maxX,(int)Math.round(width*.75)-WIDTH/2));
+  var columns=new LinkedHashSet<Integer>();columns.add(preferred);
+  columns.add(Math.min(maxX,preferred+WIDTH+MARGIN));columns.add(Math.max(minX,preferred-WIDTH-MARGIN));
+  for(int row=0;row<32;row++){
+   int y=firstY+row*(HEIGHT+4);if(y+groupHeight>height-MARGIN)break;
+   for(int x:columns){var r=new Rect(x,y,WIDTH,groupHeight);
+    if(!r.overlaps(compass(width,height))&&occupied.stream().noneMatch(r::overlaps))
+     return Optional.of(List.of(new Rect(x,y,WIDTH,HEIGHT),new Rect(x,y+HEIGHT+4,WIDTH,HEIGHT)));
+   }
+  }
+  return Optional.empty();
+ }
  private BoundaryControlLayout(){}
 }

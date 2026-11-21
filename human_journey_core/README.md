@@ -1,6 +1,8 @@
-# Human Journey Core 0.15.1
+# Human Journey Core 0.15.2
 
-**Verified Core 0.15.1:** [Actions build 44841342335](https://github.com/petryshamen/minecraft-education/actions/runs/44841342335), source `48caf041085bc71755efa2cb421df1dd293fc1d0`. 500 tests passed, zero failures; 15 no-world Forge checks. 329 prior runtime classes byte-identical. JAR SHA-256 `ff05f1206a753b32beb0e0cb4bbf1ae0b85ec0f87236edaad04abfac952532b6`. No Minecraft gameplay testing, installation, production-data or live-server changes.
+Button-placement patch only: HJ Borders/Features are centred three quarters across the fullscreen map, below the coordinate strip (y64/88), with nearby right-half collision fallbacks. The extreme-edge-only placement is removed. Geography-map protocol3 and all gameplay/data/HUD behaviour remain unchanged. No config or datapack migration.
+
+**Previous 0.15.1 verification:** [Actions build 44841342335](https://github.com/petryshamen/minecraft-education/actions/runs/44841342335), source `48caf041085bc71755efa2cb421df1dd293fc1d0`. 500 tests passed, zero failures; 15 no-world Forge checks. 329 prior runtime classes byte-identical. JAR SHA-256 `ff05f1206a753b32beb0e0cb4bbf1ae0b85ec0f87236edaad04abfac952532b6`. No Minecraft gameplay testing, installation, production-data or live-server changes.
 
 Macro/Local geometry capacity only: schema2 **512rings /16384vertices per area**, retaining catalog quotas and indexed resolution. JSON2MiB/resource and serialized area288KiB;16KiB fragments,48KiB packets,24MiB staging unchanged. Geography-map protocol3 requires matching updated server/clients; context/discovery and Feature channels unchanged. Test-only frozen Europe review validates original coordinates, not content/coverage approval. **[Current contract, limits and Geography handoff](GEOGRAPHY-GEOMETRY.md)**. No production data, gameplay or automatic installation.
 

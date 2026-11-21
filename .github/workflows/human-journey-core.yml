@@ -41,23 +41,9 @@ jobs:
           grep -R 'MAP_FEATURE_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'MAP_GEOMETRY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'GEOGRAPHY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
-      - name: Check out exact 0.15.0 benchmark reference
-        uses: actions/checkout@v4
-        with:
-          ref: 2810f7c240af0e0086cedd5439dfbff994b1fcee
-          path: baseline-0150
-      - name: Compare identical synthetic benchmark against exact 0.15.0
-        working-directory: baseline-0150/human_journey_core
-        run: |
-          cp ../../human_journey_core/src/test/java/org/humanjourney/core/geography/GeographyCapacityBenchmarkTest.java src/test/java/org/humanjourney/core/geography/
-          mkdir -p src/test/resources/geography
-          cp ../../human_journey_core/src/test/resources/geography/europe-refinement-v1-fixture.zip src/test/resources/geography/
-          chmod +x gradlew
-          ./gradlew --no-daemon test --tests org.humanjourney.core.geography.GeographyCapacityBenchmarkTest
-          cp build/reports/geography-capacity-benchmark.json ../../human_journey_core/build/reports/geography-capacity-benchmark-baseline.json
       - uses: actions/upload-artifact@v4
         with:
-          name: HumanJourneyCore-0.15.1
+          name: HumanJourneyCore-0.15.2
           if-no-files-found: error
           path: |
             human_journey_core/build/libs/*.jar
