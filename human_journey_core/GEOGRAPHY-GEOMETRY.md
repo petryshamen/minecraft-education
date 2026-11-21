@@ -50,9 +50,9 @@ The discovered client MapSpatialIndex uses the same low-level component BVH. Its
 
 Hover resolves holes and individual components. Hover highlights matching component's outer+holes; Locals/All viewport-cull components then render every outer/hole as separate closed paths. No connecting lines, fills, colour/width/opacity or tooltip changes. Features/HUD precedence unchanged. SavedData still stores stable Macro/Local IDs, not geometry; no discovery reset/migration. Schema1 old production resources stay valid. No production polygons/profiles/priorities edited.
 
-## Map buttons — 0.15.2
+## Map buttons — 0.15.3
 
-HJ Borders and HJ Features now centre on75%of the GUI width, between centre and right edge, at y64/88 below the top coordinate strip. At1000GUI width, x691 (buttons118wide). Bounded nearby right-half columns and lower rows avoid native widgets/compass; an occupied extreme right rail no longer hides both controls. Tiny or fully obstructed screens may still lack safe space. Native menus/map readiness and existing client enable settings still apply. Single-control legacy helper, mode semantics/input/render hooks and gameplay remain unchanged. Actual visual/click acceptance is manual.
+HJ Borders/Features are anchored at top y8/32GUI units, horizontally between centre and right corner beside centred coordinates. At1000GUI width x703; at the supplied screenshot-equivalent472GUI width x307. Pair placement reserves a compact36×36GUI-unit corner compass box; the legacy single-control helper retains its original reservation. Collision fallback stays horizontal and never lowers the buttons into the map. Fully obstructed/tiny screens can still lack safe space; native menu/readiness/config gates remain. Styling, label size, mode logic and input/render hooks are unchanged. Long coordinate text/resource-pack fonts and other UI layouts still need manual visual acceptance.
 
 ## Geography handoff / Europe refinement pilot
 

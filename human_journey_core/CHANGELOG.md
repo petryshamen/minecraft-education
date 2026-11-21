@@ -1,3 +1,7 @@
+# 0.15.3
+
+- Anchored fullscreen HJ buttons to the top beside coordinates (y8/32); corrected the pair-only compass reservation and removed downward fallback. Added screenshot-size regression coverage. No gameplay, HUD, discovery or protocol changes.
+
 # 0.15.2
 
 - Moved fullscreen HJ Borders/Features controls between screen centre and right edge; replaced the extreme-edge-only placement with nearby collision-safe fallbacks so right-side widgets do not unnecessarily hide them. No HUD, discovery, geography or gameplay changes.

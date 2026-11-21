@@ -1,6 +1,8 @@
-# Human Journey Core 0.15.2
+# Human Journey Core 0.15.3
 
-Verified0.15.2: [Actions build44871786464](https://github.com/petryshamen/minecraft-education/actions/runs/44871786464), source `2da36e2a0d143d3ed61b1bdc226dd85e6ce33f78`.503tests/15no-world checks passed; only BoundaryControlLayout bytecode changed,337prior classes byte-identical. Visual/gameplay testing remains manual.
+Fullscreen button correction: HJ Borders/Features are anchored at the top (y8/32), just right of centred coordinates. A compact36GUI-unit compass guard replaces the oversized pair-only reservation; collision fallback stays horizontal, never down into the map. At the screenshot-equivalent472×248GUI size the pair starts x307. Single-control legacy layout, appearance, input, modes, protocols, geography and gameplay unchanged.
+
+Previous0.15.2 verification: [Actions build44871786464](https://github.com/petryshamen/minecraft-education/actions/runs/44871786464), source `2da36e2a0d143d3ed61b1bdc226dd85e6ce33f78`.503tests/15no-world checks passed; only BoundaryControlLayout bytecode changed,337prior classes byte-identical. Visual/gameplay testing remains manual.
 
 
 Button-placement patch only: HJ Borders/Features are centred three quarters across the fullscreen map, below the coordinate strip (y64/88), with nearby right-half collision fallbacks. The extreme-edge-only placement is removed. Geography-map protocol3 and all gameplay/data/HUD behaviour remain unchanged. No config or datapack migration.
