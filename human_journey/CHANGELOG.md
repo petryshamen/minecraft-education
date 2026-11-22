@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.15
+
+- Added the 93 exact approved Asia water Map Features (59 marine, 34 inland), 1,729 island holes / 92,275 vertices, plus supplied source/license notices. Combined catalog 206 features. Reconciled the older review baseline with integrated Africa 0.5.14; all 113 existing water files, including all seven Japan resources, remain byte-identical. Seto Inland Sea is a new ID; shared cross-continent IDs stay unique. No Macro/Local, water-quality, economy, progression or discovery-state changes.
+- Schema/topology checks pass 15,842 assertions, 1,651 independent land/island samples and 91 overlap pairs. Released Core 0.15.3 accepts the full catalog: 12,194 fixtures / 28,041 assertions including antimeridian parts and shared multipart projection. All coordinates/metadata preserved exactly; no seam bridge, geometry repair, mod modification, Forge reload or gameplay/terrain/network test. Manual acceptance pending; matching Core 0.15.3 required on server/clients.
+
 ## 0.5.14
 
 - Added the 33 exact approved Africa water Map Features (13 marine bodies, 20 lakes/reservoirs), 193 island holes / 20,557 vertices, plus supplied source/license notices. Combined catalog 113 features; all 80 Japan/Europe definitions and all 225 Macro/Local geography resources remain byte-identical. Shared Red Sea/Aden/Suez/Aqaba IDs are global; no river, ocean, canal, discovery reset or unrelated gameplay change.
