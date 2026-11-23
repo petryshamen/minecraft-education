@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.5.15 — Asia Water Map Features v1 (Core 0.15.3 required)"
+    "description": "Human Journey v0.5.16 — Oceania Water Map Features v1 (Core 0.15.3 required)"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.5.15"
+    "version": "0.5.16"
   }
 }
