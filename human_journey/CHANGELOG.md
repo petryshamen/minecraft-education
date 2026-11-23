@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.17
+
+- Added the 119 exact North America water Map Features (63 marine, 56 inland), 1,320 holes / 94,419 vertices, plus supplied source/license notices. Combined catalog 373 features; all 254 previous definitions, including completed Oceania and Japan, and all 225 Macro/Local files remain byte-identical. Shared Bering/Chukchi/Greenland/Denmark and Caribbean basin IDs stay unique. No profiles, NPC/economy, water-quality, progression or discovery-state changes.
+- Structural checks pass 10,572 assertions, 1,195 independent land/island samples and 60 overlap pairs. Released Core 0.15.3 accepts all 373 definitions: 7,749 fixtures / 18,328 assertions, including shared multipart projection and prior antimeridian waters. No geometry edits, Core changes, Forge reload, network or Minecraft gameplay/terrain test. Manual acceptance remains pending; matching Core 0.15.3 required on server/clients.
+
 ## 0.5.16
 
 - Added the 48 exact approved Oceania water Map Features (19 marine, 29 inland), 313 island holes / 21,443 vertices, plus supplied source/license notices. Combined catalog 254 features; all 206 previous files, all seven Japan definitions, all 225 Macro/Local files and unrelated gameplay/discovery state remain unchanged. Timor/Arafura are reused, Australian Lake Albert has a distinct ID, and Koro Sea/Lake Eyre retain their two-part geometry. Australian ephemeral salt-lake features represent named lake beds, not guaranteed wet terrain.
