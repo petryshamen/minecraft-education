@@ -1,3 +1,8 @@
+# 0.16.0
+
+- Added data-driven read-only Civilization Progress canvas with multi-input prerequisite arrows, Era sections, server-authoritative shared score/visibility snapshots and additive advancements/key access. No progression writes or migration.
+- Added separate actual-Era0 convergence example, locked Era1 placeholder, schema/reference and bounded validation/network/UI regression coverage. Production progression/datapack and optional-mod systems unchanged.
+
 # 0.15.3
 
 - Anchored fullscreen HJ buttons to the top beside coordinates (y8/32); corrected the pair-only compass reservation and removed downward fallback. Added screenshot-size regression coverage. No gameplay, HUD, discovery or protocol changes.

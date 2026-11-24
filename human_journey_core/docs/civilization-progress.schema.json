@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://humanjourney.example/schema/civilization-progress-v1.json",
+  "title": "Human Journey Civilization Progress \u2014 authoring schema1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "title",
+    "eras",
+    "nodes",
+    "connections"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "eras": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "color",
+          "background",
+          "x_start",
+          "x_end",
+          "order"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 96,
+            "pattern": "^[a-z0-9_.-]+(:[a-z0-9_./-]+)?$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "background": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "x_start": {
+            "type": "number",
+            "minimum": -100000,
+            "maximum": 100000
+          },
+          "x_end": {
+            "type": "number",
+            "minimum": -100000,
+            "maximum": 100000
+          },
+          "order": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "visible_when": {
+            "type": "array",
+            "maxItems": 16,
+            "items": {
+              "$ref": "#/$defs/reference"
+            }
+          }
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "maxItems": 512,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "era",
+          "title",
+          "description",
+          "icon",
+          "x",
+          "y",
+          "category",
+          "completion"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 96,
+            "pattern": "^[a-z0-9_.-]+(:[a-z0-9_./-]+)?$"
+          },
+          "era": {
+            "type": "string",
+            "maxLength": 96,
+            "pattern": "^[a-z0-9_.-]+(:[a-z0-9_./-]+)?$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048
+          },
+          "icon": {
+            "type": "string",
+            "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$",
+            "maxLength": 128
+          },
+          "x": {
+            "type": "number",
+            "minimum": -100000,
+            "maximum": 100000
+          },
+          "y": {
+            "type": "number",
+            "minimum": -100000,
+            "maximum": 100000
+          },
+          "category": {
+            "enum": [
+              "main",
+              "side",
+              "discovery"
+            ]
+          },
+          "completion": {
+            "$ref": "#/$defs/reference"
+          },
+          "requires": {
+            "type": "array",
+            "maxItems": 32,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "maxLength": 96,
+              "pattern": "^[a-z0-9_.-]+(:[a-z0-9_./-]+)?$"
+            }
+          },
+          "available_when": {
+            "type": "array",
+            "maxItems": 16,
+            "items": {
+              "$ref": "#/$defs/reference"
+            }
+          },
+          "visible_when": {
+            "type": "array",
+            "maxItems": 16,
+            "items": {
+              "$ref": "#/$defs/reference"
+            }
+          },
+          "placeholder": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "connections": {
+      "type": "array",
+      "maxItems": 2048,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "from",
+          "to",
+          "kind"
+        ],
+        "properties": {
+          "from": {
+            "type": "string",
+            "maxLength": 96,
+            "pattern": "^[a-z0-9_.-]+(:[a-z0-9_./-]+)?$"
+          },
+          "to": {
+            "type": "string",
+            "maxLength": 96,
+            "pattern": "^[a-z0-9_.-]+(:[a-z0-9_./-]+)?$"
+          },
+          "kind": {
+            "enum": [
+              "prerequisite",
+              "visual"
+            ]
+          },
+          "route": {
+            "type": "array",
+            "maxItems": 16,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "number",
+                "minimum": -100000,
+                "maximum": 100000
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "reference": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "always",
+                "never"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "objective",
+            "holder",
+            "min",
+            "max"
+          ],
+          "properties": {
+            "type": {
+              "const": "score"
+            },
+            "objective": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_.-]{1,16}$"
+            },
+            "holder": {
+              "type": "string",
+              "pattern": "^#[A-Za-z0-9_.-]{1,39}$"
+            },
+            "min": {
+              "type": "integer",
+              "minimum": -2147483648,
+              "maximum": 2147483647
+            },
+            "max": {
+              "type": "integer",
+              "minimum": -2147483648,
+              "maximum": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$comment": "Core additionally validates ID uniqueness, existing icon items, score min<=max, Era ranges, DAG cycles, explicit requires/prerequisite-edge equivalence, placeholder never gates, text controls, JSON depth/size and conservative2MiB sanitised UTF-8 envelope. AND only; no OR or client-side completion authority."
+}

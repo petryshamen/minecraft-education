@@ -1,4 +1,6 @@
-# Human Journey Core 0.15.3
+# Human Journey Core 0.16.0
+
+New read-only Civilization Progress graph: multiple explicit prerequisites, continuous cross-Era canvas, server-authoritative shared-score snapshots, hidden-content filtering and additive vanilla advancement/key access. No progression migration or gameplay changes. [Developer contract, schema and manual checklist](CIVILIZATION-PROGRESS.md). Example graph is a separate optional datapack, not production content.
 
 Verified0.15.3: [Actions build44961394509](https://github.com/petryshamen/minecraft-education/actions/runs/44961394509), source `49dd222b6f7aaeb0291971fbbb627c569a6e48a6`.504tests/15no-world checks passed; only BoundaryControlLayout bytecode changed,337prior classes byte-identical. Visual/gameplay testing remains manual.
 
