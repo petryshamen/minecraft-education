@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.18
+
+- Added the 62 exact approved South America water Map Features (25 marine/estuary, 37 inland), 86 holes / 13,731 vertices, plus supplied source/license notices. Combined catalog 435; all 373 old water definitions, 225 Macro/Local files, profiles, progression and discovery data remain unchanged. Review-only Itaipu/Sobradinho/Jupia drafts are excluded; Drake/Scotia are shared global IDs for future Antarctica reuse. No geometry edits or engine changes.
+- Structural checks pass 1,502 assertions, 85 independent land/island samples and nine overlap checks; released Core 0.15.3 accepts the complete catalog with 1,258 fixtures / 2,766 assertions. Retained source limitations: six coarse GSHHG lakes, variable/dry basins, and old Caribbean coverage of Maracaibo (new lake wins hover; broad-sea discovery may persist). No Forge reload or Minecraft gameplay/terrain/network testing; manual acceptance pending. Matching Core 0.15.3 required on server/clients.
+
 ## 0.5.17
 
 - Added the 119 exact North America water Map Features (63 marine, 56 inland), 1,320 holes / 94,419 vertices, plus supplied source/license notices. Combined catalog 373 features; all 254 previous definitions, including completed Oceania and Japan, and all 225 Macro/Local files remain byte-identical. Shared Bering/Chukchi/Greenland/Denmark and Caribbean basin IDs stay unique. No profiles, NPC/economy, water-quality, progression or discovery-state changes.

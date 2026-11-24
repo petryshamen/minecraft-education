@@ -1,0 +1,1 @@
+{"id":"lake_fagnano","label":"Lake Fagnano / Cami","feature_type":"lake","priority":58,"discovery_radius":4,"schema_version":2,"dimension":"minecraft:overworld","geometry":{"type":"polygon","outer":[[-4697.258667,3720.286822],[-4682.183134,3726.373956],[-4648.466978,3727.246199],[-4606.236467,3726.810044],[-4592.658978,3722.429645]],"holes":[]}}

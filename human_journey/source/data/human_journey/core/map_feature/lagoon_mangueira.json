@@ -1,0 +1,1 @@
+{"id":"lagoon_mangueira","label":"Lagoa Mangueira","feature_type":"lake","priority":58,"discovery_radius":3,"schema_version":2,"dimension":"minecraft:overworld","geometry":{"type":"polygon","outer":[[-3599.22729,2263.665801],[-3588.152866,2239.469022],[-3592.438511,2239.165645],[-3627.121801,2287.653956],[-3626.458044,2287.881489]],"holes":[]}}

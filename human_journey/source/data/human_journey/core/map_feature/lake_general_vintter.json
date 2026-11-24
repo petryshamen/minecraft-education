@@ -1,0 +1,1 @@
+{"id":"lake_general_vintter","label":"Lake General Vintter / Palena","feature_type":"lake","priority":58,"discovery_radius":3,"schema_version":2,"dimension":"minecraft:overworld","geometry":{"type":"polygon","outer":[[-4875.64329,2996.641178],[-4903.025801,2996.641178],[-4894.890667,3001.912866],[-4881.180467,3001.761178],[-4881.180467,3001.666355]],"holes":[]}}

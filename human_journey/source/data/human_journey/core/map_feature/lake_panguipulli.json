@@ -1,0 +1,1 @@
+{"id":"lake_panguipulli","label":"Lake Panguipulli","feature_type":"lake","priority":58,"discovery_radius":3,"schema_version":2,"dimension":"minecraft:overworld","geometry":{"type":"polygon","outer":[[-4938.486511,2705.692467],[-4939.377801,2710.850355],[-4923.809178,2720.180156],[-4930.69271,2704.76329]],"holes":[]}}
