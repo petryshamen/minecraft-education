@@ -41,9 +41,10 @@ jobs:
           grep -R 'MAP_FEATURE_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'MAP_GEOMETRY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'GEOGRAPHY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
+          grep -R 'CIVILIZATION_PROGRESS_SMOKE_OK' build/datagen-smoke/logs/latest.log
       - uses: actions/upload-artifact@v4
         with:
-          name: HumanJourneyCore-0.15.3
+          name: HumanJourneyCore-0.16.0
           if-no-files-found: error
           path: |
             human_journey_core/build/libs/*.jar
@@ -52,4 +53,5 @@ jobs:
             human_journey_core/build/reports/geography-index-benchmark*.json
             human_journey_core/build/reports/geography-capacity-benchmark*.json
             human_journey_core/build/reports/europe-capacity-pipeline.json
+            human_journey_core/build/reports/civilization-progress-benchmark.json
             human_journey_core/build/datagen-smoke/logs/latest.log
