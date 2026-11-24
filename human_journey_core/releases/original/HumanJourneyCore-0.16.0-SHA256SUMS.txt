@@ -1,0 +1,3 @@
+705bf8a2aa837fb953e5f796459acadfd7f4b741158ab36b4fbd7c6fe064649e  human_journey_core-0.16.0.jar
+aa0510f303590fd194bf07952768c9d6d063d517740c933c50eba0874727a82a  HumanJourneyCore-0.16.0-source.zip
+21ac39dcb1b1eee515f126b1d25c0bce6eda620d42adbe4eaa483e1e57f12586  HumanJourneyCore-0.16.0-example-progress-datapack.zip

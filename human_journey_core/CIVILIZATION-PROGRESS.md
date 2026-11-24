@@ -85,3 +85,9 @@ Developer integration:
 - Have another Student join and compare shared state with a Teacher; progress changes update within roughly1second. Role removal clears presentation; relog/restart reconstructs it from existing scores.
 - Test hidden content visibility/revocation, valid graph reload and invalid graph rollback; no secret descriptions/geometry/IDs should arrive early.
 - Confirm existing HJ systems and Xaero controls behave unchanged. Actual appearance, UI interaction, world persistence/TPS/FPS are manual tests, not claims made by unit/native checks.
+
+## Verified automated result
+
+Verified0.16.0: [Actions build45300539036](https://github.com/petryshamen/minecraft-education/actions/runs/45300539036), source `26a10502424fc0bce0cb9cc0f9249d0cf7c51976`.550tests pass (504unchanged prior+46new), zero failures;16no-world Forge checks. 337prior runtime classes byte-identical; only existing bootstrap class adds one isolated registration. Runtime SHA-256 `705bf8a2aa837fb953e5f796459acadfd7f4b741158ab36b4fbd7c6fe064649e`. No live Minecraft gameplay/visual testing, installation or production progression/data changes.
+
+512nodes /2048connections: parse+validate+conservative envelope median28.925ms; projection3.373ms; transfer preparation5.354ms; sanitized snapshot354366UTF-8 bytes in22fragments. Two warmups/median5 on GitHub runner; no gameplay/TPS/FPS/real UI rendering measurement.

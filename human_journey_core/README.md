@@ -1,5 +1,8 @@
 # Human Journey Core 0.16.0
 
+Verified0.16.0: [Actions build45300539036](https://github.com/petryshamen/minecraft-education/actions/runs/45300539036), source `26a10502424fc0bce0cb9cc0f9249d0cf7c51976`.550tests pass (504unchanged prior+46new), zero failures;16no-world Forge checks. 337prior runtime classes byte-identical; only existing bootstrap class adds one isolated registration. Runtime SHA-256 `705bf8a2aa837fb953e5f796459acadfd7f4b741158ab36b4fbd7c6fe064649e`. No live Minecraft gameplay/visual testing, installation or production progression/data changes.
+
+
 New read-only Civilization Progress graph: multiple explicit prerequisites, continuous cross-Era canvas, server-authoritative shared-score snapshots, hidden-content filtering and additive vanilla advancement/key access. No progression migration or gameplay changes. [Developer contract, schema and manual checklist](CIVILIZATION-PROGRESS.md). Example graph is a separate optional datapack, not production content.
 
 Verified0.15.3: [Actions build44961394509](https://github.com/petryshamen/minecraft-education/actions/runs/44961394509), source `49dd222b6f7aaeb0291971fbbb627c569a6e48a6`.504tests/15no-world checks passed; only BoundaryControlLayout bytecode changed,337prior classes byte-identical. Visual/gameplay testing remains manual.
