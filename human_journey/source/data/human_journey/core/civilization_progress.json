@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "title": "Civilization Progress",
+  "eras": [
+    {
+      "id": "era_0",
+      "title": "Era 0 — The First Camp",
+      "color": "#E4B767",
+      "background": "#32281D",
+      "x_start": 0,
+      "x_end": 1432,
+      "order": 0
+    },
+    {
+      "id": "era_1",
+      "title": "Era 1 — Future",
+      "color": "#7EB6E8",
+      "background": "#192B40",
+      "x_start": 1444,
+      "x_end": 1628,
+      "order": 1
+    }
+  ],
+  "nodes": [
+    {
+      "id": "human_journey:first_flame",
+      "era": "era_0",
+      "title": "The First Flame",
+      "description": "Create a campfire.",
+      "icon": "minecraft:campfire",
+      "x": 16,
+      "y": 0,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#first_flame",
+        "min": 1,
+        "max": 1
+      },
+      "requires": []
+    },
+    {
+      "id": "human_journey:ready_to_eat",
+      "era": "era_0",
+      "title": "Ready to Eat",
+      "description": "Obtain prepared food.",
+      "icon": "minecraft:cooked_salmon",
+      "x": 192,
+      "y": 0,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#ready_to_eat",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:first_flame"
+      ]
+    },
+    {
+      "id": "human_journey:water_for_life",
+      "era": "era_0",
+      "title": "Water for Life",
+      "description": "Obtain purified drinking water.",
+      "icon": "toughasnails:purified_water_bottle",
+      "x": 368,
+      "y": 0,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#water_for_life",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:ready_to_eat"
+      ]
+    },
+    {
+      "id": "human_journey:reliable_source",
+      "era": "era_0",
+      "title": "A Reliable Source",
+      "description": "Complete the first trade with a trusted production NPC.",
+      "icon": "minecraft:leather",
+      "x": 544,
+      "y": 0,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#reliable_source",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:water_for_life"
+      ]
+    },
+    {
+      "id": "human_journey:rest_at_last",
+      "era": "era_0",
+      "title": "Rest at Last",
+      "description": "Sleep in a bed.",
+      "icon": "minecraft:white_bed",
+      "x": 720,
+      "y": 0,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#rest_at_last",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:reliable_source"
+      ]
+    },
+    {
+      "id": "human_journey:first_wood",
+      "era": "era_0",
+      "title": "First Wood",
+      "description": "Obtain a log.",
+      "icon": "minecraft:oak_log",
+      "x": 16,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#first_wood",
+        "min": 1,
+        "max": 1
+      },
+      "requires": []
+    },
+    {
+      "id": "human_journey:place_to_work",
+      "era": "era_0",
+      "title": "A Place to Work",
+      "description": "Craft a crafting table.",
+      "icon": "minecraft:crafting_table",
+      "x": 192,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#place_to_work",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:first_wood"
+      ]
+    },
+    {
+      "id": "human_journey:first_tool",
+      "era": "era_0",
+      "title": "First Tool",
+      "description": "Craft a wooden pickaxe.",
+      "icon": "minecraft:wooden_pickaxe",
+      "x": 368,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#first_tool",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:place_to_work"
+      ]
+    },
+    {
+      "id": "human_journey:stone_age",
+      "era": "era_0",
+      "title": "Stone Age",
+      "description": "Obtain cobblestone.",
+      "icon": "minecraft:cobblestone",
+      "x": 544,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#stone_age",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:first_tool"
+      ]
+    },
+    {
+      "id": "human_journey:better_edge",
+      "era": "era_0",
+      "title": "A Better Edge",
+      "description": "Craft a stone axe.",
+      "icon": "minecraft:stone_axe",
+      "x": 720,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#better_edge",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:stone_age"
+      ]
+    },
+    {
+      "id": "human_journey:dressed_for_wild",
+      "era": "era_0",
+      "title": "Dressed for the Wild",
+      "description": "Wear leather, wool or leaf clothing.",
+      "icon": "minecraft:leather_chestplate",
+      "x": 896,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#dressed_for_wild",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:better_edge"
+      ]
+    },
+    {
+      "id": "human_journey:carry_what_you_can",
+      "era": "era_0",
+      "title": "Carry What You Can",
+      "description": "Craft a bundle.",
+      "icon": "minecraft:bundle",
+      "x": 1072,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#carry_what_you_can",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:dressed_for_wild"
+      ]
+    },
+    {
+      "id": "human_journey:beyond_camp",
+      "era": "era_0",
+      "title": "Beyond the Camp",
+      "description": "Travel at least 500 blocks from the first camp.",
+      "icon": "minecraft:compass",
+      "x": 16,
+      "y": 340,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#beyond_camp",
+        "min": 1,
+        "max": 1
+      },
+      "requires": []
+    },
+    {
+      "id": "human_journey:stranger_from_afar",
+      "era": "era_0",
+      "title": "A Stranger from Afar",
+      "description": "Meet Jengo, the traveller.",
+      "icon": "minecraft:name_tag",
+      "x": 192,
+      "y": 340,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#stranger_from_afar",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:beyond_camp"
+      ]
+    },
+    {
+      "id": "human_journey:land_beyond",
+      "era": "era_0",
+      "title": "The Land Beyond",
+      "description": "Hear Jengo's story about lands to the north.",
+      "icon": "minecraft:book",
+      "x": 368,
+      "y": 340,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#land_beyond",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:stranger_from_afar"
+      ]
+    },
+    {
+      "id": "human_journey:new_continent",
+      "era": "era_0",
+      "title": "A New Continent",
+      "description": "Reach Europe after learning about it from Jengo.",
+      "icon": "minecraft:map",
+      "x": 544,
+      "y": 340,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#new_continent",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:land_beyond"
+      ]
+    },
+    {
+      "id": "human_journey:we_can_stay",
+      "era": "era_0",
+      "title": "WE CAN STAY",
+      "description": "Complete Survival, Tools & Clothing, and Journey.",
+      "icon": "minecraft:campfire",
+      "x": 1264,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "score",
+        "objective": "hj_civ",
+        "holder": "#we_can_stay",
+        "min": 1,
+        "max": 1
+      },
+      "requires": [
+        "human_journey:rest_at_last",
+        "human_journey:carry_what_you_can",
+        "human_journey:new_continent"
+      ]
+    },
+    {
+      "id": "human_journey:era_1_placeholder",
+      "era": "era_1",
+      "title": "Era 1 — Future",
+      "description": "Locked, non-playable placeholder. WE CAN STAY is not the Era 1 transition or Agriculture unlock.",
+      "icon": "minecraft:barrier",
+      "x": 1456,
+      "y": 170,
+      "category": "main",
+      "completion": {
+        "type": "never"
+      },
+      "requires": [],
+      "available_when": [
+        {
+          "type": "never"
+        }
+      ],
+      "placeholder": true
+    }
+  ],
+  "connections": [
+    {
+      "from": "human_journey:first_flame",
+      "to": "human_journey:ready_to_eat",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:ready_to_eat",
+      "to": "human_journey:water_for_life",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:water_for_life",
+      "to": "human_journey:reliable_source",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:reliable_source",
+      "to": "human_journey:rest_at_last",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:first_wood",
+      "to": "human_journey:place_to_work",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:place_to_work",
+      "to": "human_journey:first_tool",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:first_tool",
+      "to": "human_journey:stone_age",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:stone_age",
+      "to": "human_journey:better_edge",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:better_edge",
+      "to": "human_journey:dressed_for_wild",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:dressed_for_wild",
+      "to": "human_journey:carry_what_you_can",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:beyond_camp",
+      "to": "human_journey:stranger_from_afar",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:stranger_from_afar",
+      "to": "human_journey:land_beyond",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:land_beyond",
+      "to": "human_journey:new_continent",
+      "kind": "prerequisite"
+    },
+    {
+      "from": "human_journey:rest_at_last",
+      "to": "human_journey:we_can_stay",
+      "kind": "prerequisite",
+      "route": [
+        [
+          1246,
+          26
+        ],
+        [
+          1246,
+          196
+        ]
+      ]
+    },
+    {
+      "from": "human_journey:carry_what_you_can",
+      "to": "human_journey:we_can_stay",
+      "kind": "prerequisite",
+      "route": [
+        [
+          1246,
+          196
+        ]
+      ]
+    },
+    {
+      "from": "human_journey:new_continent",
+      "to": "human_journey:we_can_stay",
+      "kind": "prerequisite",
+      "route": [
+        [
+          1246,
+          366
+        ],
+        [
+          1246,
+          196
+        ]
+      ]
+    },
+    {
+      "from": "human_journey:we_can_stay",
+      "to": "human_journey:era_1_placeholder",
+      "kind": "visual"
+    }
+  ]
+}

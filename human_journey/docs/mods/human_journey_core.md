@@ -1,7 +1,15 @@
-<!-- hj-mod-inspection {"filename":"human_journey_core-0.15.3.jar","sha256":"dd5c6387f292bb4628ea3ad9a6dedd6a1f3f58bf0a531b0bbbad56457be637a9","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.15.3","declared_version":"0.15.3"}]} -->
+<!-- hj-mod-inspection {"filename":"human_journey_core-0.16.0.jar","sha256":"705bf8a2aa837fb953e5f796459acadfd7f4b741158ab36b4fbd7c6fe064649e","mods":[{"mod_id":"human_journey_core","name":"Human Journey Core","version":"0.16.0","declared_version":"0.16.0"}]} -->
 # Human Journey Core
 
-Inspected installed `human_journey_core-0.15.3.jar`, Core **0.15.3**, SHA-256 `dd5c6387f292bb4628ea3ad9a6dedd6a1f3f58bf0a531b0bbbad56457be637a9`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Mod installation remains manual. Datapack 0.5.18 defines the South America water Map Feature additions; existing land geography, economy, temperature, water-treatment/quality and progression policies remain unchanged. Server and participating clients need matching Core 0.15.3. Earlier integration sections below record their historical releases.
+Inspected installed `human_journey_core-0.16.0.jar`, Core **0.16.0**, SHA-256 `705bf8a2aa837fb953e5f796459acadfd7f4b741158ab36b4fbd7c6fe064649e`. Target: Minecraft 1.21.8, Forge [58.1.18,59), TAN 21.8.0.2, GlitchCore [21.8.0.0,21.9). Mod installation remains manual. Server and participating clients need matching Core 0.16.0. Earlier integration sections below record their historical releases.
+
+## Civilization Progress (Core 0.16.0)
+
+`data/human_journey/core/civilization_progress.json` uses schema 1. Core owns rendering, read-only shared-score projection and synchronization; the datapack owns graph content/layout. Higher-priority packs replace the whole graph, so do not enable the standalone example alongside production. `/hj progress status` reports source, counts, unresolved references and reload errors.
+
+The 17 Era 0 graph IDs `human_journey:<milestone>` read the matching existing `hj_civ #<milestone>` flag at exactly 1, including `#we_can_stay`. Branch dependencies mirror the existing sequence; the capstone requires `rest_at_last`, `carry_what_you_can` AND `new_continent`. The Era 1 placeholder has `never` completion/availability and no gameplay prerequisite. It reads neither `#era1` nor `#tech_agriculture` and cannot unlock anything. All nodes use `main`; the only Core tab is Civilization Progress.
+
+Open through HJ Progress in vanilla advancements or an assigned Controls → Human Journey → Civilization Progress key. Pan/zoom and Fit are Core controls; very small GUI canvases may still require panning at the minimum zoom. Minecraft visual acceptance is manual.
 
 Core is the engine/API; this datapack owns gameplay balance. The Core loader reads exactly `data/human_journey/core/temperature.json` (source: `source/data/human_journey/core/temperature.json`). Use `schema_version: 1`; unknown fields, wrong types, non-finite/out-of-range numbers reject the entire update.
 

@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.19
+
+- Added the Core 0.16.0 Civilization Progress presentation: 17 existing Era 0 shared-score milestones in three parallel branches, converging through three explicit prerequisites into WE CAN STAY, plus one permanently locked presentation-only Era 1 placeholder. All existing advancement definitions, gameplay functions, progression and other content remain byte-identical.
+- Core schema/parser, 1,101 native assertions, 27 state scenarios, 17 missing-reference cases, icon resources, routed layout and Fit viewport checks pass. No Minecraft gameplay/UI testing; manual acceptance pending. Matching Core 0.16.0 required on server/clients.
+
 ## 0.5.18
 
 - Added the 62 exact approved South America water Map Features (25 marine/estuary, 37 inland), 86 holes / 13,731 vertices, plus supplied source/license notices. Combined catalog 435; all 373 old water definitions, 225 Macro/Local files, profiles, progression and discovery data remain unchanged. Review-only Itaipu/Sobradinho/Jupia drafts are excluded; Drake/Scotia are shared global IDs for future Antarctica reuse. No geometry edits or engine changes.
