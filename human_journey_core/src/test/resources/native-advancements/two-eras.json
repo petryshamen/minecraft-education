@@ -7,7 +7,7 @@
         {
           "advancement": "human_journey:era0/root",
           "x": 0,
-          "y": 104
+          "y": 74
         },
         {
           "advancement": "human_journey:era0/survival/first_flame",
@@ -31,68 +31,68 @@
         },
         {
           "advancement": "human_journey:era0/survival/rest_at_last",
-          "x": 274,
+          "x": 386,
           "y": 34
         },
         {
           "advancement": "human_journey:era0/tools/first_wood",
           "x": 50,
-          "y": 104
+          "y": 74
         },
         {
           "advancement": "human_journey:era0/tools/place_to_work",
           "x": 106,
-          "y": 104
+          "y": 74
         },
         {
           "advancement": "human_journey:era0/tools/first_tool",
           "x": 162,
-          "y": 104
+          "y": 74
         },
         {
           "advancement": "human_journey:era0/tools/stone_age",
           "x": 218,
-          "y": 104
+          "y": 74
         },
         {
           "advancement": "human_journey:era0/tools/better_edge",
           "x": 274,
-          "y": 104
+          "y": 74
         },
         {
           "advancement": "human_journey:era0/tools/dressed_for_wild",
           "x": 330,
-          "y": 104
+          "y": 74
         },
         {
           "advancement": "human_journey:era0/tools/carry_what_you_can",
           "x": 386,
-          "y": 104
+          "y": 74
         },
         {
           "advancement": "human_journey:era0/journey/beyond_camp",
           "x": 50,
-          "y": 174
+          "y": 114
         },
         {
           "advancement": "human_journey:era0/journey/stranger_from_afar",
           "x": 106,
-          "y": 174
+          "y": 114
         },
         {
           "advancement": "human_journey:era0/journey/land_beyond",
           "x": 162,
-          "y": 174
+          "y": 114
         },
         {
           "advancement": "human_journey:era0/journey/new_continent",
-          "x": 218,
-          "y": 174
+          "x": 386,
+          "y": 114
         },
         {
           "advancement": "human_journey:era0/we_can_stay",
           "x": 490,
-          "y": 104
+          "y": 74
         }
       ],
       "connections": [
@@ -106,7 +106,7 @@
             },
             {
               "x": 450,
-              "y": 117
+              "y": 87
             }
           ]
         },
@@ -116,7 +116,7 @@
           "route": [
             {
               "x": 470,
-              "y": 117
+              "y": 87
             }
           ]
         },
@@ -132,7 +132,7 @@
           "x": 0,
           "y": 0,
           "width": 290,
-          "height": 219,
+          "height": 165,
           "color": "#30291D",
           "border": "#E4B767",
           "members": [
@@ -147,7 +147,7 @@
           "x": 290,
           "y": 0,
           "width": 250,
-          "height": 219,
+          "height": 165,
           "color": "#192B40",
           "border": "#7EB6E8",
           "members": [
