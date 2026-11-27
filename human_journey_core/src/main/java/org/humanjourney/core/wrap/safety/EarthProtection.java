@@ -22,7 +22,7 @@ public final class EarthProtection {
  public static boolean ready(){return active&&ready;}
  public static void start(MinecraftServer current){
   clear();server=current;active=WrapConfig.PROTECTION.get();
-  if(!active)return;
+  if(!active){if(WrapConfig.ENABLED.get())throw new IllegalStateException("Physical wrapping requested without Earth protection: refusing startup. Disable wrapping or explicitly enable tested protection.");return;}
   if(!WrapMixinPlugin.supported()||!EarthAccess.class.isAssignableFrom(ChunkMap.class)||!EarthHolder.class.isAssignableFrom(GenerationChunkHolder.class)||!WrapConnection.class.isAssignableFrom(net.minecraft.server.network.ServerGamePacketListenerImpl.class))throw new IllegalStateException("Earth protection requested but exact safety hooks are unavailable; refusing server startup");
   // Activation precedes level loading. A blank world is an invalid existing-only Earth.
   var region=current.getWorldPath(net.minecraft.world.level.storage.LevelResource.ROOT).resolve("region");
