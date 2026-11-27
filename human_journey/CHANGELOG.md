@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.23
+
+- Added Core 0.17.0 native advancement presentation under the existing Era 0 root: three parallel branches, 18 positioned native widgets (root plus 17 milestones), two extra links and the unchanged Journey parent converge at WE CAN STAY. One gold-bordered Era 0 region uses the built-in moss block texture as requested; no new assets, Era 1 region or separate screen.
+- Core parser/model checks pass 578 assertions across 119 visibility scenarios; schema, actual advancement source ancestry, duplicate suppression, hidden-endpoint filtering, empty/invalid fallback store, native pixel routing/header/viewport geometry and built-in moss asset checks pass. Existing advancement definitions, gameplay/functions, world-state contracts, geography/economy/survival data and dormant civilization_progress.json remain byte-identical. No Minecraft gameplay/UI/registry reload testing; manual visual acceptance pending. Core 0.17.0 server/client and Forge 58.1.18 / Minecraft 1.21.8 required for the native enhancement.
+
 ## 0.5.22
 
 - Integrated 117 exact geometry-only replacements (74 Near East/Caucasus, 43 Arabia), replacing two aggregates with schema-v2 per-area resources and preserving attribution/licenses. All 39 Macros, 1,549 Local IDs and metadata remain; 563 geography resources. Six prior European-stage Near East records, all 227 Africa files including the Nile correction, all 435 Water Features, progression/UI/economy and Core remain unchanged.

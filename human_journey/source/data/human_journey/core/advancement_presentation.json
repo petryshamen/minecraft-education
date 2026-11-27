@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "tabs": [
+    {
+      "root": "human_journey:era0/root",
+      "positions": [
+        {
+          "advancement": "human_journey:era0/root",
+          "x": 12,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/survival/first_flame",
+          "x": 62,
+          "y": 40
+        },
+        {
+          "advancement": "human_journey:era0/survival/ready_to_eat",
+          "x": 118,
+          "y": 40
+        },
+        {
+          "advancement": "human_journey:era0/survival/water_for_life",
+          "x": 174,
+          "y": 40
+        },
+        {
+          "advancement": "human_journey:era0/survival/reliable_source",
+          "x": 230,
+          "y": 40
+        },
+        {
+          "advancement": "human_journey:era0/survival/rest_at_last",
+          "x": 398,
+          "y": 40
+        },
+        {
+          "advancement": "human_journey:era0/tools/first_wood",
+          "x": 62,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/place_to_work",
+          "x": 118,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/first_tool",
+          "x": 174,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/stone_age",
+          "x": 230,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/better_edge",
+          "x": 286,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/dressed_for_wild",
+          "x": 342,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/carry_what_you_can",
+          "x": 398,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/journey/beyond_camp",
+          "x": 62,
+          "y": 120
+        },
+        {
+          "advancement": "human_journey:era0/journey/stranger_from_afar",
+          "x": 118,
+          "y": 120
+        },
+        {
+          "advancement": "human_journey:era0/journey/land_beyond",
+          "x": 174,
+          "y": 120
+        },
+        {
+          "advancement": "human_journey:era0/journey/new_continent",
+          "x": 410,
+          "y": 120
+        },
+        {
+          "advancement": "human_journey:era0/we_can_stay",
+          "x": 502,
+          "y": 80
+        }
+      ],
+      "connections": [
+        {
+          "from": "human_journey:era0/survival/rest_at_last",
+          "to": "human_journey:era0/we_can_stay",
+          "route": [
+            {
+              "x": 440,
+              "y": 53
+            },
+            {
+              "x": 440,
+              "y": 93
+            }
+          ]
+        },
+        {
+          "from": "human_journey:era0/tools/carry_what_you_can",
+          "to": "human_journey:era0/we_can_stay",
+          "route": [
+            {
+              "x": 440,
+              "y": 93
+            }
+          ]
+        }
+      ],
+      "eras": [
+        {
+          "id": "era_0",
+          "title": "Era 0 — The First Camp",
+          "x": 0,
+          "y": 0,
+          "width": 552,
+          "height": 172,
+          "color": "#30291D",
+          "border": "#E4B767",
+          "texture": "minecraft:textures/block/moss_block.png",
+          "members": [
+            "human_journey:era0/root"
+          ]
+        }
+      ]
+    }
+  ]
+}
