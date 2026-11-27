@@ -1,6 +1,7 @@
 package org.humanjourney.core.wrap.mixin;
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
 import net.minecraft.network.protocol.game.ServerboundMoveVehiclePacket;
+import net.minecraft.network.protocol.game.ServerboundAcceptTeleportationPacket;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 import org.humanjourney.core.wrap.WrapConnection;
@@ -23,5 +24,9 @@ public abstract class WrapConnectionMixin implements WrapConnection {
  @Inject(method="handleMoveVehicle",at=@At(value="INVOKE",target="Lnet/minecraft/network/protocol/PacketUtils;ensureRunningOnSameThread(Lnet/minecraft/network/protocol/Packet;Lnet/minecraft/network/PacketListener;Lnet/minecraft/server/level/ServerLevel;)V",shift=At.Shift.AFTER),cancellable=true)
  private void hjWrap$ignoreOldVehiclePacket(ServerboundMoveVehiclePacket packet,CallbackInfo ci){
   if(hjWrap$waiting){if(awaitingPositionFromClient!=null)ci.cancel();else hjWrap$waiting=false;}
+ }
+ @Inject(method="handleAcceptTeleportPacket",at=@At("RETURN"))
+ private void hjWrap$finishAcknowledgement(ServerboundAcceptTeleportationPacket packet,CallbackInfo ci){
+  if(awaitingPositionFromClient==null)hjWrap$waiting=false;
  }
 }
