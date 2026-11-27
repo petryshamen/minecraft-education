@@ -43,9 +43,10 @@ jobs:
           grep -R 'GEOGRAPHY_V2_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'CIVILIZATION_PROGRESS_SMOKE_OK' build/datagen-smoke/logs/latest.log
           grep -R 'NATIVE_ADVANCEMENTS_SMOKE_OK' build/datagen-smoke/logs/latest.log
+          grep -R 'WORLD_WRAP_SMOKE_OK' build/datagen-smoke/logs/latest.log
       - uses: actions/upload-artifact@v4
         with:
-          name: HumanJourneyCore-0.17.0
+          name: HumanJourneyCore-0.18.0
           if-no-files-found: error
           path: |
             human_journey_core/build/libs/*.jar

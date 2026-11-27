@@ -1,0 +1,9 @@
+{
+ "required": false,
+ "minVersion": "0.8",
+ "package": "org.humanjourney.core.wrap.mixin",
+ "plugin": "org.humanjourney.core.wrap.WrapMixinPlugin",
+ "compatibilityLevel": "JAVA_21",
+ "mixins": ["WrapConnectionMixin"],
+ "injectors": {"defaultRequire": 1}
+}

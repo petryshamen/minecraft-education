@@ -1,3 +1,7 @@
+# Human Journey Core 0.18.0
+
+Disabled-by-default physical Earth wrap prototype; [scope, safety limits, Xaero feasibility and manual tests](WORLD-WRAP.md). No visual repetition is shipped.
+
 # Human Journey Core 0.17.0
 
 Verified0.17.0: [Actions build45948107689](https://github.com/petryshamen/minecraft-education/actions/runs/45948107689), source `8b40d6678a3673cd28aed6018bcff50a5f66492b`.580tests pass,0failures;17no-world Forge checks including actual pinned UI Mixin transformations under headless datagen. 371prior runtime classes byte-identical; only main registration and retirement of the old dashboard entry/polling/status change existing bytecode. JAR SHA-256 `7761cc1b8ffd75ed679f25496aaab3295d0b461baf17fd1ea32aac93613eda5a`. No live Minecraft visual/gameplay test, installation or production data change.

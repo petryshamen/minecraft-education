@@ -1,3 +1,7 @@
+# 0.18.0
+- Add opt-in Overworld Earth-seam whole-group coordinate wrap with loaded-destination preflight and acknowledged vehicle movement guard.
+- Add diagnostics, synthetic/native primitive tests and pinned Xaero feasibility report; no visual repetition or production-world/data changes.
+
 # 0.17.0
 
 - Added pinned native advancement presentation hooks, datapack-driven pixel layouts/visual links/Era regions, vanilla visibility filtering and safe fallback. No criteria, parent, score or gameplay changes.
