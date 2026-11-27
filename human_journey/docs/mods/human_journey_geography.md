@@ -1,6 +1,14 @@
 # Human Journey NPC geography
 
-## Current release — Europe Local Geometry Refinement v2, 0.5.13
+## Current release — North & West/Central Africa Local Geometry, 0.5.20
+
+Core 0.16.0 / Minecraft 1.21.8 / Forge 58.1.18. Exactly 97 existing Locals (42 North Africa, 55 West/Central Africa) move from `north_africa_locals.json` and `west_central_africa_locals.json` to schema-v2 `npc_geography/africa_north_west_refined/<id>.json`. Global totals remain 39 Macros / 1,549 Local IDs; 320 geography resources. Profiles, priorities, labels, parents and dimensions are unchanged; discovery/SavedData needs no reset. All 435 Water Features and the Civilization Progress graph are unchanged.
+
+The user-approved Nile correction clips Delta at 30.1°N (`Z=-2054.826666666667`) near its apex at Cairo, transferring the southern footprint to Nile Valley without coverage loss beyond sub-0.00001-block² numerical cleanup. Luxor, Aswan, Asyut, Minya and Cairo controls resolve as Nile Valley; the existing Delta control remains Nile Delta. Geographic basis: [NASA, The Nile](https://science.nasa.gov/photojournal/the-nile/). Source ecoregion “Nile Delta flooded savanna” also covers upstream valley, so its entire footprint must not be labeled Delta. Other 95 candidate definitions are exact. Attribution: `AFRICA_NORTH_WEST_LOCAL_GEOMETRY_SOURCES.md` and `licenses/africa_north_west_local/` in the ZIP.
+
+Native catalogue checks pass 54,935 supplied fixtures and seven Nile controls, with zero resolution errors and 211 additional resolved land-grid points (zero old grid losses). Same-domain target coverage rises 99.25560% → 99.66537%; approximately 7.06 blocks² of tiny exact sliver losses remain from the supplied candidate. Uncovered Sinai/island/parent-interface proposals remain deferred, and five legacy lake Locals stay unchanged in identity. These are offline checks; Minecraft terrain, HUD, NPC naming and discovery persistence remain manual acceptance.
+
+## Historical release — Europe Local Geometry Refinement v2, 0.5.13
 
 Geometry-only migration from 0.5.12: exactly 190 existing IDs now use the approved schema-v2 `geometry` objects (`polygon` outer/holes or `multipolygon` parts) in `data/human_journey/npc_geography/europe_refined/<id>.json`. Three superseded aggregates are removed: Eastern, Northern, Western/Central Europe. Mediterranean and Near East/Caucasus residual aggregates retain 13 and 74 identical records. All other files, 39 Macros, 1,549 Local identities, parents/dimensions/priorities/labels/era labels/profiles and 80 Water Features remain unchanged. Final 225 geography resources; no discovery migration/reset, no new backgrounds or coverage proposals.
 

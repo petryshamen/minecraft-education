@@ -1,5 +1,11 @@
 # Human Journey changelog
 
+## 0.5.20
+
+- Refined geometry for 97 existing North Africa (42) and West/Central Africa (55) Locals, replacing two aggregates with schema-v2 per-area resources and retaining source/license attribution. All 39 Macros, 1,549 Local IDs and non-geometry metadata, 435 Water Features, progression UI/gameplay and NPC economy remain unchanged.
+- User-approved Nile correction: restrict Delta to north of 30.1°N near Cairo (Z=-2054.826666666667); transfer its southern footprint to Nile Valley. Core-required numerical ring cleanup changes under 0.00001 blocks²; combined coverage is preserved within that tolerance. The other 95 candidate definitions remain exact.
+- Core 0.16.0 accepts the integrated catalog: 54,935 resolution fixtures plus seven Nile controls, zero resolution errors; 52,667 old resolved land-grid points retained and 211 gained. Target-Macro vector coverage 99.25560% → 99.66537%; tiny source sliver losses total approximately 7.06 blocks² despite zero sampled grid losses. No Minecraft gameplay testing; remaining source/parent/island gaps and five legacy lake Local identities are retained, not redesigned.
+
 ## 0.5.19
 
 - Added the Core 0.16.0 Civilization Progress presentation: 17 existing Era 0 shared-score milestones in three parallel branches, converging through three explicit prerequisites into WE CAN STAY, plus one permanently locked presentation-only Era 1 placeholder. All existing advancement definitions, gameplay functions, progression and other content remain byte-identical.
