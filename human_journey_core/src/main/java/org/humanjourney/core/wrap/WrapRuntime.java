@@ -49,9 +49,11 @@ public final class WrapRuntime {
   long now=level.getGameTime();Long before=WARNED.get(root);
   if(before==null||now-before>=200){WARNED.put(root,now);LOG.warn("[HJ wrap] {} (no member moved)",last);}
  }
+ // Actual authoritative server coordinates, with native known movement for controlled vehicles.
+ static PositionMoveRotation snapshot(Entity e){return new PositionMoveRotation(e.position(),e.getKnownMovement(),e.getYRot(),e.getXRot());}
  static final class Member implements WrapTransaction.Member {
   final Entity entity,root;final ServerLevel level;final PositionMoveRotation before;final Entity vehicle;final List<Entity> passengers;
-  Member(Entity entity,Entity root,ServerLevel level){this.entity=entity;this.root=root;this.level=level;this.before=PositionMoveRotation.of(entity);vehicle=entity.getVehicle();passengers=List.copyOf(entity.getPassengers());}
+  Member(Entity entity,Entity root,ServerLevel level){this.entity=entity;this.root=root;this.level=level;this.before=snapshot(entity);vehicle=entity.getVehicle();passengers=List.copyOf(entity.getPassengers());}
   public String problem(double dx){
    if(!entity.isAlive()||entity.isRemoved()||entity.level()!=level||entity.getVehicle()!=vehicle||!entity.getPassengers().equals(passengers))return "changed/dead riding group";
    if(!(entity instanceof ServerPlayer)&&!entity.getClass().getName().startsWith("net.minecraft.world.entity."))return "unsupported modded entity class";
@@ -90,8 +92,8 @@ public final class WrapRuntime {
    if(entity instanceof ServerPlayer p){
     // Same-level narrow primitive used by vanilla ServerPlayer.teleport: keeps mount links,
     // uses normal acknowledged player teleport and absolute movement/rotation, no travel hook.
-    p.connection.teleport(PositionMoveRotation.of(p),Set.of());p.connection.resetPosition();
-    if(root!=p){p.connection.send(ClientboundTeleportEntityPacket.teleport(root.getId(),PositionMoveRotation.of(root),Set.of(),root.onGround()));((WrapConnection)p.connection).hjWrap$resetVehicle(root);}
+    p.connection.teleport(snapshot(p),Set.of());p.connection.resetPosition();
+    if(root!=p){p.connection.send(ClientboundTeleportEntityPacket.teleport(root.getId(),snapshot(root),Set.of(),root.onGround()));((WrapConnection)p.connection).hjWrap$resetVehicle(root);}
    }
   }
  }
