@@ -1,6 +1,14 @@
 # Human Journey NPC geography
 
-## Current release — Central & Northern Asia Local Geometry, 0.5.25
+## Current release — South & East Asia Local Geometry, 0.5.26
+
+Core 0.18.0 / Minecraft 1.21.8 / Forge 58.1.18. 194 exact schema-v2 per-area resources in `npc_geography/asia_south_east_refined/` replace `south_asia_locals.json` and `east_asia_locals.json`. Global totals remain 39 Macros / 1,549 Locals across 934 resources. IDs, profiles, parents, priorities, dimensions, labels and saved discoveries are preserved. Prior Africa, Europe and other Asia refinements, all 435 Water Features and all unrelated gameplay/UI files remain byte-identical. Attribution: `SOUTH_EAST_LOCAL_GEOMETRY_SOURCES.md` and `licenses/south_east_asia_local/` in the ZIP.
+
+Offline Core validation matches all 49,060 supplied baseline/result pairs: 43,393 -> 46,350 covered land-grid points (+2,957, zero sampled losses/errors). Target dry-land coverage 93.00664% -> 99.69105%; independently computed exact sliver losses approximately 1.45 blocks². Remaining coastal/competing-parent gaps and four named-source extent concerns remain separate design work; no reparenting or silent geometry corrections.
+
+Manual terrain checks remain pending: Himalaya/Indus/Ganges/Bengal/Sri Lanka, small Maldives/Lakshadweep islands, Qinghai and Tibet lake edges, Yellow/Yangtze rivers, Taiwan/Hainan/Korea/Japan islands and Tokyo Bay. Supplied island control coordinates can lie offshore and correctly return none; check actual dry land. Verify Local and Water Feature hover independently, NPC geographic prefixes, Student discovery, Teacher non-discovery, reload and saved discoveries. No Minecraft startup or gameplay tests were performed; no reset is required.
+
+## Historical release — Central & Northern Asia Local Geometry, 0.5.25
 
 182 exact schema-v2 per-area resources in `npc_geography/asia_central_north_refined/` replace `central_asia_locals.json`, `northern_asia_locals.json` and `northern_asia_dateline_west_locals.json`. 74 Central Asia and 108 Northern Asia records (including five western-dateline records) retain IDs, labels, profiles, priorities, dimensions and parents. Global totals: 39 Macros / 1,549 Locals / 742 resources. No discovery reset, Core changes or changes to existing gameplay, economy, Africa/Europe/Near East geometry or 435 Water Features. Attribution: `CENTRAL_NORTH_LOCAL_GEOMETRY_SOURCES.md` and `licenses/central_north_asia_local/` in the ZIP.
 
