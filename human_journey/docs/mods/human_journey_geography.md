@@ -1,6 +1,14 @@
 # Human Journey NPC geography
 
-## Current release — North & West/Central Africa Local Geometry, 0.5.20
+## Current release — East & Southern Africa Local Geometry, 0.5.21
+
+Core 0.16.0 / Minecraft 1.21.8 / Forge 58.1.18. Exactly 130 existing Locals (72 East Africa/Horn, 58 Southern Africa) move from `east_africa_horn_locals.json` and `southern_africa_locals.json` to exact supplied schema-v2 `npc_geography/africa_east_south_refined/<id>.json` resources. Totals remain 39 Macros / 1,549 Local IDs in 448 geography resources. Profiles, priorities, labels, parents, dimensions and saved discoveries are unchanged; no reset is needed. The deployed 97 North/West files and Nile correction remain byte-identical, as do all 435 Water Features and progression/economy policies.
+
+Core checks cover 32,997 East/South fixtures, 54,935 North/West fixtures with 53,692 protected resolutions unchanged, and two Nile controls; no resolution errors. Current 0.5.20 baseline: 29,902 → 30,991 resolved grid points (+1,089, zero losses); target dry-land vector coverage 95.91166% → 99.65769%, with approximately 0.64 blocks² of tiny exact sliver losses. These are offline checks, not Minecraft terrain/UI/reload/persistence acceptance. The eight existing lake Locals are retained; new lake holes may legitimately yield no Local while Water Feature hover still identifies the water (e.g. Lake Kariba).
+
+Residual Victoria/Tanzanian/mainland margins, Mauritius, Réunion, Seychelles and other external island/Macro proposals remain deferred. No prior candidate/audit/source/preview files are installed. Attribution is in `AFRICA_EAST_SOUTH_LOCAL_GEOMETRY_SOURCES.md` and `licenses/africa_east_south_local/` in the ZIP.
+
+## Historical release — North & West/Central Africa Local Geometry, 0.5.20
 
 Core 0.16.0 / Minecraft 1.21.8 / Forge 58.1.18. Exactly 97 existing Locals (42 North Africa, 55 West/Central Africa) move from `north_africa_locals.json` and `west_central_africa_locals.json` to schema-v2 `npc_geography/africa_north_west_refined/<id>.json`. Global totals remain 39 Macros / 1,549 Local IDs; 320 geography resources. Profiles, priorities, labels, parents and dimensions are unchanged; discovery/SavedData needs no reset. All 435 Water Features and the Civilization Progress graph are unchanged.
 

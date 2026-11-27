@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.5.20 — North & West/Central Africa Local Geometry (Core 0.16.0 required)"
+    "description": "Human Journey v0.5.21 — East & Southern Africa Local Geometry (Core 0.16.0 required)"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.5.20"
+    "version": "0.5.21"
   }
 }

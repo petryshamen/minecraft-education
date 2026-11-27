@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.21
+
+- Integrated 130 exact East Africa/Horn (72) and Southern Africa (58) geometry replacements as schema-v2 per-area resources, retiring two superseded aggregates and retaining source/license attribution. All 39 Macros, 1,549 Local IDs and metadata remain; 448 geography resources. Prior 97 North/West files including the approved Nile correction, all 435 Water Features, progression, NPC economy and Core remain unchanged.
+- Core 0.16.0 accepts the integrated catalogue: 32,997 East/South fixtures, 54,935 North/West regression fixtures (53,692 protected matches), and two Nile controls; zero resolution errors. Against deployed 0.5.20, resolved land-grid points rise 29,902 → 30,991 (+1,089, zero losses). Target-Macro vector coverage 95.91166% → 99.65769%; tiny exact sliver losses total approximately 0.64 blocks². No geometry corrections, discovery reset or Minecraft gameplay testing; residual island/mainland proposals and eight legacy lake Local identities are retained for separate review.
+
 ## 0.5.20
 
 - Refined geometry for 97 existing North Africa (42) and West/Central Africa (55) Locals, replacing two aggregates with schema-v2 per-area resources and retaining source/license attribution. All 39 Macros, 1,549 Local IDs and non-geometry metadata, 435 Water Features, progression UI/gameplay and NPC economy remain unchanged.
