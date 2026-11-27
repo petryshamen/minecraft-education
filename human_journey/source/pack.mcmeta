@@ -1,7 +1,7 @@
 {
   "pack": {
     "pack_format": 81,
-    "description": "Human Journey v0.5.23 — Native Advancement Presentation (Core 0.17.0 required)"
+    "description": "Human Journey v0.5.24 — Era 0 Advancement UI Polish (Core 0.17.0 required)"
   },
   "filter": {
     "block": [
@@ -28,6 +28,6 @@
     ]
   },
   "human_journey": {
-    "version": "0.5.23"
+    "version": "0.5.24"
   }
 }

@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.24
+
+- Renamed only the native root display title and matching Era region title to “Human Journey — Era 0 — The First Camp”. Evenly spaced Survival at X=62/146/230/314/398 and Journey at X=62/174/286/398; Tools stays 62/118/174/230/286/342/398. Rows, root/capstone coordinates, moss styling, custom waypoints and all advancement parents/criteria/rewards remain unchanged.
+- Core 0.17.0 schema/parser and 470 structural checks pass, including title-only advancement diff, exact allowed presentation diff and two-extra-plus-one-native capstone convergence. All unrelated progression, roles, gameplay, geography and dormant graph bytes are preserved. User verified the preceding 0.5.23 interface in Minecraft; this polish patch has automated validation only and awaits manual visual acceptance.
+
 ## 0.5.23
 
 - Added Core 0.17.0 native advancement presentation under the existing Era 0 root: three parallel branches, 18 positioned native widgets (root plus 17 milestones), two extra links and the unchanged Journey parent converge at WE CAN STAY. One gold-bordered Era 0 region uses the built-in moss block texture as requested; no new assets, Era 1 region or separate screen.

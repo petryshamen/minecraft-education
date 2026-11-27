@@ -16,17 +16,17 @@
         },
         {
           "advancement": "human_journey:era0/survival/ready_to_eat",
-          "x": 118,
+          "x": 146,
           "y": 40
         },
         {
           "advancement": "human_journey:era0/survival/water_for_life",
-          "x": 174,
+          "x": 230,
           "y": 40
         },
         {
           "advancement": "human_journey:era0/survival/reliable_source",
-          "x": 230,
+          "x": 314,
           "y": 40
         },
         {
@@ -76,17 +76,17 @@
         },
         {
           "advancement": "human_journey:era0/journey/stranger_from_afar",
-          "x": 118,
-          "y": 120
-        },
-        {
-          "advancement": "human_journey:era0/journey/land_beyond",
           "x": 174,
           "y": 120
         },
         {
+          "advancement": "human_journey:era0/journey/land_beyond",
+          "x": 286,
+          "y": 120
+        },
+        {
           "advancement": "human_journey:era0/journey/new_continent",
-          "x": 410,
+          "x": 398,
           "y": 120
         },
         {
@@ -124,7 +124,7 @@
       "eras": [
         {
           "id": "era_0",
-          "title": "Era 0 — The First Camp",
+          "title": "Human Journey — Era 0 — The First Camp",
           "x": 0,
           "y": 0,
           "width": 552,
