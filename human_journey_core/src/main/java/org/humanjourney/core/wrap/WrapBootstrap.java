@@ -16,7 +16,7 @@ public final class WrapBootstrap {
   ServerStoppedEvent.BUS.addListener(e->{org.humanjourney.core.wrap.safety.SafetyRuntime.closeAll();org.humanjourney.core.wrap.safety.EarthProtection.clear();WrapRuntime.clear();});
   RegisterCommandsEvent.BUS.addListener(e->e.getDispatcher().register(Commands.literal("hj").then(Commands.literal("wrap").requires(s->s.hasPermission(2)).then(Commands.literal("status").executes(c->{c.getSource().sendSuccess(()->Component.literal(org.humanjourney.core.wrap.safety.SafetyRuntime.status()),false);return 1;})))));
   if(Boolean.getBoolean("humanjourney.waterSmoke"))WrapSmoke.register(context.getModBusGroup());
-  if(Boolean.getBoolean("humanjourney.safetyServer")&&!net.minecraftforge.fml.loading.FMLLoader.isProduction())try{Class.forName("org.humanjourney.core.wrap.safety.SafetyServerValidation").getMethod("register").invoke(null);}catch(ReflectiveOperationException e){throw new IllegalStateException("Isolated safety harness missing",e);}
+  if(Boolean.getBoolean("humanjourney.safetyServer"))try{Class.forName("org.humanjourney.core.wrap.safety.SafetyServerValidation").getMethod("register").invoke(null);}catch(ReflectiveOperationException e){throw new IllegalStateException("Isolated safety harness missing (intentionally excluded from runtime JAR)",e);}
  }
  private WrapBootstrap(){}
 }

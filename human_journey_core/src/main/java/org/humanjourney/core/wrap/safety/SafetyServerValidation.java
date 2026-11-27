@@ -27,6 +27,8 @@ public final class SafetyServerValidation {
  private static final List<String> checks=new ArrayList<>();
  private static void check(boolean condition,String label){if(!condition)throw new IllegalStateException(label);checks.add(label);}
  public static void register(){
+  if(!Path.of("").toAbsolutePath().normalize().endsWith(Path.of("build","safety-server")))throw new IllegalStateException("Safety harness requires isolated build/safety-server working directory");
+  com.mojang.logging.LogUtils.getLogger().info("EARTH_SAFETY_HARNESS_REGISTERED phase={}",System.getProperty("humanjourney.safetyPhase"));
   ServerStartedEvent.BUS.addListener(e->{server=e.getServer();});
   TickEvent.ServerTickEvent.Post.BUS.addListener(e->{if(server==null||failure!=null)return;try{run();}catch(Throwable error){failure=error;com.mojang.logging.LogUtils.getLogger().error("EARTH_SAFETY_SERVER_FAILED",error);try{Files.writeString(Path.of("FAILED.txt"),error.toString());}catch(Exception ignored){}server.halt(false);}});
  }
@@ -40,8 +42,8 @@ public final class SafetyServerValidation {
  private static void run()throws Exception{
   ticks++;var level=server.overworld();boolean prepare=System.getProperty("humanjourney.safetyPhase","verify").equals("prepare");
   if(prepare){if(phase==0){
-   check(!EarthProtection.ready(),"prepare phase protection disabled");
-   for(int center:new int[]{-12240,12272})for(int cx=(center>>4)-2;cx<=(center>>4)+2;cx++)for(int cz=-1;cz<=2;cz++)level.getChunk(cx,cz);
+   check(!EarthProtection.ready(),"prepare phase protection disabled");com.mojang.logging.LogUtils.getLogger().info("EARTH_SAFETY_PREPARING_FIXTURE");
+   for(int center:new int[]{-12240,12272})for(int cx=(center>>4)-3;cx<=(center>>4)+3;cx++)for(int cz=-1;cz<=2;cz++)level.getChunk(cx,cz);
    pool(level,-12288+16,-12288+96);pool(level,12288-32,12288-1);
    phase=1;
   }else if(ticks>20){server.saveAllChunks(false,true,true);Files.writeString(Path.of("PREPARED.txt"),"new isolated fixture prepared; production terrain untouched");server.halt(false);server=null;}return;}

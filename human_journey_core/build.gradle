@@ -122,7 +122,7 @@ tasks.register('prepareSafetyServer') {
         def runDir = layout.buildDirectory.dir('safety-server').get().asFile
         runDir.mkdirs()
         new File(runDir, 'eula.txt').text = 'eula=true\n'
-        new File(runDir, 'server.properties').text = 'online-mode=false\nserver-port=0\nview-distance=2\nsimulation-distance=2\nlevel-type=minecraft:flat\ngenerate-structures=false\nspawn-protection=0\nmax-tick-time=120000\nlevel-name=isolated-earth-fixture\nlevel-seed=1\n'
+        new File(runDir, 'server.properties').text = 'online-mode=false\nserver-port=0\nview-distance=2\nsimulation-distance=2\nlevel-type=minecraft:flat\ngenerator-settings={"layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:dirt","height":2},{"block":"minecraft:grass_block","height":1}],"biome":"minecraft:plains","lakes":false,"features":false}\ngenerate-structures=false\nspawn-protection=0\nmax-tick-time=120000\nlevel-name=isolated-earth-fixture\nlevel-seed=1\n'
     }
 }
 tasks.matching { it.name == 'runServer' }.configureEach { dependsOn 'prepareSafetyServer' }

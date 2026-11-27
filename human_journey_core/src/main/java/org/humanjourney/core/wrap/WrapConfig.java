@@ -8,7 +8,7 @@ public final class WrapConfig {
  static{
   var b=new ForgeConfigSpec.Builder();b.push("world_wrap");
   ENABLED=b.comment("Experimental physical wrap, Overworld only. Disabled until manual test-world acceptance.",
-   "Requires loaded destination chunks; never loads/generates terrain. Exact Earth interval [-12288,12288).")
+   "Requires active verified Earth protection; loads only existing complete destination data. Desired Earth interval [-12288,12288).")
    .define("enabled",false);
   LOG_CROSSINGS=b.comment("Log successful crossings. Deferred/failing groups are rate-limited independently.").define("log_crossings",true);
   ARRIVAL_INSET=b.comment("Explicit optional inward arrival fallback, in blocks. 0 preserves the exact seam target; 32 can avoid missing edge dependencies. Actual adjustment is reported.").defineInRange("arrival_inset_blocks",0,0,64);

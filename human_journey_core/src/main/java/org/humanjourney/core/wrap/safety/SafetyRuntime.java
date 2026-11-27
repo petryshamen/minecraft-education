@@ -33,6 +33,7 @@ public final class SafetyRuntime {
   if(Math.abs(root.getZ())>6143){state("FAILED",root,"latitude outside protected Earth; no north/south wrapping",root.getX(),false);return;}
   double canonical;
   if(recovery)canonical=WrapMath.canonical(root.getX());
+  else if(WrapMath.outside(attempted))canonical=WrapMath.canonical(attempted);
   else{var lim=limits(root,entities);boolean east=attempted>lim[1];double overshoot=Math.min(64,Math.max(0,east?attempted-lim[1]:lim[0]-attempted));canonical=east?-12288+overshoot:Math.nextDown(12288.0)-overshoot;}
   double target=canonical;int inset=WrapConfig.ARRIVAL_INSET.get();if(inset>0)target=SafetyPolicy.clamp(canonical,-12288+inset,12288-inset);
   var job=new Job(root,entities,level,canonical,target,recovery);JOBS.put(root,job);state("LOADING",root,"existing-only destination preparation; canonicalX="+canonical+" adjustment="+(target-canonical),target,false);
@@ -54,7 +55,8 @@ public final class SafetyRuntime {
   var root=player.getRootVehicle();List<Entity> all;try{all=group(root);}catch(RuntimeException e){state("FAILED",root,e.getMessage(),root.getX(),false);return true;}
   var lim=limits(root,all);boolean outside=proposedX<lim[0]||proposedX>lim[1]||proposedZ<lim[2]||proposedZ>lim[3]||!contained(all);
   if(!outside)return false;
-  if(Math.abs(proposedX-root.getX())<=64&&Math.abs(proposedZ-root.getZ())<=64&&(proposedX<lim[0]||proposedX>lim[1]||!contained(all)))request(root,proposedX);
+  boolean nearSeam=root.getX()<lim[0]+4||root.getX()>lim[1]-4||!contained(all);
+  if(nearSeam&&Math.abs(proposedX-root.getX())<=64&&Math.abs(proposedZ-root.getZ())<=64&&(proposedX<lim[0]||proposedX>lim[1]||!contained(all)))request(root,proposedX);
   else state("HELD",root,"invalid/too-fast or north/south boundary proposal",root.getX(),false);
   correct(root,all);return true;
  }
@@ -83,8 +85,8 @@ public final class SafetyRuntime {
    if(job.destination.failed()||job.level.getGameTime()>=job.deadline){String why=job.destination.failed()?job.destination.failure:"destination loading timeout";close(job,"FAILED",why);if(job.recovery&&!contained(job.group)){stop(server,job.root,"no validated inside recovery: "+why);return;}continue;}
    if(!job.destination.ready())continue;
    var members=job.group.stream().map(e->new WrapRuntime.Member(e,job.root,job.level,job.motions.get(e.getUUID()),job.motions.get(job.root.getUUID()))).toList();
-   var result=WrapTransaction.run(members,job.target-job.root.getX());
-   if(result.moved()){double actual=job.root.getX();close(job,"CROSSED","committed=true members="+members.size()+" source="+job.source+" canonicalX="+job.canonical+" actualX="+actual+" inward_adjustment="+(actual-job.canonical));}
+   var crossingSource=job.root.position();var result=WrapTransaction.run(members,job.target-job.root.getX());
+   if(result.moved()){double actual=job.root.getX();close(job,"CROSSED","committed=true members="+members.size()+" source="+crossingSource+" canonicalX="+job.canonical+" actualX="+actual+" inward_adjustment="+(actual-job.canonical));}
    else if(!result.reason().contains("acknowledgement")){close(job,"FAILED",result.reason());if(job.recovery&&!contained(job.group)){stop(server,job.root,"recovery placement failed: "+result.reason());return;}}
   }
  }
