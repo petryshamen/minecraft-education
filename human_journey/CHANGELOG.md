@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.25
+
+- Integrated 182 exact geometry-only Central/Northern Asia replacements (74 Central, 108 Northern including five western-dateline records), replacing three aggregates; 39 Macros and 1,549 Local IDs remain in 742 geography resources. Metadata, profiles, all 435 Water Features and unrelated content remain unchanged.
+- Offline Core 0.17.0 accepts all 37,951 fixtures: 33,712 -> 36,033 resolved land-grid points (+2,321; zero sampled losses or resolution errors). Supplied candidate geometry is unchanged; residual source/coastal/parent-interface gaps and approximately 8.95 square blocks of vector sliver loss remain documented in geography notes. No Minecraft gameplay or terrain testing.
+
 ## 0.5.24
 
 - Renamed only the native root display title and matching Era region title to “Human Journey — Era 0 — The First Camp”. Evenly spaced Survival at X=62/146/230/314/398 and Journey at X=62/174/286/398; Tools stays 62/118/174/230/286/342/398. Rows, root/capstone coordinates, moss styling, custom waypoints and all advancement parents/criteria/rewards remain unchanged.

@@ -1,0 +1,5 @@
+# Sources and provenance
+- Production https://github.com/petryshamen/minecraft-education/tree/9f6e499034e62fc81ca40ac54ec0f203a1e15bf7/human_journey/source/data/human_journey/npc_geography ; read-only current test ZIP matched all source blobs.
+- Natural Earth 1:10m physical land, lakes, river centre lines and named physical polygons https://www.naturalearthdata.com/downloads/10m-physical-vectors/ ; public domain https://www.naturalearthdata.com/about/terms-of-use/ . Named label areas approximate https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-physical-labels/ .
+- GSHHG https://www.soest.hawaii.edu/wessel/gshhg/ ; LGPL/GPL, included notices; L2 water and L3 islands, same source used in previous Africa pilot, confirmed named lake geometry preferred. Adapted by projection, clipping, simplification and topology cleanup.
+- Prior Europe and Africa production data, all 435 Water Features untouched, input hashes included. No claim of exact real topographic or Minecraft surveyed boundaries.

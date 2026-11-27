@@ -1,6 +1,14 @@
 # Human Journey NPC geography
 
-## Current release — Near East & Arabia Local Geometry, 0.5.22
+## Current release — Central & Northern Asia Local Geometry, 0.5.25
+
+182 exact schema-v2 per-area resources in `npc_geography/asia_central_north_refined/` replace `central_asia_locals.json`, `northern_asia_locals.json` and `northern_asia_dateline_west_locals.json`. 74 Central Asia and 108 Northern Asia records (including five western-dateline records) retain IDs, labels, profiles, priorities, dimensions and parents. Global totals: 39 Macros / 1,549 Locals / 742 resources. No discovery reset, Core changes or changes to existing gameplay, economy, Africa/Europe/Near East geometry or 435 Water Features. Attribution: `CENTRAL_NORTH_LOCAL_GEOMETRY_SOURCES.md` and `licenses/central_north_asia_local/` in the ZIP.
+
+Offline Core 0.17.0 accepts the full current catalogue and resolves 37,951 supplied fixtures: 33,712 -> 36,033 resolved land-grid points (+2,321, zero sampled losses/errors). Both baseline and result include six more resolved grid points than the frozen geographer baseline due to the already integrated Near East release. Reported target dry-land coverage rises 92.97597% -> 99.39423%; approximately 8.95 square blocks of exact source sliver loss remain despite zero sampled grid losses. Residual coast/island/parent gaps remain, especially northern islands and Sakhalin interfaces. Seven supplied source/parent review flags are deferred; no IDs or parents are changed.
+
+Standing-water holes intentionally return no Local at supplied Issyk Kul, Baikal and Severnaya Zemlya water controls; Water Feature hover is independent. User manual acceptance: lake shores versus water, Altai/Tian Shan/Pamir, West Siberia/Putorana/Yakutia, Lena delta, Kamchatka/Sakhalin/Kurils, both dateline sides and Arctic islands. Confirm Xaero terrain/Local and Water hover separately, Student discovery, Teacher non-discovery, reload and saved discovery persistence. No Minecraft terrain/gameplay tests were performed.
+
+## Historical release — Near East & Arabia Local Geometry, 0.5.22
 
 Core 0.16.0 / Minecraft 1.21.8 / Forge 58.1.18. The 117 existing Locals (74 Near East/Caucasus, 43 Arabia) move from `near_east_caucasus_locals.json` and `arabian_peninsula_locals.json` to exact supplied schema-v2 `npc_geography/asia_near_east_arabia_refined/<id>.json` files. Totals remain 39 Macros / 1,549 Local IDs in 563 geography resources. IDs, profiles, priorities, labels, parents, dimensions and saved discoveries are unchanged. All 227 Africa files including the Nile correction, European geometry and six prior refined Near East records, 435 Water Features, progression/UI and economy remain byte-identical. No reset or Core change is required.
 
