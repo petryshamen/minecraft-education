@@ -1,0 +1,4 @@
+7761cc1b8ffd75ed679f25496aaab3295d0b461baf17fd1ea32aac93613eda5a  human_journey_core-0.17.0.jar
+2743b5ce6fb261c6983e12097d098758bfa4a41f22ddbe5eacf0e9d75a050d7b  HumanJourneyCore-0.17.0-source.zip
+0c43d451f0ecee59a75ffcff00e6c3034526467e3c98d7a40e2e69ac27b5f026  HumanJourneyCore-0.17.0-native-example-datapack.zip
+296fc54b910cdc36478e5679bdbb347b5914e2281f7ac6ed60e99f71e852ba77  HumanJourneyCore-0.17.0-synthetic-era-style-datapack.zip

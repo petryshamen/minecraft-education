@@ -1,5 +1,8 @@
 # Human Journey Core 0.17.0
 
+Verified0.17.0: [Actions build45948107689](https://github.com/petryshamen/minecraft-education/actions/runs/45948107689), source `8b40d6678a3673cd28aed6018bcff50a5f66492b`.580tests pass,0failures;17no-world Forge checks including actual pinned UI Mixin transformations under headless datagen. 371prior runtime classes byte-identical; only main registration and retirement of the old dashboard entry/polling/status change existing bytecode. JAR SHA-256 `7761cc1b8ffd75ed679f25496aaab3295d0b461baf17fd1ea32aac93613eda5a`. No live Minecraft visual/gameplay test, installation or production data change.
+
+
 Native advancement enhancement: normal Minecraft Advancements now supports optional datapack positions, extra visual links and Era regions while retaining native frames/tooltips/visibility/input. Old HJ Progress entry/key retired; Dashboard foundation retained dormant. [Native contract, limits and integration checklist](NATIVE-ADVANCEMENTS.md). No production progression or datapack edits.
 
 Verified0.16.0: [Actions build45300539036](https://github.com/petryshamen/minecraft-education/actions/runs/45300539036), source `26a10502424fc0bce0cb9cc0f9249d0cf7c51976`.550tests pass (504unchanged prior+46new), zero failures;16no-world Forge checks. 337prior runtime classes byte-identical; only existing bootstrap class adds one isolated registration. Runtime SHA-256 `705bf8a2aa837fb953e5f796459acadfd7f4b741158ab36b4fbd7c6fe064649e`. No live Minecraft gameplay/visual testing, installation or production progression/data changes.
