@@ -52,8 +52,9 @@ public final class WrapRuntime {
  // Actual authoritative server coordinates, with native known movement for controlled vehicles.
  static PositionMoveRotation snapshot(Entity e){return new PositionMoveRotation(e.position(),e.getKnownMovement(),e.getYRot(),e.getXRot());}
  static final class Member implements WrapTransaction.Member {
-  final Entity entity,root;final ServerLevel level;final PositionMoveRotation before;final Entity vehicle;final List<Entity> passengers;
-  Member(Entity entity,Entity root,ServerLevel level){this.entity=entity;this.root=root;this.level=level;this.before=snapshot(entity);vehicle=entity.getVehicle();passengers=List.copyOf(entity.getPassengers());}
+  final Entity entity,root;final ServerLevel level;final PositionMoveRotation before,rootBefore;final Entity vehicle;final List<Entity> passengers;
+  private double committedDx;
+  Member(Entity entity,Entity root,ServerLevel level){this.entity=entity;this.root=root;this.level=level;this.before=snapshot(entity);rootBefore=entity==root?before:snapshot(root);vehicle=entity.getVehicle();passengers=List.copyOf(entity.getPassengers());}
   public String problem(double dx){
    if(!entity.isAlive()||entity.isRemoved()||entity.level()!=level||entity.getVehicle()!=vehicle||!entity.getPassengers().equals(passengers))return "changed/dead riding group";
    if(!(entity instanceof ServerPlayer)&&!entity.getClass().getName().startsWith("net.minecraft.world.entity."))return "unsupported modded entity class";
@@ -86,14 +87,15 @@ public final class WrapRuntime {
    return null;
   }
   PositionMoveRotation shifted(double dx){return new PositionMoveRotation(before.position().add(dx,0,0),before.deltaMovement(),before.yRot(),before.xRot());}
-  public void move(double dx){entity.teleportSetPosition(shifted(dx),Set.of());}
+  public void move(double dx){committedDx=dx;entity.teleportSetPosition(shifted(dx),Set.of());}
   public void restore(){entity.teleportSetPosition(before,Set.of());}
   public void publish(){
    if(entity instanceof ServerPlayer p){
     // Same-level narrow primitive used by vanilla ServerPlayer.teleport: keeps mount links,
     // uses normal acknowledged player teleport and absolute movement/rotation, no travel hook.
-    p.connection.teleport(snapshot(p),Set.of());p.connection.resetPosition();
-    if(root!=p){p.connection.send(ClientboundTeleportEntityPacket.teleport(root.getId(),snapshot(root),Set.of(),root.onGround()));((WrapConnection)p.connection).hjWrap$resetVehicle(root);}
+    // Do not re-read known movement after teleportSetPosition clears movement-this-tick.
+    p.connection.teleport(shifted(committedDx),Set.of());p.connection.resetPosition();
+    if(root!=p){var rootTarget=new PositionMoveRotation(rootBefore.position().add(committedDx,0,0),rootBefore.deltaMovement(),rootBefore.yRot(),rootBefore.xRot());p.connection.send(ClientboundTeleportEntityPacket.teleport(root.getId(),rootTarget,Set.of(),root.onGround()));((WrapConnection)p.connection).hjWrap$resetVehicle(root);}
    }
   }
  }
