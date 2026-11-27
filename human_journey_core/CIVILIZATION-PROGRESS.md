@@ -1,3 +1,5 @@
+> Historical Core0.16 Dashboard foundation. Its duplicate progression UI and key entry are retired in0.17.0. New native presentation uses NATIVE-ADVANCEMENTS.md; old data/code remain for compatibility, not student display or promised statistics.
+
 # Civilization Progress — Core 0.16.0 integration contract
 
 This release adds a read-only progression graph. It does not implement progression, unlocks, an advancement replacement, or a second ledger. Shared fake-player scores remain authoritative. No existing progression IDs/functions/advancement resources, roles, saved state, NPC economy, geography, map buttons or other gameplay were changed.

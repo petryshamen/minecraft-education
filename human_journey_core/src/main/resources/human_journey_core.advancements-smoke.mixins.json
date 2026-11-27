@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8.7",
+  "package": "org.humanjourney.core.advancement.mixin",
+  "plugin": "org.humanjourney.core.advancement.NativeSmokeMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AdvancementWidgetMixin",
+    "AdvancementTabMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -137,7 +137,9 @@
           "border": "#E4B767",
           "members": [
             "human_journey:era0/root"
-          ]
+          ],
+          "texture": "minecraft:textures/block/moss_block.png",
+          "tint": "#493C20"
         },
         {
           "id": "synthetic_b",

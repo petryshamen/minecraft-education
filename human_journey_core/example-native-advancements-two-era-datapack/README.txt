@@ -1,0 +1,1 @@
+Install this instead of the one-Era example in a separate HJ test world. Synthetic Era A/B styling uses EXISTING Era0 root and capstone as visibility anchors. It adds no Era1 achievements, criteria, functions or unlocks. First region uses a builtin16x16moss texture plus tint; second uses solid color.

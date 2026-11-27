@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HJ Native Advancement Presentation v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "tabs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "tabs": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "root"
+        ],
+        "properties": {
+          "root": {
+            "type": "string",
+            "maxLength": 192,
+            "pattern": "^human_journey:[a-z0-9_./-]+$"
+          },
+          "positions": {
+            "type": "array",
+            "maxItems": 512,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "advancement",
+                "x",
+                "y"
+              ],
+              "properties": {
+                "advancement": {
+                  "type": "string",
+                  "maxLength": 192,
+                  "pattern": "^human_journey:[a-z0-9_./-]+$"
+                },
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 8192
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 8192
+                }
+              }
+            }
+          },
+          "connections": {
+            "type": "array",
+            "maxItems": 2048,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "from",
+                "to"
+              ],
+              "properties": {
+                "from": {
+                  "type": "string",
+                  "maxLength": 192,
+                  "pattern": "^human_journey:[a-z0-9_./-]+$"
+                },
+                "to": {
+                  "type": "string",
+                  "maxLength": 192,
+                  "pattern": "^human_journey:[a-z0-9_./-]+$"
+                },
+                "route": {
+                  "type": "array",
+                  "maxItems": 16,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "properties": {
+                      "x": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 8192
+                      },
+                      "y": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 8192
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "eras": {
+            "type": "array",
+            "maxItems": 32,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "title",
+                "x",
+                "y",
+                "width",
+                "height",
+                "members"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_./:-]+$",
+                  "maxLength": 96
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 8192
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 8192
+                },
+                "width": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 8192
+                },
+                "height": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 8192
+                },
+                "color": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^#[a-fA-F0-9]{6}$"
+                    },
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 16777215
+                    }
+                  ]
+                },
+                "border": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^#[a-fA-F0-9]{6}$"
+                    },
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 16777215
+                    }
+                  ]
+                },
+                "tint": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^#[a-fA-F0-9]{6}$"
+                    },
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 16777215
+                    }
+                  ]
+                },
+                "texture": {
+                  "type": "string",
+                  "maxLength": 192,
+                  "pattern": "^[a-z0-9_.-]+:textures/[a-z0-9_./-]+\\.png$"
+                },
+                "members": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 512,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "maxLength": 192,
+                    "pattern": "^human_journey:[a-z0-9_./-]+$"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$comment": "Core additionally checks unique root/position/Era IDs, physical connection duplication, self-links, aggregate512IDs/2048links/32regions, actual displayed native references and same-root ancestry, local texture paths/no dot traversal, source512KiB/depth32 and serialized1MiB bounds. Presentation only: no progression references or criteria."
+}

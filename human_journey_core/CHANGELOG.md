@@ -1,3 +1,8 @@
+# 0.17.0
+
+- Added pinned native advancement presentation hooks, datapack-driven pixel layouts/visual links/Era regions, vanilla visibility filtering and safe fallback. No criteria, parent, score or gameplay changes.
+- Retired the duplicate HJ Progress screen entry/key and active polling; retained the loader/model/tab/transport foundation for future approved Dashboard content. Added optional native/synthetic examples and structural/native checks.
+
 # 0.16.0
 
 - Added data-driven read-only Civilization Progress canvas with multi-input prerequisite arrows, Era sections, server-authoritative shared score/visibility snapshots and additive advancements/key access. No progression writes or migration.
