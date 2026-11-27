@@ -1,6 +1,14 @@
 # Human Journey NPC geography
 
-## Current release — East & Southern Africa Local Geometry, 0.5.21
+## Current release — Near East & Arabia Local Geometry, 0.5.22
+
+Core 0.16.0 / Minecraft 1.21.8 / Forge 58.1.18. The 117 existing Locals (74 Near East/Caucasus, 43 Arabia) move from `near_east_caucasus_locals.json` and `arabian_peninsula_locals.json` to exact supplied schema-v2 `npc_geography/asia_near_east_arabia_refined/<id>.json` files. Totals remain 39 Macros / 1,549 Local IDs in 563 geography resources. IDs, profiles, priorities, labels, parents, dimensions and saved discoveries are unchanged. All 227 Africa files including the Nile correction, European geometry and six prior refined Near East records, 435 Water Features, progression/UI and economy remain byte-identical. No reset or Core change is required.
+
+Offline Core validation reproduces all 23,846 supplied baseline/result pairs: 21,521 → 22,613 covered land-grid points (+1,092; zero sampled losses), no resolution errors. Africa regressions check 87,932 fixtures with 85,138 protected resolutions unchanged, plus two Nile controls. Target dry-land coverage rises 93.45791% → 99.27984%; tiny exact sliver losses total approximately 1.72 blocks² despite zero sampled grid losses. Residual mainland/parent/interface gaps remain deferred. All five existing named lake/basin Local identities remain.
+
+The supplied Farasan control (2869.248,-1142.101333) is about 0.51 block offshore in the source land mask, so none is expected there. Core accepts island-interior controls (2861.251446,-1142.263773) and (2860.632389,-1149.961940) as `farasan_islands`; use actual safe land/terrain for manual checks. Terrain, Xaero hover, Student discovery/Teacher non-discovery, reload and persistence are not verified by offline tests. Source attribution: `NEAR_EAST_ARABIA_LOCAL_GEOMETRY_SOURCES.md` and `licenses/near_east_arabia_local/` in the ZIP.
+
+## Historical release — East & Southern Africa Local Geometry, 0.5.21
 
 Core 0.16.0 / Minecraft 1.21.8 / Forge 58.1.18. Exactly 130 existing Locals (72 East Africa/Horn, 58 Southern Africa) move from `east_africa_horn_locals.json` and `southern_africa_locals.json` to exact supplied schema-v2 `npc_geography/africa_east_south_refined/<id>.json` resources. Totals remain 39 Macros / 1,549 Local IDs in 448 geography resources. Profiles, priorities, labels, parents, dimensions and saved discoveries are unchanged; no reset is needed. The deployed 97 North/West files and Nile correction remain byte-identical, as do all 435 Water Features and progression/economy policies.
 
