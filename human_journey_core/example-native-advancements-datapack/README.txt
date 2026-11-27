@@ -1,0 +1,1 @@
+Optional presentation-only example for existing HJ Era0 advancements. Install manually in a separate test world alongside the HJ datapack. No advancements/functions are supplied or changed. Two extra capstone links render alongside the unchanged native Journey parent; the third definition proves duplicate suppression. Not production-approved geometry/content.

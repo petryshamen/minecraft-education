@@ -1,0 +1,17 @@
+{
+  "required": false,
+  "minVersion": "0.8.7",
+  "package": "org.humanjourney.core.advancement.mixin",
+  "plugin": "org.humanjourney.core.advancement.NativeMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PlayerAdvancementsMixin"
+  ],
+  "client": [
+    "AdvancementWidgetMixin",
+    "AdvancementTabMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

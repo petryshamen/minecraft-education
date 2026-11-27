@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "tabs": [
+    {
+      "root": "human_journey:era0/root",
+      "positions": [
+        {
+          "advancement": "human_journey:era0/root",
+          "x": 0,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/survival/first_flame",
+          "x": 50,
+          "y": 10
+        },
+        {
+          "advancement": "human_journey:era0/survival/ready_to_eat",
+          "x": 106,
+          "y": 10
+        },
+        {
+          "advancement": "human_journey:era0/survival/water_for_life",
+          "x": 162,
+          "y": 10
+        },
+        {
+          "advancement": "human_journey:era0/survival/reliable_source",
+          "x": 218,
+          "y": 10
+        },
+        {
+          "advancement": "human_journey:era0/survival/rest_at_last",
+          "x": 274,
+          "y": 10
+        },
+        {
+          "advancement": "human_journey:era0/tools/first_wood",
+          "x": 50,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/place_to_work",
+          "x": 106,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/first_tool",
+          "x": 162,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/stone_age",
+          "x": 218,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/better_edge",
+          "x": 274,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/dressed_for_wild",
+          "x": 330,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/tools/carry_what_you_can",
+          "x": 386,
+          "y": 80
+        },
+        {
+          "advancement": "human_journey:era0/journey/beyond_camp",
+          "x": 50,
+          "y": 150
+        },
+        {
+          "advancement": "human_journey:era0/journey/stranger_from_afar",
+          "x": 106,
+          "y": 150
+        },
+        {
+          "advancement": "human_journey:era0/journey/land_beyond",
+          "x": 162,
+          "y": 150
+        },
+        {
+          "advancement": "human_journey:era0/journey/new_continent",
+          "x": 218,
+          "y": 150
+        },
+        {
+          "advancement": "human_journey:era0/we_can_stay",
+          "x": 490,
+          "y": 80
+        }
+      ],
+      "connections": [
+        {
+          "from": "human_journey:era0/survival/rest_at_last",
+          "to": "human_journey:era0/we_can_stay",
+          "route": [
+            {
+              "x": 450,
+              "y": 23
+            },
+            {
+              "x": 450,
+              "y": 93
+            }
+          ]
+        },
+        {
+          "from": "human_journey:era0/tools/carry_what_you_can",
+          "to": "human_journey:era0/we_can_stay",
+          "route": [
+            {
+              "x": 470,
+              "y": 93
+            }
+          ]
+        },
+        {
+          "from": "human_journey:era0/journey/new_continent",
+          "to": "human_journey:era0/we_can_stay"
+        }
+      ],
+      "eras": [
+        {
+          "id": "synthetic_a",
+          "title": "Synthetic Era A",
+          "x": 0,
+          "y": 0,
+          "width": 290,
+          "height": 195,
+          "color": "#30291D",
+          "border": "#E4B767",
+          "members": [
+            "human_journey:era0/root"
+          ]
+        },
+        {
+          "id": "synthetic_b",
+          "title": "Synthetic Era B — style test only",
+          "x": 290,
+          "y": 0,
+          "width": 250,
+          "height": 195,
+          "color": "#192B40",
+          "border": "#7EB6E8",
+          "members": [
+            "human_journey:era0/we_can_stay"
+          ]
+        }
+      ]
+    }
+  ]
+}

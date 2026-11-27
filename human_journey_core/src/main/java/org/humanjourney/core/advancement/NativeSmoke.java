@@ -1,0 +1,14 @@
+package org.humanjourney.core.advancement;
+import java.util.*;
+import net.minecraft.core.*;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.server.PlayerAdvancements;
+import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
+import net.minecraft.data.*;
+public final class NativeSmoke {
+ public static void register(BusGroup group){GatherDataEvent.getBus(group).addListener(e->e.getGenerator().addProvider(true,new DataProvider(){public String getName(){return "Human Journey native advancement presentation checks";}public java.util.concurrent.CompletableFuture<?> run(CachedOutput output){return java.util.concurrent.CompletableFuture.runAsync(NativeSmoke::verify);}}));}
+ private static void verify(){try{if(!NativeMixinPlugin.supported())throw new IllegalStateException("wrong pinned environment");if(!NativeVisibility.class.isAssignableFrom(PlayerAdvancements.class))throw new IllegalStateException("read-only vanilla visibility Mixin missing");var model=NativePresentation.read(java.nio.file.Files.readString(java.nio.file.Path.of("../../example-native-advancements-datapack/data/human_journey/core/advancement_presentation.json")),id->true);var mirror=new NativeMirror();for(var p:NativePackets.frames(UUID.randomUUID(),1,model)){var b=new RegistryFriendlyByteBuf(io.netty.buffer.Unpooled.buffer(),RegistryAccess.fromRegistryOfRegistries(BuiltInRegistries.REGISTRY));try{NativePackets.CODEC.encode(b,p);if(b.readableBytes()>24*1024||!mirror.accept(NativePackets.CODEC.decode(b)))throw new IllegalStateException("codec failure");}finally{b.release();}}if(!mirror.view().equals(model))throw new IllegalStateException("mirror mismatch");if(net.minecraftforge.fml.loading.FMLLoader.getDist()==net.minecraftforge.api.distmarker.Dist.CLIENT){var tab=Class.forName("net.minecraft.client.gui.screens.advancements.AdvancementTab",false,NativeSmoke.class.getClassLoader());var widget=Class.forName("net.minecraft.client.gui.screens.advancements.AdvancementWidget",false,NativeSmoke.class.getClassLoader());var tabBridge=Class.forName("org.humanjourney.core.advancement.client.NativeTabAccess",false,NativeSmoke.class.getClassLoader());var widgetBridge=Class.forName("org.humanjourney.core.advancement.client.NativeWidgetAccess",false,NativeSmoke.class.getClassLoader());if(!tabBridge.isAssignableFrom(tab)||!widgetBridge.isAssignableFrom(widget))throw new IllegalStateException("native client UI Mixins missing");}com.mojang.logging.LogUtils.getLogger().info("[HJ Core] NATIVE_ADVANCEMENTS_SMOKE_OK: pinned visibility Mixin, native bounded codec/atomic mirror, client hooks where physical CLIENT; no world/player/Screen/OpenGL created");}catch(Exception e){throw new IllegalStateException("Native advancement smoke failed",e);}}
+ private NativeSmoke(){}
+}
