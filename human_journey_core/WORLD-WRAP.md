@@ -1,3 +1,7 @@
+# 0.18.1 notice
+
+This page records the historical0.18.0 prototype. Use SAFETY-CORRECTIONS.md for current containment, loading, protection and configuration.
+
 # World wrap prototype — Core 0.18.0
 
 Status: disabled-by-default **physical prototype**, not a seamless chunk topology. Xaero horizontal repetition is **not implemented or demonstrated**. Existing Xaero controls/overlays are unchanged. No automatic installation or production-world edits.

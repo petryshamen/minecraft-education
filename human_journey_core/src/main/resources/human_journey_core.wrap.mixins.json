@@ -4,6 +4,6 @@
  "package": "org.humanjourney.core.wrap.mixin",
  "plugin": "org.humanjourney.core.wrap.WrapMixinPlugin",
  "compatibilityLevel": "JAVA_21",
- "mixins": ["WrapConnectionMixin"],
+ "mixins": ["WrapConnectionMixin","EarthMapMixin","EarthHolderMixin","EarthTaskMixin","EarthMovementMixin","EarthPacketMixin","EarthLevelMixin"],
  "injectors": {"defaultRequire": 1}
 }

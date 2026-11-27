@@ -1,3 +1,7 @@
+# 0.18.1
+- Independent existing-only Earth protection, contained whole-group waiting/recovery, bounded automatic loading and explicit transition diagnostics.
+- Isolated dedicated-server validation; no production world/config/data changes and no Xaero repetition.
+
 # 0.18.0
 - Add opt-in Overworld Earth-seam whole-group coordinate wrap with loaded-destination preflight and acknowledged vehicle movement guard.
 - Add diagnostics, synthetic/native primitive tests and pinned Xaero feasibility report; no visual repetition or production-world/data changes.

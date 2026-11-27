@@ -1,4 +1,7 @@
-# Test-world serverconfig only. Leave production disabled until manual acceptance.
 [world_wrap]
 enabled = false
 log_crossings = true
+arrival_inset_blocks = 0
+
+[earth_protection]
+enabled = false

@@ -51,10 +51,11 @@ public final class WrapRuntime {
  }
  // Actual authoritative server coordinates, with native known movement for controlled vehicles.
  static PositionMoveRotation snapshot(Entity e){return new PositionMoveRotation(e.position(),e.getKnownMovement(),e.getYRot(),e.getXRot());}
- static final class Member implements WrapTransaction.Member {
+ public static final class Member implements WrapTransaction.Member {
   final Entity entity,root;final ServerLevel level;final PositionMoveRotation before,rootBefore;final Entity vehicle;final List<Entity> passengers;
   private double committedDx;
-  Member(Entity entity,Entity root,ServerLevel level){this.entity=entity;this.root=root;this.level=level;this.before=snapshot(entity);rootBefore=entity==root?before:snapshot(root);vehicle=entity.getVehicle();passengers=List.copyOf(entity.getPassengers());}
+  public Member(Entity entity,Entity root,ServerLevel level){this(entity,root,level,null,null);}
+  public Member(Entity entity,Entity root,ServerLevel level,Vec3 motion,Vec3 rootMotion){this.entity=entity;this.root=root;this.level=level;var original=snapshot(entity);this.before=motion==null?original:new PositionMoveRotation(original.position(),motion,original.yRot(),original.xRot());var originalRoot=entity==root?before:snapshot(root);rootBefore=rootMotion==null?originalRoot:new PositionMoveRotation(originalRoot.position(),rootMotion,originalRoot.yRot(),originalRoot.xRot());vehicle=entity.getVehicle();passengers=List.copyOf(entity.getPassengers());}
   public String problem(double dx){
    if(!entity.isAlive()||entity.isRemoved()||entity.level()!=level||entity.getVehicle()!=vehicle||!entity.getPassengers().equals(passengers))return "changed/dead riding group";
    if(!(entity instanceof ServerPlayer)&&!entity.getClass().getName().startsWith("net.minecraft.world.entity."))return "unsupported modded entity class";

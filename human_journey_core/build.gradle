@@ -14,6 +14,12 @@ java {
 minecraft {
     mappings channel: 'official', version: minecraft_version
     runs {
+        register('server') {
+            workingDir = layout.buildDirectory.dir('safety-server')
+            systemProperty 'humanjourney.safetyServer', 'true'
+            systemProperty 'humanjourney.safetyPhase', providers.gradleProperty('safetyPhase').getOrElse('verify')
+            args '--nogui', '--mixin', 'human_journey_core.water.mixins.json', '--mixin', 'human_journey_core.fishing.mixins.json', '--mixin', 'human_journey_core.economy.mixins.json', '--mixin', 'human_journey_core.juice.mixins.json', '--mixin', 'human_journey_core.xaero.mixins.json', '--mixin', 'human_journey_core.advancements.mixins.json', '--mixin', 'human_journey_core.wrap.mixins.json'
+        }
         register('data') {
             workingDir = layout.buildDirectory.dir('datagen-smoke')
             systemProperty 'humanjourney.waterSmoke', 'true'
@@ -108,3 +114,24 @@ tasks.register('verifyJarMetadata') {
     }
 }
 tasks.named('check') { dependsOn tasks.named('verifyJarMetadata') }
+
+// The isolated validation harness is present in dev runs, never in the installed mod.
+tasks.named('jar') { exclude 'org/humanjourney/core/wrap/safety/SafetyServerValidation*' }
+tasks.register('prepareSafetyServer') {
+    doLast {
+        def runDir = layout.buildDirectory.dir('safety-server').get().asFile
+        runDir.mkdirs()
+        new File(runDir, 'eula.txt').text = 'eula=true\n'
+        new File(runDir, 'server.properties').text = 'online-mode=false\nserver-port=0\nview-distance=2\nsimulation-distance=2\nlevel-type=minecraft:flat\ngenerate-structures=false\nspawn-protection=0\nmax-tick-time=120000\nlevel-name=isolated-earth-fixture\nlevel-seed=1\n'
+    }
+}
+tasks.named('runServer') { dependsOn 'prepareSafetyServer' }
+
+tasks.register('enableSafetyFixture') {
+    doLast {
+        def fixture = layout.buildDirectory.dir('safety-server/isolated-earth-fixture/serverconfig').get().asFile
+        if (!layout.buildDirectory.file('safety-server/PREPARED.txt').get().asFile.exists()) throw new GradleException('Isolated fixture not prepared')
+        fixture.mkdirs()
+        new File(fixture, 'human_journey_core-world-wrap.toml').text = '[world_wrap]\nenabled=true\nlog_crossings=true\narrival_inset_blocks=32\n[earth_protection]\nenabled=true\n'
+    }
+}

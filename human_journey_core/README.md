@@ -1,3 +1,7 @@
+# Human Journey Core 0.18.1
+
+See [safety corrections/configuration/manual tests](SAFETY-CORRECTIONS.md). Both physical wrap and independent protection default off. No production enablement or gameplay acceptance.
+
 # Human Journey Core 0.18.0
 
 Disabled-by-default physical Earth wrap prototype; [scope, safety limits, Xaero feasibility and manual tests](WORLD-WRAP.md). No visual repetition is shipped.
