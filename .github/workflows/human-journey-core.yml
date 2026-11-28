@@ -47,10 +47,10 @@ jobs:
       - name: Isolated Earth safety dedicated server validation
         timeout-minutes: 10
         run: |
-          timeout 240s ./gradlew --no-daemon runServer -PsafetyPhase=prepare
+          JAVA_TOOL_OPTIONS='-Dhumanjourney.safetyServer=true -Dhumanjourney.safetyPhase=prepare' timeout 180s ./gradlew --no-daemon runServer -PsafetyPhase=prepare
           test -f build/safety-server/PREPARED.txt
           ./gradlew --no-daemon enableSafetyFixture
-          timeout 240s ./gradlew --no-daemon runServer -PsafetyPhase=verify
+          JAVA_TOOL_OPTIONS='-Dhumanjourney.safetyServer=true -Dhumanjourney.safetyPhase=verify' timeout 180s ./gradlew --no-daemon runServer -PsafetyPhase=verify
           test -f build/safety-server/EARTH_SAFETY_SERVER_OK.json
           grep 'EARTH_SAFETY_SERVER_OK' build/safety-server/logs/latest.log
       - uses: actions/upload-artifact@v4
