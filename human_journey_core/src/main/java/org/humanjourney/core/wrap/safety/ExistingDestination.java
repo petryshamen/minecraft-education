@@ -40,5 +40,6 @@ public final class ExistingDestination implements AutoCloseable {
  public boolean failed(){boolean failed=proof.isDone()&&!proof.getNow(false);if(failed&&failure.isEmpty())failure="missing/incomplete/corrupt existing destination or storage budget unavailable";return failed;}
  public void close(){if(closed)return;closed=true;if(held)for(var pos:targets){var key=new Key(level,pos);int n=TICKETS.getOrDefault(key,0);if(n<=1){TICKETS.remove(key);level.getChunkSource().removeTicketWithRadius(TYPE.get(),pos,0);}else TICKETS.put(key,n-1);}}
  public static int ticketCount(){return TICKETS.size();}
+ public static int leaseCount(){return TICKETS.values().stream().mapToInt(Integer::intValue).sum();}
  public static void clear(){for(var key:List.copyOf(TICKETS.keySet()))key.level.getChunkSource().removeTicketWithRadius(TYPE.get(),key.pos,0);TICKETS.clear();}
 }

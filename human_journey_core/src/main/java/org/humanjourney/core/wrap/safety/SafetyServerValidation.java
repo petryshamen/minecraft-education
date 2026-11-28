@@ -20,7 +20,7 @@ import org.humanjourney.core.wrap.*;
 
 /** DEV ONLY. Excluded from runtime JAR. Uses a new CI fixture world, never an installed world. */
 public final class SafetyServerValidation {
- private static MinecraftServer server;private static int ticks,phase;private static Throwable failure;
+ private static MinecraftServer server;private static int ticks,phase,fixtureLeases;private static Throwable failure;
  private static List<CompletableFuture<ChunkResult<ChunkAccess>>> denied;
  private static net.minecraft.nbt.CompoundTag outsideBefore;private static Set<String> before;private static ExistingDestination loader,sourceLoader;
  private static AbstractBoat boat;private static AbstractChestBoat chest;private static ServerPlayer a,b,c;private static UUID boatId,chestId;private static net.minecraft.nbt.CompoundTag savedBoat;
@@ -66,13 +66,13 @@ public final class SafetyServerValidation {
    for(var future:denied)check(!future.join().isSuccess(),"missing/outside FULL request finishes without generation");
    if(!loader.ready()){if(loader.failed())throw new IllegalStateException(loader.failure);return;}
    if(!sourceLoader.ready()){if(sourceLoader.failed())throw new IllegalStateException(sourceLoader.failure);return;}
-   check(ExistingDestination.ticketCount()>0,"existing source and destination loaded with owned tickets after restart");loader.close();check(ExistingDestination.ticketCount()>0,"source lease retained while simulated players enter their loaded source");
+   check(ExistingDestination.ticketCount()>0,"existing source and destination loaded with owned tickets after restart");fixtureLeases=ExistingDestination.leaseCount();check(fixtureLeases>0,"fixture leases replace native client tracking for simulated connections");
    var failedLoader=new ExistingDestination(level,List.of(new AABB(12288,64,1600,12289,66,1601)));check(failedLoader.failed(),"outside dependency rejected before ticket creation");failedLoader.close();check(!failedLoader.ready(),"failed loader leaves no active lease");
    a=player("EarthTestA",level);b=player("EarthTestB",level);
    boat=(AbstractBoat)EntityType.OAK_BOAT.create(level,EntitySpawnReason.COMMAND);check(boat!=null,"native chest boat created");boat.absSnapTo(12270,63.5625,8,90,0);level.addFreshEntity(boat);boatId=boat.getUUID();
    chest=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);chest.absSnapTo(12270,63.5625,12,90,0);chest.setItem(0,new ItemStack(Items.DIAMOND,7));chestId=chest.getUUID();level.addFreshEntity(chest);c=player("EarthTestC",level);c.absSnapTo(12270,64.1,12,37,-10);level.addNewPlayer(c);addSimulatedPlayer(c);com.mojang.logging.LogUtils.getLogger().info("EARTH_MOUNT source={} rider={} sourceNBT={}",chest.position(),c.position(),level.getChunkSource().chunkMap.read(new ChunkPos(chest.blockPosition())).get(10,TimeUnit.SECONDS).map(t->t.getString("Status")));check(c.startRiding(chest,true),"native chest-boat rider mounted");
    for(var p:List.of(a,b)){p.absSnapTo(12270,64.1,8,37,-10);level.addNewPlayer(p);addSimulatedPlayer(p);check(p.startRiding(boat,true),"native player mounts boat");}
-   sourceLoader.close();check(ExistingDestination.ticketCount()==0,"source and destination setup tickets released after players are mounted");
+   check(ExistingDestination.leaseCount()==fixtureLeases,"fixture source/destination leases retained without additional mounting leases");
    phase=2;return;
   }
   if(phase==2){
@@ -81,7 +81,7 @@ public final class SafetyServerValidation {
    check(boat.getX()<12288&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"held group stays intact inside canonical boundary");acknowledge(a);acknowledge(b);acknowledge(c);phase=3;return;
   }
   if(phase==3){
-   check(boat.getX()>0&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"failed exact destination keeps complete real group at source");check(ExistingDestination.ticketCount()==0,"failed exact arrival leaves no owned tickets");check(SafetyRuntime.status().contains("crossed=false"),"failed arrival is never diagnosed as crossed");
+   check(boat.getX()>0&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"failed exact destination keeps complete real group at source");check(ExistingDestination.leaseCount()==fixtureLeases,"failed exact arrival leaves no extra job leases");check(SafetyRuntime.status().contains("crossed=false"),"failed arrival is never diagnosed as crossed");
    WrapConfig.ARRIVAL_INSET.set(32);check(SafetyRuntime.packet(a,12288.25,8),"explicit inward-fallback crossing prepared");check(SafetyRuntime.packet(c,12288.25,12),"independent chest-boat crossing prepared");acknowledge(a);acknowledge(b);acknowledge(c);phase=4;return;
   }
   if(phase==4){
@@ -90,7 +90,7 @@ public final class SafetyServerValidation {
    check(boat.getUUID().equals(boatId)&&chest.getUUID().equals(chestId)&&chest.getItem(0).is(Items.DIAMOND)&&chest.getItem(0).getCount()==7,"crossing preserves real vehicle UUID and inventory");
    check(a.getRootVehicle()==boat&&b.getRootVehicle()==boat&&boat.getPassengers().size()==2,"crossing preserves both real passenger links");
    check(SafetyRuntime.status().contains("CROSSED")&&SafetyRuntime.status().contains("crossed=true"),"successful crossing explicitly diagnosed");
-   check(ExistingDestination.ticketCount()==0,"successful crossing releases tickets");
+   check(ExistingDestination.leaseCount()==fixtureLeases,"successful crossing releases all job leases while fixture actor tracking remains");
    // Native save/load vehicle identity and inventory; no new runtime UUID rewrite.
    var output=net.minecraft.world.level.storage.TagValueOutput.createWithContext(net.minecraft.util.ProblemReporter.DISCARDING,level.registryAccess());chest.saveWithoutId(output);var tag=output.buildResult();savedBoat=tag;var copy=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);copy.load(net.minecraft.world.level.storage.TagValueInput.create(net.minecraft.util.ProblemReporter.DISCARDING,level.registryAccess(),tag));check(copy.getUUID().equals(chestId)&&copy.getItem(0).getCount()==7,"native chest-boat save/load retains identity and inventory");
    phase=5;return;
@@ -103,7 +103,7 @@ public final class SafetyServerValidation {
   if(phase==6){
    check(boat.getX()<0&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"whole native hierarchy restored after direct outside displacement");check(SafetyRuntime.status().contains("HELD")&&SafetyRuntime.status().contains("crossed=false"),"anchor recovery is not a successful seam crossing");
    var replacement=new net.minecraft.network.Connection(net.minecraft.network.protocol.PacketFlow.SERVERBOUND);a.connection=new net.minecraft.server.network.ServerGamePacketListenerImpl(server,replacement,a,net.minecraft.server.network.CommonListenerCookie.createInitial(a.getGameProfile(),false));check(!((WrapConnection)a.connection).hjWrap$pending()&&a.getRootVehicle()==boat,"simulated connection replacement has no stale wrap acknowledgement or mount rewrite");
-   SafetyRuntime.closeAll();check(ExistingDestination.ticketCount()==0,"stop/reconnect cleanup releases all owned tickets");
+   sourceLoader.close();loader.close();check(ExistingDestination.leaseCount()==0,"fixture tracking leases explicitly released");SafetyRuntime.closeAll();check(ExistingDestination.ticketCount()==0,"stop/reconnect cleanup releases all owned tickets");
    server.saveAllChunks(false,true,true);var after=records();check(outsideBefore.equals(level.getChunkSource().chunkMap.read(new ChunkPos(768,0)).get(10,TimeUnit.SECONDS).orElseThrow()),"pre-existing outside chunk NBT remains unchanged");check(after.equals(before),"native FULL/view-distance/dependency requests create zero new region chunk records under protection");
    Files.writeString(Path.of("EARTH_SAFETY_SERVER_OK.json"),new com.google.gson.GsonBuilder().setPrettyPrinting().create().toJson(Map.of("checks",checks,"count",checks.size(),"tick",ticks,"new_chunk_records",0,"live_gameplay_acceptance",false)));
    com.mojang.logging.LogUtils.getLogger().info("EARTH_SAFETY_SERVER_OK: {} checks, real dedicated restart, native chunk scheduler/disk/tickets, actual two-seat boat/chest boat, group recovery and simulated connections; no real client/gameplay acceptance",checks.size());
