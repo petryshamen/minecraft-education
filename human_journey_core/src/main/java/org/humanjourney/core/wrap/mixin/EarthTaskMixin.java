@@ -9,6 +9,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class EarthTaskMixin implements BoundaryHooks.Cancellation {
  @Shadow @Final private GeneratingChunkMap chunkMap;
  @Shadow public abstract GenerationChunkHolder getCenter();
- @Inject(method="markForCancellation",at=@At("HEAD"))
- private void hjEarth$finishCancelledRequest(CallbackInfo ci){if(chunkMap instanceof EarthAccess map&&EarthProtection.active(map.hjEarth$level()))((EarthHolder)getCenter()).hjEarth$fail();}
+ @Inject(method="waitForScheduledLayer",at=@At(value="INVOKE",target="Lnet/minecraft/server/level/ChunkGenerationTask;markForCancellation()V"))
+ private void hjEarth$finishRejectedDependency(org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<java.util.concurrent.CompletableFuture<?>> ci){if(chunkMap instanceof EarthAccess map&&EarthProtection.active(map.hjEarth$level()))((EarthHolder)getCenter()).hjEarth$fail();}
 }
