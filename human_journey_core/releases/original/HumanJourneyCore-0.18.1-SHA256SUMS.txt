@@ -1,0 +1,2 @@
+1936b5d0af0f77d9ca81d6ed45fc32c75e56a3915a74c8b562c9c273b2defc6b  human_journey_core-0.18.1.jar
+2edf17cbb67e70c224fe20e75048349c79d942b98ed61fdb24462c39a198d0a8  HumanJourneyCore-0.18.1-source.zip
