@@ -1,5 +1,10 @@
 # Human Journey changelog
 
+## 0.5.27
+
+- Integrated 233 exact geometry-only Southeast Asia/Oceania Local replacements, replacing three aggregates with per-area schema-v2 resources and retaining source attribution/licenses. Totals remain 39 Macros / 1,549 Locals across 1,164 geography resources. All IDs, metadata, profiles and saved discovery remain unchanged.
+- Core 0.18.0 accepts the complete catalogue and reproduces all 39,584 supplied baseline/result pairs: 35,035 -> 36,916 covered land-grid samples (+1,881; zero sampled losses/errors). Target dry-land coverage 94.08982% -> 99.18137%; independently measured exact sliver losses approximately 0.24 blocks². Residual coast/island gaps and one source-extent review remain deferred. Unrelated source and all 435 Water Features stay byte-identical; no Minecraft gameplay testing.
+
 ## 0.5.26
 
 - Integrated 194 exact geometry-only South/East Asia Local replacements, replacing two aggregates with per-area schema-v2 resources and preserving source attribution/licenses. Totals remain 39 Macros / 1,549 Locals in 934 geography resources; IDs, profiles, labels, priorities, parents and saved discovery remain unchanged.

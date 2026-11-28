@@ -1,6 +1,14 @@
 # Human Journey NPC geography
 
-## Current release — South & East Asia Local Geometry, 0.5.26
+## Current release — Southeast Asia & Oceania Local Geometry, 0.5.27
+
+Core 0.18.0 / Minecraft 1.21.8 / Forge 58.1.18. 233 exact schema-v2 per-area resources in `npc_geography/asia_oceania_refined/` replace `southeast_asia_locals.json`, `oceania_locals.json` and `oceania_dateline_west_locals.json`. Global totals remain 39 Macros / 1,549 Locals across 1,164 resources. IDs, profiles, priorities, parents, labels, dimensions and discoveries are unchanged. All prior refinements, 435 Water Features and unrelated gameplay/UI source remain byte-identical. Attribution: `ASIA_OCEANIA_LOCAL_GEOMETRY_SOURCES.md` and `licenses/asia_oceania_local/` in the ZIP.
+
+Offline Core validation reproduces all 39,584 supplied baseline/result pairs: 35,035 -> 36,916 covered land-grid samples (+1,881, zero sampled losses/errors). Target dry-land coverage rises 94.08982% -> 99.18137%; exact sliver losses independently measured at approximately 0.24 blocks². Residual coastal/island gaps and the Pilbara/Hamersley named-source extent concern remain separate design work. No corrections, new IDs or reparenting were introduced.
+
+Manual terrain acceptance remains pending: Mekong/Irrawaddy deltas, Indonesia/Philippines/Timor, New Guinea, Australia coast/interior/Tasmania, both New Zealand islands and Pacific islands on both dateline sides. Some supplied Fiji/Samoa reference points are offshore and correctly resolve none; test actual dry land. Check Local and Water Feature hover independently, NPC naming, Student discovery, Teacher non-discovery, reload and saved discoveries. No Minecraft startup/gameplay testing; no reset required.
+
+## Historical release — South & East Asia Local Geometry, 0.5.26
 
 Core 0.18.0 / Minecraft 1.21.8 / Forge 58.1.18. 194 exact schema-v2 per-area resources in `npc_geography/asia_south_east_refined/` replace `south_asia_locals.json` and `east_asia_locals.json`. Global totals remain 39 Macros / 1,549 Locals across 934 resources. IDs, profiles, parents, priorities, dimensions, labels and saved discoveries are preserved. Prior Africa, Europe and other Asia refinements, all 435 Water Features and all unrelated gameplay/UI files remain byte-identical. Attribution: `SOUTH_EAST_LOCAL_GEOMETRY_SOURCES.md` and `licenses/south_east_asia_local/` in the ZIP.
 
