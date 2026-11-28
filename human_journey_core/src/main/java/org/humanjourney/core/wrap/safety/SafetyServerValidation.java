@@ -72,11 +72,12 @@ public final class SafetyServerValidation {
    boat=(AbstractBoat)EntityType.OAK_BOAT.create(level,EntitySpawnReason.COMMAND);check(boat!=null,"native chest boat created");boat.absSnapTo(12270,63.5625,8,90,0);level.addFreshEntity(boat);boatId=boat.getUUID();
    chest=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);chest.absSnapTo(12270,63.5625,12,90,0);chest.setItem(0,new ItemStack(Items.DIAMOND,7));chestId=chest.getUUID();level.addFreshEntity(chest);c=player("EarthTestC",level);c.absSnapTo(12270,64.1,12,37,-10);level.addNewPlayer(c);addSimulatedPlayer(c);com.mojang.logging.LogUtils.getLogger().info("EARTH_MOUNT source={} rider={} sourceNBT={}",chest.position(),c.position(),level.getChunkSource().chunkMap.read(new ChunkPos(chest.blockPosition())).get(10,TimeUnit.SECONDS).map(t->t.getString("Status")));check(c.startRiding(chest,true),"native chest-boat rider mounted");
    for(var p:List.of(a,b)){p.absSnapTo(12270,64.1,8,37,-10);level.addNewPlayer(p);addSimulatedPlayer(p);check(p.startRiding(boat,true),"native player mounts boat");}
+   check(boat.getPassengers().size()==2,"native setup immediately retains both boat passengers");
    check(ExistingDestination.leaseCount()==fixtureLeases,"fixture source/destination leases retained without additional mounting leases");
    phase=2;return;
   }
   if(phase==2){
-   check(boat.getPassengers().size()==2,"two actual passengers retained");
+   check(boat.getPassengers().size()==2,"two actual passengers retained; rootRemoved="+boat.isRemoved()+" reason="+boat.getRemovalReason()+" passengers="+boat.getPassengers()+" aVehicle="+a.getVehicle()+" bVehicle="+b.getVehicle());
    WrapConfig.ARRIVAL_INSET.set(0);check(SafetyRuntime.packet(a,12288.25,8),"exact edge request held before position acceptance");
    check(boat.getX()<12288&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"held group stays intact inside canonical boundary");acknowledge(a);acknowledge(b);acknowledge(c);phase=3;return;
   }
