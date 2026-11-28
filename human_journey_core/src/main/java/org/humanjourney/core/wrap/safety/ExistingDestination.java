@@ -27,7 +27,7 @@ public final class ExistingDestination implements AutoCloseable {
   if(required.stream().anyMatch(p->!SafetyPolicy.chunkInside(p.x,p.z))){failure="destination footprint/loading dependency reaches outside canonical Earth; use explicit inward-arrival setting or remain held";proof=CompletableFuture.completedFuture(false);return;}
   if(!(level.getChunkSource().chunkMap instanceof EarthAccess map)){failure="existing-only storage bridge missing";proof=CompletableFuture.completedFuture(false);return;}
   CompletableFuture<Boolean> chain=CompletableFuture.completedFuture(true);
-  for(var pos:required)chain=chain.thenCompose(ok->ok?EarthProtection.existing(map,pos):CompletableFuture.completedFuture(false));
+  for(var pos:required)chain=chain.thenCompose(ok->ok?EarthProtection.existing(map,pos).thenApply(valid->{if(!valid)failure="destination dependency "+pos+" is missing/incomplete/corrupt or storage budget unavailable";return valid;}):CompletableFuture.completedFuture(false));
   proof=chain;
  }
  public boolean ready(){

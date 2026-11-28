@@ -16,19 +16,18 @@ public abstract class EarthHolderMixin implements EarthHolder {
  @Shadow public abstract ChunkStatus getPersistedStatus();
  @Shadow private void failAndClearPendingFuturesBetween(ChunkStatus low,ChunkStatus high){throw new AssertionError();}
  public void hjEarth$fail(){failAndClearPendingFuturesBetween(null,ChunkStatus.FULL);}
- @org.spongepowered.asm.mixin.Unique private java.util.concurrent.CompletableFuture<net.minecraft.server.level.ChunkResult<ChunkAccess>> hjEarth$reject(ChunkStep step){if(Boolean.getBoolean("humanjourney.safetyServer")&&EarthProtection.denied.get()<160)com.mojang.logging.LogUtils.getLogger().info("EARTH_NATIVE_DENIED pos={} target={} persisted={}",getPos(),step.targetStatus(),getPersistedStatus());return EarthProtection.reject(this);}
  @Invoker("applyStep") public abstract CompletableFuture<ChunkResult<ChunkAccess>> hjEarth$apply(ChunkStep step,GeneratingChunkMap map,StaticCache2D<GenerationChunkHolder> cache);
  @Inject(method="applyStep",at=@At("HEAD"),cancellable=true)
  private void hjEarth$existingOnly(ChunkStep step,GeneratingChunkMap raw,StaticCache2D<GenerationChunkHolder> cache,CallbackInfoReturnable<CompletableFuture<ChunkResult<ChunkAccess>>> ci){
   if(!(raw instanceof EarthAccess map)||!EarthProtection.active(map.hjEarth$level()))return;
-  if(!SafetyPolicy.chunkInside(getPos().x,getPos().z)){ci.setReturnValue(hjEarth$reject(step));return;}
+  if(!SafetyPolicy.chunkInside(getPos().x,getPos().z)){ci.setReturnValue(EarthProtection.reject(this));return;}
   if(step.targetStatus()==ChunkStatus.EMPTY){
    var proof=EarthProtection.existing(map,getPos());
-   if(!proof.isDone()){ci.setReturnValue(proof.thenComposeAsync(ok->ok?hjEarth$apply(step,raw,cache):hjEarth$reject(step),map.hjEarth$executor()));return;}
-   if(!proof.getNow(false)){ci.setReturnValue(hjEarth$reject(step));return;}
+   if(!proof.isDone()){ci.setReturnValue(proof.thenComposeAsync(ok->ok?hjEarth$apply(step,raw,cache):EarthProtection.reject(this),map.hjEarth$executor()));return;}
+   if(!proof.getNow(false)){ci.setReturnValue(EarthProtection.reject(this));return;}
   }else{
    var persisted=getPersistedStatus();
-   if(persisted==null||persisted.isBefore(step.targetStatus()))ci.setReturnValue(hjEarth$reject(step));
+   if(persisted==null||persisted.isBefore(step.targetStatus()))ci.setReturnValue(EarthProtection.reject(this));
   }
  }
 }
