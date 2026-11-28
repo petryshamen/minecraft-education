@@ -12,5 +12,5 @@ public abstract class EarthPacketMixin implements org.humanjourney.core.wrap.saf
  @Inject(method="handleMovePlayer",at=@At(value="INVOKE",target="Lnet/minecraft/network/protocol/PacketUtils;ensureRunningOnSameThread(Lnet/minecraft/network/protocol/Packet;Lnet/minecraft/network/PacketListener;Lnet/minecraft/server/level/ServerLevel;)V",shift=At.Shift.AFTER),cancellable=true)
  private void hjEarth$player(ServerboundMovePlayerPacket packet,CallbackInfo ci){if(packet.hasPosition()&&!player.isPassenger()&&SafetyRuntime.packet(player,packet.getX(player.getX()),packet.getZ(player.getZ())))ci.cancel();}
  @Inject(method="handleMoveVehicle",at=@At(value="INVOKE",target="Lnet/minecraft/network/protocol/PacketUtils;ensureRunningOnSameThread(Lnet/minecraft/network/protocol/Packet;Lnet/minecraft/network/PacketListener;Lnet/minecraft/server/level/ServerLevel;)V",shift=At.Shift.AFTER),cancellable=true)
- private void hjEarth$vehicle(ServerboundMoveVehiclePacket packet,CallbackInfo ci){if(SafetyRuntime.packet(player,packet.position().x,packet.position().z))ci.cancel();}
+ private void hjEarth$vehicle(ServerboundMoveVehiclePacket packet,CallbackInfo ci){var root=player.getRootVehicle();if(root!=player&&root.getControllingPassenger()==player&&SafetyRuntime.packet(player,packet.position().x,packet.position().z))ci.cancel();}
 }
