@@ -22,7 +22,7 @@ import org.humanjourney.core.wrap.*;
 public final class SafetyServerValidation {
  private static MinecraftServer server;private static int ticks,phase;private static Throwable failure;
  private static List<CompletableFuture<ChunkResult<ChunkAccess>>> denied;
- private static net.minecraft.nbt.CompoundTag outsideBefore;private static Set<String> before;private static ExistingDestination loader;
+ private static net.minecraft.nbt.CompoundTag outsideBefore;private static Set<String> before;private static ExistingDestination loader,sourceLoader;
  private static AbstractBoat boat;private static AbstractChestBoat chest;private static ServerPlayer a,b,c;private static UUID boatId,chestId;private static net.minecraft.nbt.CompoundTag savedBoat;
  private static final List<String> checks=new ArrayList<>();
  private static void check(boolean condition,String label){if(!condition)throw new IllegalStateException(label);checks.add(label);}
@@ -57,6 +57,7 @@ public final class SafetyServerValidation {
    for(int x=768;x<=770;x++)for(int z=100;z<=102;z++)denied.add(level.getChunkSource().getChunkFuture(x,z,ChunkStatus.FULL,true));
    denied.add(level.getChunkSource().getChunkFuture(600,100,ChunkStatus.FULL,true));
    loader=new ExistingDestination(level,List.of(new AABB(-12256.7,63.5,7.3,-12255.3,64.2,8.7)));
+   sourceLoader=new ExistingDestination(level,List.of(new AABB(12269.3,63.5,7.3,12270.7,65.5,13)));
    phase=1;return;
   }
   if(ticks>600)throw new IllegalStateException("native validation timeout phase="+phase+" "+SafetyRuntime.status());
@@ -64,12 +65,14 @@ public final class SafetyServerValidation {
    if(!denied.stream().allMatch(CompletableFuture::isDone))return;
    for(var future:denied)check(!future.join().isSuccess(),"missing/outside FULL request finishes without generation");
    if(!loader.ready()){if(loader.failed())throw new IllegalStateException(loader.failure);return;}
-   check(ExistingDestination.ticketCount()>0,"existing destination loaded with owned tickets after restart");loader.close();check(ExistingDestination.ticketCount()==0,"destination tickets released");
-   var failedLoader=new ExistingDestination(level,List.of(new AABB(12288,64,1600,12289,66,1601)));check(failedLoader.failed(),"outside dependency rejected before ticket creation");failedLoader.close();check(ExistingDestination.ticketCount()==0,"failed loader leaves no tickets");
+   if(!sourceLoader.ready()){if(sourceLoader.failed())throw new IllegalStateException(sourceLoader.failure);return;}
+   check(ExistingDestination.ticketCount()>0,"existing source and destination loaded with owned tickets after restart");loader.close();check(ExistingDestination.ticketCount()>0,"source lease retained while simulated players enter their loaded source");
+   var failedLoader=new ExistingDestination(level,List.of(new AABB(12288,64,1600,12289,66,1601)));check(failedLoader.failed(),"outside dependency rejected before ticket creation");failedLoader.close();check(!failedLoader.ready(),"failed loader leaves no active lease");
    a=player("EarthTestA",level);b=player("EarthTestB",level);
    boat=(AbstractBoat)EntityType.OAK_BOAT.create(level,EntitySpawnReason.COMMAND);check(boat!=null,"native chest boat created");boat.absSnapTo(12270,63.5625,8,90,0);level.addFreshEntity(boat);boatId=boat.getUUID();
    chest=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);chest.absSnapTo(12270,63.5625,12,90,0);chest.setItem(0,new ItemStack(Items.DIAMOND,7));chestId=chest.getUUID();level.addFreshEntity(chest);c=player("EarthTestC",level);c.absSnapTo(12270,64.1,12,37,-10);level.addNewPlayer(c);addSimulatedPlayer(c);com.mojang.logging.LogUtils.getLogger().info("EARTH_MOUNT source={} rider={} sourceNBT={}",chest.position(),c.position(),level.getChunkSource().chunkMap.read(new ChunkPos(chest.blockPosition())).get(10,TimeUnit.SECONDS).map(t->t.getString("Status")));check(c.startRiding(chest,true),"native chest-boat rider mounted");
    for(var p:List.of(a,b)){p.absSnapTo(12270,64.1,8,37,-10);level.addNewPlayer(p);addSimulatedPlayer(p);check(p.startRiding(boat,true),"native player mounts boat");}
+   sourceLoader.close();check(ExistingDestination.ticketCount()==0,"source and destination setup tickets released after players are mounted");
    phase=2;return;
   }
   if(phase==2){
