@@ -22,7 +22,7 @@ import org.humanjourney.core.wrap.*;
 public final class SafetyServerValidation {
  private static MinecraftServer server;private static int ticks,phase;private static Throwable failure;
  private static List<CompletableFuture<ChunkResult<ChunkAccess>>> denied;
- private static Set<String> before;private static ExistingDestination loader;
+ private static net.minecraft.nbt.CompoundTag outsideBefore;private static Set<String> before;private static ExistingDestination loader;
  private static AbstractBoat boat;private static AbstractChestBoat chest;private static ServerPlayer a,b,c;private static UUID boatId,chestId;private static net.minecraft.nbt.CompoundTag savedBoat;
  private static final List<String> checks=new ArrayList<>();
  private static void check(boolean condition,String label){if(!condition)throw new IllegalStateException(label);checks.add(label);}
@@ -38,6 +38,7 @@ public final class SafetyServerValidation {
   p.connection=new net.minecraft.server.network.ServerGamePacketListenerImpl(server,connection,p,net.minecraft.server.network.CommonListenerCookie.createInitial(p.getGameProfile(),false));
   return p;
  }
+ @SuppressWarnings("unchecked") private static void addSimulatedPlayer(ServerPlayer p)throws Exception{var field=net.minecraft.server.players.PlayerList.class.getDeclaredField("players");field.setAccessible(true);((List<ServerPlayer>)field.get(server.getPlayerList())).add(p);}
  private static void acknowledge(ServerPlayer p)throws Exception{var field=net.minecraft.server.network.ServerGamePacketListenerImpl.class.getDeclaredField("awaitingTeleport");field.setAccessible(true);p.connection.handleAcceptTeleportPacket(new net.minecraft.network.protocol.game.ServerboundAcceptTeleportationPacket(field.getInt(p.connection)));}
  private static void run()throws Exception{
   ticks++;var level=server.overworld();boolean prepare=System.getProperty("humanjourney.safetyPhase","verify").equals("prepare");
@@ -49,7 +50,9 @@ public final class SafetyServerValidation {
   }else if(ticks>20){server.saveAllChunks(false,true,true);Files.writeString(Path.of("PREPARED.txt"),"new isolated fixture prepared; production terrain untouched");server.halt(false);server=null;}return;}
   if(phase==0){
    check(EarthProtection.ready(),"protection active before world load after real server restart");
-   before=records();denied=new ArrayList<>();
+   before=records();outsideBefore=level.getChunkSource().chunkMap.read(new ChunkPos(768,0)).get(10,TimeUnit.SECONDS).orElseThrow();
+   check(level.getBlockState(new BlockPos(12288,64,1600)).is(Blocks.VOID_AIR),"outside block read does not request terrain");check(level.getFluidState(new BlockPos(12288,64,1600)).isEmpty(),"outside fluid read is unavailable without terrain");check(!level.setBlock(new BlockPos(12288,64,8),Blocks.DIAMOND_BLOCK.defaultBlockState(),2),"outside write rejected without replacement");
+   denied=new ArrayList<>();
    // Equivalent native FULL requests used by view-distance/player-loading tickets.
    for(int x=768;x<=770;x++)for(int z=100;z<=102;z++)denied.add(level.getChunkSource().getChunkFuture(x,z,ChunkStatus.FULL,true));
    denied.add(level.getChunkSource().getChunkFuture(600,100,ChunkStatus.FULL,true));
@@ -65,8 +68,8 @@ public final class SafetyServerValidation {
    var failedLoader=new ExistingDestination(level,List.of(new AABB(12288,64,1600,12289,66,1601)));check(failedLoader.failed(),"outside dependency rejected before ticket creation");failedLoader.close();check(ExistingDestination.ticketCount()==0,"failed loader leaves no tickets");
    a=player("EarthTestA",level);b=player("EarthTestB",level);
    boat=(AbstractBoat)EntityType.OAK_BOAT.create(level,EntitySpawnReason.COMMAND);check(boat!=null,"native chest boat created");boat.absSnapTo(12286,63.5625,8,90,0);level.addFreshEntity(boat);boatId=boat.getUUID();
-   chest=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);chest.absSnapTo(12286,63.5625,12,90,0);chest.setItem(0,new ItemStack(Items.DIAMOND,7));chestId=chest.getUUID();level.addFreshEntity(chest);c=player("EarthTestC",level);c.absSnapTo(12286,64.1,12,37,-10);level.addNewPlayer(c);server.getPlayerList().getPlayers().add(c);check(c.startRiding(chest,true),"native chest-boat rider mounted");
-   for(var p:List.of(a,b)){p.absSnapTo(12286,64.1,8,37,-10);level.addNewPlayer(p);server.getPlayerList().getPlayers().add(p);check(p.startRiding(boat,true),"native player mounts boat");}
+   chest=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);chest.absSnapTo(12286,63.5625,12,90,0);chest.setItem(0,new ItemStack(Items.DIAMOND,7));chestId=chest.getUUID();level.addFreshEntity(chest);c=player("EarthTestC",level);c.absSnapTo(12286,64.1,12,37,-10);level.addNewPlayer(c);addSimulatedPlayer(c);check(c.startRiding(chest,true),"native chest-boat rider mounted");
+   for(var p:List.of(a,b)){p.absSnapTo(12286,64.1,8,37,-10);level.addNewPlayer(p);addSimulatedPlayer(p);check(p.startRiding(boat,true),"native player mounts boat");}
    phase=2;return;
   }
   if(phase==2){
@@ -87,7 +90,7 @@ public final class SafetyServerValidation {
   }
   if(phase==4){
    SafetyRuntime.closeAll();check(ExistingDestination.ticketCount()==0,"stop/reconnect cleanup releases all owned tickets");
-   server.saveAllChunks(false,true,true);var after=records();check(after.equals(before),"native FULL/view-distance/dependency requests create zero new region chunk records under protection");
+   server.saveAllChunks(false,true,true);var after=records();check(outsideBefore.equals(level.getChunkSource().chunkMap.read(new ChunkPos(768,0)).get(10,TimeUnit.SECONDS).orElseThrow()),"pre-existing outside chunk NBT remains unchanged");check(after.equals(before),"native FULL/view-distance/dependency requests create zero new region chunk records under protection");
    Files.writeString(Path.of("EARTH_SAFETY_SERVER_OK.json"),new com.google.gson.GsonBuilder().setPrettyPrinting().create().toJson(Map.of("checks",checks,"count",checks.size(),"tick",ticks,"new_chunk_records",0,"live_gameplay_acceptance",false)));
    com.mojang.logging.LogUtils.getLogger().info("EARTH_SAFETY_SERVER_OK: {} checks, real dedicated restart, native chunk scheduler/disk/tickets, real chest boat and two simulated connections; no real client/gameplay acceptance",checks.size());
    server.halt(false);server=null;
