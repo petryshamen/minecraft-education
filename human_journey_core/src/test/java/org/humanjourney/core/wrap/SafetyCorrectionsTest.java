@@ -19,6 +19,8 @@ class SafetyCorrectionsTest {
  @Test void exactChunkInterval(){assertTrue(SafetyPolicy.chunkInside(-768,-384));assertTrue(SafetyPolicy.chunkInside(767,383));assertFalse(SafetyPolicy.chunkInside(768,0));assertFalse(SafetyPolicy.chunkInside(-769,0));}
  @Test void noNorthSouthWrap(){assertFalse(SafetyPolicy.chunkInside(0,-385));assertFalse(SafetyPolicy.chunkInside(0,384));}
  @Test void fullFootprintInside(){assertTrue(SafetyPolicy.inside(-12287,12287,-6143,6143));assertFalse(SafetyPolicy.inside(-12288.1,-12287,0,1));assertFalse(SafetyPolicy.inside(12287,12288,0,1));}
+ @Test void dependencyBandIsExplicitAndInsideCanonicalEarth(){assertEquals(16,SafetyPolicy.BUFFER);assertFalse(SafetyPolicy.readable(12280,0));assertFalse(SafetyPolicy.readable(-12280,0));assertTrue(SafetyPolicy.readable(12270,0));assertTrue(SafetyPolicy.readable(-12270,0));}
+ @Test void rawPositionCannotBypassContainment()throws Exception{assertTrue(source("mixin/EarthMovementMixin").contains("method=\"setPosRaw\""));assertTrue(source("safety/SafetyRuntime").contains("!entity.isAddedToWorld()"));}
  @Test void nonFiniteBoundsRejected(){assertFalse(SafetyPolicy.inside(Double.NaN,0,0,0));assertFalse(SafetyPolicy.inside(0,Double.POSITIVE_INFINITY,0,0));}
  @Test void clampInside(){assertEquals(12286,SafetyPolicy.clamp(12290,-12286,12286));assertEquals(-12286,SafetyPolicy.clamp(-12300,-12286,12286));assertEquals(1.25,SafetyPolicy.clamp(1.25,-12286,12286));}
  @Test void invalidContainmentRejected(){assertThrows(IllegalArgumentException.class,()->SafetyPolicy.clamp(Double.NaN,0,1));assertThrows(IllegalArgumentException.class,()->SafetyPolicy.clamp(0,2,1));}

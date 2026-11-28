@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 /** Outside is unavailable space, never a new registered/saved chunk. Existing disk records untouched. */
 @Mixin(Level.class)
 public abstract class EarthLevelMixin implements BoundaryHooks.LevelReads {
- private boolean hjEarth$outside(BlockPos pos){return (Object)this instanceof ServerLevel level&&EarthProtection.active(level)&&!SafetyPolicy.chunkInside(pos.getX()>>4,pos.getZ()>>4);}
+ private boolean hjEarth$outside(BlockPos pos){return (Object)this instanceof ServerLevel level&&EarthProtection.active(level)&&!SafetyPolicy.readable(pos.getX(),pos.getZ());}
  @Inject(method="getBlockState",at=@At("HEAD"),cancellable=true)
  private void hjEarth$readBlock(BlockPos pos,CallbackInfoReturnable<BlockState> ci){if(hjEarth$outside(pos))ci.setReturnValue(Blocks.VOID_AIR.defaultBlockState());}
  @Inject(method="getFluidState",at=@At("HEAD"),cancellable=true)

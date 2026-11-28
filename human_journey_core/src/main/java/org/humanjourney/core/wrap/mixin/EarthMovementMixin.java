@@ -4,8 +4,11 @@ import net.minecraft.world.phys.Vec3;
 import org.humanjourney.core.wrap.safety.SafetyRuntime;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Entity.class)
 public abstract class EarthMovementMixin implements org.humanjourney.core.wrap.safety.BoundaryHooks.Movement {
  @ModifyVariable(method="move",at=@At("HEAD"),argsOnly=true,ordinal=0)
  private Vec3 hjEarth$containMotion(Vec3 motion){return SafetyRuntime.limit((Entity)(Object)this,motion);}
+ @Inject(method="setPosRaw",at=@At("HEAD"),cancellable=true)
+ private void hjEarth$containPosition(double x,double y,double z,CallbackInfo ci){if(SafetyRuntime.rejectPosition((Entity)(Object)this,x,z))ci.cancel();}
 }

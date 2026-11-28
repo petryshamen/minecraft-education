@@ -20,8 +20,9 @@ public final class SafetyRuntime {
   Job(Entity root,List<Entity> group,ServerLevel level,double canonical,double target,boolean recovery){this.root=root;this.group=group;this.level=level;this.canonical=canonical;this.target=target;source=root.position();sourceX=root.getX();this.recovery=recovery;vehicles=group.stream().map(Entity::getVehicle).toList();group.forEach(e->motions.put(e.getUUID(),e.getKnownMovement()));deadline=level.getGameTime()+200;destination=new ExistingDestination(level,group.stream().map(e->e.getBoundingBox().move(target-sourceX,0,0)).toList());}
  }
  public static List<Entity> group(Entity root){var all=new ArrayList<Entity>();var pending=new ArrayDeque<Entity>();pending.push(root);while(!pending.isEmpty()){var e=pending.pop();if(all.size()>=16||all.contains(e))throw new IllegalArgumentException("unsupported/cyclic/>16-member hierarchy");all.add(e);for(var p:e.getPassengers())pending.push(p);}return List.copyOf(all);}
- private static double[] limits(Entity root,List<Entity> group){double minX=0,maxX=0,minZ=0,maxZ=0;for(var e:group){var b=e.getBoundingBox();minX=Math.min(minX,b.minX-root.getX());maxX=Math.max(maxX,b.maxX-root.getX());minZ=Math.min(minZ,b.minZ-root.getZ());maxZ=Math.max(maxZ,b.maxZ-root.getZ());}return new double[]{-12287-minX,12287-maxX,-6143-minZ,6143-maxZ};}
- private static boolean contained(List<Entity> group){return group.stream().allMatch(e->{var b=e.getBoundingBox();return SafetyPolicy.inside(b.minX,b.maxX,b.minZ,b.maxZ);});}
+ private static double[] limits(Entity root,List<Entity> group){double minX=0,maxX=0,minZ=0,maxZ=0;for(var e:group){var b=e.getBoundingBox();minX=Math.min(minX,b.minX-root.getX());maxX=Math.max(maxX,b.maxX-root.getX());minZ=Math.min(minZ,b.minZ-root.getZ());maxZ=Math.max(maxZ,b.maxZ-root.getZ());}int pad=SafetyPolicy.BUFFER+1;return new double[]{-12288+pad-minX,12288-pad-maxX,-6144+pad-minZ,6144-pad-maxZ};}
+ private static boolean contained(List<Entity> group){return group.stream().allMatch(e->{var b=e.getBoundingBox();return SafetyPolicy.readable(b.minX,b.minZ)&&SafetyPolicy.readable(b.maxX,b.maxZ);});}
+ public static boolean rejectPosition(Entity entity,double x,double z){if(!(entity.level() instanceof ServerLevel level)||!EarthProtection.active(level)||!entity.isAddedToWorld()||SafetyPolicy.readable(x,z))return false;state("HELD",entity.getRootVehicle(),"direct position outside protected readable band rejected",entity.getX(),false);return true;}
  private static void state(String value,Entity root,String reason,double target,boolean crossed){last=value+" | crossed="+crossed+" | group="+root.getUUID()+" actual="+root.position()+" target="+new Vec3(target,root.getY(),root.getZ())+" | "+reason;long now=root.level().getGameTime();if(crossed||now-WARNED.getOrDefault(root,-1000L)>=200){WARNED.put(root,now);LOG.info("[HJ Earth] {}",last);}}
  public static String status(){return EarthProtection.describe()+" wrapping_requested="+WrapConfig.ENABLED.get()+" wrapping_active="+(WrapConfig.ENABLED.get()&&EarthProtection.ready())+" jobs="+JOBS.size()+" tickets="+ExistingDestination.ticketCount()+" | "+last+" | Xaero visual wrap: not implemented";}
  private static void request(Entity root,double attempted){
@@ -30,7 +31,7 @@ public final class SafetyRuntime {
   boolean recovery=!contained(entities);
   if(!recovery&&(!WrapConfig.ENABLED.get()||!EarthProtection.ready())){state("HELD",root,"wrapping disabled or protection not ready",root.getX(),false);return;}
   if(JOBS.size()>=4){state("HELD",root,"bounded destination queue full",root.getX(),false);return;}
-  if(Math.abs(root.getZ())>6143){state("FAILED",root,"latitude outside protected Earth; no north/south wrapping",root.getX(),false);if(recovery)stop(level.getServer(),root,"no verified north/south recovery position");return;}
+  if(!SafetyPolicy.readable(0,root.getZ())){state("FAILED",root,"latitude outside protected Earth; no north/south wrapping",root.getX(),false);if(recovery)stop(level.getServer(),root,"no verified north/south recovery position");return;}
   double canonical;
   if(recovery){var safe=limits(root,entities);canonical=SafetyPolicy.clamp(root.getX(),safe[0],safe[1]);}
   else if(WrapMath.outside(attempted))canonical=WrapMath.canonical(attempted);
@@ -42,7 +43,6 @@ public final class SafetyRuntime {
   if(!(entity.level() instanceof ServerLevel level)||!EarthProtection.active(level)||entity.getRootVehicle()!=entity)return motion;
   List<Entity> all;try{all=group(entity);}catch(RuntimeException e){if(entity instanceof ServerPlayer)return Vec3.ZERO;for(var passenger:entity.getIndirectPassengers())if(passenger instanceof ServerPlayer)return Vec3.ZERO;return motion;}
   if(all.stream().noneMatch(e->e instanceof ServerPlayer)){
-   if(!(entity instanceof net.minecraft.world.entity.vehicle.AbstractBoat||entity instanceof net.minecraft.world.entity.animal.horse.AbstractHorse))return motion;
    if(!contained(all))return Vec3.ZERO;var bound=limits(entity,all);return new Vec3(SafetyPolicy.clamp(entity.getX()+motion.x,bound[0],bound[1])-entity.getX(),motion.y,SafetyPolicy.clamp(entity.getZ()+motion.z,bound[2],bound[3])-entity.getZ());
   }
   if(!Double.isFinite(motion.x)||!Double.isFinite(motion.z))return motion;

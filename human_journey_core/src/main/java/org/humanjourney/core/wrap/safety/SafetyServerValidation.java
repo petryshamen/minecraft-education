@@ -39,9 +39,9 @@ public final class SafetyServerValidation {
   return p;
  }
  @SuppressWarnings("unchecked") private static void addSimulatedPlayer(ServerPlayer p)throws Exception{var field=net.minecraft.server.players.PlayerList.class.getDeclaredField("players");field.setAccessible(true);((List<ServerPlayer>)field.get(server.getPlayerList())).add(p);}
- private static void acknowledge(ServerPlayer p)throws Exception{var field=net.minecraft.server.network.ServerGamePacketListenerImpl.class.getDeclaredField("awaitingTeleport");field.setAccessible(true);p.connection.handleAcceptTeleportPacket(new net.minecraft.network.protocol.game.ServerboundAcceptTeleportationPacket(field.getInt(p.connection)));}
+ private static void acknowledge(ServerPlayer p)throws Exception{if(!((WrapConnection)p.connection).hjWrap$pending())return;var field=net.minecraft.server.network.ServerGamePacketListenerImpl.class.getDeclaredField("awaitingTeleport");field.setAccessible(true);p.connection.handleAcceptTeleportPacket(new net.minecraft.network.protocol.game.ServerboundAcceptTeleportationPacket(field.getInt(p.connection)));}
  private static void run()throws Exception{
-  ticks++;var level=server.overworld();boolean prepare=System.getProperty("humanjourney.safetyPhase","verify").equals("prepare");
+  ticks++;var level=server.overworld();if(a!=null&&b!=null&&c!=null)for(var player:List.of(a,b,c))level.getChunkSource().move(player);boolean prepare=System.getProperty("humanjourney.safetyPhase","verify").equals("prepare");
   if(prepare){if(phase==0){
    check(!EarthProtection.ready(),"prepare phase protection disabled");com.mojang.logging.LogUtils.getLogger().info("EARTH_SAFETY_PREPARING_FIXTURE");
    for(int center:new int[]{-12240,12272})for(int cx=(center>>4)-3;cx<=(center>>4)+3;cx++)for(int cz=-1;cz<=2;cz++)level.getChunk(cx,cz);
@@ -67,17 +67,21 @@ public final class SafetyServerValidation {
    check(ExistingDestination.ticketCount()>0,"existing destination loaded with owned tickets after restart");loader.close();check(ExistingDestination.ticketCount()==0,"destination tickets released");
    var failedLoader=new ExistingDestination(level,List.of(new AABB(12288,64,1600,12289,66,1601)));check(failedLoader.failed(),"outside dependency rejected before ticket creation");failedLoader.close();check(ExistingDestination.ticketCount()==0,"failed loader leaves no tickets");
    a=player("EarthTestA",level);b=player("EarthTestB",level);
-   boat=(AbstractBoat)EntityType.OAK_BOAT.create(level,EntitySpawnReason.COMMAND);check(boat!=null,"native chest boat created");boat.absSnapTo(12286,63.5625,8,90,0);level.addFreshEntity(boat);boatId=boat.getUUID();
-   chest=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);chest.absSnapTo(12286,63.5625,12,90,0);chest.setItem(0,new ItemStack(Items.DIAMOND,7));chestId=chest.getUUID();level.addFreshEntity(chest);c=player("EarthTestC",level);c.absSnapTo(12286,64.1,12,37,-10);level.addNewPlayer(c);addSimulatedPlayer(c);check(c.startRiding(chest,true),"native chest-boat rider mounted");
-   for(var p:List.of(a,b)){p.absSnapTo(12286,64.1,8,37,-10);level.addNewPlayer(p);addSimulatedPlayer(p);check(p.startRiding(boat,true),"native player mounts boat");}
+   boat=(AbstractBoat)EntityType.OAK_BOAT.create(level,EntitySpawnReason.COMMAND);check(boat!=null,"native chest boat created");boat.absSnapTo(12270,63.5625,8,90,0);level.addFreshEntity(boat);boatId=boat.getUUID();
+   chest=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);chest.absSnapTo(12270,63.5625,12,90,0);chest.setItem(0,new ItemStack(Items.DIAMOND,7));chestId=chest.getUUID();level.addFreshEntity(chest);c=player("EarthTestC",level);c.absSnapTo(12270,64.1,12,37,-10);level.addNewPlayer(c);addSimulatedPlayer(c);check(c.startRiding(chest,true),"native chest-boat rider mounted");
+   for(var p:List.of(a,b)){p.absSnapTo(12270,64.1,8,37,-10);level.addNewPlayer(p);addSimulatedPlayer(p);check(p.startRiding(boat,true),"native player mounts boat");}
    phase=2;return;
   }
   if(phase==2){
    check(boat.getPassengers().size()==2,"two actual passengers retained");
-   check(SafetyRuntime.packet(a,12288.25,8),"outward vehicle proposal held before position acceptance");
-   check(boat.getX()<12288&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"held group stays intact inside canonical boundary");check(SafetyRuntime.packet(c,12288.25,12),"independent chest-boat crossing held/prepared");acknowledge(a);acknowledge(b);acknowledge(c);phase=3;return;
+   WrapConfig.ARRIVAL_INSET.set(0);check(SafetyRuntime.packet(a,12288.25,8),"exact edge request held before position acceptance");
+   check(boat.getX()<12288&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"held group stays intact inside canonical boundary");acknowledge(a);acknowledge(b);acknowledge(c);phase=3;return;
   }
   if(phase==3){
+   check(boat.getX()>0&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"failed exact destination keeps complete real group at source");check(ExistingDestination.ticketCount()==0,"failed exact arrival leaves no owned tickets");check(SafetyRuntime.status().contains("crossed=false"),"failed arrival is never diagnosed as crossed");
+   WrapConfig.ARRIVAL_INSET.set(32);check(SafetyRuntime.packet(a,12288.25,8),"explicit inward-fallback crossing prepared");check(SafetyRuntime.packet(c,12288.25,12),"independent chest-boat crossing prepared");acknowledge(a);acknowledge(b);acknowledge(c);phase=4;return;
+  }
+  if(phase==4){
    acknowledge(a);acknowledge(b);acknowledge(c);
    if(boat.getX()>0||chest.getX()>0)return;
    check(boat.getUUID().equals(boatId)&&chest.getUUID().equals(chestId)&&chest.getItem(0).is(Items.DIAMOND)&&chest.getItem(0).getCount()==7,"crossing preserves real vehicle UUID and inventory");
@@ -86,13 +90,20 @@ public final class SafetyServerValidation {
    check(ExistingDestination.ticketCount()==0,"successful crossing releases tickets");
    // Native save/load vehicle identity and inventory; no new runtime UUID rewrite.
    var output=net.minecraft.world.level.storage.TagValueOutput.createWithContext(net.minecraft.util.ProblemReporter.DISCARDING,level.registryAccess());chest.saveWithoutId(output);var tag=output.buildResult();savedBoat=tag;var copy=(AbstractChestBoat)EntityType.OAK_CHEST_BOAT.create(level,EntitySpawnReason.COMMAND);copy.load(net.minecraft.world.level.storage.TagValueInput.create(net.minecraft.util.ProblemReporter.DISCARDING,level.registryAccess(),tag));check(copy.getUUID().equals(chestId)&&copy.getItem(0).getCount()==7,"native chest-boat save/load retains identity and inventory");
-   phase=4;return;
+   phase=5;return;
   }
-  if(phase==4){
+  if(phase==5){
+   var position=Entity.class.getDeclaredField("position");position.setAccessible(true);
+   for(var entity:SafetyRuntime.group(boat)){var original=entity.position();entity.teleportSetPosition(new PositionMoveRotation(original.add(24576,0,0),entity.getKnownMovement(),entity.getYRot(),entity.getXRot()),Set.of());check(entity.position().equals(original),"direct outside setPosRaw rejected before required chunk access");position.set(entity,original.add(24576,0,0));entity.setBoundingBox(entity.getBoundingBox().move(24576,0,0));}
+   phase=6;return;
+  }
+  if(phase==6){
+   check(boat.getX()<0&&a.getRootVehicle()==boat&&b.getRootVehicle()==boat,"whole native hierarchy restored after direct outside displacement");check(SafetyRuntime.status().contains("HELD")&&SafetyRuntime.status().contains("crossed=false"),"anchor recovery is not a successful seam crossing");
+   var replacement=new net.minecraft.network.Connection(net.minecraft.network.protocol.PacketFlow.SERVERBOUND);a.connection=new net.minecraft.server.network.ServerGamePacketListenerImpl(server,replacement,a,net.minecraft.server.network.CommonListenerCookie.createInitial(a.getGameProfile(),false));check(!((WrapConnection)a.connection).hjWrap$pending()&&a.getRootVehicle()==boat,"simulated connection replacement has no stale wrap acknowledgement or mount rewrite");
    SafetyRuntime.closeAll();check(ExistingDestination.ticketCount()==0,"stop/reconnect cleanup releases all owned tickets");
    server.saveAllChunks(false,true,true);var after=records();check(outsideBefore.equals(level.getChunkSource().chunkMap.read(new ChunkPos(768,0)).get(10,TimeUnit.SECONDS).orElseThrow()),"pre-existing outside chunk NBT remains unchanged");check(after.equals(before),"native FULL/view-distance/dependency requests create zero new region chunk records under protection");
    Files.writeString(Path.of("EARTH_SAFETY_SERVER_OK.json"),new com.google.gson.GsonBuilder().setPrettyPrinting().create().toJson(Map.of("checks",checks,"count",checks.size(),"tick",ticks,"new_chunk_records",0,"live_gameplay_acceptance",false)));
-   com.mojang.logging.LogUtils.getLogger().info("EARTH_SAFETY_SERVER_OK: {} checks, real dedicated restart, native chunk scheduler/disk/tickets, real chest boat and two simulated connections; no real client/gameplay acceptance",checks.size());
+   com.mojang.logging.LogUtils.getLogger().info("EARTH_SAFETY_SERVER_OK: {} checks, real dedicated restart, native chunk scheduler/disk/tickets, actual two-seat boat/chest boat, group recovery and simulated connections; no real client/gameplay acceptance",checks.size());
    server.halt(false);server=null;
   }
  }

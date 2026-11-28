@@ -17,6 +17,7 @@ public final class ExistingDestination implements AutoCloseable {
  public String failure="";
  public ExistingDestination(ServerLevel level,List<AABB> boxes){
   this.level=level;var required=new TreeSet<ChunkPos>(Comparator.comparingInt((ChunkPos p)->p.x).thenComparingInt(p->p.z));var core=new HashSet<ChunkPos>();
+  if(boxes.stream().anyMatch(b->!SafetyPolicy.readable(b.minX,b.minZ)||!SafetyPolicy.readable(b.maxX,b.maxZ))){targets=List.of();failure="destination enters protected 16-block loading band; exact arrival held, explicit inward fallback required";proof=CompletableFuture.completedFuture(false);return;}
   int dependency=ChunkPyramid.LOADING_PYRAMID.getStepTo(ChunkStatus.FULL).accumulatedDependencies().getRadius();
   for(var box:boxes){for(int x=((int)Math.floor(box.minX-1))>>4;x<=(((int)Math.floor(box.maxX+1))>>4);x++)for(int z=((int)Math.floor(box.minZ-1))>>4;z<=(((int)Math.floor(box.maxZ+1))>>4);z++){
    core.add(new ChunkPos(x,z));for(int a=x-dependency;a<=x+dependency;a++)for(int b=z-dependency;b<=z+dependency;b++)required.add(new ChunkPos(a,b));
